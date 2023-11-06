@@ -3,9 +3,6 @@
         switch($_GET['act']){
             case 'home':
                 // lay du lieu
-                include_once 'model/m_book.php';
-                $dsMoi=book_getNew(4);
-                $dsGhim=book_getPin(4);
                 //hien thi du lieu
                 $view_name='page_home';
                 break;
