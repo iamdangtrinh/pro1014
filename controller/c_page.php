@@ -28,9 +28,7 @@
                 break;
             case 'history': 
                 //laydulieu
-                include_once 'model/m_history.php';
                 $MaTK=$_SESSION['user']['MaTK'];
-                $dsLichSu=history_getAllByAccount($MaTK);
                 $view_name='page_history';
                 break;
             default:

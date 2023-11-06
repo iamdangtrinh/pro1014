@@ -3,11 +3,6 @@
         switch($_GET['act']){
             case 'dashboard':
                 //lay du lieu
-                include_once 'model/m_user.php';
-                include_once 'model/m_category.php';
-                include_once 'model/m_history.php';
-                $tkSachTheoChuDe=category_statByBook();
-                $tkDoanhThu=history_stat();
                 // hien thi du lieu
                 $view_name='admin_dashboard';
                 break;
