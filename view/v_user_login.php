@@ -3,8 +3,8 @@
 		<nav aria-label="breadcrumb" class="breadcrumb-nav">
 			<div class="container">
 				<ol class="breadcrumb">
-					<li class="breadcrumb-item"><a href="demo4.html">Home</a></li>
-					<li class="breadcrumb-item"><a href="category.html">Shop</a></li>
+					<li class="breadcrumb-item"><a href="demo4.html">Trang chủ</a></li>
+					<li class="breadcrumb-item"><a href="category.html">Tài khoản</a></li>
 					<li class="breadcrumb-item active" aria-current="page">
 					Tài khoản của tôi
 					</li>
@@ -12,7 +12,7 @@
 			</div>
 		</nav>
 
-		<h1>Tài khoản của tôi</h1>
+		<h1 class="mt-2">Tài khoản của tôi</h1>
 	</div>
 </div>
 

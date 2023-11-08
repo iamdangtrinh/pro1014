@@ -5640,8 +5640,7 @@ textarea.form-control {
 label {
     margin: 0 0 0.6rem;
     color: #222529;
-    font-family: Poppins, sans-serif;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     font-weight: 700
 }
 
@@ -6046,7 +6045,7 @@ label {
 }
 
 .page-header {
-    padding: 5.5rem 0;
+    padding: 3.5rem 0;
     color: #222529;
     background-color: #f4f4f4;
     text-align: center
@@ -6121,7 +6120,7 @@ label {
 .toolbox label {
     margin: 1px 1.1rem 0 0;
     color: #777;
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     font-weight: 400;
     font-family: "Open Sans", sans-serif
 }
