@@ -22,7 +22,7 @@
 			<div class="row">
 				<div class="col-md-6">
 					<div class="heading mb-1">
-						<h2 class="title">Login</h2>
+						<h2 class="title">Đăng nhập</h2>
 					</div>
 
 					<form action="#" method="post">
@@ -31,9 +31,9 @@
 							<span class="required">*</span>
 						</label>
 						<input type="email" name="fullname" class="form-input form-wide" id="login-email" required />
-	
+
 						<label for="login-password">
-							Password
+							Mật khẩu
 							<span class="required">*</span>
 						</label>
 						<input type="password" name="password" class="form-input form-wide" id="login-password" required />
@@ -48,9 +48,7 @@
 							<a href="<?= $base_url ?>user/login"
 								class="forget-password text-dark form-footer-right">Quên mật khẩu?</a>
 						</div>
-						<button type="submit" value="Đăng nhập" class="btn btn-dark btn-md w-100">
-							
-						</button>
+						<input type="submit" name="btn_login" value="Đăng nhập" class="btn btn-dark btn-md w-100">
 					</form>
 				</div>
 				<div class="col-md-6">
