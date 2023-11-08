@@ -54,29 +54,6 @@
         <header class="header">
             <div class="header-middle sticky-header" data-sticky-options="{'mobile': true}">
                 <div class="container-fluid">
-                    <div class="header-left d-none d-lg-flex">
-                        <div class="header-dropdown">
-                            <a href="#">USD</a>
-                            <div class="header-menu">
-                                <ul>
-                                    <li><a href="#">EUR</a></li>
-                                    <li><a href="#">USD</a></li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="header-dropdown">
-                            <a href="#"><i class="flag-us flag"></i>ENG</a>
-                            <div class="header-menu">
-                                <ul>
-                                    <li><a href="#"><i class="flag-us flag mr-2"></i>ENG</a>
-                                    </li>
-                                    <li><a href="#"><i class="flag-fr flag mr-2"></i>FRA</a></li>
-                                </ul>
-                            </div><!-- End .header-menu -->
-                        </div>
-                    </div>
-
                     <div class="header-center ml-0 ml-lg-auto">
                         <button class="mobile-menu-toggler" type="button">
                             <i class="fas fa-bars"></i>
