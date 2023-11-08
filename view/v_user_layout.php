@@ -5,21 +5,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title><?= $title?></title>
+    <title>
+        <?= $title ?>
+    </title>
     <meta name="description" content="Website bán hàng">
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="<?=$base_url?>upload/icons/favicon.png">
+    <link rel="icon" type="image/x-icon" href="<?= $base_url ?>upload/icons/favicon.png">
 
     <!-- Plugins CSS File -->
-    <link rel="stylesheet" href="<?=$base_url?>assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?= $base_url ?>assets/css/bootstrap.min.css">
 
     <!-- Main CSS File -->
-    <link rel="stylesheet" href="<?=$base_url?>assets/css/style23.css">
-    <link rel="stylesheet" href="<?=$base_url?>assets/css/demo23.min.css">
+    <link rel="stylesheet" href="<?= $base_url ?>assets/css/style23.css">
+    <link rel="stylesheet" href="<?= $base_url ?>assets/css/demo23.min.css">
 
     <!-- Js -->
-    <script src="<?=$base_url?>assets/js/jquery.min.js"></script>
-    <script src="<?=$base_url?>assets/js/validate.js"></script>
+    <script src="<?= $base_url ?>assets/js/jquery.min.js"></script>
+    <script src="<?= $base_url ?>assets/js/validate.js"></script>
 
 </head>
 
@@ -27,7 +29,8 @@
     <div class="page-wrapper">
         <div class="top-notice font2">
             <div class="container-fluid text-center text-dark">
-                <i class="icon-shipping align-middle"></i><b class="text-uppercase">Miễn phí vận chuyển</b>&nbsp;on orders of
+                <i class="icon-shipping align-middle"></i><b class="text-uppercase">Miễn phí vận chuyển</b>&nbsp;on
+                orders of
                 $80 or more!
                 Code:&nbsp;<b class="text-uppercase">PortoMagic</b>&nbsp;| Restrictions Apply.&nbsp;<a
                     href="demo23-shop.html" class="text-dark">See All Offers</a>
@@ -42,21 +45,33 @@
                         <button class="mobile-menu-toggler" type="button">
                             <i class="fas fa-bars"></i>
                         </button>
-                        <a href="<?=$base_url?>page/home" class="logo">
-                            <img src="<?=$base_url?>upload/demoes/demo23/logo.png" alt="Porto Logo" width="113" height="48">
+                        <a href="<?= $base_url ?>page/home" class="logo">
+                            <img src="<?= $base_url ?>upload/demoes/demo23/logo.png" alt="Porto Logo" width="113"
+                                height="48">
                         </a>
                     </div>
 
                     <div class="header-right">
-                        <a href="<?=$base_url?>user/login" class="header-icon d-lg-block d-none">
+                        <div class="d-lg-block d-none">
+                            <div class="header-userinfo">
                             <div class="header-user">
-                                <i class="icon-user-2"></i>
-                                <div class="header-userinfo">
-                                    <span class="d-inline-block font2 line-height-1">Xin chào!</span>
-                                    <h4 class="mb-0">Tài khoản</h4>
+                                    <?php if (isset($_SESSION['user'])): ?>
+                                        <i class="icon-user-2"></i>
+                                        <div class="">
+                                        <span class="d-inline-block font2 line-height-1">Xin chào!</span>
+                                        <h4 class="mb-0">
+                                            <?php echo strstr($_SESSION['user']['Email'], '@', true) ?>
+                                        </h4>
+                                        </div>
+                                    <?php else: ?>
+                                        <a href="<?= $base_url ?>user/register"
+                                            class="btn btn-primary d-inline-block font2 line-height-1">Đăng ký</a>
+                                        <a href="<?= $base_url ?>user/login"
+                                            class="btn btn-primary d-inline-block font2 line-height-1">Đăng nhập</a>
+                                    <?php endif ?>
                                 </div>
                             </div>
-                        </a>
+                        </div>
 
                         <a href="wishlist.html" class="header-icon">
                             <i class="icon-wishlist-2"></i>
@@ -93,7 +108,7 @@
 
                                             <figure class="product-image-container">
                                                 <a href="demo23-product.html" class="product-image">
-                                                    <img src="<?=$base_url?>upload/products/product-1.jpg" alt="product"
+                                                    <img src="<?= $base_url ?>upload/products/product-1.jpg" alt="product"
                                                         width="80" height="80">
                                                 </a>
 
@@ -115,7 +130,7 @@
 
                                             <figure class="product-image-container">
                                                 <a href="demo23-product.html" class="product-image">
-                                                    <img src="<?=$base_url?>upload/products/product-2.jpg" alt="product"
+                                                    <img src="<?= $base_url ?>upload/products/product-2.jpg" alt="product"
                                                         width="80" height="80">
                                                 </a>
 
@@ -137,7 +152,7 @@
 
                                             <figure class="product-image-container">
                                                 <a href="demo23-product.html" class="product-image">
-                                                    <img src="<?=$base_url?>upload/products/product-3.jpg" alt="product"
+                                                    <img src="<?= $base_url ?>upload/products/product-3.jpg" alt="product"
                                                         width="80" height="80">
                                                 </a>
                                                 <a href="#" class="btn-remove" title="Remove Product"><span>×</span></a>
@@ -172,7 +187,7 @@
                                         <select id="cat" name="cat">
                                             <option value="">All Categories</option>
                                             <option value="4">Fashion</option>
-                                            
+
                                         </select>
                                     </div><!-- End .select-custom -->
                                     <button class="btn icon-magnifier p-0" title="search" type="submit"></button>
@@ -189,22 +204,22 @@
                         <nav class="main-nav">
                             <ul class="menu">
                                 <li class="active">
-                                    <a href="<?=$base_url?>page/home">Home</a>
+                                    <a href="<?= $base_url ?>page/home">Home</a>
                                 </li>
                                 <li>
-                                    <a href="<?=$base_url?>page/shop">Categories</a>
+                                    <a href="<?= $base_url ?>page/shop">Categories</a>
                                     <div class="megamenu megamenu-fixed-width megamenu-3cols">
                                         <div class="row">
                                             <div class="col-lg-4">
                                                 <a href="#" class="nolink">VARIATION 1</a>
                                                 <ul class="submenu">
-                                                    
+
                                                     <li><a href="category-horizontal-filter2.html">Horizontal
                                                             Filter2</a>
                                                     </li>
                                                 </ul>
                                             </div>
-                                           
+
                                         </div>
                                     </div>
                                 </li>
@@ -225,7 +240,7 @@
                                     <a href="#">Pages</a>
                                     <ul>
                                         <li><a href="wishlist.html">Wishlist</a></li>
-                                        
+
                                     </ul>
                                 </li>
                                 <li><a href="blog.html">Blog</a></li>
@@ -257,7 +272,7 @@
 
         <main class="main">
             <!-- ruot cua WEBSITE -->
-            <?php include_once 'view/v_'.$view_name.'.php'; ?>
+            <?php include_once 'view/v_' . $view_name . '.php'; ?>
         </main><!-- End .main -->
 
         <footer class="footer">
@@ -266,8 +281,8 @@
                     <div class="row">
                         <div class="col-lg-6 col-xl-4">
                             <a href="#">
-                                <img class="logo mb-3" src="<?=$base_url?>upload/demoes/demo23/logo.png" alt="Porto Logo"
-                                    width="113" height="48"></a>
+                                <img class="logo mb-3" src="<?= $base_url ?>upload/demoes/demo23/logo.png"
+                                    alt="Porto Logo" width="113" height="48"></a>
 
                             <div class="row">
                                 <div class="col-sm-6 pr-sm-0">
@@ -285,7 +300,10 @@
                                 <div class="col-sm-6 pr-sm-0">
                                     <div class="contact-widget m-b-3">
                                         <h4 class="widget-title font2">EMAIL:</h4>
-                                        <a href="https://portotheme.com/cdn-cgi/l/email-protection#b4d9d5ddd8f4d1ccd5d9c4d8d19ad7dbd9"><span class="__cf_email__" data-cfemail="533e323a3f13362b323e233f367d303c3e">[email&#160;protected]</span></a>
+                                        <a
+                                            href="https://portotheme.com/cdn-cgi/l/email-protection#b4d9d5ddd8f4d1ccd5d9c4d8d19ad7dbd9"><span
+                                                class="__cf_email__"
+                                                data-cfemail="533e323a3f13362b323e233f367d303c3e">[email&#160;protected]</span></a>
                                     </div>
                                 </div>
                                 <div class="col-sm-6 pl-sm-0">
@@ -397,7 +415,7 @@
                     </div>
 
                     <div class="footer-right ml-auto mt-1 mt-sm-0">
-                        <img src="<?=$base_url?>upload/demoes/demo23/payment-icon.png" alt="payment">
+                        <img src="<?= $base_url ?>upload/demoes/demo23/payment-icon.png" alt="payment">
                     </div>
                 </div>
             </div><!-- End .footer-bottom -->
@@ -419,7 +437,7 @@
             <span class="mobile-menu-close"><i class="fa fa-times"></i></span>
             <nav class="mobile-nav">
                 <ul class="mobile-menu">
-                    <li><a href="<?=$base_url?>page/home">Home</a></li>
+                    <li><a href="<?= $base_url ?>page/home">Home</a></li>
                     <li>
                         <a href="demo23-shop.html">Categories</a>
                         <ul>
@@ -562,7 +580,7 @@
 
     <div class="sticky-navbar">
         <div class="sticky-info">
-            <a href="<?=$base_url?>page/home">
+            <a href="<?= $base_url ?>page/home">
                 <i class="icon-home"></i>Home
             </a>
         </div>
@@ -592,9 +610,9 @@
 
     <!-- popup  -->
     <!-- <div class="newsletter-popup mfp-hide bg-img" id="newsletter-popup-form"
-        style="background: #f1f1f1 no-repeat center/cover url(<?=$base_url?>upload/newsletter_popup_bg.jpg)">
+        style="background: #f1f1f1 no-repeat center/cover url(<?= $base_url ?>upload/newsletter_popup_bg.jpg)">
         <div class="newsletter-popup-content">
-            <img src="<?=$base_url?>upload/logo-black.png" alt="Logo" class="logo-newsletter" width="111" height="44">
+            <img src="<?= $base_url ?>upload/logo-black.png" alt="Logo" class="logo-newsletter" width="111" height="44">
             <h2 class="ls-n-25">Subscribe to newsletter</h2>
 
             <p class="font2">
@@ -627,17 +645,18 @@
     <a id="scroll-top" href="#top" title="Top" role="button"><i class="icon-angle-up"></i></a>
 
     <!-- Plugins JS File -->
-    <script src="<?=$base_url?>assets/js/bootstrap.bundle.min.js"></script>
-    <script src="<?=$base_url?>assets/js/plugins.min.js"></script>
-    <script src="<?=$base_url?>assets/js/optional/isotope.pkgd.min.js"></script>
-    <script src="<?=$base_url?>assets/js/jquery.appear.min.js"></script>
-    <script src="<?=$base_url?>assets/js/jquery.plugin.min.js"></script>
-    
+    <script src="<?= $base_url ?>assets/js/bootstrap.bundle.min.js"></script>
+    <script src="<?= $base_url ?>assets/js/plugins.min.js"></script>
+    <script src="<?= $base_url ?>assets/js/optional/isotope.pkgd.min.js"></script>
+    <script src="<?= $base_url ?>assets/js/jquery.appear.min.js"></script>
+    <script src="<?= $base_url ?>assets/js/jquery.plugin.min.js"></script>
+
 
     <!-- Main JS File -->
-    <script src="<?=$base_url?>assets/js/main.min.js"></script>
+    <script src="<?= $base_url ?>assets/js/main.min.js"></script>
 </body>
 
 
-<!-- Mirrored from portotheme.com/html/porto_ecommerce/<?=$base_url?>page/home by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Nov 2023 07:24:57 GMT -->
+<!-- Mirrored from portotheme.com/html/porto_ecommerce/<?= $base_url ?>page/home by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Nov 2023 07:24:57 GMT -->
+
 </html>

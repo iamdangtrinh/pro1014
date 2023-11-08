@@ -78,7 +78,10 @@
 					$.ajax({
 						type: "POST",
 						url: "?mod=user&act=login",
-						data: $(form).serializeArray(),
+						data: {
+                              email: email,
+                              password: password
+                          },
 
 						success: function (response) {
 							console.log(response);

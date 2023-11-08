@@ -1,6 +1,8 @@
 <?php 
     include_once 'm_pdo.php';
     // thao tac du lieu trong cs fql
+    
+    // kiểm tra tài khoản trong sql có tồn tại hay không
     function check_login($email, $password){
         return pdo_query_one("SELECT * FROM taikhoan WHERE Email=? AND MatKhau=?",$email,$password);
     }
