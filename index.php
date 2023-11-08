@@ -17,6 +17,9 @@
             case 'admin':
                 $ctrl_name='admin';
                 break;
+            case 'contact':
+                $ctrl_name='contact';
+                break;            
             default:
             $ctrl_name='page';
                 break;
