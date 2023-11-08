@@ -644,7 +644,7 @@
     <script src="<?=$base_url?>assets/js/optional/isotope.pkgd.min.js"></script>
     <script src="<?=$base_url?>assets/js/jquery.appear.min.js"></script>
     <script src="<?=$base_url?>assets/js/jquery.plugin.min.js"></script>
-
+    
 
     <!-- Main JS File -->
     <script src="<?=$base_url?>assets/js/main.min.js"></script>

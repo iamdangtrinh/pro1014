@@ -62,3 +62,9 @@
 		</form>
 	</div>
 </div>
+
+
+<!-- ajax register form -->
+<script>
+	
+</script>
