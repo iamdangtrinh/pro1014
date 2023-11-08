@@ -54,14 +54,14 @@
                     <div class="header-right">
                         <div class="d-lg-block d-none">
                             <div class="header-userinfo">
-                            <div class="header-user">
+                                <div class="header-user">
                                     <?php if (isset($_SESSION['user'])): ?>
                                         <i class="icon-user-2"></i>
                                         <div class="">
-                                        <span class="d-inline-block font2 line-height-1">Xin chào!</span>
-                                        <h4 class="mb-0">
-                                            <?php echo strstr($_SESSION['user']['Email'], '@', true) ?>
-                                        </h4>
+                                            <span class="d-inline-block font2 line-height-1">Xin chào!</span>
+                                            <h4 class="mb-0">
+                                                <?php echo strstr($_SESSION['user']['Email'], '@', true) ?>
+                                            </h4>
                                         </div>
                                     <?php else: ?>
                                         <a href="<?= $base_url ?>user/register"
@@ -108,8 +108,8 @@
 
                                             <figure class="product-image-container">
                                                 <a href="demo23-product.html" class="product-image">
-                                                    <img src="<?= $base_url ?>upload/products/product-1.jpg" alt="product"
-                                                        width="80" height="80">
+                                                    <img src="<?= $base_url ?>upload/products/product-1.jpg"
+                                                        alt="product" width="80" height="80">
                                                 </a>
 
                                                 <a href="#" class="btn-remove" title="Remove Product"><span>×</span></a>
@@ -130,8 +130,8 @@
 
                                             <figure class="product-image-container">
                                                 <a href="demo23-product.html" class="product-image">
-                                                    <img src="<?= $base_url ?>upload/products/product-2.jpg" alt="product"
-                                                        width="80" height="80">
+                                                    <img src="<?= $base_url ?>upload/products/product-2.jpg"
+                                                        alt="product" width="80" height="80">
                                                 </a>
 
                                                 <a href="#" class="btn-remove" title="Remove Product"><span>×</span></a>
@@ -152,8 +152,8 @@
 
                                             <figure class="product-image-container">
                                                 <a href="demo23-product.html" class="product-image">
-                                                    <img src="<?= $base_url ?>upload/products/product-3.jpg" alt="product"
-                                                        width="80" height="80">
+                                                    <img src="<?= $base_url ?>upload/products/product-3.jpg"
+                                                        alt="product" width="80" height="80">
                                                 </a>
                                                 <a href="#" class="btn-remove" title="Remove Product"><span>×</span></a>
                                             </figure>
@@ -651,12 +651,10 @@
     <script src="<?= $base_url ?>assets/js/jquery.appear.min.js"></script>
     <script src="<?= $base_url ?>assets/js/jquery.plugin.min.js"></script>
 
-
     <!-- Main JS File -->
     <script src="<?= $base_url ?>assets/js/main.min.js"></script>
 </body>
 
 
-<!-- Mirrored from portotheme.com/html/porto_ecommerce/<?= $base_url ?>page/home by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Nov 2023 07:24:57 GMT -->
 
 </html>
