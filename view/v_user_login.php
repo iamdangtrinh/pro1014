@@ -18,13 +18,13 @@
 
 <div class="container login-container">
 	<div class="row">
-		<div class="col-lg-10 mx-auto">
+		<div class="col-lg-10 mt-2 mx-auto">
 			<div class="row">
 				<div class="col-md-6">
+					<!-- Đăng nhập -->
 					<div class="heading mb-1">
 						<h2 class="title">Đăng nhập</h2>
 					</div>
-
 					<form action="#" method="post">
 						<label for="login-email">
 							Tên đăng nhập hoặc địa chỉ email
@@ -51,23 +51,37 @@
 						<input type="submit" name="btn_login" value="Đăng nhập" class="btn btn-dark btn-md w-100">
 					</form>
 				</div>
+
+				<!-- Đăng ký -->
 				<div class="col-md-6">
 					<div class="heading mb-1">
 						<h2 class="title">Đăng ký</h2>
 					</div>
 
-					<form action="#">
+					<form action="#" method="post">
 						<label for="register-email">
 							Địa chỉ Email
 							<span class="required">*</span>
 						</label>
-						<input type="email" name="register_email" class="form-input form-wide" id="register-email" required />
+						<input type="email" name="register_email" class="form-input form-wide" id="register-email">
 
 						<label for="register-password">
 							Mật khẩu
 							<span class="required">*</span>
 						</label>
-						<input type="password" name="register_password" class="form-input form-wide" id="register-password" required />
+						<input type="password" name="register_password" class="form-input form-wide" id="register-password">
+						
+						<label for="register-password">
+							Nhập lại mật khẩu
+							<span class="required">*</span>
+						</label>
+						<input type="password" name="re_password" class="form-input form-wide" id="register-password">
+						
+						<label for="register-password">
+							Địa chỉ
+							<span class="required">*</span>
+						</label>
+						<input type="text" name="diachi" class="form-input form-wide" id="">
 
 						<div class="form-footer mb-2">
 							<input name="btn_register" value="Đăng ký" type="submit" class="btn btn-dark btn-md w-100 mr-0">
