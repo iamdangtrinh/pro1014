@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
-    <link rel="stylesheet" href="../assets/style.css">
-    <title>Responsive Dashboard Design #1 | AsmrProg</title>
+    <link rel="stylesheet" href="<?=$base_url?>assets/style.css">
+    <title>Admin</title>
 </head>
 
 <body>
@@ -17,7 +17,7 @@
             <div class="toggle">
                 <div class="logo">
                     <img src="images/logo.png">
-                    <h2>Asmr<span class="danger">Prog</span></h2>
+                    <h2>tên <span class="danger">DA1</span></h2>
                 </div>
                 <div class="close" id="close-btn">
                     <span class="material-icons-sharp">
@@ -27,60 +27,42 @@
             </div>
 
             <div class="sidebar">
-                <a href="#">
+                <a href="#" class="active">
                     <span class="material-icons-sharp">
                         dashboard
                     </span>
-                    <h3>Dashboard</h3>
+                    <h3>Tổng quan</h3>
                 </a>
                 <a href="#">
                     <span class="material-icons-sharp">
                         person_outline
                     </span>
-                    <h3>Users</h3>
-                </a>
-                <a href="#">
-                    <span class="material-icons-sharp">
-                        receipt_long
-                    </span>
-                    <h3>History</h3>
-                </a>
-                <a href="#" class="active">
-                    <span class="material-icons-sharp">
-                        insights
-                    </span>
-                    <h3>Analytics</h3>
-                </a>
-                <a href="#">
-                    <span class="material-icons-sharp">
-                        mail_outline
-                    </span>
-                    <h3>Tickets</h3>
-                    <span class="message-count">27</span>
+                    <h3>Tài khoản</h3>
                 </a>
                 <a href="#">
                     <span class="material-icons-sharp">
                         inventory
                     </span>
-                    <h3>Sale List</h3>
+                    <h3>Loại hàng</h3>
                 </a>
                 <a href="#">
                     <span class="material-icons-sharp">
-                        report_gmailerrorred
+                        inventory
                     </span>
-                    <h3>Reports</h3>
+                    <h3>Sản phẩm</h3>
                 </a>
                 <a href="#">
                     <span class="material-icons-sharp">
-                        settings
+                        receipt_long
                     </span>
-                    <h3>Settings</h3>
+                    <h3>Đơn hàng</h3>
                 </a>
                 <a href="#">
                     <span class="material-icons-sharp">
-                        add
+                        mail_outline
                     </span>
-                    <h3>New Login</h3>
+                    <h3>Khuyến mãi</h3>
+                    <span class="message-count">27</span>
                 </a>
                 <a href="#">
                     <span class="material-icons-sharp">
@@ -117,7 +99,7 @@
 
                 <div class="profile">
                     <div class="info">
-                        <p>Hey, <b>Reza</b></p>
+                        <p>Chào, <b>DA1</b></p>
                         <small class="text-muted">Admin</small>
                     </div>
                     <div class="profile-photo">
@@ -130,15 +112,15 @@
 
             <div class="user-profile">
                 <div class="logo">
-                    <img src="images/logo.png">
-                    <h2>AsmrProg</h2>
-                    <p>Fullstack Web Developer</p>
+                    <img src="images/logo.png" alt="anh admin">
+                    <h2>Tên admin</h2>
+                    <p>quyền admin</p>
                 </div>
             </div>
 
             <div class="reminders">
                 <div class="header">
-                    <h2>Reminders</h2>
+                    <h2>Lời nhắc</h2>
                     <span class="material-icons-sharp">
                         notifications_none
                     </span>
@@ -187,7 +169,7 @@
                         <span class="material-icons-sharp">
                             add
                         </span>
-                        <h3>Add Reminder</h3>
+                        <h3>Thêm lời nhắc</h3>
                     </div>
                 </div>
 
