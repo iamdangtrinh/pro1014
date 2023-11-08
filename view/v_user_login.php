@@ -18,20 +18,15 @@
 
 <div class="container  login-container">
 	<div class=" mt-2 mx-auto">
-		<form action="#" method="post">
+
+		<form action="#" id="form_login" method="post">
 			<div class="mb-2">
-				<label for="login-email">
-					Địa chỉ email
-					<span class="required">*</span>
-				</label>
-				<input type="email" name="fullname" class="form-input form-wide" id="login-email">
+				<label for="login-email">Địa chỉ email<span class="required">*</span></label>
+				<input type="email" name="email" class="form-input form-wide" id="login-email">
 			</div>
 
 			<div class="mb-2">
-				<label for="login-password">
-					Mật khẩu
-					<span class="required">*</span>
-				</label>
+				<label for="login-password">Mật khẩu<span class="required">*</span></label>
 				<input type="password" name="password" class="form-input form-wide" id="login-password">
 			</div>
 
@@ -41,5 +36,45 @@
 			</div>
 			<input type="submit" name="btn_login" value="Đăng nhập" class="btn btn-dark btn-md w-100">
 		</form>
+
 	</div>
 </div>
+
+<script>
+	$("#form_login").validate({
+    // các nguyên tắt 
+    rules: {
+        email: {
+            required: true,
+            email: true
+        },
+        password: {
+            required: true
+        }
+    },
+
+    // hiển thị tin nhắn lỗi 
+    messages: {
+        email: {
+            required: "Vui lòng nhập địa chỉ email",
+            email: "Vui lòng nhập địa chỉ email",
+        },
+
+        password: {
+            required: "Vui lòng nhập mật khẩu"
+        }
+    },
+
+    submitHandler: function (form) {
+        $.ajax({
+            type: "POST",
+            url: "login.php",
+            data: $(form).serializeArray(),
+
+            success: function (response) {
+                console.log("test");
+            }
+        });
+    }
+});
+</script>
