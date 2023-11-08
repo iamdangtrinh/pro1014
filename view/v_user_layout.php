@@ -65,9 +65,9 @@
                                         </div>
                                     <?php else: ?>
                                         <a href="<?= $base_url ?>user/register"
-                                            class="btn btn-primary d-inline-block font2 line-height-1">Đăng ký</a>
+                                            class="btn btn-primary mr-2 line-height-1">Đăng ký</a>
                                         <a href="<?= $base_url ?>user/login"
-                                            class="btn btn-primary d-inline-block font2 line-height-1">Đăng nhập</a>
+                                            class="btn btn-primary ml-2 line-height-1">Đăng nhập</a>
                                     <?php endif ?>
                                 </div>
                             </div>
