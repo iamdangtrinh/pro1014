@@ -41,12 +41,10 @@
 						<div class="form-footer">
 							<div class="custom-control custom-checkbox mb-0">
 								<input type="checkbox" class="custom-control-input" id="lost-password" />
-								<label class="custom-control-label mb-0" for="lost-password">Remember
-									me</label>
+								<label class="custom-control-label mb-0" for="lost-password">Remember me</label>
 							</div>
 
-							<a href="<?= $base_url ?>user/login"
-								class="forget-password text-dark form-footer-right">Quên mật khẩu?</a>
+							<a href="<?= $base_url ?>user/login" class="forget-password text-dark form-footer-right">Quên mật khẩu?</a>
 						</div>
 						<input type="submit" name="btn_login" value="Đăng nhập" class="btn btn-dark btn-md w-100">
 					</form>
@@ -59,6 +57,12 @@
 					</div>
 
 					<form action="#" method="post">
+						<label for="fullname">
+							Họ và tên
+							<span class="required">*</span>
+						</label>
+						<input type="text" name="fullname" class="form-input form-wide" id="fullname">
+
 						<label for="register-email">
 							Địa chỉ Email
 							<span class="required">*</span>
@@ -71,17 +75,17 @@
 						</label>
 						<input type="password" name="register_password" class="form-input form-wide" id="register-password">
 						
-						<label for="register-password">
+						<label for="reregister-password">
 							Nhập lại mật khẩu
 							<span class="required">*</span>
 						</label>
-						<input type="password" name="re_password" class="form-input form-wide" id="register-password">
+						<input type="password" name="re_password" class="form-input form-wide" id="reregister-password">
 						
-						<label for="register-password">
+						<label for="address">
 							Địa chỉ
 							<span class="required">*</span>
 						</label>
-						<input type="text" name="diachi" class="form-input form-wide" id="">
+						<input type="text" name="diachi" class="form-input form-wide" id="address">
 
 						<div class="form-footer mb-2">
 							<input name="btn_register" value="Đăng ký" type="submit" class="btn btn-dark btn-md w-100 mr-0">
