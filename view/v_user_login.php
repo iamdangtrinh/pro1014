@@ -53,26 +53,24 @@
 				</div>
 				<div class="col-md-6">
 					<div class="heading mb-1">
-						<h2 class="title">Register</h2>
+						<h2 class="title">Đăng ký</h2>
 					</div>
 
 					<form action="#">
 						<label for="register-email">
-							Email address
+							Địa chỉ Email
 							<span class="required">*</span>
 						</label>
-						<input type="email" class="form-input form-wide" id="register-email" required />
+						<input type="email" name="register_email" class="form-input form-wide" id="register-email" required />
 
 						<label for="register-password">
-							Password
+							Mật khẩu
 							<span class="required">*</span>
 						</label>
-						<input type="password" class="form-input form-wide" id="register-password" required />
+						<input type="password" name="register_password" class="form-input form-wide" id="register-password" required />
 
 						<div class="form-footer mb-2">
-							<button type="submit" class="btn btn-dark btn-md w-100 mr-0">
-								Register
-							</button>
+							<input name="btn_register" value="Đăng ký" type="submit" class="btn btn-dark btn-md w-100 mr-0">
 						</div>
 					</form>
 				</div>
