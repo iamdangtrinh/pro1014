@@ -1,8 +1,8 @@
 <?php 
     include_once 'm_pdo.php';
     // thao tac du lieu trong cs fql
-    function user_login($phone,$pass){
-        return pdo_query_one("SELECT * FROM taikhoan WHERE SoDienThoai=? AND MatKhau=?",$phone,$pass);
+    function check_login($email, $password){
+        return pdo_query_one("SELECT * FROM taikhoan WHERE Email=? AND MatKhau=?",$email,$password);
     }
     function user_getAll(){
         return pdo_query("SELECT * FROM taikhoan");

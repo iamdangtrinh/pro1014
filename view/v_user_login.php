@@ -19,7 +19,13 @@
 <div class="container  login-container">
 	<div class=" mt-2 mx-auto">
 
+		<?php if (isset($_SESSION['error']['login'])): ?>
+			<h5 class="text-danger"><?= $_SESSION['error']['login'] ?></h5>
+		<?php endif;
+		unset($_SESSION['error']['login']) ?>
+
 		<form action="#" id="form_login" method="post">
+
 			<div class="mb-2">
 				<label for="login-email">Địa chỉ email<span class="required">*</span></label>
 				<input type="email" name="email" class="form-input form-wide" id="login-email">
@@ -31,8 +37,8 @@
 			</div>
 
 			<div class="form-footer">
-				<a href="<?= $base_url ?>user/login" class="forget-password text-dark">Quên mật khẩu?</a>
-				<a href="<?= $base_url ?>user/register" class="forget-password text-danger form-footer-right">Đăng ký
+				<a href="<?= $base_url ?>user/login" class="text-dark">Quên mật khẩu?</a>
+				<a href="<?= $base_url ?>user/register" class="text-danger form-footer-right">Đăng ký
 					tài khoản</a>
 			</div>
 			<input type="submit" name="btn_login" value="Đăng nhập" class="btn btn-dark btn-md w-100">
@@ -75,7 +81,7 @@
 						data: $(form).serializeArray(),
 
 						success: function (response) {
-							console.log("test");
+							console.log(response);
 						}
 					});
 				}
