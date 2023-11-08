@@ -3,31 +3,31 @@
                     <nav aria-label="breadcrumb" class="breadcrumb-nav">
                         <div class="container">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="demo4.html">Home</a></li>
+                                <li class="breadcrumb-item"><a href="demo4.html">Trang Chủ</a></li>
                                 <li class="breadcrumb-item active" aria-current="page">
-                                    Wishlist
+                                    Danh sách yêu thích 
                                 </li>
                             </ol>
                         </div>
                     </nav>
 
-                    <h1>Wishlist</h1>
+                    <h1>Danh sách yêu thích</h1>
                 </div>
             </div>
 
             <div class="container">
                 <div class="wishlist-title">
-                    <h2 class="p-2">My wishlist on Porto Shop 4</h2>
+                    <h2 class="p-2">Danh sách yêu thích trên cửa hàng</h2>
                 </div>
                 <div class="wishlist-table-container">
                     <table class="table table-wishlist mb-0">
                         <thead>
                             <tr>
                                 <th class="thumbnail-col"></th>
-                                <th class="product-col">Product</th>
-                                <th class="price-col">Price</th>
-                                <th class="status-col">Stock Status</th>
-                                <th class="action-col">Actions</th>
+                                <th class="product-col">Sản Phẩm</th>
+                                <th class="price-col">Giá</th>
+                                <th class="status-col">Tồn kho</th>
+                                <th class="action-col">Hành động</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -43,19 +43,18 @@
                                 </td>
                                 <td>
                                     <h5 class="product-title">
-                                        <a href="product.html">Men Watch</a>
+                                        <a href="product.html">QUẦN ÁO CHO BÉ</a>
                                     </h5>
                                 </td>
-                                <td class="price-box">$17.90</td>
+                                <td class="price-box">17.000đ</td>
                                 <td>
-                                    <span class="stock-status">In stock</span>
+                                    <span class="stock-status">Trong kho</span>
                                 </td>
                                 <td class="action">
                                     <a href="ajax/product-quick-view.html" class="btn btn-quickview mt-1 mt-md-0"
-                                        title="Quick View">Quick
-                                        View</a>
+                                        title="Quick View">Xem lướt qua</a>
                                     <button class="btn btn-dark btn-add-cart product-type-simple btn-shop">
-                                        ADD TO CART
+                                        THÊM VÀO GIẢ HÀNG
                                     </button>
                                 </td>
                             </tr>
@@ -72,19 +71,18 @@
                                 </td>
                                 <td>
                                     <h5 class="product-title">
-                                        <a href="product.html">Men Cap</a>
+                                        <a href="product.html">MŨ CHO BÉ</a>
                                     </h5>
                                 </td>
                                 <td class="price-box">$17.90</td>
                                 <td>
-                                    <span class="stock-status">In stock</span>
+                                    <span class="stock-status">Trong kho</span>
                                 </td>
                                 <td class="action">
                                     <a href="ajax/product-quick-view.html" class="btn btn-quickview mt-1 mt-md-0"
-                                        title="Quick View">Quick
-                                        View</a>
+                                        title="Quick View">Xem lướt qua</a>
                                     <a href="product.html" class="btn btn-dark btn-add-cart btn-shop">
-                                        SELECT OPTION
+                                        TÙY CHỌN
                                     </a>
                                 </td>
                             </tr>
@@ -101,19 +99,18 @@
                                 </td>
                                 <td>
                                     <h5 class="product-title">
-                                        <a href="product.html">Men Black Gentle Belt</a>
+                                        <a href="product.html">GIÀY CHO BÉ</a>
                                     </h5>
                                 </td>
-                                <td class="price-box">$17.90</td>
+                                <td class="price-box">17.000đ</td>
                                 <td>
-                                    <span class="stock-status">In stock</span>
+                                    <span class="stock-status">Trong kho</span>
                                 </td>
                                 <td class="action">
                                     <a href="ajax/product-quick-view.html" class="btn btn-quickview mt-1 mt-md-0"
-                                        title="Quick View">Quick
-                                        View</a>
+                                        title="Quick View">Xem lướt qua</a>
                                     <a href="product.html" class="btn btn-dark btn-add-cart btn-shop">
-                                        SELECT OPTION
+                                        TÙY CHỌN
                                     </a>
                                 </td>
                             </tr>

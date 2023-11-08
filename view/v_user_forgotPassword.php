@@ -28,7 +28,7 @@
                                         một liên kết để tạo mật khẩu mới qua email.
                                     </p>
                                     <div class="form-group mb-0">
-                                        <label for="reset-email" class="font-weight-normal">Tên Tài Khoản hoặc Mật Khẩu</label>
+                                        <label for="reset-email" class="font-weight-normal">Nhập Email của bạn</label>
                                         <input type="email" class="form-control" id="reset-email" name="reset-email"
                                             required />
                                     </div>
