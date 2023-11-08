@@ -4,15 +4,15 @@
                         <div class="row align-items-center">
                             <div class="col-md-4 text-center text-md-right">
                                 <h2 class="font4 font-weight-normal ls-n-25 line-height-1 text-uppercase mb-0">
-                                    Discounts</h2>
-                                <h3 class="ls-n-25 line-height-1 text-uppercase mb-0 ml-0">Up to 70%</h3>
+                                    Giảm giá</h2>
+                                <h3 class="ls-n-25 line-height-1 text-uppercase mb-0 ml-0">Lên đến 70%</h3>
                             </div>
                             <div class="col-md-4 text-center">
                                 <img src="<?=$base_url?>upload/demoes/demo23/banners/category-banner.png" alt="banner"
                                     width="267" height="241">
                             </div>
                             <div class="col-md-4 text-center text-md-left">
-                                <a href="#" class="btn btn-link ml-0 p-0"><i>View our Deals</i><i
+                                <a href="#" class="btn btn-link ml-0 p-0"><i>Xem ưu đãi của chúng tôi</i><i
                                         class="icon-right-open-big"></i></a>
                             </div>
                         </div>
@@ -23,8 +23,8 @@
             <nav aria-label="breadcrumb" class="breadcrumb-nav">
                 <div class="container">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="demo23.html">Home</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Shop</li>
+                        <li class="breadcrumb-item"><a href="demo23.html">Trang chủ</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Sản Phẩm</li>
                     </ol>
                 </div>
             </nav>
@@ -52,20 +52,20 @@
                                             d="M16.5,22.92A2.6,2.6,0,0,1,14,25.5a2.6,2.6,0,0,1-2.5-2.58,2.5,2.5,0,0,1,5,0Z"
                                             class="cls-2"></path>
                                     </svg>
-                                    <span>Filter</span>
+                                    <span>Bộ lọc</span>
                                 </a>
 
                                 <div class="toolbox-item toolbox-sort">
-                                    <label>Sort By:</label>
+                                    <label>Phân loại:</label>
 
                                     <div class="select-custom">
                                         <select name="orderby" class="form-control">
-                                            <option value="menu_order" selected="selected">Default sorting</option>
-                                            <option value="popularity">Sort by popularity</option>
-                                            <option value="rating">Sort by average rating</option>
-                                            <option value="date">Sort by newness</option>
-                                            <option value="price">Sort by price: low to high</option>
-                                            <option value="price-desc">Sort by price: high to low</option>
+                                            <option value="menu_order" selected="selected">Mặc định</option>
+                                            <option value="popularity">Phổ biến</option>
+                                            <option value="rating">Đánh giá tốt</option>
+                                            <option value="date">Mới nhất </option>
+                                            <option value="price">Giá từ thấp -> cao</option>
+                                            <option value="price-desc">Giá từ cao -> thấp</option>
                                         </select>
                                     </div><!-- End .select-custom -->
 
@@ -75,7 +75,7 @@
 
                             <div class="toolbox-right">
                                 <div class="toolbox-item toolbox-show">
-                                    <label>Show:</label>
+                                    <label>Hiển thị:</label>
 
                                     <div class="select-custom">
                                         <select name="count" class="form-control">
@@ -102,8 +102,8 @@
                                 <div class="product-default inner-quickview inner-icon">
                                     <figure>
                                         <a href="demo23-product.html">
-                                            <img src="<?=$base_url?>upload/demoes/demo23/products/product-8.jpg" width="217"
-                                                height="217" alt="product">
+                                            <img src="<?=$base_url?>upload/demoes/demo23/products/product-8.jpg"
+                                                width="217" height="217" alt="product">
                                         </a>
                                         <div class="label-group">
                                             <div class="product-label label-sale">-89%</div>
@@ -113,18 +113,18 @@
                                                     class="icon-shopping-cart"></i></a>
                                         </div>
                                         <a href="ajax/product-quick-view.html" class="btn-quickview"
-                                            title="Quick View">Quick View</a>
+                                            title="Quick View">Xem lướt qua</a>
                                     </figure>
                                     <div class="product-details">
                                         <div class="category-wrap">
                                             <div class="category-list">
-                                                <a href="demo23-product.html" class="product-category">Category</a>
+                                                <a href="demo23-product.html" class="product-category">Loại </a>
                                             </div>
                                             <a href="wishlist.html" title="Wishlist" class="btn-icon-wish"><i
                                                     class="icon-heart"></i></a>
                                         </div>
                                         <h3 class="product-title">
-                                            <a href="demo23-product.html">Baby Sport Shoes</a>
+                                            <a href="demo23-product.html">Giày cho bé</a>
                                         </h3>
                                         <div class="ratings-container">
                                             <div class="product-ratings">
@@ -134,8 +134,8 @@
                                             </div><!-- End .product-ratings -->
                                         </div><!-- End .product-container -->
                                         <div class="price-box">
-                                            <span class="old-price">$596.00</span>
-                                            <span class="product-price">$68.00</span>
+                                            <span class="old-price">596.000đ</span>
+                                            <span class="product-price">68.000đ</span>
                                         </div><!-- End .price-box -->
                                     </div><!-- End .product-details -->
                                 </div>
@@ -144,8 +144,8 @@
                                 <div class="product-default inner-quickview inner-icon">
                                     <figure>
                                         <a href="demo23-product.html">
-                                            <img src="<?=$base_url?>upload/demoes/demo23/products/product-4.jpg" width="217"
-                                                height="217" alt="product">
+                                            <img src="<?=$base_url?>upload/demoes/demo23/products/product-4.jpg"
+                                                width="217" height="217" alt="product">
                                         </a>
                                         <div class="label-group">
                                             <div class="product-label label-hot">HOT</div>
@@ -156,19 +156,18 @@
                                                     class="icon-shopping-cart"></i></a>
                                         </div>
                                         <a href="ajax/product-quick-view.html" class="btn-quickview"
-                                            title="Quick View">Quick
-                                            View</a>
+                                            title="Quick View">Xem lướt qua</a>
                                     </figure>
                                     <div class="product-details">
                                         <div class="category-wrap">
                                             <div class="category-list">
-                                                <a href="demo23-shop.html" class="product-category">category</a>
+                                                <a href="demo23-shop.html" class="product-category">Loại</a>
                                             </div>
                                             <a href="wishlist.html" title="Wishlist" class="btn-icon-wish"><i
                                                     class="icon-heart"></i></a>
                                         </div>
                                         <h3 class="product-title">
-                                            <a href="demo23-product.html">Baby Summer Underclothes</a>
+                                            <a href="demo23-product.html">đồ mùa hè cho bé </a>
                                         </h3>
                                         <div class="ratings-container">
                                             <div class="product-ratings">
@@ -177,8 +176,8 @@
                                             </div><!-- End .product-ratings -->
                                         </div><!-- End .product-container -->
                                         <div class="price-box">
-                                            <span class="old-price">$299.00</span>
-                                            <span class="product-price">$259.00</span>
+                                            <span class="old-price">299.000đ</span>
+                                            <span class="product-price">259.000đ</span>
                                         </div><!-- End .price-box -->
                                     </div><!-- End .product-details -->
                                 </div>
@@ -187,8 +186,8 @@
                                 <div class="product-default inner-quickview inner-icon">
                                     <figure>
                                         <a href="demo23-product.html">
-                                            <img src="<?=$base_url?>upload/demoes/demo23/products/product-9.jpg" width="217"
-                                                height="217" alt="product">
+                                            <img src="<?=$base_url?>upload/demoes/demo23/products/product-9.jpg"
+                                                width="217" height="217" alt="product">
                                         </a>
                                         <div class="label-group">
                                             <div class="product-label label-sale">-35%</div>
@@ -199,18 +198,18 @@
                                                     class="icon-shopping-cart"></i></a>
                                         </div>
                                         <a href="ajax/product-quick-view.html" class="btn-quickview"
-                                            title="Quick View">Quick View</a>
+                                            title="Quick View">Xem lướt qua</a>
                                     </figure>
                                     <div class="product-details">
                                         <div class="category-wrap">
                                             <div class="category-list">
-                                                <a href="demo23-shop.html" class="product-category">category</a>
+                                                <a href="demo23-shop.html" class="product-category">Loại</a>
                                             </div>
                                             <a href="wishlist.html" title="Wishlist" class="btn-icon-wish"><i
                                                     class="icon-heart"></i></a>
                                         </div>
                                         <h3 class="product-title">
-                                            <a href="demo23-product.html">Blue Baby Winter Shoes</a>
+                                            <a href="demo23-product.html">giày mùa đông cho bé </a>
                                         </h3>
                                         <div class="ratings-container">
                                             <div class="product-ratings">
@@ -219,8 +218,8 @@
                                             </div><!-- End .product-ratings -->
                                         </div><!-- End .product-container -->
                                         <div class="price-box">
-                                            <span class="old-price">$199.00</span>
-                                            <span class="product-price">$129.00</span>
+                                            <span class="old-price">199.000đ</span>
+                                            <span class="product-price">129.000đ</span>
                                         </div><!-- End .price-box -->
                                     </div><!-- End .product-details -->
                                 </div>
@@ -229,8 +228,8 @@
                                 <div class="product-default inner-quickview inner-icon">
                                     <figure>
                                         <a href="demo23-product.html">
-                                            <img src="<?=$base_url?>upload/demoes/demo23/products/product-10.jpg" width="217"
-                                                height="217" alt="product">
+                                            <img src="<?=$base_url?>upload/demoes/demo23/products/product-10.jpg"
+                                                width="217" height="217" alt="product">
                                         </a>
                                         <div class="label-group">
                                             <div class="product-label label-sale">-89%</div>
@@ -241,18 +240,18 @@
                                                     class="icon-shopping-cart"></i></a>
                                         </div>
                                         <a href="ajax/product-quick-view.html" class="btn-quickview"
-                                            title="Quick View">Quick View</a>
+                                            title="Quick View">Xem lướt qua</a>
                                     </figure>
                                     <div class="product-details">
                                         <div class="category-wrap">
                                             <div class="category-list">
-                                                <a href="demo23-shop.html" class="product-category">category</a>
+                                                <a href="demo23-shop.html" class="product-category">Loại</a>
                                             </div>
                                             <a href="wishlist.html" title="Wishlist" class="btn-icon-wish"><i
                                                     class="icon-heart"></i></a>
                                         </div>
                                         <h3 class="product-title">
-                                            <a href="demo23-product.html">Blue Boy Shoes</a>
+                                            <a href="demo23-product.html">Nón mùa đông cho bé</a>
                                         </h3>
                                         <div class="ratings-container">
                                             <div class="product-ratings">
@@ -261,8 +260,8 @@
                                             </div><!-- End .product-ratings -->
                                         </div><!-- End .product-container -->
                                         <div class="price-box">
-                                            <span class="old-price">$596.00</span>
-                                            <span class="product-price">$68.00</span>
+                                            <span class="old-price">596.000đ</span>
+                                            <span class="product-price">68.000đ</span>
                                         </div><!-- End .price-box -->
                                     </div><!-- End .product-details -->
                                 </div>
@@ -271,8 +270,8 @@
                                 <div class="product-default inner-quickview inner-icon">
                                     <figure>
                                         <a href="demo23-product.html">
-                                            <img src="<?=$base_url?>upload/demoes/demo23/products/product-10.jpg" width="217"
-                                                height="217" alt="product">
+                                            <img src="<?=$base_url?>upload/demoes/demo23/products/product-10.jpg"
+                                                width="217" height="217" alt="product">
                                         </a>
                                         <div class="label-group">
                                             <div class="product-label label-sale">-17%</div>
@@ -283,18 +282,18 @@
                                                     class="icon-shopping-cart"></i></a>
                                         </div>
                                         <a href="ajax/product-quick-view.html" class="btn-quickview"
-                                            title="Quick View">Quick View</a>
+                                            title="Quick View">Xem lướt qua</a>
                                     </figure>
                                     <div class="product-details">
                                         <div class="category-wrap">
                                             <div class="category-list">
-                                                <a href="demo23-shop.html" class="product-category">category</a>
+                                                <a href="demo23-shop.html" class="product-category">Loại</a>
                                             </div>
                                             <a href="wishlist.html" title="Wishlist" class="btn-icon-wish"><i
                                                     class="icon-heart"></i></a>
                                         </div>
                                         <h3 class="product-title">
-                                            <a href="demo23-product.html">Blue Boy Spring Shoes</a>
+                                            <a href="demo23-product.html">Quần áo </a>
                                         </h3>
                                         <div class="ratings-container">
                                             <div class="product-ratings">
@@ -303,8 +302,8 @@
                                             </div><!-- End .product-ratings -->
                                         </div><!-- End .product-container -->
                                         <div class="price-box">
-                                            <span class="old-price">$59.00</span>
-                                            <span class="product-price">$49.00</span>
+                                            <span class="old-price">59.000đ</span>
+                                            <span class="product-price">49.000đ</span>
                                         </div><!-- End .price-box -->
                                     </div><!-- End .product-details -->
                                 </div>
@@ -313,10 +312,10 @@
                                 <div class="product-default inner-quickview inner-icon">
                                     <figure>
                                         <a href="demo23-product.html">
-                                            <img src="<?=$base_url?>upload/demoes/demo23/products/product-3.jpg" width="217"
-                                                height="217" alt="product">
-                                            <img src="<?=$base_url?>upload/demoes/demo23/products/product-1.jpg" width="217"
-                                                height="217" alt="product">
+                                            <img src="<?=$base_url?>upload/demoes/demo23/products/product-3.jpg"
+                                                width="217" height="217" alt="product">
+                                            <img src="<?=$base_url?>upload/demoes/demo23/products/product-1.jpg"
+                                                width="217" height="217" alt="product">
                                         </a>
                                         <div class="label-group">
                                             <div class="product-label label-hot">HOT</div>
@@ -326,19 +325,18 @@
                                                     class="fa fa-arrow-right"></i></a>
                                         </div>
                                         <a href="ajax/product-quick-view.html" class="btn-quickview"
-                                            title="Quick View">Quick
-                                            View</a>
+                                            title="Quick View">Xem lướt qua</a>
                                     </figure>
                                     <div class="product-details">
                                         <div class="category-wrap">
                                             <div class="category-list">
-                                                <a href="demo23-shop.html" class="product-category">category</a>
+                                                <a href="demo23-shop.html" class="product-category">Loại</a>
                                             </div>
                                             <a href="wishlist.html" title="Wishlist" class="btn-icon-wish"><i
                                                     class="icon-heart"></i></a>
                                         </div>
                                         <h3 class="product-title">
-                                            <a href="demo23-product.html">Blue Child Overshoes</a>
+                                            <a href="demo23-product.html">Khăn mùa đông cho bé </a>
                                         </h3>
                                         <div class="ratings-container">
                                             <div class="product-ratings">
@@ -347,7 +345,7 @@
                                             </div><!-- End .product-ratings -->
                                         </div><!-- End .product-container -->
                                         <div class="price-box">
-                                            <span class="product-price">$39.00</span>
+                                            <span class="product-price">39.000đ</span>
                                         </div><!-- End .price-box -->
                                     </div><!-- End .product-details -->
                                 </div>
@@ -356,26 +354,26 @@
                                 <div class="product-default inner-quickview inner-icon">
                                     <figure>
                                         <a href="demo23-product.html">
-                                            <img src="<?=$base_url?>upload/demoes/demo23/products/product-12.jpg" width="217"
-                                                height="217" alt="product">
+                                            <img src="<?=$base_url?>upload/demoes/demo23/products/product-12.jpg"
+                                                width="217" height="217" alt="product">
                                         </a>
                                         <div class="btn-icon-group">
                                             <a href="#" class="btn-icon btn-add-cart product-type-simple"><i
                                                     class="icon-shopping-cart"></i></a>
                                         </div>
                                         <a href="ajax/product-quick-view.html" class="btn-quickview"
-                                            title="Quick View">Quick View</a>
+                                            title="Quick View">Xem lướt qua</a>
                                     </figure>
                                     <div class="product-details">
                                         <div class="category-wrap">
                                             <div class="category-list">
-                                                <a href="demo23-shop.html" class="product-category">category</a>
+                                                <a href="demo23-shop.html" class="product-category">Loại</a>
                                             </div>
                                             <a href="wishlist.html" title="Wishlist" class="btn-icon-wish"><i
                                                     class="icon-heart"></i></a>
                                         </div>
                                         <h3 class="product-title">
-                                            <a href="demo23-product.html">Casual Brown Shoes</a>
+                                            <a href="demo23-product.html">Giày nâu</a>
                                         </h3>
                                         <div class="ratings-container">
                                             <div class="product-ratings">
@@ -384,7 +382,7 @@
                                             </div><!-- End .product-ratings -->
                                         </div><!-- End .product-container -->
                                         <div class="price-box">
-                                            <span class="product-price">$108.00</span>
+                                            <span class="product-price">108.000đ</span>
                                         </div><!-- End .price-box -->
                                     </div><!-- End .product-details -->
                                 </div>
@@ -393,8 +391,8 @@
                                 <div class="product-default inner-quickview inner-icon">
                                     <figure>
                                         <a href="demo23-product.html">
-                                            <img src="<?=$base_url?>upload/demoes/demo23/products/product-13.jpg" width="217"
-                                                height="217" alt="product">
+                                            <img src="<?=$base_url?>upload/demoes/demo23/products/product-13.jpg"
+                                                width="217" height="217" alt="product">
                                         </a>
                                         <div class="label-group">
                                             <div class="product-label label-sale">-35%</div>
@@ -404,18 +402,18 @@
                                                     class="icon-shopping-cart"></i></a>
                                         </div>
                                         <a href="ajax/product-quick-view.html" class="btn-quickview"
-                                            title="Quick View">Quick View</a>
+                                            title="Quick View">Xem lướt qua</a>
                                     </figure>
                                     <div class="product-details">
                                         <div class="category-wrap">
                                             <div class="category-list">
-                                                <a href="demo23-shop.html" class="product-category">category</a>
+                                                <a href="demo23-shop.html" class="product-category">Loại</a>
                                             </div>
                                             <a href="wishlist.html" title="Wishlist" class="btn-icon-wish"><i
                                                     class="icon-heart"></i></a>
                                         </div>
                                         <h3 class="product-title">
-                                            <a href="demo23-product.html">Pink Baby Caps</a>
+                                            <a href="demo23-product.html">Mũ em bé màu hồng</a>
                                         </h3>
                                         <div class="ratings-container">
                                             <div class="product-ratings">
@@ -424,8 +422,8 @@
                                             </div><!-- End .product-ratings -->
                                         </div><!-- End .product-container -->
                                         <div class="price-box">
-                                            <span class="product-price">$199.00</span>
-                                            <span class="product-price">$129.00</span>
+                                            <span class="product-price">199.000đ</span>
+                                            <span class="product-price">129.000đ</span>
                                         </div><!-- End .price-box -->
                                     </div><!-- End .product-details -->
                                 </div>
@@ -434,8 +432,8 @@
                                 <div class="product-default inner-quickview inner-icon">
                                     <figure>
                                         <a href="demo23-product.html">
-                                            <img src="<?=$base_url?>upload/demoes/demo23/products/product-14.jpg" width="217"
-                                                height="217" alt="product">
+                                            <img src="<?=$base_url?>upload/demoes/demo23/products/product-14.jpg"
+                                                width="217" height="217" alt="product">
                                         </a>
                                         <div class="label-group">
                                             <div class="product-label label-hot">HOT</div>
@@ -446,18 +444,19 @@
                                                     class="icon-shopping-cart"></i></a>
                                         </div>
                                         <a href="ajax/product-quick-view.html" class="btn-quickview"
-                                            title="Quick View">Quick View</a>
+                                            title="Quick View">Xem lướt qua</a>
                                     </figure>
                                     <div class="product-details">
                                         <div class="category-wrap">
                                             <div class="category-list">
-                                                <a href="demo23-shop.html" class="product-category">category</a>
+                                                <a href="demo23-shop.html" class="product-category">Loại</a>
                                             </div>
                                             <a href="wishlist.html" title="Wishlist" class="btn-icon-wish"><i
                                                     class="icon-heart"></i></a>
                                         </div>
                                         <h3 class="product-title">
-                                            <a href="demo23-product.html">Pink Baby Spring Shoes</a>
+                                            <a href="demo23-product.html">
+                                                Giày Xuân Hồng Cho Bé</a>
                                         </h3>
                                         <div class="ratings-container">
                                             <div class="product-ratings">
@@ -467,7 +466,7 @@
                                             </div><!-- End .product-ratings -->
                                         </div><!-- End .product-container -->
                                         <div class="price-box">
-                                            <span class="product-price">$299.00</span>
+                                            <span class="product-price">299.000đ</span>
                                         </div><!-- End .price-box -->
                                     </div><!-- End .product-details -->
                                 </div>
@@ -476,8 +475,8 @@
                                 <div class="product-default inner-quickview inner-icon">
                                     <figure>
                                         <a href="demo23-product.html">
-                                            <img src="<?=$base_url?>upload/demoes/demo23/products/product-15.jpg" width="217"
-                                                height="217" alt="product">
+                                            <img src="<?=$base_url?>upload/demoes/demo23/products/product-15.jpg"
+                                                width="217" height="217" alt="product">
                                         </a>
                                         <div class="label-group">
                                             <div class="product-label label-sale">-15%</div>
@@ -487,18 +486,18 @@
                                                     class="icon-shopping-cart"></i></a>
                                         </div>
                                         <a href="ajax/product-quick-view.html" class="btn-quickview"
-                                            title="Quick View">Quick View</a>
+                                            title="Quick View">Xem lướt qua</a>
                                     </figure>
                                     <div class="product-details">
                                         <div class="category-wrap">
                                             <div class="category-list">
-                                                <a href="demo23-shop.html" class="product-category">category</a>
+                                                <a href="demo23-shop.html" class="product-category">Loại</a>
                                             </div>
                                             <a href="wishlist.html" title="Wishlist" class="btn-icon-wish"><i
                                                     class="icon-heart"></i></a>
                                         </div>
                                         <h3 class="product-title">
-                                            <a href="demo23-product.html">Pink Girl Overshoes</a>
+                                            <a href="demo23-product.html">Giày đi ngoài màu hồng</a>
                                         </h3>
                                         <div class="ratings-container">
                                             <div class="product-ratings">
@@ -507,8 +506,8 @@
                                             </div><!-- End .product-ratings -->
                                         </div><!-- End .product-container -->
                                         <div class="price-box">
-                                            <span class="old-price">$1,999.00</span>
-                                            <span class="product-price">$1,699.00</span>
+                                            <span class="old-price">1,999.000đ</span>
+                                            <span class="product-price">1,699.000đ</span>
                                         </div><!-- End .price-box -->
                                     </div><!-- End .product-details -->
                                 </div>
@@ -517,10 +516,10 @@
                                 <div class="product-default inner-quickview inner-icon">
                                     <figure>
                                         <a href="demo23-product.html">
-                                            <img src="<?=$base_url?>upload/demoes/demo23/products/product-1.jpg" width="217"
-                                                height="217" alt="product">
-                                            <img src="<?=$base_url?>upload/demoes/demo23/products/product-7.jpg" width="217"
-                                                height="217" alt="product">
+                                            <img src="<?=$base_url?>upload/demoes/demo23/products/product-1.jpg"
+                                                width="217" height="217" alt="product">
+                                            <img src="<?=$base_url?>upload/demoes/demo23/products/product-7.jpg"
+                                                width="217" height="217" alt="product">
                                         </a>
                                         <div class="label-group">
                                             <div class="product-label label-hot">HOT</div>
@@ -530,19 +529,18 @@
                                                     class="fa fa-arrow-right"></i></a>
                                         </div>
                                         <a href="ajax/product-quick-view.html" class="btn-quickview"
-                                            title="Quick View">Quick
-                                            View</a>
+                                            title="Quick View">Xem lướt qua</a>
                                     </figure>
                                     <div class="product-details">
                                         <div class="category-wrap">
                                             <div class="category-list">
-                                                <a href="demo23-shop.html" class="product-category">category</a>
+                                                <a href="demo23-shop.html" class="product-category">Loại</a>
                                             </div>
                                             <a href="wishlist.html" title="Wishlist" class="btn-icon-wish"><i
                                                     class="icon-heart"></i></a>
                                         </div>
                                         <h3 class="product-title">
-                                            <a href="demo23-product.html">Pink Winter Girl Shoes</a>
+                                            <a href="demo23-product.html">Giày bé gái mùa đông màu hồng</a>
                                         </h3>
                                         <div class="ratings-container">
                                             <div class="product-ratings">
@@ -551,7 +549,7 @@
                                             </div><!-- End .product-ratings -->
                                         </div><!-- End .product-container -->
                                         <div class="price-box">
-                                            <span class="product-price">$101.00 &ndash; $111.00</span>
+                                            <span class="product-price">101.000đ &ndash; 111.000đ</span>
                                         </div><!-- End .price-box -->
                                     </div><!-- End .product-details -->
                                 </div>
@@ -560,8 +558,8 @@
                                 <div class="product-default inner-quickview inner-icon">
                                     <figure>
                                         <a href="demo23-product.html">
-                                            <img src="<?=$base_url?>upload/demoes/demo23/products/product-2.jpg" width="217"
-                                                height="217" alt="product">
+                                            <img src="<?=$base_url?>upload/demoes/demo23/products/product-2.jpg"
+                                                width="217" height="217" alt="product">
                                         </a>
                                         <div class="label-group">
                                             <div class="product-label label-hot">HOT</div>
@@ -571,19 +569,18 @@
                                                     class="fa fa-arrow-right"></i></a>
                                         </div>
                                         <a href="ajax/product-quick-view.html" class="btn-quickview"
-                                            title="Quick View">Quick
-                                            View</a>
+                                            title="Quick View">Xem lướt qua</a>
                                     </figure>
                                     <div class="product-details">
                                         <div class="category-wrap">
                                             <div class="category-list">
-                                                <a href="demo23-shop.html" class="product-category">category</a>
+                                                <a href="demo23-shop.html" class="product-category">Loại</a>
                                             </div>
                                             <a href="wishlist.html" title="Wishlist" class="btn-icon-wish"><i
                                                     class="icon-heart"></i></a>
                                         </div>
                                         <h3 class="product-title">
-                                            <a href="demo23-product.html">Porto Extended Camera</a>
+                                            <a href="demo23-product.html">Máy ảnh mở rộng Porto</a>
                                         </h3>
                                         <div class="ratings-container">
                                             <div class="product-ratings">
@@ -592,7 +589,7 @@
                                             </div><!-- End .product-ratings -->
                                         </div><!-- End .product-container -->
                                         <div class="price-box">
-                                            <span class="product-price">$599.00</span>
+                                            <span class="product-price">599.000đ</span>
                                         </div><!-- End .price-box -->
                                     </div><!-- End .product-details -->
                                 </div>
@@ -601,7 +598,7 @@
 
                         <nav class="toolbox toolbox-pagination">
                             <div class="toolbox-item toolbox-show">
-                                <label class="mt-0">Show:</label>
+                                <label class="mt-0">Hiển thị:</label>
 
                                 <div class="select-custom">
                                     <select name="count" class="form-control">
@@ -617,7 +614,7 @@
                                     <a class="page-link page-link-btn" href="#"><i class="icon-angle-left"></i></a>
                                 </li>
                                 <li class="page-item active">
-                                    <a class="page-link" href="#">1 <span class="sr-only">(current)</span></a>
+                                    <a class="page-link" href="#">1 <span class="sr-only">(hiện hành)</span></a>
                                 </li>
                                 <li class="page-item"><a class="page-link" href="#">2</a></li>
                                 <li class="page-item"><a class="page-link" href="#">3</a></li>
@@ -635,7 +632,7 @@
                             <div class="widget">
                                 <h3 class="widget-title">
                                     <a data-toggle="collapse" href="#widget-body-1" role="button" aria-expanded="true"
-                                        aria-controls="widget-body-1">Categories</a>
+                                        aria-controls="widget-body-1">Thể loại</a>
                                 </h3>
 
                                 <div class="collapse show" id="widget-body-1">
@@ -644,14 +641,14 @@
                                             <li>
                                                 <a href="#widget-category-1" data-toggle="collapse" role="button"
                                                     aria-expanded="true" aria-controls="widget-category-1">
-                                                    Babies<span class="products-count">(4)</span>
+                                                    Em Bé<span class="products-count">(4)</span>
                                                     <span class="toggle"></span>
                                                 </a>
                                                 <div class="collapse show" id="widget-category-1">
                                                     <ul class="cat-sublist">
-                                                        <li><a href="#">Toys<span class="products-count">(1)</span></a>
+                                                        <li><a href="#">Đồ chơi<span class="products-count">(1)</span></a>
                                                         </li>
-                                                        <li><a href="#">Trousers<span
+                                                        <li><a href="#">Quần dài<span
                                                                     class="products-count">(2)</span></a></li>
                                                     </ul>
                                                 </div>
@@ -660,30 +657,30 @@
                                                 <a href="#widget-category-2" class="collapsed" data-toggle="collapse"
                                                     role="button" aria-expanded="false"
                                                     aria-controls="widget-category-2">
-                                                    Boys<span class="products-count">(8)</span>
+                                                    Bé Trai<span class="products-count">(8)</span>
                                                     <span class="toggle"></span>
                                                 </a>
                                                 <div class="collapse" id="widget-category-2">
                                                     <ul class="cat-sublist">
-                                                        <li>Dresses<span class="products-count">(3)</span></li>
-                                                        <li>Shoes<span class="products-count">(2)</span></li>
-                                                        <li>Toys<span class="products-count">(1)</span></li>
+                                                        <li>Quần áo<span class="products-count">(3)</span></li>
+                                                        <li>Giày<span class="products-count">(2)</span></li>
+                                                        <li>Đò chơi<span class="products-count">(1)</span></li>
                                                     </ul>
                                                 </div>
                                             </li>
                                             <li>
-                                                <a href="#">Gifts<span class="products-count">(4)</span></a>
+                                                <a href="#">Quà tặng<span class="products-count">(4)</span></a>
                                             </li>
                                             <li>
                                                 <a href="#widget-category-4" class="collapsed" data-toggle="collapse"
                                                     role="button" aria-expanded="false"
                                                     aria-controls="widget-category-4">
-                                                    Girls<span class="products-count">(5)</span>
+                                                    Bé Gái<span class="products-count">(5)</span>
                                                     <span class="toggle"></span>
                                                 </a>
                                                 <div class="collapse" id="widget-category-4">
                                                     <ul class="cat-sublist">
-                                                        <li>Garden<span class="products-count">(4)</span></li>
+                                                        <li>Quà tặng<span class="products-count">(4)</span></li>
                                                     </ul>
                                                 </div>
                                             </li>
@@ -695,7 +692,7 @@
                             <div class="widget">
                                 <h3 class="widget-title">
                                     <a data-toggle="collapse" href="#widget-body-2" role="button" aria-expanded="true"
-                                        aria-controls="widget-body-2">Price</a>
+                                        aria-controls="widget-body-2">Giá</a>
                                 </h3>
 
                                 <div class="collapse show" id="widget-body-2">
@@ -708,11 +705,11 @@
                                             <div
                                                 class="filter-price-action d-flex align-items-center justify-content-between flex-wrap">
                                                 <div class="filter-price-text">
-                                                    Price:
+                                                    Giá:
                                                     <span id="filter-price-range"></span>
                                                 </div><!-- End .filter-price-text -->
 
-                                                <button type="submit" class="btn btn-primary">Filter</button>
+                                                <button type="submit" class="btn btn-primary">Bộ lọc</button>
                                             </div><!-- End .filter-price-action -->
                                         </form>
                                     </div><!-- End .widget-body -->
@@ -722,32 +719,32 @@
                             <div class="widget widget-color">
                                 <h3 class="widget-title">
                                     <a data-toggle="collapse" href="#widget-body-3" role="button" aria-expanded="true"
-                                        aria-controls="widget-body-3">Color</a>
+                                        aria-controls="widget-body-3">Màu sắc</a>
                                 </h3>
 
                                 <div class="collapse show" id="widget-body-3">
                                     <div class="widget-body pb-0">
                                         <ul class="config-swatch-list">
                                             <li class="active">
-                                                <a href="#" style="background-color: #000;">Black</a>
+                                                <a href="#" style="background-color: #000;">Màu Đen</a>
                                             </li>
                                             <li>
-                                                <a href="#" style="background-color: #0188cc;">Blue</a>
+                                                <a href="#" style="background-color: #0188cc;">Màu xanh dương</a>
                                             </li>
                                             <li>
-                                                <a href="#" style="background-color: #81d742;">Green</a>
+                                                <a href="#" style="background-color: #81d742;">Màu xanh lá</a>
                                             </li>
                                             <li>
-                                                <a href="#" style="background-color: #eded65;">Yellow</a>
+                                                <a href="#" style="background-color: #eded65;">Màu vàng</a>
                                             </li>
                                             <li>
-                                                <a href="#" style="background-color: #6085a5;">Indigo</a>
+                                                <a href="#" style="background-color: #6085a5;">Màu xanh đậm</a>
                                             </li>
                                             <li>
-                                                <a href="#" style="background-color: #83c2bd;">Light-Blue</a>
+                                                <a href="#" style="background-color: #83c2bd;">Màu xanh nhạt</a>
                                             </li>
                                             <li>
-                                                <a href="#" style="background-color: #ab6e6e;">Red</a>
+                                                <a href="#" style="background-color: #ab6e6e;">Màu đỏ</a>
                                             </li>
                                         </ul>
                                     </div><!-- End .widget-body -->
@@ -757,23 +754,23 @@
                             <div class="widget">
                                 <h3 class="widget-title">
                                     <a data-toggle="collapse" href="#widget-body-4" role="button" aria-expanded="true"
-                                        aria-controls="widget-body-4">Sizes</a>
+                                        aria-controls="widget-body-4">Kích cỡ</a>
                                 </h3>
 
                                 <div class="collapse show" id="widget-body-4">
                                     <div class="widget-body">
                                         <ul class="cat-list">
-                                            <li><a href="#">Extra Large</a></li>
-                                            <li><a href="#">Large</a></li>
-                                            <li><a href="#">Medium</a></li>
-                                            <li><a href="#">Small</a></li>
+                                            <li><a href="#">XL</a></li>
+                                            <li><a href="#">L</a></li>
+                                            <li><a href="#">M</a></li>
+                                            <li><a href="#">S</a></li>
                                         </ul>
                                     </div><!-- End .widget-body -->
                                 </div><!-- End .collapse -->
                             </div><!-- End .widget -->
 
                             <div class="widget widget-featured pb-0">
-                                <h3 class="widget-title">Featured Products</h3>
+                                <h3 class="widget-title">Sản phẩm nổi bật</h3>
 
                                 <div class="widget-body">
                                     <div class="featured-col">
@@ -788,7 +785,7 @@
                                             </figure>
                                             <div class="product-details">
                                                 <h3 class="product-title">
-                                                    <a href="demo23-product.html">Pink Winter Girl Shoes</a>
+                                                    <a href="demo23-product.html">Giày bé gái mùa đông màu hồng</a>
                                                 </h3>
                                                 <div class="ratings-container">
                                                     <div class="product-ratings">
@@ -798,7 +795,7 @@
                                                     </div><!-- End .product-ratings -->
                                                 </div><!-- End .product-container -->
                                                 <div class="price-box">
-                                                    <span class="product-price">$101.00 &ndash; $111.00</span>
+                                                    <span class="product-price">101.000đ &ndash; 111.000đ</span>
                                                 </div><!-- End .price-box -->
                                             </div><!-- End .product-details -->
                                         </div>
@@ -811,7 +808,7 @@
                                             </figure>
                                             <div class="product-details">
                                                 <h3 class="product-title">
-                                                    <a href="demo23-product.html">Porto Extended Camera</a>
+                                                    <a href="demo23-product.html">Máy ảnh mở rộng Porto</a>
                                                 </h3>
                                                 <div class="ratings-container">
                                                     <div class="product-ratings">
@@ -821,7 +818,7 @@
                                                     </div><!-- End .product-ratings -->
                                                 </div><!-- End .product-container -->
                                                 <div class="price-box">
-                                                    <span class="product-price">$599.00</span>
+                                                    <span class="product-price">599.000đ</span>
                                                 </div><!-- End .price-box -->
                                             </div><!-- End .product-details -->
                                         </div>
