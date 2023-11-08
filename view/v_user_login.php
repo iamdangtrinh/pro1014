@@ -6,7 +6,7 @@
 					<li class="breadcrumb-item"><a href="demo4.html">Trang chủ</a></li>
 					<li class="breadcrumb-item"><a href="category.html">Tài khoản</a></li>
 					<li class="breadcrumb-item active" aria-current="page">
-					Tài khoản của tôi
+						Tài khoản của tôi
 					</li>
 				</ol>
 			</div>
@@ -26,27 +26,24 @@
 						<h2 class="title">Đăng nhập</h2>
 					</div>
 					<form action="#" method="post">
-						<label for="login-email">
-							Tên đăng nhập hoặc địa chỉ email
-							<span class="required">*</span>
-						</label>
-						<input type="email" name="fullname" class="form-input form-wide" id="login-email" required />
+						<div class="mb-2">
+							<label for="login-email">
+								Tên đăng nhập hoặc địa chỉ email
+								<span class="required">*</span>
+							</label>
+							<input type="email" name="fullname" class="form-input form-wide" id="login-email">
+						</div>
 
-						<label for="login-password">
-							Mật khẩu
-							<span class="required">*</span>
-						</label>
-						<input type="password" name="password" class="form-input form-wide" id="login-password" required />
+						<div class="mb-2">
+							<label for="login-password">
+								Mật khẩu
+								<span class="required">*</span>
+							</label>
+							<input type="password" name="password" class="form-input form-wide" id="login-password">
+						</div>
 
 						<div class="form-footer">
-							<div class="custom-control custom-checkbox mb-0">
-								<input type="checkbox" class="custom-control-input" id="lost-password" />
-								<label class="custom-control-label mb-0" for="lost-password">Remember
-									me</label>
-							</div>
-
-							<a href="<?= $base_url ?>user/login"
-								class="forget-password text-dark form-footer-right">Quên mật khẩu?</a>
+							<a href="<?= $base_url ?>user/login" class="forget-password text-dark">Quên mật khẩu?</a>
 						</div>
 						<input type="submit" name="btn_login" value="Đăng nhập" class="btn btn-dark btn-md w-100">
 					</form>
@@ -59,32 +56,47 @@
 					</div>
 
 					<form action="#" method="post">
-						<label for="register-email">
-							Địa chỉ Email
-							<span class="required">*</span>
-						</label>
-						<input type="email" name="register_email" class="form-input form-wide" id="register-email">
+						<div class="mb-2">
 
-						<label for="register-password">
-							Mật khẩu
-							<span class="required">*</span>
-						</label>
-						<input type="password" name="register_password" class="form-input form-wide" id="register-password">
-						
-						<label for="register-password">
-							Nhập lại mật khẩu
-							<span class="required">*</span>
-						</label>
-						<input type="password" name="re_password" class="form-input form-wide" id="register-password">
-						
-						<label for="register-password">
-							Địa chỉ
-							<span class="required">*</span>
-						</label>
-						<input type="text" name="diachi" class="form-input form-wide" id="">
+							<label for="register-email">
+								Địa chỉ Email
+								<span class="required">*</span>
+							</label>
+							<input type="email" name="register_email" class="form-input form-wide" id="register-email">
+						</div>
+
+						<div class="mb-2">
+
+							<label for="register-password">
+								Mật khẩu
+								<span class="required">*</span>
+							</label>
+							<input type="password" name="register_password" class="form-input form-wide"
+								id="register-password">
+						</div>
+
+						<div class="mb-2">
+
+							<label for="register-password">
+								Nhập lại mật khẩu
+								<span class="required">*</span>
+							</label>
+							<input type="password" name="re_password" class="form-input form-wide"
+								id="register-password">
+						</div>
+
+						<div class="mb-2">
+
+							<label for="register-password">
+								Địa chỉ
+								<span class="required">*</span>
+							</label>
+							<input type="text" name="diachi" class="form-input form-wide" id="">
+						</div>
 
 						<div class="form-footer mb-2">
-							<input name="btn_register" value="Đăng ký" type="submit" class="btn btn-dark btn-md w-100 mr-0">
+							<input name="btn_register" value="Đăng ký" type="submit"
+								class="btn btn-dark btn-md w-100 mr-0">
 						</div>
 					</form>
 				</div>

@@ -5737,8 +5737,6 @@ label {
 
 .custom-control {
     position: relative;
-    margin-top: 3rem;
-    margin-bottom: 3rem;
     padding-left: 3rem
 }
 
@@ -5861,7 +5859,7 @@ label {
 
     .form-footer,
     form {
-        margin-bottom: 5rem
+        margin-bottom: 2rem
     }
 }
 
