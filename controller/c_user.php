@@ -6,10 +6,17 @@
                 // hien thi du lieu
                 $view_name='user_dashboard';
                 break;
+                // Đăng nhập tài khoản
             case 'login':
                 //lay du lieu
                 // hien thi du lieu
                 $view_name='user_login';
+                break;
+                // Đăng ký tài khoản
+            case 'register':
+                //lay du lieu
+                // hien thi du lieu
+                $view_name='user_register';
                 break;
             case 'forgotPassword':
                 //lay du lieu

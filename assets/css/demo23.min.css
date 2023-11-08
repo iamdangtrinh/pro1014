@@ -1080,6 +1080,11 @@
     overflow-y: auto
 }
 
+.login-container,
+.register-container {
+    width: 450px;
+}
+
 .mfp-container:before {
     content: "";
     display: inline-block;
