@@ -5,4 +5,5 @@
     $title ="Trang chủ";
     $base_url='http://localhost/pro1041/';
     session_start();
+    ob_start();
 ?>
