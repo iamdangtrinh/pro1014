@@ -6,13 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title><?= $title?></title>
-    <meta name="keywords" content="HTML5 Template" />
-    <meta name="description" content="Porto - Bootstrap eCommerce Template">
-    <meta name="author" content="SW-THEMES">
-
+    <meta name="description" content="Website bán hàng">
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="<?=$base_url?>upload/icons/favicon.png">
-
 
     <!-- Plugins CSS File -->
     <link rel="stylesheet" href="<?=$base_url?>assets/css/bootstrap.min.css">
@@ -21,8 +17,8 @@
     <link rel="stylesheet" href="<?=$base_url?>assets/css/style23.css">
     <link rel="stylesheet" href="<?=$base_url?>assets/css/demo23.min.css">
 
+    <!-- Js -->
     <script src="<?=$base_url?>assets/js/jquery.min.js"></script>
-
     <script src="<?=$base_url?>assets/js/validate.js"></script>
 
 </head>
