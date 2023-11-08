@@ -8,8 +8,8 @@
             case 'user':
                 $ctrl_name='user';
                 break;
-            case 'book':
-                $ctrl_name='book';
+            case 'product':
+                $ctrl_name='product';
                 break;
             case 'category':
                 $ctrl_name='category';
