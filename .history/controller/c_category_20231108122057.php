@@ -3,6 +3,9 @@
         switch($_GET['act']){
             case 'detail':
                 // lay du liệu
+                include_once 'model/m_category.php';
+                include_once 'model/m_book.php';
+                $dsSachCungChuDe=book_getByCategory($_GET['id']);
                 //hien thi du lieu
                 $view_name='category_detail';
                 break;
