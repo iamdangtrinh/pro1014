@@ -51,6 +51,11 @@
 				<input type="text" name="diachi" class="form-input form-wide" id="">
 			</div>
 
+
+			<div class="form-footer">
+			Bạn đã có tài khoản? <a href="<?= $base_url ?>user/login" class="forget-password text-danger">  Đăng nhập</a>
+			</div>
+
 			<div class="form-footer mb-2">
 				<input name="btn_register" value="Đăng ký" type="submit" class="btn btn-dark btn-md w-100 mr-0">
 			</div>

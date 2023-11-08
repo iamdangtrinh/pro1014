@@ -11,12 +11,14 @@
                 //lay du lieu
                 // hien thi du lieu
                 $view_name='user_login';
+                $title ="Đăng nhập";
                 break;
                 // Đăng ký tài khoản
             case 'register':
                 //lay du lieu
                 // hien thi du lieu
                 $view_name='user_register';
+                $title = "Đăng ký";
                 break;
             case 'forgotPassword':
                 //lay du lieu

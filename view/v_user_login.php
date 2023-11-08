@@ -37,6 +37,7 @@
 
 			<div class="form-footer">
 				<a href="<?= $base_url ?>user/login" class="forget-password text-dark">Quên mật khẩu?</a>
+				<a href="<?= $base_url ?>user/register" class="forget-password text-danger form-footer-right">Đăng ký tài khoản</a>
 			</div>
 			<input type="submit" name="btn_login" value="Đăng nhập" class="btn btn-dark btn-md w-100">
 		</form>
