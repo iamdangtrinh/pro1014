@@ -182,7 +182,7 @@
                         <div class="col-6 col-md-4 col-xl-3">
                             <div class="product-default inner-quickview inner-icon">
                                 <figure>
-                                    <a href="demo23-product.html">
+                                    <a href="<?=$base_url?>product/detail">
                                         <img src="<?=$base_url?>upload/demoes/demo23/products/product-1.jpg" width="217"
                                             height="217" alt="product">
                                         <img src="<?=$base_url?>upload/demoes/demo23/products/product-7.jpg" width="217"
@@ -192,7 +192,7 @@
                                         <div class="product-label label-hot">HOT</div>
                                     </div>
                                     <div class="btn-icon-group">
-                                        <a href="demo23-product.html" class="btn-icon btn-add-cart"><i
+                                        <a href="<?=$base_url?>product/detail" class="btn-icon btn-add-cart"><i
                                                 class="fa fa-arrow-right"></i></a>
                                     </div>
                                     <a href="ajax/product-quick-view.html" class="btn-quickview"
@@ -208,7 +208,7 @@
                                                 class="icon-heart"></i></a>
                                     </div>
                                     <h3 class="product-title">
-                                        <a href="demo23-product.html">Pink Winter Girl Shoes</a>
+                                        <a href="<?=$base_url?>product/detail">Pink Winter Girl Shoes</a>
                                     </h3>
                                     <div class="ratings-container">
                                         <div class="product-ratings">
@@ -225,7 +225,7 @@
                         <div class="col-6 col-md-4 col-xl-3">
                             <div class="product-default inner-quickview inner-icon">
                                 <figure>
-                                    <a href="demo23-product.html">
+                                    <a href="<?=$base_url?>product/detail">
                                         <img src="<?=$base_url?>upload/demoes/demo23/products/product-2.jpg" width="217"
                                             height="217" alt="product">
                                     </a>
@@ -233,7 +233,7 @@
                                         <div class="product-label label-hot">HOT</div>
                                     </div>
                                     <div class="btn-icon-group">
-                                        <a href="demo23-product.html" class="btn-icon btn-add-cart"><i
+                                        <a href="<?=$base_url?>product/detail" class="btn-icon btn-add-cart"><i
                                                 class="fa fa-arrow-right"></i></a>
                                     </div>
                                     <a href="ajax/product-quick-view.html" class="btn-quickview"
@@ -249,7 +249,7 @@
                                                 class="icon-heart"></i></a>
                                     </div>
                                     <h3 class="product-title">
-                                        <a href="demo23-product.html">Porto Extended Camera</a>
+                                        <a href="<?=$base_url?>product/detail">Porto Extended Camera</a>
                                     </h3>
                                     <div class="ratings-container">
                                         <div class="product-ratings">
@@ -266,7 +266,7 @@
                         <div class="col-6 col-md-4 col-xl-3">
                             <div class="product-default inner-quickview inner-icon">
                                 <figure>
-                                    <a href="demo23-product.html">
+                                    <a href="<?=$base_url?>product/detail">
                                         <img src="<?=$base_url?>upload/demoes/demo23/products/product-3.jpg" width="217"
                                             height="217" alt="product">
                                         <img src="<?=$base_url?>upload/demoes/demo23/products/product-1.jpg" width="217"
@@ -276,7 +276,7 @@
                                         <div class="product-label label-hot">HOT</div>
                                     </div>
                                     <div class="btn-icon-group">
-                                        <a href="demo23-product.html" class="btn-icon btn-add-cart"><i
+                                        <a href="<?=$base_url?>product/detail" class="btn-icon btn-add-cart"><i
                                                 class="fa fa-arrow-right"></i></a>
                                     </div>
                                     <a href="ajax/product-quick-view.html" class="btn-quickview"
@@ -292,7 +292,7 @@
                                                 class="icon-heart"></i></a>
                                     </div>
                                     <h3 class="product-title">
-                                        <a href="demo23-product.html">Blue Child Overshoes</a>
+                                        <a href="<?=$base_url?>product/detail">Blue Child Overshoes</a>
                                     </h3>
                                     <div class="ratings-container">
                                         <div class="product-ratings">
@@ -309,7 +309,7 @@
                         <div class="col-6 col-md-4 col-xl-3">
                             <div class="product-default inner-quickview inner-icon">
                                 <figure>
-                                    <a href="demo23-product.html">
+                                    <a href="<?=$base_url?>product/detail">
                                         <img src="<?=$base_url?>upload/demoes/demo23/products/product-4.jpg" width="217"
                                             height="217" alt="product">
                                     </a>
@@ -335,7 +335,7 @@
                                                 class="icon-heart"></i></a>
                                     </div>
                                     <h3 class="product-title">
-                                        <a href="demo23-product.html">Baby Summer Underclothes</a>
+                                        <a href="<?=$base_url?>product/detail">Baby Summer Underclothes</a>
                                     </h3>
                                     <div class="ratings-container">
                                         <div class="product-ratings">
@@ -426,7 +426,7 @@
                         <div class="col-6 col-md-4 col-xl-3">
                             <div class="product-default inner-quickview inner-icon">
                                 <figure>
-                                    <a href="demo23-product.html">
+                                    <a href="<?=$base_url?>product/detail">
                                         <img src="<?=$base_url?>upload/demoes/demo23/products/product-5.jpg" width="217"
                                             height="217" alt="product">
                                     </a>
@@ -451,7 +451,7 @@
                                                 class="icon-heart"></i></a>
                                     </div>
                                     <h3 class="product-title">
-                                        <a href="demo23-product.html">Smart Watches</a>
+                                        <a href="<?=$base_url?>product/detail">Smart Watches</a>
                                     </h3>
                                     <div class="ratings-container">
                                         <div class="product-ratings">
@@ -468,14 +468,14 @@
                         <div class="col-6 col-md-4 col-xl-3">
                             <div class="product-default inner-quickview inner-icon">
                                 <figure>
-                                    <a href="demo23-product.html">
+                                    <a href="<?=$base_url?>product/detail">
                                         <img src="<?=$base_url?>upload/demoes/demo23/products/product-6.jpg" width="217"
                                             height="217" alt="product">
                                         <img src="<?=$base_url?>upload/demoes/demo23/products/product-9.jpg" width="217"
                                             height="217" alt="product">
                                     </a>
                                     <div class="btn-icon-group">
-                                        <a href="demo23-product.html" class="btn-icon btn-add-cart"><i
+                                        <a href="<?=$base_url?>product/detail" class="btn-icon btn-add-cart"><i
                                                 class="fa fa-arrow-right"></i></a>
                                     </div>
                                     <a href="ajax/product-quick-view.html" class="btn-quickview"
@@ -491,7 +491,7 @@
                                                 class="icon-heart"></i></a>
                                     </div>
                                     <h3 class="product-title">
-                                        <a href="demo23-product.html">White Girl Shoes</a>
+                                        <a href="<?=$base_url?>product/detail">White Girl Shoes</a>
                                     </h3>
                                     <div class="ratings-container">
                                         <div class="product-ratings">
@@ -508,12 +508,12 @@
                         <div class="col-6 col-md-4 col-xl-3">
                             <div class="product-default inner-quickview inner-icon">
                                 <figure>
-                                    <a href="demo23-product.html">
+                                    <a href="<?=$base_url?>product/detail">
                                         <img src="<?=$base_url?>upload/demoes/demo23/products/product-7.jpg" width="217"
                                             height="217" alt="product">
                                     </a>
                                     <div class="btn-icon-group">
-                                        <a href="demo23-product.html" class="btn-icon btn-add-cart"><i
+                                        <a href="<?=$base_url?>product/detail" class="btn-icon btn-add-cart"><i
                                                 class="fa fa-arrow-right"></i></a>
                                     </div>
                                     <a href="ajax/product-quick-view.html" class="btn-quickview"
@@ -529,7 +529,7 @@
                                                 class="icon-heart"></i></a>
                                     </div>
                                     <h3 class="product-title">
-                                        <a href="demo23-product.html">Rag baby doll</a>
+                                        <a href="<?=$base_url?>product/detail">Rag baby doll</a>
                                     </h3>
                                     <div class="ratings-container">
                                         <div class="product-ratings">
@@ -546,7 +546,7 @@
                         <div class="col-6 col-md-4 col-xl-3">
                             <div class="product-default inner-quickview inner-icon">
                                 <figure>
-                                    <a href="demo23-product.html">
+                                    <a href="<?=$base_url?>product/detail">
                                         <img src="<?=$base_url?>upload/demoes/demo23/products/product-4.jpg" width="217"
                                             height="217" alt="product">
                                     </a>
@@ -572,7 +572,7 @@
                                                 class="icon-heart"></i></a>
                                     </div>
                                     <h3 class="product-title">
-                                        <a href="demo23-product.html">Baby Summer Underclothes</a>
+                                        <a href="<?=$base_url?>product/detail">Baby Summer Underclothes</a>
                                     </h3>
                                     <div class="ratings-container">
                                         <div class="product-ratings">
