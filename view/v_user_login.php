@@ -6,13 +6,13 @@
 					<li class="breadcrumb-item"><a href="demo4.html">Home</a></li>
 					<li class="breadcrumb-item"><a href="category.html">Shop</a></li>
 					<li class="breadcrumb-item active" aria-current="page">
-						My Account
+					Tài khoản của tôi
 					</li>
 				</ol>
 			</div>
 		</nav>
 
-		<h1>My Account</h1>
+		<h1>Tài khoản của tôi</h1>
 	</div>
 </div>
 
