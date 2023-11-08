@@ -38,7 +38,7 @@
     <div class="page-wrapper">
         <div class="top-notice font2">
             <div class="container-fluid text-center text-dark">
-                <i class="icon-shipping align-middle"></i><b class="text-uppercase">Free Shipping</b>&nbsp;on orders of
+                <i class="icon-shipping align-middle"></i><b class="text-uppercase">Miễn phí vận chuyển</b>&nbsp;on orders of
                 $80 or more!
                 Code:&nbsp;<b class="text-uppercase">PortoMagic</b>&nbsp;| Restrictions Apply.&nbsp;<a
                     href="demo23-shop.html" class="text-dark">See All Offers</a>
@@ -63,8 +63,8 @@
                             <div class="header-user">
                                 <i class="icon-user-2"></i>
                                 <div class="header-userinfo">
-                                    <span class="d-inline-block font2 line-height-1">Hello!</span>
-                                    <h4 class="mb-0">My Account</h4>
+                                    <span class="d-inline-block font2 line-height-1">Xin chào!</span>
+                                    <h4 class="mb-0">Tài khoản</h4>
                                 </div>
                             </div>
                         </a>
