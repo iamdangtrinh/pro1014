@@ -32,7 +32,8 @@
 
 			<div class="form-footer">
 				<a href="<?= $base_url ?>user/login" class="forget-password text-dark">Quên mật khẩu?</a>
-				<a href="<?= $base_url ?>user/register" class="forget-password text-danger form-footer-right">Đăng ký tài khoản</a>
+				<a href="<?= $base_url ?>user/register" class="forget-password text-danger form-footer-right">Đăng ký
+					tài khoản</a>
 			</div>
 			<input type="submit" name="btn_login" value="Đăng nhập" class="btn btn-dark btn-md w-100">
 		</form>
@@ -41,40 +42,44 @@
 </div>
 
 <script>
-	$("#form_login").validate({
-    // các nguyên tắt 
-    rules: {
-        email: {
-            required: true,
-            email: true
-        },
-        password: {
-            required: true
-        }
-    },
+	$(document).ready(
+		function () {
+			$("#form_login").validate({
+				// các nguyên tắt 
+				rules: {
+					email: {
+						required: true,
+						email: true
+					},
+					password: {
+						required: true
+					}
+				},
 
-    // hiển thị tin nhắn lỗi 
-    messages: {
-        email: {
-            required: "Vui lòng nhập địa chỉ email",
-            email: "Vui lòng nhập địa chỉ email",
-        },
+				// hiển thị tin nhắn lỗi 
+				messages: {
+					email: {
+						required: "Vui lòng nhập địa chỉ email",
+						email: "Vui lòng nhập địa chỉ email",
+					},
 
-        password: {
-            required: "Vui lòng nhập mật khẩu"
-        }
-    },
+					password: {
+						required: "Vui lòng nhập mật khẩu"
+					}
+				},
 
-    submitHandler: function (form) {
-        $.ajax({
-            type: "POST",
-            url: "login.php",
-            data: $(form).serializeArray(),
+				submitHandler: function (form) {
+					$.ajax({
+						type: "POST",
+						url: "?mod=user&act=login",
+						data: $(form).serializeArray(),
 
-            success: function (response) {
-                console.log("test");
-            }
-        });
-    }
-});
+						success: function (response) {
+							console.log("test");
+						}
+					});
+				}
+			});
+		}
+	)
 </script>

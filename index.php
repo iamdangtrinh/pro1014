@@ -1,5 +1,7 @@
 <?php 
     include_once 'config.php';
+    include_once 'model/m_pdo.php';
+    pdo_get_connection();
     if(isset($_GET['mod'])){
         switch($_GET['mod']){
             case 'page':

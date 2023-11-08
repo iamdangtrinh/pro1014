@@ -9,6 +9,14 @@
                 // Đăng nhập tài khoản
             case 'login':
                 //lay du lieu
+
+                // kiểm tra tài khoản có tồn tại hay không
+                
+                // Nếu tồn tại 
+
+                // Nếu không tồn tại
+                echo "thành công";
+
                 // hien thi du lieu
                 $view_name='user_login';
                 $title ="Đăng nhập";
