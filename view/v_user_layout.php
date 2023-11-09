@@ -28,11 +28,13 @@
 <body>
     <div class="page-wrapper">
         <div class="top-notice font2">
-            <div class="container-fluid text-center text-dark">
-                <i class="icon-shipping align-middle"></i><b class="text-uppercase">Miễn phí vận chuyển</b>&nbsp;hóa đơn từ
-                $80 hoặc nhiều hơn!
-                Code:&nbsp;<b class="text-uppercase">Cáigìđó</b>&nbsp;| Hạn chế áp dụng.&nbsp;<a
-                    href="demo23-shop.html" class="text-dark">Xem tất cả ưu đãi</a>
+            <div class="container-fluid text-center m-auto text-dark">
+                <div class="top-notice-display">
+                    <i class="fa-solid fa-plane fa-2xs"></i><b class="text-uppercase">Miễn phí vận chuyển</b>&nbsp;hóa đơn từ
+                    300.000 VND hoặc nhiều hơn!
+                    Code:&nbsp;<b class="text-uppercase">Cáigìđó</b>&nbsp;| Hạn chế áp dụng.&nbsp;<a
+                        href="demo23-shop.html" class="text-dark">Xem tất cả ưu đãi</a>
+                </div>
             </div>
             <button title="Close (Esc)" type="button" class="mfp-close">×</button>
         </div>
@@ -54,7 +56,7 @@
                         <?php if (isset($_SESSION['user'])): ?>
                             <a href="<?= $base_url ?>user/dashboard" class="header-icon d-lg-block d-none">
                                 <div class="header-user">
-                                    <i class="icon-user-2"></i>
+                                    <i class="fa-regular fa-user"></i>
                                     <div class="header-userinfo">
                                         <span class="d-inline-block font2 line-height-1">Xin chào!</span>
                                         <h4 class="mb-0">
@@ -71,7 +73,7 @@
                         <?php endif ?>
 
                         <a href="wishlist.html" class="header-icon">
-                            <i class="icon-wishlist-2"></i>
+                            <i class="fa-regular fa-heart"></i>
                         </a>
 
                         <!-- menu mobile -->
@@ -205,7 +207,7 @@
                                     <a href="<?= $base_url ?>page/home">Trang chủ</a>
                                 </li>
                                 <li>
-                                    <a href="<?= $base_url ?>page/shop">Danh mục</a>
+                                    <a href="<?= $base_url ?>page/shop">Danh mục <i class="fa-solid fa-caret-down"></i></a>
                                     <div class="megamenu megamenu-fixed-width megamenu-3cols">
                                         <div class="row">
                                             <div class="col-lg-4">
@@ -222,7 +224,7 @@
                                     </div>
                                 </li>
                                 <li>
-                                    <a href="demo23-product.html">Sản phẩm</a>
+                                    <a href="demo23-product.html">Sản phẩm <i class="fa-solid fa-caret-down"></i></a>
                                     <div class="megamenu megamenu-fixed-width">
                                         <div class="row">
                                             <div class="col-lg-4">
@@ -235,7 +237,7 @@
                                     </div>
                                 </li>
                                 <li class="d-none d-xl-block">
-                                    <a href="#">Liên hệ</a>
+                                    <a href="#">Liên hệ <i class="fa-solid fa-caret-down"></i></a>
                                     <ul>
                                         <li><a href="wishlist.html">Wishlist</a></li>
 
@@ -248,8 +250,8 @@
                     <!-- search -->
                     <div class="header-right d-flex pr-0">
                         <div class="header-search header-search-popup header-search-category text-right">
-                            <a href="#" class="search-toggle" role="button"><i
-                                    class="icon-magnifier mr-2"></i><span>Tìm kiếm</span></a>
+                            <a href="#" class="search-toggle" role="button">
+                            <i class="fa-solid fa-magnifying-glass"></i> <span>Tìm kiếm</span></a>
                             <form action="#" method="get">
                                 <div class="header-search-wrapper">
                                     <div class="row">
@@ -653,7 +655,7 @@
         </button>
     </div> -->
 
-    <a id="scroll-top" href="#top" title="Top" role="button"><i class="icon-angle-up"></i></a>
+    <a id="scroll-top" href="#top" title="Top" role="button"><i class="fa-solid fa-arrow-up"></i></a>
 
     <!-- Plugins JS File -->
     <script src="<?= $base_url ?>assets/js/bootstrap.bundle.min.js"></script>
@@ -661,7 +663,7 @@
     <script src="<?= $base_url ?>assets/js/optional/isotope.pkgd.min.js"></script>
     <script src="<?= $base_url ?>assets/js/jquery.appear.min.js"></script>
     <script src="<?= $base_url ?>assets/js/jquery.plugin.min.js"></script>
-
+    <script src="https://kit.fontawesome.com/fef2f1d7be.js" crossorigin="anonymous"></script>
     <!-- Main JS File -->
     <script src="<?= $base_url ?>assets/js/main.min.js"></script>
 </body>

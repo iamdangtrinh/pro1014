@@ -12,8 +12,7 @@
                                     width="267" height="241">
                             </div>
                             <div class="col-md-4 text-center text-md-left">
-                                <a href="#" class="btn btn-link ml-0 p-0"><i>Xem ưu đãi của chúng tôi</i><i
-                                        class="icon-right-open-big"></i></a>
+                                <a href="#" class="btn btn-link ml-0 p-0"><i>Xem ưu đãi của chúng tôi</i><i class="fa-solid fa-angles-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -526,7 +525,7 @@
                                         </div>
                                         <div class="btn-icon-group">
                                             <a href="demo23-product.html" class="btn-icon btn-add-cart"><i
-                                                    class="fa fa-arrow-right"></i></a>
+                                                    class="icon-shopping-cart"></i></a>
                                         </div>
                                         <a href="ajax/product-quick-view.html" class="btn-quickview"
                                             title="Quick View">Xem lướt qua</a>

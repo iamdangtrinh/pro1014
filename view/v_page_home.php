@@ -14,7 +14,7 @@
                             <div class="container-fluid">
                                 <div class="appear-animate" data-animation-name="fadeInLeftShorter" data-animation-delay="200">
                                     <h2 class="font-weight-light ls-10 text-primary">Khám phá sự ra đời của chúng tôi</h2>
-                                    <a href="demo23-shop.html" class="btn btn-link"><i>Xem sản phẩm của chúng tôi</i><i class="icon-right-open-big"></i></a>
+                                    <a href="demo23-shop.html" class="btn btn-link"><i>Xem sản phẩm của chúng tôi</i><i class="fa-solid fa-angles-right"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -26,7 +26,7 @@
                             <div class="container-fluid">
                                 <div class="col-6 offset-6 appear-animate" data-animation-name="fadeInRightShorter" data-animation-delay="200">
                                     <h2 class="font-weight-light ls-10 text-primary">Bộ sưu tập hợp thời trang</h2>
-                                    <a href="demo23-shop.html" class="btn btn-link"><i>Xem sản phẩm đặc biệt của chúng tôi</i><i class="icon-right-open-big"></i></a>
+                                    <a href="demo23-shop.html" class="btn btn-link"><i>Xem sản phẩm đặc biệt của chúng tôi</i><i class="fa-solid fa-angles-right"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -51,7 +51,7 @@
                                     <div class="text-justify">
                                         <h3 class="font4 font-weight-bold ls-n-25 text-uppercase mb-0">GIẢM GIÁ</h3>
                                         <h4 class="ls-n-25 text-uppercase">Lên đến 70%</h4>
-                                        <a href="demo23-shop.html" class="btn btn-link"><i>Xem giao dịch của chúng tôi</i><i class="icon-right-open-big"></i></a>
+                                        <a href="demo23-shop.html" class="btn btn-link"><i>Xem giao dịch của chúng tôi</i><i class="fa-solid fa-angles-right"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -65,7 +65,7 @@
                                 <div class="banner-layer d-flex flex-column align-items-center justify-content-end">
                                     <h2 class="ls-n-25 text-uppercase">Nổi bật mùa hè</h2>
                                     <a href="demo23-shop.html" class="btn btn-link"><i>
-                                            Xem sản phẩm nổi bật của chúng tôi</i><i class="icon-right-open-big"></i></a>
+                                            Xem sản phẩm nổi bật của chúng tôi</i><i class="fa-solid fa-angles-right"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -78,7 +78,7 @@
                                 <div class="banner-layer d-flex flex-column align-items-center justify-content-between">
                                     <h2 class="font-weight-bold ls-n-25 text-center text-uppercase">Mẹ &amp;
                                         Bé gái</h2>
-                                    <a href="demo23-shop.html" class="btn btn-link"><i>Xem trang phục của chúng tôi</i><i class="icon-right-open-big"></i></a>
+                                    <a href="demo23-shop.html" class="btn btn-link"><i>Xem trang phục của chúng tôi</i><i class="fa-solid fa-angles-right"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -90,7 +90,7 @@
 
                                 <div class="banner-layer d-flex flex-column align-items-center">
                                     <h2 class="ls-n-25 text-uppercase">Trang phục cho bé</h2>
-                                    <a href="demo23-shop.html" class="btn btn-link"><i>Xem trang phục của chúng tôi</i><i class="icon-right-open-big"></i></a>
+                                    <a href="demo23-shop.html" class="btn btn-link"><i>Xem trang phục của chúng tôi</i><i class="fa-solid fa-angles-right"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -102,7 +102,7 @@
 
                                 <div class="banner-layer d-flex flex-column align-items-center justify-content-between">
                                     <h2 class="ls-n-25 text-uppercase">Váy trẻ em</h2>
-                                    <a href="demo23-shop.html" class="btn btn-link"><i>Xem trang phục của chúng tôi</i><i class="icon-right-open-big"></i></a>
+                                    <a href="demo23-shop.html" class="btn btn-link"><i>Xem trang phục của chúng tôi</i><i class="fa-solid fa-angles-right"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -114,7 +114,7 @@
 
                                 <div class="banner-layer d-flex flex-column align-items-center justify-content-between">
                                     <h2 class="ls-n-25 text-uppercase">Giày cho bé</h2>
-                                    <a href="demo23-shop.html" class="btn btn-link"><i>Xem ưu đãi của chúng tôi</i><i class="icon-right-open-big"></i></a>
+                                    <a href="demo23-shop.html" class="btn btn-link"><i>Xem ưu đãi của chúng tôi</i><i class="fa-solid fa-angles-right"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -123,7 +123,7 @@
                     <div class="info-boxes-container appear-animate" data-animation-name="fadeInUpShorter" data-animation-delay="200">
                         <div class="row m-0">
                             <div class="info-box info-box-icon-left col-md-4">
-                                <i class="icon-shipping"></i>
+                                <i class="fa-solid fa-truck-moving"></i>
 
                                 <div class="info-box-content">
                                     <h4 class="ls-n-25">MIỄN PHÍ GIAO HÀNG &amp; HOÀN TRẢ</h4>
@@ -131,7 +131,7 @@
                                 </div><!-- End .info-box-content -->
                             </div><!-- End .info-box -->
                             <div class="info-box info-box-icon-left col-md-4">
-                                <i class="icon-money"></i>
+                                <i class="fa-solid fa-hand-holding-dollar"></i>
 
                                 <div class="info-box-content">
                                     <h4 class="ls-n-25">ĐẢM BẢO HOÀN TRẢ TIỀN</h4>
@@ -139,7 +139,7 @@
                                 </div><!-- End .info-box-content -->
                             </div><!-- End .info-box -->
                             <div class="info-box info-box-icon-left col-md-4">
-                                <i class="icon-support"></i>
+                                <i class="fa-solid fa-headset"></i>
 
                                 <div class="info-box-content">
                                     <h4 class="ls-n-25">HỖ TRỢ TRỰC TIẾP 24/7</h4>
