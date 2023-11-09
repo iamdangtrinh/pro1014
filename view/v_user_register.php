@@ -18,7 +18,16 @@
 
 <div class="container  login-container">
 	<div class=" mt-2 mx-auto">
-		<form action="#" method="post">
+		<form action="#" method="post" id="form_register">
+
+			<div class="mb-2">
+			<label for="fullname">
+					Họ và tên
+					<span class="required">*</span>
+				</label>
+				<input type="text" name="register_fullname" class="form-input form-wide" id="fullname">
+			</div>
+
 			<div class="mb-2">
 				<label for="register-email">
 					Địa chỉ Email
@@ -48,7 +57,7 @@
 					Địa chỉ
 					<span class="required">*</span>
 				</label>
-				<input type="text" name="diachi" class="form-input form-wide" id="">
+				<input type="text" name="address" class="form-input form-wide" id="">
 			</div>
 
 
@@ -66,5 +75,27 @@
 
 <!-- ajax register form -->
 <script>
-	
+	$(document).ready(function(){
+		$("#form_register").valiadte({
+			rules: {
+				register_fullname: {
+					required: true,
+				},
+				register_email: {
+					required: true,
+					email: true,
+				}
+			},
+
+			messages: {
+				register_fullname: {
+					required: "Vui lòng nhập họ tên",
+				},
+				register_email: {
+					required: "Vui lòng nhập địa chỉ email",
+					email: "",
+				}
+			}
+		})
+	})
 </script>
