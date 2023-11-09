@@ -93,6 +93,7 @@
 						minlength: 5,
 					},
 					re_password: {
+						equalTo: password,
 						required: true,
 					}
 				},
@@ -110,6 +111,11 @@
 					password: {
 						required: "Vui lòng nhập mật khẩu",
 						minlength: "Mật khẩu tối thiểu 5",
+					},
+
+					re_password: {
+						equalTo: "Mật khẩu không trùng khớp",
+						required: "Vui lòng nhập mật khẩu"
 					}
 				},
 
@@ -121,8 +127,10 @@
 							fullname: fullname,
 							email: email,
 							password: password,
+							re_password: re_password,
 						},
 					})
+
 				}
 			})
 
