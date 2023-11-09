@@ -29,10 +29,11 @@
     <div class="page-wrapper">
         <div class="top-notice font2">
             <div class="container-fluid text-center text-dark">
-                <i class="icon-shipping align-middle"></i><b class="text-uppercase">Miễn phí vận chuyển</b>&nbsp;hóa đơn từ
+                <i class="icon-shipping align-middle"></i><b class="text-uppercase">Miễn phí vận chuyển</b>&nbsp;hóa đơn
+                từ
                 $80 hoặc nhiều hơn!
-                Code:&nbsp;<b class="text-uppercase">Cáigìđó</b>&nbsp;| Hạn chế áp dụng.&nbsp;<a
-                    href="demo23-shop.html" class="text-dark">Xem tất cả ưu đãi</a>
+                Code:&nbsp;<b class="text-uppercase">Cáigìđó</b>&nbsp;| Hạn chế áp dụng.&nbsp;<a href="demo23-shop.html"
+                    class="text-dark">Xem tất cả ưu đãi</a>
             </div>
             <button title="Close (Esc)" type="button" class="mfp-close">×</button>
         </div>
@@ -55,18 +56,18 @@
                             <div class="header-userinfo">
                                 <div class="header-user">
                                     <?php if (isset($_SESSION['user'])): ?>
-                                        <i class="icon-user-2"></i>
-                                        <div class="">
-                                            <span class="d-inline-block font2 line-height-1">Xin chào!</span>
-                                            <h4 class="mb-0">
-                                                <?php echo strstr($_SESSION['user']['Email'], '@', true) ?>
-                                            </h4>
-                                        </div>
+                                    <i class="icon-user-2"></i>
+                                    <div class="">
+                                        <span class="d-inline-block font2 line-height-1">Xin chào!</span>
+                                        <h4 class="mb-0">
+                                            <?php echo strstr($_SESSION['user']['Email'], '@', true) ?>
+                                        </h4>
+                                    </div>
                                     <?php else: ?>
-                                        <a href="<?= $base_url ?>user/register"
-                                            class="btn btn-primary mr-2 line-height-1">Đăng ký</a>
-                                        <a href="<?= $base_url ?>user/login"
-                                            class="btn btn-primary ml-2 line-height-1">Đăng nhập</a>
+                                    <a href="<?= $base_url ?>user/register"
+                                        class="btn btn-primary mr-2 line-height-1">Đăng ký</a>
+                                    <a href="<?= $base_url ?>user/login" class="btn btn-primary ml-2 line-height-1">Đăng
+                                        nhập</a>
                                     <?php endif ?>
                                 </div>
                             </div>
@@ -177,8 +178,8 @@
 
                         <div
                             class="header-search header-search-popup header-search-category text-right d-flex d-lg-none">
-                            <a href="#" class="search-toggle" role="button"><i
-                                    class="icon-magnifier"></i><span>Tìm kiếm</span></a>
+                            <a href="#" class="search-toggle" role="button"><i class="icon-magnifier"></i><span>Tìm
+                                    kiếm</span></a>
                             <form action="#" method="get">
                                 <div class="header-search-wrapper">
                                     <input type="search" class="form-control" name="q" id="q"
@@ -237,43 +238,25 @@
                                     </div>
                                 </li>
                                 <li class="d-none d-xl-block">
-                                    <a href="#">Liên hệ</a>
+                                    <a href="#">Liên hê</a>
                                     <ul>
                                         <li><a href="wishlist.html">Wishlist</a></li>
 
                                     </ul>
                                 </li>
-                                <li><a href="blog.html">Về chúng tôi</a></li>
+                                <li><a href="blog.html">Bài viết</a></li>
                             </ul>
                         </nav>
                     </div>
                     <!-- search -->
                     <div class="header-right d-flex pr-0">
                         <div class="header-search header-search-popup header-search-category text-right">
-                            <a href="#" class="search-toggle" role="button"><i
-                                    class="icon-magnifier mr-2"></i><span>Tìm kiếm</span></a>
+                            <a href="#" class="search-toggle" role="button"><i class="icon-magnifier mr-2"></i><span>Tìm
+                                    kiếm</span></a>
                             <form action="#" method="get">
                                 <div class="header-search-wrapper">
-                                    <div class="row">
                                     <input type="search" class="form-control" name="q" id="q1"
-                                        placeholder="I'm searching for..." required>
-                                        <div class="bg-light text-dark">
-                                            <div class="row align-items-center">
-                                                <div class="col-md-4"><img src="<?=$base_url?>upload/demoes/demo23/products/product-2.jpg" alt=""></div>
-                                                <div class="col-md-8">Tên sản phẩm</div>
-                                            </div>
-                                            <div class="row align-items-center">
-                                                <div class="col-md-4"><img src="<?=$base_url?>upload/demoes/demo23/products/product-2.jpg" alt=""></div>
-                                                <div class="col-md-8">Tên sản phẩm</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                   
-                                    <div class="select-custom">
-                                        <select id="cat1" name="cat">
-                                            <option value="">TẤT CẢ Danh mục</option>
-                                        </select>
-                                    </div><!-- End .select-custom -->
+                                        placeholder="Tiềm kiếm tên sản phẩm..." required>
                                     <button class="btn icon-magnifier p-0" title="search" type="submit"></button>
                                 </div><!-- End .header-search-wrapper -->
                             </form>
@@ -301,13 +284,13 @@
                                 <div class="col-sm-6 pr-sm-0">
                                     <div class="contact-widget m-b-3">
                                         <h4 class="widget-title font2">ĐỊA CHỈ:</h4>
-                                        <a href="#">123 Street Name, City, England</a>
+                                        <a href="#">Công viên phần mềm Quang Trung</a>
                                     </div>
                                 </div>
                                 <div class="col-sm-6 pl-sm-0">
                                     <div class="contact-widget m-b-3">
-                                        <h4 class="widget-title font2">PHONE:</h4>
-                                        <a href="#">Toll Free (123) 456-7890</a>
+                                        <h4 class="widget-title font2">SỐ ĐIỆN THOẠI:</h4>
+                                        <a href="#">00000000000000</a>
                                     </div>
                                 </div>
                                 <div class="col-sm-6 pr-sm-0">
@@ -322,9 +305,9 @@
                                 <div class="col-sm-6 pl-sm-0">
                                     <div class="contact-widget m-b-3">
                                         <h4 class="widget-title font2">
-                                            WORKING DAYS/HOURS:
+                                            THỜI GIAN MỞ CỬA:
                                         </h4>
-                                        <a href="#">Mon - Sun / 9:00AM - 8:00PM</a>
+                                        <a href="#">T2 - CN : 8H - 18H</a>
                                     </div>
                                 </div>
                             </div>
@@ -339,79 +322,62 @@
                         </div>
                         <div class="col-lg-6 col-xl-2">
                             <div class="widget">
-                                <h4 class="widget-title">Account</h4>
+                                <h4 class="widget-title">TÀI KHOẢN</h4>
                                 <div class="row link-lg link-parts">
                                     <div class="col-6 link-part">
                                         <ul class="links mb-0">
                                             <li>
-                                                <a href="dashboard.html">My Account</a>
+                                                <a href="dashboard.html">Tài khoản của tôi</a>
                                             </li>
-                                            <li><a href="#">Track Your Order</a></li>
-                                            <li><a href="#">Payment Methods</a></li>
-                                            <li><a href="#">Shipping Guide</a></li>
-                                            <li><a href="#">FAQs</a></li>
-                                            <li><a href="#">Product Support</a></li>
-                                            <li><a href="#">Privacy</a></li>
+                                            <li><a href="#">Trạng thái đơn hàng</a></li>
+                                            <li><a href="#">Phương thức thanh toán</a></li>
+                                            <li><a href="#">Hướng dẫn vận chuyển</a></li>
+                                            <li><a href="#">Câu hỏi</a></li>
+                                            <li><a href="#">Hỗ trợ sản phẩm</a></li>
+                                            <li><a href="#">Riêng tư</a></li>
                                         </ul>
                                     </div>
-                                    <div class="col-6 link-part">
-                                        <ul class="links mb-0">
-                                            <li>
-                                                <a href="#">Orders History</a>
-                                            </li>
-                                            <li><a href="#">Advanced Search</a></li>
-                                            <li><a href="#">Affiliate Program</a></li>
-                                        </ul>
-                                    </div>
+
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-6 col-xl-4">
                             <div class="widget">
-                                <h4 class="widget-title">About</h4>
+                                <h4 class="widget-title">VỀ CHÚNG TÔI</h4>
                                 <div class="row">
                                     <div class="col-sm-6">
                                         <ul class="links mb-0">
                                             <li>
-                                                <a href="about.html">About Porto</a>
+                                                <a href="about.html">Về chúng tôi</a>
                                             </li>
-                                            <li><a href="#">Our Guarantees</a></li>
-                                            <li><a href="#">Terms And Conditions</a></li>
-                                            <li><a href="#">Privacy policy</a></li>
-                                            <li><a href="#">Return Policy</a></li>
+                                            <li><a href="#">Đảm bảo của chúng tôi</a></li>
+                                            <li><a href="#">Các điều khoản và chính sách</a></li>
+                                            <li><a href="#">Chính sách bảo mật</a></li>
+                                            <li><a href="#">Chính sách hoàn trả</a></li>
                                             <li>
-                                                <a href="#">Intellectual Property Claims</a>
+                                                <a href="#">Khiến nại về Quyền sở hữu trí tuệ</a>
                                             </li>
-                                            <li><a href="#">Site Map</a></li>
+                                            <li><a href="#">Sơ đồ trang Website</a></li>
                                         </ul>
                                     </div>
 
-                                    <div class="col-sm-6">
-                                        <ul class="links mb-0">
-                                            <li>
-                                                <a href="#">Site Index</a>
-                                            </li>
-                                            <li><a href="#">Porto for the Press</a></li>
-                                            <li><a href="#">Business Accounts</a></li>
-                                        </ul>
-                                    </div>
+
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-6 col-xl-2">
                             <div class="widget">
-                                <h4 class="widget-title">Newsletter</h4>
+                                <h4 class="widget-title">Bản tin</h4>
                                 <div class="widget-newsletter">
                                     <div class="widget-newsletter-info">
-                                        <p class="widget-newsletter-content m-b-4">Get all the latest
-                                            information on
-                                            Events, Sales and Offers. Sign up for newsletter today</p>
+                                        <p class="widget-newsletter-content m-b-4">Nhận tất cả các thông tin mới nhất về
+                                            Sự kiện, Bán hàng và Ưu đãi. Đăng ký nhận bản tin ngay hôm nay</p>
                                     </div>
                                     <form action="#">
                                         <div class="footer-submit-wrapper d-flex">
-                                            <input type="email" class="form-control mb-0" placeholder="Email Address"
+                                            <input type="email" class="form-control mb-0" placeholder="Địa chỉ Email"
                                                 size="40" required>
-                                            <button type="submit" class="btn btn-primary btn-sm ls-0">Subscribe</button>
+                                            <button type="submit" class="btn btn-primary btn-sm ls-0">Đăng ký</button>
                                         </div>
                                     </form>
                                 </div>
@@ -424,7 +390,7 @@
             <div class="footer-bottom">
                 <div class="container-fluid d-sm-flex align-items-center">
                     <div class="footer-left">
-                        <span class="footer-copyright">© Porto eCommerce. 2021. All Rights Reserved</span>
+                        <span class="footer-copyright">© Cửa hàng bé yêu. 2023. Đã đăng ký Bản quyền</span>
                     </div>
 
                     <div class="footer-right ml-auto mt-1 mt-sm-0">

@@ -129,14 +129,16 @@ aside{
 
 aside .toggle{
     display: flex;
-    gap: 0.5rem;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    margin-top: 1.4rem;
 }
 
 aside .toggle .logo{
     display: flex;
     gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
 }
 
 aside .toggle .logo img{
