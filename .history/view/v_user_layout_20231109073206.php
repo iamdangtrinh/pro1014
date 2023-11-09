@@ -249,14 +249,14 @@
                     <div class="header-right d-flex pr-0">
                         <div class="header-search header-search-popup header-search-category text-right">
                             <a href="#" class="search-toggle" role="button"><i
-                                    class="icon-magnifier mr-2"></i><span>Tìm kiếm</span></a>
+                                    class="icon-magnifier mr-2"></i><span>Search</span></a>
                             <form action="#" method="get">
                                 <div class="header-search-wrapper">
                                     <input type="search" class="form-control" name="q" id="q1"
                                         placeholder="I'm searching for..." required>
                                     <div class="select-custom">
                                         <select id="cat1" name="cat">
-                                            <option value="">TẤT CẢ Danh mục</option>
+                                            <option value="">All Categories</option>
                                         </select>
                                     </div><!-- End .select-custom -->
                                     <button class="btn icon-magnifier p-0" title="search" type="submit"></button>
@@ -285,7 +285,7 @@
                             <div class="row">
                                 <div class="col-sm-6 pr-sm-0">
                                     <div class="contact-widget m-b-3">
-                                        <h4 class="widget-title font2">ĐỊA CHỈ:</h4>
+                                        <h4 class="widget-title font2">ADDRESS:</h4>
                                         <a href="#">123 Street Name, City, England</a>
                                     </div>
                                 </div>

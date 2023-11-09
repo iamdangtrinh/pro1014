@@ -285,7 +285,7 @@
                             <div class="row">
                                 <div class="col-sm-6 pr-sm-0">
                                     <div class="contact-widget m-b-3">
-                                        <h4 class="widget-title font2">ĐỊA CHỈ:</h4>
+                                        <h4 class="widget-title font2">ADDRESS:</h4>
                                         <a href="#">123 Street Name, City, England</a>
                                     </div>
                                 </div>

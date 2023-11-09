@@ -209,7 +209,7 @@
                                     <div class="megamenu megamenu-fixed-width megamenu-3cols">
                                         <div class="row">
                                             <div class="col-lg-4">
-                                                <a href="#" class="nolink">Danh mục 1</a>
+                                                <a href="#" class="nolink">VARIATION 1</a>
                                                 <ul class="submenu">
 
                                                     <li><a href="category-horizontal-filter2.html">Horizontal
@@ -222,11 +222,11 @@
                                     </div>
                                 </li>
                                 <li>
-                                    <a href="demo23-product.html">Sản phẩm</a>
+                                    <a href="demo23-product.html">Products</a>
                                     <div class="megamenu megamenu-fixed-width">
                                         <div class="row">
                                             <div class="col-lg-4">
-                                                <a href="#" class="nolink">Trang sản phẩm</a>
+                                                <a href="#" class="nolink">PRODUCT PAGES</a>
                                                 <ul class="submenu">
                                                     <li><a href="demo23-product.html">SIMPLE PRODUCT</a></li>
                                                 </ul>
@@ -235,13 +235,13 @@
                                     </div>
                                 </li>
                                 <li class="d-none d-xl-block">
-                                    <a href="#">Về chúng tôi</a>
+                                    <a href="#">Pages</a>
                                     <ul>
                                         <li><a href="wishlist.html">Wishlist</a></li>
 
                                     </ul>
                                 </li>
-                                <li><a href="blog.html">Bài viết</a></li>
+                                <li><a href="blog.html">Blog</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -249,14 +249,14 @@
                     <div class="header-right d-flex pr-0">
                         <div class="header-search header-search-popup header-search-category text-right">
                             <a href="#" class="search-toggle" role="button"><i
-                                    class="icon-magnifier mr-2"></i><span>Tìm kiếm</span></a>
+                                    class="icon-magnifier mr-2"></i><span>Search</span></a>
                             <form action="#" method="get">
                                 <div class="header-search-wrapper">
                                     <input type="search" class="form-control" name="q" id="q1"
                                         placeholder="I'm searching for..." required>
                                     <div class="select-custom">
                                         <select id="cat1" name="cat">
-                                            <option value="">TẤT CẢ Danh mục</option>
+                                            <option value="">All Categories</option>
                                         </select>
                                     </div><!-- End .select-custom -->
                                     <button class="btn icon-magnifier p-0" title="search" type="submit"></button>
@@ -285,7 +285,7 @@
                             <div class="row">
                                 <div class="col-sm-6 pr-sm-0">
                                     <div class="contact-widget m-b-3">
-                                        <h4 class="widget-title font2">ĐỊA CHỈ:</h4>
+                                        <h4 class="widget-title font2">ADDRESS:</h4>
                                         <a href="#">123 Street Name, City, England</a>
                                     </div>
                                 </div>
