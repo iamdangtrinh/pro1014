@@ -161,7 +161,7 @@
                                         <div class="product-label label-hot">HOT</div>
                                     </div>
                                     <div class="btn-icon-group">
-                                        <a href="<?= $base_url ?>product/detail" class="btn-icon btn-add-cart"><i class="fa fa-arrow-right"></i></a>
+                                        <a href="<?= $base_url ?>product/detail" class="btn-icon btn-add-cart"><i class="icon-shopping-cart"></i></i></a>
                                     </div>
                                     <a href="ajax/product-quick-view.html" class="btn-quickview" title="Quick View">Xem nhanh</a>
                                 </figure>
@@ -197,7 +197,7 @@
                                         <div class="product-label label-hot">HOT</div>
                                     </div>
                                     <div class="btn-icon-group">
-                                        <a href="<?= $base_url ?>product/detail" class="btn-icon btn-add-cart"><i class="fa fa-arrow-right"></i></a>
+                                        <a href="<?= $base_url ?>product/detail" class="btn-icon btn-add-cart"><i class="icon-shopping-cart"></i></i></a>
                                     </div>
                                     <a href="ajax/product-quick-view.html" class="btn-quickview" title="Quick View">Xem nhanh</a>
                                 </figure>
@@ -234,7 +234,7 @@
                                         <div class="product-label label-hot">HOT</div>
                                     </div>
                                     <div class="btn-icon-group">
-                                        <a href="<?= $base_url ?>product/detail" class="btn-icon btn-add-cart"><i class="fa fa-arrow-right"></i></a>
+                                        <a href="<?= $base_url ?>product/detail" class="btn-icon btn-add-cart"><i class="icon-shopping-cart"></i></i></a>
                                     </div>
                                     <a href="ajax/product-quick-view.html" class="btn-quickview" title="Quick View">Xem nhanh</a>
                                 </figure>
@@ -412,7 +412,7 @@
                                         <img src="<?= $base_url ?>upload/demoes/demo23/products/product-9.jpg" width="217" height="217" alt="product">
                                     </a>
                                     <div class="btn-icon-group">
-                                        <a href="<?= $base_url ?>product/detail" class="btn-icon btn-add-cart"><i class="fa fa-arrow-right"></i></a>
+                                        <a href="<?= $base_url ?>product/detail" class="btn-icon btn-add-cart"><i class="icon-shopping-cart"></i></i></a>
                                     </div>
                                     <a href="ajax/product-quick-view.html" class="btn-quickview" title="Quick View">Xem nhanh</a>
                                 </figure>
@@ -445,7 +445,7 @@
                                         <img src="<?= $base_url ?>upload/demoes/demo23/products/product-7.jpg" width="217" height="217" alt="product">
                                     </a>
                                     <div class="btn-icon-group">
-                                        <a href="<?= $base_url ?>product/detail" class="btn-icon btn-add-cart"><i class="fa fa-arrow-right"></i></a>
+                                        <a href="<?= $base_url ?>product/detail" class="btn-icon btn-add-cart"><i class="icon-shopping-cart"></i></i></a>
                                     </div>
                                     <a href="ajax/product-quick-view.html" class="btn-quickview" title="Quick View">Xem nhanh</a>
                                 </figure>
