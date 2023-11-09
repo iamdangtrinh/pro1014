@@ -72,12 +72,10 @@
                             </div>
                         </div>
 
-
                         <a href="wishlist.html" class="header-icon">
                             <i class="icon-wishlist-2"></i>
                         </a>
 
-                        <!-- menu mobile -->
                         <div class="dropdown cart-dropdown">
                             <a href="#" title="Cart" class="dropdown-toggle cart-toggle" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-display="static">
@@ -404,7 +402,7 @@
             <div class="footer-bottom">
                 <div class="container-fluid d-sm-flex align-items-center">
                     <div class="footer-left">
-                        <span class="footer-copyright">© Cửa hàng bé yêu. 2023. Đã đăng ký Bản quyền</span>
+                        <span class="footer-copyright">© Cửa hàng bé yêu. 2021. All Rights Reserved</span>
                     </div>
 
                     <div class="footer-right ml-auto mt-1 mt-sm-0">

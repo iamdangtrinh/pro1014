@@ -97,3 +97,6 @@ label.error {
   margin-top: 4px;
   color: #ff3333;
 }
+.appear-animate.fadeInLeftShorter.animated.appear-animation-visible {
+  padding-left: 60px;
+}

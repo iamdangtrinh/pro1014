@@ -27,7 +27,7 @@
                             </h2>
 
                             <p>
-							Nếu bạn có bất kỳ câu hỏi hoặc yêu cầu đặc biệt, đừng ngần ngại liên hệ với chúng tôi. Chúng tôi sẽ luôn sẵn sàng lắng nghe và giúp đỡ bạn. Cảm ơn bạn đã ghé thăm <strong><i>Cửa hàng bé yêu</i></strong>. Chúng tôi rất vui được phục vụ bạn và bé yêu của bạn. Hãy tìm kiếm sản phẩm yêu thích của bạn và tạo một trải nghiệm mua sắm vui vẻ tại đây!
+							Nếu bạn có bất kỳ câu hỏi hoặc yêu cầu đặc biệt, đừng ngần ngại liên hệ với chúng tôi. Chúng tôi sẽ luôn sẵn sàng lắng nghe và giúp đỡ bạn. Cảm ơn bạn đã ghé thăm <str. Chúng tôi rất vui được phục vụ bạn và bé yêu của bạn. Hãy tìm kiếm sản phẩm yêu thích của bạn và tạo một trải nghiệm mua sắm vui vẻ tại đây!
                             </p>
                         </div>
 
