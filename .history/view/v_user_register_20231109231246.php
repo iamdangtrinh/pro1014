@@ -33,7 +33,7 @@
 		<?php endif;
 		unset($_SESSION['success']['register']) ?>
 
-		<form action="#" method="post" id="form_register">
+		<form action="?mod=user&act=register" method="post" id="form_register">
 
 			<div class="mb-2">
 				<label for="fullname">
@@ -88,7 +88,7 @@
 
 
 <!-- ajax register form -->
-<!-- <script>
+<script>
 	$(document).ready(
 		function () {
 			$("#form_register").validate({
@@ -131,15 +131,15 @@
 						required: "Vui lòng nhập địa chỉ",
 					}
 				},
-				submitHandler: function(form) {
+				submitHandler: function (form) {
 					var fullname = $("#fullname").val();
 					var email = $("#register-email").val();
 					var password = $("#password").val();
 					var re_password = $("#re_password").val();
-					
+
 					$.ajax({
 						type: "POST",
-						url: "?mod=user&act=register",
+						url: "?mod=user/register",
 						data: {
 							fullname: fullname,
 							email: email,
@@ -153,4 +153,4 @@
 
 		})
 
-</script> -->
+</script>

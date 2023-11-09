@@ -88,7 +88,7 @@
 
 
 <!-- ajax register form -->
-<!-- <script>
+<script>
 	$(document).ready(
 		function () {
 			$("#form_register").validate({
@@ -132,12 +132,12 @@
 					}
 				},
 				submitHandler: function(form) {
-					var fullname = $("#fullname").val();
-					var email = $("#register-email").val();
-					var password = $("#password").val();
-					var re_password = $("#re_password").val();
 					
 					$.ajax({
+						var fullname = $("#fullname").val();
+						var email = $("#register-email").val();
+						var password = $("#password").val();
+						var re_password = $("#re_password").val();
 						type: "POST",
 						url: "?mod=user&act=register",
 						data: {
@@ -153,4 +153,4 @@
 
 		})
 
-</script> -->
+</script>

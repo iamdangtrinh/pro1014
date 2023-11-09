@@ -88,7 +88,7 @@
 
 
 <!-- ajax register form -->
-<!-- <script>
+<script>
 	$(document).ready(
 		function () {
 			$("#form_register").validate({
@@ -153,4 +153,4 @@
 
 		})
 
-</script> -->
+</script>
