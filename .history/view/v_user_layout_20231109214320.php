@@ -390,13 +390,13 @@
                                 <h4 class="widget-title">BẢN TIN</h4>
                                 <div class="widget-newsletter">
                                     <div class="widget-newsletter-info">
-                                        <p class="widget-newsletter-content m-b-4">Nhận thông tin mới nhất về Sự kiện, Khuyến mãi và Ưu đãi. Đăng ký nhận bản tin ngay hôm nay.</p>
+                                        <p class="widget-newsletter-content m-b-4">Nhận thông tin mới nhất về Sự kiện, Khuyến mãi và Ư</p>
                                     </div>
                                     <form action="#">
                                         <div class="footer-submit-wrapper d-flex">
-                                            <input type="email" class="form-control mb-0" placeholder="Địa chỉ Email"
+                                            <input type="email" class="form-control mb-0" placeholder="Email Address"
                                                 size="40" required>
-                                            <button type="submit" class="btn btn-primary btn-sm ls-0">Đăng ký</button>
+                                            <button type="submit" class="btn btn-primary btn-sm ls-0">Subscribe</button>
                                         </div>
                                     </form>
                                 </div>
@@ -409,7 +409,7 @@
             <div class="footer-bottom">
                 <div class="container-fluid d-sm-flex align-items-center">
                     <div class="footer-left">
-                        <span class="footer-copyright">© Cửa hàng bé yêu. 2023. Đã đăng ký.</span>
+                        <span class="footer-copyright">© Porto eCommerce. 2021. All Rights Reserved</span>
                     </div>
 
                     <div class="footer-right ml-auto mt-1 mt-sm-0">
