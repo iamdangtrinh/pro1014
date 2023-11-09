@@ -184,9 +184,12 @@
                                     <div class="price-box">
                                         <span class="product-price">Giá tiền &ndash; Giá tiền</span>
                                     </div><!-- End .price-box -->
-                                </div>
+                                </div><!-- End .product-details -->
                             </div>
                         </div>
+
+                       
+                       
                     </div>
                 </div>
             </section>

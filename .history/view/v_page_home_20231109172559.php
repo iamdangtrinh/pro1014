@@ -184,7 +184,47 @@
                                     <div class="price-box">
                                         <span class="product-price">Giá tiền &ndash; Giá tiền</span>
                                     </div><!-- End .price-box -->
-                                </div>
+                                </div><!-- End .product-details -->
+                            </div>
+                        </div>
+
+                       
+                        <div class="col-6 col-md-4 col-xl-3">
+                            <div class="product-default inner-quickview inner-icon">
+                                <figure>
+                                    <a href="<?= $base_url ?>product/detail">
+                                        <img src="<?= $base_url ?>upload/demoes/demo23/products/product-4.jpg" width="217" height="217" alt="product">
+                                    </a>
+                                    <div class="label-group">
+                                        <div class="product-label label-hot">HOT</div>
+                                        <div class="product-label label-sale">-13%</div>
+                                    </div>
+                                    <div class="btn-icon-group">
+                                        <a href="#" title="Add To Cart" class="btn-icon btn-add-cart product-type-simple"><i class="icon-shopping-cart"></i></a>
+                                    </div>
+                                    <a href="ajax/product-quick-view.html" class="btn-quickview" title="Quick View">Xem nhanh</a>
+                                </figure>
+                                <div class="product-details">
+                                    <div class="category-wrap">
+                                        <div class="category-list">
+                                            <a href="demo23-shop.html" class="product-category">Danh mục</a>
+                                        </div>
+                                        <a href="wishlist.html" title="Add to Wishlist" class="btn-icon-wish"><i class="icon-heart"></i></a>
+                                    </div>
+                                    <h3 class="product-title">
+                                        <a href="<?= $base_url ?>product/detail">Tên sản phẩm</a>
+                                    </h3>
+                                    <div class="ratings-container">
+                                        <div class="product-ratings">
+                                            <span class="ratings" style="width:0%"></span><!-- End .ratings -->
+                                            <span class="tooltiptext tooltip-top"></span>
+                                        </div><!-- End .product-ratings -->
+                                    </div><!-- End .product-container -->
+                                    <div class="price-box">
+                                        <span class="old-price">Giá thường</span>
+                                        <span class="product-price">Giá khuyến mãi</span>
+                                    </div><!-- End .price-box -->
+                                </div><!-- End .product-details -->
                             </div>
                         </div>
                     </div>
