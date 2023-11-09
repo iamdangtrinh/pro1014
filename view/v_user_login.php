@@ -82,10 +82,6 @@
                               email: email,
                               password: password
                           },
-
-						success: function (response) {
-							console.log(response);
-						}
 					});
 				}
 			});

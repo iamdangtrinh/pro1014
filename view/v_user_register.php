@@ -76,43 +76,50 @@
 
 <!-- ajax register form -->
 <script>
-	$(document).ready(function () {
-		$("#form_register").valiadte({
-			rules: {
-				fullname: {
-					required: true,
+	$(document).ready(
+		function () {
+			$("#form_register").validate({
+				rules: {
+					fullname: {
+						required: true,
+					},
+					email: {
+						required: true,
+						email: true,
+					},
+					password: {
+						required: true,
+						minlength: 5,
+					}
 				},
-				email: {
-					required: true,
-					email: true,
-				}
-			},
 
-			messages: {
-				fullname: {
-					required: "Vui lòng nhập họ tên",
-				},
-				email: {
-					required: "Vui lòng nhập địa chỉ email",
-					email: "Địa chỉ không phải email",
-				}
-			},
-
-			submitHandler: function (form) {
-				$.ajax({
-					type: "POST",
-					url: "",
-					data: {
-
+				messages: {
+					fullname: {
+						required: "Vui lòng nhập họ tên",
+					},
+					email: {
+						required: "Vui lòng nhập địa chỉ email",
+						email: "Địa chỉ không phải email",
 					},
 
-					success:function (reponse) {
-						console.log(reponse);
+					password: {
+						required: "Vui lòng nhập mật khẩu",
+						minlength: "Mật khẩu tối thiểu 5",
 					}
-				})
-			}
-		})
+				},
 
-	})
+				submitHandler: function (form) {
+					$.ajax({
+						type: "POST",
+						url: "?mod=user&act=register",
+						data: {
+							fullname: fullname,
+							email: email
+						},
+					})
+				}
+			})
+
+		})
 
 </script>
