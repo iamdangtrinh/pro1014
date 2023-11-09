@@ -399,7 +399,7 @@
                                         </div><!-- End .product-ratings -->
                                     </div><!-- End .product-container -->
                                     <div class="price-box">
-                                        <span class="product-price">Giá tiền</span>
+                                        <span class="product-price">$299.00</span>
                                     </div><!-- End .price-box -->
                                 </div><!-- End .product-details -->
                             </div>

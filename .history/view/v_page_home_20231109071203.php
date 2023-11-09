@@ -390,7 +390,7 @@
                                         <a href="wishlist.html" title="Add to Wishlist" class="btn-icon-wish"><i class="icon-heart"></i></a>
                                     </div>
                                     <h3 class="product-title">
-                                        <a href="<?= $base_url ?>product/detail">Tên sản phẩm</a>
+                                        <a href="<?= $base_url ?>product/detail"></a>
                                     </h3>
                                     <div class="ratings-container">
                                         <div class="product-ratings">
@@ -399,7 +399,7 @@
                                         </div><!-- End .product-ratings -->
                                     </div><!-- End .product-container -->
                                     <div class="price-box">
-                                        <span class="product-price">Giá tiền</span>
+                                        <span class="product-price">$299.00</span>
                                     </div><!-- End .price-box -->
                                 </div><!-- End .product-details -->
                             </div>

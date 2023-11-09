@@ -13,8 +13,10 @@
                         <div class="banner-layer banner-layer-middle banner-layer-left">
                             <div class="container-fluid">
                                 <div class="appear-animate" data-animation-name="fadeInLeftShorter" data-animation-delay="200">
-                                    <h2 class="font-weight-light ls-10 text-primary">Khám phá sự ra đời của chúng tôi</h2>
-                                    <a href="demo23-shop.html" class="btn btn-link"><i>Xem sản phẩm của chúng tôi</i><i class="icon-right-open-big"></i></a>
+                                    <h2 class="font-weight-light ls-10 text-primary">Discover our Arrivals!</h2>
+                                    <a href="demo23-shop.html" class="btn btn-link"><i>View
+                                            our
+                                            Dresses</i><i class="icon-right-open-big"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -25,8 +27,10 @@
                         <div class="banner-layer banner-layer-middle banner-layer-right w-100">
                             <div class="container-fluid">
                                 <div class="col-6 offset-6 appear-animate" data-animation-name="fadeInRightShorter" data-animation-delay="200">
-                                    <h2 class="font-weight-light ls-10 text-primary">Bộ sưu tập hợp thời trang</h2>
-                                    <a href="demo23-shop.html" class="btn btn-link"><i>Xem sản phẩm đặc biệt của chúng tôi</i><i class="icon-right-open-big"></i></a>
+                                    <h2 class="font-weight-light ls-10 text-primary">Trendy Collections!</h2>
+                                    <a href="demo23-shop.html" class="btn btn-link"><i>View
+                                            our
+                                            Specials</i><i class="icon-right-open-big"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -36,8 +40,8 @@
 
             <section class="welcome-section">
                 <div class="container">
-                    <h2 class="section-title text-center text-uppercase appear-animate" data-animation-name="fadeInUpShorter" data-animation-delay="200">Chào mừng bạn đến với Cửa hàng bé yêu</h2>
-                    <p class="section-description text-center mb-3 appear-animate" data-animation-name="fadeInUpShorter" data-animation-delay="400">Tận hưởng chất lượng vượt trội trong tất cả các sản phẩm của chúng tôi
+                    <h2 class="section-title text-center text-uppercase appear-animate" data-animation-name="fadeInUpShorter" data-animation-delay="200"></h2>
+                    <p class="section-description text-center mb-3 appear-animate" data-animation-name="fadeInUpShorter" data-animation-delay="400">Enjoy the exceptional quality in all our products
                     </p>
 
                     <div class="row mb-2">
@@ -49,9 +53,9 @@
 
                                 <div class="banner-layer d-flex flex-column align-items-end justify-content-center">
                                     <div class="text-justify">
-                                        <h3 class="font4 font-weight-bold ls-n-25 text-uppercase mb-0">GIẢM GIÁ</h3>
-                                        <h4 class="ls-n-25 text-uppercase">Lên đến 70%</h4>
-                                        <a href="demo23-shop.html" class="btn btn-link"><i>Xem giao dịch của chúng tôi</i><i class="icon-right-open-big"></i></a>
+                                        <h3 class="font4 font-weight-bold ls-n-25 text-uppercase mb-0">Discounts</h3>
+                                        <h4 class="ls-n-25 text-uppercase">Up to 70%</h4>
+                                        <a href="demo23-shop.html" class="btn btn-link"><i>View our Deals</i><i class="icon-right-open-big"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -63,9 +67,8 @@
                                 </figure>
 
                                 <div class="banner-layer d-flex flex-column align-items-center justify-content-end">
-                                    <h2 class="ls-n-25 text-uppercase">Nổi bật mùa hè</h2>
-                                    <a href="demo23-shop.html" class="btn btn-link"><i>
-                                            Xem sản phẩm nổi bật của chúng tôi</i><i class="icon-right-open-big"></i></a>
+                                    <h2 class="ls-n-25 text-uppercase">Summer classics</h2>
+                                    <a href="demo23-shop.html" class="btn btn-link"><i>View our Classics</i><i class="icon-right-open-big"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -76,9 +79,9 @@
                                 </figure>
 
                                 <div class="banner-layer d-flex flex-column align-items-center justify-content-between">
-                                    <h2 class="font-weight-bold ls-n-25 text-center text-uppercase">Mẹ &amp;
-                                        Bé gái</h2>
-                                    <a href="demo23-shop.html" class="btn btn-link"><i>Xem trang phục của chúng tôi</i><i class="icon-right-open-big"></i></a>
+                                    <h2 class="font-weight-bold ls-n-25 text-center text-uppercase">Mother &amp;
+                                        Daughter</h2>
+                                    <a href="demo23-shop.html" class="btn btn-link"><i>View our Outfits</i><i class="icon-right-open-big"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -89,8 +92,8 @@
                                 </figure>
 
                                 <div class="banner-layer d-flex flex-column align-items-center">
-                                    <h2 class="ls-n-25 text-uppercase">Trang phục cho bé</h2>
-                                    <a href="demo23-shop.html" class="btn btn-link"><i>Xem trang phục của chúng tôi</i><i class="icon-right-open-big"></i></a>
+                                    <h2 class="ls-n-25 text-uppercase">Babies Outfits</h2>
+                                    <a href="demo23-shop.html" class="btn btn-link"><i>View our Outfits</i><i class="icon-right-open-big"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -101,8 +104,8 @@
                                 </figure>
 
                                 <div class="banner-layer d-flex flex-column align-items-center justify-content-between">
-                                    <h2 class="ls-n-25 text-uppercase">Váy trẻ em</h2>
-                                    <a href="demo23-shop.html" class="btn btn-link"><i>Xem trang phục của chúng tôi</i><i class="icon-right-open-big"></i></a>
+                                    <h2 class="ls-n-25 text-uppercase">Babies dresses</h2>
+                                    <a href="demo23-shop.html" class="btn btn-link"><i>View our Dresses</i><i class="icon-right-open-big"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -113,8 +116,8 @@
                                 </figure>
 
                                 <div class="banner-layer d-flex flex-column align-items-center justify-content-between">
-                                    <h2 class="ls-n-25 text-uppercase">Giày cho bé</h2>
-                                    <a href="demo23-shop.html" class="btn btn-link"><i>Xem ưu đãi của chúng tôi</i><i class="icon-right-open-big"></i></a>
+                                    <h2 class="ls-n-25 text-uppercase">Shoes for Babies</h2>
+                                    <a href="demo23-shop.html" class="btn btn-link"><i>View our Deals</i><i class="icon-right-open-big"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -126,24 +129,24 @@
                                 <i class="icon-shipping"></i>
 
                                 <div class="info-box-content">
-                                    <h4 class="ls-n-25">MIỄN PHÍ GIAO HÀNG &amp; HOÀN TRẢ</h4>
-                                    <p class="font2 font-weight-light">Miễn phí giao hàng cho tất cả hóa đơn từ </p>
+                                    <h4 class="ls-n-25">FREE SHIPPING &amp; RETURN</h4>
+                                    <p class="font2 font-weight-light">Free shipping on all orders over $99.</p>
                                 </div><!-- End .info-box-content -->
                             </div><!-- End .info-box -->
                             <div class="info-box info-box-icon-left col-md-4">
                                 <i class="icon-money"></i>
 
                                 <div class="info-box-content">
-                                    <h4 class="ls-n-25">ĐẢM BẢO HOÀN TRẢ TIỀN</h4>
-                                    <p class="font2 font-weight-light">100% hoàn lại tiền</p>
+                                    <h4 class="ls-n-25">MONEY BACK GUARANTEE</h4>
+                                    <p class="font2 font-weight-light">100% money back guarantee</p>
                                 </div><!-- End .info-box-content -->
                             </div><!-- End .info-box -->
                             <div class="info-box info-box-icon-left col-md-4">
                                 <i class="icon-support"></i>
 
                                 <div class="info-box-content">
-                                    <h4 class="ls-n-25">HỖ TRỢ TRỰC TIẾP 24/7</h4>
-                                    <p class="font2 font-weight-light">.</p>
+                                    <h4 class="ls-n-25">ONLINE SUPPORT 24/7</h4>
+                                    <p class="font2 font-weight-light">Lorem ipsum dolor sit amet.</p>
                                 </div><!-- End .info-box-content -->
                             </div><!-- End .info-box -->
                         </div>
@@ -168,12 +171,12 @@
                                 <div class="product-details">
                                     <div class="category-wrap">
                                         <div class="category-list">
-                                            <a href="demo23-shop.html" class="product-category">Danh mục</a>
+                                            <a href="demo23-shop.html" class="product-category">category</a>
                                         </div>
                                         <a href="wishlist.html" title="Add to Wishlist" class="btn-icon-wish"><i class="icon-heart"></i></a>
                                     </div>
                                     <h3 class="product-title">
-                                        <a href="<?= $base_url ?>product/detail">Tên sản phẩm</a>
+                                        <a href="<?= $base_url ?>product/detail">Pink Winter Girl Shoes</a>
                                     </h3>
                                     <div class="ratings-container">
                                         <div class="product-ratings">
@@ -204,12 +207,12 @@
                                 <div class="product-details">
                                     <div class="category-wrap">
                                         <div class="category-list">
-                                            <a href="demo23-shop.html" class="product-category">Danh mục</a>
+                                            <a href="demo23-shop.html" class="product-category">category</a>
                                         </div>
                                         <a href="wishlist.html" title="Add to Wishlist" class="btn-icon-wish"><i class="icon-heart"></i></a>
                                     </div>
                                     <h3 class="product-title">
-                                        <a href="<?= $base_url ?>product/detail">Tên sản phẩm</a>
+                                        <a href="<?= $base_url ?>product/detail">Porto Extended Camera</a>
                                     </h3>
                                     <div class="ratings-container">
                                         <div class="product-ratings">
@@ -241,12 +244,12 @@
                                 <div class="product-details">
                                     <div class="category-wrap">
                                         <div class="category-list">
-                                            <a href="demo23-shop.html" class="product-category">Danh mục</a>
+                                            <a href="demo23-shop.html" class="product-category">category</a>
                                         </div>
                                         <a href="wishlist.html" title="Add to Wishlist" class="btn-icon-wish"><i class="icon-heart"></i></a>
                                     </div>
                                     <h3 class="product-title">
-                                        <a href="<?= $base_url ?>product/detail">Tên sản phẩm</a>
+                                        <a href="<?= $base_url ?>product/detail">Blue Child Overshoes</a>
                                     </h3>
                                     <div class="ratings-container">
                                         <div class="product-ratings">
@@ -255,7 +258,7 @@
                                         </div><!-- End .product-ratings -->
                                     </div><!-- End .product-container -->
                                     <div class="price-box">
-                                        <span class="product-price">Giá tiền</span>
+                                        <span class="product-price">$39.00</span>
                                     </div><!-- End .price-box -->
                                 </div><!-- End .product-details -->
                             </div>
@@ -278,12 +281,12 @@
                                 <div class="product-details">
                                     <div class="category-wrap">
                                         <div class="category-list">
-                                            <a href="demo23-shop.html" class="product-category">Danh mục</a>
+                                            <a href="demo23-shop.html" class="product-category">category</a>
                                         </div>
                                         <a href="wishlist.html" title="Add to Wishlist" class="btn-icon-wish"><i class="icon-heart"></i></a>
                                     </div>
                                     <h3 class="product-title">
-                                        <a href="<?= $base_url ?>product/detail">Tên sản phẩm</a>
+                                        <a href="<?= $base_url ?>product/detail">Baby Summer Underclothes</a>
                                     </h3>
                                     <div class="ratings-container">
                                         <div class="product-ratings">
@@ -292,8 +295,8 @@
                                         </div><!-- End .product-ratings -->
                                     </div><!-- End .product-container -->
                                     <div class="price-box">
-                                        <span class="old-price">Giá thường</span>
-                                        <span class="product-price">Giá khuyến mãi</span>
+                                        <span class="old-price">$299.00</span>
+                                        <span class="product-price">$259.00</span>
                                     </div><!-- End .price-box -->
                                 </div><!-- End .product-details -->
                             </div>
@@ -385,12 +388,12 @@
                                 <div class="product-details">
                                     <div class="category-wrap">
                                         <div class="category-list">
-                                            <a href="demo23-shop.html" class="product-category">Danh mục</a>
+                                            <a href="demo23-shop.html" class="product-category">category</a>
                                         </div>
                                         <a href="wishlist.html" title="Add to Wishlist" class="btn-icon-wish"><i class="icon-heart"></i></a>
                                     </div>
                                     <h3 class="product-title">
-                                        <a href="<?= $base_url ?>product/detail">Tên sản phẩm</a>
+                                        <a href="<?= $base_url ?>product/detail">Smart Watches</a>
                                     </h3>
                                     <div class="ratings-container">
                                         <div class="product-ratings">
@@ -399,7 +402,7 @@
                                         </div><!-- End .product-ratings -->
                                     </div><!-- End .product-container -->
                                     <div class="price-box">
-                                        <span class="product-price">Giá tiền</span>
+                                        <span class="product-price">$299.00</span>
                                     </div><!-- End .price-box -->
                                 </div><!-- End .product-details -->
                             </div>
@@ -534,4 +537,4 @@
                         <img src="<?= $base_url ?>upload/demoes/demo23/brands/brand5.png" width="200" height="50" alt="brand">
                     </div><!-- End .brands-slider -->
                 </div>
-            </div>
+            </div>  

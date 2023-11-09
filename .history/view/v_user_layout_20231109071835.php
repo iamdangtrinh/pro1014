@@ -184,7 +184,7 @@
                                     <div class="select-custom">
                                         <select id="cat" name="cat">
                                             <option value="">Tất cả danh mục</option>
-                                            <option value="4">Thời trang</option>
+                                            <option value="4">Fashion</option>
 
                                         </select>
                                     </div><!-- End .select-custom -->
@@ -202,10 +202,10 @@
                         <nav class="main-nav">
                             <ul class="menu">
                                 <li class="active">
-                                    <a href="<?= $base_url ?>page/home">Trang chủ</a>
+                                    <a href="<?= $base_url ?>page/home">Home</a>
                                 </li>
                                 <li>
-                                    <a href="<?= $base_url ?>page/shop">Danh mục</a>
+                                    <a href="<?= $base_url ?>page/shop">Categories</a>
                                     <div class="megamenu megamenu-fixed-width megamenu-3cols">
                                         <div class="row">
                                             <div class="col-lg-4">

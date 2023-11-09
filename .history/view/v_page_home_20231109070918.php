@@ -89,7 +89,7 @@
                                 </figure>
 
                                 <div class="banner-layer d-flex flex-column align-items-center">
-                                    <h2 class="ls-n-25 text-uppercase">Trang phục cho bé</h2>
+                                    <h2 class="ls-n-25 text-uppercase">Thời </h2>
                                     <a href="demo23-shop.html" class="btn btn-link"><i>Xem trang phục của chúng tôi</i><i class="icon-right-open-big"></i></a>
                                 </div>
                             </div>
@@ -173,7 +173,7 @@
                                         <a href="wishlist.html" title="Add to Wishlist" class="btn-icon-wish"><i class="icon-heart"></i></a>
                                     </div>
                                     <h3 class="product-title">
-                                        <a href="<?= $base_url ?>product/detail">Tên sản phẩm</a>
+                                        <a href="<?= $base_url ?>product/detail">Pink Winter Girl Shoes</a>
                                     </h3>
                                     <div class="ratings-container">
                                         <div class="product-ratings">
@@ -209,7 +209,7 @@
                                         <a href="wishlist.html" title="Add to Wishlist" class="btn-icon-wish"><i class="icon-heart"></i></a>
                                     </div>
                                     <h3 class="product-title">
-                                        <a href="<?= $base_url ?>product/detail">Tên sản phẩm</a>
+                                        <a href="<?= $base_url ?>product/detail">Porto Extended Camera</a>
                                     </h3>
                                     <div class="ratings-container">
                                         <div class="product-ratings">
@@ -246,7 +246,7 @@
                                         <a href="wishlist.html" title="Add to Wishlist" class="btn-icon-wish"><i class="icon-heart"></i></a>
                                     </div>
                                     <h3 class="product-title">
-                                        <a href="<?= $base_url ?>product/detail">Tên sản phẩm</a>
+                                        <a href="<?= $base_url ?>product/detail">Blue Child Overshoes</a>
                                     </h3>
                                     <div class="ratings-container">
                                         <div class="product-ratings">
@@ -255,7 +255,7 @@
                                         </div><!-- End .product-ratings -->
                                     </div><!-- End .product-container -->
                                     <div class="price-box">
-                                        <span class="product-price">Giá tiền</span>
+                                        <span class="product-price">$39.00</span>
                                     </div><!-- End .price-box -->
                                 </div><!-- End .product-details -->
                             </div>
@@ -283,7 +283,7 @@
                                         <a href="wishlist.html" title="Add to Wishlist" class="btn-icon-wish"><i class="icon-heart"></i></a>
                                     </div>
                                     <h3 class="product-title">
-                                        <a href="<?= $base_url ?>product/detail">Tên sản phẩm</a>
+                                        <a href="<?= $base_url ?>product/detail">Baby Summer Underclothes</a>
                                     </h3>
                                     <div class="ratings-container">
                                         <div class="product-ratings">
@@ -292,8 +292,8 @@
                                         </div><!-- End .product-ratings -->
                                     </div><!-- End .product-container -->
                                     <div class="price-box">
-                                        <span class="old-price">Giá thường</span>
-                                        <span class="product-price">Giá khuyến mãi</span>
+                                        <span class="old-price">$299.00</span>
+                                        <span class="product-price">$259.00</span>
                                     </div><!-- End .price-box -->
                                 </div><!-- End .product-details -->
                             </div>
@@ -390,7 +390,7 @@
                                         <a href="wishlist.html" title="Add to Wishlist" class="btn-icon-wish"><i class="icon-heart"></i></a>
                                     </div>
                                     <h3 class="product-title">
-                                        <a href="<?= $base_url ?>product/detail">Tên sản phẩm</a>
+                                        <a href="<?= $base_url ?>product/detail">Smart Watches</a>
                                     </h3>
                                     <div class="ratings-container">
                                         <div class="product-ratings">
@@ -399,7 +399,7 @@
                                         </div><!-- End .product-ratings -->
                                     </div><!-- End .product-container -->
                                     <div class="price-box">
-                                        <span class="product-price">Giá tiền</span>
+                                        <span class="product-price">$299.00</span>
                                     </div><!-- End .price-box -->
                                 </div><!-- End .product-details -->
                             </div>

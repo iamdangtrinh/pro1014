@@ -29,10 +29,10 @@
     <div class="page-wrapper">
         <div class="top-notice font2">
             <div class="container-fluid text-center text-dark">
-                <i class="icon-shipping align-middle"></i><b class="text-uppercase">Miễn phí vận chuyển</b>&nbsp;hóa đơn từ
+                <i class="icon-shipping align-middle"></i><b class="text-uppercase">Miễn phí vận chuyển</b>&nbsp;
                 $80 hoặc nhiều hơn!
-                Code:&nbsp;<b class="text-uppercase">Cáigìđó</b>&nbsp;| Hạn chế áp dụng.&nbsp;<a
-                    href="demo23-shop.html" class="text-dark">Xem tất cả ưu đãi</a>
+                Code:&nbsp;<b class="text-uppercase">PortoMagic</b>&nbsp;| Restrictions Apply.&nbsp;<a
+                    href="demo23-shop.html" class="text-dark">See All Offers</a>
             </div>
             <button title="Close (Esc)" type="button" class="mfp-close">×</button>
         </div>
@@ -89,19 +89,19 @@
                                 <a href="#" title="Close (Esc)" class="btn-close">×</a>
 
                                 <div class="dropdownmenu-wrapper custom-scrollbar">
-                                    <div class="dropdown-cart-header">Giỏ hàng</div>
+                                    <div class="dropdown-cart-header">Shopping Cart</div>
                                     <!-- End .dropdown-cart-header -->
 
                                     <div class="dropdown-cart-products">
                                         <div class="product">
                                             <div class="product-details">
                                                 <h4 class="product-title">
-                                                    <a href="demo23-product.html">Tên sản phẩm</a>
+                                                    <a href="demo23-product.html">Ultimate 3D Bluetooth Speaker</a>
                                                 </h4>
 
                                                 <span class="cart-product-info">
                                                     <span class="cart-product-qty">1</span>
-                                                    Giá sản phẩm
+                                                    × $99.00
                                                 </span>
                                             </div><!-- End .product-details -->
 
@@ -118,7 +118,7 @@
                                         <div class="product">
                                             <div class="product-details">
                                                 <h4 class="product-title">
-                                                    <a href="demo23-product.html">Tên sản phẩm</a>
+                                                    <a href="demo23-product.html">Brown Women Casual HandBag</a>
                                                 </h4>
 
                                                 <span class="cart-product-info">
@@ -140,7 +140,7 @@
                                         <div class="product">
                                             <div class="product-details">
                                                 <h4 class="product-title">
-                                                    <a href="demo23-product.html">Tên sản phẩm</a>
+                                                    <a href="demo23-product.html">Circled Ultimate 3D Speaker</a>
                                                 </h4>
 
                                                 <span class="cart-product-info">
@@ -160,14 +160,15 @@
                                     </div><!-- End .cart-product -->
 
                                     <div class="dropdown-cart-total">
-                                        <span>TỔNG PHỤ:</span>
+                                        <span>SUBTOTAL:</span>
 
                                         <span class="cart-total-price float-right">$134.00</span>
                                     </div><!-- End .dropdown-cart-total -->
 
                                     <div class="dropdown-cart-action">
-                                        <a href="cart.html" class="btn btn-gray btn-block view-cart">Xem giỏ hàng</a>
-                                        <a href="checkout.html" class="btn btn-dark btn-block">Kiểm tra</a>
+                                        <a href="cart.html" class="btn btn-gray btn-block view-cart">View
+                                            Cart</a>
+                                        <a href="checkout.html" class="btn btn-dark btn-block">Checkout</a>
                                     </div><!-- End .dropdown-cart-total -->
                                 </div><!-- End .dropdownmenu-wrapper -->
                             </div><!-- End .dropdown-menu -->
@@ -176,15 +177,15 @@
                         <div
                             class="header-search header-search-popup header-search-category text-right d-flex d-lg-none">
                             <a href="#" class="search-toggle" role="button"><i
-                                    class="icon-magnifier"></i><span>Tìm kiếm</span></a>
+                                    class="icon-magnifier"></i><span>Search</span></a>
                             <form action="#" method="get">
                                 <div class="header-search-wrapper">
                                     <input type="search" class="form-control" name="q" id="q"
                                         placeholder="I'm searching for..." required>
                                     <div class="select-custom">
                                         <select id="cat" name="cat">
-                                            <option value="">Tất cả danh mục</option>
-                                            <option value="4">Thời trang</option>
+                                            <option value="">All Categories</option>
+                                            <option value="4">Fashion</option>
 
                                         </select>
                                     </div><!-- End .select-custom -->
@@ -202,10 +203,10 @@
                         <nav class="main-nav">
                             <ul class="menu">
                                 <li class="active">
-                                    <a href="<?= $base_url ?>page/home">Trang chủ</a>
+                                    <a href="<?= $base_url ?>page/home">Home</a>
                                 </li>
                                 <li>
-                                    <a href="<?= $base_url ?>page/shop">Danh mục</a>
+                                    <a href="<?= $base_url ?>page/shop">Categories</a>
                                     <div class="megamenu megamenu-fixed-width megamenu-3cols">
                                         <div class="row">
                                             <div class="col-lg-4">
