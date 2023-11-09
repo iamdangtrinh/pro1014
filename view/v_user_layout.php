@@ -52,13 +52,17 @@
 
                     <div class="header-right">
                         <?php if (isset($_SESSION['user'])): ?>
-                            <i class="icon-user-2"></i>
-                            <div class="">
-                                <span class="d-inline-block font2 line-height-1">Xin chào!</span>
-                                <h4 class="mb-0">
-                                    <?php echo strstr($_SESSION['user']['Email'], '@', true) ?>
-                                </h4>
-                            </div>
+                            <a href="<?= $base_url ?>user/dashboard" class="header-icon d-lg-block d-none">
+                                <div class="header-user">
+                                    <i class="icon-user-2"></i>
+                                    <div class="header-userinfo">
+                                        <span class="d-inline-block font2 line-height-1">Xin chào!</span>
+                                        <h4 class="mb-0">
+                                            <?php echo strstr($_SESSION['user']['Email'], '@', true) ?>
+                                        </h4>
+                                    </div>
+                                </div>
+                            </a>
                         <?php else: ?>
                             <a href="<?= $base_url ?>user/register"
                                 class="btn btn-outline-primary p-3 mr-2 line-height-1">Đăng ký</a>
