@@ -24,16 +24,21 @@ if (isset($_GET['act'])) {
                     // cho phép đăng nhập
                     if ($has_account > 0) {
                         $_SESSION['user'] = $has_account;
+                        // Chuyển về trang chủ
                         header('location: ' . $base_url . 'page/home');
                     } else if ($has_account == 0) {
                         $_SESSION['error']['login'] = "Tài khoản hoặc mật khẩu sai. Vui lòng thử lại";
                     }
                 }
             }
-            // Chuyển về trang chủ
             $view_name = 'user_login';
             $title = "Đăng nhập";
             break;
+
+        case 'has_account' :
+            echo "Vô has account";
+            break;
+
         // Đăng ký tài khoản
         case 'register':
             //lay du lieu

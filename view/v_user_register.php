@@ -41,7 +41,7 @@
 					Mật khẩu
 					<span class="required">*</span>
 				</label>
-				<input type="password" name="password" class="form-input form-wide" id="register-password">
+				<input type="text" name="password" class="form-input form-wide" id="register-password">
 			</div>
 
 			<div class="mb-2">
@@ -49,7 +49,7 @@
 					Nhập lại mật khẩu
 					<span class="required">*</span>
 				</label>
-				<input type="password" name="re_password" class="form-input form-wide" id="re_password">
+				<input type="text" name="re_password" class="form-input form-wide" id="re_password">
 			</div>
 
 			<div class="mb-2">
@@ -105,6 +105,7 @@
 					email: {
 						required: "Vui lòng nhập địa chỉ email",
 						email: "Địa chỉ không phải email",
+						remote: "Tài khoản này tồn tại"
 					},
 					password: {
 						required: "Vui lòng nhập mật khẩu",
