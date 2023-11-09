@@ -21,11 +21,11 @@
 		<form action="#" method="post" id="form_register">
 
 			<div class="mb-2">
-			<label for="fullname">
+				<label for="fullname">
 					Họ và tên
 					<span class="required">*</span>
 				</label>
-				<input type="text" name="register_fullname" class="form-input form-wide" id="fullname">
+				<input type="text" name="fullname" class="form-input form-wide" id="fullname">
 			</div>
 
 			<div class="mb-2">
@@ -33,7 +33,7 @@
 					Địa chỉ Email
 					<span class="required">*</span>
 				</label>
-				<input type="email" name="register_email" class="form-input form-wide" id="register-email">
+				<input type="email" name="email" class="form-input form-wide" id="register-email">
 			</div>
 
 			<div class="mb-2">
@@ -41,7 +41,7 @@
 					Mật khẩu
 					<span class="required">*</span>
 				</label>
-				<input type="password" name="register_password" class="form-input form-wide" id="register-password">
+				<input type="password" name="password" class="form-input form-wide" id="register-password">
 			</div>
 
 			<div class="mb-2">
@@ -62,7 +62,8 @@
 
 
 			<div class="form-footer">
-			Bạn đã có tài khoản? <a href="<?= $base_url ?>user/login" class="forget-password text-danger">  Đăng nhập</a>
+				Bạn đã có tài khoản? <a href="<?= $base_url ?>user/login" class="forget-password text-danger"> Đăng
+					nhập</a>
 			</div>
 
 			<div class="form-footer mb-2">
@@ -75,27 +76,43 @@
 
 <!-- ajax register form -->
 <script>
-	$(document).ready(function(){
+	$(document).ready(function () {
 		$("#form_register").valiadte({
 			rules: {
-				register_fullname: {
+				fullname: {
 					required: true,
 				},
-				register_email: {
+				email: {
 					required: true,
 					email: true,
 				}
 			},
 
 			messages: {
-				register_fullname: {
+				fullname: {
 					required: "Vui lòng nhập họ tên",
 				},
-				register_email: {
+				email: {
 					required: "Vui lòng nhập địa chỉ email",
-					email: "",
+					email: "Địa chỉ không phải email",
 				}
+			},
+
+			submitHandler: function (form) {
+				$.ajax({
+					type: "POST",
+					url: "",
+					data: {
+
+					},
+
+					success:function (reponse) {
+						console.log(reponse);
+					}
+				})
 			}
 		})
+
 	})
+
 </script>
