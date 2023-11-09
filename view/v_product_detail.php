@@ -228,10 +228,10 @@
                                         title="Facebook"></a>
                                     <a href="#" class="social-icon social-twitter icon-twitter" target="_blank"
                                         title="Twitter"></a>
-                                    <a href="#" class="social-icon social-linkedin fab fa-linkedin-in" target="_blank"
-                                        title="Linkedin"></a>
-                                    <a href="#" class="social-icon social-gplus fab fa-google-plus-g" target="_blank"
-                                        title="Google +"></a>
+                                    <a href="#" class="social-icon social-mail icon-mail-alt" target="_blank"
+                                        title="Mail"></a>
+                                    <a href="#" class="social-icon social-mail icon-mail-alt" target="_blank"
+                                        title="Mail"></a>
                                     <a href="#" class="social-icon social-mail icon-mail-alt" target="_blank"
                                         title="Mail"></a>
                                 </div>
@@ -573,7 +573,8 @@
                                             class="fa fa-arrow-right"></i>
                                     </a>
                                 </div>
-                                <a href="ajax/product-quick-view.html" class="btn-quickview" title="Quick View">Xem lướt qua</a>
+                                <a href="ajax/product-quick-view.html" class="btn-quickview" title="Quick View">Xem lướt
+                                    qua</a>
                             </figure>
                             <div class="product-details">
                                 <div class="category-wrap">
@@ -614,7 +615,8 @@
                                     <a href="#" class="btn-icon btn-add-cart product-type-simple"><i
                                             class="icon-shopping-cart"></i></a>
                                 </div>
-                                <a href="ajax/product-quick-view.html" class="btn-quickview" title="Quick View">Xem lướt qua</a>
+                                <a href="ajax/product-quick-view.html" class="btn-quickview" title="Quick View">Xem lướt
+                                    qua</a>
                             </figure>
                             <div class="product-details">
                                 <div class="category-wrap">
@@ -655,7 +657,8 @@
                                     <a href="#" class="btn-icon btn-add-cart product-type-simple"><i
                                             class="icon-shopping-cart"></i></a>
                                 </div>
-                                <a href="ajax/product-quick-view.html" class="btn-quickview" title="Quick View">Xem lướt qua</a>
+                                <a href="ajax/product-quick-view.html" class="btn-quickview" title="Quick View">Xem lướt
+                                    qua</a>
                             </figure>
                             <div class="product-details">
                                 <div class="category-wrap">
@@ -697,7 +700,8 @@
                                             class="fa fa-arrow-right"></i>
                                     </a>
                                 </div>
-                                <a href="ajax/product-quick-view.html" class="btn-quickview" title="Quick View">Xem lướt qua</a>
+                                <a href="ajax/product-quick-view.html" class="btn-quickview" title="Quick View">Xem lướt
+                                    qua</a>
                             </figure>
                             <div class="product-details">
                                 <div class="category-wrap">

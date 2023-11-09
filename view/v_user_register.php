@@ -76,43 +76,64 @@
 
 <!-- ajax register form -->
 <script>
-	$(document).ready(function () {
-		$("#form_register").valiadte({
-			rules: {
-				fullname: {
-					required: true,
+	$(document).ready(
+		function () {
+			$("#form_register").validate({
+				rules: {
+					fullname: {
+						required: true,
+						minlength:  10,
+					},
+					email: {
+						required: true,
+						email: true,
+					},
+					password: {
+						required: true,
+						minlength: 5,
+					},
+					re_password: {
+						equalTo: password,
+						required: true,
+					}
 				},
-				email: {
-					required: true,
-					email: true,
-				}
-			},
 
-			messages: {
-				fullname: {
-					required: "Vui lòng nhập họ tên",
-				},
-				email: {
-					required: "Vui lòng nhập địa chỉ email",
-					email: "Địa chỉ không phải email",
-				}
-			},
-
-			submitHandler: function (form) {
-				$.ajax({
-					type: "POST",
-					url: "",
-					data: {
-
+				messages: {
+					fullname: {
+						required: "Vui lòng nhập họ tên",
+						minlength: "Nhập tối thiểu 10 kí tự",
+					},
+					email: {
+						required: "Vui lòng nhập địa chỉ email",
+						email: "Địa chỉ không phải email",
 					},
 
-					success:function (reponse) {
-						console.log(reponse);
-					}
-				})
-			}
-		})
+					password: {
+						required: "Vui lòng nhập mật khẩu",
+						minlength: "Mật khẩu tối thiểu 5",
+					},
 
-	})
+					re_password: {
+						equalTo: "Mật khẩu không trùng khớp",
+						required: "Vui lòng nhập mật khẩu"
+					}
+				},
+
+				submitHandler: function (form) {
+					$.ajax({
+						type: "POST",
+						url: "?mod=user&act=register",
+						data: {
+							fullname: fullname,
+							email: email,
+							password: password,
+							re_password: re_password,
+						},
+					})
+
+				}
+			})
+
+		})
 
 </script>
