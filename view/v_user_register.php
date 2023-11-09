@@ -82,6 +82,7 @@
 				rules: {
 					fullname: {
 						required: true,
+						minlength:  10,
 					},
 					email: {
 						required: true,
@@ -99,6 +100,7 @@
 				messages: {
 					fullname: {
 						required: "Vui lòng nhập họ tên",
+						minlength: "Nhập tối thiểu 10 kí tự",
 					},
 					email: {
 						required: "Vui lòng nhập địa chỉ email",
@@ -117,7 +119,8 @@
 						url: "?mod=user&act=register",
 						data: {
 							fullname: fullname,
-							email: email
+							email: email,
+							password: password,
 						},
 					})
 				}
