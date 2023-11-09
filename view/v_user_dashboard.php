@@ -12,68 +12,48 @@
                         </div>
                     </nav>
 
-                    <h1>Tài Khoản</h1>
+                    <h1>TÀI KHOẢN</h1>
                 </div>
             </div>
 
-            <div class="container account-container custom-account-container">
+            <div class="container account-container custom-account-container p-3">
                 <div class="row">
                     <div class="sidebar widget widget-dashboard mb-lg-0 mb-3 col-lg-3 order-0">
-                        <h2 class="text-uppercase">Tài Khoản</h2>
+                        <h2 class="text-uppercase m-3">Tài Khoản</h2>
                         <ul class="nav nav-tabs list flex-column mb-0" role="tablist">
                             <li class="nav-item">
                                 <a class="nav-link active" id="dashboard-tab" data-toggle="tab" href="#dashboard"
-                                    role="tab" aria-controls="dashboard" aria-selected="true">Bảng Điều Khiển</a>
+                                    role="tab" aria-controls="dashboard" aria-selected="true"><i class="fa-brands fa-windows"></i> &nbsp; Bảng Điều Khiển</a>
                             </li>
 
                             <li class="nav-item">
                                 <a class="nav-link" id="order-tab" data-toggle="tab" href="#order" role="tab"
-                                    aria-controls="order" aria-selected="true">Đặt Hàng</a>
+                                    aria-controls="order" aria-selected="true"><i class="fa-solid fa-user"></i> &nbsp; Thông tin tài khoản</a>
                             </li>
 
                             <li class="nav-item">
                                 <a class="nav-link" id="download-tab" data-toggle="tab" href="#download" role="tab"
-                                    aria-controls="download" aria-selected="false">Tải Xuống</a>
+                                    aria-controls="download" aria-selected="false"><i class="fa-solid fa-clock-rotate-left"></i> &nbsp; Lịch sử đặt hàng</a>
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link" id="address-tab" data-toggle="tab" href="#address" role="tab"
-                                    aria-controls="address" aria-selected="false">Địa chỉ</a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link" id="edit-tab" data-toggle="tab" href="#edit" role="tab"
-                                    aria-controls="edit" aria-selected="false">Tài khoản chi tiết</a>
+                                <a class="nav-link" href="wishlist.html"><i class="fa-solid fa-heart"></i> &nbsp; Yêu thích</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" id="shop-address-tab" data-toggle="tab" href="#shipping" role="tab"
-                                    aria-controls="edit" aria-selected="false">Địa chỉ mua sắm</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="wishlist.html">Yêu thích</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="login.html">Đăng xuất</a>
+                                <a class="nav-link" href="login.html"><i class="fa-solid fa-right-from-bracket"></i> &nbsp; Đăng xuất</a>
                             </li>
                         </ul>
                     </div>
                     <div class="col-lg-9 order-lg-last order-1 tab-content">
                         <div class="tab-pane fade show active" id="dashboard" role="tabpanel">
                             <div class="dashboard-content">
-                                <p>
-                                    Xin chào <strong class="text-dark">Biên tập viên</strong> (không phải
-                                    <strong class="text-dark">Biên tập viên</strong>?
-                                    <a href="login.html" class="btn btn-link ">Đăng xuất</a>)
-                                </p>
 
                                 <p>
 
                                     Từ bảng điều khiển tài khoản của bạn, bạn có thể xem
                                     <a class="btn btn-link link-to-tab" href="#order">
-                                        những đơn đặt hàng gần đây</a>,
-                                    quản lý của bạn
-                                    <a class="btn btn-link link-to-tab" href="#address">
-                                        vận chuyển và thanh toán, địa chỉ</a>, và
+                                        những đơn đặt hàng gần đây</a>,<a class="btn btn-link link-to-tab" href="#order">
+                                         sản phẩm bạn yêu thích</a> và
                                     <a class="btn btn-link link-to-tab" href="#edit">
                                         chỉnh sửa mật khẩu và tài khoản của bạn chi tiết.</a>
                                 </p>
@@ -83,47 +63,25 @@
                                 <div class="row row-lg">
                                     <div class="col-6 col-md-4">
                                         <div class="feature-box text-center pb-4">
-                                            <a href="#order" class="link-to-tab"><i
-                                                    class="sicon-social-dropbox"></i></a>
+                                            <a href="#order" class="link-to-tab"><i class="fa-regular fa-user"></i></a>
                                             <div class="feature-box-content">
-                                                <h3>ĐẶT HÀNG</h3>
+                                                <h3>THÔNG TIN TÀI KHOẢN</h3>
                                             </div>
                                         </div>
                                     </div>
 
                                     <div class="col-6 col-md-4">
                                         <div class="feature-box text-center pb-4">
-                                            <a href="#download" class="link-to-tab"><i
-                                                    class="sicon-cloud-download"></i></a>
+                                            <a href="#download" class="link-to-tab"><i class="fa-solid fa-clock-rotate-left"></i></a>
                                             <div class=" feature-box-content">
-                                                <h3>TẢI XUỐNG</h3>
+                                                <h3>LỊCH SỬ ĐẶT HÀNG</h3>
                                             </div>
                                         </div>
                                     </div>
 
                                     <div class="col-6 col-md-4">
                                         <div class="feature-box text-center pb-4">
-                                            <a href="#address" class="link-to-tab"><i
-                                                    class="sicon-location-pin"></i></a>
-                                            <div class="feature-box-content">
-                                                <h3>ĐỊA CHỈ</h3>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-6 col-md-4">
-                                        <div class="feature-box text-center pb-4">
-                                            <a href="#edit" class="link-to-tab"><i class="icon-user-2"></i></a>
-                                            <div class="feature-box-content p-0">
-                                                <h3>
-                                                    CHI TIẾT TÀI KHOẢN</h3>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-6 col-md-4">
-                                        <div class="feature-box text-center pb-4">
-                                            <a href="wishlist.html"><i class="sicon-heart"></i></a>
+                                            <a href="wishlist.html"><i class="fa-regular fa-heart"></i></a>
                                             <div class="feature-box-content">
                                                 <h3>YÊU THÍCH</h3>
                                             </div>
@@ -132,7 +90,7 @@
 
                                     <div class="col-6 col-md-4">
                                         <div class="feature-box text-center pb-4">
-                                            <a href="login.html"><i class="sicon-logout"></i></a>
+                                            <a href="login.html"><i class="fa-solid fa-right-from-bracket"></i></a>
                                             <div class="feature-box-content">
                                                 <h3>ĐĂNG XUẤT</h3>
                                             </div>
@@ -144,8 +102,35 @@
 
                         <div class="tab-pane fade" id="order" role="tabpanel">
                             <div class="order-content">
+                                <h3 class="account-sub-title d-none d-md-block">
+                                    <i class="fa-regular fa-user"></i> &nbsp; Thông tin tài khoản</h3>
+                                <div class="order-table-container">
+                                    <form action="#" id="form_login" method="post">
+                                        <div class="mb-2">
+                                            <label for="login-email">Địa chỉ email<span class="required">*</span></label>
+                                            <input type="email" name="email" class="form-input form-wide" id="login-email" value="nnqn15@gmail.com">
+                                        </div>
+
+                                        <div class="mb-2">
+                                            <label for="login-password">Số điện thoại<span class="required">*</span></label>
+                                            <input type="number" name="password" class="form-input form-wide" id="login-password" value="0706903022">
+                                        </div>
+
+                                        <div class="input-group mb-3">
+                                            <input type="file" class="form-control" name="Hinh" id="Hinh">
+                                            <label class="input-group-text" for="Hinh">Upload</label>
+                                        </div>
+                                        <input type="submit" name="btn_login" value="Sửa tài khoản" class="btn btn-dark btn-md w-100">
+                                    </form>
+
+                                </div>
+                            </div>
+                        </div><!-- End .tab-pane -->
+
+                        <div class="tab-pane fade" id="download" role="tabpanel">
+                        <div class="order-content">
                                 <h3 class="account-sub-title d-none d-md-block"><i
-                                        class="sicon-social-dropbox align-middle mr-3"></i>đặt hàng</h3>
+                                        class="sicon-social-dropbox align-middle mr-3"></i> &nbsp; Lịch sử đặt hàng</h3>
                                 <div class="order-table-container text-center">
                                     <table class="table table-order text-left">
                                         <thead>
@@ -158,30 +143,46 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr>
+                                            <!-- <tr>
                                                 <td class="text-center p-0" colspan="5">
                                                     <p class="mb-5 mt-5">
                                                         Chưa có đơn đặt hàng nào được thực hiện
                                                     </p>
                                                 </td>
+                                            </tr> -->
+                                            <tr>
+                                                <td>Đồ bộ cho trẻ sơ sinh</td>
+                                                <td>15-10-2023</td>
+                                                <td class="text-success">Thành công</td>
+                                                <td class="text-warning">568.000 VND</td>
+                                                <td><a href="#" class="text-success">Xem chi tiết</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Đồ bộ cho trẻ sơ sinh</td>
+                                                <td>15-10-2023</td>
+                                                <td class="text-success">Thành công</td>
+                                                <td class="text-warning">568.000 VND</td>
+                                                <td><a href="#" class="text-success">Xem chi tiết</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Đồ bộ cho trẻ sơ sinh</td>
+                                                <td>15-10-2023</td>
+                                                <td class="text-success">Thành công</td>
+                                                <td class="text-warning">568.000 VND</td>
+                                                <td><a href="#" class="text-success">Xem chi tiết</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Đồ bộ cho trẻ sơ sinh</td>
+                                                <td>15-10-2023</td>
+                                                <td class="text-success">Thành công</td>
+                                                <td class="text-warning">568.000 VND</td>
+                                                <td><a href="#" class="text-success">Xem chi tiết</a></td>
                                             </tr>
                                         </tbody>
                                     </table>
                                     <hr class="mt-0 mb-3 pb-2" />
 
                                     <a href="category.html" class="btn btn-dark">Đến cửa hàng</a>
-                                </div>
-                            </div>
-                        </div><!-- End .tab-pane -->
-
-                        <div class="tab-pane fade" id="download" role="tabpanel">
-                            <div class="download-content">
-                                <h3 class="account-sub-title d-none d-md-block"><i
-                                        class="sicon-cloud-download align-middle mr-3"></i>Tải xuống</h3>
-                                <div class="download-table-container">
-                                    <p>
-                                        Chưa có bản tải xuống nào.</p> <a href="category.html"
-                                        class="btn btn-primary text-transform-none mb-2">Đến cửa hàng</a>
                                 </div>
                             </div>
                         </div><!-- End .tab-pane -->
