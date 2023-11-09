@@ -8,7 +8,7 @@
                 <div class="product-single-container product-single-default">
                     <div class="cart-message d-none">
                         <strong class="single-cart-notice">Giày Đen</strong>
-                        <spanh>Đã thêm vào giỏ hàng </span>
+                        <spanh>đã thêm vào giỏ hàng </span>
                     </div>
 
                     <div class="row">
