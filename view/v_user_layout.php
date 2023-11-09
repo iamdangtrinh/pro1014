@@ -179,12 +179,13 @@
                             <form action="#" method="get">
                                 <div class="header-search-wrapper">
                                     <input type="search" class="form-control" name="q" id="q"
-                                        placeholder="I'm searching for..." required>
+                                        placeholder="Nhập tên sản phẩm..." required>
                                     <div class="select-custom">
                                         <select id="cat" name="cat">
-                                            <option value="">Tất cả danh mục</option>
-                                            <option value="4">Thời trang</option>
-
+                                            <option selected value="">Tất cả danh mục</option>
+                                            <option value="4">Bé trai</option>
+                                            <option value="12">Bé gái</option>
+                                            <option value="13">Sơ sinh</option>
                                         </select>
                                     </div><!-- End .select-custom -->
                                     <button class="btn icon-magnifier p-0" title="search" type="submit"></button>
