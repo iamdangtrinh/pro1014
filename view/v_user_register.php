@@ -82,7 +82,7 @@
 				rules: {
 					fullname: {
 						required: true,
-						minlength:  10,
+						// minlength:  10,
 					},
 					email: {
 						required: true,
@@ -90,10 +90,10 @@
 					},
 					password: {
 						required: true,
-						minlength: 5,
+						minlength: 8,
 					},
 					re_password: {
-						equalTo: password,
+						equalTo: "#password",
 						required: true,
 					}
 				},
