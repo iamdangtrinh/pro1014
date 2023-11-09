@@ -115,8 +115,8 @@
                                             <input type="number" name="password" class="form-input form-wide" id="login-password" value="0706903022">
                                         </div>
                                         <div class="mb-2">
-                                            <label for="address">Địa chỉ giao hàng<span class="required">*</span></label>
-                                            <input type="text" name="address" class="form-input form-wide" id="address" value="Hồ Chí Minh">
+                                            <label for="login-password">Địa chỉ giao hàng<span class="required">*</span></label>
+                                            <input type="text" name="password" class="form-input form-wide" id="login-password" value="0706903022">
                                         </div>
 
                                         <div class="input-group mb-3">

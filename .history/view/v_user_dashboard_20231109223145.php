@@ -115,15 +115,16 @@
                                             <input type="number" name="password" class="form-input form-wide" id="login-password" value="0706903022">
                                         </div>
                                         <div class="mb-2">
-                                            <label for="address">Địa chỉ giao hàng<span class="required">*</span></label>
-                                            <input type="text" name="address" class="form-input form-wide" id="address" value="Hồ Chí Minh">
+                                            <label for="login-password">Địa chỉ giao hàng<span class="required">*</span></label>
+                                            <input type="text" name="password" class="form-input form-wide" id="login-password" value="0706903022">
                                         </div>
+
 
                                         <div class="input-group mb-3">
                                             <input type="file" class="form-control" name="Hinh" id="Hinh">
                                             <label class="input-group-text" for="Hinh">Upload</label>
                                         </div>
-                                        <input type="submit" name="btn_login" value="Cập nhật tài khoản" class="btn btn-dark btn-md w-100">
+                                        <input type="submit" name="btn_login" value="Sửa tài khoản" class="btn btn-dark btn-md w-100">
                                     </form>
 
                                 </div>
