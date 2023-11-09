@@ -24,12 +24,13 @@ if (isset($_GET['act'])) {
                     // cho phép đăng nhập
                     if ($has_account > 0) {
                         $_SESSION['user'] = $has_account;
-                        if($_SESSION['user']['VaiTro'] == 1) {
-                            header('location: ' . $base_url . 'admin/dashboard');
+                        if() {
+
                         } else {
-                            header('location: ' . $base_url . 'page/home');
+                            
                         }
                         // Chuyển về trang chủ
+                        header('location: ' . $base_url . 'page/home');
                     } else if ($has_account == 0) {
                         $_SESSION['error']['login'] = "Tài khoản hoặc mật khẩu sai. Vui lòng thử lại";
                     }

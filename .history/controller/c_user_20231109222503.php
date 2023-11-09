@@ -24,8 +24,8 @@ if (isset($_GET['act'])) {
                     // cho phép đăng nhập
                     if ($has_account > 0) {
                         $_SESSION['user'] = $has_account;
-                        if($_SESSION['user']['VaiTro'] == 1) {
-                            header('location: ' . $base_url . 'admin/dashboard');
+                        if($_SESSION['user']['vaitro'] == 1) {
+                            header('location: ' . $base_url . 'page/home');
                         } else {
                             header('location: ' . $base_url . 'page/home');
                         }
