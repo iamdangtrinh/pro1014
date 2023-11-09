@@ -29,11 +29,10 @@
     <div class="page-wrapper">
         <div class="top-notice font2">
             <div class="container-fluid text-center text-dark">
-                <i class="icon-shipping align-middle"></i><b class="text-uppercase">Miễn phí vận chuyển</b>&nbsp;hóa đơn
-                từ
+                <i class="icon-shipping align-middle"></i><b class="text-uppercase">Miễn phí vận chuyển</b>&nbsp;hóa đơn từ
                 $80 hoặc nhiều hơn!
-                Code:&nbsp;<b class="text-uppercase">Cáigìđó</b>&nbsp;| Hạn chế áp dụng.&nbsp;<a href="demo23-shop.html"
-                    class="text-dark">Xem tất cả ưu đãi</a>
+                Code:&nbsp;<b class="text-uppercase">Cáigìđó</b>&nbsp;| Hạn chế áp dụng.&nbsp;<a
+                    href="demo23-shop.html" class="text-dark">Xem tất cả ưu đãi</a>
             </div>
             <button title="Close (Esc)" type="button" class="mfp-close">×</button>
         </div>
@@ -56,18 +55,18 @@
                             <div class="header-userinfo">
                                 <div class="header-user">
                                     <?php if (isset($_SESSION['user'])): ?>
-                                    <i class="icon-user-2"></i>
-                                    <div class="">
-                                        <span class="d-inline-block font2 line-height-1">Xin chào!</span>
-                                        <h4 class="mb-0">
-                                            <?php echo strstr($_SESSION['user']['Email'], '@', true) ?>
-                                        </h4>
-                                    </div>
+                                        <i class="icon-user-2"></i>
+                                        <div class="">
+                                            <span class="d-inline-block font2 line-height-1">Xin chào!</span>
+                                            <h4 class="mb-0">
+                                                <?php echo strstr($_SESSION['user']['Email'], '@', true) ?>
+                                            </h4>
+                                        </div>
                                     <?php else: ?>
-                                    <a href="<?= $base_url ?>user/register"
-                                        class="btn btn-primary mr-2 line-height-1">Đăng ký</a>
-                                    <a href="<?= $base_url ?>user/login" class="btn btn-primary ml-2 line-height-1">Đăng
-                                        nhập</a>
+                                        <a href="<?= $base_url ?>user/register"
+                                            class="btn btn-primary mr-2 line-height-1">Đăng ký</a>
+                                        <a href="<?= $base_url ?>user/login"
+                                            class="btn btn-primary ml-2 line-height-1">Đăng nhập</a>
                                     <?php endif ?>
                                 </div>
                             </div>
@@ -178,8 +177,8 @@
 
                         <div
                             class="header-search header-search-popup header-search-category text-right d-flex d-lg-none">
-                            <a href="#" class="search-toggle" role="button"><i class="icon-magnifier"></i><span>Tìm
-                                    kiếm</span></a>
+                            <a href="#" class="search-toggle" role="button"><i
+                                    class="icon-magnifier"></i><span>Tìm kiếm</span></a>
                             <form action="#" method="get">
                                 <div class="header-search-wrapper">
                                     <input type="search" class="form-control" name="q" id="q"
@@ -238,21 +237,21 @@
                                     </div>
                                 </li>
                                 <li class="d-none d-xl-block">
-                                    <a href="#">Liên hệ</a>
+                                    <a href="#">Về chúng tôi</a>
                                     <ul>
                                         <li><a href="wishlist.html">Wishlist</a></li>
 
                                     </ul>
                                 </li>
-                                <li><a href="blog.html">Về chúng tôi</a></li>
+                                <li><a href="blog.html">Bài viết</a></li>
                             </ul>
                         </nav>
                     </div>
                     <!-- search -->
                     <div class="header-right d-flex pr-0">
                         <div class="header-search header-search-popup header-search-category text-right">
-                            <a href="#" class="search-toggle" role="button"><i class="icon-magnifier mr-2"></i><span>Tìm
-                                    kiếm</span></a>
+                            <a href="#" class="search-toggle" role="button"><i
+                                    class="icon-magnifier mr-2"></i><span>Tìm kiếm</span></a>
                             <form action="#" method="get">
                                 <div class="header-search-wrapper">
                                     <input type="search" class="form-control" name="q" id="q1"
@@ -337,7 +336,15 @@
                                             <li><a href="#">Riêng tư</a></li>
                                         </ul>
                                     </div>
-
+                                    <div class="col-6 link-part">
+                                        <ul class="links mb-0">
+                                            <li>
+                                                <a href="#">Lịch sử đơn hàng</a>
+                                            </li>
+                                            <li><a href="#">Tiềm kiếm nâng cao</a></li>
+                                            <li><a href="#">Chương trình liên kết</a></li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -348,7 +355,7 @@
                                     <div class="col-sm-6">
                                         <ul class="links mb-0">
                                             <li>
-                                                <a href="about.html">Về chúng tôi</a>
+                                                <a href="view/v_page_aboutUs.php">Về chúng tôi</a>
                                             </li>
                                             <li><a href="#">Đảm bảo của chúng tôi</a></li>
                                             <li><a href="#">Các điều khoản và chính sách</a></li>
@@ -361,7 +368,15 @@
                                         </ul>
                                     </div>
 
-
+                                    <div class="col-sm-6">
+                                        <ul class="links mb-0">
+                                            <li>
+                                                <a href="#">Chỉ mục</a>
+                                            </li>
+                                            <li><a href="#">Dành cho báo chí</a></li>
+                                            <li><a href="#">Tài khoản kinh doanh</a></li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -370,8 +385,7 @@
                                 <h4 class="widget-title">Bản tin</h4>
                                 <div class="widget-newsletter">
                                     <div class="widget-newsletter-info">
-                                        <p class="widget-newsletter-content m-b-4">Nhận tất cả các thông tin mới nhất về
-                                            Sự kiện, Bán hàng và Ưu đãi. Đăng ký nhận bản tin ngay hôm nay</p>
+                                        <p class="widget-newsletter-content m-b-4">Nhận tất cả các thông tin mới nhất về Sự kiện, Bán hàng và Ưu đãi. Đăng ký nhận bản tin ngay hôm nay</p>
                                     </div>
                                     <form action="#">
                                         <div class="footer-submit-wrapper d-flex">

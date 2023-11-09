@@ -45,19 +45,18 @@
 			</div>
 
 			<div class="mb-2">
-				<label for="register-password">
+				<label for="re_password">
 					Nhập lại mật khẩu
 					<span class="required">*</span>
 				</label>
-				<input type="password" name="re_password" class="form-input form-wide" id="register-password">
+				<input type="password" name="re_password" class="form-input form-wide" id="re_password">
 			</div>
 
 			<div class="mb-2">
-				<label for="register-password">
+				<label for="address">
 					Địa chỉ
-					<span class="required">*</span>
 				</label>
-				<input type="text" name="address" class="form-input form-wide" id="">
+				<input type="text" name="address" class="form-input form-wide" id="address">
 			</div>
 
 
@@ -82,32 +81,37 @@
 				rules: {
 					fullname: {
 						required: true,
+						// minlength:  10,
 					},
 					email: {
 						required: true,
 						email: true,
+						remote: '?user/has_account',
 					},
 					password: {
 						required: true,
-						minlength: 5,
+						minlength: 8,
 					},
 					re_password: {
-						required: true,
+						equalTo: "#password",
 					}
 				},
 
 				messages: {
 					fullname: {
 						required: "Vui lòng nhập họ tên",
+						// minlength: "Nhập tối thiểu 10 kí tự",
 					},
 					email: {
 						required: "Vui lòng nhập địa chỉ email",
 						email: "Địa chỉ không phải email",
 					},
-
 					password: {
 						required: "Vui lòng nhập mật khẩu",
-						minlength: "Mật khẩu tối thiểu 5",
+						minlength: "Mật khẩu tối thiểu 8",
+					},
+					re_password: {
+						equalTo: "Mật khẩu không trùng khớp",
 					}
 				},
 
@@ -117,9 +121,12 @@
 						url: "?mod=user&act=register",
 						data: {
 							fullname: fullname,
-							email: email
+							email: email,
+							password: password,
+							re_password: re_password,
 						},
 					})
+
 				}
 			})
 

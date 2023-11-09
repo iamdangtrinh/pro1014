@@ -16,8 +16,7 @@
         <aside>
             <div class="toggle">
                 <div class="logo">
-                    <img src="images/logo.png">
-                    <h2>tên <span class="danger">DA1</span></h2>
+                    <img src="<?= $base_url ?>upload/logo.png">
                 </div>
                 <div class="close" id="close-btn">
                     <span class="material-icons-sharp">

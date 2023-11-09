@@ -25,21 +25,22 @@
 
             			Ngoài ra, <strong><i>Cửa hàng bé yêu</i></strong> luôn luôn lắng nghe ý kiến của khách hàng và luôn sẵn sàng cải thiện sản phẩm và dịch vụ của mình. Chúng tôi muốn đảm bảo rằng bạn và bé yêu của bạn có một trải nghiệm mua sắm thú vị tại đây.</p>
 
-            		<p class="lead">Sứ mệnh của <strong><i>Cửa hàng bé yêu</i></strong> là mang lại niềm vui và sự thoải mái cho bé yêu của bạn thông qua việc cung cấp quần áo và sản phẩm chất lượng hàng đầu. Chúng tôi muốn giúp bạn tạo ra những kỷ niệm đáng nhớ với bé mỗi ngày.</p>
+            		<p class="lead">Sứ mệnh của  là mang lại niềm vui và sự thoải mái cho bé yêu của bạn thông qua việc cung cấp quần áo và sản phẩm chất lượng hàng đầu. Chúng tôi muốn giúp bạn tạo ra những kỷ niệm đáng nhớ với bé mỗi ngày.</p>
             	</div><!-- End .container -->
             </div><!-- End .about-section -->
 
             <div class="features-section bg-gray">
             	<div class="container">
-            		<h2 class="subtitle">TẠI SAO CHỌN CHÚNG TÔI</h2>
+            		<h2 class="subtitle">WHY CHOOSE US</h2>
             		<div class="row">
             			<div class="col-lg-4">
             				<div class="feature-box bg-white">
             					<i class="icon-shipped"></i>
 
             					<div class="feature-box-content p-0">
-            						<h3>Miễn phí giao hàng</h3>
-            						<p>Miễn phí giao hàng cho các hóa đơn</p>
+            						<h3>Free Shipping</h3>
+            						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+            							Ipsum has been the industr.</p>
             					</div><!-- End .feature-box-content -->
             				</div><!-- End .feature-box -->
             			</div><!-- End .col-lg-4 -->
@@ -49,8 +50,9 @@
             					<i class="icon-us-dollar"></i>
 
             					<div class="feature-box-content p-0">
-            						<h3>100% Hoàn trả lại tiền </h3>
-            						<p>Hoàn tiền lại 100% nếu có xuất phát lỗi từ cửa hàng</p>
+            						<h3>100% Money Back Guarantee</h3>
+            						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+            							Ipsum has been the industr.</p>
             					</div><!-- End .feature-box-content -->
             				</div><!-- End .feature-box -->
             			</div><!-- End .col-lg-4 -->
@@ -60,8 +62,9 @@
             					<i class="icon-online-support"></i>
 
             					<div class="feature-box-content p-0">
-            						<h3>Hỗ trợ trực tuyến 24/7</h3>
-            						<p>Luôn sẵn sàng hỗ trợ thắc mắc cho khách hàng</p>
+            						<h3>Online Support 24/7</h3>
+            						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+            							Ipsum has been the industr.</p>
             					</div><!-- End .feature-box-content -->
             				</div><!-- End .feature-box -->
             			</div><!-- End .col-lg-4 -->
@@ -71,7 +74,7 @@
 
             <div class="testimonials-section">
             	<div class="container">
-            		<h2 class="subtitle text-center">CHÚC BẠN MUA HÀNG VUI VẺ</h2>
+            		<h2 class="subtitle text-center">HAPPY CLIENTS</h2>
 
             		<div class="testimonials-carousel owl-carousel owl-theme images-left" data-owl-options="{
 						'margin': 20,
@@ -94,13 +97,14 @@
             					</figure>
 
             					<div>
-            						<strong class="testimonial-title">ĐĂNG TRÌNH</strong>
-            						<span>CEO</span>
+            						<strong class="testimonial-title">John Smith</strong>
+            						<span>SMARTWAVE CEO</span>
             					</div>
             				</div><!-- End .testimonial-owner -->
 
             				<blockquote>
-            					<p>Tại <strong><i>Cửa hàng bé yêu</i></strong>, chúng tôi không chỉ kinh doanh, chúng tôi tạo ra một cộng đồng, một nơi bạn có thể tìm kiếm những sản phẩm tốt nhất cho em bé của mình.</p>
+            					<p>Lorem ipsum dolor sit amet, consectetur elitad adipiscing Cras non placerat mipsum
+            						dolor sit amet, consectetur elitad adipiscing cas non placerat mi.</p>
             				</blockquote>
             			</div><!-- End .testimonial -->
 
@@ -111,13 +115,14 @@
             					</figure>
 
             					<div>
-            						<strong class="testimonial-title">QUỲNH NHI</strong>
-            						<span>CEO</span>
+            						<strong class="testimonial-title">Bob Smith</strong>
+            						<span>SMARTWAVE CEO</span>
             					</div>
             				</div><!-- End .testimonial-owner -->
 
             				<blockquote>
-            					<p>Tại <strong><i>Cửa hàng bé yêu</i></strong>, chúng tôi không chỉ bán quần áo, chúng tôi cung cấp một trải nghiệm mua sắm đáng nhớ. Chúng tôi luôn lắng nghe ý kiến của khách hàng và luôn sẵn sàng cải thiện sản phẩm và dịch vụ của mình.</p>
+            					<p>Lorem ipsum dolor sit amet, consectetur elitad adipiscing Cras non placerat mipsum
+            						dolor sit amet, consectetur elitad adipiscing cas non placerat mi.</p>
             				</blockquote>
             			</div><!-- End .testimonial -->
 
@@ -149,35 +154,35 @@
             				<div class="count-wrapper">
             					<span class="count-to" data-from="0" data-to="200" data-speed="2000" data-refresh-interval="50">200</span>+
             				</div><!-- End .count-wrapper -->
-            				<h4 class="count-title">KHÁCH HÀNG</h4>
+            				<h4 class="count-title">MILLION CUSTOMERS</h4>
             			</div><!-- End .col-md-4 -->
 
             			<div class="col-6 col-md-4 count-container">
             				<div class="count-wrapper">
-            					<span class="count-to" data-from="0" data-to="1800" data-speed="2000" data-refresh-interval="50">180</span>+
+            					<span class="count-to" data-from="0" data-to="1800" data-speed="2000" data-refresh-interval="50">1800</span>+
             				</div><!-- End .count-wrapper -->
-            				<h4 class="count-title">THÀNH VIÊN</h4>
+            				<h4 class="count-title">TEAM MEMBERS</h4>
             			</div><!-- End .col-md-4 -->
 
             			<div class="col-6 col-md-4 count-container">
             				<div class="count-wrapper line-height-1">
             					<span class="count-to" data-from="0" data-to="24" data-speed="2000" data-refresh-interval="50">24</span><span>HR</span>
             				</div><!-- End .count-wrapper -->
-            				<h4 class="count-title">LUÔN HỖ TRỢ</h4>
+            				<h4 class="count-title">SUPPORT AVAILABLE</h4>
             			</div><!-- End .col-md-4 -->
 
             			<div class="col-6 col-md-4 count-container">
             				<div class="count-wrapper">
-            					<span class="count-to" data-from="0" data-to="265" data-speed="2000" data-refresh-interval="50">100</span>+
+            					<span class="count-to" data-from="0" data-to="265" data-speed="2000" data-refresh-interval="50">265</span>+
             				</div><!-- End .count-wrapper -->
-            				<h4 class="count-title">LUÔN HỖ TRỢ</h4>
+            				<h4 class="count-title">SUPPORT AVAILABLE</h4>
             			</div><!-- End .col-md-4 -->
 
             			<div class="col-6 col-md-4 count-container">
             				<div class="count-wrapper line-height-1">
             					<span class="count-to" data-from="0" data-to="99" data-speed="2000" data-refresh-interval="50">99</span><span>%</span>
             				</div><!-- End .count-wrapper -->
-            				<h4 class="count-title">LUÔN HỖ TRỢ</h4>
+            				<h4 class="count-title">SUPPORT AVAILABLE</h4>
             			</div><!-- End .col-md-4 -->
             		</div><!-- End .row -->
             	</div><!-- End .container -->

@@ -238,13 +238,13 @@
                                     </div>
                                 </li>
                                 <li class="d-none d-xl-block">
-                                    <a href="#">Liên hệ</a>
+                                    <a href="#">Liên hê</a>
                                     <ul>
                                         <li><a href="wishlist.html">Wishlist</a></li>
 
                                     </ul>
                                 </li>
-                                <li><a href="blog.html">Về chúng tôi</a></li>
+                                <li><a href="blog.html">Bài viết</a></li>
                             </ul>
                         </nav>
                     </div>
