@@ -720,19 +720,20 @@
     overflow: hidden;
 }
 
-/* .owl-carousel .owl-item,
+.owl-carousel .owl-item,
 .owl-carousel .owl-wrapper {
     -webkit-backface-visibility: hidden;
     -moz-backface-visibility: hidden;
     -ms-backface-visibility: hidden;
     -webkit-transform: translate3d(0, 0, 0);
     -ms-transform: translate3d(0, 0, 0)
-} */
+}
 
 .owl-carousel .owl-item {
     position: relative;
     min-height: 1px;
     float: left;
+    -webkit-backface-visibility: hidden;
     -webkit-tap-highlight-color: transparent;
     -webkit-touch-callout: none
 }
