@@ -254,15 +254,15 @@
                                     class="icon-magnifier mr-2"></i><span>Tìm kiếm</span></a>
                             <form action="#" method="get">
                                 <div class="header-search-wrapper">
-                                    <div>
+                                    <div class="row">
                                     <input type="search" class="form-control" name="q" id="q1"
                                         placeholder="I'm searching for..." required>
-                                        <div>
-                                            <div class="row">
+                                        <div class="bg-light text-dark">
+                                            <div class="row align-items-center">
                                                 <div class="col-md-4"><img src="<?=$base_url?>upload/demoes/demo23/products/product-2.jpg" alt=""></div>
                                                 <div class="col-md-8">Tên sản phẩm</div>
                                             </div>
-                                            <div class="row">
+                                            <div class="row align-items-center">
                                                 <div class="col-md-4"><img src="<?=$base_url?>upload/demoes/demo23/products/product-2.jpg" alt=""></div>
                                                 <div class="col-md-8">Tên sản phẩm</div>
                                             </div>
