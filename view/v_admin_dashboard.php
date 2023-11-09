@@ -51,24 +51,7 @@
                 </div>
             </div>
             <!-- End of Analyses -->
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="card">
-                        <div class="cart-header">
-                            <strong>Thống kê sách theo chủ đề</strong>
-                        </div>
-                        <div id="myChart" style="max-width:700px; height:400px"></div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="card">
-                        <div class="cart-header">
-                            <strong>Thống kê doanh thu</strong>
-                        </div>
-                        <div id="myChart2" style="max-width:700px; height:400px"></div>
-                    </div>
-                </div>
-            </div>
+         
             
 
             <!-- New Users Section -->
@@ -127,12 +110,10 @@
     
         // Set Data
         const data = google.visualization.arrayToDataTable([
-            ['Contry', 'Mhl'],
-            ['Italy',54.8],
-            ['France',48.6],
-            ['Spain',44.4],
-            ['USA',23.9],
-            ['Argentina',14.5]
+            ['LoaiSP', 'SoLuong'],
+            ['TenLoai',54.8],
+            ['SoLuong',48.6],
+           
 
         ]);
 
@@ -149,12 +130,13 @@
 
         // Set Data
         const data2 = google.visualization.arrayToDataTable([
-            ['Contry', 'Mhl'],
-            ['Italy', 55],
-            ['France', 49],
-            ['Spain', 44],
-            ['USA', 24],
-            ['Argentina', 15]
+            ['Ngay', 'DoanhThu'],
+            ['9/9/23', 55],
+            ['23/10/23', 55],
+            ['5/11/232', 49],
+            ['9/11/232', 49],
+
+         
         ]);
 
         // Set Options

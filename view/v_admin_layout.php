@@ -118,7 +118,7 @@
             </div>
 
             <div class="reminders">
-                <div class="header">
+                <!-- <div class="header">
                     <h2>Lời nhắc</h2>
                     <span class="material-icons-sharp">
                         notifications_none
@@ -170,7 +170,25 @@
                         </span>
                         <h3>Thêm lời nhắc</h3>
                     </div>
+                </div> -->
+                <div class="row">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="cart-header">
+                            <strong>Thống kê sách theo chủ đề</strong>
+                        </div>
+                        <div id="myChart" style="max-width:400px; height:200px"></div>
+                    </div>
                 </div>
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="cart-header">
+                            <strong>Thống kê doanh thu</strong>
+                        </div>
+                        <div id="myChart2" style="max-width:400px; height:200px"></div>
+                    </div>
+                </div>
+            </div>
 
             </div>
 
