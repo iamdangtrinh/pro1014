@@ -35,7 +35,8 @@ if (isset($_GET['act'])) {
             $title = "Đăng nhập";
             break;
 
-        case '' :
+        case 'has_account' :
+            echo "Vô has account";
             break;
 
         // Đăng ký tài khoản
