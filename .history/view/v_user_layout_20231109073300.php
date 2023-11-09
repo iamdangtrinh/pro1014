@@ -72,12 +72,10 @@
                             </div>
                         </div>
 
-
                         <a href="wishlist.html" class="header-icon">
                             <i class="icon-wishlist-2"></i>
                         </a>
 
-                        <!-- menu mobile -->
                         <div class="dropdown cart-dropdown">
                             <a href="#" title="Cart" class="dropdown-toggle cart-toggle" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-display="static">

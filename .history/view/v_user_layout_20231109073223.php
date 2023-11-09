@@ -72,12 +72,10 @@
                             </div>
                         </div>
 
-
                         <a href="wishlist.html" class="header-icon">
                             <i class="icon-wishlist-2"></i>
                         </a>
 
-                        <!-- menu mobile -->
                         <div class="dropdown cart-dropdown">
                             <a href="#" title="Cart" class="dropdown-toggle cart-toggle" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-display="static">
@@ -287,7 +285,7 @@
                             <div class="row">
                                 <div class="col-sm-6 pr-sm-0">
                                     <div class="contact-widget m-b-3">
-                                        <h4 class="widget-title font2">ĐỊA CHỈ:</h4>
+                                        <h4 class="widget-title font2">ADDRESS:</h4>
                                         <a href="#">123 Street Name, City, England</a>
                                     </div>
                                 </div>
