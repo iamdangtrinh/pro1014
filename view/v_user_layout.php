@@ -33,12 +33,10 @@
     <div class="page-wrapper">
         <div class="top-notice font2">
             <div class="container-fluid text-center m-auto text-dark">
-                <div class="top-notice-display">
-                    <i class="fa-solid fa-plane fa-2xs"></i><b class="text-uppercase">Miễn phí vận chuyển</b>&nbsp;hóa đơn từ
-                    300.000 VND hoặc nhiều hơn!
-                    Code:&nbsp;<b class="text-uppercase">Cáigìđó</b>&nbsp;| Hạn chế áp dụng.&nbsp;<a
-                        href="demo23-shop.html" class="text-dark">Xem tất cả ưu đãi</a>
-                </div>
+                <i class="fa-solid fa-truck"></i> <b class="text-uppercase">Miễn phí vận chuyển</b>&nbsp;hóa đơn từ
+                300.000 VND hoặc nhiều hơn!
+                Code:&nbsp;<b class="text-uppercase">Cáigìđó</b>&nbsp;| Hạn chế áp dụng.&nbsp;<a
+                    href="demo23-shop.html" class="text-dark">Xem tất cả ưu đãi</a>
             </div>
             <button title="Close (Esc)" type="button" class="mfp-close">×</button>
         </div>
@@ -194,7 +192,8 @@
                                             <option value="13">Sơ sinh</option>
                                         </select>
                                     </div><!-- End .select-custom -->
-                                    <button class="btn icon-magnifier p-0" title="search" type="submit"></button>
+                                    <button class="btn p-0" type="submit"><i
+                                    class="icon-magnifier"></i></button>
                                 </div><!-- End .header-search-wrapper -->
                             </form>
                         </div><!-- End .header-search -->
