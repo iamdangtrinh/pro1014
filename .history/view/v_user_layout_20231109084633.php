@@ -244,7 +244,7 @@
 
                                     </ul>
                                 </li>
-                                <li><a href="blog.html">Về chúng tôi</a></li>
+                                <li><a href="blog.html">Bài viết</a></li>
                             </ul>
                         </nav>
                     </div>
