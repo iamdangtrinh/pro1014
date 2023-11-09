@@ -138,7 +138,6 @@
                                                 <a href="#" class="btn-remove" title="Remove Product"><span>×</span></a>
                                             </figure>
                                         </div>
-                                        
                                         <div class="product">
                                             <div class="product-details">
                                                 <h4 class="product-title">

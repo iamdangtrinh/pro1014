@@ -161,7 +161,7 @@
                                         <div class="product-label label-hot">HOT</div>
                                     </div>
                                     <div class="btn-icon-group">
-                                        <a href="<?= $base_url ?>product/detail" ><i class="fa-solid fa-cart-shopping"></i></a>
+                                        <a href="<?= $base_url ?>product/detail" class="btn-icon btn-add-cart"></a>
                                     </div>
                                     <a href="ajax/product-quick-view.html" class="btn-quickview" title="Quick View">Xem nhanh</a>
                                 </figure>
