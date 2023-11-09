@@ -155,12 +155,13 @@
                                 <figure>
                                     <a href="<?= $base_url ?>product/detail">
                                         <img src="<?= $base_url ?>upload/demoes/demo23/products/product-1.jpg" width="217" height="217" alt="product">
+                                        <img src="<?= $base_url ?>upload/demoes/demo23/products/product-7.jpg" width="217" height="217" alt="product">
                                     </a>
                                     <div class="label-group">
                                         <div class="product-label label-hot">HOT</div>
                                     </div>
                                     <div class="btn-icon-group">
-                                        <a href="<?= $base_url ?>product/detail" class="btn-icon btn-add-cart fa-solid fa-cart-shopping"></a>
+                                        <a href="<?= $base_url ?>product/detail" ><i class="fa-solid fa-cart-shopping"></i></a>
                                     </div>
                                     <a href="ajax/product-quick-view.html" class="btn-quickview" title="Quick View">Xem nhanh</a>
                                 </figure>
@@ -256,20 +257,20 @@
             <div class="products-container appear-animate" data-animation-name="fadeIn" data-animation-delay="200">
                 <div class="container">
                     <div class="row">
-                        <div class="col-6 col-md-4 col-xl-3">
+                    <div class="col-6 col-md-4 col-xl-3">
                             <div class="product-default inner-quickview inner-icon">
-                                <figure>
                                     <a href="<?= $base_url ?>product/detail">
-                                        <img src="<?= $base_url ?>upload/demoes/demo23/products/product-5.jpg" width="217" height="217" alt="product">
+                                        <img src="<?= $base_url ?>upload/demoes/demo23/products/product-1.jpg" width="217" height="217" alt="product">
+                                        <img src="<?= $base_url ?>upload/demoes/demo23/products/product-7.jpg" width="217" height="217" alt="product">
                                     </a>
                                     <div class="label-group">
                                         <div class="product-label label-hot">HOT</div>
                                     </div>
                                     <div class="btn-icon-group">
-                                        <a href="#" title="Add To Cart" class="btn-icon btn-add-cart product-type-simple"><i class="icon-shopping-cart"></i></a>
+                                        <a href="<?= $base_url ?>product/detail" ><i class="fa-solid fa-cart-shopping"></i></a>
                                     </div>
                                     <a href="ajax/product-quick-view.html" class="btn-quickview" title="Quick View">Xem nhanh</a>
-                                </figure>
+                                </fiure>
                                 <div class="product-details">
                                     <div class="category-wrap">
                                         <div class="category-list">
@@ -287,9 +288,9 @@
                                         </div><!-- End .product-ratings -->
                                     </div><!-- End .product-container -->
                                     <div class="price-box">
-                                        <span class="product-price">Giá tiền</span>
+                                        <span class="product-price">Giá tiền &ndash; Giá tiền</span>
                                     </div><!-- End .price-box -->
-                                </div><!-- End .product-details -->
+                                </div>
                             </div>
                         </div>
             

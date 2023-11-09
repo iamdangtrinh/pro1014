@@ -155,12 +155,13 @@
                                 <figure>
                                     <a href="<?= $base_url ?>product/detail">
                                         <img src="<?= $base_url ?>upload/demoes/demo23/products/product-1.jpg" width="217" height="217" alt="product">
+                                        <img src="<?= $base_url ?>upload/demoes/demo23/products/product-7.jpg" width="217" height="217" alt="product">
                                     </a>
                                     <div class="label-group">
                                         <div class="product-label label-hot">HOT</div>
                                     </div>
                                     <div class="btn-icon-group">
-                                        <a href="<?= $base_url ?>product/detail" class="btn-icon btn-add-cart fa-solid fa-cart-shopping"></a>
+                                        <a href="<?= $base_url ?>product/detail" class="btn-icon btn-add-cart"><i class=""></i></a>
                                     </div>
                                     <a href="ajax/product-quick-view.html" class="btn-quickview" title="Quick View">Xem nhanh</a>
                                 </figure>
