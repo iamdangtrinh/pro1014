@@ -129,9 +129,9 @@ aside{
 
 aside .toggle{
     display: flex;
+    gap: 0.5rem;
     align-items: center;
-    justify-content: space-between;
-    margin-top: 1.4rem;
+    justify-content: center;
 }
 
 aside .toggle .logo{
@@ -140,8 +140,7 @@ aside .toggle .logo{
 }
 
 aside .toggle .logo img{
-    width: 3rem;
-    height: 3rem;
+    width: 80%;
 }
 
 aside .toggle .close{

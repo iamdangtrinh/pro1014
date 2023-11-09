@@ -17,7 +17,6 @@
             <div class="toggle">
                 <div class="logo">
                     <img src="<?= $base_url ?>upload/logo.png">
-                    <h2>tên <span class="danger">DA1</span></h2>
                 </div>
                 <div class="close" id="close-btn">
                     <span class="material-icons-sharp">
