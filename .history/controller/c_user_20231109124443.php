@@ -33,17 +33,17 @@ if (isset($_GET['act'])) {
             }
             $view_name = 'user_login';
             $title = "Đăng nhập";
-        break;
+            break;
 
-        // Kiểm tra tài khoản có tồn tại hay không
         case 'has_account' :
-            echo "vô account";
+
             break;
 
         // Đăng ký tài khoản
         case 'register':
             //lay du lieu
             // hien thi du lieu
+            echo "Vô has account";
 
             $view_name = 'user_register';
             $title = "Đăng ký";

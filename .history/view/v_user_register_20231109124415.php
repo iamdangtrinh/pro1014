@@ -86,7 +86,7 @@
 					email: {
 						required: true,
 						email: true,
-						remote: '?mod=user&act=has_account',
+						remote: '?user/has_account',
 					},
 					password: {
 						required: true,
@@ -119,7 +119,7 @@
 				submitHandler: function (form) {
 					$.ajax({
 						type: "POST",
-						url: "?mod=user&act=register",
+						url: "?mod=user/register",
 						data: {
 							fullname: fullname,
 							email: email,

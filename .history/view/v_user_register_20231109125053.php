@@ -86,7 +86,7 @@
 					email: {
 						required: true,
 						email: true,
-						remote: '?mod=user&act=has_account',
+						remote: '?mod=userhas_account',
 					},
 					password: {
 						required: true,

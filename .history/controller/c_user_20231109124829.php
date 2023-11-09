@@ -38,6 +38,7 @@ if (isset($_GET['act'])) {
         // Kiểm tra tài khoản có tồn tại hay không
         case 'has_account' :
             echo "vô account";
+            print_r($_POST);
             break;
 
         // Đăng ký tài khoản
