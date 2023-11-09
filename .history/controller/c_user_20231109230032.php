@@ -60,6 +60,8 @@ if (isset($_GET['act'])) {
                     } else {
                         $_SESSION['success']['register'] = 'Đăng ký thành công.';
                     }
+
+
                 }
 
             }

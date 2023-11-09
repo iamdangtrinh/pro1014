@@ -139,7 +139,7 @@
 
 					$.ajax({
 						type: "POST",
-						url: "<?$base_url?>user/register",
+						url: "<?$base_url?>user&act=register",
 						data: {
 							fullname: fullname,
 							email: email,

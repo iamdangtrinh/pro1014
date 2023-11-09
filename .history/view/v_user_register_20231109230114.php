@@ -19,17 +19,13 @@
 <div class="container  login-container">
 	<div class=" mt-2 mx-auto">
 
-		<?php if (isset($_SESSION['error']['register'])): ?>
-			<h5 class="alert alert-danger">
-				<?= $_SESSION['error']['register'] ?>
-			</h5>
+	<?php if (isset($_SESSION['error']['register'])): ?>
+			<h5 class="alert alert-danger"><?= $_SESSION['error']['register'] ?></h5>
 		<?php endif;
 		unset($_SESSION['error']['register']) ?>
-
-		<?php if (isset($_SESSION['success']['success'])): ?>
-			<h5 class="alert alert-danger">
-				<?= $_SESSION['success']['register'] ?>
-			</h5>
+		
+	<?php if (isset($_SESSION['success']['register'])): ?>
+			<h5 class="alert alert-danger"><?= $_SESSION['success']['register'] ?></h5>
 		<?php endif;
 		unset($_SESSION['success']['register']) ?>
 
@@ -81,14 +77,14 @@
 					nhập</a>
 			</div>
 
-			<input name="btn_register" value="Đăng ký" type="submit" class="btn btn-primary btn-md w-100 ">
-		</form>
+				<input name="btn_register" value="Đăng ký" type="submit" class="btn btn-primary btn-md w-100 ">
+			</form>
 	</div>
 </div>
 
 
 <!-- ajax register form -->
-<script>
+<!-- <script>
 	$(document).ready(
 		function () {
 			$("#form_register").validate({
@@ -139,7 +135,7 @@
 
 					$.ajax({
 						type: "POST",
-						url: "<?$base_url?>user/register",
+						url: "?mod=user&act=register",
 						data: {
 							fullname: fullname,
 							email: email,
@@ -153,4 +149,4 @@
 
 		})
 
-</script>
+</script> -->

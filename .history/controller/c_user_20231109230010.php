@@ -57,9 +57,9 @@ if (isset($_GET['act'])) {
                     // cho phép đăng ký tài khoản
                     if(has_email($email) > 0) {
                         $_SESSION['error']['register'] = 'Đăng ký không thành công. Tài khoản này đã tồn tại';
-                    } else {
-                        $_SESSION['success']['register'] = 'Đăng ký thành công.';
-                    }
+                    } 
+
+
                 }
 
             }
