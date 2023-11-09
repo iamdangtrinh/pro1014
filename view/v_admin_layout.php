@@ -102,7 +102,7 @@
                         <small class="text-muted">Admin</small>
                     </div>
                     <div class="profile-photo">
-                        <img src="images/profile-1.jpg">
+                        <img src="<?= $base_url ?>upload/blog/author.jpg">
                     </div>
                 </div>
 
@@ -111,9 +111,9 @@
 
             <div class="user-profile">
                 <div class="logo">
-                    <img src="images/logo.png" alt="anh admin">
-                    <h2>Tên admin</h2>
-                    <p>quyền admin</p>
+                    <img src="<?= $base_url ?>upload/blog/author.jpg" alt="anh admin">
+                    <h2>Nguyễn Phong Phú</h2>
+                    <p>Quản trị cấp cao</p>
                 </div>
             </div>
 
