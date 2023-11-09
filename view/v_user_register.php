@@ -37,11 +37,11 @@
 			</div>
 
 			<div class="mb-2">
-				<label for="register-password">
+				<label for="password">
 					Mật khẩu
 					<span class="required">*</span>
 				</label>
-				<input type="text" name="password" class="form-input form-wide" id="register-password">
+				<input type="password" name="password" class="form-input form-wide" id="password">
 			</div>
 
 			<div class="mb-2">
@@ -49,7 +49,7 @@
 					Nhập lại mật khẩu
 					<span class="required">*</span>
 				</label>
-				<input type="text" name="re_password" class="form-input form-wide" id="re_password">
+				<input type="password" name="re_password" class="form-input form-wide" id="re_password">
 			</div>
 
 			<div class="mb-2">
@@ -119,7 +119,7 @@
 				submitHandler: function (form) {
 					$.ajax({
 						type: "POST",
-						url: "?mod=user&act=register",
+						url: "?user/register",
 						data: {
 							fullname: fullname,
 							email: email,

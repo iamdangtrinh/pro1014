@@ -18,3 +18,5 @@ RewriteRule ^assets/(.*)/(.*)$ assets/$1/$2 [L]
 RewriteRule ^template/(.*)$ template/$1 [L]
 RewriteRule ^(.*)/(.*)$ index.php?mod=$1&act=$2 [L] 
         #    page/home  index.php?mod=page&act=home
+
+# RewriteRule  [L]
