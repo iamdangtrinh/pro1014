@@ -90,6 +90,9 @@
 					password: {
 						required: true,
 						minlength: 5,
+					},
+					re_password: {
+						required: true,
 					}
 				},
 
