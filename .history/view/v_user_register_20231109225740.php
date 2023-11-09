@@ -19,11 +19,7 @@
 <div class="container  login-container">
 	<div class=" mt-2 mx-auto">
 
-	<?php if (isset($_SESSION['error']['register'])): ?>
-			<h5 class="alert alert-danger"><?= $_SESSION['error']['register'] ?></h5>
-		<?php endif;
-		unset($_SESSION['error']['register']) ?>
-
+	
 		<form action="?mod=user&act=register" method="post" id="form_register">
 
 			<div class="mb-2">

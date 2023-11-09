@@ -52,11 +52,11 @@ if (isset($_GET['act'])) {
                 $address = $_POST['address'];
 
                 if($email == "" || empty($email)) {
-                    $_SESSION['error']['register'] = 'Đăng ký không thành công';
+                    $_SESSION['error']['login'] = 'Đăng ký không thành công';
                 } else {
                     // cho phép đăng ký tài khoản
                     if(has_email($email) > 0) {
-                        $_SESSION['error']['register'] = 'Đăng ký không thành công. Tài khoản này đã tồn tại';
+                        $_SESSION['error']['login'] = 'Đăng ký không thành công';
                     }
 
 

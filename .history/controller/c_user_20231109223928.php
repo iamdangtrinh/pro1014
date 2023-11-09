@@ -14,7 +14,6 @@ if (isset($_GET['act'])) {
             if (isset($_POST['btn_login']) && $_POST['btn_login']) {
                 $email = $_POST['email'];
                 $password = $_POST['password'];
-
                 if ($email == null && $email == " " || $password == null && $password == "") {
                     // Hiển thị lỗi
                     $_SESSION['error']['login'] = "Đăng nhập không thành công. Vui lòng thử lại";
@@ -36,36 +35,27 @@ if (isset($_GET['act'])) {
                 }
             }
             $view_name = 'user_login';
-            $title = "Đăng nhập tài khoản";
+            $title = "Đăng nhập";
         break;
+
+        // Kiểm tra tài khoản có tồn tại hay không
+        case 'has_account' :
+            $get_email = $_GET['email'];
+            include_once 'model/m_user.php';
+            has_email($get_email);
+
+            break;
 
         // Đăng ký tài khoản
         case 'register':
             //lay du lieu
-            include_once 'model/m_user.php';
-            // Kiểm tra tài khoản có tồn tại hay không
+            // hien thi du lieu
             if(isset($_POST['btn_register']) && $_POST['btn_register']) {
-
-                $fullname = $_POST['fullname'];
-                $email = $_POST['email'];
-                $password = $_POST['password'];
-                $address = $_POST['address'];
-
-                if($email == "" || empty($email)) {
-                    $_SESSION['error']['register'] = 'Đăng ký không thành công';
-                } else {
-                    // cho phép đăng ký tài khoản
-                    if(has_email($email) > 0) {
-                        $_SESSION['error']['register'] = 'Đăng ký không thành công. Tài khoản này đã tồn tại';
-                    }
-
-
-                }
-
+                print_r($_POST);
             }
 
-            $view_name = 'user_register';
-            $title = "Đăng ký tài khoản";
+            $_SESSION['success']
+
             break;
         case 'forgotPassword':
             //lay du lieu

@@ -36,36 +36,27 @@ if (isset($_GET['act'])) {
                 }
             }
             $view_name = 'user_login';
-            $title = "Đăng nhập tài khoản";
+            $title = "Đăng nhập";
         break;
+
+        // Kiểm tra tài khoản có tồn tại hay không
+        case 'has_account' :
+            $get_email = $_GET['email'];
+            include_once 'model/m_user.php';
+            
+
+            break;
 
         // Đăng ký tài khoản
         case 'register':
             //lay du lieu
-            include_once 'model/m_user.php';
-            // Kiểm tra tài khoản có tồn tại hay không
+            // hien thi du lieu
             if(isset($_POST['btn_register']) && $_POST['btn_register']) {
-
-                $fullname = $_POST['fullname'];
-                $email = $_POST['email'];
-                $password = $_POST['password'];
-                $address = $_POST['address'];
-
-                if($email == "" || empty($email)) {
-                    $_SESSION['error']['register'] = 'Đăng ký không thành công';
-                } else {
-                    // cho phép đăng ký tài khoản
-                    if(has_email($email) > 0) {
-                        $_SESSION['error']['register'] = 'Đăng ký không thành công. Tài khoản này đã tồn tại';
-                    }
-
-
-                }
-
+                print_r($_POST);
             }
-
+            $_SESSION['success']['login'] = 'Đăng ký thành công';
             $view_name = 'user_register';
-            $title = "Đăng ký tài khoản";
+            $title = "Đăng ký";
             break;
         case 'forgotPassword':
             //lay du lieu

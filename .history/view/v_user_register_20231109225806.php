@@ -20,7 +20,7 @@
 	<div class=" mt-2 mx-auto">
 
 	<?php if (isset($_SESSION['error']['register'])): ?>
-			<h5 class="alert alert-danger"><?= $_SESSION['error']['register'] ?></h5>
+			<h5 class="text-danger"><?= $_SESSION['error']['register'] ?></h5>
 		<?php endif;
 		unset($_SESSION['error']['register']) ?>
 

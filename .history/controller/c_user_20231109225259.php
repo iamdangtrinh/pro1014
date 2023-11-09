@@ -42,7 +42,7 @@ if (isset($_GET['act'])) {
         // Đăng ký tài khoản
         case 'register':
             //lay du lieu
-            include_once 'model/m_user.php';
+            include_once 'model/';
             // Kiểm tra tài khoản có tồn tại hay không
             if(isset($_POST['btn_register']) && $_POST['btn_register']) {
 
@@ -52,12 +52,10 @@ if (isset($_GET['act'])) {
                 $address = $_POST['address'];
 
                 if($email == "" || empty($email)) {
-                    $_SESSION['error']['register'] = 'Đăng ký không thành công';
+                    $_SESSION['error']['login'] = 'Đăng ký không thành công';
                 } else {
                     // cho phép đăng ký tài khoản
-                    if(has_email($email) > 0) {
-                        $_SESSION['error']['register'] = 'Đăng ký không thành công. Tài khoản này đã tồn tại';
-                    }
+
 
 
                 }

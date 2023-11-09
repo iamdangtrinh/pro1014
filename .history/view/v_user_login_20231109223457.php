@@ -20,11 +20,11 @@
 	<div class=" mt-2 mx-auto">
 
 		<?php if (isset($_SESSION['error']['login'])): ?>
-			<h5 class="alert alert-danger"><?= $_SESSION['error']['login'] ?></h5>
+			<h5 class="text-danger"><?= $_SESSION['error']['login'] ?></h5>
 		<?php endif;
 		unset($_SESSION['error']['login']) ?>
 
-		<form action="#" id="form_login" method="post">
+		<form action="" id="form_login" method="post">
 
 			<div class="mb-2">
 				<label for="login-email">Địa chỉ email<span class="required">*</span></label>
@@ -48,8 +48,6 @@
 </div>
 
 <script>
-	$(document).ready(
-		function () {
 			$("#form_login").validate({
 				// các nguyên tắt 
 				rules: {
@@ -85,6 +83,4 @@
 					});
 				}
 			});
-		}
-	)
 </script>

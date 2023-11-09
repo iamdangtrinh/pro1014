@@ -18,13 +18,7 @@
 
 <div class="container  login-container">
 	<div class=" mt-2 mx-auto">
-
-	<?php if (isset($_SESSION['error']['register'])): ?>
-			<h5 class="alert alert-danger"><?= $_SESSION['error']['register'] ?></h5>
-		<?php endif;
-		unset($_SESSION['error']['register']) ?>
-
-		<form action="?mod=user&act=register" method="post" id="form_register">
+		<form action="#" method="post" id="form_register">
 
 			<div class="mb-2">
 				<label for="fullname">
@@ -61,7 +55,6 @@
 			<div class="mb-2">
 				<label for="address">
 					Địa chỉ
-					<span class="required">*</span>
 				</label>
 				<input type="text" name="address" class="form-input form-wide" id="address">
 			</div>
@@ -72,24 +65,28 @@
 					nhập</a>
 			</div>
 
-				<input name="btn_register" value="Đăng ký" type="submit" class="btn btn-primary btn-md w-100 ">
-			</form>
+			<div class="form-footer mb-2">
+				<input name="btn_register" value="Đăng ký" type="reset" class="btn btn-primary btn-md ">
+			</div>
+		</form>
 	</div>
 </div>
 
 
 <!-- ajax register form -->
-<!-- <script>
+<script>
 	$(document).ready(
 		function () {
 			$("#form_register").validate({
 				rules: {
 					fullname: {
 						required: true,
+						// minlength:  10,
 					},
 					email: {
 						required: true,
 						email: true,
+						remote: '?mod=user&act=has_account',
 					},
 					password: {
 						required: true,
@@ -97,19 +94,18 @@
 					},
 					re_password: {
 						equalTo: "#password",
-					},
-					address: {
-						required: true,
 					}
 				},
 
 				messages: {
 					fullname: {
 						required: "Vui lòng nhập họ tên",
+						// minlength: "Nhập tối thiểu 10 kí tự",
 					},
 					email: {
 						required: "Vui lòng nhập địa chỉ email",
 						email: "Địa chỉ không phải email",
+						remote: "Tài khoản này tồn tại"
 					},
 					password: {
 						required: "Vui lòng nhập mật khẩu",
@@ -117,11 +113,11 @@
 					},
 					re_password: {
 						equalTo: "Mật khẩu không trùng khớp",
-					},
-					address: {
-						required: "Vui lòng nhập địa chỉ",
 					}
 				},
+
+
+
 				submitHandler: function (form) {
 					var fullname = $("#fullname").val();
 					var email = $("#register-email").val();
@@ -144,4 +140,4 @@
 
 		})
 
-</script> -->
+</script>
