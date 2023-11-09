@@ -507,9 +507,9 @@
                     <li><a href="cart.html">Cart</a></li>
                     <li><a href="login.html" class="login-link">Log In</a></li>
                 </ul>
-            </nav>
-        </div>
-    </div>
+            </nav><!-- End .mobile-nav -->
+        </div><!-- End .mobile-menu-wrapper -->
+    </div><!-- End .mobile-menu-container -->
 
     <div class="sticky-navbar">
         <div class="sticky-info">

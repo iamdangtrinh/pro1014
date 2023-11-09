@@ -507,9 +507,15 @@
                     <li><a href="cart.html">Cart</a></li>
                     <li><a href="login.html" class="login-link">Log In</a></li>
                 </ul>
-            </nav>
-        </div>
-    </div>
+            </nav><!-- End .mobile-nav -->
+
+            <form class="search-wrapper mb-2" action="#">
+                <input type="text" class="form-control mb-0" placeholder="Search..." required />
+                <button class="btn icon-search text-white bg-transparent p-0" type="submit"></button>
+            </form>
+
+        </div><!-- End .mobile-menu-wrapper -->
+    </div><!-- End .mobile-menu-container -->
 
     <div class="sticky-navbar">
         <div class="sticky-info">

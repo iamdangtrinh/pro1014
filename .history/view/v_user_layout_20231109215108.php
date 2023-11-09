@@ -455,6 +455,7 @@
                                 <a href="#" class="nolink">PRODUCT LAYOUTS</a>
                                 <ul>
                                     <li><a href="product-extended-layout.html">EXTENDED LAYOUT</a></li>
+                                    
                                 </ul>
                             </li>
                         </ul>
@@ -483,6 +484,27 @@
                         </ul>
                     </li>
                     <li><a href="blog.html">Blog</a></li>
+                    <li>
+                        <a href="#">Elements</a>
+                        <ul class="custom-scrollbar">
+                            <li><a href="element-accordions.html">Accordion</a></li>
+                            <li><a href="element-alerts.html">Alerts</a></li>
+                            <li><a href="element-animations.html">Animations</a></li>
+                            <li><a href="element-banners.html">Banners</a></li>
+                            <li><a href="element-buttons.html">Buttons</a></li>
+                            <li><a href="element-call-to-action.html">Call to Action</a></li>
+                            <li><a href="element-countdown.html">Count Down</a></li>
+                            <li><a href="element-counters.html">Counters</a></li>
+                            <li><a href="element-headings.html">Headings</a></li>
+                            <li><a href="element-icons.html">Icons</a></li>
+                            <li><a href="element-info-box.html">Info box</a></li>
+                            <li><a href="element-posts.html">Posts</a></li>
+                            <li><a href="element-products.html">Products</a></li>
+                            <li><a href="element-product-categories.html">Product Categories</a></li>
+                            <li><a href="element-tabs.html">Tabs</a></li>
+                            <li><a href="element-testimonial.html">Testimonials</a></li>
+                        </ul>
+                    </li>
                 </ul>
 
                 <ul class="mobile-menu mt-2 mb-2">
@@ -507,9 +529,23 @@
                     <li><a href="cart.html">Cart</a></li>
                     <li><a href="login.html" class="login-link">Log In</a></li>
                 </ul>
-            </nav>
-        </div>
-    </div>
+            </nav><!-- End .mobile-nav -->
+
+            <form class="search-wrapper mb-2" action="#">
+                <input type="text" class="form-control mb-0" placeholder="Search..." required />
+                <button class="btn icon-search text-white bg-transparent p-0" type="submit"></button>
+            </form>
+
+            <div class="social-icons">
+                <a href="#" class="social-icon social-facebook icon-facebook" target="_blank">
+                </a>
+                <a href="#" class="social-icon social-twitter icon-twitter" target="_blank">
+                </a>
+                <a href="#" class="social-icon social-instagram icon-instagram" target="_blank">
+                </a>
+            </div>
+        </div><!-- End .mobile-menu-wrapper -->
+    </div><!-- End .mobile-menu-container -->
 
     <div class="sticky-navbar">
         <div class="sticky-info">
