@@ -15,6 +15,7 @@
   position: relative;
   margin-bottom: 3rem;
   color: #999;
+  font-family: Poppins, sans-serif;
   font-size: 2rem;
   font-weight: 700;
   letter-spacing: -0.03em;
@@ -60,6 +61,7 @@
   top: -0.8rem;
   content: "";
   color: #999;
+  font-family: "porto";
   font-size: 3rem;
 }
 

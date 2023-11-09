@@ -66,7 +66,7 @@
 			</div>
 
 			<div class="form-footer mb-2">
-				<input name="btn_register" value="Đăng ký" type="reset" class="btn btn-primary btn-md ">
+				<input name="btn_register" value="Đăng ký" type="submit" class="btn btn-dark btn-md w-100">
 			</div>
 		</form>
 	</div>

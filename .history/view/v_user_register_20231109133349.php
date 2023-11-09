@@ -66,7 +66,7 @@
 			</div>
 
 			<div class="form-footer mb-2">
-				<input name="btn_register" value="Đăng ký" type="reset" class="btn btn-primary btn-md ">
+				<input name="btn_register" value="Đăng ký" type="submit" class="btn btn-dark btn-md w-100 mr-0">
 			</div>
 		</form>
 	</div>
@@ -116,14 +116,13 @@
 					}
 				},
 
-
+			
 
 				submitHandler: function (form) {
 					var fullname = $("#fullname").val();
-					var email = $("#register-email").val();
-					var password = $("#password").val();
-					var re_password = $("#re_password").val();
-
+    var email = $("#register-email").val();
+    var password = $("#password").val();
+    var re_password = $("#re_password").val();
 					$.ajax({
 						type: "POST",
 						url: "?mod=user&act=register",

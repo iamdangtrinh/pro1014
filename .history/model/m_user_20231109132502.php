@@ -7,7 +7,7 @@
         return pdo_query_one("SELECT * FROM taikhoan WHERE Email=? AND MatKhau=?",$email,$password);
     }
     function has_email($email){
-        return pdo_query_one("SELECT * FROM taikhoan WHERE Email=? ",$email);
+        return pdo_query_one("SELECT * FROM taikhoan WHERE Email=? AND MatKhau=?",$email,$password);
     }
     function user_getAll(){
         return pdo_query("SELECT * FROM taikhoan");

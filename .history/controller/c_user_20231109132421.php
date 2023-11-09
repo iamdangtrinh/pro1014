@@ -37,19 +37,17 @@ if (isset($_GET['act'])) {
 
         // Kiểm tra tài khoản có tồn tại hay không
         case 'has_account' :
-            $get_email = $_GET['email'];
-            include_once 'model/m_user.php';
-            has_email($get_email);
+            echo $get_email = $_GET['email'];
 
+            include_once 'model/m_user.php';
+
+            
             break;
 
         // Đăng ký tài khoản
         case 'register':
             //lay du lieu
             // hien thi du lieu
-            if(isset($_POST['btn_register']) && $_POST['btn_register']) {
-                print_r($_POST);
-            }
 
             $view_name = 'user_register';
             $title = "Đăng ký";

@@ -60,6 +60,22 @@
     color: #777 !important
 }
 
+.font1 {
+    font-family: "Open Sans", sans-serif !important
+}
+
+.font2 {
+    font-family: Poppins, sans-serif !important
+}
+
+.font3 {
+    font-family: "Segoe Script", "Savoye LET" !important
+}
+
+.font4 {
+    font-family: Oswald, sans-serif !important
+}
+
 @media (min-width:992px) {
     .d-lg-none {
         display: none !important
@@ -1191,6 +1207,7 @@ button::-moz-focus-inner {
     color: #FFF;
     font-style: normal;
     font-size: 28px;
+    font-family: Arial, Baskerville, monospace
 }
 
 .mfp-close:focus,
@@ -1908,6 +1925,7 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
 .alert {
     display: flex;
     align-items: center;
+    font-family: Poppins, sans-serif;
     margin-bottom: 2rem;
     padding: 1.6rem 1.5rem;
     border-radius: 0
@@ -2935,6 +2953,7 @@ aside .banner {
     padding-right: 1.1rem;
     content: "";
     font-size: 12px;
+    font-family: "porto";
     vertical-align: middle;
     margin-top: -2px
 }
@@ -2955,6 +2974,7 @@ aside .banner {
     border-radius: 0;
     font-size: 1.4rem;
     font-weight: 700;
+    font-family: Poppins, sans-serif;
     line-height: 1.429
 }
 
@@ -3220,6 +3240,7 @@ a.btn.disabled {
     padding-top: 0;
     padding-bottom: 0;
     color: #08C;
+    font-family: "Open Sans", sans-serif;
     font-size: 13px;
     letter-spacing: 0;
     text-transform: initial
@@ -3244,6 +3265,7 @@ a.btn.disabled {
     margin-right: 10px;
     margin-left: 10px;
     background-color: #08C;
+    font-family: Poppins, sans-serif;
     text-decoration: none;
     text-transform: uppercase
 }
@@ -3397,6 +3419,7 @@ a:focus {
     padding-left: 0;
     padding-right: 25px;
     background: transparent;
+    font-family: Poppins, sans-serif;
     font-size: 1.6rem;
     font-weight: 600;
     letter-spacing: -0.025em;
@@ -3412,6 +3435,7 @@ a:focus {
     top: 50%;
     right: 10px;
     transform: translateY(-50%);
+    font-family: "porto";
     transition: 0.35s
 }
 
@@ -4557,6 +4581,7 @@ a:focus {
 }
 
 @font-face {
+    font-family: "porto";
     src: url("../fonts/porto6e1d.eot?64334846");
     src: url("../fonts/porto6e1d.eot?64334846#iefix") format("embedded-opentype"), url("../fonts/porto6e1d.woff2?64334846") format("woff2"), url("../fonts/porto6e1d.woff?64334846") format("woff"), url("../fonts/porto6e1d.ttf?64334846") format("truetype"), url("../fonts/porto6e1d.svg?64334846#porto") format("svg");
     font-style: normal;
@@ -4566,6 +4591,7 @@ a:focus {
 
 [class*=" icon-"]:before,
 [class^=icon-]:before {
+    font-family: "porto";
     font-style: normal;
     font-weight: normal;
     speak: none;
@@ -5468,6 +5494,7 @@ form h2 {
     border-radius: 0;
     background-color: #fff;
     color: #777;
+    font-family: "Open Sans", sans-serif;
     font-size: 1.2rem;
     font-weight: 400;
     line-height: 1.5
@@ -5502,6 +5529,7 @@ select.form-control-sm:not([size]):not([multiple]) {
 .main .form-control::-ms-input-placeholder,
 .main .form-control::-webkit-input-placeholder,
 .main .form-control::placeholder {
+    font-family: Poppins, sans-serif
 }
 
 textarea.form-control {
@@ -5541,6 +5569,7 @@ textarea.form-control {
 label {
     margin: 0 0 0.6rem;
     color: #222529;
+    font-family: Poppins, sans-serif;
     font-size: 1.2rem;
     font-weight: 700
 }
@@ -5597,6 +5626,7 @@ label {
     top: 50%;
     right: 1.9rem;
     transform: translateY(-50%);
+    font-family: "porto";
     font-size: 1.6rem;
     content: "";
     padding-bottom: 2px;
@@ -5627,6 +5657,7 @@ label {
 }
 
 .form-group-custom-control .custom-control-label {
+    font-family: "Open Sans", sans-serif;
     font-weight: 400;
     letter-spacing: 0;
     text-transform: initial;
@@ -5693,6 +5724,7 @@ label {
     background: none;
     color: #222529;
     content: "";
+    font-family: "porto"
 }
 
 .custom-checkbox .custom-control-input:indeterminate~.custom-control-label:before {
@@ -5807,6 +5839,7 @@ label {
     float: left;
     content: "";
     color: #5bc0de;
+    font-family: "Font Awesome 5 Free";
     font-size: 2rem;
     font-weight: 900;
     line-height: 1;
@@ -6496,6 +6529,7 @@ figure:hover .overlay-visible {
     color: #777;
     font-size: 1.3rem;
     font-weight: 400;
+    font-family: "Open Sans", sans-serif
 }
 
 .toolbox .form-control {
@@ -6559,6 +6593,7 @@ figure:hover .overlay-visible {
     color: #706f6c;
     font-size: 1.4rem;
     font-weight: 600;
+    font-family: Poppins, sans-serif
 }
 
 .page-item:not(:first-child) {
@@ -6727,6 +6762,7 @@ span.page-link {
 }
 
 .minipopup-box .product-detail {
+    font-family: Poppins, sans-serif;
     font-weight: 500
 }
 
@@ -6834,6 +6870,7 @@ span.page-link {
 
 .login-popup label {
     color: #777;
+    font-family: "Open Sans", sans-serif;
     font-size: 1.4rem;
     font-weight: 500;
     line-height: 1.57;
@@ -6853,6 +6890,7 @@ span.page-link {
 .login-popup .forget-password {
     color: #222529;
     font-size: 1.4rem;
+    font-family: "Open Sans", sans-serif;
     font-weight: 600
 }
 
@@ -6958,6 +6996,7 @@ button.mfp-close:before {
     padding: 0 32px 0 25px;
     border-radius: 0 3rem 3rem 0;
     font-size: 1.28rem;
+    font-family: "Open Sans", sans-serif;
     letter-spacing: 0;
     text-align: center;
     text-transform: uppercase
@@ -7012,6 +7051,7 @@ button.mfp-close:before {
     color: inherit;
     font-size: 1.2rem;
     font-weight: 400;
+    font-family: "Open Sans", sans-serif;
     text-transform: none
 }
 
@@ -7206,6 +7246,7 @@ button.mfp-close:before {
 .product-panel .section-title h2 {
     font-weight: 700;
     font-size: 1.6rem;
+    font-family: "Open Sans", sans-serif;
     letter-spacing: -0.01em;
     line-height: 22px;
     text-transform: uppercase
@@ -7216,6 +7257,7 @@ button.mfp-close:before {
     position: absolute;
     background-color: #333;
     color: #fff;
+    font-family: "Open Sans", sans-serif;
     font-weight: 400;
     letter-spacing: 0.01em;
     text-align: center;
@@ -7351,6 +7393,7 @@ figure .porto-loading-icon {
     text-align: center;
     font-weight: 400;
     font-size: 1rem;
+    font-family: "Open Sans", sans-serif;
     line-height: 1.7;
     opacity: 0.8;
     text-transform: uppercase;
@@ -7362,6 +7405,7 @@ figure .porto-loading-icon {
     max-width: 100%;
     font-weight: 400;
     font-size: 1.5rem;
+    font-family: Poppins, sans-serif;
     line-height: 1.35;
     letter-spacing: 0.005em;
     margin-bottom: 0.4rem
@@ -7450,6 +7494,7 @@ figure .porto-loading-icon {
     padding: 0 1.4rem;
     font-size: 1.2rem;
     font-weight: 600;
+    font-family: Poppins, sans-serif;
     text-align: center;
     vertical-align: top;
     cursor: pointer;
@@ -7549,6 +7594,7 @@ figure .porto-loading-icon {
 .price-box {
     margin-bottom: 1.4rem;
     font-weight: 600;
+    font-family: "Open Sans", sans-serif;
     line-height: 1
 }
 
@@ -7566,6 +7612,7 @@ figure .porto-loading-icon {
     display: inline-block;
     font-size: 11px;
     letter-spacing: 0.1em;
+    font-family: "Font Awesome 5 Free";
     font-weight: 900
 }
 
@@ -7644,6 +7691,7 @@ figure .porto-loading-icon {
 .product-select.type-check.checked:before {
     font-size: 8px;
     content: "";
+    font-family: "Font Awesome 5 Free";
     font-weight: 900;
     -webkit-font-smoothing: antialiased;
     text-indent: 0;
@@ -7723,6 +7771,7 @@ figure .porto-loading-icon {
     padding: 10px 2px;
     color: #222529;
     font-size: 1.4rem;
+    font-family: Poppins, sans-serif;
     text-align: center
 }
 
@@ -7811,6 +7860,7 @@ figure .porto-loading-icon {
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
     color: #fff;
+    font-family: "porto";
     font-size: 1.1rem;
     line-height: 1;
     content: ""
@@ -8041,6 +8091,7 @@ figure .porto-loading-icon {
     font-size: 1.3rem;
     font-weight: 400;
     letter-spacing: 0.025em;
+    font-family: Poppins, sans-serif;
     text-transform: uppercase;
     visibility: hidden;
     opacity: 0;
@@ -8116,6 +8167,7 @@ figure .porto-loading-icon {
 }
 
 .inner-icon .product-title {
+    font-family: Poppins, sans-serif;
     letter-spacing: -0.01em
 }
 
@@ -8125,6 +8177,7 @@ figure .porto-loading-icon {
 
 .inner-icon .price-box {
     margin-bottom: 1.5rem;
+    font-family: "Open Sans", sans-serif
 }
 
 .inner-icon .btn-icon-group {
@@ -8309,6 +8362,7 @@ figure .porto-loading-icon {
     font-size: 1.3rem;
     font-weight: 400;
     letter-spacing: 0.025em;
+    font-family: Poppins, sans-serif;
     text-transform: uppercase;
     line-height: 45px
 }
@@ -8334,6 +8388,7 @@ figure .porto-loading-icon {
     font-size: 1.3rem;
     font-weight: 400;
     letter-spacing: 0.025em;
+    font-family: Poppins, sans-serif;
     text-transform: uppercase;
     line-height: 45px
 }
@@ -8766,6 +8821,7 @@ figure .porto-loading-icon {
     margin-bottom: 0.6rem;
     font-weight: 600;
     font-size: 1.8rem;
+    font-family: "Open Sans", sans-serif
 }
 
 .product-list .ratings-container {
@@ -8778,6 +8834,7 @@ figure .porto-loading-icon {
     max-width: 100%;
     font-weight: 400;
     font-size: 1.4rem;
+    font-family: "Open Sans", sans-serif;
     line-height: 24px;
     overflow: hidden;
     -webkit-line-clamp: 2;
@@ -9539,6 +9596,7 @@ figure .porto-loading-icon {
     font-weight: 700;
     font-size: 1.6rem;
     line-height: 1.2;
+    font-family: "Open Sans", sans-serif;
     letter-spacing: -0.05em;
     color: #282d3b;
     text-transform: uppercase
@@ -9597,6 +9655,7 @@ figure .porto-loading-icon {
     font-weight: 700;
     font-size: 1.5rem;
     line-height: 1.35;
+    font-family: "Open Sans", sans-serif;
     letter-spacing: -0.005em;
     margin-bottom: 1rem;
     text-transform: uppercase
@@ -9606,6 +9665,7 @@ figure .porto-loading-icon {
     font-weight: 400;
     font-size: 10.2px;
     line-height: 1.8;
+    font-family: "Open Sans", sans-serif;
     letter-spacing: normal;
     margin-top: -10px;
     text-transform: uppercase;
@@ -9873,6 +9933,7 @@ figure .porto-loading-icon {
 .testimonial blockquote:after,
 .testimonial blockquote:before {
     position: absolute;
+    font-family: "Playfair Display";
     font-size: 5rem;
     font-weight: 900;
     line-height: 1
@@ -9886,6 +9947,7 @@ figure .porto-loading-icon {
 
 .testimonial blockquote p {
     margin-bottom: 0;
+    font-family: inherit;
     font-style: normal;
     font-size: 14px;
     line-height: 24px;
@@ -10043,6 +10105,7 @@ figure .porto-loading-icon {
     font-weight: 700;
     font-size: 1.4rem;
     line-height: 1;
+    font-family: Poppins, sans-serif;
     text-transform: uppercase
 }
 
@@ -10491,6 +10554,7 @@ figure .porto-loading-icon {
 }
 
 .tooltip {
+    font-family: "Open Sans", sans-serif;
     font-size: 1.3rem
 }
 
@@ -10643,6 +10707,7 @@ h6.heading-bottom-border {
     letter-spacing: -0.01em;
     visibility: visible;
     text-transform: uppercase;
+    font-family: Oswald, sans-serif;
     transition: opacity 0.3s ease;
     background: #08C;
     z-index: 6
@@ -10864,6 +10929,7 @@ body {
     font-size: 1.4rem;
     font-weight: 400;
     line-height: 1.4;
+    font-family: "Open Sans", sans-serif;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden
@@ -11177,6 +11243,7 @@ h6 {
     color: #222529;
     font-weight: 700;
     line-height: 1.1;
+    font-family: Poppins, sans-serif
 }
 
 .h1,
@@ -12076,6 +12143,7 @@ img.slide-bg {
     justify-content: center;
     align-items: center;
     color: #222529;
+    font-family: Poppins, sans-serif;
     font-size: 9px;
     font-weight: 600;
     text-transform: uppercase
@@ -12262,6 +12330,7 @@ header a {
     font-weight: 600;
     font-size: 1.1rem;
     line-height: 1.6rem;
+    font-family: "Open Sans", sans-serif;
     text-align: center
 }
 
@@ -12436,6 +12505,7 @@ header .separator {
     border: 0;
     margin: -5px 2px 0 11px;
     font-size: 15px;
+    font-family: porto;
     width: auto;
     height: auto
 }
@@ -12533,6 +12603,7 @@ header .separator {
 
 .header-dropdown>a:after {
     content: "";
+    font-family: "porto";
     font-weight: 400;
     margin-left: 0.5rem
 }
@@ -12606,6 +12677,7 @@ header .separator {
     align-items: center;
     border-bottom: 1px solid #e6ebee;
     box-shadow: none !important;
+    font-family: Poppins, sans-serif
 }
 
 .cart-dropdown .product-image-container {
@@ -12686,6 +12758,7 @@ header .separator {
     margin-top: 1.5rem;
     margin-bottom: 1.4rem;
     font-size: 1.3rem;
+    font-family: Poppins, sans-serif
 }
 
 .dropdown-cart-total .cart-total-price {
@@ -12695,6 +12768,7 @@ header .separator {
 
 .dropdown-cart-header {
     font-size: 2rem;
+    font-family: Poppins, sans-serif
 }
 
 .dropdown-cart-header a:hover {
@@ -12708,6 +12782,7 @@ header .separator {
     height: auto;
     font-size: 1.2rem;
     font-weight: 600;
+    font-family: Poppins, sans-serif;
     letter-spacing: 0.025em;
     border-color: transparent
 }
@@ -12842,6 +12917,7 @@ header .separator {
 
 .icon-cancel:before {
     content: "";
+    font-family: "Font Awesome 5 Free";
     font-weight: 900
 }
 
@@ -13250,6 +13326,7 @@ header .separator {
     position: absolute;
     right: 1rem;
     content: "";
+    font-family: "porto"
 }
 
 .menu.sf-arrows>li>.sf-with-ul:after {
@@ -13309,6 +13386,7 @@ header .separator {
     padding: 3px 4px;
     border-radius: 2px;
     color: #fff;
+    font-family: "Open Sans", sans-serif;
     font-size: 1rem;
     line-height: 1;
     text-transform: uppercase;
@@ -13398,17 +13476,20 @@ header .separator {
 .menu-banner h4 b {
     font-size: 3.2rem;
     color: #f4762a;
+    font-family: Oswald, sans-serif
 }
 
 .menu-banner h4 i {
     position: absolute;
     top: 33.5%;
+    font-family: Oswald, sans-serif;
     font-size: 1.8rem;
     font-style: normal;
     transform: translateY(-50%) rotate(-90deg)
 }
 
 .menu-banner .btn {
+    font-family: Oswald, sans-serif;
     border-radius: 1px;
     font-weight: 300;
     color: #fff
@@ -13645,6 +13726,7 @@ header .separator {
 .mmenu-btn:after {
     display: inline-block;
     margin-top: -2px;
+    font-family: "porto";
     content: ""
 }
 
@@ -13767,6 +13849,7 @@ footer .contact-info-label {
     font-size: 1.6em;
     z-index: 101;
     background-color: #0088cc;
+    font-family: "Shadows Into Light", sans-serif;
     font-weight: 400
 }
 
@@ -14141,6 +14224,7 @@ footer .contact-info-label {
     padding: 1.2rem 2.7rem;
     border-radius: 5rem;
     font-size: inherit;
+    font-family: "Open Sans", sans-serif
 }
 
 .footer-copyright {
@@ -14277,11 +14361,13 @@ footer .contact-info-label {
     font-size: 0.5em;
     font-weight: 700;
     line-height: 1.2;
+    font-family: Poppins, sans-serif;
     letter-spacing: 0
 }
 
 .page-header-bg .btn {
     padding: 11px 29px;
+    font-family: Oswald, sans-serif;
     font-weight: inherit;
     font-size: inherit;
     letter-spacing: 0;
@@ -14312,6 +14398,7 @@ footer .contact-info-label {
 }
 
 .about-section .lead {
+    font-family: Poppins, sans-serif;
     color: #21293c;
     font-size: 1.8rem;
     line-height: 1.5;
@@ -14327,6 +14414,7 @@ footer .contact-info-label {
 }
 
 .features-section h3 {
+    font-family: Poppins, sans-serif
 }
 
 .features-section .feature-box {
@@ -14366,6 +14454,7 @@ footer .contact-info-label {
     font-size: 3.2rem;
     font-weight: 800;
     line-height: 3.2rem;
+    font-family: "Open Sans", sans-serif
 }
 
 .count-container span:not(.count-to) {
@@ -14434,6 +14523,7 @@ footer .contact-info-label {
 
 .sidebar-shop .product-widget .product-title {
     margin-bottom: 0.4rem;
+    font-family: "Open Sans", sans-serif
 }
 
 .sidebar-shop .product-widget .product-details {
@@ -14458,6 +14548,7 @@ footer .contact-info-label {
 .sidebar-shop .widget-title {
     margin: 0;
     color: #313131;
+    font-family: Poppins, sans-serif;
     font-size: 1.5rem;
     font-weight: 600;
     line-height: 1.4;
@@ -14601,6 +14692,7 @@ span.toggle {
     width: 24px;
     height: 24px;
     line-height: 23px;
+    font-family: "Porto";
     font-weight: 900;
     color: #222529
 }
@@ -14663,6 +14755,7 @@ span.toggle:before {
     padding: 5px 1.5rem 6px 1.5rem;
     font-size: 1.2rem;
     font-weight: 600;
+    font-family: "Open Sans", sans-serif
 }
 
 .filter-price-action .filter-price-text {
@@ -14680,6 +14773,7 @@ span.toggle:before {
     color: #313131;
     font-size: 1.4rem;
     font-weight: 600;
+    font-family: "Open Sans", sans-serif
 }
 
 .widget-block p {
@@ -14773,12 +14867,14 @@ span.toggle:before {
 
 .horizontal-filter:not(.filter-sorts).toolbox label {
     margin: 0px 1rem 1px 0px;
+    font-family: Poppins, sans-serif;
     letter-spacing: -0.025em
 }
 
 .horizontal-filter:not(.filter-sorts).toolbox .form-control {
     padding: 0 0.8rem 2px;
     color: #222529;
+    font-family: "poppins"
 }
 
 .horizontal-filter:not(.filter-sorts).toolbox .select-custom .form-control {
@@ -14790,10 +14886,12 @@ span.toggle:before {
 }
 
 .horizontal-filter .filter-price-form {
+    font-family: "Open Sans", sans-serif;
     font-size: 1.36rem
 }
 
 .horizontal-filter .filter-price-form .btn {
+    font-family: inherit;
     padding: 0.7rem 1.2rem;
     font-size: 1.2rem;
     font-weight: 400
@@ -15019,6 +15117,7 @@ span.toggle:before {
 }
 
 .boxed-slide-1 h4 {
+    font-family: Oswald, sans-serif;
     font-size: 2.7rem;
     font-weight: 500;
     letter-spacing: -0.08em;
@@ -15026,6 +15125,7 @@ span.toggle:before {
 }
 
 .boxed-slide-1 h5 {
+    font-family: "Open Sans", sans-serif;
     font-size: 3rem;
     font-weight: 800;
     letter-spacing: -0.025em;
@@ -15089,16 +15189,19 @@ span.toggle:before {
 }
 
 .boxed-slide-2 h5 {
+    font-family: "Open Sans", sans-serif;
     font-size: 1.8rem;
     font-weight: 800;
     margin-bottom: 0
 }
 
 .boxed-slide-2 h5 span {
+    font-family: Oswald, sans-serif;
     font-size: 2.9rem
 }
 
 .boxed-slide-2 h5 i {
+    font-family: Poppins, sans-serif;
     font-style: normal;
     font-size: 1.6rem;
     margin-left: -2px;
@@ -15108,12 +15211,14 @@ span.toggle:before {
 .boxed-slide-2 h4 {
     font-size: 3.2rem;
     font-weight: 800;
+    font-family: "Open Sans", sans-serif;
     letter-spacing: -0.02em;
     margin-bottom: 3rem;
     margin-top: -3px
 }
 
 .boxed-slide-2 .btn {
+    font-family: Oswald, sans-serif;
     font-size: 1.5rem;
     font-weight: 300;
     letter-spacing: 0.04em;
@@ -15126,6 +15231,7 @@ span.toggle:before {
     padding: 1.3rem 3rem;
     border: 1px solid #e7e7e7;
     font-size: 1.2rem;
+    font-family: "Open Sans", sans-serif;
     color: #555
 }
 
@@ -15138,6 +15244,7 @@ span.toggle:before {
 }
 
 .category-banner .coupon-sale-text {
+    font-family: "Open Sans", sans-serif
 }
 
 .category-banner h3 {
@@ -15382,6 +15489,7 @@ span.toggle:before {
     top: 2px;
     font-size: 20px;
     font-weight: 900;
+    font-family: "Font Awesome 5 Free";
     color: #0cc485
 }
 
@@ -15400,6 +15508,7 @@ span.toggle:before {
     padding: 14px 27px 13px;
     margin: 3px 0;
     height: 48px;
+    font-family: "Open Sans", sans-serif
 }
 
 .add-cart {
@@ -15426,6 +15535,7 @@ span.toggle:before {
     color: #222529;
     font-size: 1.2rem;
     font-weight: 700;
+    font-family: Poppins, sans-serif;
     letter-spacing: -0.015em;
     text-transform: uppercase;
     white-space: nowrap
@@ -15448,6 +15558,7 @@ span.toggle:before {
 .add-compare:before {
     content: "";
     font-size: 1.8rem;
+    font-family: "porto";
     margin-right: 6px
 }
 
@@ -15479,6 +15590,7 @@ span.toggle:before {
 
 .product-widgets-container .product-title {
     font-size: 1.4rem;
+    font-family: "Open Sans", sans-serif
 }
 
 .product-widgets-container .product-price {
@@ -15491,6 +15603,7 @@ span.toggle:before {
 
 .product-single-container:not(.product-quick-view) .product-action .add-cart.added-to-cart:after {
     margin-left: 8px;
+    font-family: "Font Awesome 5 Free";
     content: "";
     font-weight: 600;
     font-size: 1.6rem
@@ -15508,6 +15621,7 @@ span.toggle:before {
 .product-single-details .product-action .add-cart:before {
     content: "";
     margin-top: -2px;
+    font-family: "Porto";
     font-weight: 600;
     font-size: 1.8rem;
     margin-right: 7px
@@ -15574,6 +15688,7 @@ span.toggle:before {
     border-radius: 14px;
     text-align: center;
     text-decoration: none;
+    font-family: "porto"
 }
 
 .product-single-details .product-nav .product-prev .product-link:before {
@@ -15646,6 +15761,7 @@ span.toggle:before {
     margin-bottom: 2.3rem;
     color: #222529;
     font-weight: 600;
+    font-family: Poppins, sans-serif
 }
 
 .product-single-details .product-filtered-price {
@@ -15877,6 +15993,7 @@ main .sticky-header .product-title {
 main .sticky-header .price-box {
     margin: 0;
     color: #2b2b2d;
+    font-family: "Oswald", "Poppins";
     font-weight: 400;
     line-height: normal
 }
@@ -15947,6 +16064,7 @@ main .sticky-header .product-ratings:before {
     margin-bottom: 0;
     color: #777;
     font-weight: 400;
+    font-family: "Open Sans", sans-serif;
     letter-spacing: 0.005em;
     text-transform: uppercase
 }
@@ -16005,6 +16123,7 @@ main .sticky-header .product-ratings:before {
     top: 50%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
+    font-family: "porto";
     font-size: 1.1rem;
     line-height: 1;
     content: ""
@@ -16048,6 +16167,7 @@ main .sticky-header .product-ratings:before {
     font-weight: 600;
     font-size: 1.4rem;
     line-height: 1.1;
+    font-family: "Open Sans", sans-serif;
     letter-spacing: 0.005em;
     text-transform: uppercase
 }
@@ -16284,6 +16404,7 @@ main .sticky-header .product-ratings:before {
 }
 
 .product-single-tabs .nav.nav-tabs .nav-link {
+    font-family: "Open Sans", sans-serif;
     font-size: 1.3rem
 }
 
@@ -16369,6 +16490,7 @@ main .sticky-header .product-ratings:before {
     display: inline-block;
     margin-top: -2px;
     vertical-align: middle;
+    font-family: "Font Awesome 5 Free";
     font-weight: 900;
     margin-right: 1.8rem;
     color: #21293c;
@@ -16509,6 +16631,7 @@ main .sticky-header .product-ratings:before {
 }
 
 .comment-container .comment-info {
+    font-family: "Open Sans", sans-serif;
     font-size: 1.4rem;
     line-height: 1;
     letter-spacing: -0.02em
@@ -16516,6 +16639,7 @@ main .sticky-header .product-ratings:before {
 
 .comment-container .avatar-name {
     display: inline;
+    font-family: inherit;
     font-size: inherit
 }
 
@@ -16547,6 +16671,7 @@ main .sticky-header .product-ratings:before {
 
 .add-product-review label {
     display: block;
+    font-family: "Open Sans", sans-serif;
     font-size: 1.4rem;
     line-height: 1;
     margin-bottom: 1.1rem
@@ -16572,6 +16697,7 @@ main .sticky-header .product-ratings:before {
     padding: 0.55em 1rem 0.5em;
     font-weight: 400;
     text-transform: none;
+    font-family: "Open Sans", sans-serif
 }
 
 .add-product-review .custom-control-label {
@@ -16626,6 +16752,7 @@ main .sticky-header .product-ratings:before {
     left: 0;
     height: 14px;
     line-height: 1;
+    font-family: "Font Awesome 5 Free";
     text-indent: 0;
     overflow: hidden;
     white-space: nowrap
@@ -16703,6 +16830,7 @@ main .sticky-header .product-ratings:before {
 }
 
 .products-section h2 {
+    font-family: "Poppins";
     padding-bottom: 1rem;
     border-bottom: 1px solid #e7e7e7;
     margin-bottom: 3.4rem;
@@ -16769,6 +16897,7 @@ main .sticky-header .product-ratings:before {
     margin-bottom: 1.7rem;
     box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.1);
     margin-right: 20px;
+    font-family: "Open Sans", sans-serif;
     font-weight: 600;
     font-size: 1.2rem
 }
@@ -17416,6 +17545,7 @@ main .sticky-header .product-ratings:before {
 }
 
 .product-both-info .product-single-qty label {
+    font-family: "Open Sans", sans-serif
 }
 
 .product-both-info .product-single-filter label {
@@ -17609,6 +17739,7 @@ main .sticky-header .product-ratings:before {
     font-weight: 600;
     font-size: 1.5rem;
     line-height: 1.1;
+    font-family: var(--shop-font-family);
     letter-spacing: 0.005em;
     text-transform: uppercase
 }
@@ -17741,6 +17872,7 @@ main .sticky-header .product-ratings:before {
     color: #7a7d82;
     font-weight: 600;
     font-size: 14px;
+    font-family: "Open Sans", sans-serif;
     line-height: 24px
 }
 
@@ -17752,6 +17884,7 @@ main .sticky-header .product-ratings:before {
     right: 2px;
     transform: translateY(-50%);
     transition: all 0.35s;
+    font-family: "porto";
     font-size: 1.7rem;
     font-weight: 600;
     color: #222529
@@ -17945,6 +18078,7 @@ aside .widget-info i {
     font-weight: 600;
     font-size: 1.4rem;
     line-height: 1.286;
+    font-family: "Open Sans", sans-serif;
     text-transform: uppercase
 }
 
@@ -18002,6 +18136,7 @@ aside .widget-info i {
 .product-collapse-title a:before {
     content: "";
     margin-right: 1rem;
+    font-family: "porto";
     font-size: 2rem;
     font-weight: 400
 }
@@ -18034,6 +18169,7 @@ aside .widget-info i {
 }
 
 .maga-sale-container {
+    font-family: "Oswald";
     position: relative
 }
 
@@ -18430,6 +18566,7 @@ aside .widget-info i {
 }
 
 .product-center-vertical .product-single-qty label {
+    font-family: "Open Sans", sans-serif
 }
 
 @media (min-width:992px) {
@@ -18544,6 +18681,7 @@ aside .widget-info i {
 .table.table-wishlist .product-title {
     margin-bottom: 0;
     padding: 0;
+    font-family: "Open Sans", sans-serif;
     font-weight: 400;
     line-height: 1.75
 }
@@ -18587,6 +18725,7 @@ aside .widget-info i {
 .table.table-cart tfoot .btn,
 .table.table-wishlist tfoot .btn {
     padding: 1.2rem 2.4rem 1.3rem 2.5rem;
+    font-family: "Open Sans", sans-serif;
     font-size: 1.3rem;
     font-weight: 700;
     height: 43px;
@@ -18762,6 +18901,7 @@ tbody .product-col {
     font-size: 14px;
     font-weight: 600;
     color: #222529;
+    font-family: "poppins"
 }
 
 .table.table-totals tr td:last-child,
@@ -18801,6 +18941,7 @@ tbody .product-col {
 }
 
 .checkout-methods .btn {
+    font-family: "Open Sans", sans-serif;
     font-size: 1.5rem;
     letter-spacing: -0.015em;
     padding: 1em 0
@@ -18812,6 +18953,7 @@ tbody .product-col {
 
 .return-to-shop .btn {
     padding: 1.6rem 3.6rem;
+    font-family: "Open Sans", sans-serif;
     font-size: 1.5rem;
     letter-spacing: -0.02em
 }
@@ -18831,6 +18973,7 @@ tbody .product-col {
     font-weight: 400;
     font-size: 1.4rem;
     color: #777;
+    font-family: "Open Sans", sans-serif
 }
 
 .cart-summary .form-group-sm .form-control {
@@ -18845,6 +18988,7 @@ tbody .product-col {
     border: none;
     padding: 8px 12px;
     line-height: 1.5;
+    font-family: "Open Sans", sans-serif
 }
 
 .cart-summary .btn-update-total:hover {
@@ -18992,6 +19136,7 @@ tbody .product-col {
     position: relative;
     margin-bottom: 3rem;
     color: #999;
+    font-family: Poppins, sans-serif;
     font-size: 2rem;
     font-weight: 700;
     letter-spacing: -0.03em;
@@ -19037,6 +19182,7 @@ tbody .product-col {
     top: -0.8rem;
     content: "";
     color: #999;
+    font-family: "porto";
     font-size: 3rem
 }
 
@@ -19212,6 +19358,7 @@ tbody .product-col {
 .table-mini-cart .product-title {
     display: block;
     margin-bottom: 0;
+    font-family: "Open Sans", sans-serif;
     font-size: 1.4rem;
     font-weight: 400
 }
@@ -19301,6 +19448,7 @@ tbody .product-col {
     width: 100%;
     margin-bottom: 0.6rem;
     padding: 1.4rem;
+    font-family: "Open Sans", sans-serif
 }
 
 .login-form-container {
@@ -19343,6 +19491,7 @@ tbody .product-col {
     letter-spacing: -0.01em;
     background-color: #f4f4f4;
     font-size: 1.3rem;
+    font-family: "Open Sans", sans-serif
 }
 
 .checkout-discount form .btn:hover,
@@ -19382,6 +19531,7 @@ tbody .product-col {
 .login-form-container h4 {
     margin-bottom: 1rem;
     color: #777;
+    font-family: "Open Sans", sans-serif;
     font-size: 1.3rem;
     font-weight: 400;
     letter-spacing: -0.025em
@@ -19464,6 +19614,7 @@ tbody .product-col {
 .checkout-container label {
     margin-bottom: 0.6rem;
     color: #777;
+    font-family: "Open Sans", sans-serif;
     font-size: 1.4rem;
     font-weight: 400;
     letter-spacing: -0.01em
@@ -19706,6 +19857,7 @@ tbody .product-col {
     padding: 1rem 0.8rem 0.8rem;
     color: #fff;
     background: #222529;
+    font-family: Poppins, sans-serif;
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 0.05em
@@ -19780,6 +19932,7 @@ tbody .product-col {
 .post-title {
     margin-bottom: 1.3rem;
     color: #222529;
+    font-family: "Open Sans", sans-serif;
     font-size: 1.8rem;
     font-weight: 700;
     line-height: 1.35
@@ -19842,6 +19995,7 @@ tbody .product-col {
     font-size: 3rem;
     color: #08C;
     font-weight: 700;
+    font-family: Poppins, sans-serif;
     line-height: 40px
 }
 
@@ -19870,6 +20024,7 @@ tbody .product-col {
 
 .single .post-content p {
     margin-bottom: 2rem;
+    font-family: "Open Sans", sans-serif;
     font-weight: 400;
     font-size: 14px;
     line-height: 24px
@@ -19938,6 +20093,7 @@ tbody .product-col {
     font-size: 1.6rem;
     letter-spacing: 0.03em;
     color: #08C;
+    font-family: "Open Sans", sans-serif
 }
 
 .post-author .author-content {
@@ -19985,6 +20141,7 @@ tbody .product-col {
 .post-date-in-media .post-title {
     margin-bottom: 0.7rem;
     font-size: 1.7rem;
+    font-family: Poppins, sans-serif;
     font-weight: 700
 }
 
@@ -20011,6 +20168,7 @@ tbody .product-col {
 .comment-respond label {
     margin-bottom: 0.7rem;
     font-size: 1.4rem;
+    font-family: "Open Sans", sans-serif
 }
 
 .comment-respond .form-control {
@@ -20038,6 +20196,7 @@ tbody .product-col {
 }
 
 .comment-respond form .form-group-custom-control .custom-control-label {
+    font-family: "Open Sans", sans-serif;
     font-size: 1.4rem;
     line-height: 1.75;
     font-weight: 700;
@@ -20183,6 +20342,7 @@ tbody .product-col {
 .list li:before {
     content: "";
     position: relative;
+    font-family: "Font Awesome 5 Free";
     font-weight: 900;
     margin-left: -11px;
     margin-right: 6px;
@@ -20572,6 +20732,7 @@ tbody .product-col {
 
 .nav-tabs.list .nav-item .nav-link {
     padding: 1.3rem 0 1.5rem;
+    font-family: "Open Sans", sans-serif;
     text-transform: capitalize;
     font-size: 1.4rem;
     border: none
@@ -20601,6 +20762,7 @@ tbody .product-col {
 .account-content label {
     margin-bottom: 0.7rem;
     color: #777;
+    font-family: "Open Sans", sans-serif;
     font-size: 1.4rem;
     font-weight: 400
 }
@@ -20636,6 +20798,7 @@ tbody .product-col {
 }
 
 .account-content .btn {
+    font-family: "Open Sans", sans-serif;
     font-size: 1.5rem
 }
 
@@ -20646,6 +20809,7 @@ tbody .product-col {
 
 .change-password h3 {
     font-size: 1.6rem;
+    font-family: "Open Sans", sans-serif
 }
 
 .change-password .btn {
@@ -20682,6 +20846,7 @@ tbody .product-col {
     padding: 0.8rem 2.3rem 0.7rem;
     background: #f4f4f4;
     color: #222524;
+    font-family: "Open Sans", sans-serif
 }
 
 .address .address-action:hover {
@@ -20749,6 +20914,7 @@ tbody .product-col {
     color: #222529;
     border: none;
     font-weight: 700;
+    font-family: "Open Sans", sans-serif
 }
 
 .download-table-container .btn:hover {
@@ -20762,6 +20928,7 @@ tbody .product-col {
     font-size: 15px;
     letter-spacing: -0.015em;
     text-align: center;
+    font-family: "Open Sans", sans-serif;
     font-weight: 700
 }
 
@@ -20944,6 +21111,7 @@ tbody .product-col {
     margin-right: 6px;
     background: #f4f4f4;
     color: #222529;
+    font-family: "Open Sans", sans-serif
 }
 
 .wishlist-table-container .btn-quickview:hover {
@@ -21132,6 +21300,7 @@ i.wishlist-empty {
 .login-container form label {
     margin-bottom: 0.7rem;
     color: #777;
+    font-family: "Open Sans", sans-serif;
     font-size: 1.4rem;
     font-weight: 400
 }
@@ -21145,6 +21314,7 @@ i.wishlist-empty {
 }
 
 .login-container form .btn {
+    font-family: "Open Sans", sans-serif;
     font-size: 1.6rem
 }
 
@@ -21198,6 +21368,7 @@ i.wishlist-empty {
 .reset-password-container label {
     margin-bottom: 0.7rem;
     color: inherit;
+    font-family: "Open Sans", sans-serif;
     font-size: 1.4rem
 }
 
@@ -21220,6 +21391,7 @@ i.wishlist-empty {
 
 .reset-password-container .form-footer .btn {
     padding: 0.8rem 1.2rem;
+    font-family: "Open Sans", sans-serif;
     font-size: 1.4rem;
     line-height: 21px
 }
@@ -21246,6 +21418,7 @@ h1 {
 }
 
 p {
+    font-family: Poppins, sans-serif
 }
 
 .anim-pane .anim-wrapper {
@@ -21313,6 +21486,7 @@ p {
 }
 
 .info-box-wrapper p {
+    font-family: Poppins, sans-serif;
     font-size: 1.4rem;
     line-height: 2.4rem;
     color: #777
@@ -21347,6 +21521,7 @@ p {
 }
 
 .banners-page section>p {
+    font-family: "Lora";
     font-size: 15.4px;
     max-width: 70rem
 }
@@ -21426,6 +21601,7 @@ p {
 
 .banners-page .banner3 .banner-title,
 .banners-page .banner4 .banner-title {
+    font-family: Playfair Display, sans-serif;
     font-size: 5.375em;
     text-transform: none;
     line-height: 1;
@@ -21493,6 +21669,7 @@ p {
 }
 
 .banners-page .ken-banner h2 {
+    font-family: "Nanum Brush Script", sans-serif;
     font-size: 6.8rem;
     font-weight: 300;
     line-height: 40px;
@@ -21504,6 +21681,7 @@ p {
     padding: 0;
     border: 0;
     color: #666;
+    font-family: Poppins, sans-serif;
     font-size: 2.2rem;
     font-weight: 400;
     letter-spacing: 0.01em;
@@ -21703,6 +21881,7 @@ p {
 .blog-type3 .post-title {
     margin-bottom: 1.9rem;
     font-size: 2rem;
+    font-family: Poppins, sans-serif;
     letter-spacing: -0.025em
 }
 
@@ -21749,6 +21928,7 @@ p {
 .blog-type4 .post-content {
     font-size: 13px;
     font-weight: 400;
+    font-family: "Open Sans", sans-serif
 }
 
 .blog-type4 .post-content p {
@@ -21757,6 +21937,7 @@ p {
 
 .blog-type4 .post-comment {
     font-size: 10px;
+    font-family: "Open Sans", sans-serif
 }
 
 .blog-type4 .post-comment i {
@@ -21790,6 +21971,7 @@ p {
 .blog-type4 .testimonial blockquote {
     padding: 16px 3rem 11px 2.2rem;
     font-size: 1.3rem;
+    font-family: "Open Sans", sans-serif
 }
 
 .blog-type4 .testimonial blockquote:before {
@@ -21803,6 +21985,7 @@ p {
 }
 
 .blog-type4 .testimonial .testimonial-owner h4 {
+    font-family: "Open Sans", sans-serif;
     font-weight: 400;
     text-transform: none;
     font-size: 15px;
@@ -21812,6 +21995,7 @@ p {
 .blog-type4 .testimonial .testi-author {
     margin-left: 32px;
     margin-top: 5px;
+    font-family: "Open Sans", sans-serif;
     font-size: 13px
 }
 
@@ -21828,6 +22012,7 @@ p {
 }
 
 .testimonial-section .testimonial-owner {
+    font-family: Poppins, sans-serif
 }
 
 .testimonial-section .testimonial-owner .testimonial-title,
@@ -21847,6 +22032,7 @@ p {
 
 .testimonial-type1 blockquote {
     padding: 0 4rem;
+    font-family: Playfair Display, Georgia, serif
 }
 
 .testimonial-type1 blockquote:after,
@@ -21904,6 +22090,7 @@ p {
 }
 
 .testimonial-type3 blockquote {
+    font-family: Playfair Display, Georgia, serif
 }
 
 .testimonial-type3 blockquote:before {
@@ -21972,6 +22159,7 @@ p {
 }
 
 .testimonial-type4 blockquote {
+    font-family: Poppins, sans-serif
 }
 
 .testimonial-type4 blockquote:before {

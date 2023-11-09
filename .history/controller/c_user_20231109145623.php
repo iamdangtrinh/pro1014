@@ -37,9 +37,11 @@ if (isset($_GET['act'])) {
 
         // Kiểm tra tài khoản có tồn tại hay không
         case 'has_account' :
-            $get_email = $_GET['email'];
+            echo $get_email = $_GET['email'];
+
             include_once 'model/m_user.php';
-            has_email($get_email);
+
+            (has_email($email));
 
             break;
 
