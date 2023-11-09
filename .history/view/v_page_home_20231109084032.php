@@ -182,7 +182,7 @@
                                         </div><!-- End .product-ratings -->
                                     </div><!-- End .product-container -->
                                     <div class="price-box">
-                                        <span class="product-price">Giá tiền &ndash; Giá tiền</span>
+                                        <span class="product-price">Gi á &ndash; $111.00</span>
                                     </div><!-- End .price-box -->
                                 </div><!-- End .product-details -->
                             </div>
@@ -218,7 +218,7 @@
                                         </div><!-- End .product-ratings -->
                                     </div><!-- End .product-container -->
                                     <div class="price-box">
-                                        <span class="product-price">Giá tiền</span>
+                                        <span class="product-price">$599.00</span>
                                     </div><!-- End .price-box -->
                                 </div><!-- End .product-details -->
                             </div>
@@ -306,8 +306,8 @@
                 <div class="row m-0 no-gutters">
                     <div class="col-lg-3">
                         <div class="cat-banner d-flex flex-column align-items-center justify-content-center h-100">
-                            <h4 class="font4 line-height-1 ls-0 text-primary mb-0">BỘ SƯU TẬP TỐT NHẤT</h4>
-                            <p class="font2 line-height-1 mb-0">Sản phẩm chọn lọc từ các thương hiệu nổi tiếng</p>
+                            <h4 class="font4 line-height-1 ls-0 text-primary mb-0">Best Collections</h4>
+                            <p class="font2 line-height-1 mb-0">Selected Products From Famous Brands</p>
                         </div>
                     </div>
                     <div class="col-lg-9">
@@ -334,7 +334,7 @@
                                     </figure>
 
                                     <div class="category-content">
-                                        <h3>BÉ TRAI</h3>
+                                        <h3>Boys</h3>
                                     </div>
                                 </a>
                             </div>
@@ -345,7 +345,7 @@
                                     </figure>
 
                                     <div class="category-content">
-                                        <h3>BÉ GÁI</h3>
+                                        <h3>Babies</h3>
                                     </div>
                                 </a>
                             </div>
@@ -356,7 +356,7 @@
                                     </figure>
 
                                     <div class="category-content">
-                                        <h3>TRẺ SƠ SINH</h3>
+                                        <h3>Girls</h3>
                                     </div>
                                 </a>
                             </div>

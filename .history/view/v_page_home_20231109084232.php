@@ -356,7 +356,7 @@
                                     </figure>
 
                                     <div class="category-content">
-                                        <h3>TRẺ SƠ SINH</h3>
+                                        <h3>Girls</h3>
                                     </div>
                                 </a>
                             </div>

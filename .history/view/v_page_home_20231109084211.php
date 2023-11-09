@@ -334,7 +334,7 @@
                                     </figure>
 
                                     <div class="category-content">
-                                        <h3>BÉ TRAI</h3>
+                                        <h3>Boys</h3>
                                     </div>
                                 </a>
                             </div>
@@ -345,7 +345,7 @@
                                     </figure>
 
                                     <div class="category-content">
-                                        <h3>BÉ GÁI</h3>
+                                        <h3>Babies</h3>
                                     </div>
                                 </a>
                             </div>
@@ -356,7 +356,7 @@
                                     </figure>
 
                                     <div class="category-content">
-                                        <h3>TRẺ SƠ SINH</h3>
+                                        <h3>Girls</h3>
                                     </div>
                                 </a>
                             </div>
