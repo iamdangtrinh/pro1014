@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 .mt-1 {
     margin-top: 1rem !important
 }
@@ -839,6 +841,8 @@
     transition: height 500ms ease-in-out
 }
 
+.owl-carousel .owl-item {}
+
 .owl-carousel .owl-item .owl-lazy {
     opacity: 0;
     transition: opacity 400ms ease
@@ -870,6 +874,7 @@
     background: url("../images/owl.video.play.png") no-repeat;
     cursor: pointer;
     z-index: 1;
+    -webkit-backface-visibility: hidden;
     transition: transform 100ms ease
 }
 
@@ -4623,10 +4628,19 @@ a:focus {
     background-position: -208px -165px
 }
 
+@font-face {
+    src: url("../fonts/porto6e1d.eot?64334846");
+    src: url("../fonts/porto6e1d.eot?64334846#iefix") format("embedded-opentype"), url("../fonts/porto6e1d.woff2?64334846") format("woff2"), url("../fonts/porto6e1d.woff?64334846") format("woff"), url("../fonts/porto6e1d.ttf?64334846") format("truetype"), url("../fonts/porto6e1d.svg?64334846#porto") format("svg");
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap
+}
+
 [class*=" icon-"]:before,
 [class^=icon-]:before {
     font-style: normal;
     font-weight: normal;
+    speak: none;
     display: inline-block;
     text-decoration: inherit;
     width: 1em;
@@ -17883,4 +17897,856 @@ span.toggle {
 .contact-two .contact-time .porto-sicon-title {
     margin-top: 0;
     margin-bottom: 1px
+}
+
+.icon-cart-thick:before {
+    content: ""
+}
+
+.icon-check-circle:before {
+    content: ""
+}
+
+.icon-envelop:before {
+    content: ""
+}
+
+.icon-business-book:before {
+    content: ""
+}
+
+.icon-long-arrow-right:before {
+    content: ""
+}
+
+.icon-percent-shape:before {
+    content: ""
+}
+
+.icon-sale-label:before {
+    content: ""
+}
+
+.icon-help-circle:before {
+    content: ""
+}
+
+.icon-sale-discount:before {
+    content: ""
+}
+
+.icon-shipping-truck:before {
+    content: ""
+}
+
+.icon-user-3:before {
+    content: ""
+}
+
+.icon-long-arrow-alt:before {
+    content: ""
+}
+
+.icon-map-location:before {
+    content: ""
+}
+
+.icon-phone-call:before {
+    content: ""
+}
+
+.icon-tablet:before {
+    content: ""
+}
+
+.icon-spin1:before {
+    content: ""
+}
+
+.icon-spin2:before {
+    content: ""
+}
+
+.icon-spin3:before {
+    content: ""
+}
+
+.icon-spin4:before {
+    content: ""
+}
+
+.icon-spin5:before {
+    content: ""
+}
+
+.icon-spin6:before {
+    content: ""
+}
+
+.icon-firefox:before {
+    content: ""
+}
+
+.icon-chrome:before {
+    content: ""
+}
+
+.icon-opera:before {
+    content: ""
+}
+
+.icon-ie:before {
+    content: ""
+}
+
+.icon-phone:before {
+    content: ""
+}
+
+.icon-down-dir:before {
+    content: ""
+}
+
+.icon-cart:before {
+    content: ""
+}
+
+.icon-up-dir:before {
+    content: ""
+}
+
+.icon-mode-grid:before {
+    content: ""
+}
+
+.icon-mode-list:before {
+    content: ""
+}
+
+.icon-compare:before {
+    content: ""
+}
+
+.icon-wishlist:before {
+    content: ""
+}
+
+.icon-search:before {
+    content: ""
+}
+
+.icon-left-dir:before {
+    content: ""
+}
+
+.icon-right-dir:before {
+    content: ""
+}
+
+.icon-down-open:before {
+    content: ""
+}
+
+.icon-left-open:before {
+    content: ""
+}
+
+.icon-right-open:before {
+    content: ""
+}
+
+.icon-up-open:before {
+    content: ""
+}
+
+.icon-angle-left:before {
+    content: ""
+}
+
+.icon-angle-right:before {
+    content: ""
+}
+
+.icon-angle-up:before {
+    content: ""
+}
+
+.icon-angle-down:before {
+    content: ""
+}
+
+.icon-down:before {
+    content: ""
+}
+
+.icon-left:before {
+    content: ""
+}
+
+.icon-right:before {
+    content: ""
+}
+
+.icon-up:before {
+    content: ""
+}
+
+.icon-angle-double-left:before {
+    content: ""
+}
+
+.icon-angle-double-right:before {
+    content: ""
+}
+
+.icon-angle-double-up:before {
+    content: ""
+}
+
+.icon-angle-double-down:before {
+    content: ""
+}
+
+.icon-mail:before {
+    content: ""
+}
+
+.icon-location:before {
+    content: ""
+}
+
+.icon-skype:before {
+    content: ""
+}
+
+.icon-left-open-big:before {
+    content: ""
+}
+
+.icon-down-open-big:before {
+    content: ""
+}
+
+.icon-up-open-big:before {
+    content: ""
+}
+
+.icon-cancel:before {
+    content: ""
+}
+
+.icon-user:before {
+    content: ""
+}
+
+.icon-mail-alt:before {
+    content: ""
+}
+
+.icon-fax:before {
+    content: ""
+}
+
+.icon-lock:before {
+    content: ""
+}
+
+.icon-company:before {
+    content: ""
+}
+
+.icon-city:before {
+    content: ""
+}
+
+.icon-post:before {
+    content: ""
+}
+
+.icon-country:before {
+    content: ""
+}
+
+.icon-calendar:before {
+    content: ""
+}
+
+.icon-doc:before {
+    content: ""
+}
+
+.icon-mobile:before {
+    content: ""
+}
+
+.icon-clock:before {
+    content: ""
+}
+
+.icon-chat:before {
+    content: ""
+}
+
+.icon-tag:before {
+    content: ""
+}
+
+.icon-folder:before {
+    content: ""
+}
+
+.icon-folder-open:before {
+    content: ""
+}
+
+.icon-forward:before {
+    content: ""
+}
+
+.icon-reply:before {
+    content: ""
+}
+
+.icon-cog:before {
+    content: ""
+}
+
+.icon-cog-alt:before {
+    content: ""
+}
+
+.icon-wrench:before {
+    content: ""
+}
+
+.icon-quote-left:before {
+    content: ""
+}
+
+.icon-quote-right:before {
+    content: ""
+}
+
+.icon-gift:before {
+    content: ""
+}
+
+.icon-dollar:before {
+    content: ""
+}
+
+.icon-euro:before {
+    content: ""
+}
+
+.icon-pound:before {
+    content: ""
+}
+
+.icon-rupee:before {
+    content: ""
+}
+
+.icon-yen:before {
+    content: ""
+}
+
+.icon-rouble:before {
+    content: ""
+}
+
+.icon-try:before {
+    content: ""
+}
+
+.icon-won:before {
+    content: ""
+}
+
+.icon-bitcoin:before {
+    content: ""
+}
+
+.icon-ok:before {
+    content: ""
+}
+
+.icon-chevron-left:before {
+    content: ""
+}
+
+.icon-chevron-right:before {
+    content: ""
+}
+
+.icon-export:before {
+    content: ""
+}
+
+.icon-star:before {
+    content: ""
+}
+
+.icon-star-empty:before {
+    content: ""
+}
+
+.icon-plus-squared:before {
+    content: ""
+}
+
+.icon-minus-squared:before {
+    content: ""
+}
+
+.icon-plus-squared-alt:before {
+    content: ""
+}
+
+.icon-minus-squared-alt:before {
+    content: ""
+}
+
+.icon-truck:before {
+    content: ""
+}
+
+.icon-lifebuoy:before {
+    content: ""
+}
+
+.icon-pencil:before {
+    content: ""
+}
+
+.icon-users:before {
+    content: ""
+}
+
+.icon-video:before {
+    content: ""
+}
+
+.icon-menu:before {
+    content: ""
+}
+
+.icon-desktop:before {
+    content: ""
+}
+
+.icon-doc-inv:before {
+    content: ""
+}
+
+.icon-circle:before {
+    content: ""
+}
+
+.icon-circle-empty:before {
+    content: ""
+}
+
+.icon-circle-thin:before {
+    content: ""
+}
+
+.icon-mini-cart:before {
+    content: ""
+}
+
+.icon-paper-plane:before {
+    content: ""
+}
+
+.icon-attention-alt:before {
+    content: ""
+}
+
+.icon-info:before {
+    content: ""
+}
+
+.icon-compare-link:before {
+    content: ""
+}
+
+.icon-cat-default:before {
+    content: ""
+}
+
+.icon-cat-computer:before {
+    content: ""
+}
+
+.icon-cat-couch:before {
+    content: ""
+}
+
+.icon-cat-garden:before {
+    content: ""
+}
+
+.icon-cat-gift:before {
+    content: ""
+}
+
+.icon-cat-shirt:before {
+    content: ""
+}
+
+.icon-cat-sport:before {
+    content: ""
+}
+
+.icon-cat-toys:before {
+    content: ""
+}
+
+.icon-tag-line:before {
+    content: ""
+}
+
+.icon-bag:before {
+    content: ""
+}
+
+.icon-search-1:before {
+    content: ""
+}
+
+.icon-plus:before {
+    content: ""
+}
+
+.icon-minus:before {
+    content: ""
+}
+
+.icon-search-2:before {
+    content: ""
+}
+
+.icon-bag-1:before {
+    content: ""
+}
+
+.icon-online-support:before {
+    content: ""
+}
+
+.icon-shopping-bag:before {
+    content: ""
+}
+
+.icon-us-dollar:before {
+    content: ""
+}
+
+.icon-shipped:before {
+    content: ""
+}
+
+.icon-list:before {
+    content: ""
+}
+
+.icon-money:before {
+    content: ""
+}
+
+.icon-shipping:before {
+    content: "<i class=" fa-solid fa-truck-pickup"></i>"
+}
+
+.icon-support:before {
+    content: ""
+}
+
+.icon-bag-2:before {
+    content: ""
+}
+
+.icon-grid:before {
+    content: ""
+}
+
+.icon-bag-3:before {
+    content: ""
+}
+
+.icon-direction:before {
+    content: ""
+}
+
+.icon-home:before {
+    content: ""
+}
+
+.icon-magnifier:before {
+    content: ""
+}
+
+.icon-magnifier-add:before {
+    content: ""
+}
+
+.icon-magnifier-remove:before {
+    content: ""
+}
+
+.icon-phone-1:before {
+    content: ""
+}
+
+.icon-clock-1:before {
+    content: ""
+}
+
+.icon-heart:before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f004"
+}
+
+.icon-heart-1:before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f004"
+}
+
+.icon-earphones-alt:before {
+    content: ""
+}
+
+.icon-credit-card:before {
+    content: ""
+}
+
+.icon-action-undo:before {
+    content: ""
+}
+
+.icon-envolope:before {
+    content: ""
+}
+
+.icon-chart:before {
+    content: ""
+}
+
+.icon-category-home:before {
+    content: ""
+}
+
+.icon-category-motors:before {
+    content: ""
+}
+
+.icon-category-music:before {
+    content: ""
+}
+
+.icon-category-gifts:before {
+    content: ""
+}
+
+.icon-category-electronics:before {
+    content: ""
+}
+
+.icon-category-fashion:before {
+    content: ""
+}
+
+.icon-category-hot-deals:before {
+    content: ""
+}
+
+.icon-tag-percent:before {
+    content: ""
+}
+
+.icon-joystick:before {
+    content: ""
+}
+
+.icon-category-furniture:before {
+    content: ""
+}
+
+.icon-category-garden:before {
+    content: ""
+}
+
+.icon-category-lanterns-lighting:before {
+    content: ""
+}
+
+.icon-category-mechanics:before {
+    content: ""
+}
+
+.icon-category-motorcycles:before {
+    content: ""
+}
+
+.icon-category-sound-video:before {
+    content: ""
+}
+
+.icon-category-steering:before {
+    content: ""
+}
+
+.icon-category-external-accessories:before {
+    content: ""
+}
+
+.icon-category-fluids:before {
+    content: ""
+}
+
+.icon-category-internal-accessories:before {
+    content: ""
+}
+
+.icon-category-chains:before {
+    content: ""
+}
+
+.icon-category-frames:before {
+    content: ""
+}
+
+.icon-category-pedals:before {
+    content: ""
+}
+
+.icon-category-saddle:before {
+    content: ""
+}
+
+.icon-category-tools:before {
+    content: ""
+}
+
+.icon-search-3:before {
+    content: ""
+}
+
+.icon-secure-payment:before {
+    content: ""
+}
+
+.icon-user-2:before {
+    content: ""
+}
+
+.icon-wishlist-2:before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f004"
+}
+
+.icon-gift-2:before {
+    content: ""
+}
+
+.icon-edit:before {
+    content: ""
+}
+
+.icon-chef:before {
+    content: ""
+}
+
+.icon-smiling-girl:before {
+    content: ""
+}
+
+.icon-tshirt:before {
+    content: ""
+}
+
+.icon-boy-broad-smile:before {
+    content: ""
+}
+
+.icon-smiling-baby:before {
+    content: ""
+}
+
+.icon-bars:before {
+    content: ""
+}
+
+.icon-twitter:before {
+    content: ""
+}
+
+.icon-facebook:before {
+    content: ""
+}
+
+.icon-spinner:before {
+    content: ""
+}
+
+.icon-instagram:before {
+    content: ""
+}
+
+.icon-check-empty:before {
+    content: ""
+}
+
+.icon-check:before {
+    content: ""
+}
+
+.icon-shopping-cart:before {
+    font-family: "Font Awesome 5 Free";
+    content: "+";
+}
+
+.icon-phone-2:before {
+    content: ""
+}
+
+.icon-percent-circle:before {
+    content: ""
+}
+
+.icon-pulley:before {
+    content: ""
+}
+
+.icon-password-lock:before {
+    content: ""
+}
+
+.icon-pin:before {
+    content: ""
+}
+
+.icon-rotulo:before {
+    content: ""
+}
+
+.icon-comida-organica:before {
+    content: ""
+}
+
+.icon-estrela:before {
+    content: ""
+}
+
+.icon-fazer-compras:before {
+    content: ""
+}
+
+.icon-gluten:before {
+    content: ""
+}
+
+.icon-arrow-forward-right:before {
+    content: ""
 }

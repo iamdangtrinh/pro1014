@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 .mt-1 {
     margin-top: 1rem !important
 }
@@ -839,6 +841,8 @@
     transition: height 500ms ease-in-out
 }
 
+.owl-carousel .owl-item {}
+
 .owl-carousel .owl-item .owl-lazy {
     opacity: 0;
     transition: opacity 400ms ease
@@ -870,6 +874,7 @@
     background: url("../images/owl.video.play.png") no-repeat;
     cursor: pointer;
     z-index: 1;
+    -webkit-backface-visibility: hidden;
     transition: transform 100ms ease
 }
 
@@ -4621,6 +4626,14 @@ a:focus {
 
 .flag.flag-zw {
     background-position: -208px -165px
+}
+
+@font-face {
+    src: url("../fonts/porto6e1d.eot?64334846");
+    src: url("../fonts/porto6e1d.eot?64334846#iefix") format("embedded-opentype"), url("../fonts/porto6e1d.woff2?64334846") format("woff2"), url("../fonts/porto6e1d.woff?64334846") format("woff"), url("../fonts/porto6e1d.ttf?64334846") format("truetype"), url("../fonts/porto6e1d.svg?64334846#porto") format("svg");
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap
 }
 
 [class*=" icon-"]:before,

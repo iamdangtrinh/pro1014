@@ -20,9 +20,8 @@
     <link rel="stylesheet" href="<?= $base_url ?>assets/css/style23.css">
     <link rel="stylesheet" href="<?= $base_url ?>assets/css/demo23.min.css">
     
-    <link rel="stylesheet" href="<?= $base_url ?>assets/vendor/simple-line-icons/css/simple-line-icons.min.css">
-    
     <link rel="stylesheet" href="<?= $base_url ?>assets/vendor/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="<?= $base_url ?>assets/vendor/simple-line-icons/css/simple-line-icons.min.css">
 
     <!-- Js -->
     <script src="<?= $base_url ?>assets/js/jquery.min.js"></script>
@@ -582,11 +581,11 @@
     <script src="<?= $base_url ?>assets/js/bootstrap.bundle.min.js"></script>
     <script src="<?= $base_url ?>assets/js/plugins.min.js"></script>
     <script src="<?= $base_url ?>assets/js/optional/isotope.pkgd.min.js"></script>
-    <script src="<?= $base_url ?>assets/js/jquery.countdown.min.js"></script>
+    <script src="<?= $base_url ?>assets/js/jquery..js"></script>
     <script src="<?= $base_url ?>assets/js/jquery.appear.min.js"></script>
     <script src="<?= $base_url ?>assets/js/jquery.plugin.min.js"></script>
+    <script src="<?= $base_url ?>assets/js/webfont.js"></script>
     <script src="<?= $base_url ?>assets/js/main.min.js"></script>
-    <script src="<?= $base_url ?>assets/js/map.js"></script>
 </body>
 
 

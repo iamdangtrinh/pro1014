@@ -40,7 +40,7 @@
                                 <a class="nav-link" href="wishlist.html"><i class="fa-solid fa-heart"></i> &nbsp; Yêu thích</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="<?php unset($_SESSION['user'])?>"><i class="fa-solid fa-right-from-bracket"></i> &nbsp; Đăng xuất</a>
+                                <a class="nav-link" href="<?php un?>"><i class="fa-solid fa-right-from-bracket"></i> &nbsp; Đăng xuất</a>
                             </li>
                         </ul>
                     </div>
@@ -49,6 +49,7 @@
                             <div class="dashboard-content">
 
                                 <p>
+
                                     Từ bảng điều khiển tài khoản của bạn, bạn có thể xem
                                     <a class="btn btn-link link-to-tab" href="#order">
                                         những đơn đặt hàng gần đây</a>,<a class="btn btn-link link-to-tab" href="#order">
@@ -89,7 +90,7 @@
 
                                     <div class="col-6 col-md-4">
                                         <div class="feature-box text-center pb-4">
-                                            <a href="<?php unset($_SESSION['user'])?>"><i class="fa-solid fa-right-from-bracket"></i></a>
+                                            <a href="login.html"><i class="fa-solid fa-right-from-bracket"></i></a>
                                             <div class="feature-box-content">
                                                 <h3>ĐĂNG XUẤT</h3>
                                             </div>

@@ -89,7 +89,7 @@
 
                                     <div class="col-6 col-md-4">
                                         <div class="feature-box text-center pb-4">
-                                            <a href="<?php unset($_SESSION['user'])?>"><i class="fa-solid fa-right-from-bracket"></i></a>
+                                            <a href="login.html"><i class="fa-solid fa-right-from-bracket"></i></a>
                                             <div class="feature-box-content">
                                                 <h3>ĐĂNG XUẤT</h3>
                                             </div>

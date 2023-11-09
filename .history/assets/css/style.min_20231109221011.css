@@ -5501,7 +5501,8 @@ select.form-control-sm:not([size]):not([multiple]) {
 .main .form-control::-moz-placeholder,
 .main .form-control::-ms-input-placeholder,
 .main .form-control::-webkit-input-placeholder,
-.main .form-control::placeholder {}
+.main .form-control::placeholder {
+}
 
 textarea.form-control {
     padding-top: 0.8rem;
@@ -14325,7 +14326,8 @@ footer .contact-info-label {
     margin-bottom: 1.7rem
 }
 
-.features-section h3 {}
+.features-section h3 {
+}
 
 .features-section .feature-box {
     padding: 3rem 4rem
@@ -15135,7 +15137,8 @@ span.toggle:before {
     padding: 6.8rem 0
 }
 
-.category-banner .coupon-sale-text {}
+.category-banner .coupon-sale-text {
+}
 
 .category-banner h3 {
     font-size: 3em;
@@ -17412,7 +17415,8 @@ main .sticky-header .product-ratings:before {
     margin-left: -5px
 }
 
-.product-both-info .product-single-qty label {}
+.product-both-info .product-single-qty label {
+}
 
 .product-both-info .product-single-filter label {
     margin-right: 3.3rem;
@@ -18425,7 +18429,8 @@ aside .widget-info i {
     font-weight: 600
 }
 
-.product-center-vertical .product-single-qty label {}
+.product-center-vertical .product-single-qty label {
+}
 
 @media (min-width:992px) {
     .product-center-vertical .product-single-gallery {
@@ -21240,7 +21245,8 @@ h1 {
     font-size: 3.6rem
 }
 
-p {}
+p {
+}
 
 .anim-pane .anim-wrapper {
     float: left;
@@ -21821,7 +21827,8 @@ p {}
     left: 0
 }
 
-.testimonial-section .testimonial-owner {}
+.testimonial-section .testimonial-owner {
+}
 
 .testimonial-section .testimonial-owner .testimonial-title,
 .testimonial-section .testimonial-owner span {
@@ -21896,7 +21903,8 @@ p {}
     margin: 0 0 40px
 }
 
-.testimonial-type3 blockquote {}
+.testimonial-type3 blockquote {
+}
 
 .testimonial-type3 blockquote:before {
     top: 15px;
@@ -21963,7 +21971,8 @@ p {}
     margin: 0 0 40px
 }
 
-.testimonial-type4 blockquote {}
+.testimonial-type4 blockquote {
+}
 
 .testimonial-type4 blockquote:before {
     font-size: 35px;
