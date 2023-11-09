@@ -51,27 +51,20 @@
                     </div>
 
                     <div class="header-right">
-                        <div class="d-lg-block d-none">
-                            <div class="header-userinfo">
-                                <div class="header-user">
-                                    <?php if (isset($_SESSION['user'])): ?>
-                                        <i class="icon-user-2"></i>
-                                        <div class="">
-                                            <span class="d-inline-block font2 line-height-1">Xin chào!</span>
-                                            <h4 class="mb-0">
-                                                <?php echo strstr($_SESSION['user']['Email'], '@', true) ?>
-                                            </h4>
-                                        </div>
-                                    <?php else: ?>
-                                        <a href="<?= $base_url ?>user/register"
-                                            class="btn btn-primary mr-2 line-height-1">Đăng ký</a>
-                                        <a href="<?= $base_url ?>user/login"
-                                            class="btn btn-primary ml-2 line-height-1">Đăng nhập</a>
-                                    <?php endif ?>
-                                </div>
+                        <?php if (isset($_SESSION['user'])): ?>
+                            <i class="icon-user-2"></i>
+                            <div class="">
+                                <span class="d-inline-block font2 line-height-1">Xin chào!</span>
+                                <h4 class="mb-0">
+                                    <?php echo strstr($_SESSION['user']['Email'], '@', true) ?>
+                                </h4>
                             </div>
-                        </div>
-
+                        <?php else: ?>
+                            <a href="<?= $base_url ?>user/register"
+                                class="btn btn-outline-primary p-3 mr-2 line-height-1">Đăng ký</a>
+                            <a href="<?= $base_url ?>user/login"
+                                class="btn btn-outline-primary p-3 mr-4 line-height-1">Đăng nhập</a>
+                        <?php endif ?>
 
                         <a href="wishlist.html" class="header-icon">
                             <i class="icon-wishlist-2"></i>
