@@ -137,11 +137,12 @@ aside .toggle{
 aside .toggle .logo{
     display: flex;
     gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
 }
 
 aside .toggle .logo img{
-    width: 2rem;
-    height: 2rem;
+    width: 80%;
 }
 
 aside .toggle .close{
