@@ -255,7 +255,7 @@
                 <div class="product-category" style="background-color: #ebeae9;">
                     <a href="demo23-shop.html">
                         <figure>
-                            <img src="<?= $base_url ?>upload/demoes/demo23/products/cats/cat-2.jpg" alt="cat banner"
+                            <img src="<?= $base_url ?>upload/demoes/demo23/products/cats/cat-3.jpg" alt="cat banner"
                                 width="500" height="400">
                         </figure>
 
@@ -267,7 +267,7 @@
                 <div class="product-category" style="background-color: #ead7d5;">
                     <a href="demo23-shop.html">
                         <figure>
-                            <img src="<?= $base_url ?>upload/demoes/demo23/products/cats/cat-3.jpg" alt="cat banner"
+                            <img src="<?= $base_url ?>upload/demoes/demo23/products/cats/cat-2.jpg" alt="cat banner"
                                 width="500" height="400">
                         </figure>
 
