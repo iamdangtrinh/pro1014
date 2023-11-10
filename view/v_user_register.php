@@ -141,11 +141,7 @@
 							password: password,
 							re_password: re_password,
 						},
-						success: function (response) {
-							if (response) {
-							}
-							// location.reload();
-						}
+						
 					})
 
 				}

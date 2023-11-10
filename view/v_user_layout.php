@@ -64,11 +64,11 @@
                         <?php if (isset($_SESSION['user'])): ?>
                             <a href="<?= $base_url ?>user/dashboard" class="header-icon d-lg-block d-none">
                                 <div class="header-user">
-                                    <i class="fa-regular fa-user"></i>
+                                    <img src="<?=$base_url?>upload/avatar/<?= $_SESSION['user']['HinhAnh'] ?>" alt="Avatar">
                                     <div class="header-userinfo">
                                         <span class="d-inline-block font2 line-height-1">Xin chào!</span>
                                         <h4 class="mb-0">
-                                            <?php echo strstr($_SESSION['user']['Email'], '@', true) ?>
+                                            <?= $_SESSION['user']['HoTen'] ?>
                                         </h4>
                                     </div>
                                 </div>
@@ -423,21 +423,6 @@
                         <ul>
                             <li>
                                 <a href="wishlist.html">Wishlist</a>
-                            </li>
-                            <li>
-                                <a href="cart.html">Shopping Cart</a>
-                            </li>
-                            <li>
-                                <a href="checkout.html">Checkout</a>
-                            </li>
-                            <li>
-                                <a href="dashboard.html">Dashboard</a>
-                            </li>
-                            <li>
-                                <a href="login.html">Login</a>
-                            </li>
-                            <li>
-                                <a href="forgot-password.html">Forgot Password</a>
                             </li>
                         </ul>
                     </li>

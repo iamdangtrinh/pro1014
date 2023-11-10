@@ -12650,7 +12650,7 @@ footer .contact-info-label {
     cursor: pointer
 }
 
-.header-user i {
+.header-user img {
     display: flex;
     margin-right: 1.5rem;
     align-items: center;
@@ -12662,7 +12662,7 @@ footer .contact-info-label {
     border: 1px solid #e7e7e7
 }
 
-.header-user i:before {
+.header-user img:before {
     margin-top: -2px
 }
 
