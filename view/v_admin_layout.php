@@ -26,13 +26,13 @@
             </div>
 
             <div class="sidebar">
-                <a href="#" class="active">
+                <a href="<?=$base_url?>admin/dashboard" class="active">
                     <span class="material-icons-sharp">
                         dashboard
                     </span>
                     <h3>Tổng quan</h3>
                 </a>
-                <a href="#">
+                <a href="<?=$base_url?>admin/user">
                     <span class="material-icons-sharp">
                         person_outline
                     </span>
