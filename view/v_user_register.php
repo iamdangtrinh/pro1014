@@ -132,11 +132,6 @@
 					}
 				},
 				submitHandler: function (form) {
-					// var fullname = $("#fullname").val();
-					// var email = $("#register-email").val();
-					// var password = $("#password").val();
-					// var re_password = $("#re_password").val();
-
 					$.ajax({
 						type: "POST",
 						url: "",
@@ -146,7 +141,6 @@
 							password: password,
 							re_password: re_password,
 						},
-						// data: $(form).serializeArray(),
 						success: function (response) {
 							if (response) {
 							}
