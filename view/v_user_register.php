@@ -26,8 +26,8 @@
 		<?php endif;
 		unset($_SESSION['error']['register']) ?>
 
-		<?php if (isset($_SESSION['success']['success'])): ?>
-			<h5 class="alert alert-danger">
+		<?php if (isset($_SESSION['success']['register'])): ?>
+			<h5 class="alert alert-success">
 				<?= $_SESSION['success']['register'] ?>
 			</h5>
 		<?php endif;
@@ -88,7 +88,7 @@
 
 
 <!-- ajax register form -->
-<!-- <script>
+<script>
 	$(document).ready(
 		function () {
 			$("#form_register").validate({
@@ -131,21 +131,27 @@
 						required: "Vui lòng nhập địa chỉ",
 					}
 				},
-				submitHandler: function(form) {
-					var fullname = $("#fullname").val();
-					var email = $("#register-email").val();
-					var password = $("#password").val();
-					var re_password = $("#re_password").val();
-					
+				submitHandler: function (form) {
+					// var fullname = $("#fullname").val();
+					// var email = $("#register-email").val();
+					// var password = $("#password").val();
+					// var re_password = $("#re_password").val();
+
 					$.ajax({
 						type: "POST",
-						url: "?mod=user&act=register",
+						url: "",
 						data: {
 							fullname: fullname,
 							email: email,
 							password: password,
 							re_password: re_password,
 						},
+						// data: $(form).serializeArray(),
+						success: function (response) {
+							if (response) {
+							}
+							// location.reload();
+						}
 					})
 
 				}
@@ -153,4 +159,4 @@
 
 		})
 
-</script> -->
+</script>

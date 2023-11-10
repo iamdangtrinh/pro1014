@@ -44,13 +44,14 @@ if (isset($_GET['act'])) {
             //lay du lieu
             include_once 'model/m_user.php';
             // Kiểm tra tài khoản có tồn tại hay không
-            if(isset($_POST['btn_register']) && $_POST['btn_register']) {
 
-                echo $fullname = $_POST['fullname'];
+            if(isset($_POST['btn_register']) && $_POST['btn_register']) {
+    
+                $fullname = $_POST['fullname'];
                 $email = $_POST['email'];
                 $password = $_POST['password'];
                 $address = $_POST['address'];
-
+    
                 if($email == "" || empty($email)) {
                     $_SESSION['error']['register'] = 'Đăng ký không thành công';
                 } else {
