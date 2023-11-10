@@ -8,8 +8,6 @@
     <title><?= $title ?></title>
     <meta name="description" content="Website bán hàng">
     <!-- Favicon -->
-
-    
     <link rel="icon" type="image/x-icon" href="<?= $base_url ?>upload/icons/favicon.png">
 
     <!-- linh cdn fontawesome -->
@@ -30,7 +28,7 @@
 
 </head>
 
-<body style="font-family: mono;">
+<body>
     <div class="page-wrapper">
         <div class="top-notice font2">
             <div class="container-fluid text-center m-auto text-dark">
@@ -214,7 +212,9 @@
                                     <input type="search" class="form-control" name="q" id="q1"
                                         placeholder="Tìm kiếm sản phẩm..." required>
                                     </div>
-                                    <button class="btn icon-magnifier p-0" title="search" type="submit">Tìm kiếm
+                                    <button class="btn icon-magnifier p-0" title="search" type="submit">
+                                    <i
+                                class="icon-magnifier"></i>
                                     </button>
                                 </div>
                             </form>

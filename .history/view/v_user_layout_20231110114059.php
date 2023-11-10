@@ -8,8 +8,6 @@
     <title><?= $title ?></title>
     <meta name="description" content="Website bán hàng">
     <!-- Favicon -->
-
-    
     <link rel="icon" type="image/x-icon" href="<?= $base_url ?>upload/icons/favicon.png">
 
     <!-- linh cdn fontawesome -->
@@ -22,7 +20,7 @@
     <link rel="stylesheet" href="<?= $base_url ?>assets/css/style23.css">
     <link rel="stylesheet" href="<?= $base_url ?>assets/css/demo23.min.css">
     
-    <link rel="stylesheet" href="<?= $base_url ?>assets/css/all.min.css">
+    <link rel="stylesheet" href="<?= $base_url ?>assets/vendor/fontawesome-free/css/all.min.css">
 
     <!-- Js -->
     <script src="<?= $base_url ?>assets/js/jquery.min.js"></script>
@@ -30,7 +28,7 @@
 
 </head>
 
-<body style="font-family: mono;">
+<body>
     <div class="page-wrapper">
         <div class="top-notice font2">
             <div class="container-fluid text-center m-auto text-dark">
@@ -94,7 +92,7 @@
 
                                 <div class="dropdownmenu-wrapper custom-scrollbar">
                                     <div class="dropdown-cart-header">Giỏ hàng</div>
-                                    
+                                    <!-- End .dropdown-cart-header -->
 
                                     <div class="dropdown-cart-products">
                                         <div class="product">
@@ -107,7 +105,7 @@
                                                     <span class="cart-product-qty">1</span>
                                                     Giá sản phẩm
                                                 </span>
-                                            </div>
+                                            </div><!-- End .product-details -->
 
                                             <figure class="product-image-container">
                                                 <a href="demo23-product.html" class="product-image">
@@ -117,22 +115,65 @@
 
                                                 <a href="#" class="btn-remove" title="Remove Product"><span>×</span></a>
                                             </figure>
+                                        </div><!-- End .product -->
+
+                                        <div class="product">
+                                            <div class="product-details">
+                                                <h4 class="product-title">
+                                                    <a href="demo23-product.html">Tên sản phẩm</a>
+                                                </h4>
+
+                                                <span class="cart-product-info">
+                                                    <span class="cart-product-qty">1</span>
+                                                    Giá tiền
+                                                </span>
+                                            </div><!-- End .product-details -->
+
+                                            <figure class="product-image-container">
+                                                <a href="demo23-product.html" class="product-image">
+                                                    <img src="<?= $base_url ?>upload/products/product-2.jpg"
+                                                        alt="product" width="80" height="80">
+                                                </a>
+
+                                                <a href="#" class="btn-remove" title="Remove Product"><span>×</span></a>
+                                            </figure>
                                         </div>
-                                    </div>
+
+                                        <div class="product">
+                                            <div class="product-details">
+                                                <h4 class="product-title">
+                                                    <a href="demo23-product.html">Tên sản phẩm</a>
+                                                </h4>
+
+                                                <span class="cart-product-info">
+                                                    <span class="cart-product-qty">1</span>
+                                                    Giá tiền
+                                                </span>
+                                            </div><!-- End .product-details -->
+
+                                            <figure class="product-image-container">
+                                                <a href="demo23-product.html" class="product-image">
+                                                    <img src="<?= $base_url ?>upload/products/product-3.jpg"
+                                                        alt="product" width="80" height="80">
+                                                </a>
+                                                <a href="#" class="btn-remove" title="Remove Product"><span>×</span></a>
+                                            </figure>
+                                        </div><!-- End .product -->
+                                    </div><!-- End .cart-product -->
 
                                     <div class="dropdown-cart-total">
                                         <span>TỔNG PHỤ:</span>
 
                                         <span class="cart-total-price float-right">Giá tiền</span>
-                                    </div>
+                                    </div><!-- End .dropdown-cart-total -->
 
                                     <div class="dropdown-cart-action">
                                         <a href="cart.html" class="btn btn-gray btn-block view-cart">Xem giỏ hàng</a>
                                         <a href="checkout.html" class="btn btn-dark btn-block">Kiểm tra</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                                    </div><!-- End .dropdown-cart-total -->
+                                </div><!-- End .dropdownmenu-wrapper -->
+                            </div><!-- End .dropdown-menu -->
+                        </div><!-- End .dropdown -->
 
                         <div
                             class="header-search header-search-popup header-search-category text-right d-flex d-lg-none">
@@ -143,13 +184,18 @@
                                     <input type="search" class="form-control" name="q" id="q"
                                         placeholder="Nhập tên sản phẩm..." required>
                                     <div class="select-custom">
-                                      
-                                    </div>
+                                        <select id="cat" name="cat">
+                                            <option selected value="">Tất cả danh mục</option>
+                                            <option value="4">Bé trai</option>
+                                            <option value="12">Bé gái</option>
+                                            <option value="13">Sơ sinh</option>
+                                        </select>
+                                    </div><!-- End .select-custom -->
                                     <button class="btn p-0" type="submit"><i
                                     class="icon-magnifier"></i></button>
-                                </div>
+                                </div><!-- End .header-search-wrapper -->
                             </form>
-                        </div>
+                        </div><!-- End .header-search -->
                     </div>
                 </div>
             </div>
@@ -214,20 +260,19 @@
                                     <input type="search" class="form-control" name="q" id="q1"
                                         placeholder="Tìm kiếm sản phẩm..." required>
                                     </div>
-                                    <button class="btn icon-magnifier p-0" title="search" type="submit">Tìm kiếm
-                                    </button>
-                                </div>
+                                    <button class="btn icon-magnifier p-0" title="search" type="submit"></button>
+                                </div><!-- End .header-search-wrapper -->
                             </form>
-                        </div>
+                        </div><!-- End .header-search -->
                     </div>
                 </div>
             </div>
-        </header>
+        </header><!-- End .header -->
 
         <main class="main">
             <!-- ruot cua WEBSITE -->
             <?php include_once 'view/v_' . $view_name . '.php'; ?>
-        </main>
+        </main><!-- End .main -->
 
         <footer class="footer">
             <div class="footer-middle">
@@ -370,9 +415,9 @@
                         <img src="<?= $base_url ?>upload/demoes/demo23/payment-icon.png" alt="payment">
                     </div>
                 </div>
-            </div>
+            </div><!-- End .footer-bottom -->
         </footer>
-    </div>
+    </div><!-- End .page-wrapper -->
 
     <div class="loading-overlay">
         <div class="bounce-loader">
@@ -382,7 +427,7 @@
         </div>
     </div>
 
-    <div class="mobile-menu-overlay"></div>
+    <div class="mobile-menu-overlay"></div><!-- End .mobil-menu-overlay -->
 
     <div class="mobile-menu-container">
         <div class="mobile-menu-wrapper">

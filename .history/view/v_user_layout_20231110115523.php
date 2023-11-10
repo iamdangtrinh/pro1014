@@ -8,8 +8,6 @@
     <title><?= $title ?></title>
     <meta name="description" content="Website bán hàng">
     <!-- Favicon -->
-
-    
     <link rel="icon" type="image/x-icon" href="<?= $base_url ?>upload/icons/favicon.png">
 
     <!-- linh cdn fontawesome -->
@@ -29,8 +27,11 @@
     <script src="<?= $base_url ?>assets/js/validate.js"></script>
 
 </head>
+    <style>
+        font-family: ;
+    </style>
 
-<body style="font-family: mono;">
+<body>
     <div class="page-wrapper">
         <div class="top-notice font2">
             <div class="container-fluid text-center m-auto text-dark">

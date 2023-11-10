@@ -28,9 +28,10 @@
     <script src="<?= $base_url ?>assets/js/jquery.min.js"></script>
     <script src="<?= $base_url ?>assets/js/validate.js"></script>
 
+    sty
 </head>
 
-<body style="font-family: mono;">
+<body>
     <div class="page-wrapper">
         <div class="top-notice font2">
             <div class="container-fluid text-center m-auto text-dark">

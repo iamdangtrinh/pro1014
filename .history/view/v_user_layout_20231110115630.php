@@ -30,7 +30,7 @@
 
 </head>
 
-<body style="font-family: mono;">
+<body style="font-family: monospace;">
     <div class="page-wrapper">
         <div class="top-notice font2">
             <div class="container-fluid text-center m-auto text-dark">
