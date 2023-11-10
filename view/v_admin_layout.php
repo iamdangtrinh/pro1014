@@ -7,6 +7,14 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
     <link rel="stylesheet" href="<?=$base_url?>assets/style.css">
     <title>Admin</title>
+    <style>
+        .active {
+            z-index: 2;
+            color: var( --white-color);
+            background-color: var(--text3-color);
+            border-color: var(--bs-list-group-active-border-color);
+        }
+    </style>
 </head>
 
 <body>
@@ -26,13 +34,13 @@
             </div>
 
             <div class="sidebar">
-                <a href="#" class="active">
+                <a href="<?=$base_url?>admin/dashboard" class="list_group-item <?=(strpos($view_name,'dashboard'))?'active':'' ?>">
                     <span class="material-icons-sharp">
                         dashboard
                     </span>
                     <h3>Tổng quan</h3>
                 </a>
-                <a href="#">
+                <a href="<?=$base_url?>admin/user" class="list_group-item <?=(strpos($view_name,'user'))?'active':'' ?>">
                     <span class="material-icons-sharp">
                         person_outline
                     </span>

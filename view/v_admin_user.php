@@ -1,3 +1,8 @@
+            <style>
+                .row {
+                    display: none;
+                }
+            </style>
             <h1>Tài khoản</h1>
             <!-- Recent Orders Table -->
             <div class="recent-orders">
@@ -25,3 +30,4 @@
                 </table>
             </div>
             <!-- End of Recent Orders -->
+          
