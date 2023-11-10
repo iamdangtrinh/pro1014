@@ -56,7 +56,7 @@
 
             <!-- New Users Section -->
             <div class="new-users">
-                <h2>New Users</h2>
+                <h2>Tài khoản mới</h2>
                 <div class="user-list">
                     <div class="user">
                         <img src="<?= $base_url ?>upload/blog/author.jpg">
@@ -84,14 +84,14 @@
 
             <!-- Recent Orders Table -->
             <div class="recent-orders">
-                <h2>Recent Orders</h2>
+                <h2>Những đơn hàng gần đây</h2>
                 <table>
                     <thead>
                         <tr>
-                            <th>Course Name</th>
-                            <th>Course Number</th>
-                            <th>Payment</th>
-                            <th>Status</th>
+                            <th>Mã đơn hàng</th>
+                            <th>Tên Sản phẩm</th>
+                            <th>Loại sản phẩm</th>
+                            <th>Trạng thái</th>
                             <th></th>
                         </tr>
                     </thead>
