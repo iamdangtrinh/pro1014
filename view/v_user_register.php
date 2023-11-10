@@ -50,6 +50,14 @@
 				</label>
 				<input type="email" name="email" class="form-input form-wide" id="register-email">
 			</div>
+			
+			<div class="mb-2">
+				<label for="register-phone">
+					Số điện thoại
+					<span class="required">*</span>
+				</label>
+				<input type="number" name="number_phone" class="form-input form-wide" id="register-phone">
+			</div>
 
 			<div class="mb-2">
 				<label for="password">
@@ -100,6 +108,11 @@
 						required: true,
 						email: true,
 					},
+					number_phone: {
+						required: true,
+						maxlength: 10,
+						minlength: 10,
+					},
 					password: {
 						required: true,
 						minlength: 8,
@@ -120,6 +133,11 @@
 						required: "Vui lòng nhập địa chỉ email",
 						email: "Địa chỉ không phải email",
 					},
+					number_phone: {
+						required: "Vui lòng nhập số điện thoại",
+						maxlength: "Nhập tối đa 10 số",
+						minlength: "Nhập tối thiểu 10 số"
+					},
 					password: {
 						required: "Vui lòng nhập mật khẩu",
 						minlength: "Mật khẩu tối thiểu 8",
@@ -139,7 +157,7 @@
 							fullname: fullname,
 							email: email,
 							password: password,
-							re_password: re_password,
+							number: number,
 						},
 						
 					})

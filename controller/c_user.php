@@ -45,20 +45,21 @@ if (isset($_GET['act'])) {
             include_once 'model/m_user.php';
             // Kiểm tra tài khoản có tồn tại hay không
             if(isset($_POST['btn_register']) && $_POST['btn_register']) {
-                $fullname = $_POST['fullname'];
-                $email = $_POST['email'];
+                $HoTen = $_POST['fullname'];
+                $Email = $_POST['email'];
+                $SoDienThoai = $_POST['number'];
                 $password = $_POST['password'];
-                $address = $_POST['address'];
+                $DiaChi = $_POST['address'];
     
-                if($email == "" || empty($email)) {
+                if($Email == "" || empty($Email)) {
                     $_SESSION['error']['register'] = 'Đăng ký không thành công';
                 } else {
                     // cho phép đăng ký tài khoản
-                    if(has_email($email) > 0) {
+                    if(has_email($Email) > 0) {
                         $_SESSION['error']['register'] = 'Đăng ký không thành công. Tài khoản này đã tồn tại';
                     } else {
                         $_SESSION['success']['register'] = 'Đăng ký tài khoản thành công.';
-                        
+                        user_add($SoDienThoai,$Email,$HoTen,$MatKhau,$DiaChi);
                     }
                 }
             }
