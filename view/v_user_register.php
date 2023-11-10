@@ -157,7 +157,7 @@
 							fullname: fullname,
 							email: email,
 							password: password,
-							number: number,
+							number_phone: number_phone,
 						},
 						
 					})

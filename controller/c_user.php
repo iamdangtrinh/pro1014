@@ -47,8 +47,8 @@ if (isset($_GET['act'])) {
             if(isset($_POST['btn_register']) && $_POST['btn_register']) {
                 $HoTen = $_POST['fullname'];
                 $Email = $_POST['email'];
-                $SoDienThoai = $_POST['number'];
-                $password = $_POST['password'];
+                $SoDienThoai = $_POST['number_phone'];
+                $MatKhau = $_POST['password'];
                 $DiaChi = $_POST['address'];
     
                 if($Email == "" || empty($Email)) {
