@@ -176,7 +176,7 @@
             <div class="col-6 col-md-4 col-xl-3">
                 <div class="product-default inner-quickview inner-icon">
                     <figure>
-                        <a href="<?= $base_url ?>product/detail">
+                        <a href="<?= $base_url ?>product/detail" title="Chi tiết sản phẩm">
                             <img src="<?= $base_url ?>upload/demoes/demo23/products/product-1.jpg" width="217" height="217" alt="product">
                         </a>
                         <div class="label-group">
@@ -186,7 +186,7 @@
                             <a href="<?= $base_url ?>product/detail"
                                 class="btn-icon btn-add-cart fa-solid fa-cart-shopping"></a>
                         </div>
-                        <a href="<?= $base_url ?>product/detail" class="btn-quickview" title="Chi tiết sản phẩm">Xem nhanh</a>
+                        <a href="<?= $base_url ?>product/detail" class="btn-quickview" >Xem nhanh</a>
                     </figure>
                     <div class="product-details">
                         <div class="category-wrap">
@@ -287,7 +287,7 @@
             <div class="col-6 col-md-4 col-xl-3">
                 <div class="product-default inner-quickview inner-icon">
                     <figure>
-                        <a href="<?= $base_url ?>product/detail">
+                        <a href="<?= $base_url ?>product/detail" title="Chi tiết sản phẩm">
                             <img src="<?= $base_url ?>upload/demoes/demo23/products/product-1.jpg" width="217"
                                 height="217" alt="product">
                         </a>
@@ -298,7 +298,7 @@
                             <a href="<?= $base_url ?>product/detail"
                                 class="btn-icon btn-add-cart fa-solid fa-cart-shopping"></a>
                         </div>
-                        <a href="<?= $base_url ?>product/detail" class="btn-quickview" title="Chi tiết sản phẩm">Xem nhanh</a>
+                        <a href="<?= $base_url ?>product/detail" class="btn-quickview" >Xem nhanh</a>
                     </figure>
                     <div class="product-details">
                         <div class="category-wrap">
