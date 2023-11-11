@@ -186,7 +186,7 @@
                             <a href="<?= $base_url ?>product/detail"
                                 class="btn-icon btn-add-cart fa-solid fa-cart-shopping"></a>
                         </div>
-                        <a href="ajax/product-quick-view.html" class="btn-quickview" title="Quick View">Xem nhanh</a>
+                        <a href="<?= $base_url ?>product/detail" class="btn-quickview" title="Chi tiết sản phẩm">Xem nhanh</a>
                     </figure>
                     <div class="product-details">
                         <div class="category-wrap">
@@ -298,7 +298,7 @@
                             <a href="<?= $base_url ?>product/detail"
                                 class="btn-icon btn-add-cart fa-solid fa-cart-shopping"></a>
                         </div>
-                        <a href="ajax/product-quick-view.html" class="btn-quickview" title="Quick View">Xem nhanh</a>
+                        <a href="<?= $base_url ?>product/detail" class="btn-quickview" title="Chi tiết sản phẩm">Xem nhanh</a>
                     </figure>
                     <div class="product-details">
                         <div class="category-wrap">
