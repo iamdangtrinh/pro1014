@@ -1,8 +1,8 @@
             <div class="container">
                 <nav aria-label="breadcrumb" class="breadcrumb-nav">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="demo1.html"><i class="icon-home"></i></a></li>
-                        <li class="breadcrumb-item"><a href="#">Sản Phẩm</a></li>
+                        <li><a href="demo1.html"><i class="fa-solid fa-house"></i></a></li>
+                        <li><i class="fa-solid fa-angle-right"></i><a href="#">Sản Phẩm</a></li>
                     </ol>
                 </nav>
                 <div class="product-single-container product-single-default">
@@ -89,10 +89,22 @@
                             <h1 class="product-title">Quần áo</h1>
 
                             <div class="product-nav">
+                                    <style>
+                                        .box_icon{
+                                                border: 1px solid grey;
+                                                border-radius: 50px;
+                                                padding: 2px;
+                                                margin: 1px;
+                                        }
+                                            i {
+                                                text-align: center;
+                                                width: 20px;
+                                               
+                                            }
+                                    </style>
                                 <div class="product-prev">
                                     <a href="#">
-                                        <span class="product-link"></span>
-
+                                        <div class="box_icon"><i class="fa-solid fa-angle-left"></i></div>
                                         <span class="product-popup">
                                             <span class="box-content">
                                                 <img alt="product" width="150" height="150"
@@ -107,7 +119,7 @@
 
                                 <div class="product-next">
                                     <a href="#">
-                                        <span class="product-link"></span>
+                                        <div class="box_icon"><i class="fa-solid fa-angle-right"></i></div >
 
                                         <span class="product-popup">
                                             <span class="box-content">
