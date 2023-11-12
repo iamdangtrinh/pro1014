@@ -68,7 +68,7 @@
                 <div class="banner banner2 mb-2 appear-animate" data-animation-name="fadeIn" data-animation-delay="200"
                     style="background-color: #f0f5f8;">
                     <figure>
-                        <img src="<?= $base_url ?>upload/demoes/demo23/banners/banner-2.jpg" alt="banner" width="280"
+                        <img src="<?= $base_url ?>upload/dobo.png" alt="banner" width="280"
                             height="374">
                     </figure>
 
@@ -83,7 +83,7 @@
                 <div class="banner banner3 mb-2 appear-animate" data-animation-name="fadeIn" data-animation-delay="200"
                     style="background-color: #ededed;">
                     <figure>
-                        <img src="<?= $base_url ?>upload/demoes/demo23/banners/banner-3.jpg" alt="banner" width="280"
+                        <img src="<?= $base_url ?>upload/mevabe.png" alt="banner" width="280"
                             height="374">
                     </figure>
 
@@ -99,7 +99,7 @@
                 <div class="banner banner4 mb-2 appear-animate" data-animation-name="fadeIn" data-animation-delay="200"
                     style="background-color: #f5f6f8;">
                     <figure>
-                        <img src="<?= $base_url ?>upload/demoes/demo23/banners/banner-4.jpg" alt="banner" width="560"
+                        <img src="<?= $base_url ?>upload/doembe.png" alt="banner" width="560"
                             height="374">
                     </figure>
 
@@ -114,7 +114,7 @@
                 <div class="banner banner5 mb-2 appear-animate" data-animation-name="fadeIn" data-animation-delay="200"
                     style="background-color: #f5ecef;">
                     <figure>
-                        <img src="<?= $base_url ?>upload/demoes/demo23/banners/banner-5.jpg" alt="banner" width="280"
+                        <img src="<?= $base_url ?>upload/dress.png" alt="banner" width="280"
                             height="374">
                     </figure>
 
@@ -129,7 +129,7 @@
                 <div class="banner banner6 mb-2 appear-animate" data-animation-name="fadeIn" data-animation-delay="200"
                     style="background-color: #e2e2e2;">
                     <figure>
-                        <img src="<?= $base_url ?>upload/demoes/demo23/banners/banner-6.jpg" alt="banner" width="280"
+                        <img src="<?= $base_url ?>upload/shoes.png" alt="banner" width="280"
                             height="374">
                     </figure>
 
