@@ -26,6 +26,10 @@
                 //laydulieu
                 $view_name='page_wishlist';
                 break;
+            case 'discount':
+                //laydulieu
+                $view_name='page_discount';
+                break;
             case 'history': 
                 //laydulieu
                 $MaTK=$_SESSION['user']['MaTK'];
