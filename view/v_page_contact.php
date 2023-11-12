@@ -33,7 +33,7 @@
 
                         <div class="col-sm-6 col-lg-3">
                             <div class="feature-box text-center">
-                                <i class="sicon-location-pin"></i>
+                                <i class="fa-solid fa-location-dot"></i>
                                 <div class="feature-box-content">
                                     <h3>Địa chỉ</h3>
                                     <h5>Công viên phần mềm Quang Trung</h5>

@@ -58,7 +58,8 @@
   position: absolute;
   left: -3.3rem;
   top: -0.8rem;
-  content: "";
+  font-family: FontAwesome;
+  content: "\f105";
   color: #999;
   font-size: 3rem;
 }

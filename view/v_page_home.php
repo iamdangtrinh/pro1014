@@ -50,13 +50,13 @@
                 <div class="banner banner1 mb-2 appear-animate" data-animation-name="fadeIn" data-animation-delay="200"
                     style="background-color: #d8d8d8;">
                     <figure>
-                        <img src="<?= $base_url ?>upload/demoes/demo23/banners/banner-1.jpg" alt="banner" width="580"
+                        <img src="<?= $base_url ?>upload/discount.png" alt="banner" width="580"
                             height="374">
                     </figure>
 
                     <div class="banner-layer d-flex flex-column align-items-end justify-content-center">
                         <div class="text-justify">
-                            <h3 class="font4 font-weight-bold ls-n-25 text-uppercase mb-0">GIẢM GIÁ</h3>
+                            <h3 class="font4 font-weight-bold ls-n-25 text-uppercase mb-1">GIẢM GIÁ</h3>
                             <h4 class="ls-n-25 text-uppercase">Lên đến 70%</h4>
                             <a href="demo23-shop.html" class="btn btn-link"><i>Xem giao dịch của chúng tôi</i><i
                                     class="fa-solid fa-angles-right"></i></a>

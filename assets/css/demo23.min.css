@@ -2850,7 +2850,8 @@ aside .banner {
 .breadcrumb-item+.breadcrumb-item:before {
     color: inherit;
     padding-right: 1.1rem;
-    content: "";
+    font-family: FontAwesome;
+    content: "\f105";
     font-size: 17px;
     vertical-align: middle;
     margin-top: -2px
@@ -3324,7 +3325,8 @@ a:focus {
 }
 
 .card.card-accordion .card-header:after {
-    content: "";
+    font-family: FontAwesome;
+    content: "\f107";
     position: absolute;
     top: 50%;
     right: 10px;
@@ -3333,7 +3335,8 @@ a:focus {
 }
 
 .card.card-accordion .card-header.collapsed:after {
-    content: "";
+    font-family: FontAwesome;
+    content: "\f107";
     transition: 0.35s
 }
 
@@ -4804,7 +4807,8 @@ label {
     right: 1.9rem;
     transform: translateY(-50%);
     font-size: 1.6rem;
-    content: "";
+    font-family: FontAwesome;
+    content: "\f107";
     padding-bottom: 2px;
     font-weight: 400
 }
@@ -6543,7 +6547,8 @@ figure .porto-loading-icon {
     color: #fff;
     font-size: 1.1rem;
     line-height: 1;
-    content: ""
+    font-family: FontAwesome;
+    content: "\f00c"
 }
 
 .config-swatch-list a:focus .color-panel,
