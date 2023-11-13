@@ -56,7 +56,7 @@
 					Số điện thoại
 					<span class="required">*</span>
 				</label>
-				<input type="text" name="number_phone" class="form-input form-wide" id="register-phone" pattern="[0-9]{10}">
+				<input type="text" name="number_phone" class="form-input form-wide" id="register-phone"  pattern="[0-9]{10}">
 			</div>
 
 			<div class="mb-2">
