@@ -20,7 +20,7 @@ if (isset($_GET['act'])) {
                     $_SESSION['error']['login'] = "Đăng nhập không thành công. Vui lòng thử lại";
                 } else {
                     // check login 
-                    $has_account = check_login($email, $password);
+                    $has_account = check_login($email, md5($password));
                     // cho phép đăng nhập
                     if ($has_account > 0) {
                         $_SESSION['user'] = $has_account;
@@ -38,7 +38,6 @@ if (isset($_GET['act'])) {
             $view_name = 'user_login';
             $title = "Đăng nhập tài khoản";
         break;
-
         // Đăng ký tài khoản
         case 'register':
             //lay du lieu
@@ -59,7 +58,7 @@ if (isset($_GET['act'])) {
                         $_SESSION['error']['register'] = 'Đăng ký không thành công. Tài khoản này đã tồn tại';
                     } else {
                         $_SESSION['success']['register'] = 'Đăng ký tài khoản thành công.';
-                        user_add($SoDienThoai,$Email,$HoTen,$MatKhau,$DiaChi);
+                        user_add($SoDienThoai,$Email,$HoTen,md5($MatKhau),$DiaChi);
                     }
                 }
             }

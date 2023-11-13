@@ -50,13 +50,13 @@
 				</label>
 				<input type="email" name="email" class="form-input form-wide" id="register-email">
 			</div>
-			
+
 			<div class="mb-2">
 				<label for="register-phone">
 					Số điện thoại
 					<span class="required">*</span>
 				</label>
-				<input type="number" name="number_phone" class="form-input form-wide" id="register-phone">
+				<input type="text" name="number_phone" class="form-input form-wide" id="register-phone" pattern="[0-9]{10}">
 			</div>
 
 			<div class="mb-2">
@@ -99,6 +99,13 @@
 <script>
 	$(document).ready(
 		function () {
+
+			$("#register-phone").on("keyup", function () {
+				var value = $(this).val();
+				value = value.replace(/[^0-9]/g, ""); // Loại bỏ các ký tự không phải số
+				$(this).val(value);
+			});
+
 			$("#form_register").validate({
 				rules: {
 					fullname: {
@@ -159,7 +166,7 @@
 							password: password,
 							number_phone: number_phone,
 						},
-						
+
 					})
 
 				}

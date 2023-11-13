@@ -40,7 +40,7 @@
                                 <a class="nav-link" href="wishlist.html"><i class="fa-solid fa-heart"></i> &nbsp; Yêu thích</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="<?php unset($_SESSION['user'])?>"><i class="fa-solid fa-right-from-bracket"></i> &nbsp; Đăng xuất</a>
+                                <a class="nav-link" href="<?php $base_url?>logout"><i class="fa-solid fa-right-from-bracket"></i> &nbsp; Đăng xuất</a>
                             </li>
                         </ul>
                     </div>
