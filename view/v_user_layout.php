@@ -259,10 +259,7 @@
                                 <div class="col-sm-6 pr-sm-0">
                                     <div class="contact-widget m-b-3">
                                         <h4 class="widget-title font2">EMAIL:</h4>
-                                        <a
-                                            href="https://portotheme.com/cdn-cgi/l/email-protection#b4d9d5ddd8f4d1ccd5d9c4d8d19ad7dbd9"><span
-                                                class="__cf_email__"
-                                                data-cfemail="533e323a3f13362b323e233f367d303c3e">[email&#160;protected]</span></a>
+                                        <a href=""><span class="__cf_email__" data-cfemail=""> shopbeyeu@contact.com</span></a>
                                     </div>
                                 </div>
                                 <div class="col-sm-6 pl-sm-0">
@@ -287,7 +284,6 @@
                             <div class="widget">
                                 <h4 class="widget-title">Tài khoản</h4>
                                 <div class="row link-lg link-parts">
-                                    <div class="col-6 link-part">
                                         <ul class="links mb-0">
                                             <li>
                                                 <a href="dashboard.html">Tài khoản của tôi</a>
@@ -299,16 +295,6 @@
                                             <li><a href="#">Hỗ trợ sản phẩm</a></li>
                                             <li><a href="#">Quyền riêng tư</a></li>
                                         </ul>
-                                    </div>
-                                    <div class="col-6 link-part">
-                                        <ul class="links mb-0">
-                                            <li>
-                                                <a href="#">Lịch sử đơn hàng</a>
-                                            </li>
-                                            <li><a href="#">Tìm kiếm nâng cao</a></li>
-                                            <li><a href="#">Chương trình liên kết</a></li>
-                                        </ul>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -316,7 +302,6 @@
                             <div class="widget">
                                 <h4 class="widget-title">VỀ CHÚNG TÔI</h4>
                                 <div class="row">
-                                    <div class="col-sm-6">
                                         <ul class="links mb-0">
                                             <li>
                                                 <a href="about.html">Về BEYEU</a>
@@ -330,17 +315,6 @@
                                             </li>
                                             <li><a href="#">Bản đồ trang Web</a></li>
                                         </ul>
-                                    </div>
-
-                                    <div class="col-sm-6">
-                                        <ul class="links mb-0">
-                                            <li>
-                                                <a href="#">Chỉ mục trang Web</a>
-                                            </li>
-                                            <li><a href="#">BEYEU cho báo chí</a></li>
-                                            <li><a href="#">Tài khoản doanh nghiệp</a></li>
-                                        </ul>
-                                    </div>
                                 </div>
                             </div>
                         </div>
