@@ -210,19 +210,10 @@
                     </div>
                     <!-- search -->
                     <div class="header-right d-flex pr-0">
-                        <div class="header-search header-search-popup header-search-category text-right">
-                            <a href="#" class="search-toggle" role="button">
-                            <i class="fa-solid fa-magnifying-glass"></i> <span>Tìm kiếm</span></a>
-                            <form action="#" method="get">
-                                <div class="header-search-wrapper">
-                                    <div class="row">
-                                    <input type="search" class="form-control" name="q" id="q1"
-                                        placeholder="Tìm kiếm sản phẩm..." required>
-                                    </div>
-                                    <button class="btn icon-magnifier p-0" title="search" type="submit">Tìm kiếm
-                                    </button>
-                                </div>
-                            </form>
+                        <div class="header-search-main header-search header-search-category text-right">
+                            <div class="input-group input-group-main">
+                                <input type="text" name="search" placeholder="Nhập sản phẩm cần tìm kiếm">
+                                <i class="fa-solid fa-magnifying-glass"></i>
                         </div>
                     </div>
                 </div>

@@ -11367,8 +11367,36 @@ header .separator {
     position: relative
 }
 
+.header-search-main {
+    width: 250px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.input-group-main {
+    align-items: center;
+}
+
+.input-group-main input {
+    padding-left: 8px;
+    height: 40px;
+    flex: 1;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+}
+
+.input-group-main i {
+    font-size: 20px;
+    padding: 10px;
+    cursor: pointer;
+    background-color: #ff5b5b;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+}
+
 .header-search form {
-    margin: 0
+    margin: 0;
 }
 
 .header-search .form-control,
