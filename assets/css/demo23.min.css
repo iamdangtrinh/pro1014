@@ -11378,7 +11378,7 @@ header .separator {
 }
 
 .input-group-main input {
-    padding-left: 8px;
+    padding: 0 10px 0;
     height: 40px;
     flex: 1;
     border: none;
