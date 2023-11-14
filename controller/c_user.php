@@ -24,6 +24,8 @@ if (isset($_GET['act'])) {
                     // cho phép đăng nhập
                     if ($has_account > 0) {
                         $_SESSION['user'] = $has_account;
+                        // echo "Đăng nhập thành công";     
+                        sleep(0.3);
                         if($_SESSION['user']['VaiTro'] == 1) {
                             header('location: ' . $base_url . 'admin/dashboard');
                         } else {
@@ -32,6 +34,7 @@ if (isset($_GET['act'])) {
                         // Chuyển về trang chủ
                     } else if ($has_account == 0) {
                         $_SESSION['error']['login'] = "Tài khoản hoặc mật khẩu sai. Vui lòng thử lại";
+                        // echo "Tài khoản hoặc mật khẩu sai. Vui lòng thử lại";
                     }
                 }
             }
@@ -52,6 +55,8 @@ if (isset($_GET['act'])) {
     
                 if($Email == "" || empty($Email)) {
                     $_SESSION['error']['register'] = 'Đăng ký không thành công';
+                } else if(!preg_match("/@/", $Email)) {
+                    $_SESSION['error']['register'] = 'Đăng ký không thành công. Email không hợp lệ';
                 } else {
                     // cho phép đăng ký tài khoản
                     if(has_email($Email) > 0) {
