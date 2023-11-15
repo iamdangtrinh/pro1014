@@ -17761,8 +17761,6 @@ span.toggle {
     line-height: 26px
 }
 
-.product-desc-content {}
-
 .product-desc-content li,
 .product-desc-content ul {
     letter-spacing: inherit
@@ -17912,8 +17910,7 @@ span.toggle {
 .contact-two .contact-time .contact-title {
     margin-bottom: 1.3rem
 }
-
 .contact-two .contact-time .porto-sicon-title {
     margin-top: 0;
-    margin-bottom: 1px
+    margin-bottom: 1px;
 }

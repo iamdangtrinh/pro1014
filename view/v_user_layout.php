@@ -8,8 +8,6 @@
     <title><?= $title ?></title>
     <meta name="description" content="Website bán hàng">
     <!-- Favicon -->
-
-    
     <link rel="icon" type="image/x-icon" href="<?= $base_url ?>upload/icons/favicon.png">
 
     <!-- linh cdn fontawesome -->
@@ -21,7 +19,6 @@
     <!-- Main CSS File -->
     <link rel="stylesheet" href="<?= $base_url ?>assets/css/style23.css">
     <link rel="stylesheet" href="<?= $base_url ?>assets/css/demo23.min.css">
-    
     <link rel="stylesheet" href="<?= $base_url ?>assets/css/all.min.css">
 
     <!-- Js -->
@@ -42,7 +39,7 @@
                 <i class="fa-solid fa-truck"></i> <b class="text-uppercase">Miễn phí vận chuyển</b>&nbsp;hóa đơn từ
                 300.000 VND hoặc nhiều hơn!
                 Code:&nbsp;<b class="text-uppercase">Cáigìđó</b>&nbsp;| Hạn chế áp dụng.&nbsp;<a
-                    href="demo23-shop.html" class="text-dark">Xem tất cả ưu đãi</a>
+                    href="" class="text-dark">Xem tất cả ưu đãi</a>
             </div>
             <button title="Close (Esc)" type="button" class="mfp-close">×</button>
         </div>
@@ -100,12 +97,11 @@
                                 <div class="dropdownmenu-wrapper custom-scrollbar">
                                     <div class="dropdown-cart-header">Giỏ hàng</div>
                                     
-
                                     <div class="dropdown-cart-products">
                                         <div class="product">
                                             <div class="product-details">
                                                 <h4 class="product-title">
-                                                    <a href="demo23-product.html">Tên sản phẩm</a>
+                                                    <a href="">Tên sản phẩm</a>
                                                 </h4>
 
                                                 <span class="cart-product-info">
@@ -115,7 +111,7 @@
                                             </div>
 
                                             <figure class="product-image-container">
-                                                <a href="demo23-product.html" class="product-image">
+                                                <a href="" class="product-image">
                                                     <img src="<?= $base_url ?>upload/products/product-1.jpg"
                                                         alt="product" width="80" height="80">
                                                 </a>
@@ -185,13 +181,13 @@
                                     </div>
                                 </li>
                                 <li>
-                                    <a href="demo23-product.html">Sản phẩm <i class="fa-solid fa-caret-down"></i></a>
+                                    <a href="">Sản phẩm <i class="fa-solid fa-caret-down"></i></a>
                                     <div class="megamenu megamenu-fixed-width">
                                         <div class="row">
                                             <div class="col-lg-4">
                                                 <a href="#" class="nolink">Trang sản phẩm</a>
                                                 <ul class="submenu">
-                                                    <li><a href="demo23-product.html">SIMPLE PRODUCT</a></li>
+                                                    <li><a href="">SIMPLE PRODUCT</a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -232,7 +228,7 @@
                         <div class="col-lg-6 col-xl-4">
                             <a href="#">
                                 <img class="logo mb-3" src="<?= $base_url ?>upload/demoes/demo23/logo.png"
-                                    alt="Porto Logo" width="113" height="48"></a>
+                                    alt="SHop bé yêu" width="113" height="48"></a>
 
                             <div class="row">
                                 <div class="col-sm-6 pr-sm-0">
@@ -361,18 +357,18 @@
                 <ul class="mobile-menu">
                     <li><a href="<?= $base_url ?>page/home">Home</a></li>
                     <li>
-                        <a href="demo23-shop.html">Categories</a>
+                        <a href="">Categories</a>
                         <ul>
                             <li><a href="category-8col.html">8 Columns Products</a></li>
                         </ul>
                     </li>
                     <li>
-                        <a href="demo23-product.html">Products</a>
+                        <a href="">Products</a>
                         <ul>
                             <li>
                                 <a href="#" class="nolink">PRODUCT PAGES</a>
                                 <ul>
-                                    <li><a href="demo23-product.html">SIMPLE PRODUCT</a></li>
+                                    <li><a href="">SIMPLE PRODUCT</a></li>
                                 </ul>
                             </li>
                             <li>
@@ -427,7 +423,7 @@
             </a>
         </div>
         <div class="sticky-info">
-            <a href="demo23-shop.html" class="">
+            <a href="" class="">
                 <i class="icon-bars"></i>Categories
             </a>
         </div>

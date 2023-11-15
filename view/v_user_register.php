@@ -48,7 +48,7 @@
 					Địa chỉ Email
 					<span class="required">*</span>
 				</label>
-				<input type="email" name="email" class="form-input form-wide" id="register-email">
+				<input type="text" name="email" class="form-input form-wide" id="register-email">
 			</div>
 
 			<div class="mb-2">
