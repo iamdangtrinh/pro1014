@@ -29,7 +29,7 @@
         body {
             font-family: Arial, Helvetica, sans-serif;
         }
-</style>
+    </style>
 </head>
 
 <body>
@@ -38,8 +38,7 @@
             <div class="container-fluid text-center m-auto text-dark">
                 <i class="fa-solid fa-truck"></i> <b class="text-uppercase">Miễn phí vận chuyển</b>&nbsp;hóa đơn từ
                 300.000 VND hoặc nhiều hơn!
-                Code:&nbsp;<b class="text-uppercase">Cáigìđó</b>&nbsp;| Hạn chế áp dụng.&nbsp;<a
-                    href="" class="text-dark">Xem tất cả ưu đãi</a>
+                Code:&nbsp;<b class="text-uppercase">Cáigìđó</b>&nbsp;| Hạn chế áp dụng.&nbsp;<a href="" class="text-dark">Xem tất cả ưu đãi</a>
             </div>
             <button title="Close (Esc)" type="button" class="mfp-close">×</button>
         </div>
@@ -52,16 +51,15 @@
                             <i class="fas fa-bars"></i>
                         </button>
                         <a href="<?= $base_url ?>page/home" class="logo">
-                            <img src="<?= $base_url ?>upload/demoes/demo23/logo.png" alt="Porto Logo" width="113"
-                                height="48">
+                            <img src="<?= $base_url ?>upload/demoes/demo23/logo.png" alt="Porto Logo" width="113" height="48">
                         </a>
                     </div>
 
                     <div class="header-right">
-                        <?php if (isset($_SESSION['user'])): ?>
+                        <?php if (isset($_SESSION['user'])) : ?>
                             <a href="<?= $base_url ?>user/dashboard" class="header-icon d-lg-block d-none">
                                 <div class="header-user">
-                                    <img src="<?=$base_url?>upload/avatar/<?= $_SESSION['user']['HinhAnh'] ?>" alt="Avatar">
+                                    <img src="<?= $base_url ?>upload/avatar/<?= $_SESSION['user']['HinhAnh'] ?>" alt="Avatar">
                                     <div class="header-userinfo">
                                         <span class="d-inline-block font2 line-height-1">Xin chào!</span>
                                         <h4 class="mb-0">
@@ -70,11 +68,9 @@
                                     </div>
                                 </div>
                             </a>
-                        <?php else: ?>
-                            <a href="<?= $base_url ?>user/register"
-                                class="btn btn-outline-primary p-3 mr-2 line-height-1">Đăng ký</a>
-                            <a href="<?= $base_url ?>user/login"
-                                class="btn btn-outline-primary p-3 mr-4 line-height-1">Đăng nhập</a>
+                        <?php else : ?>
+                            <a href="<?= $base_url ?>user/register" class="btn btn-outline-primary p-3 mr-2 line-height-1">Đăng ký</a>
+                            <a href="<?= $base_url ?>user/login" class="btn btn-outline-primary p-3 mr-4 line-height-1">Đăng nhập</a>
                         <?php endif ?>
 
                         <a href="wishlist.html" class="header-icon">
@@ -83,8 +79,7 @@
 
                         <!-- menu mobile -->
                         <div class="dropdown cart-dropdown">
-                            <a href="#" title="Cart" class="dropdown-toggle cart-toggle" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-display="static">
+                            <a href="#" title="Cart" class="dropdown-toggle cart-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-display="static">
                                 <i class="minicart-icon"></i>
                                 <span class="cart-count badge-circle">3</span>
                             </a>
@@ -96,7 +91,7 @@
 
                                 <div class="dropdownmenu-wrapper custom-scrollbar">
                                     <div class="dropdown-cart-header">Giỏ hàng</div>
-                                    
+
                                     <div class="dropdown-cart-products">
                                         <div class="product">
                                             <div class="product-details">
@@ -112,8 +107,7 @@
 
                                             <figure class="product-image-container">
                                                 <a href="" class="product-image">
-                                                    <img src="<?= $base_url ?>upload/products/product-1.jpg"
-                                                        alt="product" width="80" height="80">
+                                                    <img src="<?= $base_url ?>upload/products/product-1.jpg" alt="product" width="80" height="80">
                                                 </a>
 
                                                 <a href="#" class="btn-remove" title="Remove Product"><span>×</span></a>
@@ -135,19 +129,15 @@
                             </div>
                         </div>
 
-                        <div
-                            class="header-search header-search-popup header-search-category text-right d-flex d-lg-none">
-                            <a href="#" class="search-toggle" role="button"><i
-                                    class="icon-magnifier"></i><span>Tìm kiếm</span></a>
+                        <div class="header-search header-search-popup header-search-category text-right d-flex d-lg-none">
+                            <a href="#" class="search-toggle" role="button"><i class="icon-magnifier"></i><span>Tìm kiếm</span></a>
                             <form action="#" method="get">
                                 <div class="header-search-wrapper">
-                                    <input type="search" class="form-control" name="q" id="q"
-                                        placeholder="Nhập tên sản phẩm..." required>
+                                    <input type="search" class="form-control" name="q" id="q" placeholder="Nhập tên sản phẩm..." required>
                                     <div class="select-custom">
-                                      
+
                                     </div>
-                                    <button class="btn p-0" type="submit"><i
-                                    class="icon-magnifier"></i></button>
+                                    <button class="btn p-0" type="submit"><i class="icon-magnifier"></i></button>
                                 </div>
                             </form>
                         </div>
@@ -157,7 +147,7 @@
 
             <div class="header-bottom sticky-header" data-sticky-options="{'mobile': false}">
                 <div class="container-fluid">
-                    <div class="header-center w-auto">
+                    <div class="header-center w-auto" style="margin-left:33%">
                         <nav class="main-nav">
                             <ul class="menu">
                                 <li class="active">
@@ -205,15 +195,21 @@
                         </nav>
                     </div>
                     <!-- search -->
-                    <div class="header-right d-flex pr-0">
+                    <div class="d-flex pr-0">
                         <div class="header-search-main header-search header-search-category text-right">
-                            <div class="input-group input-group-main">
-                                <input type="text" name="search" placeholder="Nhập sản phẩm cần tìm kiếm">
+                            <div class="input-group input-group-main input-focus">
+                                <input class="form-input" type="text" name="search" placeholder="Nhập sản phẩm cần tìm kiếm">
+                                <div class="row input-search">
+                                    <div class="col-md-4 img-focus">
+                                        <img  src="<?= $base_url ?>upload/demoes/demo23/products/product-1.jpg" width="50" height="50" alt="product">
+                                    </div>
+                                    <div class="col-md-8 mt-2 content-focus">Giày đan </div>
+                                </div>
                                 <i class="fa-solid fa-magnifying-glass"></i>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
         </header>
 
         <main class="main">
@@ -227,8 +223,7 @@
                     <div class="row">
                         <div class="col-lg-6 col-xl-4">
                             <a href="#">
-                                <img class="logo mb-3" src="<?= $base_url ?>upload/demoes/demo23/logo.png"
-                                    alt="SHop bé yêu" width="113" height="48"></a>
+                                <img class="logo mb-3" src="<?= $base_url ?>upload/demoes/demo23/logo.png" alt="SHop bé yêu" width="113" height="48"></a>
 
                             <div class="row">
                                 <div class="col-sm-6 pr-sm-0">
@@ -259,29 +254,26 @@
                                 </div>
                             </div>
                             <div class="social-icons mt-1 mb-3">
-                                <a href="#" class="social-icon social-facebook" target="_blank"><i
-                                        class="fab fa-facebook-f"></i></a>
-                                <a href="#" class="social-icon social-twitter" target="_blank"><i
-                                        class="fab fa-twitter"></i></a>
-                                <a href="#" class="social-icon social-linkedin" target="_blank"><i
-                                        class="fab fa-linkedin-in"></i></a>
+                                <a href="#" class="social-icon social-facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" class="social-icon social-twitter" target="_blank"><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="social-icon social-linkedin" target="_blank"><i class="fab fa-linkedin-in"></i></a>
                             </div>
                         </div>
                         <div class="col-lg-6 col-xl-2">
                             <div class="widget">
                                 <h4 class="widget-title">Tài khoản</h4>
                                 <div class="row link-lg link-parts">
-                                        <ul class="links mb-0">
-                                            <li>
-                                                <a href="dashboard.html">Tài khoản của tôi</a>
-                                            </li>
-                                            <li><a href="#">Theo dõi đơn hàng của bạn</a></li>
-                                            <li><a href="#">Phương thức thanh toán</a></li>
-                                            <li><a href="#">Hướng dẫn vận chuyển</a></li>
-                                            <li><a href="#">Câu hỏi thường gặp</a></li>
-                                            <li><a href="#">Hỗ trợ sản phẩm</a></li>
-                                            <li><a href="#">Quyền riêng tư</a></li>
-                                        </ul>
+                                    <ul class="links mb-0">
+                                        <li>
+                                            <a href="dashboard.html">Tài khoản của tôi</a>
+                                        </li>
+                                        <li><a href="#">Theo dõi đơn hàng của bạn</a></li>
+                                        <li><a href="#">Phương thức thanh toán</a></li>
+                                        <li><a href="#">Hướng dẫn vận chuyển</a></li>
+                                        <li><a href="#">Câu hỏi thường gặp</a></li>
+                                        <li><a href="#">Hỗ trợ sản phẩm</a></li>
+                                        <li><a href="#">Quyền riêng tư</a></li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -289,19 +281,19 @@
                             <div class="widget">
                                 <h4 class="widget-title">VỀ CHÚNG TÔI</h4>
                                 <div class="row">
-                                        <ul class="links mb-0">
-                                            <li>
-                                                <a href="about.html">Về BEYEU</a>
-                                            </li>
-                                            <li><a href="#">Cam kết của chúng tôi</a></li>
-                                            <li><a href="#">Điều khoản và điều kiện</a></li>
-                                            <li><a href="#">Chính sách quyền riêng tư</a></li>
-                                            <li><a href="#">Chính sách đổi trả</a></li>
-                                            <li>
-                                                <a href="#">Yêu cầu quyền sở hữu trí tuệ</a>
-                                            </li>
-                                            <li><a href="#">Bản đồ trang Web</a></li>
-                                        </ul>
+                                    <ul class="links mb-0">
+                                        <li>
+                                            <a href="about.html">Về BEYEU</a>
+                                        </li>
+                                        <li><a href="#">Cam kết của chúng tôi</a></li>
+                                        <li><a href="#">Điều khoản và điều kiện</a></li>
+                                        <li><a href="#">Chính sách quyền riêng tư</a></li>
+                                        <li><a href="#">Chính sách đổi trả</a></li>
+                                        <li>
+                                            <a href="#">Yêu cầu quyền sở hữu trí tuệ</a>
+                                        </li>
+                                        <li><a href="#">Bản đồ trang Web</a></li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -314,8 +306,7 @@
                                     </div>
                                     <form action="#">
                                         <div class="footer-submit-wrapper d-flex">
-                                            <input type="email" class="form-control mb-0" placeholder="Địa chỉ Email"
-                                                size="40" required>
+                                            <input type="email" class="form-control mb-0" placeholder="Địa chỉ Email" size="40" required>
                                             <button type="submit" class="btn btn-primary btn-sm ls-0">Đăng ký</button>
                                         </div>
                                     </form>

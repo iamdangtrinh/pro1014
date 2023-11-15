@@ -11368,6 +11368,7 @@ header .separator {
 }
 
 .header-search-main {
+    position: relative;
     width: 300px;
     border: 1px solid #ccc;
     border-radius: 6px;
@@ -17915,4 +17916,28 @@ span.toggle {
 .contact-two .contact-time .porto-sicon-title {
     margin-top: 0;
     margin-bottom: 1px;
+}
+.input-focus{
+    position: relative;   
+}
+.img-focus{
+    display: inline-block;
+    padding: 2px;
+}
+.content-focus{
+    text-align: left;
+}
+.input-search{
+    border-radius: 5px;
+    position: absolute;
+    bottom: -65px;
+    border: 1px solid #c4c0c0;
+    width: 259px;
+    left: 10px;
+    display: none;
+}
+.form-input:focus + .input-search{
+    display:flex;
+    background-color: #fff;
+    z-index: 999;
 }
