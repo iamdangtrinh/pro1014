@@ -957,7 +957,7 @@
 .owl-theme .owl-dots .owl-dot {
     display: inline-block;
     zoom: 1;
-    *display: inline
+    display: inline;
 }
 
 .owl-theme .owl-dots .owl-dot span {
@@ -6034,11 +6034,11 @@ figure .porto-loading-icon {
 }
 
 .product-default .product-label.label-hot {
-    background-color: #2ba968
+    background-color: #CA3232
 }
 
 .product-default .product-label.label-sale {
-    background-color: #da5555
+    background-color: #C8A8A9
 }
 
 .product-default .product-label.label-number {
@@ -14631,7 +14631,9 @@ span.toggle:before {
     padding: 6.8rem 0
 }
 
-.category-banner .coupon-sale-text {}
+.category-banner .coupon-sale-text {
+
+};
 
 .category-banner h3 {
     font-size: 3em;
@@ -15815,7 +15817,7 @@ main .sticky-header .product-ratings:before {
 }
 
 .product-single-gallery .product-label.label-hot {
-    background-color: #2ba968
+    background-color: #CA3232
 }
 
 .product-single-gallery .product-label.label-sale {
