@@ -20,8 +20,8 @@
                                     <tr>
                                         <th class="thumbnail-col"></th>
                                         <th class="product-col">Sản Phẩm</th>
-                                        <th class="price-col">Giá</th>
-                                        <th class="qty-col">Số Lượng</th>
+                                        <th class="price-col text-center">Giá</th>
+                                        <th class="qty-col text-center">Số Lượng</th>
                                         <th class="text-right">Tổng Hợp</th>
                                     </tr>
                                 </thead>
@@ -34,72 +34,65 @@
                                                         alt="product">
                                                 </a>
 
-                                                <a href="#" class="btn-remove icon-cancel" title="Remove Product"></a>
+                                                <a href="#" class="btn-remove" title="Remove Product"><i class="fa-solid fa-xmark"></i></a>
                                             </figure>
                                         </td>
-                                        <td class="product-col">
-                                            <h5 class="product-title">
-                                                <a href="product.html">Men Watch</a>
-                                            </h5>
+                                        <td class="product-col text-left">
+                                            <a href="product.html">Men Watch</a>
                                         </td>
-                                        <td>$17.90</td>
+                                        <td class="m-auto">$17.90</td>
                                         <td>
                                             <div class="product-single-qty">
                                                 <input class="horizontal-quantity form-control" type="text">
                                             </div><!-- End .product-single-qty -->
                                         </td>
-                                        <td class="text-right"><span class="subtotal-price">$17.90</span></td>
+                                        <td class="text-right m-auto"><span class="subtotal-price">$17.90</span></td>
                                     </tr>
-
                                     <tr class="product-row">
                                         <td>
                                             <figure class="product-image-container">
                                                 <a href="product.html" class="product-image">
-                                                    <img src="<?=$base_url?>upload/products/product-3.jpg"
+                                                    <img src="<?=$base_url?>upload/products/product-4.jpg"
                                                         alt="product">
                                                 </a>
 
-                                                <a href="#" class="btn-remove icon-cancel" title="Remove Product"></a>
+                                                <a href="#" class="btn-remove" title="Remove Product"><i class="fa-solid fa-xmark"></i></a>
                                             </figure>
                                         </td>
-                                        <td class="product-col">
-                                            <h5 class="product-title">
-                                                <a href="product.html">ĐỒ CHƠI CHO BÉ</a>
-                                            </h5>
+                                        <td class="product-col text-left">
+                                            <a href="product.html">Men Watch</a>
                                         </td>
-                                        <td>17.000đ</td>
+                                        <td class="m-auto">$17.90</td>
                                         <td>
                                             <div class="product-single-qty">
                                                 <input class="horizontal-quantity form-control" type="text">
                                             </div><!-- End .product-single-qty -->
                                         </td>
-                                        <td class="text-right"><span class="subtotal-price">17.000đ</span></td>
+                                        <td class="text-right m-auto"><span class="subtotal-price">$17.90</span></td>
                                     </tr>
-
                                     <tr class="product-row">
                                         <td>
                                             <figure class="product-image-container">
                                                 <a href="product.html" class="product-image">
-                                                    <img src="<?=$base_url?>upload/products/product-6.jpg"
+                                                    <img src="<?=$base_url?>upload/products/product-4.jpg"
                                                         alt="product">
                                                 </a>
 
-                                                <a href="#" class="btn-remove icon-cancel" title="Remove Product"></a>
+                                                <a href="#" class="btn-remove" title="Remove Product"><i class="fa-solid fa-xmark"></i></a>
                                             </figure>
                                         </td>
-                                        <td class="product-col">
-                                            <h5 class="product-title">
-                                                <a href="product.html">Quần ÁO CHO BÉ</a>
-                                            </h5>
+                                        <td class="product-col text-left">
+                                            <a href="product.html">Men Watch</a>
                                         </td>
-                                        <td>17.000đ</td>
+                                        <td class="m-auto">$17.90</td>
                                         <td>
                                             <div class="product-single-qty">
                                                 <input class="horizontal-quantity form-control" type="text">
                                             </div><!-- End .product-single-qty -->
                                         </td>
-                                        <td class="text-right"><span class="subtotal-price">17.000đ</span></td>
+                                        <td class="text-right m-auto"><span class="subtotal-price">$17.90</span></td>
                                     </tr>
+                                    
                                 </tbody>
 
 
