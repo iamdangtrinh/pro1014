@@ -213,21 +213,26 @@
                     <!-- search -->
                     <div class="d-flex pr-0">
                         <div class="header-search-main header-search header-search-category text-right">
+                            <form id="form_search" action="" method="post">
+
                                 <div class="input-group input-group-main input-focus">
-                                    <input autocomplete="off" class="form-input" type="text" name="search"
+                                    <input autocomplete="off" class="form-input" id="search_ajax" type="text" name="search"
                                         placeholder="Nhập sản phẩm cần tìm kiếm">
-                                        <div class="row input-search">
-                                            <div class="col-md-4 img-focus">
-                                                <img src="<?= $base_url ?>upload/demoes/demo23/products/product-1.jpg" width="50"
-                                                height="50" alt="product">
-                                            </div>
-                                            <div class="col-md-8 mt-2 content-focus">Giày đan </div>
+                                    <div class="row input-search">
+                                        <div class="col-md-4 img-focus">
+                                            <img src="<?= $base_url ?>upload/demoes/demo23/products/product-1.jpg"
+                                                width="50" height="50" alt="product">
                                         </div>
-                                        <i class="fa-solid fa-magnifying-glass"></i>
+                                        <div class="col-md-8 mt-2 content-focus">Giày đan </div>
+                                    </div>
+                                    <input type="submit" name="search" value="Tìm ngay" class="btn-primary">
+
+                                </div>
+                            </form>
                         </div>
+
                     </div>
                 </div>
-            </div>
         </header>
 
         <main class="main">
@@ -506,6 +511,30 @@
     <script src="<?= $base_url ?>assets/js/jquery.plugin.min.js"></script>
     <script src="<?= $base_url ?>assets/js/main.min.js"></script>
     <script src="<?= $base_url ?>assets/js/map.js"></script>
+
+    <script>
+        $(document).ready(
+            function() {
+
+                $("#search_ajax").keyup(function() {
+                    var search_item = $(this).val();
+                    if(search_item != "") {
+                        $.ajax({
+                            url: '',
+                            method: 'POST',
+                            data: {
+                                search_keyword:search_item
+                            },
+                            success:function(data) {
+                                
+                            }
+                        })
+                    }
+
+                })
+
+            })
+    </script>
 </body>
 
 
