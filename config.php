@@ -4,5 +4,5 @@
     $view_name='';
     $title ="Trang chủ";
     $base_url='http://localhost/pro1041/';
-  
+    
 ?>

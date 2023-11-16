@@ -63,7 +63,7 @@
 
                     <div class="header-right">
                         <?php if (isset($_SESSION['user'])): ?>
-                            <a href="<?= $base_url ?>user/dashboard" class="header-icon d-lg-block d-none">
+                            <a href="<?= $base_url?>user/dashboard" class="header-icon d-lg-block d-none">
                                 <div class="header-user">
                                     <img src="<?= $base_url ?>upload/avatar/<?= $_SESSION['user']['HinhAnh'] ?>"
                                         alt="Avatar">
@@ -513,7 +513,7 @@
     <script src="<?= $base_url ?>assets/js/main.min.js"></script>
     <script src="<?= $base_url ?>assets/js/map.js"></script>
 
-    <script>
+    <!-- <script>
         $(document).ready(
             function() {
 
@@ -533,7 +533,7 @@
                 })
 
             })
-    </script>
+    </script> -->
 </body>
 
 

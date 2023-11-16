@@ -1,7 +1,7 @@
 
 <?php 
-  session_start();
-  ob_start();
+    session_start();
+    ob_start();
     include_once 'config.php';
     include_once 'model/m_pdo.php';
     include_once 'model/m_product.php';

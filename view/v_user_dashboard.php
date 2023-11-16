@@ -22,11 +22,11 @@
                         <h2 class="text-uppercase m-3">Tài Khoản</h2>
                         <ul class="nav nav-tabs list flex-column mb-0" role="tablist">
                             <li class="nav-item">
-                                <a class="nav-link active" id="dashboard-tab" data-toggle="tab" href="#dashboard"
+                                <a class="nav-link " id="dashboard-tab" data-toggle="tab" href="#dashboard"
                                     role="tab" aria-controls="dashboard" aria-selected="true"><i class="fa-brands fa-windows"></i> &nbsp; Bảng Điều Khiển</a>
                             </li>
 
-                            <li class="nav-item">
+                            <li class="nav-item active">
                                 <a class="nav-link" id="order-tab" data-toggle="tab" href="#order" role="tab"
                                     aria-controls="order" aria-selected="true"><i class="fa-solid fa-user"></i> &nbsp; Thông tin tài khoản</a>
                             </li>
@@ -89,7 +89,7 @@
 
                                     <div class="col-6 col-md-4">
                                         <div class="feature-box text-center pb-4">
-                                            <a href="<?php unset($_SESSION['user'])?>"><i class="fa-solid fa-right-from-bracket"></i></a>
+                                            <a href=""><i class="fa-solid fa-right-from-bracket"></i></a>
                                             <div class="feature-box-content">
                                                 <h3>ĐĂNG XUẤT</h3>
                                             </div>
