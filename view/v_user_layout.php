@@ -5,13 +5,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title><?= $title ?></title>
+    <title>
+        <?= $title ?>
+    </title>
     <meta name="description" content="Website bán hàng">
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="<?= $base_url ?>upload/icons/favicon.png">
 
     <!-- linh cdn fontawesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- Plugins CSS File -->
     <link rel="stylesheet" href="<?= $base_url ?>assets/css/bootstrap.min.css">
@@ -38,7 +42,8 @@
             <div class="container-fluid text-center m-auto text-dark">
                 <i class="fa-solid fa-truck"></i> <b class="text-uppercase">Miễn phí vận chuyển</b>&nbsp;hóa đơn từ
                 300.000 VND hoặc nhiều hơn!
-                Code:&nbsp;<b class="text-uppercase">Cáigìđó</b>&nbsp;| Hạn chế áp dụng.&nbsp;<a href="" class="text-dark">Xem tất cả ưu đãi</a>
+                Code:&nbsp;<b class="text-uppercase">Cáigìđó</b>&nbsp;| Hạn chế áp dụng.&nbsp;<a href=""
+                    class="text-dark">Xem tất cả ưu đãi</a>
             </div>
             <button title="Close (Esc)" type="button" class="mfp-close">×</button>
         </div>
@@ -51,15 +56,17 @@
                             <i class="fas fa-bars"></i>
                         </button>
                         <a href="<?= $base_url ?>page/home" class="logo">
-                            <img src="<?= $base_url ?>upload/demoes/demo23/logo.png" alt="Porto Logo" width="113" height="48">
+                            <img src="<?= $base_url ?>upload/demoes/demo23/logo.png" alt="Porto Logo" width="113"
+                                height="48">
                         </a>
                     </div>
 
                     <div class="header-right">
-                        <?php if (isset($_SESSION['user'])) : ?>
+                        <?php if (isset($_SESSION['user'])): ?>
                             <a href="<?= $base_url ?>user/dashboard" class="header-icon d-lg-block d-none">
                                 <div class="header-user">
-                                    <img src="<?= $base_url ?>upload/avatar/<?= $_SESSION['user']['HinhAnh'] ?>" alt="Avatar">
+                                    <img src="<?= $base_url ?>upload/avatar/<?= $_SESSION['user']['HinhAnh'] ?>"
+                                        alt="Avatar">
                                     <div class="header-userinfo">
                                         <span class="d-inline-block font2 line-height-1">Xin chào!</span>
                                         <h4 class="mb-0">
@@ -68,9 +75,11 @@
                                     </div>
                                 </div>
                             </a>
-                        <?php else : ?>
-                            <a href="<?= $base_url ?>user/register" class="btn btn-outline-primary p-3 mr-2 line-height-1">Đăng ký</a>
-                            <a href="<?= $base_url ?>user/login" class="btn btn-outline-primary p-3 mr-4 line-height-1">Đăng nhập</a>
+                        <?php else: ?>
+                            <a href="<?= $base_url ?>user/register"
+                                class="btn btn-outline-primary p-3 mr-2 line-height-1">Đăng ký</a>
+                            <a href="<?= $base_url ?>user/login" class="btn btn-outline-primary p-3 mr-4 line-height-1">Đăng
+                                nhập</a>
                         <?php endif ?>
 
                         <a href="wishlist.html" class="header-icon">
@@ -79,7 +88,8 @@
 
                         <!-- menu mobile -->
                         <div class="dropdown cart-dropdown">
-                            <a href="#" title="Cart" class="dropdown-toggle cart-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-display="static">
+                            <a href="#" title="Cart" class="dropdown-toggle cart-toggle" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-display="static">
                                 <i class="minicart-icon"></i>
                                 <span class="cart-count badge-circle">3</span>
                             </a>
@@ -107,7 +117,8 @@
 
                                             <figure class="product-image-container">
                                                 <a href="" class="product-image">
-                                                    <img src="<?= $base_url ?>upload/products/product-1.jpg" alt="product" width="80" height="80">
+                                                    <img src="<?= $base_url ?>upload/products/product-1.jpg"
+                                                        alt="product" width="80" height="80">
                                                 </a>
 
                                                 <a href="#" class="btn-remove" title="Remove Product"><span>×</span></a>
@@ -129,11 +140,14 @@
                             </div>
                         </div>
 
-                        <div class="header-search header-search-popup header-search-category text-right d-flex d-lg-none">
-                            <a href="#" class="search-toggle" role="button"><i class="icon-magnifier"></i><span>Tìm kiếm</span></a>
+                        <div
+                            class="header-search header-search-popup header-search-category text-right d-flex d-lg-none">
+                            <a href="#" class="search-toggle" role="button"><i class="icon-magnifier"></i><span>Tìm
+                                    kiếm</span></a>
                             <form action="#" method="get">
                                 <div class="header-search-wrapper">
-                                    <input type="search" class="form-control" name="q" id="q" placeholder="Nhập tên sản phẩm..." required>
+                                    <input type="search" class="form-control" name="q" id="q"
+                                        placeholder="Nhập tên sản phẩm..." required>
                                     <div class="select-custom">
 
                                     </div>
@@ -154,7 +168,8 @@
                                     <a href="<?= $base_url ?>page/home">Trang chủ</a>
                                 </li>
                                 <li>
-                                    <a href="<?= $base_url ?>page/shop">Danh mục <i class="fa-solid fa-caret-down"></i></a>
+                                    <a href="<?= $base_url ?>page/shop">Danh mục <i
+                                            class="fa-solid fa-caret-down"></i></a>
                                     <div class="megamenu megamenu-fixed-width megamenu-3cols">
                                         <div class="row">
                                             <div class="col-lg-4">
@@ -171,7 +186,8 @@
                                     </div>
                                 </li>
                                 <li>
-                                    <a href="<?= $base_url ?>page/shop">Sản phẩm <i class="fa-solid fa-caret-down"></i></a>
+                                    <a href="<?= $base_url ?>page/shop">Sản phẩm <i
+                                            class="fa-solid fa-caret-down"></i></a>
                                     <div class="megamenu megamenu-fixed-width">
                                         <div class="row">
                                             <div class="col-lg-4">
@@ -197,19 +213,21 @@
                     <!-- search -->
                     <div class="d-flex pr-0">
                         <div class="header-search-main header-search header-search-category text-right">
-                            <div class="input-group input-group-main input-focus">
-                                <input class="form-input" type="text" name="search" placeholder="Nhập sản phẩm cần tìm kiếm">
-                                <div class="row input-search">
-                                    <div class="col-md-4 img-focus">
-                                        <img  src="<?= $base_url ?>upload/demoes/demo23/products/product-1.jpg" width="50" height="50" alt="product">
-                                    </div>
-                                    <div class="col-md-8 mt-2 content-focus">Giày đan </div>
-                                </div>
-                                <i class="fa-solid fa-magnifying-glass"></i>
-                            </div>
+                                <div class="input-group input-group-main input-focus">
+                                    <input autocomplete="off" class="form-input" type="text" name="search"
+                                        placeholder="Nhập sản phẩm cần tìm kiếm">
+                                        <div class="row input-search">
+                                            <div class="col-md-4 img-focus">
+                                                <img src="<?= $base_url ?>upload/demoes/demo23/products/product-1.jpg" width="50"
+                                                height="50" alt="product">
+                                            </div>
+                                            <div class="col-md-8 mt-2 content-focus">Giày đan </div>
+                                        </div>
+                                        <i class="fa-solid fa-magnifying-glass"></i>
                         </div>
                     </div>
                 </div>
+            </div>
         </header>
 
         <main class="main">
@@ -223,7 +241,8 @@
                     <div class="row">
                         <div class="col-lg-6 col-xl-4">
                             <a href="#">
-                                <img class="logo mb-3" src="<?= $base_url ?>upload/demoes/demo23/logo.png" alt="SHop bé yêu" width="113" height="48"></a>
+                                <img class="logo mb-3" src="<?= $base_url ?>upload/demoes/demo23/logo.png"
+                                    alt="SHop bé yêu" width="113" height="48"></a>
 
                             <div class="row">
                                 <div class="col-sm-6 pr-sm-0">
@@ -241,7 +260,8 @@
                                 <div class="col-sm-6 pr-sm-0">
                                     <div class="contact-widget m-b-3">
                                         <h4 class="widget-title font2">EMAIL:</h4>
-                                        <a href=""><span class="__cf_email__" data-cfemail=""> shopbeyeu@contact.com</span></a>
+                                        <a href=""><span class="__cf_email__" data-cfemail="">
+                                                shopbeyeu@contact.com</span></a>
                                     </div>
                                 </div>
                                 <div class="col-sm-6 pl-sm-0">
@@ -254,9 +274,12 @@
                                 </div>
                             </div>
                             <div class="social-icons mt-1 mb-3">
-                                <a href="#" class="social-icon social-facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                                <a href="#" class="social-icon social-twitter" target="_blank"><i class="fab fa-twitter"></i></a>
-                                <a href="#" class="social-icon social-linkedin" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#" class="social-icon social-facebook" target="_blank"><i
+                                        class="fab fa-facebook-f"></i></a>
+                                <a href="#" class="social-icon social-twitter" target="_blank"><i
+                                        class="fab fa-twitter"></i></a>
+                                <a href="#" class="social-icon social-linkedin" target="_blank"><i
+                                        class="fab fa-linkedin-in"></i></a>
                             </div>
                         </div>
                         <div class="col-lg-6 col-xl-2">
@@ -302,11 +325,13 @@
                                 <h4 class="widget-title">BẢN TIN</h4>
                                 <div class="widget-newsletter">
                                     <div class="widget-newsletter-info">
-                                        <p class="widget-newsletter-content m-b-4">Nhận thông tin mới nhất về Sự kiện, Khuyến mãi và Ưu đãi. Đăng ký nhận bản tin ngay hôm nay.</p>
+                                        <p class="widget-newsletter-content m-b-4">Nhận thông tin mới nhất về Sự kiện,
+                                            Khuyến mãi và Ưu đãi. Đăng ký nhận bản tin ngay hôm nay.</p>
                                     </div>
                                     <form action="#">
                                         <div class="footer-submit-wrapper d-flex">
-                                            <input type="email" class="form-control mb-0" placeholder="Địa chỉ Email" size="40" required>
+                                            <input type="email" class="form-control mb-0" placeholder="Địa chỉ Email"
+                                                size="40" required>
                                             <button type="submit" class="btn btn-primary btn-sm ls-0">Đăng ký</button>
                                         </div>
                                     </form>
