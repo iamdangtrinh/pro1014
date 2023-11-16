@@ -53,6 +53,11 @@
                 // hien thi du lieu
                 $view_name='page_search';
                 break;
+
+                case 'seqarch_ajax': 
+                    print_r($_POST);
+                break;
+
             default:
                 $view_name='page_home';
                 break;
