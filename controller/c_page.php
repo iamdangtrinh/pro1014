@@ -11,9 +11,20 @@
                 $view_name='page_cart';
                 break;
             case 'shop':
-                //laydulieu
-                $product_shop = product_shop(12);
-                $view_name='page_shop';
+                $limit = 12;
+                $start = 0;
+            
+                if (isset($_GET["shop"])) {
+                    $soluongSP = count_product();
+                    $sotrang = ceil($soluongSP / $limit);
+                    // Xác định trang hiện tại
+                    $trang_hien_tai = isset($_GET['shop']) ? intval($_GET['shop']) : 1;
+                    // Tính toán vị trí bắt đầu của sản phẩm trên trang hiện tại
+                    $start = ($trang_hien_tai - 1) * $limit;
+                    // Lấy dữ liệu sản phẩm từ cơ sở dữ liệu
+                    $product_shop = product_shop($start, $limit);
+                }
+                $view_name = 'page_shop';
                 break;
             case 'contact':
                 //laydulieu

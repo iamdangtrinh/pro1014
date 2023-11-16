@@ -12,7 +12,8 @@
                                     width="267" height="241">
                             </div>
                             <div class="col-md-4 text-center text-md-left">
-                                <a href="#" class="btn btn-link ml-0 p-0"><i>Xem ưu đãi của chúng tôi</i><i class="fa-solid fa-angles-right"></i></a>
+                                <a href="#" class="btn btn-link ml-0 p-0"><i>Xem ưu đãi của chúng tôi</i><i
+                                        class="fa-solid fa-angles-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -73,18 +74,6 @@
                             </div><!-- End .toolbox-left -->
 
                             <div class="toolbox-right">
-                                <div class="toolbox-item toolbox-show">
-                                    <label>Hiển thị:</label>
-
-                                    <div class="select-custom">
-                                        <select name="count" class="form-control">
-                                            <option value="12">12</option>
-                                            <option value="24">24</option>
-                                            <option value="36">36</option>
-                                        </select>
-                                    </div><!-- End .select-custom -->
-                                </div><!-- End .toolbox-item -->
-
                                 <div class="toolbox-item layout-modes">
                                     <a href="category.html" class="layout-btn btn-grid active" title="Grid">
                                         <i class="icon-mode-grid"></i>
@@ -95,21 +84,22 @@
                                 </div><!-- End .layout-modes -->
                             </div><!-- End .toolbox-right -->
                         </nav>
- <!-- chỗ lầy là chỗ foeach sản phẩm -->
+                        <!-- chỗ lầy là chỗ foeach sản phẩm -->
                         <div class="row">
-                        <?php foreach ($product_shop as $product): ?>
+                            <?php foreach ($product_shop as $product): ?>
                             <div class="col-6 col-sm-4 col-lg-3">
                                 <div class="product-default inner-quickview inner-icon">
                                     <figure>
                                         <a href="demo23-product.html">
-                                            <img src="<?=$base_url?>upload/demoes/demo23/products/<?= $product['AnhSP'];?>" alt="product" style="width: 207px; height: 220px;">
+                                            <img src="<?=$base_url?>upload/demoes/demo23/products/<?= $product['AnhSP'];?>"
+                                                alt="product" style="width: 207px; height: 220px;">
                                         </a>
                                         <div class="label-group">
                                             <div class="product-label label-sale">-89%</div>
                                         </div>
                                         <div class="btn-icon-group">
                                             <a href="#" class="btn-icon btn-add-cart product-type-simple"><i
-                                                    class="icon-shopping-cart" style ="color:#000";></i></a>
+                                                    class="icon-shopping-cart" style="color:#000" ;></i></a>
                                         </div>
                                         <a href="ajax/product-quick-view.html" class="btn-quickview"
                                             title="Quick View">Xem nhanh</a>
@@ -140,32 +130,21 @@
                                 </div>
                             </div>
                             <?php endforeach; ?>
-<!-- chỗ lầy là chỗ foeach sản phẩm -->
+                            <!-- chỗ lầy là chỗ foeach sản phẩm -->
                             <!-- End .col-lg-3 -->
                         </div><!-- End .row -->
 
                         <nav class="toolbox toolbox-pagination">
-                            <div class="toolbox-item toolbox-show">
-                                <label class="mt-0">Hiển thị:</label>
-
-                                <div class="select-custom">
-                                    <select name="count" class="form-control">
-                                        <option value="12">12</option>
-                                        <option value="24">24</option>
-                                        <option value="36">36</option>
-                                    </select>
-                                </div><!-- End .select-custom -->
-                            </div><!-- End .toolbox-item -->
-
                             <ul class="pagination toolbox-item">
                                 <li class="page-item disabled">
                                     <a class="page-link page-link-btn" href="#"><i class="icon-angle-left"></i></a>
                                 </li>
-                                <li class="page-item active">
-                                    <a class="page-link" href="#">1 <span class="sr-only">(hiện hành)</span></a>
+
+                                <?php for($i=1; $i<=$sotrang; $i++): ?>
+                                <li class="page-item">
+                                    <a class="page-link" href="<?= $base_url ?>page/shop&shop=<?=$i?>"><?=$i?></a>
                                 </li>
-                                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <?php endfor;?>
                                 <li class="page-item"><span class="page-link">...</span></li>
                                 <li class="page-item">
                                     <a class="page-link page-link-btn" href="#"><i class="icon-angle-right"></i></a>
@@ -194,7 +173,8 @@
                                                 </a>
                                                 <div class="collapse show" id="widget-category-1">
                                                     <ul class="cat-sublist">
-                                                        <li><a href="#">Đồ chơi<span class="products-count">(1)</span></a>
+                                                        <li><a href="#">Đồ chơi<span
+                                                                    class="products-count">(1)</span></a>
                                                         </li>
                                                         <li><a href="#">Quần dài<span
                                                                     class="products-count">(2)</span></a></li>
