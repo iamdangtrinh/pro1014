@@ -102,8 +102,7 @@
                                 <div class="product-default inner-quickview inner-icon">
                                     <figure>
                                         <a href="demo23-product.html">
-                                            <img src="<?=$base_url?>upload/demoes/demo23/products/<?= $product['AnhSP'];?>"
-                                                width="217" height="257" alt="product">
+                                            <img src="<?=$base_url?>upload/demoes/demo23/products/<?= $product['AnhSP'];?>" alt="product" style="width: 207px; height: 220px;">
                                         </a>
                                         <div class="label-group">
                                             <div class="product-label label-sale">-89%</div>
