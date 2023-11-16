@@ -112,7 +112,7 @@
                                                     class="icon-shopping-cart"></i></a>
                                         </div>
                                         <a href="ajax/product-quick-view.html" class="btn-quickview"
-                                            title="Quick View">Xem lướt qua</a>
+                                            title="Quick View">Xem nhanh</a>
                                     </figure>
                                     <div class="product-details">
                                         <div class="category-wrap">
@@ -155,7 +155,7 @@
                                                     class="icon-shopping-cart"></i></a>
                                         </div>
                                         <a href="ajax/product-quick-view.html" class="btn-quickview"
-                                            title="Quick View">Xem lướt qua</a>
+                                            title="Quick View">Xem nhanh</a>
                                     </figure>
                                     <div class="product-details">
                                         <div class="category-wrap">
@@ -197,7 +197,7 @@
                                                     class="icon-shopping-cart"></i></a>
                                         </div>
                                         <a href="ajax/product-quick-view.html" class="btn-quickview"
-                                            title="Quick View">Xem lướt qua</a>
+                                            title="Quick View">Xem nhanh</a>
                                     </figure>
                                     <div class="product-details">
                                         <div class="category-wrap">
@@ -239,7 +239,7 @@
                                                     class="icon-shopping-cart"></i></a>
                                         </div>
                                         <a href="ajax/product-quick-view.html" class="btn-quickview"
-                                            title="Quick View">Xem lướt qua</a>
+                                            title="Quick View">Xem nhanh</a>
                                     </figure>
                                     <div class="product-details">
                                         <div class="category-wrap">
@@ -281,7 +281,7 @@
                                                     class="icon-shopping-cart"></i></a>
                                         </div>
                                         <a href="ajax/product-quick-view.html" class="btn-quickview"
-                                            title="Quick View">Xem lướt qua</a>
+                                            title="Quick View">Xem nhanh</a>
                                     </figure>
                                     <div class="product-details">
                                         <div class="category-wrap">
@@ -324,7 +324,7 @@
                                                     class="fa fa-arrow-right"></i></a>
                                         </div>
                                         <a href="ajax/product-quick-view.html" class="btn-quickview"
-                                            title="Quick View">Xem lướt qua</a>
+                                            title="Quick View">Xem nhanh</a>
                                     </figure>
                                     <div class="product-details">
                                         <div class="category-wrap">
@@ -361,7 +361,7 @@
                                                     class="icon-shopping-cart"></i></a>
                                         </div>
                                         <a href="ajax/product-quick-view.html" class="btn-quickview"
-                                            title="Quick View">Xem lướt qua</a>
+                                            title="Quick View">Xem nhanh</a>
                                     </figure>
                                     <div class="product-details">
                                         <div class="category-wrap">
@@ -401,7 +401,7 @@
                                                     class="icon-shopping-cart"></i></a>
                                         </div>
                                         <a href="ajax/product-quick-view.html" class="btn-quickview"
-                                            title="Quick View">Xem lướt qua</a>
+                                            title="Quick View">Xem nhanh</a>
                                     </figure>
                                     <div class="product-details">
                                         <div class="category-wrap">
@@ -443,7 +443,7 @@
                                                     class="icon-shopping-cart"></i></a>
                                         </div>
                                         <a href="ajax/product-quick-view.html" class="btn-quickview"
-                                            title="Quick View">Xem lướt qua</a>
+                                            title="Quick View">Xem nhanh</a>
                                     </figure>
                                     <div class="product-details">
                                         <div class="category-wrap">
@@ -485,7 +485,7 @@
                                                     class="icon-shopping-cart"></i></a>
                                         </div>
                                         <a href="ajax/product-quick-view.html" class="btn-quickview"
-                                            title="Quick View">Xem lướt qua</a>
+                                            title="Quick View">Xem nhanh</a>
                                     </figure>
                                     <div class="product-details">
                                         <div class="category-wrap">
@@ -528,7 +528,7 @@
                                                     class="icon-shopping-cart"></i></a>
                                         </div>
                                         <a href="ajax/product-quick-view.html" class="btn-quickview"
-                                            title="Quick View">Xem lướt qua</a>
+                                            title="Quick View">Xem nhanh</a>
                                     </figure>
                                     <div class="product-details">
                                         <div class="category-wrap">
@@ -568,7 +568,7 @@
                                                     class="fa fa-arrow-right"></i></a>
                                         </div>
                                         <a href="ajax/product-quick-view.html" class="btn-quickview"
-                                            title="Quick View">Xem lướt qua</a>
+                                            title="Quick View">Xem nhanh</a>
                                     </figure>
                                     <div class="product-details">
                                         <div class="category-wrap">

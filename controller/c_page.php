@@ -35,6 +35,7 @@
                 $MaTK=$_SESSION['user']['MaTK'];
                 $view_name='page_history';
                 break;
+<<<<<<< Updated upstream
             case 'search':
                 if (isset($_POST['keyword'])) {
                     // doi tu post sang get
@@ -51,6 +52,11 @@
                 $sotrang=ceil((product_searchTotal($_GET['keyword']))/8);
                 // hien thi du lieu
                 $view_name='page_search';
+=======
+            case 'category':
+                
+                $view_name= 'page_shop';
+>>>>>>> Stashed changes
                 break;
             default:
                 $view_name='page_home';

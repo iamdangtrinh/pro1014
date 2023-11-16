@@ -10,6 +10,7 @@
                 //hien thi du lieu
                 $view_name='category_detail';
                 break;
+                
             default:
                 $view_name='page';
                 break;
