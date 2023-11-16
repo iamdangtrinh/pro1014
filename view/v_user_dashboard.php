@@ -45,7 +45,7 @@
                         </ul>
                     </div>
                     <div class="col-lg-9 order-lg-last order-1 tab-content">
-                        <div class="tab-pane fade show active" id="dashboard" role="tabpanel">
+                        <div class="tab-pane fade show " id="dashboard" role="tabpanel">
                             <div class="dashboard-content">
 
                                 <p>
@@ -99,7 +99,7 @@
                             </div>
                         </div><!-- End .tab-pane -->
 
-                        <div class="tab-pane fade" id="order" role="tabpanel">
+                        <div class="tab-pane fade show active" id="order" role="tabpanel">
                             <div class="order-content">
                                 <h3 class="account-sub-title d-none d-md-block">
                                     <i class="fa-regular fa-user"></i> &nbsp; Thông tin tài khoản</h3>
@@ -107,16 +107,16 @@
                                     <form action="#" id="form_login" method="post">
                                         <div class="mb-2">
                                             <label for="login-email">Địa chỉ email<span class="required">*</span></label>
-                                            <input disabled type="email" name="email" class="form-input form-wide" id="login-email" value="nnqn15@gmail.com">
+                                            <input disabled type="email" name="email" class="form-input form-wide" id="login-email" value="<?php echo (isset($_SESSION['user'])) ? $_SESSION["user"]["Email"] : "" ?>">
                                         </div>
 
                                         <div class="mb-2">
                                             <label for="login-password">Số điện thoại<span class="required">*</span></label>
-                                            <input type="number" name="password" class="form-input form-wide" id="login-password" value="0706903022">
+                                            <input type="number" name="password" class="form-input form-wide" id="login-password" value="<?php echo (isset($_SESSION['user'])) ? $_SESSION["user"]["SoDienThoai"] : "" ?>">
                                         </div>
                                         <div class="mb-2">
                                             <label for="address">Địa chỉ giao hàng<span class="required">*</span></label>
-                                            <input type="text" name="address" class="form-input form-wide" id="address" value="Hồ Chí Minh">
+                                            <input type="text" name="address" class="form-input form-wide" id="address" value="<?php echo (isset($_SESSION['user'])) ? $_SESSION["user"]["DiaChi"] : "" ?>">
                                         </div>
 
                                         <div class="input-group mb-3">

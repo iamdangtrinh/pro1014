@@ -80,9 +80,9 @@ if (isset($_GET['act'])) {
                 $view_name = 'user_forgotPassword';
             }
             break;
-        // case 'logout':
-        //     unset($_SESSION['user']);
-        //     header('location: ' . $base_url . 'page/home');
+        case 'logout':
+            unset($_SESSION['user']);
+            header('location: ' . $base_url . 'page/home');
         default:
             $view_name = 'page_home';
             break;
