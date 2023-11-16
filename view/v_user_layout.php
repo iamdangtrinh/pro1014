@@ -218,7 +218,7 @@
                                 <div class="input-group input-group-main input-focus">
                                     <input autocomplete="off" class="form-input" id="search_ajax" type="text" name="search"
                                         placeholder="Nhập sản phẩm cần tìm kiếm">
-                                    <div class="row input-search">
+                                    <div id="search_result" class="row input-search">
                                         <div class="col-md-4 img-focus">
                                             <img src="<?= $base_url ?>upload/demoes/demo23/products/product-1.jpg"
                                                 width="50" height="50" alt="product">
@@ -361,13 +361,14 @@
         </footer>
     </div>
 
-    <div class="loading-overlay">
+    <!-- loading -->
+    <!-- <div class="loading-overlay">
         <div class="bounce-loader">
             <div class="bounce1"></div>
             <div class="bounce2"></div>
             <div class="bounce3"></div>
         </div>
-    </div>
+    </div> -->
 
     <div class="mobile-menu-overlay"></div>
 
@@ -520,13 +521,11 @@
                     var search_item = $(this).val();
                     if(search_item != "") {
                         $.ajax({
-                            url: '',
+                            url: 'seqarch_ajax',
                             method: 'POST',
-                            data: {
-                                search_keyword:search_item
-                            },
+                            data: $(form).serializeArray(),
                             success:function(data) {
-                                
+                                $('#search_result').html(data)
                             }
                         })
                     }
