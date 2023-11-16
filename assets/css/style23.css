@@ -1,6 +1,6 @@
 .checkout-progress-bar li a.active,
 .checkout-progress-bar li a:hover {
-  color: #08C;
+  color: #c59b9c;
   opacity: 1;
 }
 
@@ -31,11 +31,11 @@
 }
 
 .checkout-progress-bar li.active a {
-  color: #08C;
+  color: #c59b9c;
 }
 
 .checkout-progress-bar li.active a:hover {
-  color: #08C;
+  color: #c59b9c;
 }
 
 .checkout-progress-bar li.active+li a {
@@ -43,7 +43,7 @@
 }
 
 .checkout-progress-bar li.active+li a:hover {
-  color: #08C;
+  color: #c59b9c;
 }
 
 .checkout-progress-bar li.disabled a {
@@ -87,7 +87,7 @@
 .cart-table-container .btn-shop:hover,
 .cart-table-container .btn-sm:hover {
   color: #fff;
-  background-color: #08C;
+  background-color: #c59b9c;
 }
 
 /* custom  */
@@ -98,4 +98,9 @@ label.error {
 }
 .appear-animate.fadeInLeftShorter.animated.appear-animation-visible {
   padding-left: 60px;
+}
+.table-cart td{
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
 }
