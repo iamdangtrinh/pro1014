@@ -31,6 +31,11 @@
                                     aria-controls="order" aria-selected="true"><i class="fa-solid fa-user"></i> &nbsp; Thông tin tài khoản</a>
                             </li>
 
+                            <li class="nav-item active">
+                                <a class="nav-link" id="order-tab" data-toggle="tab" href="#pass" role="tab"
+                                    aria-controls="order" aria-selected="true"><i class="fa-solid fa-lock"></i> &nbsp; Đổi mật khẩu</a>
+                            </li>
+
                             <li class="nav-item">
                                 <a class="nav-link" id="download-tab" data-toggle="tab" href="#download" role="tab"
                                     aria-controls="download" aria-selected="false"><i class="fa-solid fa-clock-rotate-left"></i> &nbsp; Lịch sử đặt hàng</a>
@@ -65,6 +70,15 @@
                                             <a href="#order" class="link-to-tab"><i class="fa-regular fa-user"></i></a>
                                             <div class="feature-box-content">
                                                 <h3>THÔNG TIN TÀI KHOẢN</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-6 col-md-4">
+                                        <div class="feature-box text-center pb-4">
+                                            <a href="#pass" class="link-to-tab"><i class="fa-solid fa-lock"></i></a>
+                                            <div class="feature-box-content">
+                                                <h3>ĐỔI MẬT KHẨU</h3>
                                             </div>
                                         </div>
                                     </div>
@@ -130,10 +144,37 @@
                             </div>
                         </div><!-- End .tab-pane -->
 
+                        <div class="tab-pane fade show active" id="pass" role="tabpanel">
+                            <div class="order-content">
+                                <h3 class="account-sub-title d-none d-md-block">
+                                    <i class="fa-solid fa-lock"></i> &nbsp; Đổi mật khẩu</h3>
+                                <div class="order-table-container">
+                                    <form action="#" id="form_login" method="post">
+                                        <div class="mb-2">
+                                            <label for="login-email">Mật Khẩu cũ<span class="required">*</span></label>
+                                            <input disabled type="email" name="email" class="form-input form-wide" id="login-email" value="<?php echo (isset($_SESSION['user'])) ? $_SESSION["user"]["Email"] : "" ?>">
+                                        </div>
+
+                                        <div class="mb-2">
+                                            <label for="login-email">Mật Khẩu mới<span class="required">*</span></label>
+                                            <input disabled type="email" name="email" class="form-input form-wide" id="login-email" value="<?php echo (isset($_SESSION['user'])) ? $_SESSION["user"]["Email"] : "" ?>">
+                                        </div>
+
+                                        <div class="mb-2">
+                                            <label for="login-email">Nhập lại mật Khẩu<span class="required">*</span></label>
+                                            <input disabled type="email" name="email" class="form-input form-wide" id="login-email" value="<?php echo (isset($_SESSION['user'])) ? $_SESSION["user"]["Email"] : "" ?>">
+                                        </div>
+                                        <input type="submit" name="btn_login" value="Đổi mật khẩu" class="btn btn-dark btn-md w-100">
+                                    </form>
+
+                                </div>
+                            </div>
+                        </div><!-- End .tab-pane -->
+
                         <div class="tab-pane fade" id="download" role="tabpanel">
                         <div class="order-content">
-                                <h3 class="account-sub-title d-none d-md-block"><i
-                                        class="sicon-social-dropbox align-middle mr-3"></i> &nbsp; Lịch sử đặt hàng</h3>
+                                <h3 class="account-sub-title d-none d-md-block">
+                                    <i class="fa-solid fa-clock-rotate-left"></i> &nbsp; Lịch sử đặt hàng</h3>
                                 <div class="order-table-container text-center">
                                     <table class="table table-order text-left">
                                         <thead>
