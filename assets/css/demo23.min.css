@@ -11075,26 +11075,23 @@ header .separator {
     box-shadow: none !important;
 }
 
-.cart-dropdown .product-image-container {
+.product-image-container {
     position: relative;
     max-width: 80px;
     width: 100%;
     margin: 0;
-    margin-left: auto;
+    float: center;
     border: 1px solid #f4f4f4
 }
 
 .cart-dropdown .product-image-container a:after {
     display: none
 }
-
 .cart-dropdown .product-title {
-    padding-right: 1.5rem;
-    margin-bottom: 1.1rem;
     font-size: 1.4rem;
     line-height: 19px;
     color: #222529;
-    font-weight: 500
+    font-weight: bold
 }
 
 .cart-dropdown .product-title a {
