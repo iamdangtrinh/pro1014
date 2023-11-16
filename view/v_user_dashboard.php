@@ -37,7 +37,7 @@
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link" href="wishlist.html"><i class="fa-solid fa-heart"></i> &nbsp; Yêu thích</a>
+                                <a class="nav-link" href="<?= $base_url ?>page/wishlist"><i class="fa-solid fa-heart"></i> &nbsp; Yêu thích</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="<?php $base_url?>logout"><i class="fa-solid fa-right-from-bracket"></i> &nbsp; Đăng xuất</a>
@@ -80,7 +80,7 @@
 
                                     <div class="col-6 col-md-4">
                                         <div class="feature-box text-center pb-4">
-                                            <a href="wishlist.html"><i class="fa-regular fa-heart"></i></a>
+                                            <a href="<?= $base_url?>page/wishlist"><i class="fa-regular fa-heart"></i></a>
                                             <div class="feature-box-content">
                                                 <h3>YÊU THÍCH</h3>
                                             </div>
