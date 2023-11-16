@@ -50,7 +50,7 @@
                         </ul>
                     </div>
                     <div class="col-lg-9 order-lg-last order-1 tab-content">
-                        <div class="tab-pane fade show " id="dashboard" role="tabpanel">
+                        <div class="tab-pane fade " id="dashboard" role="tabpanel">
                             <div class="dashboard-content">
 
                                 <p>

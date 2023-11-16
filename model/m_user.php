@@ -2,20 +2,18 @@
     include_once 'm_pdo.php';
     // thao tac du lieu trong cs fql
     
-    // kiểm tra tài khoản trong sql có tồn tại hay không
+    // kiểm tra tài khoản trong sql có đúng không
     function check_login($email, $password){
-        return pdo_query_one("SELECT * FROM taikhoan WHERE Email=? AND MatKhau=?",$email,$password);
+        return pdo_query_one("SELECT Email,MatKhau, HinhAnh,HoTen, SoDienThoai, DiaChi FROM taikhoan WHERE Email=? AND MatKhau=?",$email,$password);
     }
-    // kiểm tra email có tồn tại hay khôgn
+    // kiểm tra email có tồn tại hay không
     function has_email($email){
-        return pdo_query_one("SELECT * FROM taikhoan WHERE Email=? ",$email);
+        return pdo_query_one("SELECT EMAIL FROM taikhoan WHERE Email=? ",$email);
     }
     // Tạo tài khoản
     function user_add($SoDienThoai,$Email,$HoTen,$MatKhau,$DiaChi){
         pdo_execute("INSERT INTO taikhoan(`SoDienThoai`,`Email`,`HoTen`,`MatKhau`,`DiaChi`) VALUES(?,?,?,?,?)",$SoDienThoai,$Email,$HoTen,$MatKhau,$DiaChi);
     }
-
-
 
 
     function user_getAll(){
