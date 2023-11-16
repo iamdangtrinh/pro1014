@@ -95,21 +95,22 @@
                                 </div><!-- End .layout-modes -->
                             </div><!-- End .toolbox-right -->
                         </nav>
-
+ <!-- chỗ lầy là chỗ foeach sản phẩm -->
                         <div class="row">
+                        <?php foreach ($product_shop as $product): ?>
                             <div class="col-6 col-sm-4 col-lg-3">
                                 <div class="product-default inner-quickview inner-icon">
                                     <figure>
                                         <a href="demo23-product.html">
-                                            <img src="<?=$base_url?>upload/demoes/demo23/products/product-8.jpg"
-                                                width="217" height="217" alt="product">
+                                            <img src="<?=$base_url?>upload/demoes/demo23/products/<?= $product['AnhSP'];?>"
+                                                width="217" height="257" alt="product">
                                         </a>
                                         <div class="label-group">
                                             <div class="product-label label-sale">-89%</div>
                                         </div>
                                         <div class="btn-icon-group">
                                             <a href="#" class="btn-icon btn-add-cart product-type-simple"><i
-                                                    class="icon-shopping-cart"></i></a>
+                                                    class="icon-shopping-cart" style ="color:#000";></i></a>
                                         </div>
                                         <a href="ajax/product-quick-view.html" class="btn-quickview"
                                             title="Quick View">Xem nhanh</a>
@@ -117,13 +118,13 @@
                                     <div class="product-details">
                                         <div class="category-wrap">
                                             <div class="category-list">
-                                                <a href="demo23-product.html" class="product-category">Loại </a>
+                                                <a href="demo23-product.html" class="product-category">Loại</a>
                                             </div>
                                             <a href="wishlist.html" title="Wishlist" class="btn-icon-wish"><i
                                                     class="icon-heart"></i></a>
                                         </div>
                                         <h3 class="product-title">
-                                            <a href="demo23-product.html">Giày cho bé</a>
+                                            <a href="demo23-product.html"><?= $product['TenSP'];?></a>
                                         </h3>
                                         <div class="ratings-container">
                                             <div class="product-ratings">
@@ -133,466 +134,15 @@
                                             </div><!-- End .product-ratings -->
                                         </div><!-- End .product-container -->
                                         <div class="price-box">
-                                            <span class="old-price">596.000đ</span>
-                                            <span class="product-price">68.000đ</span>
+                                            <span class="old-price"><?= $product['Gia'];?>đ</span>
+                                            <span class="product-price"><?= $product['Gia'];?>đ</span>
                                         </div><!-- End .price-box -->
                                     </div><!-- End .product-details -->
                                 </div>
-                            </div><!-- End .col-lg-3 -->
-                            <div class="col-6 col-sm-4 col-lg-3">
-                                <div class="product-default inner-quickview inner-icon">
-                                    <figure>
-                                        <a href="demo23-product.html">
-                                            <img src="<?=$base_url?>upload/demoes/demo23/products/product-4.jpg"
-                                                width="217" height="217" alt="product">
-                                        </a>
-                                        <div class="label-group">
-                                            <div class="product-label label-hot">HOT</div>
-                                            <div class="product-label label-sale">-13%</div>
-                                        </div>
-                                        <div class="btn-icon-group">
-                                            <a href="#" class="btn-icon btn-add-cart product-type-simple"><i
-                                                    class="icon-shopping-cart"></i></a>
-                                        </div>
-                                        <a href="ajax/product-quick-view.html" class="btn-quickview"
-                                            title="Quick View">Xem nhanh</a>
-                                    </figure>
-                                    <div class="product-details">
-                                        <div class="category-wrap">
-                                            <div class="category-list">
-                                                <a href="demo23-shop.html" class="product-category">Loại</a>
-                                            </div>
-                                            <a href="wishlist.html" title="Wishlist" class="btn-icon-wish"><i
-                                                    class="icon-heart"></i></a>
-                                        </div>
-                                        <h3 class="product-title">
-                                            <a href="demo23-product.html">đồ mùa hè cho bé </a>
-                                        </h3>
-                                        <div class="ratings-container">
-                                            <div class="product-ratings">
-                                                <span class="ratings" style="width:0%"></span><!-- End .ratings -->
-                                                <span class="tooltiptext tooltip-top"></span>
-                                            </div><!-- End .product-ratings -->
-                                        </div><!-- End .product-container -->
-                                        <div class="price-box">
-                                            <span class="old-price">299.000đ</span>
-                                            <span class="product-price">259.000đ</span>
-                                        </div><!-- End .price-box -->
-                                    </div><!-- End .product-details -->
-                                </div>
-                            </div><!-- End .col-lg-3 -->
-                            <div class="col-6 col-sm-4 col-lg-3">
-                                <div class="product-default inner-quickview inner-icon">
-                                    <figure>
-                                        <a href="demo23-product.html">
-                                            <img src="<?=$base_url?>upload/demoes/demo23/products/product-9.jpg"
-                                                width="217" height="217" alt="product">
-                                        </a>
-                                        <div class="label-group">
-                                            <div class="product-label label-sale">-35%</div>
-                                        </div>
-                                        <div class="btn-icon-group">
-                                            <a href="demo23-product.html"
-                                                class="btn-icon btn-add-cart product-type-simple"><i
-                                                    class="icon-shopping-cart"></i></a>
-                                        </div>
-                                        <a href="ajax/product-quick-view.html" class="btn-quickview"
-                                            title="Quick View">Xem nhanh</a>
-                                    </figure>
-                                    <div class="product-details">
-                                        <div class="category-wrap">
-                                            <div class="category-list">
-                                                <a href="demo23-shop.html" class="product-category">Loại</a>
-                                            </div>
-                                            <a href="wishlist.html" title="Wishlist" class="btn-icon-wish"><i
-                                                    class="icon-heart"></i></a>
-                                        </div>
-                                        <h3 class="product-title">
-                                            <a href="demo23-product.html">giày mùa đông cho bé </a>
-                                        </h3>
-                                        <div class="ratings-container">
-                                            <div class="product-ratings">
-                                                <span class="ratings" style="width:0%"></span><!-- End .ratings -->
-                                                <span class="tooltiptext tooltip-top"></span>
-                                            </div><!-- End .product-ratings -->
-                                        </div><!-- End .product-container -->
-                                        <div class="price-box">
-                                            <span class="old-price">199.000đ</span>
-                                            <span class="product-price">129.000đ</span>
-                                        </div><!-- End .price-box -->
-                                    </div><!-- End .product-details -->
-                                </div>
-                            </div><!-- End .col-lg-3 -->
-                            <div class="col-6 col-sm-4 col-lg-3">
-                                <div class="product-default inner-quickview inner-icon">
-                                    <figure>
-                                        <a href="demo23-product.html">
-                                            <img src="<?=$base_url?>upload/demoes/demo23/products/product-10.jpg"
-                                                width="217" height="217" alt="product">
-                                        </a>
-                                        <div class="label-group">
-                                            <div class="product-label label-sale">-89%</div>
-                                        </div>
-                                        <div class="btn-icon-group">
-                                            <a href="demo23-product.html"
-                                                class="btn-icon btn-add-cart product-type-simple"><i
-                                                    class="icon-shopping-cart"></i></a>
-                                        </div>
-                                        <a href="ajax/product-quick-view.html" class="btn-quickview"
-                                            title="Quick View">Xem nhanh</a>
-                                    </figure>
-                                    <div class="product-details">
-                                        <div class="category-wrap">
-                                            <div class="category-list">
-                                                <a href="demo23-shop.html" class="product-category">Loại</a>
-                                            </div>
-                                            <a href="wishlist.html" title="Wishlist" class="btn-icon-wish"><i
-                                                    class="icon-heart"></i></a>
-                                        </div>
-                                        <h3 class="product-title">
-                                            <a href="demo23-product.html">Nón mùa đông cho bé</a>
-                                        </h3>
-                                        <div class="ratings-container">
-                                            <div class="product-ratings">
-                                                <span class="ratings" style="width:80%"></span><!-- End .ratings -->
-                                                <span class="tooltiptext tooltip-top"></span>
-                                            </div><!-- End .product-ratings -->
-                                        </div><!-- End .product-container -->
-                                        <div class="price-box">
-                                            <span class="old-price">596.000đ</span>
-                                            <span class="product-price">68.000đ</span>
-                                        </div><!-- End .price-box -->
-                                    </div><!-- End .product-details -->
-                                </div>
-                            </div><!-- End .col-lg-3 -->
-                            <div class="col-6 col-sm-4 col-lg-3">
-                                <div class="product-default inner-quickview inner-icon">
-                                    <figure>
-                                        <a href="demo23-product.html">
-                                            <img src="<?=$base_url?>upload/demoes/demo23/products/product-10.jpg"
-                                                width="217" height="217" alt="product">
-                                        </a>
-                                        <div class="label-group">
-                                            <div class="product-label label-sale">-17%</div>
-                                        </div>
-                                        <div class="btn-icon-group">
-                                            <a href="demo23-product.html"
-                                                class="btn-icon btn-add-cart product-type-simple"><i
-                                                    class="icon-shopping-cart"></i></a>
-                                        </div>
-                                        <a href="ajax/product-quick-view.html" class="btn-quickview"
-                                            title="Quick View">Xem nhanh</a>
-                                    </figure>
-                                    <div class="product-details">
-                                        <div class="category-wrap">
-                                            <div class="category-list">
-                                                <a href="demo23-shop.html" class="product-category">Loại</a>
-                                            </div>
-                                            <a href="wishlist.html" title="Wishlist" class="btn-icon-wish"><i
-                                                    class="icon-heart"></i></a>
-                                        </div>
-                                        <h3 class="product-title">
-                                            <a href="demo23-product.html">Quần áo </a>
-                                        </h3>
-                                        <div class="ratings-container">
-                                            <div class="product-ratings">
-                                                <span class="ratings" style="width:80%"></span><!-- End .ratings -->
-                                                <span class="tooltiptext tooltip-top"></span>
-                                            </div><!-- End .product-ratings -->
-                                        </div><!-- End .product-container -->
-                                        <div class="price-box">
-                                            <span class="old-price">59.000đ</span>
-                                            <span class="product-price">49.000đ</span>
-                                        </div><!-- End .price-box -->
-                                    </div><!-- End .product-details -->
-                                </div>
-                            </div><!-- End .col-lg-3 -->
-                            <div class="col-6 col-sm-4 col-lg-3">
-                                <div class="product-default inner-quickview inner-icon">
-                                    <figure>
-                                        <a href="demo23-product.html">
-                                            <img src="<?=$base_url?>upload/demoes/demo23/products/product-3.jpg"
-                                                width="217" height="217" alt="product">
-                                            <img src="<?=$base_url?>upload/demoes/demo23/products/product-1.jpg"
-                                                width="217" height="217" alt="product">
-                                        </a>
-                                        <div class="label-group">
-                                            <div class="product-label label-hot">HOT</div>
-                                        </div>
-                                        <div class="btn-icon-group">
-                                            <a href="demo23-product.html" class="btn-icon btn-add-cart"><i
-                                                    class="fa fa-arrow-right"></i></a>
-                                        </div>
-                                        <a href="ajax/product-quick-view.html" class="btn-quickview"
-                                            title="Quick View">Xem nhanh</a>
-                                    </figure>
-                                    <div class="product-details">
-                                        <div class="category-wrap">
-                                            <div class="category-list">
-                                                <a href="demo23-shop.html" class="product-category">Loại</a>
-                                            </div>
-                                            <a href="wishlist.html" title="Wishlist" class="btn-icon-wish"><i
-                                                    class="icon-heart"></i></a>
-                                        </div>
-                                        <h3 class="product-title">
-                                            <a href="demo23-product.html">Khăn mùa đông cho bé </a>
-                                        </h3>
-                                        <div class="ratings-container">
-                                            <div class="product-ratings">
-                                                <span class="ratings" style="width:80%"></span><!-- End .ratings -->
-                                                <span class="tooltiptext tooltip-top"></span>
-                                            </div><!-- End .product-ratings -->
-                                        </div><!-- End .product-container -->
-                                        <div class="price-box">
-                                            <span class="product-price">39.000đ</span>
-                                        </div><!-- End .price-box -->
-                                    </div><!-- End .product-details -->
-                                </div>
-                            </div><!-- End .col-lg-3 -->
-                            <div class="col-6 col-sm-4 col-lg-3">
-                                <div class="product-default inner-quickview inner-icon">
-                                    <figure>
-                                        <a href="demo23-product.html">
-                                            <img src="<?=$base_url?>upload/demoes/demo23/products/product-12.jpg"
-                                                width="217" height="217" alt="product">
-                                        </a>
-                                        <div class="btn-icon-group">
-                                            <a href="#" class="btn-icon btn-add-cart product-type-simple"><i
-                                                    class="icon-shopping-cart"></i></a>
-                                        </div>
-                                        <a href="ajax/product-quick-view.html" class="btn-quickview"
-                                            title="Quick View">Xem nhanh</a>
-                                    </figure>
-                                    <div class="product-details">
-                                        <div class="category-wrap">
-                                            <div class="category-list">
-                                                <a href="demo23-shop.html" class="product-category">Loại</a>
-                                            </div>
-                                            <a href="wishlist.html" title="Wishlist" class="btn-icon-wish"><i
-                                                    class="icon-heart"></i></a>
-                                        </div>
-                                        <h3 class="product-title">
-                                            <a href="demo23-product.html">Giày nâu</a>
-                                        </h3>
-                                        <div class="ratings-container">
-                                            <div class="product-ratings">
-                                                <span class="ratings" style="width:100%"></span><!-- End .ratings -->
-                                                <span class="tooltiptext tooltip-top"></span>
-                                            </div><!-- End .product-ratings -->
-                                        </div><!-- End .product-container -->
-                                        <div class="price-box">
-                                            <span class="product-price">108.000đ</span>
-                                        </div><!-- End .price-box -->
-                                    </div><!-- End .product-details -->
-                                </div>
-                            </div><!-- End .col-lg-3 -->
-                            <div class="col-6 col-sm-4 col-lg-3">
-                                <div class="product-default inner-quickview inner-icon">
-                                    <figure>
-                                        <a href="demo23-product.html">
-                                            <img src="<?=$base_url?>upload/demoes/demo23/products/product-13.jpg"
-                                                width="217" height="217" alt="product">
-                                        </a>
-                                        <div class="label-group">
-                                            <div class="product-label label-sale">-35%</div>
-                                        </div>
-                                        <div class="btn-icon-group">
-                                            <a href="#" class="btn-icon btn-add-cart product-type-simple"><i
-                                                    class="icon-shopping-cart"></i></a>
-                                        </div>
-                                        <a href="ajax/product-quick-view.html" class="btn-quickview"
-                                            title="Quick View">Xem nhanh</a>
-                                    </figure>
-                                    <div class="product-details">
-                                        <div class="category-wrap">
-                                            <div class="category-list">
-                                                <a href="demo23-shop.html" class="product-category">Loại</a>
-                                            </div>
-                                            <a href="wishlist.html" title="Wishlist" class="btn-icon-wish"><i
-                                                    class="icon-heart"></i></a>
-                                        </div>
-                                        <h3 class="product-title">
-                                            <a href="demo23-product.html">Mũ em bé màu hồng</a>
-                                        </h3>
-                                        <div class="ratings-container">
-                                            <div class="product-ratings">
-                                                <span class="ratings" style="width:0%"></span><!-- End .ratings -->
-                                                <span class="tooltiptext tooltip-top"></span>
-                                            </div><!-- End .product-ratings -->
-                                        </div><!-- End .product-container -->
-                                        <div class="price-box">
-                                            <span class="product-price">199.000đ</span>
-                                            <span class="product-price">129.000đ</span>
-                                        </div><!-- End .price-box -->
-                                    </div><!-- End .product-details -->
-                                </div>
-                            </div><!-- End .col-lg-3 -->
-                            <div class="col-6 col-sm-4 col-lg-3">
-                                <div class="product-default inner-quickview inner-icon">
-                                    <figure>
-                                        <a href="demo23-product.html">
-                                            <img src="<?=$base_url?>upload/demoes/demo23/products/product-14.jpg"
-                                                width="217" height="217" alt="product">
-                                        </a>
-                                        <div class="label-group">
-                                            <div class="product-label label-hot">HOT</div>
-                                        </div>
-                                        <div class="btn-icon-group">
-                                            <a href="demo23-product.html"
-                                                class="btn-icon btn-add-cart product-type-simple"><i
-                                                    class="icon-shopping-cart"></i></a>
-                                        </div>
-                                        <a href="ajax/product-quick-view.html" class="btn-quickview"
-                                            title="Quick View">Xem nhanh</a>
-                                    </figure>
-                                    <div class="product-details">
-                                        <div class="category-wrap">
-                                            <div class="category-list">
-                                                <a href="demo23-shop.html" class="product-category">Loại</a>
-                                            </div>
-                                            <a href="wishlist.html" title="Wishlist" class="btn-icon-wish"><i
-                                                    class="icon-heart"></i></a>
-                                        </div>
-                                        <h3 class="product-title">
-                                            <a href="demo23-product.html">
-                                                Giày Xuân Hồng Cho Bé</a>
-                                        </h3>
-                                        <div class="ratings-container">
-                                            <div class="product-ratings">
-                                                <span class="ratings" style="width:0%"></span>
-                                                <!-- End .ratings -->
-                                                <span class="tooltiptext tooltip-top"></span>
-                                            </div><!-- End .product-ratings -->
-                                        </div><!-- End .product-container -->
-                                        <div class="price-box">
-                                            <span class="product-price">299.000đ</span>
-                                        </div><!-- End .price-box -->
-                                    </div><!-- End .product-details -->
-                                </div>
-                            </div><!-- End .col-lg-3 -->
-                            <div class="col-6 col-sm-4 col-lg-3">
-                                <div class="product-default inner-quickview inner-icon">
-                                    <figure>
-                                        <a href="demo23-product.html">
-                                            <img src="<?=$base_url?>upload/demoes/demo23/products/product-15.jpg"
-                                                width="217" height="217" alt="product">
-                                        </a>
-                                        <div class="label-group">
-                                            <div class="product-label label-sale">-15%</div>
-                                        </div>
-                                        <div class="btn-icon-group">
-                                            <a href="#" class="btn-icon btn-add-cart product-type-simple"><i
-                                                    class="icon-shopping-cart"></i></a>
-                                        </div>
-                                        <a href="ajax/product-quick-view.html" class="btn-quickview"
-                                            title="Quick View">Xem nhanh</a>
-                                    </figure>
-                                    <div class="product-details">
-                                        <div class="category-wrap">
-                                            <div class="category-list">
-                                                <a href="demo23-shop.html" class="product-category">Loại</a>
-                                            </div>
-                                            <a href="wishlist.html" title="Wishlist" class="btn-icon-wish"><i
-                                                    class="icon-heart"></i></a>
-                                        </div>
-                                        <h3 class="product-title">
-                                            <a href="demo23-product.html">Giày đi ngoài màu hồng</a>
-                                        </h3>
-                                        <div class="ratings-container">
-                                            <div class="product-ratings">
-                                                <span class="ratings" style="width:90%"></span><!-- End .ratings -->
-                                                <span class="tooltiptext tooltip-top"></span>
-                                            </div><!-- End .product-ratings -->
-                                        </div><!-- End .product-container -->
-                                        <div class="price-box">
-                                            <span class="old-price">1,999.000đ</span>
-                                            <span class="product-price">1,699.000đ</span>
-                                        </div><!-- End .price-box -->
-                                    </div><!-- End .product-details -->
-                                </div>
-                            </div><!-- End .col-lg-3 -->
-                            <div class="col-6 col-sm-4 col-lg-3">
-                                <div class="product-default inner-quickview inner-icon">
-                                    <figure>
-                                        <a href="demo23-product.html">
-                                            <img src="<?=$base_url?>upload/demoes/demo23/products/product-1.jpg"
-                                                width="217" height="217" alt="product">
-                                            <img src="<?=$base_url?>upload/demoes/demo23/products/product-7.jpg"
-                                                width="217" height="217" alt="product">
-                                        </a>
-                                        <div class="label-group">
-                                            <div class="product-label label-hot">HOT</div>
-                                        </div>
-                                        <div class="btn-icon-group">
-                                            <a href="demo23-product.html" class="btn-icon btn-add-cart"><i
-                                                    class="icon-shopping-cart"></i></a>
-                                        </div>
-                                        <a href="ajax/product-quick-view.html" class="btn-quickview"
-                                            title="Quick View">Xem nhanh</a>
-                                    </figure>
-                                    <div class="product-details">
-                                        <div class="category-wrap">
-                                            <div class="category-list">
-                                                <a href="demo23-shop.html" class="product-category">Loại</a>
-                                            </div>
-                                            <a href="wishlist.html" title="Wishlist" class="btn-icon-wish"><i
-                                                    class="icon-heart"></i></a>
-                                        </div>
-                                        <h3 class="product-title">
-                                            <a href="demo23-product.html">Giày bé gái mùa đông màu hồng</a>
-                                        </h3>
-                                        <div class="ratings-container">
-                                            <div class="product-ratings">
-                                                <span class="ratings" style="width:80%"></span><!-- End .ratings -->
-                                                <span class="tooltiptext tooltip-top"></span>
-                                            </div><!-- End .product-ratings -->
-                                        </div><!-- End .product-container -->
-                                        <div class="price-box">
-                                            <span class="product-price">101.000đ &ndash; 111.000đ</span>
-                                        </div><!-- End .price-box -->
-                                    </div><!-- End .product-details -->
-                                </div>
-                            </div><!-- End .col-lg-3 -->
-                            <div class="col-6 col-sm-4 col-lg-3">
-                                <div class="product-default inner-quickview inner-icon">
-                                    <figure>
-                                        <a href="demo23-product.html">
-                                            <img src="<?=$base_url?>upload/demoes/demo23/products/product-2.jpg"
-                                                width="217" height="217" alt="product">
-                                        </a>
-                                        <div class="label-group">
-                                            <div class="product-label label-hot">HOT</div>
-                                        </div>
-                                        <div class="btn-icon-group">
-                                            <a href="demo23-product.html" class="btn-icon btn-add-cart"><i
-                                                    class="fa fa-arrow-right"></i></a>
-                                        </div>
-                                        <a href="ajax/product-quick-view.html" class="btn-quickview"
-                                            title="Quick View">Xem nhanh</a>
-                                    </figure>
-                                    <div class="product-details">
-                                        <div class="category-wrap">
-                                            <div class="category-list">
-                                                <a href="demo23-shop.html" class="product-category">Loại</a>
-                                            </div>
-                                            <a href="wishlist.html" title="Wishlist" class="btn-icon-wish"><i
-                                                    class="icon-heart"></i></a>
-                                        </div>
-                                        <h3 class="product-title">
-                                            <a href="demo23-product.html">Máy ảnh mở rộng Porto</a>
-                                        </h3>
-                                        <div class="ratings-container">
-                                            <div class="product-ratings">
-                                                <span class="ratings" style="width:0%"></span><!-- End .ratings -->
-                                                <span class="tooltiptext tooltip-top"></span>
-                                            </div><!-- End .product-ratings -->
-                                        </div><!-- End .product-container -->
-                                        <div class="price-box">
-                                            <span class="product-price">599.000đ</span>
-                                        </div><!-- End .price-box -->
-                                    </div><!-- End .product-details -->
-                                </div>
-                            </div><!-- End .col-lg-3 -->
+                            </div>
+                            <?php endforeach; ?>
+<!-- chỗ lầy là chỗ foeach sản phẩm -->
+                            <!-- End .col-lg-3 -->
                         </div><!-- End .row -->
 
                         <nav class="toolbox toolbox-pagination">

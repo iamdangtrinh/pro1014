@@ -12,7 +12,7 @@
                 break;
             case 'shop':
                 //laydulieu
-                
+                $product_shop = product_shop(12);
                 $view_name='page_shop';
                 break;
             case 'contact':
