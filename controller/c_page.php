@@ -12,6 +12,7 @@
                 break;
             case 'shop':
                 //laydulieu
+                
                 $view_name='page_shop';
                 break;
             case 'contact':

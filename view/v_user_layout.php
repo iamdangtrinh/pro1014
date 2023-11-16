@@ -171,7 +171,7 @@
                                     </div>
                                 </li>
                                 <li>
-                                    <a href="">Sản phẩm <i class="fa-solid fa-caret-down"></i></a>
+                                    <a href="<?= $base_url ?>page/shop">Sản phẩm <i class="fa-solid fa-caret-down"></i></a>
                                     <div class="megamenu megamenu-fixed-width">
                                         <div class="row">
                                             <div class="col-lg-4">
