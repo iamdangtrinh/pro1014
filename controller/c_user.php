@@ -55,23 +55,19 @@ if (isset($_GET['act'])) {
                 $MatKhau = $_POST['password'];
                 $DiaChi = $_POST['address'];
 
-                if (empty($Email)) {
+                if (empty($SoDienThoai) || empty($MatKhau) || empty($HoTen) || empty($DiaChi)) {
+                    $_SESSION['error']['register'] = 'Đăng ký không thành công. Vui lòng thử lại';
+                    // header('location: ' . $base_url . 'user/register');
+                } else if (empty($Email)) {
                     $_SESSION['error']['register'] = 'Đăng ký không thành công. Vui lòng thử lại sau';
-                } else if (filter_var($Email, FILTER_VALIDATE_EMAIL)) {
+                } else if (!preg_match("/@/", $Email)) {
                     $_SESSION['error']['register'] = 'Đăng ký không thành công. Email không hợp lệ';
+                } else if (has_email($Email) > 0) {
+                    $_SESSION['error']['register'] = 'Đăng ký không thành công. Tài khoản này đã tồn tại';
                 } else {
-                    // cho phép đăng ký tài khoản
-                    if (empty($MatKhau) && empty($HoTen) && $SoDienThoai || empty($SoDienThoai) && empty($DiaChi)) {
-                        
-                        $_SESSION['error']['register'] = 'Đăng ký không thành công. Vui lòng thử lại';
-                    } else {
-                        if (has_email($Email) > 0) {
-                            $_SESSION['error']['register'] = 'Đăng ký không thành công. Tài khoản này đã tồn tại';
-                        } else {
-                            $_SESSION['success']['register'] = 'Đăng ký tài khoản thành công.';
-                            user_add($SoDienThoai, $Email, $HoTen, md5($MatKhau), $DiaChi);
-                        }
-                    }
+                    // Allow registration
+                    user_add($SoDienThoai, $Email, $HoTen, md5($MatKhau), $DiaChi);
+                    $_SESSION['success']['register'] = 'Đăng ký tài khoản thành công.';
                 }
             }
             $view_name = 'user_register';
