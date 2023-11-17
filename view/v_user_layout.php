@@ -161,7 +161,7 @@
 
             <div class="header-bottom sticky-header" data-sticky-options="{'mobile': false}">
                 <div class="container-fluid">
-                    <div class="header-center w-auto" style="margin-left:33%">
+                    <div class="header-center">
                         <nav class="main-nav">
                             <ul class="menu">
                                 <li class="active">
@@ -193,25 +193,10 @@
                                     </div>
                                 </li>
                                 <li>
-                                    <a href="<?= $base_url ?>page/shop&shop=1">Sản phẩm <i
-                                            class="fa-solid fa-caret-down"></i></a>
-                                    <div class="megamenu megamenu-fixed-width">
-                                        <div class="row">
-                                            <div class="col-lg-4">
-                                                <a href="#" class="nolink">Trang sản phẩm</a>
-                                                <ul class="submenu">
-                                                    <li><a href="">SIMPLE PRODUCT</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <a href="<?= $base_url ?>page/shop&shop=1">Sản phẩm</a>
                                 </li>
                                 <li class="d-none d-xl-block">
-                                    <a href="#">Liên hệ <i class="fa-solid fa-caret-down"></i></a>
-                                    <ul>
-                                        <li><a href="wishlist.html">Wishlist</a></li>
-
-                                    </ul>
+                                    <a href="#">Liên hệ</a>
                                 </li>
                                 <li><a href="blog.html">Về chúng tôi</a></li>
                             </ul>

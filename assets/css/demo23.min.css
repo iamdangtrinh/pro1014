@@ -10600,7 +10600,14 @@ header a {
     color: #222529
 }
 
-.header-center,
+.header-center{
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+
 .header-left,
 .header-right {
     display: -ms-flexbox;
@@ -10609,7 +10616,6 @@ header a {
     align-items: center
 }
 
-.header-center,
 .header-right {
     margin-left: auto
 }
