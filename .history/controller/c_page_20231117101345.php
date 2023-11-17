@@ -5,7 +5,6 @@
                 // lay du lieu
                 include_once 'model/m_product.php';
                 $dsMoi = product_getNew(4);
-                $dsGhim = product_getPin(4);
                 //hien thi du lieu
                 $view_name='page_home';
                 break;

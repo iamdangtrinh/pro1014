@@ -321,7 +321,7 @@
                             </div><!-- End .product-ratings -->
                         </div><!-- End .product-container -->
                         <div class="price-box">
-                            <span class="product-price"><?=$product['Gia']?> &ndash; Giá Giảm</span>
+                            <span class="product-price"> &ndash; Giá Giảm</span>
                         </div><!-- End .price-box -->
                     </div>
                 </div>
