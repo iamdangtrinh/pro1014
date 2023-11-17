@@ -52,7 +52,7 @@
             						<h3>100% Hoàn trả lại tiền </h3>
             						<p>Hoàn tiền lại 100% nếu có xuất phát lỗi từ cửa hàng</p>
             					</div><!-- End .feature-box-content -->
-            				</div><!-- End .feature-box -->
+            				</div><!-- End .-box -->
             			</div><!-- End .col-lg-4 -->
 
             			<div class="col-lg-4">

@@ -140,6 +140,7 @@
                             </div>
                         </div>
 
+                        <!-- mobile -->
                         <div class="header-search header-search-popup header-search-category text-right d-flex d-lg-none">
                             <a href="#" class="search-toggle" role="button"><i class="icon-magnifier"></i><span>Tìm kiếm</span></a>
                             <form action="#" method="get">
@@ -203,7 +204,7 @@
                     <!-- search -->
                     <div class="d-flex pr-0">
                         <div class="header-search-main header-search header-search-category text-right">
-                            <form id="form_search" action="" method="post">
+                            <form id="form_search" action="<?= $base_url?>controller/ajax_search.php" method="post">
 
                                 <div class="input-group input-group-main input-focus">
                                     <input autocomplete="off" class="form-input" id="search_ajax" type="text" name="search_key"
@@ -510,7 +511,7 @@
                     var search_item = $(this).val();
                     if(search_item != "") {
                         $.ajax({
-                            url: 'search_ajax',
+                            url: '<?= $base_url?>controller/ajax_search.php',
                             method: 'POST',
                             data: {
                                 keyword: search_item
