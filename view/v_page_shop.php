@@ -139,7 +139,6 @@
                                 <li class="page-item disabled">
                                     <a class="page-link page-link-btn" href="#"><i class="icon-angle-left"></i></a>
                                 </li>
-
                                 <?php for($i=1; $i<=$sotrang; $i++): ?>
                                 <li class="page-item">
                                     <a class="page-link" href="<?= $base_url ?>page/shop&shop=<?=$i?>"><?=$i?></a>
