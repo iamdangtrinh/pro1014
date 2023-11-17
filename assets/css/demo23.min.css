@@ -2917,6 +2917,13 @@ a.btn.disabled {
 .btn-icon-right i {
     padding-left: 0.7rem
 }
+input.btn-search {
+    border-radius: 0 5px 5px 0;
+    border-color: #c59b9c;
+    background-color: #c59b9c;
+    color: #fff;
+    box-shadow: none
+}
 
 .btn-primary {
     border-color: #c59b9c;
