@@ -140,13 +140,11 @@
                             </div>
                         </div>
 
-                        <div
-                            class="header-search header-search-popup header-search-category text-right d-flex d-lg-none">
-                            <a href="#" class="search-toggle" role="button"><i class="icon-magnifier"></i><span>Tìm
-                                    kiếm</span></a>
+                        <div class="header-search header-search-popup header-search-category text-right d-flex d-lg-none">
+                            <a href="#" class="search-toggle" role="button"><i class="icon-magnifier"></i><span>Tìm kiếm</span></a>
                             <form action="#" method="get">
                                 <div class="header-search-wrapper">
-                                    <input type="search" class="form-control" name="q" id="q"
+                                    <input type="search" class="form-control" name="" id=""
                                         placeholder="Nhập tên sản phẩm..." required>
                                     <div class="select-custom">
 
@@ -208,7 +206,7 @@
                             <form id="form_search" action="" method="post">
 
                                 <div class="input-group input-group-main input-focus">
-                                    <input autocomplete="off" class="form-input" id="search_ajax" type="text" name="search"
+                                    <input autocomplete="off" class="form-input" id="search_ajax" type="text" name="search_key"
                                         placeholder="Nhập sản phẩm cần tìm...">
                                     <div id="search_result" class="row input-search">
                                         <div class="col-md-4 img-focus">
@@ -505,19 +503,20 @@
     <script src="<?= $base_url ?>assets/js/main.min.js"></script>
     <script src="<?= $base_url ?>assets/js/map.js"></script>
 
-    <!-- <script>
+    <script>
         $(document).ready(
             function() {
-
                 $("#search_ajax").keyup(function() {
                     var search_item = $(this).val();
                     if(search_item != "") {
                         $.ajax({
-                            url: 'seqarch_ajax',
+                            url: 'search_ajax',
                             method: 'POST',
-                            data: $(form).serializeArray(),
+                            data: {
+                                keyword: search_item
+                            },
                             success:function(data) {
-                                $('#search_result').html(data)
+                                console.log(data);
                             }
                         })
                     }
@@ -525,7 +524,7 @@
                 })
 
             })
-    </script> -->
+    </script>
 </body>
 
 

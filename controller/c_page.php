@@ -69,8 +69,8 @@
                 $view_name='page_search';
                 break;
 
-                case 'seqarch_ajax': 
-                    print_r($_POST);
+                case 'search_ajax': 
+                    echo "Tìm kiếm thành công";
                 break;
 
             default:

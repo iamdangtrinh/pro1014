@@ -85,10 +85,7 @@
 							email: email,
 							password: password
 						},
-						success: function (data) {
-							$('.toast').toast('show');
-							$('#error_message').html(data);
-						}
+						
 					});
 				}
 			});
