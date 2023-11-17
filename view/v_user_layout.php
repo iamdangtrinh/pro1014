@@ -217,7 +217,7 @@
                                         </div>
                                         <div class="col-md-8 mt-2 content-focus">Giày đan </div>
                                     </div>
-                                    <input type="submit" name="search" value="Tìm ngay" class="btn-search">
+                                    <input type="submit" name="search" value="Tìm ngay" class="btn-primary" style="border-radius: 0 5px 5px 0;">
 
                                 </div>
                             </form>
