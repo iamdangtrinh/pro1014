@@ -18,7 +18,7 @@ if (isset($_GET['act'])) {
             if (isset($_POST['btn_login']) && $_POST['btn_login']) {
                 $email = $_POST['email'];
                 $password = $_POST['password'];
-                if ($email == null && $email == " " || $password == null && $password == "") {
+                if ($email == null && $email == " " || $password == null && $password) {
                     // Hiển thị lỗi
                     $_SESSION['error']['login'] = "Email hoặc mật khẩu không được để trống";
                 } else {
@@ -55,13 +55,14 @@ if (isset($_GET['act'])) {
                 $MatKhau = $_POST['password'];
                 $DiaChi = $_POST['address'];
 
-                if ($Email == "" || empty($Email)) {
+                if (empty($Email)) {
                     $_SESSION['error']['register'] = 'Đăng ký không thành công. Vui lòng thử lại sau';
-                } else if (!preg_match("/@/", $Email)) {
+                } else if (filter_var($Email, FILTER_VALIDATE_EMAIL)) {
                     $_SESSION['error']['register'] = 'Đăng ký không thành công. Email không hợp lệ';
                 } else {
                     // cho phép đăng ký tài khoản
-                    if (($MatKhau === "" || empty($MatKhau)) && ($HoTen === "" || empty($HoTen)) && ($SoDienThoai === "" || empty($SoDienThoai)) && ($DiaChi === "" || empty($DiaChi))) {
+                    if (empty($MatKhau) && empty($HoTen) && $SoDienThoai || empty($SoDienThoai) && empty($DiaChi)) {
+                        
                         $_SESSION['error']['register'] = 'Đăng ký không thành công. Vui lòng thử lại';
                     } else {
                         if (has_email($Email) > 0) {
