@@ -209,7 +209,7 @@
 
                                 <div class="input-group input-group-main input-focus">
                                     <input autocomplete="off" class="form-input" id="search_ajax" type="text" name="search"
-                                        placeholder="Nhập sản phẩm cần tìm kiếm">
+                                        placeholder="Nhập sản phẩm cần tìm...">
                                     <div id="search_result" class="row input-search">
                                         <div class="col-md-4 img-focus">
                                             <img src="<?= $base_url ?>upload/demoes/demo23/products/product-1.jpg"
@@ -217,7 +217,7 @@
                                         </div>
                                         <div class="col-md-8 mt-2 content-focus">Giày đan </div>
                                     </div>
-                                    <input type="submit" name="search" value="Tìm ngay" class="btn-primary">
+                                    <input type="submit" name="search" value="Tìm ngay" class="btn-primary" style="border-radius: 0 5px 5px 0;">
 
                                 </div>
                             </form>

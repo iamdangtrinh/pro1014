@@ -291,7 +291,7 @@
                 <div class="product-default inner-quickview inner-icon">
                     <figure>
                         <a href="<?= $base_url ?>product/detail" title="Chi tiết sản phẩm">
-                            <img src="<?= $base_url ?>upload/demoes/demo23/products/<?=$product['AnhSP']?>" width="217"
+                            <img src="<?= $base_url ?>upload/demoes/demo23/products/<?=$product['']?>" width="217"
                                 height="217" alt="product">
                         </a>
                         <div class="label-group">
