@@ -10,10 +10,10 @@
                 //hien thi du lieu
                 $view_name='page_home';
                 break;
-            case 'cart':
-                //laydulieu
-                $view_name='page_cart';
-                break;
+            // case 'cart':
+            //     //laydulieu
+            //     $view_name='page_cart';
+            //     break;
             case 'shop':
                 $limit = 12;
                 $start = 0;

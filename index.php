@@ -23,6 +23,9 @@
             case 'category':
                 $ctrl_name='category';
                 break;
+            case 'cart':
+                $ctrl_name = 'cart';
+            break;
             case 'admin':
                 $ctrl_name='admin';
                 break;

@@ -7,10 +7,6 @@
                 $view_name='product_detail';
                 break;
 
-                case 'seqarch_ajax': 
-                    return $_POST;
-                break;
-            
             default:
                 $view_name='product_detail';
                 break;
