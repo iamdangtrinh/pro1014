@@ -96,7 +96,7 @@
                                                         alt="product" style="width: 207px; height: 220px;">
                                                 </a>
                                                 <div class="btn-icon-group">
-                                                    <a href="<?= $base_url ?>product/detail"
+                                                    <a href="<?= $base_url ?>product/detail/<?= $product['MaSP'];?>"
                                                         class="btn-icon btn-add-cart fa-solid fa-cart-shopping"></a>
                                                 </div>
                                                 <a href="ajax/product-quick-view.html" class="btn-quickview"
@@ -135,10 +135,10 @@
                                                         alt="product" style="width: 207px; height: 220px;">
                                                 </a>
                                                 <div class="label-group">
-                                                    <div class="product-label label-sale"><?=substr((($product['Gia'] - $product['GiaGiam']) / $product['Gia']) * 100, 0, 2)?>%</div>
+                                                    <div class="product-label label-sale">-<?=substr((($product['Gia'] - $product['GiaGiam']) / $product['Gia']) * 100, 0, 2)?>%</div>
                                                 </div>
                                                 <div class="btn-icon-group">
-                                                    <a href="<?= $base_url?>product/detail"
+                                                    <a href="<?= $base_url?>product/detail/<?= $product['MaSP'];?>"
                                                         class="btn-icon btn-add-cart fa-solid fa-cart-shopping"></a>
                                                 </div>
                                                 <a href="ajax/product-quick-view.html" class="btn-quickview"
