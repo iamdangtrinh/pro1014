@@ -10,10 +10,13 @@
                 //hien thi du lieu
                 $view_name='page_home';
                 break;
-            // case 'cart':
-            //     //laydulieu
-            //     $view_name='page_cart';
-            //     break;
+            case 'cart':
+                //laydulieu
+
+                // Hiển thị dữ liệu
+                $view_name='page_cart';
+                $title = 'Giỏ hàng - Bé yêu';
+                break;
             case 'shop':
                 $limit = 12;
                 $start = 0;
