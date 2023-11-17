@@ -87,48 +87,89 @@
                         <!-- chỗ lầy là chỗ foeach sản phẩm -->
                         <div class="row">
                             <?php foreach ($product_shop as $product): ?>
-                            <div class="col-6 col-sm-4 col-lg-3">
-                                <div class="product-default inner-quickview inner-icon">
-                                    <figure>
-                                        <a href="demo23-product.html">
-                                            <img src="<?=$base_url?>upload/demoes/demo23/products/<?= $product['AnhSP'];?>"
-                                                alt="product" style="width: 207px; height: 220px;">
-                                        </a>
-                                        <div class="label-group">
-                                            <div class="product-label label-sale">-89%</div>
+                                <?php if(!$product['GiaGiam']): ?>
+                                    <div class="col-6 col-sm-4 col-lg-3">
+                                        <div class="product-default inner-quickview inner-icon">
+                                            <figure>
+                                                <a href="demo23-product.html">
+                                                    <img src="<?=$base_url?>upload/demoes/demo23/products/<?= $product['AnhSP'];?>"
+                                                        alt="product" style="width: 207px; height: 220px;">
+                                                </a>
+                                                <div class="btn-icon-group">
+                                                    <a href="<?= $base_url ?>product/detail"
+                                                        class="btn-icon btn-add-cart fa-solid fa-cart-shopping"></a>
+                                                </div>
+                                                <a href="ajax/product-quick-view.html" class="btn-quickview"
+                                                    title="Quick View">Xem nhanh</a>
+                                            </figure>
+                                            <div class="product-details">
+                                                <div class="category-wrap">
+                                                    <div class="category-list">
+                                                        <a href="demo23-product.html" class="product-category"><?= $product['TenDM'];?></a>
+                                                    </div>
+                                                    <a href="wishlist.html" title="Wishlist" class="btn-icon-wish"><i
+                                                            class="icon-heart"></i></a>
+                                                </div>
+                                                <h3 class="product-title">
+                                                    <a href="demo23-product.html"><?= $product['TenSP'];?></a>
+                                                </h3>
+                                                <div class="ratings-container">
+                                                    <div class="product-ratings">
+                                                        <span class="ratings" style="width:0%"></span>
+                                                        <!-- End .ratings -->
+                                                        <span class="tooltiptext tooltip-top"></span>
+                                                    </div><!-- End .product-ratings -->
+                                                </div><!-- End .product-container -->
+                                                <div class="price-box">
+                                                    <span class="product-price"><?= $product['Gia'];?>đ</span>
+                                                </div><!-- End .price-box -->
+                                            </div><!-- End .product-details -->
                                         </div>
-                                        <div class="btn-icon-group">
-                                            <a href="#" class="btn-icon btn-add-cart product-type-simple"><i
-                                                    class="icon-shopping-cart" style="color:#000" ;></i></a>
+                                    </div>
+                                <?php else: ?>
+                                    <div class="col-6 col-sm-4 col-lg-3">
+                                        <div class="product-default inner-quickview inner-icon">
+                                            <figure>
+                                                <a href="demo23-product.html">
+                                                    <img src="<?=$base_url?>upload/demoes/demo23/products/<?= $product['AnhSP'];?>"
+                                                        alt="product" style="width: 207px; height: 220px;">
+                                                </a>
+                                                <div class="label-group">
+                                                    <div class="product-label label-sale"><?=substr((($product['Gia'] - $product['GiaGiam']) / $product['Gia']) * 100, 0, 2)?>%</div>
+                                                </div>
+                                                <div class="btn-icon-group">
+                                                    <a href="<?= $base_url?>product/detail"
+                                                        class="btn-icon btn-add-cart fa-solid fa-cart-shopping"></a>
+                                                </div>
+                                                <a href="ajax/product-quick-view.html" class="btn-quickview"
+                                                    title="Quick View">Xem nhanh</a>
+                                            </figure>
+                                            <div class="product-details">
+                                                <div class="category-wrap">
+                                                    <div class="category-list">
+                                                        <a href="demo23-product.html" class="product-category"><?= $product['TenDM'];?></a>
+                                                    </div>
+                                                    <a href="wishlist.html" title="Wishlist" class="btn-icon-wish"><i
+                                                            class="icon-heart"></i></a>
+                                                </div>
+                                                <h3 class="product-title">
+                                                    <a href="demo23-product.html"><?= $product['TenSP'];?></a>
+                                                </h3>
+                                                <div class="ratings-container">
+                                                    <div class="product-ratings">
+                                                        <span class="ratings" style="width:0%"></span>
+                                                        <!-- End .ratings -->
+                                                        <span class="tooltiptext tooltip-top"></span>
+                                                    </div><!-- End .product-ratings -->
+                                                </div><!-- End .product-container -->
+                                                <div class="price-box">
+                                                    <span class="old-price"><?= $product['Gia'];?>đ</span>
+                                                    <span class="product-price"><?= $product['GiaGiam'];?>đ</span>
+                                                </div><!-- End .price-box -->
+                                            </div><!-- End .product-details -->
                                         </div>
-                                        <a href="ajax/product-quick-view.html" class="btn-quickview"
-                                            title="Quick View">Xem nhanh</a>
-                                    </figure>
-                                    <div class="product-details">
-                                        <div class="category-wrap">
-                                            <div class="category-list">
-                                                <a href="demo23-product.html" class="product-category">Loại</a>
-                                            </div>
-                                            <a href="wishlist.html" title="Wishlist" class="btn-icon-wish"><i
-                                                    class="icon-heart"></i></a>
-                                        </div>
-                                        <h3 class="product-title">
-                                            <a href="demo23-product.html"><?= $product['TenSP'];?></a>
-                                        </h3>
-                                        <div class="ratings-container">
-                                            <div class="product-ratings">
-                                                <span class="ratings" style="width:0%"></span>
-                                                <!-- End .ratings -->
-                                                <span class="tooltiptext tooltip-top"></span>
-                                            </div><!-- End .product-ratings -->
-                                        </div><!-- End .product-container -->
-                                        <div class="price-box">
-                                            <span class="old-price"><?= $product['Gia'];?>đ</span>
-                                            <span class="product-price"><?= $product['Gia'];?>đ</span>
-                                        </div><!-- End .price-box -->
-                                    </div><!-- End .product-details -->
-                                </div>
-                            </div>
+                                    </div>
+                                <?php endif; ?>
                             <?php endforeach; ?>
                             <!-- chỗ lầy là chỗ foeach sản phẩm -->
                             <!-- End .col-lg-3 -->
@@ -141,7 +182,7 @@
                                 </li>
                                 <?php for($i=1; $i<=$sotrang; $i++): ?>
                                 <li class="page-item">
-                                    <a class="page-link" href="<?= $base_url ?>page/shop&shop=<?=$i?>"><?=$i?></a>
+                                    <a class="page-link" href="<?= $base_url ?>page/shop/<?=$i?>"><?=$i?></a>
                                 </li>
                                 <?php endfor;?>
                                 <li class="page-item"><span class="page-link">...</span></li>

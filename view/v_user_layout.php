@@ -193,7 +193,7 @@
                                     </div>
                                 </li>
                                 <li>
-                                    <a href="<?= $base_url ?>page/shop&shop=1">Sản phẩm</a>
+                                    <a href="<?= $base_url?>page/shop">Sản phẩm</a>
                                 </li>
                                 <li class="d-none d-xl-block">
                                     <a href="#">Liên hệ</a>
