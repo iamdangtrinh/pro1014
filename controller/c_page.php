@@ -17,9 +17,9 @@
             case 'shop':
                 $limit = 12;
                 $start = 0;
+                $soluongSP = count_product();
+                $sotrang = ceil($soluongSP / $limit);
                 if (isset($_GET["shop"])) {
-                    $soluongSP = count_product();
-                    $sotrang = ceil($soluongSP / $limit);
                     // Xác định trang hiện tại
                     $trang_hien_tai = isset($_GET['shop']) ? intval($_GET['shop']) : 1;
                     // Tính toán vị trí bắt đầu của sản phẩm trên trang hiện tại
