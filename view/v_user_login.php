@@ -43,7 +43,7 @@
 				<a href="<?= $base_url ?>user/register" class="text-danger form-footer-right">Đăng ký
 					tài khoản</a>
 			</div>
-			<input type="submit" name="btn_login" value="Đăng nhập" class="btn btn-dark btn-md w-100">
+			<input type="submit" name="btn_login" value="Đăng nhập" class="btn btn-primary btn-md w-100">
 		</form>
 
 

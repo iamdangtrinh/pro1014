@@ -12,7 +12,7 @@
     }
     // Tạo tài khoản
     function user_add($SoDienThoai,$Email,$HoTen,$MatKhau,$DiaChi){
-        pdo_execute("INSERT INTO taikhoan(`SoDienThoai`,`Email`,`HoTen`,`MatKhau`,`DiaChi`) VALUES(?,?,?,?,?)",$SoDienThoai,$Email,$HoTen,$MatKhau,$DiaChi);
+        pdo_execute("INSERT INTO taikhoan(`SoDienThoai`,`Email`,`HoTen`,`MatKhau`,`DiaChi`) VALUES(?,?,?,?,?)",$SoDienThoai,$Email,$HoTen,md5($MatKhau),$DiaChi);
     }
 
 
