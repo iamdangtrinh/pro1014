@@ -18,7 +18,7 @@ if (isset($_GET['act'])) {
             if (isset($_POST['btn_login']) && $_POST['btn_login']) {
                 $email = $_POST['email'];
                 $password = $_POST['password'];
-                if ($email == null && $email == " " || $password == null && $password) {
+                if (empty($email) || empty($password)) {
                     // Hiển thị lỗi
                     $_SESSION['error']['login'] = "Email hoặc mật khẩu không được để trống";
                 } else {
@@ -34,9 +34,8 @@ if (isset($_GET['act'])) {
                             header('location: ' . $base_url . 'page/home');
                         }
                         // Chuyển về trang chủ
-                    } else if ($has_account === 0) {
+                    } else if ($has_account == 0) {
                         $_SESSION['error']['login'] = "Tài khoản hoặc mật khẩu sai. Vui lòng thử lại";
-                        // echo "Tài khoản hoặc mật khẩu sai. Vui lòng thử lại";
                     }
                 }
             }
@@ -46,8 +45,6 @@ if (isset($_GET['act'])) {
             break;
         // Đăng ký tài khoản
         case 'register':
-            //lay du lieu
-            // Kiểm tra tài khoản có tồn tại hay không
             if (isset($_POST['btn_register']) && $_POST['btn_register']) {
                 $HoTen = $_POST['fullname'];
                 $Email = $_POST['email'];
@@ -62,6 +59,7 @@ if (isset($_GET['act'])) {
                     $_SESSION['error']['register'] = 'Đăng ký không thành công. Vui lòng thử lại sau';
                 } else if (!preg_match("/@/", $Email)) {
                     $_SESSION['error']['register'] = 'Đăng ký không thành công. Email không hợp lệ';
+            // Kiểm tra tài khoản có tồn tại hay không
                 } else if (has_email($Email) > 0) {
                     $_SESSION['error']['register'] = 'Đăng ký không thành công. Tài khoản này đã tồn tại';
                 } else {
@@ -79,6 +77,7 @@ if (isset($_GET['act'])) {
             } else {
                 $view_name = 'user_forgotPassword';
             }
+            $title = "Quên mật khẩu";
             break;
         case 'logout':
             unset($_SESSION['user']);
