@@ -96,7 +96,7 @@
 
 
 <!-- ajax register form -->
-<script>
+<!-- <script>
 	$(document).ready(
 		function () {
 
@@ -174,4 +174,4 @@
 
 		})
 
-</script>
+</script> -->

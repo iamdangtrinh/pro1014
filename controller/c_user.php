@@ -1,5 +1,5 @@
 <?php
-            include_once 'model/m_user.php';
+include_once 'model/m_user.php';
 if (isset($_GET['act'])) {
     switch ($_GET['act']) {
         case 'dashboard':
@@ -15,16 +15,15 @@ if (isset($_GET['act'])) {
         // Đăng nhập tài khoản
         case 'login':
             //lay du lieu
-            // kiểm tra tài khoản có tồn tại hay không
             if (isset($_POST['btn_login']) && $_POST['btn_login']) {
                 $email = $_POST['email'];
                 $password = $_POST['password'];
                 if ($email == null && $email == " " || $password == null && $password == "") {
                     // Hiển thị lỗi
-                    $_SESSION['error']['login'] = "Đăng nhập không thành công. Vui lòng thử lại";
+                    $_SESSION['error']['login'] = "Email hoặc mật khẩu không được để trống";
                 } else {
-                    // check login 
-                    $has_account = check_login($email, md5($password));
+                    // kiểm tra tài khoản có tồn tại hay không
+                    $has_account = check_login($email, $password);
                     // cho phép đăng nhập
                     if ($has_account > 0) {
                         $_SESSION['user'] = $has_account;
@@ -35,7 +34,7 @@ if (isset($_GET['act'])) {
                             header('location: ' . $base_url . 'page/home');
                         }
                         // Chuyển về trang chủ
-                    } else if ($has_account == 0) {
+                    } else if ($has_account === 0) {
                         $_SESSION['error']['login'] = "Tài khoản hoặc mật khẩu sai. Vui lòng thử lại";
                         // echo "Tài khoản hoặc mật khẩu sai. Vui lòng thử lại";
                     }
@@ -57,16 +56,20 @@ if (isset($_GET['act'])) {
                 $DiaChi = $_POST['address'];
 
                 if ($Email == "" || empty($Email)) {
-                    $_SESSION['error']['register'] = 'Đăng ký không thành công';
+                    $_SESSION['error']['register'] = 'Đăng ký không thành công. Vui lòng thử lại sau';
                 } else if (!preg_match("/@/", $Email)) {
                     $_SESSION['error']['register'] = 'Đăng ký không thành công. Email không hợp lệ';
                 } else {
                     // cho phép đăng ký tài khoản
-                    if (has_email($Email) > 0) {
-                        $_SESSION['error']['register'] = 'Đăng ký không thành công. Tài khoản này đã tồn tại';
+                    if (($MatKhau === "" || empty($MatKhau)) && ($HoTen === "" || empty($HoTen)) && ($SoDienThoai === "" || empty($SoDienThoai)) && ($DiaChi === "" || empty($DiaChi))) {
+                        $_SESSION['error']['register'] = 'Đăng ký không thành công. Vui lòng thử lại';
                     } else {
-                        $_SESSION['success']['register'] = 'Đăng ký tài khoản thành công.';
-                        user_add($SoDienThoai, $Email, $HoTen, md5($MatKhau), $DiaChi);
+                        if (has_email($Email) > 0) {
+                            $_SESSION['error']['register'] = 'Đăng ký không thành công. Tài khoản này đã tồn tại';
+                        } else {
+                            $_SESSION['success']['register'] = 'Đăng ký tài khoản thành công.';
+                            user_add($SoDienThoai, $Email, $HoTen, md5($MatKhau), $DiaChi);
+                        }
                     }
                 }
             }
