@@ -171,18 +171,25 @@
                                     <a href="<?= $base_url ?>page/shop">Danh mục <i
                                             class="fa-solid fa-caret-down"></i></a>
                                     <div class="megamenu megamenu-fixed-width megamenu-3cols">
-                                        <div class="row">
-                                            <div class="col-lg-4">
-                                                <a href="#" class="nolink">Danh mục 1</a>
-                                                <ul class="submenu">
+                                    
+                                    <div class="row">
+                                        <?php 
+                                            $kiemtra_dm = null;
+                                            foreach ($danhmuc as $item_dm): 
+                                                if ($item_dm['TenDM'] != $kiemtra_dm) {
+                                                    if ($kiemtra_dm != null) {
+                                                        echo '</ul></div>';
+                                                    }
+                                                    echo '<div class="col-lg-4">';
+                                                    echo '<a href="#" class="nolink">'.$item_dm['TenDM'].'</a>';
+                                                    echo '<ul class="submenu">';
+                                                    $kiemtra_dm = $item_dm['TenDM'];
+                                                }
+                                        ?>
+                                            <li><a href="category-horizontal-filter2.html"><?=$item_dm['TenDMC']?></a></li>
+                                        <?php endforeach; if ($kiemtra_dm != null) { echo '</ul></div>'; }?>
+                                    </div>
 
-                                                    <li><a href="category-horizontal-filter2.html">Horizontal
-                                                            Filter2</a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-
-                                        </div>
                                     </div>
                                 </li>
                                 <li>

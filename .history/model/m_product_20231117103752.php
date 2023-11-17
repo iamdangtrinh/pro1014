@@ -26,6 +26,6 @@
         return pdo_query("SELECT * FROM sanpham ORDER BY MaSP DESC LIMIT $limit");
     }
     function product_getPin($limit){
-        return pdo_query("SELECT * FROM sanpham WHERE ghim = 1 LIMIT $limit");
+        return pdo_query("SELECT * FROM sanpham WHERE ghim = 1  MaSP LIMIT $limit");
     }
 ?>

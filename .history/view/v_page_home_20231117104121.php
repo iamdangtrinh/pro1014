@@ -312,7 +312,7 @@
                                     class="icon-heart"></i></a>
                         </div>
                         <h3 class="product-title">
-                            <a href="<?= $base_url ?>product/detail"><?=$product['TenSP']?></a>
+                            <a href="<?= $base_url ?>product/detail"><??></a>
                         </h3>
                         <div class="ratings-container">
                             <div class="product-ratings">
@@ -321,7 +321,7 @@
                             </div><!-- End .product-ratings -->
                         </div><!-- End .product-container -->
                         <div class="price-box">
-                            <span class="product-price"><?=$product['Gia']?> &ndash; Giá Giảm</span>
+                            <span class="product-price">Giá tiền &ndash; Giá tiền</span>
                         </div><!-- End .price-box -->
                     </div>
                 </div>

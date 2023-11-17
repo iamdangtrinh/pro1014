@@ -1,12 +1,11 @@
 <?php 
-
     if(isset($_GET['act'])){
         switch($_GET['act']){
             case 'home':
                 // lay du lieu
                 include_once 'model/m_product.php';
                 $dsMoi = product_getNew(4);
-                $dsGhim = product_getPin(4);
+                $dsGhim = product_getPin(4)
                 //hien thi du lieu
                 $view_name='page_home';
                 break;
@@ -17,6 +16,7 @@
             case 'shop':
                 $limit = 12;
                 $start = 0;
+            
                 if (isset($_GET["shop"])) {
                     $soluongSP = count_product();
                     $sotrang = ceil($soluongSP / $limit);
@@ -27,7 +27,6 @@
                     // Lấy dữ liệu sản phẩm từ cơ sở dữ liệu
                     $product_shop = product_shop($start, $limit);
                 }
-                $product_shop = product_shop($start, $limit);
                 $view_name = 'page_shop';
                 break;
             case 'contact':

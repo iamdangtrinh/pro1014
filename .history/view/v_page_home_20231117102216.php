@@ -173,8 +173,8 @@
         </div>
 
         <div class="row appear-animate" data-animation-name="fadeInUpShorter" data-animation-delay="400">
-            <?php foreach ($dsMoi as $product): ?>
             <div class="col-6 col-md-4 col-xl-3">
+                <?php foreach($dsMoi as $product): ?>
                 <div class="product-default inner-quickview inner-icon">
                     <figure>
                         <a href="<?= $base_url ?>product/detail" title="Chi tiết sản phẩm">
@@ -198,7 +198,7 @@
                                     class="icon-heart"></i></a>
                         </div>
                         <h3 class="product-title">
-                            <a href="<?= $base_url ?>product/detail"><?=$product['TenSP']?></a>
+                            <a href="<?= $base_url ?>product/detail">Tên sản phẩm</a>
                         </h3>
                         <div class="ratings-container">
                             <div class="product-ratings">
@@ -207,12 +207,12 @@
                             </div><!-- End .product-ratings -->
                         </div><!-- End .product-container -->
                         <div class="price-box">
-                            <span class="product-price"><?=$product['Gia']?></span>
+                            <span class="product-price">Giá tiền &ndash; Giá tiền</span>
                         </div><!-- End .price-box -->
                     </div>
                 </div>
+                <?
             </div>
-            <?php endforeach; ?>
         </div>
     </div>
 </section>
@@ -286,7 +286,6 @@
 <div class="products-container appear-animate" data-animation-name="fadeIn" data-animation-delay="200">
     <div class="container">
         <div class="row">
-            <?php foreach($dsGhim as $product): ?>
             <div class="col-6 col-md-4 col-xl-3">
                 <div class="product-default inner-quickview inner-icon">
                     <figure>
@@ -312,7 +311,7 @@
                                     class="icon-heart"></i></a>
                         </div>
                         <h3 class="product-title">
-                            <a href="<?= $base_url ?>product/detail"><?=$product['TenSP']?></a>
+                            <a href="<?= $base_url ?>product/detail">Tên sản phẩm</a>
                         </h3>
                         <div class="ratings-container">
                             <div class="product-ratings">
@@ -321,12 +320,11 @@
                             </div><!-- End .product-ratings -->
                         </div><!-- End .product-container -->
                         <div class="price-box">
-                            <span class="product-price"><?=$product['Gia']?> &ndash; Giá Giảm</span>
+                            <span class="product-price">Giá tiền &ndash; Giá tiền</span>
                         </div><!-- End .price-box -->
                     </div>
                 </div>
             </div>
-            <?php endforeach;?>
         </div>
     </div>
 </div>

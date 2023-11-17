@@ -22,10 +22,5 @@
     function count_product(){
         return pdo_query_value("SELECT count(*) AS soluong FROM sanpham");
     }
-    function product_getNew($limit){
-        return pdo_query("SELECT * FROM sanpham ORDER BY MaSP DESC LIMIT $limit");
-    }
-    function product_getPin($limit){
-        return pdo_query("SELECT * FROM sanpham WHERE ghim = 1 LIMIT $limit");
-    }
+    function product_getNew()
 ?>
