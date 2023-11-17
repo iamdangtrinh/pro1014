@@ -193,7 +193,7 @@
                                     </div>
                                 </li>
                                 <li>
-                                    <a href="<?= $base_url ?>page/shop">Sản phẩm <i
+                                    <a href="<?= $base_url ?>page/shop&shop=1">Sản phẩm <i
                                             class="fa-solid fa-caret-down"></i></a>
                                     <div class="megamenu megamenu-fixed-width">
                                         <div class="row">
