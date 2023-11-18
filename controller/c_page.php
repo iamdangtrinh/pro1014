@@ -10,8 +10,23 @@
                 //hien thi du lieu
                 $view_name='page_home';
                 break;
-            case 'cart':
+            case 'cart_order':
                 //laydulieu
+                include_once 'model/m_product.php';
+                include_once 'model/m_cart.php';
+
+                if(isset($_POST['addtocart']) && $_POST['addtocart']) {
+                    // xử lí sau 
+                }
+                $user = $_SESSION['user']['id'];
+                $MaSP = $_POST[''];
+                $SoLuongSP = $_POST[''];
+                $TongTien = $_POST[''];
+
+                // nếu sản phẩm có trong giỏ hàng
+
+                // nếu sản phâm không có trong giỏ hàng 
+
 
                 // Hiển thị dữ liệu
                 $view_name='page_cart';
