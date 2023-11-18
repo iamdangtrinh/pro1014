@@ -56,6 +56,10 @@
                 //laydulieu
                 $view_name='page_aboutUs';
                 break;
+            case 'checkout':
+                //laydulieu
+                $view_name='page_checkout';
+                break;
             case 'wishlist':
                 //laydulieu
                 $view_name='page_wishlist';
@@ -70,9 +74,9 @@
                 $view_name='page_history';
                 break;
             case 'search':
-                if (isset($_POST['keyword'])) {
+                if (isset($_POST['search_key'])) {
                     // doi tu post sang get
-                    header("location: ".$base_url."page/search/".$_POST['keyword']."");
+                    header("location: ".$base_url."page/search/".$_POST['search_key']."");
                 }
                 // lay du lieu
                 include_once 'model/m_product.php';
@@ -81,8 +85,8 @@
                 if (isset($_GET['page'])){
                     $page=$_GET['page'];
                 }
-                $ketqua=product_search($_GET['keyword'],$page);
-                $sotrang=ceil((product_searchTotal($_GET['keyword']))/8);
+                $ketqua=product_search($_GET['search_key'],$page);
+                $sotrang=ceil((product_searchTotal($_GET['search_key']))/12);
                 // hien thi du lieu
                 $view_name='page_search';
                 break;

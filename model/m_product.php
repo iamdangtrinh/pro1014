@@ -1,6 +1,6 @@
 <?php 
     function product_search($keyword, $page=1){
-        $batdau= ($page-1)*8;
+        $batdau= ($page-1)*12;
         // 1 trang lay 8
 
         // trang 1 bat dau tu 0 1 2 3 4 5 6 7 
@@ -11,7 +11,7 @@
 
         // trang n bat dau tu (n-1)*8
         
-        return pdo_query("SELECT * FROM sanpham WHERE TenSP LIKE '%$keyword%' LIMIT $batdau,8");
+        return pdo_query("SELECT * FROM sanpham sp INNER JOIN danhmuc dm ON sp.MaDM = dm.MaDM WHERE TenSP LIKE '%$keyword%' LIMIT $batdau,12");
     }
     function product_searchTotal($keyword){
         return pdo_query_value("SELECT COUNT(*) FROM sanpham WHERE TenSP LIKE '%$keyword%'");

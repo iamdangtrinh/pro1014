@@ -80,7 +80,7 @@
                                 class="btn btn-outline-primary p-3 mr-2 line-height-1">Đăng ký</a>
                             <a href="<?= $base_url ?>user/login" class="btn btn-outline-primary p-3 mr-4 line-height-1">Đăng
                                 nhập</a>
-                        <?php endif ?>
+                        <?php endif; ?>
 
                         <a href="wishlist.html" class="header-icon">
                             <i class="fa-regular fa-heart"></i>
@@ -133,7 +133,7 @@
                                     </div>
 
                                     <div class="dropdown-cart-action">
-                                        <a href="cart.html" class="btn btn-gray btn-block view-cart">Xem giỏ hàng</a>
+                                        <a href="<?=$base_url?>gio-hang/cart_order" class="btn btn-gray btn-block view-cart">Xem giỏ hàng</a>
                                         <a href="checkout.html" class="btn btn-dark btn-block">Kiểm tra</a>
                                     </div>
                                 </div>
@@ -163,11 +163,11 @@
                     <div class="header-center">
                         <nav class="main-nav">
                             <ul class="menu">
-                                <li class="active">
+                                <li  class="<?=(strpos($view_name,'home'))?'active':''?>">
                                     <a href="<?= $base_url ?>page/home">Trang chủ</a>
                                 </li>
                                 <li>
-                                    <a href="<?= $base_url ?>page/shop">Danh mục <i
+                                    <a>Danh mục <i
                                             class="fa-solid fa-caret-down"></i></a>
                                     <div class="megamenu megamenu-fixed-width megamenu-3cols">
                                     
@@ -191,20 +191,20 @@
 
                                     </div>
                                 </li>
-                                <li>
+                                <li class="<?=(strpos($view_name,'shop'))?'active':''?>">
                                     <a href="<?= $base_url?>page/shop">Sản phẩm</a>
                                 </li>
-                                <li class="d-none d-xl-block">
-                                    <a href="#">Liên hệ</a>
+                                <li  class="<?=(strpos($view_name,'contact'))?'active':''?>">
+                                    <a href="<?= $base_url ?>page/contact">Liên hệ</a>
                                 </li>
-                                <li><a href="blog.html">Về chúng tôi</a></li>
+                                <li class="<?=(strpos($view_name,'aboutUs'))?'active':''?>"><a href="<?= $base_url ?>page/aboutUs">Về chúng tôi</a></li>
                             </ul>
                         </nav>
                     </div>
                     <!-- search -->
                     <div class="d-flex pr-0">
                         <div class="header-search-main header-search header-search-category text-right">
-                            <form id="form_search" action="<?= $base_url?>controller/ajax_search.php" method="post">
+                            <form id="form_search" action="<?= $base_url?>page/search" method="post">
 
                                 <div class="input-group input-group-main input-focus">
                                     <input autocomplete="off" class="form-input" id="search_ajax" type="text" name="search_key"

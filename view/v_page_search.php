@@ -2,9 +2,9 @@
 <section class="featured spad">
     <div class="container">
         <div class="row">
-            <div class="col-lg-12">
+            <div class="col-lg-12 m-4">
                 <div class="section-title">
-                    <h2>Kết quả tìm kiếm với từ khóa '<?=$_GET['keyword']?>'</h2>
+                    <h3>Kết quả tìm kiếm với từ khóa '<?=$_GET['search_key']?>'</h3>
                 </div>
             </div>
         </div>
@@ -30,7 +30,7 @@
                         <div class="product-details">
                             <div class="category-wrap">
                                 <div class="category-list">
-                                    <a href="demo23-shop.html" class="product-category">Loại</a>
+                                    <a href="demo23-shop.html" class="product-category"><?=$ghim['TenDM']?></a>
                                 </div>
                                 <a href="wishlist.html" title="Wishlist" class="btn-icon-wish"><i
                                         class="icon-heart"></i></a>
@@ -59,17 +59,17 @@
 <nav aria-label="...">
     <ul class="pagination justify-content-center">
         <li class="page-item <?=($page<=1)?'disabled': '' ?>">
-        <a class="page-link" href="<?=$base_url?>page/search/<?=$_GET['keyword']?>/page/<?=$page-1?>" aria-label="Previous">
+        <a class="page-link" href="<?=$base_url?>page/search/<?=$_GET['search_key']?>/page/<?=$page-1?>" aria-label="Previous">
             <span aria-hidden="true">&laquo;</span>
         </a>
         </li>
         <?php for($i=1;$i<=$sotrang;$i++): ?>
         <li class="page-item <?=($page==$i)?'active': '' ?>" >
-            <a class="page-link" href="<?=$base_url?>page/search/<?=$_GET['keyword']?>/page/<?=$i?>"><?=$i?></a>
+            <a class="page-link" href="<?=$base_url?>page/search/<?=$_GET['search_key']?>/page/<?=$i?>"><?=$i?></a>
         </li>
         <?php endfor ?>
         <li class="page-item <?=($page>=$sotrang)?'disabled': '' ?>">
-        <a class="page-link" href="<?=$base_url?>page/search/<?=$_GET['keyword']?>/page/<?=$page+1?>" aria-label="Next">
+        <a class="page-link" href="<?=$base_url?>page/search/<?=$_GET['search_key']?>/page/<?=$page+1?>" aria-label="Next">
             <span aria-hidden="true">&raquo;</span>
         </a>
         </li>
