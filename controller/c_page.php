@@ -10,28 +10,7 @@
                 //hien thi du lieu
                 $view_name='page_home';
                 break;
-            case 'cart_order':
-                //laydulieu
-                include_once 'model/m_product.php';
-                include_once 'model/m_cart.php';
-
-                if(isset($_POST['addtocart']) && $_POST['addtocart']) {
-                    // xử lí sau 
-                }
-                $user = $_SESSION['user']['id'];
-                $MaSP = $_POST[''];
-                $SoLuongSP = $_POST[''];
-                $TongTien = $_POST[''];
-
-                // nếu sản phẩm có trong giỏ hàng
-
-                // nếu sản phâm không có trong giỏ hàng 
-
-
-                // Hiển thị dữ liệu
-                $view_name='page_cart';
-                $title = 'Giỏ hàng - Bé yêu';
-                break;
+           
             case 'shop':
                 $limit = 12;
                 $start = 0;
