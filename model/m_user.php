@@ -4,7 +4,7 @@
     
     // kiểm tra tài khoản trong sql có đúng không
     function check_login($email, $password){
-        return pdo_query_one("SELECT Email,MatKhau, HinhAnh,HoTen, SoDienThoai, DiaChi FROM taikhoan WHERE Email=? AND MatKhau=?",$email,md5($password));
+        return pdo_query_one("SELECT MaTK,Email,MatKhau, HinhAnh,HoTen, SoDienThoai, DiaChi FROM taikhoan WHERE Email=? AND MatKhau=?",$email,md5($password));
     }
     // kiểm tra email có tồn tại hay không
     function has_email($email){
@@ -14,7 +14,6 @@
     function user_add($SoDienThoai,$Email,$HoTen,$MatKhau,$DiaChi){
         pdo_execute("INSERT INTO taikhoan(`SoDienThoai`,`Email`,`HoTen`,`MatKhau`,`DiaChi`) VALUES(?,?,?,?,?)",$SoDienThoai,$Email,$HoTen,md5($MatKhau),$DiaChi);
     }
-
 
     function user_getAll(){
         return pdo_query("SELECT * FROM taikhoan");

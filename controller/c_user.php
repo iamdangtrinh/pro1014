@@ -11,6 +11,7 @@ if (isset($_GET['act'])) {
                 $_SESSION['error']['register'] = 'Vui lòng đăng ký để truy cập vào trang dashboard';
                 header('location: ' . $base_url . 'user/register');
             }
+            $title = 'Quản lí tài khoản';
             break;
         // Đăng nhập tài khoản
         case 'login':

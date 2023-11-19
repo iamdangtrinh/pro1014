@@ -14,7 +14,8 @@ RewriteRule ^upload/(.*)$ upload/$1 [L]
 RewriteRule ^controller/(.*)$ controller/$1 [L]
 RewriteRule ^assets/(.*)$ assets/$1 [L]
 
-RewriteRule ^gio-hang.html$ index.php?mod=product&act=cart_order [L]
+RewriteRule ^addtocart$ index.php?mod=product&act=addtocart [L]
+RewriteRule ^cart/cart_order$ index.php?mod=product&act=cart [L]
 
 RewriteRule ^assets/(.*)/(.*)/(.*)$ assets/$1/$2/$3 [L]
 RewriteRule ^assets/(.*)/(.*)$ assets/$1/$2 [L]

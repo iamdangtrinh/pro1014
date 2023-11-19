@@ -22,12 +22,12 @@
                         <h2 class="text-uppercase m-3">Tài Khoản</h2>
                         <ul class="nav nav-tabs list flex-column mb-0" role="tablist">
                             <li class="nav-item">
-                                <a class="nav-link " id="dashboard-tab" data-toggle="tab" href="#dashboard"
+                                <a class="nav-link active" id="dashboard-tab" data-toggle="tab" href="#dashboard"
                                     role="tab" aria-controls="dashboard" aria-selected="true"><i class="fa-brands fa-windows"></i> &nbsp; Bảng Điều Khiển</a>
                             </li>
 
-                            <li class="nav-item active">
-                                <a class="nav-link" id="order-tab" data-toggle="tab" href="#order" role="tab"
+                            <li class="nav-item">
+                                <a class="nav-link" id="order-tab" data-toggle="tab" href="#account" role="tab"
                                     aria-controls="order" aria-selected="true"><i class="fa-solid fa-user"></i> &nbsp; Thông tin tài khoản</a>
                             </li>
 
@@ -50,7 +50,7 @@
                         </ul>
                     </div>
                     <div class="col-lg-9 order-lg-last order-1 tab-content">
-                        <div class="tab-pane fade " id="dashboard" role="tabpanel">
+                        <div class="tab-pane fade active show" id="dashboard" role="tabpanel">
                             <div class="dashboard-content">
 
                                 <p>
@@ -64,8 +64,8 @@
 
                                 <div class="mb-4"></div>
 
-                                <div class="row row-lg">
-                                    <div class="col-6 col-md-4">
+                                <div class="row row-lg active">
+                                    <div class="col-6 col-md-4 ">
                                         <div class="feature-box text-center pb-4">
                                             <a href="#order" class="link-to-tab"><i class="fa-regular fa-user"></i></a>
                                             <div class="feature-box-content">
@@ -113,7 +113,7 @@
                             </div>
                         </div><!-- End .tab-pane -->
 
-                        <div class="tab-pane fade show active" id="order" role="tabpanel">
+                        <div class="tab-pane fade show" id="account" role="tabpanel">
                             <div class="order-content">
                                 <h3 class="account-sub-title d-none d-md-block">
                                     <i class="fa-regular fa-user"></i> &nbsp; Thông tin tài khoản</h3>
@@ -144,7 +144,7 @@
                             </div>
                         </div><!-- End .tab-pane -->
 
-                        <div class="tab-pane fade show active" id="pass" role="tabpanel">
+                        <div class="tab-pane fade show" id="pass" role="tabpanel">
                             <div class="order-content">
                                 <h3 class="account-sub-title d-none d-md-block">
                                     <i class="fa-solid fa-lock"></i> &nbsp; Đổi mật khẩu</h3>
