@@ -44,8 +44,8 @@ function show_cart_for_user($MaTK)
     FROM hoadon hd 
     INNER JOIN chitiethoadon ct ON 
     hd.MaHD = ct.MaHD
-    INNER JOIN taikhoan tk ON 
-    tk.MaTK = hd.MaTK
+    INNER JOIN sanpham sp ON 
+    sp.MaSP = ct.MaSP
     WHERE hd.MaTK =? AND hd.TrangThai = ? ORDER BY hd.MaHD desc
     ", $MaTK, 'gio-hang');
 }

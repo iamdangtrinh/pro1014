@@ -6437,11 +6437,37 @@ figure .porto-loading-icon {
 .product-nav-dots span:hover {
     box-shadow: 0 0 0 0.1rem #222529
 }
+ * {
+    box-sizing: border-box;
+ }
 
 .product-single-qty {
-    display: inline-block;
-    max-width: 104px;
-    vertical-align: middle
+    display: flex;
+    align-items: center;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+
+.product-single-qty span {
+    padding: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.product-single-qty span:first-child {
+    border-right: 1px solid #ccc;
+}
+.product-single-qty span:last-child {
+    border-left: 1px solid #ccc;
+}
+
+.product-single-qty input {
+    width: 50px;
+    text-align: center;
+    border: none;
+    outline: none;
+    /* border-left: 1px solid #ccc; */
+    /* border-right: 1px solid #ccc; */
 }
 
 .product-single-qty .bootstrap-touchspin.input-group {

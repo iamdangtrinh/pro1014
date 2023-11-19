@@ -4,7 +4,7 @@
     
     // kiểm tra tài khoản trong sql có đúng không
     function check_login($email, $password){
-        return pdo_query_one("SELECT MaTK,Email,MatKhau, HinhAnh,HoTen, SoDienThoai, DiaChi FROM taikhoan WHERE Email=? AND MatKhau=?",$email,md5($password));
+        return pdo_query_one("SELECT MaTK,Email,MatKhau, HinhAnh,HoTen, SoDienThoai, DiaChi,VaiTro FROM taikhoan WHERE Email=? AND MatKhau=?",$email,md5($password));
     }
     // kiểm tra email có tồn tại hay không
     function has_email($email){
