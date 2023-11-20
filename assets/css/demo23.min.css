@@ -17963,11 +17963,11 @@ span.toggle {
     left: 10px;
     top: 115%;
     z-index: 10;
-    background: antiquewhite;
+    background-color: #fff;
     width: 100%;
+    display: none;
 }
 .form-input:focus + .input-search{
     display:flex;
-    background-color: #fff;
     z-index: 999;
 }
