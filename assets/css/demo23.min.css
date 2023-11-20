@@ -17959,11 +17959,12 @@ span.toggle {
 .input-search{
     border-radius: 5px;
     position: absolute;
-    bottom: -65px;
     border: 1px solid #c4c0c0;
-    width: 259px;
     left: 10px;
-    display: none;
+    top: 115%;
+    z-index: 10;
+    background: antiquewhite;
+    width: 100%;
 }
 .form-input:focus + .input-search{
     display:flex;

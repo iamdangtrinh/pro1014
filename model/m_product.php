@@ -28,4 +28,9 @@
     function product_getPin($limit){
         return pdo_query("SELECT * FROM sanpham WHERE ghim = 1 LIMIT $limit");
     }
+
+    // tìm kiếm sản phẩm
+    function search_live_product($keyword) {
+        return pdo_query("SELECT * FROM sanpham WHERE TenSP like '%$keyword%' LIMIT 3");
+    }
 ?>

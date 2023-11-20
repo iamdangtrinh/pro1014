@@ -210,11 +210,11 @@
                                     <input autocomplete="off" class="form-input" id="search_ajax" type="text" name="search_key"
                                         placeholder="Nhập sản phẩm cần tìm...">
                                     <div id="search_result" class="row input-search">
-                                        <div class="col-md-4 img-focus">
+                                        <!-- <div class="col-md-4 img-focus">
                                             <img src="<?= $base_url ?>upload/demoes/demo23/products/product-1.jpg"
                                                 width="50" height="50" alt="product">
                                         </div>
-                                        <div class="col-md-8 mt-2 content-focus">Giày đan </div>
+                                        <div class="col-md-8 mt-2 content-focus">Giày đan </div> -->
                                     </div>
                                     <input type="submit" name="search" value="Tìm ngay" class="btn-primary" style="border-radius: 0 5px 5px 0;">
 
@@ -511,14 +511,20 @@
                     var search_item = $(this).val();
                     if(search_item != "") {
                         $.ajax({
-                            url: '<?= $base_url?>controller/ajax_search.php',
+                            url: '<?= $base_url?>controller/ajax.php?act=ajax_search',
                             method: 'POST',
                             data: {
                                 keyword: search_item
                             },
                             success:function(data) {
                                 console.log(data);
+                                // // console.log(result);
+                                 $("#search_result").html(data)
+                            },
+                            error :function (error) {
+                                console.log(error);
                             }
+                            
                         })
                     }
 
