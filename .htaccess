@@ -11,9 +11,10 @@ RewriteRule ^(.*)/search/(.*)$ index.php?mod=$1&act=search&search_key=$2 [L]
 RewriteRule ^(.*)/detail/([0-9]+)/page/(.*)$ index.php?mod=$1&act=detail&id=$2&page=$3 [L]
 RewriteRule ^(.*)/detail/([0-9]+)$ index.php?mod=$1&act=detail&id=$2 [L]
 RewriteRule ^upload/(.*)$ upload/$1 [L]
-RewriteRule ^controller/(.*)$ controller/$1 [L]
-RewriteRule ^assets/(.*)$ assets/$1 [L]
 
+RewriteRule ^controller/(.*)$ controller/$1 [L]
+
+RewriteRule ^assets/(.*)$ assets/$1 [L]
 RewriteRule ^addtocart$ index.php?mod=product&act=addtocart [L]
 RewriteRule ^cart/cart_order$ index.php?mod=product&act=cart [L]
 

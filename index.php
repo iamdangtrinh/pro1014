@@ -32,7 +32,6 @@ if (isset($_GET['mod'])) {
             break;
     }
     include_once 'controller/c_' . $ctrl_name . '.php';
-    echo $_SESSION['user']['VaiTro'];
 } else {
     header('location: ' . $base_url . 'page/home');
 }
