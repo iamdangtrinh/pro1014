@@ -35,10 +35,11 @@
                                 <td>
                                     <figure class="product-image-container">
                                         <a href="product.html" class="product-image">
-                                            <img src="assets/images/products/product-4.jpg" alt="product">
+                                            <img src="<?= $base_url ?>upload/demoes/demo23/products/giay1.png" alt="product">
                                         </a>
 
-                                        <a href="#" class="btn-remove icon-cancel" title="Remove Product"></a>
+                                        <a href="#" class="btn-remove" title="Remove Product"><i
+                                                class="fa-solid fa-xmark"></i></a>
                                     </figure>
                                 </td>
                                 <td>
@@ -63,10 +64,11 @@
                                 <td>
                                     <figure class="product-image-container">
                                         <a href="product.html" class="product-image">
-                                            <img src="assets/images/products/product-5.jpg" alt="product">
+                                        <img src="<?= $base_url ?>upload/demoes/demo23/products/giay1.png" alt="product">
                                         </a>
 
-                                        <a href="#" class="btn-remove icon-cancel" title="Remove Product"></a>
+                                        <a href="#" class="btn-remove" title="Remove Product"><i
+                                                class="fa-solid fa-xmark"></i></a>
                                     </figure>
                                 </td>
                                 <td>
@@ -91,10 +93,11 @@
                                 <td>
                                     <figure class="product-image-container">
                                         <a href="product.html" class="product-image">
-                                            <img src="assets/images/products/product-6.jpg" alt="product">
+                                        <img src="<?= $base_url ?>upload/demoes/demo23/products/giay1.png" alt="product">
                                         </a>
 
-                                        <a href="#" class="btn-remove icon-cancel" title="Remove Product"></a>
+                                        <a href="#" class="btn-remove" title="Remove Product"><i
+                                                class="fa-solid fa-xmark"></i></a>
                                     </figure>
                                 </td>
                                 <td>

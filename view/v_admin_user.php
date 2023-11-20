@@ -14,20 +14,40 @@
                             <th>Email</th>
                             <th>Số điện thoại</th>
                             <th>Quyền</th>
+                            <th>Hành động</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td><img src="<?= $base_url ?>upload/blog/author.jpg" class="rounded-3" style="width: 32px; height: 32px;" alt=""></td>
-                            <td class="text-start">Nguyễn Ngọc Quỳnh Nhi</td>
-                            <td>nnqn15@gmail.com</td>
-                            <td>0706903022</td>
-                            <td>Khách hàng</td>
-                            <a href=""><td class="warning">Sửa</td></a>
-                            <a href=""><td class="danger">Xóa</td></a>
-                        </tr>
+                        <?php foreach ($dsTK as $dsTK) : ?>
+                            <tr>
+                                <td><img src="<?= $base_url ?>upload/blog/author.jpg" class="rounded-3" style="width: 32px; height: 32px;" alt=""></td>
+                                <td><?= $dsTK['HoTen'] ?></td>
+                                <td><?= $dsTK['Email'] ?></td>
+                                <td><?= $dsTK['SoDienThoai'] ?></td>
+                                <td>
+                                    <?php
+                                    switch($dsTK['VaiTro']){
+                                        case '0' : 
+                                            echo 'Khách hàng';
+                                            break;
+                                        case '1' : 
+                                            echo 'Quản trị';
+                                                break;
+                                        case '2' : 
+                                            echo 'Quản trị cấp cao';
+                                            break;
+                                    }
+                                    
+                                    ?>
+                                </td>
+                                <td>
+                                    <a href="">Sửa</a>
+                                    <a href="">Xóa</a>
+                                </td>
+
+                            </tr>
+                        <?php endforeach; ?>
                     </tbody>
                 </table>
             </div>
             <!-- End of Recent Orders -->
-          
