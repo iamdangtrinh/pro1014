@@ -60,7 +60,7 @@
                 <div class="user-list">
                     <?php foreach ($usermoi as $taikhoanmoi):?>
                         <div class="user">
-                            <img src="<?= $base_url ?>upload/blog/author.jpg">
+                            <img src="<?= $base_url ?>upload/blog/<?=$taikhoanmoi['HinhAnh']?>">
                             <h3 style="font-weight: 600;"><?=$taikhoanmoi['HoTen']?></h3>
                             <p>
                                 <?php 

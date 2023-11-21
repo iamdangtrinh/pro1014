@@ -76,15 +76,16 @@
                         </tr>
                     </thead>
                     <tbody>
+                    <?php foreach ($dsADMIN_DM as $itemDM) :?>
                         <tr>
                             <td style="text-align: center;">
                                 <form>
                                     <input type="checkbox" name="" value="">
                                 </form>
                             </td>
-                            <td>1234</td>
-                            <td >Bé trai</td>
-                            <td>Áo</td>
+                            <td><?=$itemDM['MaDM']?></td>
+                            <td ><?=$itemDM['TenDM']?></td>
+                            <td><?=$itemDM['TenDMC']?></td>
                             <td >
                                 <div class="lenh">
                                     <div class="sua" ><a href="<?=$base_url?>admin/sua" style="font-weight: 600; color: #6c9bcf;">Sửa</a></div>
@@ -92,22 +93,7 @@
                                 </div>
                             </td>
                         </tr>
-                        <tr>
-                           <td>
-                                <form>
-                                    <input type="checkbox" name="" value="">
-                                </form>
-                            </td>
-                            <td>1234</td>
-                            <td >Bé trai</td>
-                            <td>Quần</td>
-                            <td >
-                                <div class="lenh">
-                                    <div class="sua" ><a href="<?=$base_url?>admin/sua" style="font-weight: 600; color: #6c9bcf;">Sửa</a></div>
-                                    <div class="xoa"><a href=""  style="font-weight: 600; color: #ba5a87;">Xóa</a></div>
-                                </div>
-                            </td>
-                        </tr>
+                    <?php endforeach ;?>
                     </tbody>
                 </table>
             </div>

@@ -11,7 +11,7 @@ form {
     width: 100%;
     margin: 0 auto;
     padding: 20px;
-    border: 1px solid #ccc;
+    border: 1px solid pink;
     border-radius: 10px;
     background-color: #f8f8f8;
 }
@@ -24,9 +24,10 @@ form {
 .form-control {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid pink;
     border-radius: 5px;
     margin-top: 5px;
+
 }
 
 .btn {
@@ -36,13 +37,13 @@ form {
     border: none;
     border-radius: 5px;
     color: #fff;
-    background-color: #007bff;
+    background-color: pink;
     cursor: pointer;
     margin-top: 10px;
 }
 
 .btn:hover {
-    background-color: #0056b3;
+    background-color: #ffd5dd;
 }
 
 </style>
@@ -50,25 +51,25 @@ form {
         
         <form action="" method="POST">
             <div class="mb-3">
-                <label for="" class="form-label">Số điện thoại</label>
-                <input  type="text" class="form-control" id="" name="" value="">
+                <label for="MaDM" class="form-label">Mã danh mục</label>
+                <input  type="text" class="form-control" id="MaDM" name="MaDM" value="MaDM">
             </div>
             <div class="mb-3">
-                <label for="" class="form-label">Họ tên</label>
-                <input  type="text" class="form-control" id="" name="HoTen" value="">  
+                <label for="TenDM" class="form-label">Tên danh mục</label>
+                <input  type="text" class="form-control" id="TenDM" name="TenDM" value="TenDM">  
             </div>
             <div class="mb-3">
-                <label for="" class="form-label">Ví tiền</label>
-                <input  type="number" class="form-control" placeholder=" " id="" name="" value=">">
+                <label for="TenDMC" class="form-label">Tên danh mục con</label>
+                <input  type="text" class="form-control" id="TenDMC" name="TenDMC" value="TenDMC">  
             </div>
-            <div class="mb-3">
+            <!-- <div class="mb-3">
                 <label for="Quyen" class="form-label">Quyền</label>
                 <select class="form-control" id="Quyen" name='Quyen'>
                 <option value="0" >Bạn đọc</option>
                 <option value="1" >Quản lí</option>
                 <option value="2" >Quản lí cấp cao</option>
                 </select>
-            </div>
+            </div> -->
             <!-- <div class="mb-3 form-check">
                 <input  type="checkbox" class="form-check-input" id="exampleCheck1">
                 <label class="form-check-label" for="exampleCheck1">Bạn đọc</label>
