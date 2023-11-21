@@ -18,6 +18,10 @@
                     
                 $view_name='admin_sua_danhmuc';
                 break;
+            case 'them':
+                
+                $view_name='admin_them_danhmuc';
+                break;
             case 'user':
                 //lay du lieu
                 include_once 'model/m_user.php';

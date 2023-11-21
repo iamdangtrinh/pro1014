@@ -47,6 +47,21 @@
         background: #f8d7da;
         border-radius: 5px;
     }
+    .them{
+
+       margin-top: 20px;
+       padding: 10px;
+       font-size: 16px;
+       margin: 10px;
+       background: pink;
+       border-radius: 5px;
+       color: #6c9bcf;
+    }
+    .them:hover{
+        box-shadow: 5px 5px 5px #ffd5dd;
+        color: #fff;
+        background: pink;
+    }
 </style>
             <h1>Danh mục</h1>
             <!-- Recent Orders Table -->
@@ -72,7 +87,7 @@
                             <td>Áo</td>
                             <td >
                                 <div class="lenh">
-                                    <div class="sua" ><a href="" style="font-weight: 600; color: #6c9bcf;">Sửa</a></div>
+                                    <div class="sua" ><a href="<?=$base_url?>admin/sua" style="font-weight: 600; color: #6c9bcf;">Sửa</a></div>
                                     <div class="xoa"><a href=""  style="font-weight: 600; color: #ba5a87;">Xóa</a></div>
                                 </div>
                             </td>
@@ -96,5 +111,7 @@
                     </tbody>
                 </table>
             </div>
+            <br>
+            <div><a href="<?=$base_url?>admin/them" class="them" style="font-weight: 600;">Thêm mới</a></div>
             <!-- End of Recent Orders -->
           
