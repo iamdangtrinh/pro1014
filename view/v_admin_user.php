@@ -20,7 +20,7 @@
                     <tbody>
                         <?php foreach ($dsTK as $dsTK) : ?>
                             <tr>
-                                <td><img src="<?= $base_url ?>upload/blog/author.jpg" class="rounded-3" style="width: 32px; height: 32px;" alt=""></td>
+                                <td><img src="<?= $base_url ?>upload/blog/<?=$dsTK['HinhAnh']?>" class="rounded-3" style="width: 32px; height: 32px;" alt=""></td>
                                 <td><?= $dsTK['HoTen'] ?></td>
                                 <td><?= $dsTK['Email'] ?></td>
                                 <td><?= $dsTK['SoDienThoai'] ?></td>

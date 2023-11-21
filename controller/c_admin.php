@@ -6,6 +6,15 @@
                 // hien thi du lieu
                 $view_name='admin_dashboard';
                 break;
+            case 'danhmuc':
+                //lay du lieu
+                // hien thi du lieu
+                $view_name='admin_danhmuc';
+                break;
+            case 'sua':
+                    
+                $view_name='admin_sua_danhmuc';
+                break;
             case 'user':
                 //lay du lieu
                 include_once 'model/m_user.php';
