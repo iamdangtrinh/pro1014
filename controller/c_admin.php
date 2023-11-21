@@ -4,6 +4,9 @@
             case 'dashboard':
                 //lay du lieu
                 // hien thi du lieu
+                include_once 'model/m_pdo.php';
+                include_once 'model/m_admin.php';
+                $usermoi=admin_getUser();
                 $view_name='admin_dashboard';
                 break;
             case 'danhmuc':
