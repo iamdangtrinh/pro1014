@@ -7,8 +7,8 @@
                 </nav>
                 <div class="product-single-container product-single-default">
                     <div class="cart-message d-none">
-                        <strong class="single-cart-notice">Quần áo</strong>
-                        <spanh>Đã thêm vào giỏ hàng </span>
+                        <strong class="single-cart-notice"><?=$product_detail['detail'][]?></strong>
+                        <spanh>Đã thêm vào giỏ hàng </span>''
                     </div>
 
                     <div class="row">

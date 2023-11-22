@@ -7,7 +7,7 @@
                 </nav>
                 <div class="product-single-container product-single-default">
                     <div class="cart-message d-none">
-                        <strong class="single-cart-notice">Quần áo</strong>
+                        <strong class="single-cart-notice"><??></strong>
                         <spanh>Đã thêm vào giỏ hàng </span>
                     </div>
 

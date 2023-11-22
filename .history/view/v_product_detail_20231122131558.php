@@ -2,12 +2,12 @@
                 <nav aria-label="breadcrumb" class="breadcrumb-nav">
                     <ol class="breadcrumb">
                         <li><a href="demo1.html"><i class="fa-solid fa-house"></i></a></li>
-                        <li><i class="fa-solid fa-angle-right"></i><a href="#"><??></a></li>
+                        <li><i class="fa-solid fa-angle-right"></i><a href="#">Sản Phẩm</a></li>
                     </ol>
                 </nav>
                 <div class="product-single-container product-single-default">
                     <div class="cart-message d-none">
-                        <strong class="single-cart-notice">Quần áo</strong>
+                        <strong class="single-cart-notice">Giày Đen</strong>
                         <spanh>Đã thêm vào giỏ hàng </span>
                     </div>
 
