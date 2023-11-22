@@ -167,7 +167,7 @@
                                 </li>
                                 <?php for($i=1; $i<=$sotrang; $i++): ?>
                                 <li class="page-item">
-                                    <a class="page-link" href="<?= $base_url ?>page/shop/<?=$i?>"><?=$i?></a>
+                                    <a class="page-link" href="<?= $base_url ?>category/detail/page/<?=$i?>"><?=$i?></a>
                                 </li>
                                 <?php endfor;?>
                                 <li class="page-item"><span class="page-link">...</span></li>

@@ -7,16 +7,19 @@
                 if(isset($_GET['MaDMC'])){
                     $MaDMC=$_GET['MaDMC'];
                     $spDM=category_getbyDMandDMC($MaDM, $MaDMC);
+                    $soluongSP = count_productsbydm_anddmc($MaDM, $MaDMC);
                 }else{
                     $spDM=category_getbyDM($MaDM);
+                    $soluongSP = count_productsbydm($MaDM);
                 }
+                //////////////////////////////////////////////////////
+
                 $limit = 12;
                 $start = 0;
-                $soluongSP = count_product();
                 $sotrang = ceil($soluongSP / $limit);
-                if (isset($_GET["shop"])) {
+                if (isset($_GET["page"])) {
                     // Xác định trang hiện tại
-                    $trang_hien_tai = isset($_GET['shop']) ? intval($_GET['shop']) : 1;
+                    $trang_hien_tai = isset($_GET['page']) ? intval($_GET['page']) : 1;
                     // Tính toán vị trí bắt đầu của sản phẩm trên trang hiện tại
                     $start = ($trang_hien_tai - 1) * $limit;
                     // Lấy dữ liệu sản phẩm từ cơ sở dữ liệu
