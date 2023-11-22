@@ -46,7 +46,7 @@ function show_cart_for_user($MaTK)
     hd.MaHD = ct.MaHD
     INNER JOIN sanpham sp ON 
     sp.MaSP = ct.MaSP
-    WHERE hd.MaTK =? AND hd.TrangThai = ? ORDER BY hd.MaHD desc
+    WHERE hd.MaTK =? AND hd.TrangThai = ?
     ", $MaTK, 'gio-hang');
 }
 

@@ -6449,17 +6449,16 @@ figure .porto-loading-icon {
 }
 
 .product-single-qty span {
-    padding: 4px;
     font-size: 16px;
     cursor: pointer;
 }
 
-.product-single-qty span:first-child {
+/* .product-single-qty span:first-child {
     border-right: 1px solid #ccc;
 }
 .product-single-qty span:last-child {
     border-left: 1px solid #ccc;
-}
+} */
 
 .product-single-qty input {
     width: 50px;
