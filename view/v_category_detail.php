@@ -71,7 +71,7 @@
                         </nav>
                         <!-- chỗ lầy là chỗ foeach sản phẩm -->
                         <div class="row">
-                            <?php foreach ($products_DM as $product): ?>
+                            <?php foreach ($product_shop as $product): ?>
                                 <?php if(!$product['GiaGiam']): ?>
                                     <div class="col-6 col-sm-4 col-lg-3">
                                         <div class="product-default inner-quickview inner-icon">

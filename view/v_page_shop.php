@@ -125,6 +125,7 @@
                                                 </div><!-- End .price-box -->
                                             </div><!-- End .product-details -->
                                         </div>
+<<<<<<< Updated upstream
                                     </div>
                                 <?php else: ?>
                                     <div class="col-6 col-sm-4 col-lg-3">
@@ -167,6 +168,11 @@
                                                     <span class="product-price"><?= $product['GiaGiam'];?>đ</span>
                                                 </div><!-- End .price-box -->
                                             </div><!-- End .product-details -->
+=======
+                                        <div class="btn-icon-group">
+                                            <a href="<?= $base_url ?>product/detail"
+                                                class="btn-icon btn-add-cart fa-solid fa-cart-shopping"></a>
+>>>>>>> Stashed changes
                                         </div>
                                     </div>
                                 <?php endif; ?>
