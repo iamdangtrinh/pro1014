@@ -27,12 +27,6 @@
                 $product_shop = product_shop($start, $limit);
                 $view_name = 'page_shop';
                 break;
-            case 'category_dm':
-
-                $products_DM = category_getbyDM($MaDM, $MaDMC);
-
-                $view_name = 'category_detail';
-                break;
             case 'contact':
                 //laydulieu
                 $view_name='page_contact';
