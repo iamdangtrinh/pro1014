@@ -46,11 +46,11 @@
                     </span>
                     <h3>Tài khoản</h3>
                 </a>
-                <a href="#">
+                <a href="<?=$base_url?>admin/danhmuc" class="list_group-item <?=(strpos($view_name,'danhmuc'))?'active':'' ?>">
                     <span class="material-icons-sharp">
                         inventory
                     </span>
-                    <h3>Loại hàng</h3>
+                    <h3>Danh mục</h3>
                 </a>
                 <a href="#">
                     <span class="material-icons-sharp">
@@ -253,7 +253,7 @@
         chart2.draw(data2, options2);
     }
 </script>
-    <script>
+    <!-- <script>
         const Orders = [
             {
                 productName: 'JavaScript Tutorial',
@@ -274,7 +274,7 @@
                 status: 'Active'
             },
         ]
-    </script>
+    </script> -->
 
     <script>
         const sideMenu = document.querySelector('aside');

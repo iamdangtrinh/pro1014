@@ -58,26 +58,22 @@
             <div class="new-users">
                 <h2>Tài khoản mới</h2>
                 <div class="user-list">
-                    <div class="user">
-                        <img src="<?= $base_url ?>upload/blog/author.jpg">
-                        <h2>Jack</h2>
-                        <p>54 Min Ago</p>
-                    </div>
-                    <div class="user">
-                        <img src="<?= $base_url ?>upload/blog/author.jpg">
-                        <h2>Amir</h2>
-                        <p>3 Hours Ago</p>
-                    </div>
-                    <div class="user">
-                        <img src="<?= $base_url ?>upload/blog/author.jpg">
-                        <h2>Ember</h2>
-                        <p>6 Hours Ago</p>
-                    </div>
-                    <div class="user">
-                        <img src="<?= $base_url ?>upload/blog/author.jpg">
-                        <h2>More</h2>
-                        <p>New User</p>
-                    </div>
+                    <?php foreach ($usermoi as $taikhoanmoi):?>
+                        <div class="user">
+                            <img src="<?= $base_url ?>upload/blog/<?=$taikhoanmoi['HinhAnh']?>">
+                            <h3 style="font-weight: 600;"><?=$taikhoanmoi['HoTen']?></h3>
+                            <p>
+                                <?php 
+                                if($taikhoanmoi['VaiTro']> 0){
+                                    echo 'Quản lí';
+                                }else{
+                                    echo 'Khách hàng';
+                                }
+                                ?>
+                            </p>
+                        </div>
+                       
+                    <?php endforeach ;?>
                 </div>
             </div>
             <!-- End of New Users Section -->

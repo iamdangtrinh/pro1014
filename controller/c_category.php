@@ -3,10 +3,19 @@
         switch($_GET['act']){
             case 'detail':
                 // lay du liệu
-                include_once 'model/m_category.php';
-                $ctChuDe=category_getById($_GET['id']);
-                include_once 'model/m_book.php';
-                $dsSachCungChuDe=book_getByCategory($_GET['id']);
+                $limit = 12;
+                $start = 0;
+                $soluongSP = count_product();
+                $sotrang = ceil($soluongSP / $limit);
+                if (isset($_GET["shop"])) {
+                    // Xác định trang hiện tại
+                    $trang_hien_tai = isset($_GET['shop']) ? intval($_GET['shop']) : 1;
+                    // Tính toán vị trí bắt đầu của sản phẩm trên trang hiện tại
+                    $start = ($trang_hien_tai - 1) * $limit;
+                    // Lấy dữ liệu sản phẩm từ cơ sở dữ liệu
+                    $product_shop = product_shop($start, $limit);
+                }
+                $product_shop = product_shop($start, $limit);
                 //hien thi du lieu
                 $view_name='category_detail';
                 break;
