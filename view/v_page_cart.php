@@ -51,7 +51,11 @@
                                 <td>
                                     <p data-quantity="<?= $MaSP ?>"></p>
                                     <div class="product-single-qty">
-                                        <input class="horizontal-quantity form-control" name="quantity" type="text" value="<?= $SoLuongSP ?>">
+                                        <span class="fa fa-minus minusJS"></span>
+                                        <input type="text" name="quantity" value="<?= $SoLuongSP ?>"
+                                            class="quantity_product">
+                                        <span class="fa fa-plus plusJS"></span>
+                                        <!-- <input class="horizontal-quantity form-control" type="text"> -->
                                     </div>
                                 </td>
                                 <td class="text-right m-auto"><span class="subtotal-price">
@@ -174,11 +178,37 @@
 <script>
     $(document).ready(function () {
 
-        $('input[name="quantity"]').on('change', function () {
+        $('.minusJS').click(function () {
+            var product_box = this.closest('.product-single-qty');
+            var quantity_input = product_box.querySelector('.quantity_product');
+            var currentQuantity = parseInt(quantity_input.value);
 
+            if (currentQuantity > 1) {
+                quantity_input.value = currentQuantity - 1;
+                           $(quantity_input).trigger('change');
+            }
+        });
+
+        $('.plusJS').click(function () {
+            var product_box = this.closest('.product-single-qty');
+            var quantity_input = product_box.querySelector('.quantity_product');
+            var currentQuantity = parseInt(quantity_input.value);
+
+            quantity_input.value = currentQuantity + 1;
+                       $(quantity_input).trigger('change');
+        });
+
+
+        $('input[name="quantity"]').on('change', function () {
             var newQuantity = $(this).val(); // Get the new quantity value
-            // newQuantity = newQuantity.replace(/[^0-9]/g, "");
-            
+
+            newQuantity =newQuantity.replace(/[^0-9]/g,"");
+			if(newQuantity == null) {
+                newQuantity = "1";
+            } else {
+                $(this).val(newQuantity);
+            }
+
             var closestProductRow = this.closest('.product-row');
             var MaSP = closestProductRow.querySelector('[data-quantity]').dataset.quantity;
 
