@@ -51,7 +51,7 @@
                                 <td>
                                     <div class="product-single-qty">
                                         <form class="cart_quantity" action="" method="post">
-                                            <input type="text" name="masp" value="<?=$MaSP?>">
+                                            <span data-quantity="<?= $MaSP ?>"></span>
                                             <span class="fa fa-minus" id="minus"></span>
                                             <input type="text" name="quantity" data-quantity="200"
                                                 value="<?= $SoLuongSP ?>">
@@ -180,14 +180,17 @@
     $(document).ready(function () {
         $('input[name="quantity"]').on('change', function () {
             var newQuantity = $(this).val(); // Get the new quantity value
-            console.log($('input[name="masp"][defaultValue]'));
+            var closestProductRow = this.closest('.product-row');
+            var MaSP = closestProductRow.querySelector('[data-quantity]').dataset.quantity;
+
+            console.log(MaSP);
 
             $.ajax({
                 type: "POST",
-                url: '<?=$base_url?>controller/ajax.php?act=ajax_cart_quantity',
+                url: '<?= $base_url ?>controller/ajax.php?act=ajax_cart_quantity',
                 data: {
                     quantity: newQuantity,
-                    // MaSP: masp,
+                    MaSP: MaSP,
                 },
                 success: function (response) {
                     // Handle successful response

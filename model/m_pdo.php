@@ -12,6 +12,7 @@ function pdo_get_connection(){
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     return $conn;
 }
+
 /**
  * Thực thi câu lệnh sql thao tác dữ liệu (INSERT, UPDATE, DELETE)
  * @param string $sql câu lệnh sql

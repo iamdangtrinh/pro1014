@@ -21,6 +21,14 @@ switch ($_GET['act']) {
         break;
     case 'ajax_cart_quantity':
         print_r($_POST);
+        include_once '../model/m_product.php';
+
+        $SoLuongSP = $_POST['quantity'];
+        $MaSP = $_POST['MaSP'];
+
+        update_uantity_by_cart($SoLuongSP, $MaSP);
+
+
         break;
     default:
         break;
