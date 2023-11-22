@@ -51,7 +51,7 @@
                                 <td>
                                     <div class="product-single-qty">
                                         <form class="cart_quantity" action="" method="post">
-                                            <input type="hidden" name="MaSP" value="<?=$MaSP?>">
+                                            <input type="text" name="masp" value="<?=$MaSP?>">
                                             <span class="fa fa-minus" id="minus"></span>
                                             <input type="text" name="quantity" data-quantity="200"
                                                 value="<?= $SoLuongSP ?>">
@@ -180,13 +180,14 @@
     $(document).ready(function () {
         $('input[name="quantity"]').on('change', function () {
             var newQuantity = $(this).val(); // Get the new quantity value
+            console.log($('input[name="masp"][defaultValue]'));
 
             $.ajax({
                 type: "POST",
-                url: '<?= $base_url ?>controller/ajax.php?act=ajax_cart_quantity&id=<?=$MaSP?>',
+                url: '<?=$base_url?>controller/ajax.php?act=ajax_cart_quantity',
                 data: {
                     quantity: newQuantity,
-                    quantity: MaSP,
+                    // MaSP: masp,
                 },
                 success: function (response) {
                     // Handle successful response
@@ -207,8 +208,7 @@
                 quantity: {
                     required: "Vui lòng nhập số"
                 }
-            },
+            }
         })
-
     })
 </script>
