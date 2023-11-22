@@ -8,11 +8,12 @@ switch ($_GET['act']) {
         //lay du lieu
         // if(isset($_POST['keyword'])) {
         $keyword = $_POST['keyword'];
+        echo $GLOBALS['base_url'];
         $show_search = search_live_product($keyword);
         // echo json_encode($show_search);
         foreach ($show_search as $value) : extract($value);
         echo '<a href="login" class="col-md-4 img-focus">
-                <img src="<?= $base_url ?>upload/demoes/demo23/uploads/products/'.$AnhSP.'"
+                <img src="'.$base_url.'upload/demoes/demo23/products/'.$AnhSP.'"
                     width="50" height="50" alt="'.$TenSP.'">
             </a>
             <div class="col-md-8 mt-2 content-focus">'.$TenSP.' </div>';

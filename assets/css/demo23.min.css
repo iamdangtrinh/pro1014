@@ -17965,7 +17965,7 @@ span.toggle {
     z-index: 10;
     background-color: #fff;
     width: 100%;
-    display: none;
+    display: none   ;
 }
 .form-input:focus + .input-search{
     display:flex;
