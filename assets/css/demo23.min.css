@@ -12181,17 +12181,17 @@ header .separator {
 }
 
 .open>.mmenu-btn:after {
-    content: ""
+    content: ">"
 }
 
 .mmenu-btn:after {
     display: inline-block;
     margin-top: -2px;
-    content: ""
+    content: ">"
 }
 
 .open>a>.mmenu-btn:after {
-    content: ""
+    content: ">"
 }
 
 .side-menu-wrapper {

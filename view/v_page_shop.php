@@ -167,7 +167,6 @@
                                                     <span class="product-price"><?= $product['GiaGiam'];?>đ</span>
                                                 </div><!-- End .price-box -->
                                             </div><!-- End .product-details -->
-                                        </div>
                                     </div>
                                 <?php endif; ?>
                             <?php endforeach; ?>

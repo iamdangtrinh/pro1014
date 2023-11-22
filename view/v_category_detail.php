@@ -4,7 +4,12 @@
                 <div class="container">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="demo23.html">Trang chủ</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Danh mục ...</li>
+                        <?php if(isset($MaDMC)): ?>
+                        <li class="breadcrumb-item" aria-current="page">Danh mục <?=$spDM[0]['TenDM']?></li>
+                        <li class="breadcrumb-item active" aria-current="page"><?=$spDM[0]['TenDMC']?></li>
+                        <?php else: ?>
+                            <li class="breadcrumb-item active" aria-current="page">Danh mục <?=$spDM[0]['TenDM']?></li>
+                        <?php endif;?>
                     </ol>
                 </div>
             </nav>
@@ -162,7 +167,7 @@
                                 </li>
                                 <?php for($i=1; $i<=$sotrang; $i++): ?>
                                 <li class="page-item">
-                                    <a class="page-link" href="<?= $base_url ?>page/shop/<?=$i?>"><?=$i?></a>
+                                    <a class="page-link" href="<?= $base_url ?>category/detail/page/<?=$i?>"><?=$i?></a>
                                 </li>
                                 <?php endfor;?>
                                 <li class="page-item"><span class="page-link">...</span></li>
