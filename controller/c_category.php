@@ -3,6 +3,13 @@
         switch($_GET['act']){
             case 'detail':
                 // lay du liệu
+                $MaDM=$_GET['id'];
+                if(isset($_GET['MaDMC'])){
+                    $MaDMC=$_GET['MaDMC'];
+                    $spDM=category_getbyDMandDMC($MaDM, $MaDMC);
+                }else{
+                    $spDM=category_getbyDM($MaDM);
+                }
                 $limit = 12;
                 $start = 0;
                 $soluongSP = count_product();

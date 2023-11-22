@@ -180,12 +180,12 @@
                                                         echo '</ul></div>';
                                                     }
                                                     echo '<div class="col-lg-4">';
-                                                    echo '<a href="#" class="nolink">'.$item_dm['TenDM'].'</a>';
+                                                    echo '<a href="'.$base_url.'category/detail/'.$item_dm['MaDM'].'" class="nolink">'.$item_dm['TenDM'].'</a>';
                                                     echo '<ul class="submenu">';
                                                     $kiemtra_dm = $item_dm['TenDM'];
                                                 }
                                         ?>
-                                            <li><a href="category-horizontal-filter2.html"><?=$item_dm['TenDMC']?></a></li>
+                                            <li><a href="<?=$base_url?>category/detail/<?=$item_dm['MaDM']?>/<?=$item_dm['MaDMC']?>"><?=$item_dm['TenDMC']?></a></li>
                                         <?php endforeach; if ($kiemtra_dm != null) { echo '</ul></div>'; }?>
                                     </div>
 
