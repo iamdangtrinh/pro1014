@@ -32,7 +32,8 @@
                                 <td>
                                     <figure class="product-image-container">
                                         <a href="product.html" class="product-image">
-                                            <img src="<?= $base_url ?>upload/demoes/demo23/products/<?= $AnhSP ?>" alt="<?= $TenSP ?>">
+                                            <img src="<?= $base_url ?>upload/demoes/demo23/products/<?= $AnhSP ?>"
+                                                alt="<?= $TenSP ?>">
                                         </a>
 
                                         <a href="#" class="btn-remove" title="Remove Product"><i
@@ -49,10 +50,14 @@
                                 </td>
                                 <td>
                                     <div class="product-single-qty">
-                                        <span class="fa fa-minus"></span>
-                                        <input type="text" value="<?=$SoLuongSP?>">
-                                        <span class="fa fa-plus"></span>
-                                        <!-- <input class="horizontal-quantity form-control" type="text"> -->
+                                        <form class="cart_quantity" action="" method="post">
+                                            <input type="hidden" name="MaSP" value="<?=$MaSP?>">
+                                            <span class="fa fa-minus" id="minus"></span>
+                                            <input type="text" name="quantity" data-quantity="200"
+                                                value="<?= $SoLuongSP ?>">
+                                            <span class="fa fa-plus" id="plus"></span>
+                                            <!-- <input class="horizontal-quantity form-control" type="text"> -->
+                                        </form>
                                     </div>
                                 </td>
                                 <td class="text-right m-auto"><span class="subtotal-price">
@@ -170,7 +175,40 @@
         </div>
     </div>
 </div>
-
 <div class="mb-6"></div>
+<script>
+    $(document).ready(function () {
+        $('input[name="quantity"]').on('change', function () {
+            var newQuantity = $(this).val(); // Get the new quantity value
 
+            $.ajax({
+                type: "POST",
+                url: '<?= $base_url ?>controller/ajax.php?act=ajax_cart_quantity&id=<?=$MaSP?>',
+                data: {
+                    quantity: newQuantity,
+                    quantity: MaSP,
+                },
+                success: function (response) {
+                    // Handle successful response
+                },
+                error: function (error) {
+                    // Handle error
+                }
+            });
+        });
 
+        $(".cart_quantity").validate({
+            rules: {
+                quantity: {
+                    required: true,
+                }
+            },
+            messages: {
+                quantity: {
+                    required: "Vui lòng nhập số"
+                }
+            },
+        })
+
+    })
+</script>
