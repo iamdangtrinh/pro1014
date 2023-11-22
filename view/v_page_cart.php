@@ -49,20 +49,19 @@
                                     <?= number_format($Gia, 0, '.', '.') . " VND" ?>
                                 </td>
                                 <td>
+                                    <p data-quantity="<?= $MaSP ?>"></p>
                                     <div class="product-single-qty">
-                                        <form class="cart_quantity" action="" method="post">
-                                            <span data-quantity="<?= $MaSP ?>"></span>
-                                            <span class="fa fa-minus" id="minus"></span>
-                                            <input type="text" name="quantity" data-quantity="200"
-                                                value="<?= $SoLuongSP ?>">
-                                            <span class="fa fa-plus" id="plus"></span>
-                                            <!-- <input class="horizontal-quantity form-control" type="text"> -->
-                                        </form>
+                                        <span class="fa fa-minus" id="minus"></span>
+                                        <input type="text" name="quantity" data-quantity="200"
+                                        value="<?= $SoLuongSP ?>">
+                                        <span class="fa fa-plus" id="plus"></span>
+                                        <!-- <input class="horizontal-quantity form-control" type="text"> -->
                                     </div>
                                 </td>
                                 <td class="text-right m-auto"><span class="subtotal-price">
                                         <?= number_format(($Gia * $SoLuongSP), 0, '.', '.') . " VND" ?>
-                                    </span></td>
+                                    </span>
+                                </td>
                             </tr>
                         <?php endforeach ?>
                     </tbody>
@@ -182,8 +181,6 @@
             var newQuantity = $(this).val(); // Get the new quantity value
             var closestProductRow = this.closest('.product-row');
             var MaSP = closestProductRow.querySelector('[data-quantity]').dataset.quantity;
-
-            console.log(MaSP);
 
             $.ajax({
                 type: "POST",
