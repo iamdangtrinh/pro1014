@@ -2,6 +2,8 @@
     if(isset($_GET['act'])){
         switch($_GET['act']){
             case 'detail':
+                $limit = 12;
+                $start = 0;
                 // lay du liệu
                 if (isset($_GET['id'])) {
                     $MaDM = $_GET['id'];
@@ -14,10 +16,8 @@
                         $soluongSP = count_productsbydm($MaDM);
                     }
                     //////////////////////////////////////////////////////
-                    $limit = 12;
-                    $start = 0;
                     $sotrang = ceil($soluongSP / $limit);
-                    if (isset($_GET["page"])) {
+                    if (isset($_GET['page'])) {
                         // Xác định trang hiện tại
                         $trang_hien_tai = isset($_GET['page']) ? intval($_GET['page']) : 1;
                         // Tính toán vị trí bắt đầu của sản phẩm trên trang hiện tại
@@ -25,8 +25,6 @@
                         // Lấy dữ liệu sản phẩm từ cơ sở dữ liệu
                     }
                     $dsdm = get_id($_GET['id']);
-    
-                    $category_detail = get_categorybyid($_GET['id'], $start, $limit);
                     //hien thi du lieu
                     $view_name='category_detail';
                     // Tiếp tục xử lý

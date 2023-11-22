@@ -4,9 +4,9 @@
                 <div class="container">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="demo23.html">Trang chủ</a></li>
-                        <?php if(isset($MaDMC)): ?>
-                        <li class="breadcrumb-item" aria-current="page">Danh mục <?=$spDM[0]['TenDM']?></li>
-                        <li class="breadcrumb-item active" aria-current="page"><?=$spDM[0]['TenDMC']?></li>
+                        <?php if(isset($_GET['MaDMC'])): ?>
+                            <li class="breadcrumb-item" aria-current="page">Danh mục <?=$spDM[0]['TenDM']?></li>
+                            <li class="breadcrumb-item active" aria-current="page"><?=$spDM[0]['TenDMC']?></li>
                         <?php else: ?>
                             <li class="breadcrumb-item active" aria-current="page">Danh mục <?=$spDM[0]['TenDM']?></li>
                         <?php endif;?>
@@ -71,7 +71,7 @@
                         </nav>
                         <!-- chỗ lầy là chỗ foeach sản phẩm -->
                         <div class="row">
-                            <?php foreach ($category_detail as $product): ?>
+                            <?php foreach ($spDM as $product): ?>
                                 <?php if(!$product['GiaGiam']): ?>
                                     <div class="col-6 col-sm-4 col-lg-3">
                                         <div class="product-default inner-quickview inner-icon">
@@ -166,9 +166,15 @@
                                     <a class="page-link page-link-btn" href="#"><i class="icon-angle-left"></i></a>
                                 </li>
                                 <?php for($i=1; $i<=$sotrang; $i++): ?>
-                                <li class="page-item">
-                                    <a class="page-link" href="<?= $base_url ?>category/detail/page/<?=$i?>"><?=$i?></a>
-                                </li>
+                                    <?php if(isset($_GET['MaDMC'])): ?>
+                                        <li class="page-item">
+                                            <a class="page-link" href="<?= $base_url ?>category/detail/<?=$MaDM?>/<?=$MaDMC?>/page/<?=$i?>"><?=$i?></a>
+                                        </li>
+                                    <?php else: ?>
+                                        <li class="page-item">
+                                            <a class="page-link" href="<?= $base_url ?>category/detail/<?=$MaDM?>/page/<?=$i?>"><?=$i?></a>
+                                        </li>
+                                    <?php endif; ?>
                                 <?php endfor;?>
                                 <li class="page-item"><span class="page-link">...</span></li>
                                 <li class="page-item">
