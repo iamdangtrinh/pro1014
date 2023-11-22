@@ -357,7 +357,7 @@ main .recent-orders table{
     padding: var(--card-padding);
     text-align: center;
     box-shadow: var(--box-shadow);
-    border-radius: var(--card-border-radius);
+
     transition: all 0.3s ease;
 }
 

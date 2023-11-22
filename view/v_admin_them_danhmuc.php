@@ -52,16 +52,13 @@ form {
         <form action="" method="POST">
             <div class="mb-3">
                 <label for="MaDM" class="form-label">Mã danh mục</label>
-                <input  type="text" class="form-control" id="MaDM" name="MaDM" value="MaDM">
+                <input  type="text" class="form-control" id="MaDM" name="MaDM" value="">
             </div>
             <div class="mb-3">
                 <label for="TenDM" class="form-label">Tên danh mục</label>
-                <input  type="text" class="form-control" id="TenDM" name="TenDM" value="TenDM">  
+                <input  type="text" class="form-control" id="TenDM" name="TenDM" value="">  
             </div>
-            <div class="mb-3">
-                <label for="TenDMC" class="form-label">Tên danh mục con</label>
-                <input  type="text" class="form-control" id="TenDMC" name="TenDMC" value="TenDMC">  
-            </div>
+       
             <!-- <div class="mb-3">
                 <label for="Quyen" class="form-label">Quyền</label>
                 <select class="form-control" id="Quyen" name='Quyen'>

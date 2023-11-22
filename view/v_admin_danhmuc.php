@@ -1,31 +1,40 @@
 <style>
-    .recent-orders{
-        border-radius: 10px;
-    }
-    table{
-        font-size: 16px;
-        text-align: center;
-        border-collapse: collapse;
-      
-      
-    }
-    table thead{
-        background: #ffc0cba8;
-       
-        
-    }
-    table thead tr .chon{
-        border-radius: 20px 0 0 0 ;
-    }
-    table thead tr th, table tbody tr td{
-        border-bottom: 3px solid pink;
-        text-align: center;
-    }
+:root{
+    --box-shadow: 0 2rem 3rem var(--color-light);
+}
 
-    .row {
-        display: none;
-    }
-    .lenh{
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: var(--box-shadow);
+    border-radius: 10px;
+}
+table:hover {
+    box-shadow: 5px 5px 5px #ffd5dd;
+    
+}
+
+thead {
+    background-color: #ffc0cba8;
+    color: white;
+    font-size: 15.5px;
+    
+}
+tbody{
+    border-radius: 20px;
+}
+th, td {
+    padding: 15px;
+    text-align: left;
+    text-align: center;
+    font-weight: 600;
+    font-size: 14.5px;
+}
+td{
+    background-color: #ffc0cb33;
+}
+.lenh{
         display: flex;
         text-align: center;
         justify-content: center;
@@ -37,15 +46,30 @@
         padding: 5px;
         font-size: 16px;
     }
-    .sua a:hover{
-        background: #f8d7da;
-        color: #fff;
+    .sua a{
+        border: 1px solid #ffff;
+        background-color: #ffc0cba8;
         border-radius: 5px;
     }
-  
-    .xoa a:hover{
-        background: #f8d7da;
+    .sua a:hover{
+        background: blue;
+        color: #fff;
         border-radius: 5px;
+        border: 1px solid #ffff;
+        color: #ffff;
+
+    }
+     .xoa a{
+        border: 1px solid #ffff;
+        background-color: #ffc0cba8;
+        border-radius: 5px;
+     }
+    .xoa a:hover{
+        background: firebrick;
+        border-radius: 5px;
+        border: 1px solid #ffff;
+        color: #ffff;
+
     }
     .them{
 
@@ -55,24 +79,26 @@
        margin: 10px;
        background: pink;
        border-radius: 5px;
-       color: #6c9bcf;
+       color: #ffff;
     }
     .them:hover{
         box-shadow: 5px 5px 5px #ffd5dd;
         color: #fff;
         background: pink;
+        
     }
 </style>
             <h1>Danh mục</h1>
             <!-- Recent Orders Table -->
-            <div class="recent-orders">
+            <div class="box">
+               
                 <table>
-                    <thead  >
+                <thead  >
                         <tr>
                             <th class="chon">Chọn</th>
                             <th>Mã danh mục</th>
                             <th>Tên danh mục</th>
-                            <th>Tên danh mục con</th>
+                            <th style="text-align: center;">Lệnh</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -85,17 +111,18 @@
                             </td>
                             <td><?=$itemDM['MaDM']?></td>
                             <td ><?=$itemDM['TenDM']?></td>
-                            <td><?=$itemDM['TenDMC']?></td>
                             <td >
                                 <div class="lenh">
-                                    <div class="sua" ><a href="<?=$base_url?>admin/sua" style="font-weight: 600; color: #6c9bcf;">Sửa</a></div>
-                                    <div class="xoa"><a href=""  style="font-weight: 600; color: #ba5a87;">Xóa</a></div>
+                                    <div class="sua" ><a href="<?=$base_url?>admin/sua" style="font-weight: 600; ">Sửa</a></div>
+                                    <div class="xoa"><a href=""  style="font-weight: 600; ">Xóa</a></div>
                                 </div>
                             </td>
                         </tr>
                     <?php endforeach ;?>
                     </tbody>
+                    </tbody>
                 </table>
+
             </div>
             <br>
             <div><a href="<?=$base_url?>admin/them" class="them" style="font-weight: 600;">Thêm mới</a></div>

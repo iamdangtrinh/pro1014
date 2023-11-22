@@ -22,23 +22,14 @@
                 $view_name='admin_sua_danhmuc';
                 break;
             case 'them':
-                // include_once 'model/m_pdo.php';
-                // include_once 'model/m_admin.php';
-                // $MaTK = $_SESSION['user']['MaTK'];
-                // $danhmuc = admin_hasDM($MaDM);
-                // if( $danhmuc ){
-                //      $MaDM = $_POST['MaDM'];
-                //      $TenDM = $_POST['TenDM'];
-                //      $TenDMC = $_POST['TenDMC'];
-                //      include_once 'model/m_book.php';
-                //      $ctGioSach = history_getCart($MaTK);
-                //       foreach($ctGioSach as $sach){
-                //             book_decreaseAmount($sach['MaSach']);
-                //       }
- 
-                //      history_updateCart($GioSach['MaLS'],$NgayMuon,$NgayTra,$SoSachMuon, $TongTien, $TrangThai);
-                //      $_SESSION['thongbao']='Yêu cầu mượn sách của bạn đã được tiếp nhận';
-                // }
+                include_once 'model/m_pdo.php';
+                include_once 'model/m_admin.php';
+                if(isset($_POST['submit'])){
+                    $MaDM=$_POST['MaDM'];
+                    $TenDM=$_POST['TenDM'];
+                    danhmuc_add( $MaDM,$TenDM);
+                    }
+                
                 $view_name='admin_them_danhmuc';
                 break;
             case 'user':
