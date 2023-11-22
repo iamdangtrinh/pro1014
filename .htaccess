@@ -16,7 +16,7 @@ RewriteRule ^controller/(.*)$ controller/$1 [L]
 
 RewriteRule ^assets/(.*)$ assets/$1 [L]
 RewriteRule ^addtocart$ index.php?mod=product&act=addtocart [L]
-RewriteRule ^cart/cart_order$ index.php?mod=product&act=cart [L]
+RewriteRule ^gio-hang$ index.php?mod=product&act=cart [L]
 
 RewriteRule ^assets/(.*)/(.*)/(.*)$ assets/$1/$2/$3 [L]
 RewriteRule ^assets/(.*)/(.*)$ assets/$1/$2 [L]
