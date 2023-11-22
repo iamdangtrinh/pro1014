@@ -368,59 +368,37 @@
             <span class="mobile-menu-close"><i class="fa fa-times"></i></span>
             <nav class="mobile-nav">
                 <ul class="mobile-menu">
-                    <li><a href="<?= $base_url ?>page/home">Home</a></li>
+                    <li><a href="<?= $base_url ?>page/home">Trang chủ</a></li>
                     <li>
-                        <a href="">Categories</a>
+                        <a href="">Danh mục</a>
                         <ul>
-                            <li><a href="category-8col.html">8 Columns Products</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="">Products</a>
-                        <ul>
-                            <li>
-                                <a href="#" class="nolink">PRODUCT PAGES</a>
+                            <li>    
+                                <a href="#" class="nolink">Bé trai</a>
                                 <ul>
-                                    <li><a href="">SIMPLE PRODUCT</a></li>
+                                    <li><a href="">Áo</a></li>
                                 </ul>
                             </li>
                             <li>
-                                <a href="#" class="nolink">PRODUCT LAYOUTS</a>
+                                <a href="#" class="nolink">Bé gái</a>
                                 <ul>
-                                    <li><a href="product-extended-layout.html">EXTENDED LAYOUT</a></li>
+                                    <li><a href="product-extended-layout.html">Áo</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#" class="nolink">Sơ sinh</a>
+                                <ul>
+                                    <li><a href="product-extended-layout.html">Áo</a></li>
                                 </ul>
                             </li>
                         </ul>
                     </li>
-                    <li>
-                        <a href="#">Pages<span class="tip tip-hot">Hot!</span></a>
-                        <ul>
-                            <li>
-                                <a href="wishlist.html">Wishlist</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li><a href="blog.html">Blog</a></li>
-                </ul>
-
-                <ul class="mobile-menu mt-2 mb-2">
-                    <li class="border-0">
-                        <a href="#">
-                            Special Offer!
-                        </a>
-                    </li>
-                    <li class="border-0">
-                        <a href="../../../1.envato.market/DdLk5" target="_blank">
-                            Buy Porto!
-                            <span class="tip tip-hot">Hot</span>
-                        </a>
-                    </li>
+                    <li><a href="blog.html">Sản phẩm</a></li>
                 </ul>
 
                 <ul class="mobile-menu">
                     <li><a href="login.html">My Account</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="blog.html">Liên hệ</a></li>
+                    <li><a href="contact.html">Về chúng tôi</a></li>
                     <li><a href="wishlist.html">My Wishlist</a></li>
                     <li><a href="cart.html">Cart</a></li>
                     <li><a href="login.html" class="login-link">Log In</a></li>
