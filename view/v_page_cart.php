@@ -32,7 +32,7 @@
                                 <td>
                                     <figure class="product-image-container">
                                         <a href="product.html" class="product-image">
-                                            <img src="<?= $base_url ?>upload/products/<?= $AnhSP ?>" alt="<?= $TenSP ?>">
+                                            <img src="<?= $base_url ?>upload/demoes/demo23/products/<?= $AnhSP ?>" alt="<?= $TenSP ?>">
                                         </a>
 
                                         <a href="#" class="btn-remove" title="Remove Product"><i
