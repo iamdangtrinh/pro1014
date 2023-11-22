@@ -10,6 +10,7 @@ RewriteRule ^(.*)/search/(.*)/page/(.*)$ index.php?mod=$1&act=search&search_key=
 RewriteRule ^(.*)/search/(.*)$ index.php?mod=$1&act=search&search_key=$2 [L]
 RewriteRule ^(.*)/detail/([0-9]+)/page/(.*)$ index.php?mod=$1&act=detail&id=$2&page=$3 [L]
 RewriteRule ^(.*)/detail/([0-9]+)$ index.php?mod=$1&act=detail&id=$2 [L]
+RewriteRule ^category/detail/([0-9]+)/([0-9]+)$ index.php?mod=category&act=detail&id=$1&MaDMC=$2 [L]
 RewriteRule ^upload/(.*)$ upload/$1 [L]
 
 RewriteRule ^controller/(.*)$ controller/$1 [L]

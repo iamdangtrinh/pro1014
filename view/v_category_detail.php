@@ -4,7 +4,12 @@
                 <div class="container">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="demo23.html">Trang chủ</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Danh mục ...</li>
+                        <?php if(isset($MaDMC)): ?>
+                        <li class="breadcrumb-item" aria-current="page">Danh mục <?=$spDM[0]['TenDM']?></li>
+                        <li class="breadcrumb-item active" aria-current="page"><?=$spDM[0]['TenDMC']?></li>
+                        <?php else: ?>
+                            <li class="breadcrumb-item active" aria-current="page">Danh mục <?=$spDM[0]['TenDM']?></li>
+                        <?php endif;?>
                     </ol>
                 </div>
             </nav>
