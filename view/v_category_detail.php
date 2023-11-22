@@ -71,7 +71,7 @@
                         </nav>
                         <!-- chỗ lầy là chỗ foeach sản phẩm -->
                         <div class="row">
-                            <?php foreach ($product_shop as $product): ?>
+                            <?php foreach ($category_detail as $product): ?>
                                 <?php if(!$product['GiaGiam']): ?>
                                     <div class="col-6 col-sm-4 col-lg-3">
                                         <div class="product-default inner-quickview inner-icon">
@@ -90,7 +90,7 @@
                                             <div class="product-details">
                                                 <div class="category-wrap">
                                                     <div class="category-list">
-                                                        <a href="demo23-product.html" class="product-category"><?= $product['TenDM'];?></a>
+                                                        <a href="demo23-product.html" class="product-category"><?= $dsdm['TenDM'];?></a>
                                                     </div>
                                                     <a href="wishlist.html" title="Wishlist" class="btn-icon-wish"><i
                                                             class="icon-heart"></i></a>
@@ -132,7 +132,7 @@
                                             <div class="product-details">
                                                 <div class="category-wrap">
                                                     <div class="category-list">
-                                                        <a href="demo23-product.html" class="product-category"><?= $product['TenDM'];?></a>
+                                                        <a href="demo23-product.html" class="product-category"><?= $dsdm['TenDM'];?></a>
                                                     </div>
                                                     <a href="wishlist.html" title="Wishlist" class="btn-icon-wish"><i
                                                             class="icon-heart"></i></a>
