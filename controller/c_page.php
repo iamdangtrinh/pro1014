@@ -28,7 +28,7 @@
                 $view_name = 'page_shop';
                 break;
             case 'category_dm':
-
+                
                 $products_DM = category_getbyDM($MaDM, $MaDMC);
 
                 $view_name = 'category_detail';
