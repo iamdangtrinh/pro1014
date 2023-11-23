@@ -22,7 +22,7 @@
                             <th class="product-col">Sản Phẩm</th>
                             <th class="price-col text-center">Giá</th>
                             <th class="qty-col text-center">Số Lượng</th>
-                            <th class="text-right">Tổng Hợp</th>
+                            <th class="text-right">Tổng tiền</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -45,21 +45,22 @@
                                         <?= $TenSP ?>
                                     </a>
                                 </td>
-                                <td class="m-auto">
+                                <td class="m-auto ">
                                     <?= number_format($Gia, 0, '.', '.') . " VND" ?>
                                 </td>
                                 <td>
                                     <p data-quantity="<?= $MaSP ?>"></p>
-                                    <div class="product-single-qty">
+                                    <div class="product-single-qty price_product_parent">
                                         <span class="fa fa-minus minusJS"></span>
-                                        <input type="text" name="quantity" value="<?= $SoLuongSP ?>"
-                                            class="quantity_product">
+                                        <input type="hidden" class="price_product" value="<?= $Gia ?>">
+                                        <input type="text" name="quantity" value="<?= $SoLuongSP ?>" class="quantity_product">
                                         <span class="fa fa-plus plusJS"></span>
                                         <!-- <input class="horizontal-quantity form-control" type="text"> -->
                                     </div>
                                 </td>
-                                <td class="text-right m-auto"><span class="subtotal-price">
-                                        <?= number_format(($Gia * $SoLuongSP), 0, '.', '.') . " VND" ?>
+                                <td class="text-right m-auto">
+                                    <span class="subtotal-price">
+                                        <div class="total_price"></div>
                                     </span>
                                 </td>
                             </tr>
@@ -178,6 +179,9 @@
 <script>
     $(document).ready(function () {
 
+        
+
+
         $('.minusJS').click(function () {
             var product_box = this.closest('.product-single-qty');
             var quantity_input = product_box.querySelector('.quantity_product');
@@ -185,7 +189,7 @@
 
             if (currentQuantity > 1) {
                 quantity_input.value = currentQuantity - 1;
-                           $(quantity_input).trigger('change');
+                $(quantity_input).trigger('change');
             }
         });
 
@@ -195,15 +199,15 @@
             var currentQuantity = parseInt(quantity_input.value);
 
             quantity_input.value = currentQuantity + 1;
-                       $(quantity_input).trigger('change');
+            $(quantity_input).trigger('change');
         });
 
 
         $('input[name="quantity"]').on('change', function () {
             var newQuantity = $(this).val(); // Get the new quantity value
 
-            newQuantity =newQuantity.replace(/[^0-9]/g,"");
-			if(newQuantity == null) {
+            newQuantity = newQuantity.replace(/[^0-9]/g, "");
+            if (newQuantity == null) {
                 newQuantity = "1";
             } else {
                 $(this).val(newQuantity);
