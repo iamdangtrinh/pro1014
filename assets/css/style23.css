@@ -100,6 +100,7 @@ label.error {
   padding-left: 60px;
 }
 .table-cart td{
+  padding: 20px 4px;
   display: table-cell;
   text-align: center;
   vertical-align: middle;

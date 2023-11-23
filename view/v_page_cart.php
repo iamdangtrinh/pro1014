@@ -196,10 +196,7 @@
             document.querySelector('.total_cart').innerText = total_cart.toLocaleString('vi-VN')+ ' VND';
         }
         updateTotal()
-        
-        $('input[name="quantity"]').on('change', function () {
-            updateTotal()
-        })
+      
 
         $('.minusJS').click(function () {
             var product_box = this.closest('.product-single-qty');
@@ -223,6 +220,7 @@
 
 
         $('input[name="quantity"]').on('change', function () {
+            updateTotal()
             var newQuantity = $(this).val(); // Get the new quantity value
 
             newQuantity = newQuantity.replace(/[^0-9]/g, "");
