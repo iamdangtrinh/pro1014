@@ -34,8 +34,5 @@
         return pdo_query("SELECT * FROM sanpham WHERE TenSP like '%$keyword%' LIMIT 3");
     }
 
-    // Cập nhật số lượng sản phẩm trong giỏ hàng
-    function update_uantity_by_cart($SoLuongSP, $MaSP) {
-        return pdo_execute("UPDATE chitiethoadon SET SoLuongSP = ? WHERE MaSP=?", $SoLuongSP, $MaSP);
-    }
+   
 ?>
