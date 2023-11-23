@@ -1,13 +1,13 @@
             <div class="container checkout-container">
                 <ul class="checkout-progress-bar d-flex justify-content-center flex-wrap">
                     <li>
-                        <a href="cart.html">Shopping Cart</a>
+                        <a href="cart.html">Giỏ hàng</a>
                     </li>
                     <li class="active">
-                        <a href="checkout.html">Checkout</a>
+                        <a href="checkout.html">Thủ tục thanh toán</a>
                     </li>
                     <li class="disabled">
-                        <a href="#">Order Complete</a>
+                        <a href="#">Hoàn thành đơn hàng</a>
                     </li>
                 </ul>
 
@@ -15,13 +15,13 @@
                     <div class="col-lg-7">
                         <ul class="checkout-steps">
                             <li>
-                                <h2 class="step-title">Billing details</h2>
+                                <h2 class="step-title">Chi tiết đơn hàng</h2>
 
                                 <form action="#" id="checkout-form">
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="form-group">
-                                                <label>First name
+                                                <label>Tên 
                                                     <abbr class="required" title="required">*</abbr>
                                                 </label>
                                                 <input type="text" class="form-control" required />
@@ -30,7 +30,7 @@
 
                                         <div class="col-md-6">
                                             <div class="form-group">
-                                                <label>Last name
+                                                <label>Họ
                                                     <abbr class="required" title="required">*</abbr></label>
                                                 <input type="text" class="form-control" required />
                                             </div>
@@ -38,42 +38,43 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <label>Company name (optional)</label>
+                                        <label>Tên công ty (nếu có)</label>
                                         <input type="text" class="form-control" />
                                     </div>
 
                                     <div class="select-custom">
-                                        <label>Country / Region
+                                        <label>Quốc gia/ Khu vực
                                             <abbr class="required" title="required">*</abbr></label>
                                         <select name="orderby" class="form-control">
-                                            <option value="" selected="selected">Vanuatu
+                                            <option value="" selected="selected">TP.HCM
                                             </option>
-                                            <option value="1">Brunei</option>
-                                            <option value="2">Bulgaria</option>
-                                            <option value="3">Burkina Faso</option>
-                                            <option value="4">Burundi</option>
-                                            <option value="5">Cameroon</option>
+                                            <option value="1">Đồng Nai</option>
+                                            <option value="2">Tiền Giang</option>
+                                            <option value="3">Long An</option>
+                                            <option value="4">Trà Vinh</option>
+                                            <option value="5">Tây Ninh</option>
+                                          
                                         </select>
                                     </div>
 
                                     <div class="form-group mb-1 pb-2">
-                                        <label>Street address
+                                        <label>Địa chỉ 
                                             <abbr class="required" title="required">*</abbr></label>
-                                        <input type="text" class="form-control" placeholder="House number and street name" required />
+                                        <input type="text" class="form-control" placeholder="Số nhà và tên đường" required />
                                     </div>
 
                                     <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Apartment, suite, unite, etc. (optional)" required />
+                                        <input type="text" class="form-control" placeholder="Căn hộ,..(tùy chọn)" required />
                                     </div>
 
                                     <div class="form-group">
-                                        <label>Town / City
+                                        <label>Thị trấn/ Thành phố
                                             <abbr class="required" title="required">*</abbr></label>
                                         <input type="text" class="form-control" required />
                                     </div>
 
                                     <div class="select-custom">
-                                        <label>State / County <abbr class="required" title="required">*</abbr></label>
+                                        <label>Tiểu bang/ Quận <abbr class="required" title="required">*</abbr></label>
                                         <select name="orderby" class="form-control">
                                             <option value="" selected="selected">NY</option>
                                             <option value="1">Brunei</option>
@@ -85,18 +86,18 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <label>Postcode / Zip
+                                        <label>Mã bưu / Zip
                                             <abbr class="required" title="required">*</abbr></label>
                                         <input type="text" class="form-control" required />
                                     </div>
 
                                     <div class="form-group">
-                                        <label>Phone <abbr class="required" title="required">*</abbr></label>
+                                        <label>Điện thoại <abbr class="required" title="required">*</abbr></label>
                                         <input type="tel" class="form-control" required />
                                     </div>
 
                                     <div class="form-group">
-                                        <label>Email address
+                                        <label>Địa chỉ email
                                             <abbr class="required" title="required">*</abbr></label>
                                         <input type="email" class="form-control" required />
                                     </div>
@@ -104,14 +105,13 @@
                                     <div class="form-group mb-1">
                                         <div class="custom-control custom-checkbox">
                                             <input type="checkbox" class="custom-control-input" id="create-account" />
-                                            <label class="custom-control-label" data-toggle="collapse" data-target="#collapseThree" aria-controls="collapseThree" for="create-account">Create an
-                                                account?</label>
+                                            <label class="custom-control-label" data-toggle="collapse" data-target="#collapseThree" aria-controls="collapseThree" for="create-account">Tạo một tài khoản</label>
                                         </div>
                                     </div>
 
                                     <div id="collapseThree" class="collapse">
                                         <div class="form-group">
-                                            <label>Create account password
+                                            <label>Tạo một tài khoản
                                                 <abbr class="required" title="required">*</abbr></label>
                                             <input type="password" placeholder="Password" class="form-control" required />
                                         </div>
@@ -120,9 +120,7 @@
                                     <div class="form-group">
                                         <div class="custom-control custom-checkbox mt-0">
                                             <input type="checkbox" class="custom-control-input" id="different-shipping" />
-                                            <label class="custom-control-label" data-toggle="collapse" data-target="#collapseFour" aria-controls="collapseFour" for="different-shipping">Ship to a
-                                                different
-                                                address?</label>
+                                            <label class="custom-control-label" data-toggle="collapse" data-target="#collapseFour" aria-controls="collapseFour" for="different-shipping">Gửi đến một vị trí khác?</label>
 
 
                                         </div>
@@ -133,7 +131,7 @@
                                             <div class="row">
                                                 <div class="col-md-6">
                                                     <div class="form-group">
-                                                        <label>First name <abbr class="required"
+                                                        <label>Họ <abbr class="required"
                                                                 title="required">*</abbr></label>
                                                         <input type="text" class="form-control" required />
                                                     </div>
@@ -141,7 +139,7 @@
 
                                                 <div class="col-md-6">
                                                     <div class="form-group">
-                                                        <label>Last name <abbr class="required"
+                                                        <label>Tên <abbr class="required"
                                                                 title="required">*</abbr></label>
                                                         <input type="text" class="form-control" required />
                                                     </div>
@@ -149,40 +147,43 @@
                                             </div>
 
                                             <div class="form-group">
-                                                <label>Company name (optional)</label>
+                                                <label>Ghi chú đơn hàng (tùy chọn)</label>
                                                 <input type="text" class="form-control">
                                             </div>
 
                                             <div class="select-custom">
-                                                <label>Country / Region <span class="required">*</span></label>
+                                                <label>Quốc gia/ Khu vực
+                                                    <abbr class="required" title="required">*</abbr></label>
                                                 <select name="orderby" class="form-control">
-                                                    <option value="" selected="selected">Vanuatu</option>
-                                                    <option value="1">Brunei</option>
-                                                    <option value="2">Bulgaria</option>
-                                                    <option value="3">Burkina Faso</option>
-                                                    <option value="4">Burundi</option>
-                                                    <option value="5">Cameroon</option>
+                                                    <option value="" selected="selected">TP.HCM
+                                                    </option>
+                                                    <option value="1">Đồng Nai</option>
+                                                    <option value="2">Tiền Giang</option>
+                                                    <option value="3">Long An</option>
+                                                    <option value="4">Trà Vinh</option>
+                                                    <option value="5">Tây Ninh</option>
+                                                
                                                 </select>
                                             </div>
 
                                             <div class="form-group mb-1 pb-2">
-                                                <label>Street address <abbr class="required"
-                                                        title="required">*</abbr></label>
-                                                <input type="text" class="form-control" placeholder="House number and street name" required />
+                                                <label>Địa chỉ 
+                                                    <abbr class="required" title="required">*</abbr></label>
+                                                <input type="text" class="form-control" placeholder="Số nhà và tên đường" required />
                                             </div>
 
                                             <div class="form-group">
-                                                <input type="text" class="form-control" placeholder="Apartment, suite, unit, etc. (optional)" required />
+                                                <input type="text" class="form-control" placeholder="Căn hộ,..(tùy chọn)" required />
                                             </div>
 
                                             <div class="form-group">
-                                                <label>Town / City <abbr class="required"
+                                                <label>Thị trấn / Thành phố <abbr class="required"
                                                         title="required">*</abbr></label>
                                                 <input type="text" class="form-control" required />
                                             </div>
 
                                             <div class="select-custom">
-                                                <label>State / County <abbr class="required"
+                                                <label>Tiểu bang / Quận <abbr class="required"
                                                         title="required">*</abbr></label>
                                                 <select name="orderby" class="form-control">
                                                     <option value="" selected="selected">NY</option>
@@ -195,7 +196,7 @@
                                             </div>
 
                                             <div class="form-group">
-                                                <label>Postcode / ZIP <abbr class="required"
+                                                <label>Mã bưu / ZIP <abbr class="required"
                                                         title="required">*</abbr></label>
                                                 <input type="text" class="form-control" required />
                                             </div>
@@ -203,8 +204,8 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <label class="order-comments">Order notes (optional)</label>
-                                        <textarea class="form-control" placeholder="Notes about your order, e.g. special notes for delivery." required></textarea>
+                                        <label class="order-comments">Ghi chú đơn hàng(tùy chọn)</label>
+                                        <textarea class="form-control" placeholder="Ghi chú về đơn hàng của bạn, ví dụ như ghi chú đặc biệt khi giao hàng." required></textarea>
                                     </div>
                                 </form>
                             </li>
@@ -214,59 +215,59 @@
 
                     <div class="col-lg-5">
                         <div class="order-summary">
-                            <h3>YOUR ORDER</h3>
+                            <h3>Đơn hàng đã đặt</h3>
 
                             <table class="table table-mini-cart">
                                 <thead>
                                     <tr>
-                                        <th colspan="2">Product</th>
+                                        <th colspan="2">Sản phẩm</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
                                         <td class="product-col">
                                             <h3 class="product-title">
-                                                Circled Ultimate 3D Speaker ×
+                                                Áo em bé
                                                 <span class="product-qty">4</span>
                                             </h3>
                                         </td>
 
                                         <td class="price-col">
-                                            <span>$1,040.00</span>
+                                            <span>259.000 VND</span>
                                         </td>
                                     </tr>
 
                                     <tr>
                                         <td class="product-col">
                                             <h3 class="product-title">
-                                                Fashion Computer Bag ×
+                                                Quần hồng dành cho bé gái
                                                 <span class="product-qty">2</span>
                                             </h3>
                                         </td>
 
                                         <td class="price-col">
-                                            <span>$418.00</span>
+                                            <span>149.000 VND</span>
                                         </td>
                                     </tr>
                                 </tbody>
                                 <tfoot>
                                     <tr class="cart-subtotal">
                                         <td>
-                                            <h4>Subtotal</h4>
+                                            <h4>Tổng tiền</h4>
                                         </td>
 
                                         <td class="price-col">
-                                            <span>$1,458.00</span>
+                                            <span>398.000 VND</span>
                                         </td>
                                     </tr>
                                     <tr class="order-shipping">
                                         <td class="text-left" colspan="2">
-                                            <h4 class="m-b-sm">Shipping</h4>
+                                            <h4 class="m-b-sm">Đang chuyển hàng</h4>
 
                                             <div class="form-group form-group-custom-control">
                                                 <div class="custom-control custom-radio d-flex">
                                                     <input type="radio" class="custom-control-input" name="radio" checked />
-                                                    <label class="custom-control-label">Local Pickup</label>
+                                                    <label class="custom-control-label">Nhận hàng tại địa phuowng</label>
                                                 </div>
                                                 <!-- End .custom-checkbox -->
                                             </div>
@@ -275,7 +276,7 @@
                                             <div class="form-group form-group-custom-control mb-0">
                                                 <div class="custom-control custom-radio d-flex mb-0">
                                                     <input type="radio" name="radio" class="custom-control-input">
-                                                    <label class="custom-control-label">Flat Rate</label>
+                                                    <label class="custom-control-label">Tỷ giá cố dịnh</label>
                                                 </div>
                                                 <!-- End .custom-checkbox -->
                                             </div>
@@ -286,26 +287,26 @@
 
                                     <tr class="order-total">
                                         <td>
-                                            <h4>Total</h4>
+                                            <h4>Tổng cộng</h4>
                                         </td>
                                         <td>
-                                            <b class="total-price"><span>$1,603.80</span></b>
+                                            <b class="total-price"><span>398.000 VND</span></b>
                                         </td>
                                     </tr>
                                 </tfoot>
                             </table>
 
                             <div class="payment-methods">
-                                <h4 class="">Payment methods</h4>
-                                <div class="info-box with-icon p-0">
+                                <h4 class="">Phương thức thanh toán</h4>
+                                <div class="info-box  p-0">
                                     <p>
-                                        Sorry, it seems that there are no available payment methods for your state. Please contact us if you require assistance or wish to make alternate arrangements.
+                                    Rất tiếc, có vẻ như không có phương thức thanh toán nào khả dụng cho tiểu bang của bạn. Vui lòng liên hệ với chúng tôi nếu bạn cần hỗ trợ hoặc muốn sắp xếp thay thế.
                                     </p>
                                 </div>
                             </div>
 
                             <button type="submit" class="btn btn-dark btn-place-order" form="checkout-form">
-                                Place order
+                                ĐẶT HÀNG
                             </button>
                         </div>
                         <!-- End .cart-summary -->

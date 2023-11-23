@@ -167,7 +167,7 @@
                 </table>
 
                 <div class="checkout-methods">
-                    <a href="cart.html" class="btn btn-block btn-dark">
+                    <a href="<?=$base_url?>page/checkout" class="btn btn-block btn-dark">
                         Tiến hành kiểm tra
                         <i class="fa fa-arrow-right"></i></a>
                 </div>

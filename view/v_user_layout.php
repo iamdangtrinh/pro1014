@@ -134,7 +134,7 @@
 
                                     <div class="dropdown-cart-action">
                                         <a href="<?=$base_url?>gio-hang/cart_order" class="btn btn-gray btn-block view-cart">Xem giỏ hàng</a>
-                                        <a href="checkout.html" class="btn btn-dark btn-block">Kiểm tra</a>
+                                        <a href="<?=$base_url?>page/checkout" class="btn btn-dark btn-block">Kiểm tra</a>
                                     </div>
                                 </div>
                             </div>
