@@ -168,9 +168,10 @@
                 </table>
 
                 <div class="checkout-methods">
-                    <a href="cart.html" class="btn btn-block btn-dark">
-                        Tiến hành kiểm tra
-                        <i class="fa fa-arrow-right"></i></a>
+                    <button href="" class="btn btn-block btn-dark">
+                        Tiến hành thanh toán
+                        <i class="fa fa-arrow-right"></i>
+                    </button>
                 </div>
             </div>
         </div>
