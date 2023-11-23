@@ -28,7 +28,7 @@
                     <tbody>
                         <?php foreach ($cart as $key => $value):
                             extract($value) ?>
-                            <tr class="product-row">
+                            <tr class="product-row total_product_parent">
                                 <td>
                                     <figure class="product-image-container">
                                         <a href="product.html" class="product-image">
@@ -45,15 +45,16 @@
                                         <?= $TenSP ?>
                                     </a>
                                 </td>
-                                <td class="m-auto ">
+                                <td class="m-auto">
                                     <?= number_format($Gia, 0, '.', '.') . " VND" ?>
                                 </td>
                                 <td>
                                     <p data-quantity="<?= $MaSP ?>"></p>
-                                    <div class="product-single-qty price_product_parent">
+                                    <div class="product-single-qty">
                                         <span class="fa fa-minus minusJS"></span>
                                         <input type="hidden" class="price_product" value="<?= $Gia ?>">
-                                        <input type="text" name="quantity" value="<?= $SoLuongSP ?>" class="quantity_product">
+                                        <input type="text" name="quantity" value="<?= $SoLuongSP ?>"
+                                            class="quantity_product">
                                         <span class="fa fa-plus plusJS"></span>
                                         <!-- <input class="horizontal-quantity form-control" type="text"> -->
                                     </div>
@@ -167,7 +168,7 @@
                 </table>
 
                 <div class="checkout-methods">
-                    <a href="<?=$base_url?>page/checkout" class="btn btn-block btn-dark">
+                    <a href="cart.html" class="btn btn-block btn-dark">
                         Tiến hành kiểm tra
                         <i class="fa fa-arrow-right"></i></a>
                 </div>
@@ -179,8 +180,26 @@
 <script>
     $(document).ready(function () {
 
-        
+        function updateTotal() {
+            
+            var total_cart = 0
+            var total_product_parent = $('.total_product_parent');
+            for(const product of total_product_parent) {
+                var price = product.querySelector('.price_product').value;
+                var quantity = product.querySelector('.quantity_product').value;
 
+                total = parseInt(price) *quantity
+                product.querySelector('.total_price').innerText = total.toLocaleString('vi-VN')+ ' VND';
+                total_cart += total;
+            }
+            // tổng giỏ hàng
+            document.querySelector('.total_cart').innerText = total_cart.toLocaleString('vi-VN')+ ' VND';
+        }
+        updateTotal()
+        
+        $('input[name="quantity"]').on('change', function () {
+            updateTotal()
+        })
 
         $('.minusJS').click(function () {
             var product_box = this.closest('.product-single-qty');
