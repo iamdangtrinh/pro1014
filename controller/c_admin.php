@@ -17,10 +17,6 @@
                 $dsADMIN_DM = admin_getALLDM();
                 $view_name='admin_danhmuc';
                 break;
-            case 'sua':
-                    
-                $view_name='admin_sua_danhmuc';
-                break;
             case 'them':
                 include_once 'model/m_pdo.php';
                 include_once 'model/m_admin.php';
@@ -31,6 +27,10 @@
                     }
                 
                 $view_name='admin_them_danhmuc';
+                break;
+            case 'sua':
+                
+                $view_name='admin_sua_danhmuc';
                 break;
             case 'user':
                 //lay du lieu

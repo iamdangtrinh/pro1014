@@ -3,7 +3,15 @@
     --box-shadow: 0 2rem 3rem var(--color-light);
 }
 
-
+.row{
+    display: none;
+}
+.box{
+    margin-top: 10px;
+}
+h1{
+    margin-top: 10px;
+}
 table {
     width: 100%;
     border-collapse: collapse;
@@ -18,7 +26,7 @@ table:hover {
 thead {
     background-color: #ffc0cba8;
     color: white;
-    font-size: 15.5px;
+    font-size: 16px;
     
 }
 tbody{
@@ -71,12 +79,15 @@ td{
         color: #ffff;
 
     }
+    .box_button{
+        display: flex;
+    }
     .them{
 
        margin-top: 20px;
        padding: 10px;
        font-size: 16px;
-       margin: 10px;
+       margin: 5px;
        background: pink;
        border-radius: 5px;
        color: #ffff;
@@ -87,6 +98,21 @@ td{
         background: pink;
         
     }
+    .remove{
+
+        padding: 10px;
+        font-size: 16px;
+        margin: 5px;
+        background: pink;
+        border-radius: 5px;
+        color: #ffff;
+        }
+        .remove:hover{
+        box-shadow: 5px 5px 5px #ffd5dd;
+        color: #fff;
+        background: pink;
+        
+        }
 </style>
             <h1>Danh mục</h1>
             <!-- Recent Orders Table -->
@@ -95,7 +121,7 @@ td{
                 <table>
                 <thead  >
                         <tr>
-                            <th class="chon">Chọn</th>
+                            <!-- <th class="chon">Chọn</th> -->
                             <th>Mã danh mục</th>
                             <th>Tên danh mục</th>
                             <th style="text-align: center;">Lệnh</th>
@@ -104,11 +130,11 @@ td{
                     <tbody>
                     <?php foreach ($dsADMIN_DM as $itemDM) :?>
                         <tr>
-                            <td style="text-align: center;">
+                            <!-- <td style="text-align: center;">
                                 <form>
                                     <input type="checkbox" name="" value="">
                                 </form>
-                            </td>
+                            </td> -->
                             <td><?=$itemDM['MaDM']?></td>
                             <td ><?=$itemDM['TenDM']?></td>
                             <td >
@@ -125,6 +151,9 @@ td{
 
             </div>
             <br>
-            <div><a href="<?=$base_url?>admin/them" class="them" style="font-weight: 600;">Thêm mới</a></div>
+           <div class="box_button">
+                <div><a href="<?=$base_url?>admin/them" class="them" style="font-weight: 600;">Thêm mới</a></div>
+                <div><a href="<?=$base_url?>admin/" class="remove" style="font-weight: 600;">Xóa hết</a></div>
+           </div>
             <!-- End of Recent Orders -->
           
