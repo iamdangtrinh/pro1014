@@ -77,7 +77,8 @@
 					}
 				},
 
-				submitHandler: function (form) {
+				submitHandler: function(form) {
+					// e.preventDefault();
 					$.ajax({
 						type: "POST",
 						url: "?mod=user&act=login",

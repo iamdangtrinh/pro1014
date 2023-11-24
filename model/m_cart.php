@@ -49,4 +49,10 @@ function show_cart_for_user($MaTK)
     ", $MaTK, 'gio-hang');
 }
 
+
+function has_coupon_code($coupon_code) {
+    return pdo_query("SELECT * FROM khuyenmai WHERE CodeKM = ?", $coupon_code);
+}
+
+
 ?>

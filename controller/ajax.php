@@ -25,6 +25,19 @@ switch ($_GET['act']) {
         $MaSP = $_POST['MaSP'];
         update_quantity_by_cart($SoLuongSP, $MaSP);
         break;
+
+    case 'ajax_cart_coupon':
+        include_once '../model/m_cart.php';
+    
+        if(isset($_POST['btn_coupon']) && $_POST['btn_coupon']) {
+            $couponcode = $_POST['couponcode'];
+            $has_coupon = has_coupon_code($couponcode);
+            
+            print_r($has_coupon);
+        }
+        break;
+
+
     default:
         break;
 }

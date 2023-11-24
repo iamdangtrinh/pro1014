@@ -25,7 +25,7 @@
                             <tr class="product-row total_product_parent">
                                 <td>
                                     <figure class="product-image-container">
-                                        <a href="<?= $base_url?>detail" class="product-image">
+                                        <a href="<?= $base_url ?>detail" class="product-image">
                                             <img src="<?= $base_url ?>upload/demoes/demo23/products/<?= $AnhSP ?>"
                                                 alt="<?= $TenSP ?>">
                                         </a>
@@ -67,13 +67,14 @@
                             <td colspan="5" class="clearfix">
                                 <div class="float-left">
                                     <div class="cart-discount">
-                                        <form action="#">
+                                        <form id="coupon" action="#" method="post">
                                             <div class="input-group">
-                                                <input type="text" class="form-control form-control-sm"
-                                                    placeholder="Mã giảm giá" required>
+                                                <input type="text" class="form-control form-control-sm" id="coupon_code"
+                                                    placeholder="Mã giảm giá" name="couponcode">
                                                 <div class="input-group-append">
-                                                    <button class="btn btn-sm" type="submit">Áp dụng phiếu
-                                                        mua hàng </button>
+                                                    <input type="hidden" name="btn_coupon" value="btn_coupon">
+                                                    <input class="btn btn-primary" id="coupon_code_btn" type="submit" name=""
+                                                        value="Áp dụng phiếu mua hàng">
                                                 </div>
                                             </div>
                                         </form>
@@ -193,6 +194,7 @@
 
 
         $('.minusJS').click(function () {
+
             var product_box = this.closest('.product-single-qty');
             var quantity_input = product_box.querySelector('.quantity_product');
             var currentQuantity = parseInt(quantity_input.value);
@@ -213,9 +215,10 @@
         });
 
 
-        $('input[name="quantity"]').on('change', function () {
-            var newQuantity = $(this).val(); // Get the new quantity value
+        $('input[name="quantity"]').on('change', function (e) {
+            e.preventDefault();
 
+            var newQuantity = $(this).val(); // Get the new quantity value
             newQuantity = newQuantity.replace(/[^0-9]/g, "");
             if (newQuantity == null && newQuantity == isNaN && newQuantity == undefined) {
                 newQuantity = "1";
@@ -239,12 +242,47 @@
                     MaSP: MaSP,
                 },
                 success: function (response) {
+
                 },
                 error: function (error) {
                     // Handle error
                 }
             });
+
         });
+    })
+</script>
+
+<script>
+
+    $(document).ready(function(){
+        $('#coupon').on('submit', function(e) {
+            e.preventDefault();
+        })
+        
+        $('#coupon').on('submit', function() {
+            var data = $(this).serialize();
+            
+            // console.log(couponcode_btn);
+            
+            $.ajax({
+                type: "POST",
+                url: "<?=$base_url?>controller/ajax.php?act=ajax_cart_coupon",
+                // data: {
+                //     couponcode:couponcode,
+                //     couponcode_btn: couponcode_btn
+                // },
+                data: data,
+                success:function(reponse) {
+                    console.log("Thành công");
+                },
+                error:function (reponse){
+                    console.log("Thất bại");
+                }
+            })
+        })
+        
 
     })
+
 </script>
