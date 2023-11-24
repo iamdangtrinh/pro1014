@@ -3,8 +3,7 @@ if (isset($_GET['act'])) {
     switch ($_GET['act']) {
         case 'detail':
             //lay du lieu
-            include_once 'model/m_product.php';
-            $product_detail['detail'] = product_detail();
+            in
             // hien thi du lieu
             $view_name = 'product_detail';
             break;

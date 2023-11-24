@@ -170,7 +170,7 @@
 
                                 <li>
                                     Thẻ:
-                                    <strong><a href="#" class="product-category">Quần áo</a></strong>,
+                                    <strong><a href="#" class="product-category"</a></strong>,
                                     <strong><a href="#" class="product-category">Giày dép</a></strong>
                                 </li>
                             </ul>
@@ -218,6 +218,9 @@
                                     <span class="product-price">245.000đ</span>
                                 </div>
 
+                                <div class="product-single-qty">
+                                    <input class="horizontal-quantity form-control" type="text">
+                                </div>
                                 <!-- End .product-single-qty -->
 
                                 <a href="javascript:;" class="btn btn-dark add-cart mr-2" title="Add to Cart">Thêm vào
@@ -262,7 +265,7 @@
                         <li class="nav-item">
                             <a class="nav-link active" id="product-tab-desc" data-toggle="tab"
                                 href="#product-desc-content" role="tab" aria-controls="product-desc-content"
-                                aria-selected="true">Mô tả</a>
+                                aria-selected="true">Miêu tả</a>
                         </li>
 
                         <li class="nav-item">

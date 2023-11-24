@@ -218,6 +218,9 @@
                                     <span class="product-price">245.000đ</span>
                                 </div>
 
+                                <div class="product-single-qty">
+                                    <input class="horizontal-quantity form-control" type="text">
+                                </div>
                                 <!-- End .product-single-qty -->
 
                                 <a href="javascript:;" class="btn btn-dark add-cart mr-2" title="Add to Cart">Thêm vào

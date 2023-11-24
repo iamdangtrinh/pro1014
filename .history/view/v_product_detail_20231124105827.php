@@ -149,14 +149,14 @@
                             <hr class="short-divider">
 
                             <div class="price-box">
-                                <span class="old-price"><?=$product_detail['detail']['Gia']?>đ</span>
-                                <span class="new-price"><?=$product_detail['detail']['GiaGiam']?>đ</span>
+                                <span class="old-price"><?=$product_detail['detail']['Gia']?>dd</span>
+                                <span class="new-price">699.000đ</span>
                             </div>
                             <!-- End .price-box -->
 
                             <div class="product-desc">
                                 <p>
-                                    Số lượng: <?=$product_detail['detail']['SoLuong']?>
+                                    đánh giá hay cái j đó k dịch được ~~
                                 </p>
                             </div>
                             <!-- End .product-desc -->
@@ -165,7 +165,7 @@
                                 <!---->
                                 <li>
                                     Mã hàng:
-                                    <strong><?=$product_detail['detail']['MaSP']?></strong>
+                                    <strong>654613612</strong>
                                 </li>
 
                                 <li>
@@ -218,6 +218,9 @@
                                     <span class="product-price">245.000đ</span>
                                 </div>
 
+                                <div class="product-single-qty">
+                                    <input class="horizontal-quantity form-control" type="text">
+                                </div>
                                 <!-- End .product-single-qty -->
 
                                 <a href="javascript:;" class="btn btn-dark add-cart mr-2" title="Add to Cart">Thêm vào
@@ -262,7 +265,7 @@
                         <li class="nav-item">
                             <a class="nav-link active" id="product-tab-desc" data-toggle="tab"
                                 href="#product-desc-content" role="tab" aria-controls="product-desc-content"
-                                aria-selected="true">Mô tả</a>
+                                aria-selected="true">Miêu tả</a>
                         </li>
 
                         <li class="nav-item">

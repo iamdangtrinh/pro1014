@@ -7,7 +7,7 @@
                 </nav>
                 <div class="product-single-container product-single-default">
                     <div class="cart-message d-none">
-                        <strong class="single-cart-notice">Quần áo</strong>
+                        <strong class="single-cart-notice"><?=$product_detail?></strong>
                         <spanh>Đã thêm vào giỏ hàng </span>
                     </div>
 
@@ -86,7 +86,7 @@
                         <!-- End .product-single-gallery -->
 
                         <div class="col-lg-7 col-md-6 product-single-details">
-                            <h1 class="product-title"><?=$product_detail['detail']['TenSP']?></h1>
+                            <h1 class="product-title">Quần áo</h1>
 
                             <div class="product-nav">
                                     <style>
@@ -111,7 +111,7 @@
                                                     src="<?=$base_url?>upload/products/product-3.jpg"
                                                     style="padding-top: 0px;">
 
-                                                <span>Dành cho bé trai</span>
+                                                <span>dành cho bé trai</span>
                                             </span>
                                         </span>
                                     </a>
@@ -149,14 +149,14 @@
                             <hr class="short-divider">
 
                             <div class="price-box">
-                                <span class="old-price"><?=$product_detail['detail']['Gia']?>đ</span>
-                                <span class="new-price"><?=$product_detail['detail']['GiaGiam']?>đ</span>
+                                <span class="old-price">999.000đ</span>
+                                <span class="new-price">699.000đ</span>
                             </div>
                             <!-- End .price-box -->
 
                             <div class="product-desc">
                                 <p>
-                                    Số lượng: <?=$product_detail['detail']['SoLuong']?>
+                                    đánh giá hay cái j đó k dịch được ~~
                                 </p>
                             </div>
                             <!-- End .product-desc -->
@@ -165,7 +165,7 @@
                                 <!---->
                                 <li>
                                     Mã hàng:
-                                    <strong><?=$product_detail['detail']['MaSP']?></strong>
+                                    <strong>654613612</strong>
                                 </li>
 
                                 <li>
@@ -218,6 +218,9 @@
                                     <span class="product-price">245.000đ</span>
                                 </div>
 
+                                <div class="product-single-qty">
+                                    <input class="horizontal-quantity form-control" type="text">
+                                </div>
                                 <!-- End .product-single-qty -->
 
                                 <a href="javascript:;" class="btn btn-dark add-cart mr-2" title="Add to Cart">Thêm vào
@@ -262,7 +265,7 @@
                         <li class="nav-item">
                             <a class="nav-link active" id="product-tab-desc" data-toggle="tab"
                                 href="#product-desc-content" role="tab" aria-controls="product-desc-content"
-                                aria-selected="true">Mô tả</a>
+                                aria-selected="true">Miêu tả</a>
                         </li>
 
                         <li class="nav-item">
