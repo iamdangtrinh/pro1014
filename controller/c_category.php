@@ -7,14 +7,8 @@
                 // lay du liệu
                 if (isset($_GET['id'])) {
                     $MaDM = $_GET['id'];
-                    if(isset($_GET['MaDMC'])){
-                        $MaDMC=$_GET['MaDMC'];
-                        $spDM=category_getbyDMandDMC($MaDM, $MaDMC);
-                        $soluongSP = count_productsbydm_anddmc($MaDM, $MaDMC);
-                    }else{
-                        $spDM=category_getbyDM($MaDM);
-                        $soluongSP = count_productsbydm($MaDM);
-                    }
+                    $spDM=category_getbyDM($MaDM);
+                    $soluongSP = count_productsbydm($MaDM);
                     //////////////////////////////////////////////////////
                     $sotrang = ceil($soluongSP / $limit);
                     if (isset($_GET['page'])) {
