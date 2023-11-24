@@ -1,16 +1,10 @@
 <div class="container">
-    <ul class="checkout-progress-bar d-flex justify-content-center flex-wrap">
-        <li class="active">
-            <a href="cart.html">Giỏ Hàng</a>
-        </li>
-        <li>
-            <a href="checkout.html">Thanh Toán</a>
-        </li>
-        <li class="disabled">
-            <a href="cart.html">
-                Hoàn thành đơn hàng</a>
-        </li>
-    </ul>
+    <nav style="--bs-breadcrumb-divider: '';" aria-label="breadcrumb">
+        <ol class="breadcrumb justify-content-center">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Library</li>
+        </ol>
+    </nav>
 
     <div class="row">
         <div class="col-lg-8">
@@ -18,20 +12,20 @@
                 <table class="table table-cart">
                     <thead>
                         <tr>
-                            <th class="thumbnail-col"></th>
-                            <th class="product-col">Sản Phẩm</th>
-                            <th class="price-col text-center">Giá</th>
+                            <!-- <th class="thumbnail-col"></th> -->
+                            <th colspan="2" class="product-col">Sản Phẩm</th>
+                            <th class="price-col text-center">Đơn Giá</th>
                             <th class="qty-col text-center">Số Lượng</th>
-                            <th class="text-right">Tổng tiền</th>
+                            <th class="text-right">Số Tiền</th>
                         </tr>
                     </thead>
                     <tbody>
                         <?php foreach ($cart as $key => $value):
                             extract($value) ?>
-                            <tr class="product-row">
+                            <tr class="product-row total_product_parent">
                                 <td>
                                     <figure class="product-image-container">
-                                        <a href="product.html" class="product-image">
+                                        <a href="<?= $base_url?>detail" class="product-image">
                                             <img src="<?= $base_url ?>upload/demoes/demo23/products/<?= $AnhSP ?>"
                                                 alt="<?= $TenSP ?>">
                                         </a>
@@ -41,19 +35,20 @@
                                     </figure>
                                 </td>
                                 <td class="product-col text-left">
-                                    <a href="">
+                                    <a href="" class="name_cart">
                                         <?= $TenSP ?>
                                     </a>
                                 </td>
-                                <td class="m-auto ">
+                                <td class="m-auto">
                                     <?= number_format($Gia, 0, '.', '.') . " VND" ?>
                                 </td>
                                 <td>
                                     <p data-quantity="<?= $MaSP ?>"></p>
-                                    <div class="product-single-qty price_product_parent">
+                                    <div class="product-single-qty">
                                         <span class="fa fa-minus minusJS"></span>
                                         <input type="hidden" class="price_product" value="<?= $Gia ?>">
-                                        <input type="text" name="quantity" value="<?= $SoLuongSP ?>" class="quantity_product">
+                                        <input type="text" name="quantity" value="<?= $SoLuongSP ?>"
+                                            class="quantity_product">
                                         <span class="fa fa-plus plusJS"></span>
                                         <!-- <input class="horizontal-quantity form-control" type="text"> -->
                                     </div>
@@ -167,9 +162,10 @@
                 </table>
 
                 <div class="checkout-methods">
-                    <a href="<?=$base_url?>page/checkout" class="btn btn-block btn-dark">
-                        Tiến hành kiểm tra
-                        <i class="fa fa-arrow-right"></i></a>
+                    <button href="" class="btn btn-block btn-dark">
+                        Tiến hành thanh toán
+                        <i class="fa fa-arrow-right"></i>
+                    </button>
                 </div>
             </div>
         </div>
@@ -178,8 +174,22 @@
 <div class="mb-6"></div>
 <script>
     $(document).ready(function () {
+        function updateTotal() {
+            var total_cart = 0
+            var total_product_parent = $('.total_product_parent');
+            for (const product of total_product_parent) {
+                var price = product.querySelector('.price_product').value;
+                var quantity = product.querySelector('.quantity_product').value;
 
-        
+                total = parseInt(price) * quantity
+                product.querySelector('.total_price').innerText = total.toLocaleString('vi-VN') + ' VND';
+                total_cart += total;
+            }
+            // tổng giỏ hàng
+            document.querySelector('.total_cart').innerText = total_cart.toLocaleString('vi-VN') + ' VND';
+            // console.log(parseInt(total_cart) - 50000);
+        }
+        updateTotal()
 
 
         $('.minusJS').click(function () {
@@ -207,11 +217,16 @@
             var newQuantity = $(this).val(); // Get the new quantity value
 
             newQuantity = newQuantity.replace(/[^0-9]/g, "");
-            if (newQuantity == null) {
+            if (newQuantity == null && newQuantity == isNaN && newQuantity == undefined) {
                 newQuantity = "1";
             } else {
+                if (newQuantity < 1) {
+                    newQuantity = "1";
+                }
                 $(this).val(newQuantity);
             }
+
+            updateTotal()
 
             var closestProductRow = this.closest('.product-row');
             var MaSP = closestProductRow.querySelector('[data-quantity]').dataset.quantity;
@@ -224,7 +239,6 @@
                     MaSP: MaSP,
                 },
                 success: function (response) {
-                    // Handle successful response
                 },
                 error: function (error) {
                     // Handle error

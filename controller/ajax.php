@@ -20,11 +20,10 @@ switch ($_GET['act']) {
         endforeach;
         break;
     case 'ajax_cart_quantity':
-        print_r($_POST);
-        include_once '../model/m_product.php';
+        include_once '../model/m_cart.php';
         $SoLuongSP = $_POST['quantity'];
         $MaSP = $_POST['MaSP'];
-        update_uantity_by_cart($SoLuongSP, $MaSP);
+        update_quantity_by_cart($SoLuongSP, $MaSP);
         break;
     default:
         break;
