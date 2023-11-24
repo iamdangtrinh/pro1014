@@ -96,12 +96,38 @@ label.error {
   margin-top: 4px;
   color: #ff3333;
 }
+
 .appear-animate.fadeInLeftShorter.animated.appear-animation-visible {
   padding-left: 60px;
 }
-.table-cart td{
+
+.table-cart td {
   padding: 20px 4px;
   display: table-cell;
   text-align: center;
   vertical-align: middle;
+}
+
+.name_cart {
+  height: 38px;
+  width: 90%;
+  display: inline-block;
+  word-break: break-all;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  white-space: wrap;
+  text-overflow: ellipsis;
+}
+.name_cart {
+  width: 90%;
+  margin-left: 10px;
+  color: rgba(0,0,0,.87);
+  display: inline-block;
+  margin-bottom: 5px;
+  max-height: 40px;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
 }

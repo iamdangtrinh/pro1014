@@ -11112,8 +11112,8 @@ header .separator {
     max-width: 80px;
     width: 100%;
     margin: 0;
-    float: center;
-    border: 1px solid #f4f4f4
+    border: 1px solid #f4f4f4;
+    min-width: 60px;
 }
 
 .cart-dropdown .product-image-container a:after {

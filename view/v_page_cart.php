@@ -12,11 +12,11 @@
                 <table class="table table-cart">
                     <thead>
                         <tr>
-                            <th class="thumbnail-col"></th>
-                            <th class="product-col">Sản Phẩm</th>
-                            <th class="price-col text-center">Giá</th>
+                            <!-- <th class="thumbnail-col"></th> -->
+                            <th colspan="2" class="product-col">Sản Phẩm</th>
+                            <th class="price-col text-center">Đơn Giá</th>
                             <th class="qty-col text-center">Số Lượng</th>
-                            <th class="text-right">Tổng tiền</th>
+                            <th class="text-right">Số Tiền</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -25,7 +25,7 @@
                             <tr class="product-row total_product_parent">
                                 <td>
                                     <figure class="product-image-container">
-                                        <a href="product.html" class="product-image">
+                                        <a href="<?= $base_url?>detail" class="product-image">
                                             <img src="<?= $base_url ?>upload/demoes/demo23/products/<?= $AnhSP ?>"
                                                 alt="<?= $TenSP ?>">
                                         </a>
@@ -35,7 +35,7 @@
                                     </figure>
                                 </td>
                                 <td class="product-col text-left">
-                                    <a href="">
+                                    <a href="" class="name_cart">
                                         <?= $TenSP ?>
                                     </a>
                                 </td>
@@ -239,7 +239,6 @@
                     MaSP: MaSP,
                 },
                 success: function (response) {
-                    // Handle successful response
                 },
                 error: function (error) {
                     // Handle error
