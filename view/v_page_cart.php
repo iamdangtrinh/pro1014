@@ -73,8 +73,17 @@
                                                     placeholder="Mã giảm giá" name="couponcode">
                                                 <div class="input-group-append">
                                                     <input type="hidden" name="btn_coupon" value="btn_coupon">
-                                                    <input class="btn btn-primary" id="coupon_code_btn" type="submit" name=""
-                                                        value="Áp dụng phiếu mua hàng">
+                                                    <input class="btn btn-primary" id="coupon_code_btn" type="submit"
+                                                        name="" value="Áp dụng phiếu mua hàng">
+                                                    <?php
+                                                    if (isset($_SESSION['coupon']['susscess'])) {
+                                                        echo $_SESSION['coupon']['susscess'];
+                                                        unset($_SESSION['coupon']['susscess']);
+                                                    } 
+                                                    else if (isset($_SESSION['coupon']['error'])) {
+                                                        echo $_SESSION['coupon']['error'];
+                                                    }
+                                                    ?>
                                                 </div>
                                             </div>
                                         </form>
@@ -255,33 +264,28 @@
 
 <script>
 
-    $(document).ready(function(){
-        $('#coupon').on('submit', function(e) {
-            e.preventDefault();
-        })
-        
-        $('#coupon').on('submit', function() {
+    $(document).ready(function () {
+        // $('#coupon').on('submit', function (e) {
+        //     e.preventDefault();
+        // })
+
+        $('#coupon').on('submit', function () {
             var data = $(this).serialize();
-            
-            // console.log(couponcode_btn);
-            
+
             $.ajax({
                 type: "POST",
-                url: "<?=$base_url?>controller/ajax.php?act=ajax_cart_coupon",
-                // data: {
-                //     couponcode:couponcode,
-                //     couponcode_btn: couponcode_btn
-                // },
+                url: "<?= $base_url ?>controller/ajax.php?act=ajax_cart_coupon",
+
                 data: data,
-                success:function(reponse) {
+                success: function (reponse) {
                     console.log("Thành công");
                 },
-                error:function (reponse){
+                error: function (error) {
                     console.log("Thất bại");
                 }
             })
         })
-        
+
 
     })
 
