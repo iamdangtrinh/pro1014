@@ -382,10 +382,10 @@
                                     $kiemtra_dm = $item_dm['TenDM']; // Cập nhật TenDM hiện tại
                             ?>
                                 <li>    
-                                    <a href="#" class="nolink"><?=$item_dm['TenDM']?></a>
+                                    <a href="<?$base_url?>'category/detail/'<?$item_dm['MaDM']?>" class="nolink"><?=$item_dm['TenDM']?></a>
                                     <ul>
                                         <?php endif;?>
-                                                    <li><a href=""><?=$item_dm['TenDMC']?></a></li>
+                                                    <li><a href="<?=$base_url?>category/detail/<?=$item_dm['MaDM']?>/<?=$item_dm['MaDMC']?>"><?=$item_dm['TenDMC']?></a></li>
                                         <?php  endforeach ; ?>
                                     </ul>
                                 </li>
