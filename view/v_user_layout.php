@@ -173,14 +173,18 @@
                                             <?php foreach ($danhmuc as $item_dm): ?>
                                                 <?php if ($item_dm['Parent_id'] == 0): ?>
                                                     <div class="col-lg-4">
-                                                    <a href="<?=$base_url?>category/detail/<?=$item_dm['MaDM']?>" class="nolink"><?=$item_dm['TenDM']?></a>
-                                                    <ul class="submenu">
+                                                        <a href="<?=$base_url?>category/detail/<?=$item_dm['MaDM']?>" class="nolink"><?=$item_dm['TenDM']?></a>
+                                                        <ul class="submenu">
                                                 <?php endif; ?>
                                                 <?php foreach ($danhmuc as $value):?>
                                                     <?php if($value['Parent_id']!=0 && $value['Parent_id']==$item_dm['Parent_id']):?>
-                                                        <li><a href="<?=$base_url?>category/detail/<?=$value['MaDM']?>"><?=$value['TenDM']?></a></li>
+                                                        <li>
+                                                            <a href="<?=$base_url?>category/detail/<?=$value['MaDM']?>"><?=$value['TenDM']?></a>
+                                                        </li>
                                                     <?php endif; ?>
                                                 <?php endforeach; ?>
+                                                        </ul>
+                                                    </div>
                                             <?php endforeach;?>
                                         </div>
                                     </div>
