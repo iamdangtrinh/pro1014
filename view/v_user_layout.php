@@ -372,24 +372,23 @@
                     <li>
                         <a href="">Danh mục</a>
                         <ul>
-                            <li>    
-                                <a href="#" class="nolink">Bé trai</a>
-                                <ul>
-                                    <li><a href="">Áo</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#" class="nolink">Bé gái</a>
-                                <ul>
-                                    <li><a href="product-extended-layout.html">Áo</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#" class="nolink">Sơ sinh</a>
-                                <ul>
-                                    <li><a href="product-extended-layout.html">Áo</a></li>
-                                </ul>
-                            </li>
+                            <?php 
+                            $kiemtra_dm = null; // Biến để theo dõi TenDM hiện tại
+                            foreach ($danhmuc as $item_dm): 
+                                if ($item_dm['TenDM'] != $kiemtra_dm): // Kiểm tra nếu TenDM thay đổi
+                                    if ($kiemtra_dm != null): // Kiểm tra nếu không phải là lần đầu tiên
+                                        echo '</ul></li>'; // Đóng các thẻ ul và li trước đó
+                                    endif;
+                                    $kiemtra_dm = $item_dm['TenDM']; // Cập nhật TenDM hiện tại
+                            ?>
+                                <li>    
+                                    <a href="#" class="nolink"><?=$item_dm['TenDM']?></a>
+                                    <ul>
+                                        <?php endif;?>
+                                                    <li><a href=""><?=$item_dm['TenDMC']?></a></li>
+                                        <?php  endforeach ; ?>
+                                    </ul>
+                                </li>
                         </ul>
                     </li>
                     <li><a href="blog.html">Sản phẩm</a></li>
