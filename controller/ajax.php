@@ -1,4 +1,7 @@
 <?php
+session_start();
+ob_start();
+
 include_once '../model/m_pdo.php';
 
 // xử lí data 
@@ -25,6 +28,28 @@ switch ($_GET['act']) {
         $MaSP = $_POST['MaSP'];
         update_quantity_by_cart($SoLuongSP, $MaSP);
         break;
+
+    case 'ajax_cart_coupon':
+        include_once '../model/m_cart.php';
+
+        if (isset($_POST['btn_coupon']) && $_POST['btn_coupon']) {
+            $couponcode = $_POST['couponcode'];
+            $has_coupon = has_coupon_code($couponcode);
+
+            if ($has_coupon) {
+                // if($has_coupon['NgayBatDau'])
+                if(isset($has_coupon['GiaKM']) && isset($has_coupon['NgayKetThuc'])  ) {
+                   $_SESSION['coupon']['susscess'] = $has_coupon['GiaKM'];
+                } 
+            } else {
+                 $_SESSION['coupon']['error'] = "Mã giảm giá không đúng";
+            }
+        } else {
+             $_SESSION['coupon']['error'] == "Vui lòng nhập mã giảm giá";
+        }
+        break;
+
+
     default:
         break;
 }
