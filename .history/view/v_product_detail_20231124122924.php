@@ -27,8 +27,8 @@
                                 <div class="product-single-carousel owl-carousel owl-theme show-nav-hover">
                                     <div class="product-item">
                                         <img class="product-single-image"
-                                            src="<?=$base_url?>upload/demoes/demo23/products/<?=$product_detail['AnhSP']?>"
-                                            data-zoom-image="<?=$base_url?>upload/products/<?=$product_detail['AnhSP']?>"
+                                            src="<?=$base_url?>upload/products/zoom/product-1-big.jpg"
+                                            data-zoom-image="<?=$base_url?>upload/products/zoom/product-1-big.jpg"
                                             width="468" height="468" alt="product" />
                                     </div>
                                     <div class="product-item">
@@ -88,7 +88,7 @@
                         <!-- End .product-single-gallery -->
 
                         <div class="col-lg-7 col-md-6 product-single-details">
-                            <h1 class="product-title"><?=$product_detail['TenSP']?></h1>
+                            <h1 class="product-title"><?=$product_detail['detail']['TenSP']?></h1>
 
                             <div class="product-nav">
                                 <style>
@@ -168,7 +168,7 @@
                                 <!---->
                                 <li>
                                     Mã hàng:
-                                    <strong><?=$product_detail['MaSP']?></strong>
+                                    <strong><?=$product_detai['MaSP']?></strong>
                                 </li>
 
                                 <li>

@@ -27,7 +27,7 @@
                                 <div class="product-single-carousel owl-carousel owl-theme show-nav-hover">
                                     <div class="product-item">
                                         <img class="product-single-image"
-                                            src="<?=$base_url?>upload/demoes/demo23/products/<?=$product_detail['AnhSP']?>"
+                                            src="<?=$base_url?>upload/products/<?=$product_detail['AnhSP']?>"
                                             data-zoom-image="<?=$base_url?>upload/products/<?=$product_detail['AnhSP']?>"
                                             width="468" height="468" alt="product" />
                                     </div>

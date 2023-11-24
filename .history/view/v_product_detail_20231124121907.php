@@ -2,9 +2,7 @@
                 <nav aria-label="breadcrumb" class="breadcrumb-nav">
                     <ol class="breadcrumb">
                         <li><a href="demo1.html"><i class="fa-solid fa-house"></i></a></li>
-                        <li><i class="fa-solid fa-angle-right"></i><a href="#">
-                                <??>
-                            </a></li>
+                        <li><i class="fa-solid fa-angle-right"></i><a href="#"><??></a></li>
                     </ol>
                 </nav>
                 <div class="product-single-container product-single-default">
@@ -27,8 +25,8 @@
                                 <div class="product-single-carousel owl-carousel owl-theme show-nav-hover">
                                     <div class="product-item">
                                         <img class="product-single-image"
-                                            src="<?=$base_url?>upload/demoes/demo23/products/<?=$product_detail['AnhSP']?>"
-                                            data-zoom-image="<?=$base_url?>upload/products/<?=$product_detail['AnhSP']?>"
+                                            src="<?=$base_url?>upload/products/zoom/product-1-big.jpg"
+                                            data-zoom-image="<?=$base_url?>upload/products/zoom/product-1-big.jpg"
                                             width="468" height="468" alt="product" />
                                     </div>
                                     <div class="product-item">
@@ -88,23 +86,22 @@
                         <!-- End .product-single-gallery -->
 
                         <div class="col-lg-7 col-md-6 product-single-details">
-                            <h1 class="product-title"><?=$product_detail['TenSP']?></h1>
+                            <h1 class="product-title"><?=$product_detail['detail']['TenSP']?></h1>
 
                             <div class="product-nav">
-                                <style>
-                                .box_icon {
-                                    border: 1px solid grey;
-                                    border-radius: 50px;
-                                    padding: 2px;
-                                    margin: 1px;
-                                }
-
-                                i {
-                                    text-align: center;
-                                    width: 20px;
-
-                                }
-                                </style>
+                                    <style>
+                                        .box_icon{
+                                                border: 1px solid grey;
+                                                border-radius: 50px;
+                                                padding: 2px;
+                                                margin: 1px;
+                                        }
+                                            i {
+                                                text-align: center;
+                                                width: 20px;
+                                               
+                                            }
+                                    </style>
                                 <div class="product-prev">
                                     <a href="#">
                                         <div class="box_icon"><i class="fa-solid fa-angle-left"></i></div>
@@ -122,7 +119,7 @@
 
                                 <div class="product-next">
                                     <a href="#">
-                                        <div class="box_icon"><i class="fa-solid fa-angle-right"></i></div>
+                                        <div class="box_icon"><i class="fa-solid fa-angle-right"></i></div >
 
                                         <span class="product-popup">
                                             <span class="box-content">
@@ -152,14 +149,14 @@
                             <hr class="short-divider">
 
                             <div class="price-box">
-                                <span class="old-price"><?=$product_detail['Gia']?>đ</span>
-                                <span class="new-price"><?=$product_detail['GiaGiam']?>đ</span>
+                                <span class="old-price"><?=$product_detail['detail']['Gia']?>đ</span>
+                                <span class="new-price"><?=$product_detail['detail']['GiaGiam']?>đ</span>
                             </div>
                             <!-- End .price-box -->
 
                             <div class="product-desc">
                                 <p>
-                                    Số lượng: <?=$product_detail['SoLuong']?>
+                                    Số lượng: <?=$product_detail['detail']['SoLuong']?>
                                 </p>
                             </div>
                             <!-- End .product-desc -->
@@ -168,7 +165,7 @@
                                 <!---->
                                 <li>
                                     Mã hàng:
-                                    <strong><?=$product_detail['MaSP']?></strong>
+                                    <strong><?=$product_detail['detail']['MaSP']?></strong>
                                 </li>
 
                                 <li>
@@ -291,12 +288,17 @@
                         <div class="tab-pane fade show active" id="product-desc-content" role="tabpanel"
                             aria-labelledby="product-tab-desc">
                             <div class="product-desc-content">
-                                <p><?=$product['detail']['MoTa']?></p>
+                                <p><?=$product['']?></p>
                                 <ul>
                                     <li>Bất kỳ loại sản phẩm nào bạn muốn - Đơn giản, có thể cấu hình
                                     </li>
+                                    <li>Sản phẩm kỹ thuật số/có thể tải xuống, sản phẩm ảo
+                                    </li>
+                                    <li>
+                                        Quản lý hàng tồn kho với các mặt hàng được đặt hàng trước
+                                    </li>
                                 </ul>
-                                <p></p>
+                                <p>này chắc cũng đánh giá lun</p>
                             </div>
                             <!-- End .product-desc-content -->
                         </div>

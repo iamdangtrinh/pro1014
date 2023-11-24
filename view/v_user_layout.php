@@ -167,28 +167,26 @@
                                     <a href="<?= $base_url ?>page/home">Trang chủ</a>
                                 </li>
                                 <li>
-                                    <a>Danh mục <i
-                                            class="fa-solid fa-caret-down"></i></a>
+                                    <a>Danh mục <i class="fa-solid fa-caret-down"></i></a>
                                     <div class="megamenu megamenu-fixed-width megamenu-3cols">
-                                    
-                                    <div class="row">
-                                        <?php 
-                                            $kiemtra_dm = null;
-                                            foreach ($danhmuc as $item_dm): 
-                                                if ($item_dm['TenDM'] != $kiemtra_dm) {
-                                                    if ($kiemtra_dm != null) {
-                                                        echo '</ul></div>';
-                                                    }
-                                                    echo '<div class="col-lg-4">';
-                                                    echo '<a href="'.$base_url.'category/detail/'.$item_dm['MaDM'].'" class="nolink">'.$item_dm['TenDM'].'</a>';
-                                                    echo '<ul class="submenu">';
-                                                    $kiemtra_dm = $item_dm['TenDM'];
-                                                }
-                                        ?>
-                                            <li><a href="<?=$base_url?>category/detail/<?=$item_dm['MaDM']?>/<?=$item_dm['MaDMC']?>"><?=$item_dm['TenDMC']?></a></li>
-                                        <?php endforeach; if ($kiemtra_dm != null) { echo '</ul></div>'; }?>
-                                    </div>
-
+                                        <div class="row">
+                                            <?php foreach ($danhmuc as $item_dm): ?>
+                                                <?php if ($item_dm['Parent_id'] == 0): ?>
+                                                    <div class="col-lg-4">
+                                                        <a href="<?=$base_url?>category/detail/<?=$item_dm['MaDM']?>" class="nolink"><?=$item_dm['TenDM']?></a>
+                                                        <ul class="submenu">
+                                                <?php endif; ?>
+                                                <?php foreach ($danhmuc as $value):?>
+                                                    <?php if($value['Parent_id']!=0 && $value['Parent_id']==$item_dm['Parent_id']):?>
+                                                        <li>
+                                                            <a href="<?=$base_url?>category/detail/<?=$value['MaDM']?>"><?=$value['TenDM']?></a>
+                                                        </li>
+                                                    <?php endif; ?>
+                                                <?php endforeach; ?>
+                                                        </ul>
+                                                    </div>
+                                            <?php endforeach;?>
+                                        </div>
                                     </div>
                                 </li>
                                 <li class="<?=(strpos($view_name,'shop'))?'active':''?>">
@@ -197,7 +195,9 @@
                                 <li  class="<?=(strpos($view_name,'contact'))?'active':''?>">
                                     <a href="<?= $base_url ?>page/contact">Liên hệ</a>
                                 </li>
-                                <li class="<?=(strpos($view_name,'aboutUs'))?'active':''?>"><a href="<?= $base_url ?>page/aboutUs">Về chúng tôi</a></li>
+                                <li class="<?=(strpos($view_name,'aboutUs'))?'active':''?>">
+                                    <a href="<?= $base_url ?>page/aboutUs">Về chúng tôi</a>
+                                </li>
                             </ul>
                         </nav>
                     </div>
