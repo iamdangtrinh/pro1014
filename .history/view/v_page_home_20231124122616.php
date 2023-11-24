@@ -177,7 +177,7 @@
             <div class="col-6 col-md-4 col-xl-3">
                 <div class="product-default inner-quickview inner-icon">
                     <figure>
-                        <a href="<?= $base_url ?>product/detail/<?=$product['MaSP']?>" title="Chi tiết sản phẩm">
+                        <a href="<?= $base_url ?>product/detail/<?=$product['']?>" title="Chi tiết sản phẩm">
                             <img src="<?= $base_url ?>upload/demoes/demo23/products/<?=$product['AnhSP']?>" style="width: 100%; height: 270px;" alt="product">
                         </a>
                         <div class="label-group">

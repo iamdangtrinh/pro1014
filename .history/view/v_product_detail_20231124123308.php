@@ -27,8 +27,8 @@
                                 <div class="product-single-carousel owl-carousel owl-theme show-nav-hover">
                                     <div class="product-item">
                                         <img class="product-single-image"
-                                            src="<?=$base_url?>upload/demoes/demo23/products/<?=$product_detail['AnhSP']?>"
-                                            data-zoom-image="<?=$base_url?>upload/products/<?=$product_detail['AnhSP']?>"
+                                            src="<?=$base_url?>upload/products/zoom/product-1-big.jpg"
+                                            data-zoom-image="<?=$base_url?>upload/products/zoom/product-1-big.jpg"
                                             width="468" height="468" alt="product" />
                                     </div>
                                     <div class="product-item">
@@ -64,7 +64,7 @@
 
                             <div class="prod-thumbnail owl-dots">
                                 <div class="owl-dot">
-                                    <img src="<?=$base_url?>upload/products/zoom/product-1.jpg" width="110" height="110"
+                                    <img src="<?=$base_url?>upload/products/zoom/<?=$product_detail['  ']?>" width="110" height="110"
                                         alt="product-thumbnail" />
                                 </div>
                                 <div class="owl-dot">
