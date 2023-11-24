@@ -195,7 +195,7 @@
             }
             // tổng giỏ hàng
             document.querySelector('.total_cart').innerText = total_cart.toLocaleString('vi-VN')+ ' VND';
-            console.log(parseInt(total_cart) - 50000);
+            // console.log(parseInt(total_cart) - 50000);
         }
         updateTotal()
       
@@ -225,14 +225,16 @@
             var newQuantity = $(this).val(); // Get the new quantity value
 
             newQuantity = newQuantity.replace(/[^0-9]/g, "");
-            if (newQuantity == null) {
+            if (newQuantity == null && newQuantity == isNaN && newQuantity == undefined) {
                 newQuantity = "1";
             } else {
+                if(newQuantity < 1) {
+                    newQuantity = "1";
+                }
                 $(this).val(newQuantity);
             }
 
             updateTotal()
-
 
             var closestProductRow = this.closest('.product-row');
             var MaSP = closestProductRow.querySelector('[data-quantity]').dataset.quantity;
