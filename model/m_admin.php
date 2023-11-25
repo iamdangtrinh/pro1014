@@ -20,6 +20,9 @@
     function updatekm($tenKhuyenMai, $giaKhuyenMai, $maKhuyenMai){
         return pdo_execute("UPDATE khuyenmai SET TenKM = '$tenKhuyenMai', GiaKM = '$giaKhuyenMai' WHERE MaKM = '$maKhuyenMai'");
     }
+    function xoakm($MaKM){
+        return pdo_query_one("DELETE FROM khuyenmai WHERE MaKM = $MaKM");
+    }
    
     // function history_getDM($MaDM) {
     //   return pdo_query("SELECT * FROM danhmuc dm INNER JOIN danhmuccon dmc ON dm.MaDM = dmc.MaDM INNER JOIN da s ON ct.MaSach = s.MaSach WHERE ls.MaTK=? AND ls.TrangThai=?",$MaTK, 'gio-sach');

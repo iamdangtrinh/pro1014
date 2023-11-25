@@ -78,8 +78,7 @@
                         $maKhuyenMai = $_POST['MaKM'];
                         $tenKhuyenMai = $_POST['TenKM'];
                         $giaKhuyenMai = $_POST['GiaKM'];
-                        // Các trường khác
-                        // Thực hiện câu lệnh UPDATE
+
                         $updateQuery = updatekm($tenKhuyenMai, $giaKhuyenMai, $maKhuyenMai);
                         
                         if ($updateQuery) {
@@ -89,7 +88,14 @@
                         }
                     }                
                     // hien thi du lieu
+                    $show_KM = getallkm();
                     $view_name='admin_suakhuyenmai';
+                    break;
+                case 'xoakhuyenmai':
+                    include_once 'model/m_pdo.php';
+                    include_once 'model/m_admin.php';
+                     xoakm($_GET['MaKM']);
+                    $view_name='admin_khuyenmai';
                     break;
             case 'history':
                 //lay du lieu

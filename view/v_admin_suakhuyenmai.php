@@ -143,10 +143,10 @@ td {
 <!-- Recent Orders Table -->
 <h2>Sửa khuyến mãi</h2>
 <form class="form" action="<?=$base_url?>admin/suakhuyenmai" method="post">
-    <input type="hidden" name="MaKM" value="<?php echo $maKhuyenMai; ?>">
+    <input type="hidden" name="MaKM" value="<?= $show['MaKM'];?>">
     <!-- Các trường chỉnh sửa, ví dụ: -->
-    <input type="text" name="TenKM" value="<?php echo $tenKhuyenMai; ?>">
-    <input type="text" name="GiaKM" value="<?php echo $giaKhuyenMai; ?>">
+    <input type="text" name="TenKM" value="<?= $show['TenKM'];?>">
+    <input type="text" name="GiaKM" value="<?= $show['GiaKM'];?>">
     <!-- Các trường khác -->
     <button type="submit" name="btn_sua" class="them">Lưu chỉnh sửa</button>
 </form>
