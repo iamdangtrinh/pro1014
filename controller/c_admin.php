@@ -23,7 +23,8 @@
                 if(isset($_POST['submit'])){
                     $MaDM=$_POST['MaDM'];
                     $TenDM=$_POST['TenDM'];
-                    danhmuc_add( $MaDM,$TenDM);
+                    $MaDMC=$_POST['MaDMC'];
+                    danhmuc_add( $MaDM,$TenDM,$MaDMC);
                     }
                 
                 $view_name='admin_them_danhmuc';

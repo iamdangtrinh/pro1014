@@ -6,8 +6,8 @@
     function admin_getALLDM(){
         return pdo_query("SELECT *FROM danhmuc ");
     }     
-    function danhmuc_add($MaDM,$TenDM){
-      pdo_execute("INSERT INTO danhmuc(`MaDM`,`TenDM`) VALUES(?,?)", $MaDM,$TenDM);
+    function danhmuc_add($MaDM,$TenDM,$MaDMC){
+      pdo_execute("INSERT INTO danhmuc(`MaDM`,`TenDM`,`MaDMC`) VALUES(?,?,?)", $MaDM,$TenDM,$MaDMC);
   }
   function admin_addkhuyenmai($maKhuyenMai, $TenKM, $codeKhuyenMai, $soTienGiam, $ngayBatDau, $ngayKetThuc, $SoLuong) {
     return pdo_execute("INSERT INTO khuyenmai (MaKM, TenKM, CodeKM, GiaKM, NgayBatDau, NgayKetThuc, SoLuong) 

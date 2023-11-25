@@ -60,7 +60,7 @@ td{
         border-radius: 5px;
     }
     .sua a:hover{
-        background: blue;
+        background: #6c9bcf;
         color: #fff;
         border-radius: 5px;
         border: 1px solid #ffff;
@@ -73,7 +73,7 @@ td{
         border-radius: 5px;
      }
     .xoa a:hover{
-        background: firebrick;
+        background: #ba5a87;
         border-radius: 5px;
         border: 1px solid #ffff;
         color: #ffff;
@@ -124,6 +124,7 @@ td{
                             <!-- <th class="chon">Chọn</th> -->
                             <th>Mã danh mục</th>
                             <th>Tên danh mục</th>
+                            <th>Mã danh mục con</th>
                             <th style="text-align: center;">Lệnh</th>
                         </tr>
                     </thead>
@@ -137,6 +138,7 @@ td{
                             </td> -->
                             <td><?=$itemDM['MaDM']?></td>
                             <td ><?=$itemDM['TenDM']?></td>
+                            <td ><?=$itemDM['MaDMC']?></td>
                             <td >
                                 <div class="lenh">
                                     <div class="sua" ><a href="<?=$base_url?>admin/sua" style="font-weight: 600; ">Sửa</a></div>

@@ -66,34 +66,31 @@ td {
     font-size: 16px;
 }
 
-.sua a {
-    border: 1px solid #ffff;
-    background-color: #ffc0cba8;
-    border-radius: 5px;
-}
+.sua a{
+        border: 1px solid #ffff;
+        background-color: #ffc0cba8;
+        border-radius: 5px;
+    }
+    .sua a:hover{
+        background: #6c9bcf;
+        color: #fff;
+        border-radius: 5px;
+        border: 1px solid #ffff;
+        color: #ffff;
 
-.sua a:hover {
-    background: blue;
-    color: #fff;
-    border-radius: 5px;
-    border: 1px solid #ffff;
-    color: #ffff;
+    }
+     .xoa a{
+        border: 1px solid #ffff;
+        background-color: #ffc0cba8;
+        border-radius: 5px;
+     }
+    .xoa a:hover{
+        background: #ba5a87;
+        border-radius: 5px;
+        border: 1px solid #ffff;
+        color: #ffff;
 
-}
-
-.xoa a {
-    border: 1px solid #ffff;
-    background-color: #ffc0cba8;
-    border-radius: 5px;
-}
-
-.xoa a:hover {
-    background: firebrick;
-    border-radius: 5px;
-    border: 1px solid #ffff;
-    color: #ffff;
-
-}
+    }
 
 .box_button {
     display: flex;
