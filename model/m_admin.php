@@ -12,6 +12,9 @@
     function danhmuc_add($MaDM,$TenDM,$MaDMC){
       pdo_execute("INSERT INTO danhmuc(`MaDM`,`TenDM`,`MaDMC`) VALUES(?,?,?)", $MaDM,$TenDM,$MaDMC);
   }
+  function update_DM($MaDM,$TenDM,$MaDMC){
+    return pdo_execute("UPDATE danhmuc SET MaDM = '$MaDM', TenDM = '$TenDM', MaDMC = '$MaDMC' WHERE MaDM = '$MaDM'");
+}
   function admin_addkhuyenmai($maKhuyenMai, $TenKM, $codeKhuyenMai, $soTienGiam, $ngayBatDau, $ngayKetThuc, $SoLuong) {
     return pdo_execute("INSERT INTO khuyenmai (MaKM, TenKM, CodeKM, GiaKM, NgayBatDau, NgayKetThuc, SoLuong) 
                         VALUES (?, ?, ?, ?, ?, ?, ?)", 

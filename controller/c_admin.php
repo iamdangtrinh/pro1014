@@ -26,11 +26,16 @@
                     $MaDMC=$_POST['MaDMC'];
                     danhmuc_add( $MaDM,$TenDM,$MaDMC);
                     }
-                
                 $view_name='admin_them_danhmuc';
                 break;
             case 'sua':
-                
+                include_once 'model/m_admin.php';
+                if(isset($_POST['submit'])){
+                    $MaDM=$_POST['MaDM'];
+                    $TenDM=$_POST['TenDM'];
+                    $MaDMC=$_POST['MaDMC'];
+                    update_DM($MaDM,$TenDM,$MaDMC);
+                }
                 $view_name='admin_sua_danhmuc';
                 break;
             case 'user':
@@ -162,7 +167,7 @@
                 $view_name='admin_dashboard';
                 break;
         }
-        
+
         include_once 'view/v_admin_layout.php';
     }else{
         header('location: '.$base_url.'page/home');
