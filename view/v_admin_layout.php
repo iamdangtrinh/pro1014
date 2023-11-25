@@ -60,11 +60,17 @@
                 </a>
                 <a href="#">
                     <span class="material-icons-sharp">
+                        inventory
+                    </span>
+                    <h3>Bình luận</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">
                         receipt_long
                     </span>
                     <h3>Đơn hàng</h3>
                 </a>
-                <a href="#">
+                <a href="<?=$base_url?>admin/khuyenmai">
                     <span class="material-icons-sharp">
                         mail_outline
                     </span>

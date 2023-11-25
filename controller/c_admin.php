@@ -51,6 +51,12 @@
                 // hien thi du lieu
                 $view_name='admin_book';
                 break;
+            case 'khuyenmai':
+                //lay du lieu
+                include_once 'model/m_admin.php';
+                // hien thi du lieu
+                $view_name='admin_khuyenmai';
+                break;
             case 'history':
                 //lay du lieu
                 include_once 'model/m_history.php';
