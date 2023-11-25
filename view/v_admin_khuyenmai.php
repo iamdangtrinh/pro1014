@@ -97,6 +97,7 @@ td {
 
 .box_button {
     display: flex;
+    justify-content: flex-end;
 }
 
 .them {
@@ -142,12 +143,15 @@ td {
 <h1>Quản lí Khuyến mãi</h1><br>
 <!-- Recent Orders Table -->
 <h2>Thêm mã khuyến mãi</h2>
-<form class="form">
-    <input type="text" name="khuyenMai" placeholder="Mã khuyến mãi">
+<form class="form" action="<?=$base_url?>admin/khuyenmai" method="post">
+    <input type="text" name="MaKM" placeholder="Mã khuyến mãi">
+    <input type="text" name="TenKM" placeholder="Tên khuyến mãi">
+    <input type="text" name="khuyenMai" placeholder="CodeKM">
     <input type="text" name="soTienGiam" placeholder="Số tiền giảm">
+    <input type="text" name="SoLuong" placeholder="Số lượng">
     <input type="date" name="ngayBatDau" placeholder="Ngày bắt đầu">
     <input type="date" name="ngayKetThuc" placeholder="Ngày kết thúc">
-    <button type="submit" class="them">Thêm</button>
+    <button type="submit" name="btn_km" class="them">Thêm</button>
 </form>
 <div class="box">
     <table>
@@ -160,23 +164,26 @@ td {
                 <th>Số tiền giảm </th>
                 <th>Ngày bắt đầu</th>
                 <th>Ngày kết thúc</th>
+                <th>Số Lượng</th>
                 <th style="text-align: center;">Lệnh</th>
             </tr>
         </thead>
         <tbody>
-
+        <?php foreach($show_KM as $show):?>
             <tr>
-                <td>aaaa</td>
-                <td>aaaa</td>
-                <td>aaaa</td>
-                <td>aaaa</td>
+                <td><?= $show['MaKM'];?></td>
+                <td><?= $show['GiaKM'];?></td>
+                <td><?= $show['NgayBatDau'];?></td>
+                <td><?= $show['NgayKetThuc'];?></td>
+                <td><?= $show['SoLuong'];?></td>
                 <td>
                     <div class="lenh">
-                        <div class="sua"><a href="<?=$base_url?>admin/sua" style="font-weight: 600; ">Sửa</a></div>
-                        <div class="xoa"><a href="" style="font-weight: 600; ">Xóa</a></div>
+                        <div class="sua"><a href="<?=$base_url?>admin/suakhuyenmai" style="font-weight: 600; ">Sửa</a></div>
+                        <div class="xoa"><a href="<?=$base_url?>admin/xoakhuyenmai" style="font-weight: 600; ">Xóa</a></div>
                     </div>
                 </td>
             </tr>
+            <?php endforeach;?>
 
         </tbody>
         </tbody>
@@ -185,7 +192,6 @@ td {
 </div>
 <br>
 <div class="box_button">
-    <div><a href="<?=$base_url?>admin/them" class="them" style="font-weight: 600;">Thêm mới</a></div>
     <div><a href="<?=$base_url?>admin/" class="remove" style="font-weight: 600;">Xóa hết</a></div>
 </div>
 <!-- End of Recent Orders -->

@@ -52,11 +52,45 @@
                 $view_name='admin_book';
                 break;
             case 'khuyenmai':
-                //lay du lieu
+                include_once 'model/m_pdo.php';
                 include_once 'model/m_admin.php';
+                //lay du lieu
+                if (isset($_POST['btn_km'])) {
+                    $maKhuyenMai = $_POST['MaKM'];
+                    $TenKM = $_POST['TenKM'];
+                    $SoLuong = $_POST['SoLuong'];
+                    $codeKhuyenMai = $_POST['khuyenMai'];
+                    $soTienGiam = $_POST['soTienGiam'];
+                    $ngayBatDau = $_POST['ngayBatDau'];
+                    $ngayKetThuc = $_POST['ngayKetThuc'];
+                    $add_khuyenmai = admin_addkhuyenmai($maKhuyenMai, $TenKM, $codeKhuyenMai, $soTienGiam,
+                     $ngayBatDau, $ngayKetThuc, $SoLuong);
+                }                      
                 // hien thi du lieu
+                $show_KM = getallkm();
                 $view_name='admin_khuyenmai';
                 break;
+                case 'suakhuyenmai':
+                    include_once 'model/m_pdo.php';
+                    include_once 'model/m_admin.php';
+                    //lay du lieu
+                    if (isset($_POST['btn_sua'])) {
+                        $maKhuyenMai = $_POST['MaKM'];
+                        $tenKhuyenMai = $_POST['TenKM'];
+                        $giaKhuyenMai = $_POST['GiaKM'];
+                        // Các trường khác
+                        // Thực hiện câu lệnh UPDATE
+                        $updateQuery = updatekm($tenKhuyenMai, $giaKhuyenMai, $maKhuyenMai);
+                        
+                        if ($updateQuery) {
+                            echo "Dữ liệu đã được cập nhật thành công!";
+                        } else {
+                            echo "Lỗi khi cập nhật dữ liệu!";
+                        }
+                    }                
+                    // hien thi du lieu
+                    $view_name='admin_suakhuyenmai';
+                    break;
             case 'history':
                 //lay du lieu
                 include_once 'model/m_history.php';
