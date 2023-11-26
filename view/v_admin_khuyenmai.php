@@ -65,31 +65,35 @@ td {
     padding: 5px;
     font-size: 16px;
 }
-.sua a{
-        border: 1px solid #ffff;
-        background-color: #ffc0cba8;
-        border-radius: 5px;
-    }
-    .sua a:hover{
-        background: #6c9bcf;
-        color: #fff;
-        border-radius: 5px;
-        border: 1px solid #ffff;
-        color: #ffff;
 
-    }
-     .xoa a{
-        border: 1px solid #ffff;
-        background-color: #ffc0cba8;
-        border-radius: 5px;
-     }
-    .xoa a:hover{
-        background: #ba5a87;
-        border-radius: 5px;
-        border: 1px solid #ffff;
-        color: #ffff;
+.sua a {
+    border: 1px solid #ffff;
+    background-color: #ffc0cba8;
+    border-radius: 5px;
+}
 
-    }
+.sua a:hover {
+    background: #6c9bcf;
+    color: #fff;
+    border-radius: 5px;
+    border: 1px solid #ffff;
+    color: #ffff;
+
+}
+
+.xoa a {
+    border: 1px solid #ffff;
+    background-color: #ffc0cba8;
+    border-radius: 5px;
+}
+
+.xoa a:hover {
+    background: #ba5a87;
+    border-radius: 5px;
+    border: 1px solid #ffff;
+    color: #ffff;
+
+}
 
 .box_button {
     display: flex;
@@ -149,6 +153,13 @@ td {
     <input type="date" name="ngayKetThuc" placeholder="Ngày kết thúc">
     <button type="submit" name="btn_km" class="them">Thêm</button>
 </form>
+
+<h2><?php if (isset($loi)) {
+    echo$loi;
+} unset($loi);?></h2>
+<h2><?php if (isset($thongbao)) {
+    echo$thongbao;
+}unset($thongbao);?></h2>
 <div class="box">
     <table>
         <thead>
@@ -165,7 +176,7 @@ td {
             </tr>
         </thead>
         <tbody>
-        <?php foreach($show_KM as $show):?>
+            <?php foreach($show_KM as $show):?>
             <tr>
                 <td><?= $show['MaKM'];?></td>
                 <td><?= $show['GiaKM'];?></td>
@@ -174,8 +185,10 @@ td {
                 <td><?= $show['SoLuong'];?></td>
                 <td>
                     <div class="lenh">
-                        <div class="sua"><a href="<?=$base_url?>admin/suakhuyenmai" style="font-weight: 600; ">Sửa</a></div>
-                        <div class="xoa"><a href="<?=$base_url?>admin/xoakhuyenmai" style="font-weight: 600; ">Xóa</a></div>
+                        <div class="sua"><a href="<?=$base_url?>admin/edit/khuyenmai/<?= $show['MaKM'];?>" style="font-weight: 600; ">Sửa</a>
+                        </div>
+                        <div class="xoa"><a href="<?=$base_url?>admin/delete/khuyenmai" style="font-weight: 600; ">Xóa</a>
+                        </div>
                     </div>
                 </td>
             </tr>

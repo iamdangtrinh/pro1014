@@ -51,10 +51,6 @@ form {
         
         <form action="" method="POST">
             <div class="mb-3">
-                <label for="MaDM" class="form-label">Mã danh mục</label>
-                <input  type="text" class="form-control" id="MaDM" name="MaDM" value="<?= $itemDM['MaDM']?>">
-            </div>
-            <div class="mb-3">
                 <label for="TenDM" class="form-label">Tên danh mục</label>
                 <input  type="text" class="form-control" id="TenDM" name="TenDM" value="<?= $itemDM['TenDM']?>">  
             </div>

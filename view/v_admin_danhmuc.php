@@ -142,7 +142,7 @@ td{
                             <td >
                                 <div class="lenh">
                                     <div class="sua" ><a href="<?=$base_url?>admin/category/edit/<?=$itemDM['MaDM']?>" style="font-weight: 600; ">Sửa</a></div>
-                                    <div class="xoa"><a href=""  style="font-weight: 600; ">Xóa</a></div>
+                                    <div class="xoa"><a href="<?=$base_url?>admin/category/delete/<?=$itemDM['MaDM']?>"  style="font-weight: 600; ">Xóa</a></div>
                                 </div>
                             </td>
                         </tr>

@@ -139,12 +139,20 @@ td {
 <h1>Quản lí Khuyến mãi</h1><br>
 <!-- Recent Orders Table -->
 <h2>Sửa khuyến mãi</h2>
-<form class="form" action="<?=$base_url?>admin/suakhuyenmai" method="post">
-    <input type="hidden" name="MaKM" value="<?= $show['MaKM'];?>">
+<form class="form" action="" method="POST">
+    <input type="hidden" name="MaKM" value="<?= $show_KM['MaKM'];?>">
     <!-- Các trường chỉnh sửa, ví dụ: -->
-    <input type="text" name="TenKM" value="<?= $show['TenKM'];?>">
-    <input type="text" name="GiaKM" value="<?= $show['GiaKM'];?>">
+    <label for="TenKM">Code khuyến mãi: </label><input type="text" name="TenKM" value="<?= $show_KM['TenKM'];?>"><br>
+    <label for="TenKM">Giá được giảm:<input type="text" name="GiaKM" value="<?= $show_KM['GiaKM'];?>"><br>
+    <label for="TenKM">Ngày bắt đầu:<input type="date" name="NgayBatDau" value="<?= $show_KM['NgayBatDau'];?>"><br>
+    <label for="TenKM">Ngày kết thúc:<input type="date" name="NgayKetThuc" value="<?= $show_KM['NgayKetThuc'];?>"><br>
+    <label for="TenKM">Số Lượng:<input type="text" name="SoLuong" value="<?= $show_KM['SoLuong'];?>"><br>
     <!-- Các trường khác -->
     <button type="submit" name="btn_sua" class="them">Lưu chỉnh sửa</button>
 </form>
+<h4><?php 
+if (isset($loi)) {
+    echo $loi;
+}
+?></h4>
 <!-- End of Recent Orders -->

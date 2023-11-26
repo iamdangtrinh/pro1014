@@ -14,23 +14,32 @@
     }     
     function danhmuc_add($MaDM,$TenDM,$MaDMC){
       pdo_execute("INSERT INTO danhmuc(`MaDM`,`TenDM`,`MaDMC`) VALUES(?,?,?)", $MaDM,$TenDM,$MaDMC);
-  }
-  function update_DM($MaDM,$TenDM,$MaDMC){
-    return pdo_execute("UPDATE danhmuc SET MaDM = '$MaDM', TenDM = '$TenDM', MaDMC = '$MaDMC' WHERE MaDM = '$MaDM'");
-}
-  function admin_addkhuyenmai($maKhuyenMai, $TenKM, $codeKhuyenMai, $soTienGiam, $ngayBatDau, $ngayKetThuc, $SoLuong) {
+    }
+    function admin_update_DM($MaDM,$TenDM,$MaDMC){
+        return pdo_execute("UPDATE danhmuc SET TenDM=?, MaDMC=? WHERE MaDM=?",$TenDM,$MaDMC,$MaDM);
+    }
+    function admin_delete($MaDM){
+        pdo_execute("DELETE FROM danhmuc WHERE MaDM=?", $MaDM);
+    }
+    function admin_addkhuyenmai($maKhuyenMai, $TenKM, $codeKhuyenMai, $soTienGiam, $ngayBatDau, $ngayKetThuc, $SoLuong) {
     return pdo_execute("INSERT INTO khuyenmai (MaKM, TenKM, CodeKM, GiaKM, NgayBatDau, NgayKetThuc, SoLuong) 
                         VALUES (?, ?, ?, ?, ?, ?, ?)", 
                         $maKhuyenMai, $TenKM, $codeKhuyenMai, $soTienGiam, $ngayBatDau, $ngayKetThuc, $SoLuong);
-}
+    }
     function getallkm(){
         return pdo_query("SELECT * FROM khuyenmai");
     }
-    function updatekm($tenKhuyenMai, $giaKhuyenMai, $maKhuyenMai){
-        return pdo_execute("UPDATE khuyenmai SET TenKM = '$tenKhuyenMai', GiaKM = '$giaKhuyenMai' WHERE MaKM = '$maKhuyenMai'");
+    function admin_getKMById($MaKM){
+        return pdo_query_one("SELECT * FROM  khuyenmai WHERE MaKM=$MaKM");
+    }
+    function updatekm($tenKhuyenMai, $giaKhuyenMai, $maKhuyenMai, $ngayBatDau, $ngayKetThuc, $SoLuong){
+        return pdo_execute("UPDATE khuyenmai SET TenKM = '$tenKhuyenMai', GiaKM = '$giaKhuyenMai', NgayBatDau = '$ngayBatDau', NgayKetThuc = '$ngayKetThuc', SoLuong = '$SoLuong' WHERE MaKM = '$maKhuyenMai' ");
+    }
+    function is_codeKM($codeKhuyenMai){
+        return pdo_query_value("SELECT COUNT(*) FROM khuyenmai WHERE CodeKM = '$codeKhuyenMai'");
     }
     function xoakm($MaKM){
-        return pdo_query_one("DELETE FROM khuyenmai WHERE MaKM = $MaKM");
+         pdo_execute("DELETE FROM khuyenmai WHERE MaKM = $MaKM");
     }
    
     // function history_getDM($MaDM) {
