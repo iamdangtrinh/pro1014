@@ -30,16 +30,23 @@
                 break;
             case 'category-edit':
                 include_once 'model/m_admin.php';
-                $itemDM = admin_getById($_GET['id']);
+                $MaDM=$_GET['id'];
                 if(isset($_POST['submit'])){
-                    $MaDM=$_POST['MaDM'];
                     $TenDM=$_POST['TenDM'];
                     $MaDMC=$_POST['MaDMC'];
-                    update_DM($MaDM,$TenDM,$MaDMC);
+                    admin_update_DM($MaDM,$TenDM,$MaDMC);
                 }
+                $itemDM = admin_getById($_GET['id']);
                 $view_name='admin_category_edit';
                 break;
-            case 'user':
+            case 'category-delete':
+                //lay du lieu
+                include_once 'model/m_admin.php';
+                admin_delete($_GET['id']);
+                $itemDM = admin_getById($_GET['id']);
+                header('location: '.$base_url.'admin/danhmuc');
+                break;
+            case 'user': 
                 //lay du lieu
                 include_once 'model/m_user.php';
                 $dsTK=user_getAll();
