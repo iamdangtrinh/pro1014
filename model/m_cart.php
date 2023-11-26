@@ -49,10 +49,15 @@ function show_cart_for_user($MaTK)
     ", $MaTK, 'gio-hang');
 }
 
-
+// tìm mã giảm giá
 function has_coupon_code($coupon_code) {
     return pdo_query_one("SELECT * FROM khuyenmai WHERE CodeKM = ?", $coupon_code);
 }
+
+function count_cart($MaHD) {
+    return pdo_query_value("SELECT COUNT(*) FROM hoadon hd LEFT JOIN chitiethoadon cthd ON hd.MaHD= cthd.MaHD WHERE MaTK = ?", $MaHD);
+}
+
 
 
 ?>

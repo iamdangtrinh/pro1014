@@ -62,8 +62,8 @@
                     </div>
 
                     <div class="header-right">
-                        <?php if (isset($_SESSION['user'])): ?>
-                            <a href="<?= $base_url?>user/dashboard" class="header-icon d-lg-block d-none">
+                        <?php if(isset($_SESSION['user'])): ?>
+                            <a href="<?= $base_url ?>user/dashboard" class="header-icon d-lg-block d-none">
                                 <div class="header-user">
                                     <img src="<?= $base_url ?>upload/avatar/<?= $_SESSION['user']['HinhAnh'] ?>"
                                         alt="Avatar">
@@ -91,7 +91,17 @@
                             <a href="#" title="Cart" class="dropdown-toggle cart-toggle" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-display="static">
                                 <i class="minicart-icon"></i>
-                                <span class="cart-count badge-circle">3</span>
+                                <span class="cart-count badge-circle">
+                                    <?php
+
+                                    if(isset($_SESSION['user'])) {
+                                        echo $count_cart;
+                                    } else {
+                                        echo "0";
+                                    }
+
+                                    ?>
+                                </span>
                             </a>
 
                             <div class="cart-overlay"></div>
@@ -99,7 +109,7 @@
                             <div class="dropdown-menu mobile-cart">
                                 <a href="#" title="Close (Esc)" class="btn-close">×</a>
 
-                                <div class="dropdownmenu-wrapper custom-scrollbar">
+                                    <div class="dropdownmenu-wrapper custom-scrollbar">
                                     <div class="dropdown-cart-header">Giỏ hàng</div>
 
                                     <div class="dropdown-cart-products">
@@ -126,23 +136,27 @@
                                         </div>
                                     </div>
 
-                                    <div class="dropdown-cart-total">
+                                    <!-- <div class="dropdown-cart-total">
                                         <span>TỔNG PHỤ:</span>
 
                                         <span class="cart-total-price float-right">Giá tiền</span>
-                                    </div>
+                                    </div> -->
 
                                     <div class="dropdown-cart-action">
-                                        <a href="<?=$base_url?>gio-hang/cart_order" class="btn btn-gray btn-block view-cart">Xem giỏ hàng</a>
-                                        <a href="<?=$base_url?>page/checkout" class="btn btn-dark btn-block">Kiểm tra</a>
+                                        <a href="<?= $base_url ?>gio-hang/cart_order"
+                                            class="btn btn-gray btn-block view-cart">Xem giỏ hàng</a>
+                                        <a href="<?= $base_url ?>page/checkout" class="btn btn-dark btn-block">Kiểm
+                                            tra</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
                         <!-- mobile -->
-                        <div class="header-search header-search-popup header-search-category text-right d-flex d-lg-none">
-                            <a href="#" class="search-toggle" role="button"><i class="icon-magnifier"></i><span>Tìm kiếm</span></a>
+                        <div
+                            class="header-search header-search-popup header-search-category text-right d-flex d-lg-none">
+                            <a href="#" class="search-toggle" role="button"><i class="icon-magnifier"></i><span>Tìm
+                                    kiếm</span></a>
                             <form action="#" method="get">
                                 <div class="header-search-wrapper">
                                     <input type="search" class="form-control" name="" id=""
@@ -163,31 +177,35 @@
                     <div class="header-center">
                         <nav class="main-nav">
                             <ul class="menu">
-                                <li  class="<?=(strpos($view_name,'home'))?'active':''?>">
+                                <li class="<?= (strpos($view_name, 'home')) ? 'active' : '' ?>">
                                     <a href="<?= $base_url ?>page/home">Trang chủ</a>
                                 </li>
-                                <li class="d-none d-xl-block <?=(strpos($view_name,'danhmuc'))?'active':''?>">
-                                    <a href="<?= $base_url?>">Danh mục</a>
+                                <li class="d-none d-xl-block <?= (strpos($view_name, 'danhmuc')) ? 'active' : '' ?>">
+                                    <a href="<?= $base_url ?>">Danh mục</a>
                                     <ul>
                                         <?php
                                         $danhmuc = $danhmucmuc;
-                                        foreach ($danhmucmuc as $item_dmmuc) {
+                                        foreach($danhmucmuc as $item_dmmuc) {
                                             // Điêu kiện để lấy danh mục cha
-                                            if($item_dmmuc['MaDMC'] == 0){
-                                            ?>
-                                                 <li><a href="<?=$base_url?>category/detail/<?=$item_dmmuc['MaDM']?>"><?=$item_dmmuc['TenDM']?></a>
+                                            if($item_dmmuc['MaDMC'] == 0) {
+                                                ?>
+                                                <li><a href="<?= $base_url ?>category/detail/<?= $item_dmmuc['MaDM'] ?>">
+                                                        <?= $item_dmmuc['TenDM'] ?>
+                                                    </a>
                                                     <ul>
-                                                        <?php foreach ($danhmuc as $item_dm) {
-                                                            if($item_dm['MaDMC'] != 0 && $item_dm['MaDMC'] == $item_dmmuc['MaDM']){
-                                                        ?>
-                                                                <li><a href="<?=$base_url?>category/detail/<?=$item_dm['MaDM']?>"><?=$item_dm['TenDM']?></a></li>
-                                                        <?php
+                                                        <?php foreach($danhmuc as $item_dm) {
+                                                            if($item_dm['MaDMC'] != 0 && $item_dm['MaDMC'] == $item_dmmuc['MaDM']) {
+                                                                ?>
+                                                                <li><a href="<?= $base_url ?>category/detail/<?= $item_dm['MaDM'] ?>">
+                                                                        <?= $item_dm['TenDM'] ?>
+                                                                    </a></li>
+                                                                <?php
                                                             }
                                                         }
                                                         ?>
                                                     </ul>
                                                 </li>
-                                            <?php
+                                                <?php
                                             }
                                         }
                                         ?>
@@ -195,13 +213,13 @@
                                     </ul>
 
                                 </li>
-                                <li class="<?=(strpos($view_name,'shop'))?'active':''?>">
-                                    <a href="<?= $base_url?>page/shop">Sản phẩm</a>
+                                <li class="<?= (strpos($view_name, 'shop')) ? 'active' : '' ?>">
+                                    <a href="<?= $base_url ?>page/shop">Sản phẩm</a>
                                 </li>
-                                <li  class="<?=(strpos($view_name,'contact'))?'active':''?>">
+                                <li class="<?= (strpos($view_name, 'contact')) ? 'active' : '' ?>">
                                     <a href="<?= $base_url ?>page/contact">Liên hệ</a>
                                 </li>
-                                <li class="<?=(strpos($view_name,'aboutUs'))?'active':''?>">
+                                <li class="<?= (strpos($view_name, 'aboutUs')) ? 'active' : '' ?>">
                                     <a href="<?= $base_url ?>page/aboutUs">Về chúng tôi</a>
                                 </li>
                             </ul>
@@ -210,11 +228,11 @@
                     <!-- search -->
                     <div class="d-flex pr-0">
                         <div class="header-search-main header-search header-search-category text-right">
-                            <form id="form_search" action="<?= $base_url?>page/search" method="post">
+                            <form id="form_search" action="<?= $base_url ?>page/search" method="post">
 
                                 <div class="input-group input-group-main input-focus">
-                                    <input autocomplete="off" class="form-input" id="search_ajax" type="text" name="search_key"
-                                        placeholder="Nhập sản phẩm cần tìm...">
+                                    <input autocomplete="off" class="form-input" id="search_ajax" type="text"
+                                        name="search_key" placeholder="Nhập sản phẩm cần tìm...">
                                     <div id="search_result" class="row input-search">
                                         <!-- <div class="col-md-4 img-focus">
                                             <img src="<?= $base_url ?>upload/demoes/demo23/products/product-1.jpg"
@@ -222,7 +240,8 @@
                                         </div>
                                         <div class="col-md-8 mt-2 content-focus">Giày đan </div> -->
                                     </div>
-                                    <input type="submit" name="search" value="Tìm ngay" class="btn-primary" style="border-radius: 0 5px 5px 0;">
+                                    <input type="submit" name="search" value="Tìm ngay" class="btn-primary"
+                                        style="border-radius: 0 5px 5px 0;">
 
                                 </div>
                             </form>
@@ -234,7 +253,7 @@
 
         <main class="main">
             <!-- ruot cua WEBSITE -->
-            <?php include_once 'view/v_' . $view_name . '.php'; ?>
+            <?php include_once 'view/v_'.$view_name.'.php'; ?>
         </main>
 
         <footer class="footer">
@@ -378,23 +397,28 @@
                     <li>
                         <a href="">Danh mục</a>
                         <ul>
-                            <?php 
+                            <?php
                             $kiemtra_dm = null; // Biến để theo dõi TenDM hiện tại
-                            foreach ($danhmuc as $item_dm): 
-                                if ($item_dm['TenDM'] != $kiemtra_dm): // Kiểm tra nếu TenDM thay đổi
-                                    if ($kiemtra_dm != null): // Kiểm tra nếu không phải là lần đầu tiên
+                            foreach($danhmuc as $item_dm):
+                                if($item_dm['TenDM'] != $kiemtra_dm): // Kiểm tra nếu TenDM thay đổi
+                                    if($kiemtra_dm != null): // Kiểm tra nếu không phải là lần đầu tiên
                                         echo '</ul></li>'; // Đóng các thẻ ul và li trước đó
                                     endif;
                                     $kiemtra_dm = $item_dm['TenDM']; // Cập nhật TenDM hiện tại
-                            ?>
-                                <li>    
-                                    <a href="<?$base_url?>'category/detail/'<?$item_dm['MaDM']?>" class="nolink"><?=$item_dm['TenDM']?></a>
-                                    <ul>
-                                        <?php endif;?>
-                                                    <li><a href="<?=$base_url?>category/detail/<?=$item_dm['MaDM']?>/<?=$item_dm['MaDMC']?>"><?=$item_dm['TenDMC']?></a></li>
-                                        <?php  endforeach ; ?>
-                                    </ul>
-                                </li>
+                                    ?>
+                                    <li>
+                                        <a href="<? $base_url ?>'category/detail/'<? $item_dm['MaDM'] ?>" class="nolink">
+                                            <?= $item_dm['TenDM'] ?>
+                                        </a>
+                                        <ul>
+                                        <?php endif; ?>
+                                        <li><a
+                                                href="<?= $base_url ?>category/detail/<?= $item_dm['MaDM'] ?>/<?= $item_dm['MaDMC'] ?>">
+                                                <?= $item_dm['TenDMC'] ?>
+                                            </a></li>
+                                    <?php endforeach; ?>
+                                </ul>
+                            </li>
                         </ul>
                     </li>
                     <li><a href="blog.html">Sản phẩm</a></li>
@@ -489,25 +513,25 @@
 
     <script>
         $(document).ready(
-            function() {
-                $("#search_ajax").keyup(function() {
+            function () {
+                $("#search_ajax").keyup(function () {
                     var search_item = $(this).val();
-                    if(search_item != "") {
+                    if (search_item != "") {
                         $.ajax({
-                            url: '<?= $base_url?>controller/ajax.php?act=ajax_search',
+                            url: '<?= $base_url ?>controller/ajax.php?act=ajax_search',
                             method: 'POST',
                             data: {
                                 keyword: search_item
                             },
-                            success:function(data) {
+                            success: function (data) {
                                 console.log(data);
                                 // // console.log(result);
-                                 $("#search_result").html(data)
+                                $("#search_result").html(data)
                             },
-                            error :function (error) {
+                            error: function (error) {
                                 console.log(error);
                             }
-                            
+
                         })
                     }
 

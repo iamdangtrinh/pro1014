@@ -9,6 +9,13 @@ $danhmuc = category_getALLDM();
 $danhmucmuc = category_getALLDMMUC();
 include_once 'model/m_admin.php';
 $showanhuser = admin_ShowanhUser();
+include_once 'model/m_cart.php';
+
+if(isset($_SESSION['user'])) {
+    $count_cart = count_cart($_SESSION['user']['MaTK']);
+} else {
+    echo "0";
+}
 
 pdo_get_connection();
 if (isset($_GET['mod'])) {
