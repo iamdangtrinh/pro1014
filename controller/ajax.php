@@ -31,24 +31,42 @@ switch ($_GET['act']) {
 
     case 'ajax_cart_coupon':
         include_once '../model/m_cart.php';
-
+        // Kiểm tra btn_coupon có tồn tại và có được click vào hay không
         if (isset($_POST['btn_coupon']) && $_POST['btn_coupon']) {
+            // lấy giá trị input của couponcode
             $couponcode = $_POST['couponcode'];
-
+            // Nếu counponcode trống => Bắt người dùng nhập mã
             if (empty($couponcode)){
-                $_SESSION['coupon']['error'] == "Vui lòng nhập mã giảm giá";
+                echo "error_coupon_null";
             } else {
+                // Nếu có nhập mã code thì select xem mã đó có đúng không
                 $has_coupon = has_coupon_code($couponcode);
+                // Nếu mã đó có tồn tại thì
                 if ($has_coupon) {
-                    // if($has_coupon['NgayBatDau'])
+                    // Kiểm tra mã đó còn hạn dùng hay không
+                    date_default_timezone_set('Asia/Ho_Chi_Minh');
+                    $counpon_date = $has_coupon['NgayKetThuc'];
+                    // biến ngày giờ thành số giây
+                    $counpon_date_timestamp = strtotime($counpon_date);
+                    if(time() > $counpon_date_timestamp) {
+                        echo "Mã giảm giá không còn hạn sử dụng";
+                    } else {
+                        // Kiểm tra mã đó còn số lượng dùng hay không
+                        if($has_coupon['SoLuong'] > 0) {
+                            echo "Đơn hàng của bạn được giảm " .$has_coupon['GiaKM'] ;
+                        } else {
+                            echo "Mã giảm giá đã hết";
+                        }
+                    }
+
+
                     if (isset($has_coupon['GiaKM'])) {
-                       echo $_SESSION['coupon']['susscess'] = $has_coupon['GiaKM'];
+                    //    echo  json_decode($_SESSION['coupon']['susscess'] = $has_coupon['GiaKM']);
                     }
                 } else {
-                //    echo $_SESSION['coupon']['error'] = "Mã giảm giá không đúng";
-                   echo die;
+                   echo "error_coupon_false";
                 }
-            }
+            } 
         }
 
         break;

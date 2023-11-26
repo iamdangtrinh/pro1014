@@ -20,7 +20,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <?php foreach ($cart as $key => $value):
+                        <?php foreach($cart as $key => $value):
                             extract($value) ?>
                             <tr class="product-row total_product_parent">
                                 <td>
@@ -40,7 +40,7 @@
                                     </a>
                                 </td>
                                 <td class="m-auto">
-                                    <?= number_format($Gia, 0, '.', '.') . " VND" ?>
+                                    <?= number_format($Gia, 0, '.', '.')." VND" ?>
                                 </td>
                                 <td>
                                     <p data-quantity="<?= $MaSP ?>"></p>
@@ -73,20 +73,14 @@
                                                     placeholder="Mã giảm giá" name="couponcode">
                                                 <div class="input-group-append">
                                                     <input type="hidden" name="btn_coupon" value="btn_coupon">
-                                                    <input class="btn btn-sm btn-primary" id="coupon_code_btn" type="submit"
-                                                        name="" value="Áp dụng phiếu mua hàng">
-                                                    <?php
-                                                    if (isset($_SESSION['coupon']['susscess'])) {
-                                                        echo $_SESSION['coupon']['susscess'];
-                                                        unset($_SESSION['coupon']['susscess']);
-                                                    } 
-                                                    else if (isset($_SESSION['coupon']['error'])) {
-                                                        echo $_SESSION['coupon']['error'];
-                                                        unset($_SESSION['coupon']['error']);
-                                                    }
-                                                    ?>
+                                                    <input class="btn btn-sm btn-primary" id="coupon_code_btn"
+                                                        type="submit" name="" value="Áp dụng phiếu mua hàng">
+                                                   
                                                 </div>
                                             </div>
+                                            <!-- hiển thị kết quả của coupon -->
+                                            <div class="result_coupon"></div>
+
                                         </form>
                                     </div>
                                 </div>
@@ -198,7 +192,7 @@
             }
             // tổng giỏ hàng
             document.querySelector('.total_cart').innerText = total_cart.toLocaleString('vi-VN') + ' VND';
-            // console.log(parseInt(total_cart) - 50000);
+            // console.log(parseInt(total_cart) - parseInt($('.result_coupon')));
         }
         updateTotal()
 
@@ -251,40 +245,35 @@
                     quantity: newQuantity,
                     MaSP: MaSP,
                 },
-                success: function (response) {
-
-                },
-                error: function (error) {
-                    // Handle error
-                }
             });
 
         });
-    })
 
-    $(document).ready(function () {
         $('#coupon').on('submit', function (e) {
             e.preventDefault();
         })
 
         $('#coupon').on('submit', function () {
             var data = $(this).serialize();
+            // updateTotal()
+            console.log(document.querySelector('.result_coupon'));
 
             $.ajax({
                 type: "POST",
                 url: "<?= $base_url ?>controller/ajax.php?act=ajax_cart_coupon",
-
                 data: data,
                 success: function (data) {
-                    console.log("Thành công");
+                    if (data === "error_coupon_null") {
+                        $(".result_coupon").text("Vui lòng nhập mã giảm giá")
+                    } else if (data === "error_coupon_false") {
+                        $(".result_coupon").text("Mã giảm giá không đúng")
+                    }
+                    else {
+                        $(".result_coupon").text(data)
+                    }
                 },
-                error: function (data) {
-                    console.log("Thất bại");
-                }
             })
         })
-
-
     })
 
 </script>
