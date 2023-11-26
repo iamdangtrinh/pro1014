@@ -65,7 +65,7 @@ if (isset($_GET['act'])) {
                     $_SESSION['error']['register'] = 'Đăng ký không thành công. Tài khoản này đã tồn tại';
                 } else {
                     // Allow registration
-                    user_add($SoDienThoai, $Email, $HoTen, $MatKhau, $DiaChi);
+                    user_add($SoDienThoai,$Email,$HoTen,$MatKhau,$DiaChi,$VaiTro);
                     $_SESSION['success']['register'] = 'Đăng ký tài khoản thành công.';
                 }
             }

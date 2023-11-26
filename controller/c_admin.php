@@ -147,9 +147,11 @@
                 include_once 'model/m_user.php';
                 if(isset($_POST['submit'])){
                     $SoDienThoai=$_POST['SoDienThoai'];
+                    $Email=$_POST['Email'];
                     $HoTen=$_POST['HoTen'];
-                    $ViTien=$_POST['ViTien'];
-                    $Quyen=$_POST['Quyen'];
+                    $MatKhau=$_POST['MatKhau'];
+                    $DiaChi=$_POST['DiaChi'];
+                    $VaiTro=$_POST['VaiTro'];
                     $kq=user_checkEmail($Email);
                     if($kq){
                         // bi trung, khong them
@@ -158,7 +160,7 @@
                         //khong trung
                         $MatKhau=12345;
                         $HinhAnh='defaut.png';
-                        user_add($SoDienThoai,$HoTen,$MatKhau,$ViTien,$Quyen,$HinhAnh);
+                        user_add($SoDienThoai,$Email,$HinhAnh,$HoTen,$MatKhau,$DiaChi,$VaiTro);
                         $_SESSION['thongbao']='Đã tạo tài khoản với số điện thoại <strong>'.$SoDienThoai.'</strong> thành công';
                     }
                 }
