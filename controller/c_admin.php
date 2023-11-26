@@ -150,10 +150,10 @@
                     $HoTen=$_POST['HoTen'];
                     $ViTien=$_POST['ViTien'];
                     $Quyen=$_POST['Quyen'];
-                    $kq=user_checkPhone($SoDienThoai);
+                    $kq=user_checkEmail($Email);
                     if($kq){
                         // bi trung, khong them
-                        $_SESSION['loi']='Không thể tạo tài khoản với số điện thoại <strong>'.$SoDienThoai.'</strong>';
+                        $_SESSION['loi']='Không thể tạo tài khoản với số điện thoại <strong>'.$Email.'</strong>';
                     }else{
                         //khong trung
                         $MatKhau=12345;
@@ -174,11 +174,11 @@
                     $HoTen=$_POST['HoTen'];
                     $ViTien=$_POST['ViTien'];
                     $Quyen=$_POST['Quyen'];
-                    $kq=user_checkPhone($SoDienThoai);
+                    $kq=user_checkEmail($Email);
                     $MaTK=$_GET['id'];
                     if($kq && $kq['MaTK']!=$MaTK){
                         // bi trung, khong them
-                        $_SESSION['loi']='Không thể tạo tài khoản với số điện thoại <strong>'.$SoDienThoai.'</strong>';
+                        $_SESSION['loi']='Không thể tạo tài khoản với số điện thoại <strong>'.$Email.'</strong>';
                     }else{
                         //khong trung
                         user_edit($MaTK,$SoDienThoai,$HoTen,$ViTien,$Quyen);

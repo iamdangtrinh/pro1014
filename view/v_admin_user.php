@@ -155,7 +155,7 @@ td{
                                 <td >
                                 <div class="lenh">
                                     <div class="sua" ><a href="" style="font-weight: 600; ">Sửa</a></div>
-                                    <div class="xoa"><a href=""  style="font-weight: 600; ">Xóa</a></div>
+                                    <div class="xoa"><a href="<?=$base_url?>admin/user/delete/<?=$dsTK['MaTK']?>"  style="font-weight: 600; ">Xóa</a></div>
                                 </div>
                                 </td>
 
@@ -163,6 +163,9 @@ td{
                         <?php endforeach; ?>
                     </tbody>
                 </table>
+                <div class="box_button">
+                <div><a href="<?=$base_url?>admin/user/add" class="them" style="font-weight: 600;">Thêm mới</a></div>
+           </div>
             </div>
             <!-- End of Recent Orders -->
 
