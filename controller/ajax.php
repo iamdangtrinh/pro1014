@@ -69,69 +69,6 @@ switch ($_GET['act']) {
         }
         break;
 
-        // Đăng ký ajax
-        case 'register':
-            include_once 'model/m_user.php';
-            if (isset($_POST['btn_register']) && $_POST['btn_register']) {
-                $HoTen = $_POST['fullname'];
-                $Email = $_POST['email'];
-                $SoDienThoai = $_POST['number_phone'];
-                $MatKhau = $_POST['password'];
-                $DiaChi = $_POST['address'];
-
-                if (empty($SoDienThoai) || empty($MatKhau) || empty($HoTen) || empty($DiaChi)) {
-                    $_SESSION['error']['register'] = 'Đăng ký không thành công. Vui lòng thử lại';
-                    // header('location: ' . $base_url . 'user/register');
-                } else if (empty($Email)) {
-                    $_SESSION['error']['register'] = 'Đăng ký không thành công. Vui lòng thử lại sau';
-                // } else if (true) {
-                //     $_SESSION['error']['register'] = 'Đăng ký không thành công. Email không hợp lệ';
-            // Kiểm tra tài khoản có tồn tại hay không
-                } else if (has_email($Email) > 0) {
-                    $_SESSION['error']['register'] = 'Đăng ký không thành công. Tài khoản này đã tồn tại';
-                } else {
-                    // Allow registration
-                    user_add($SoDienThoai, $Email, $HoTen, $MatKhau, $DiaChi);
-                    $_SESSION['success']['register'] = 'Đăng ký tài khoản thành công.';
-                }
-            }
-            $view_name = 'user_register';
-            $title = "Đăng ký tài khoản";
-            break;
-
-        // Đăng nhập ajax 
-        case 'login': 
-            include_once 'model/m_user.php';
-            //lay du lieu
-            if (isset($_POST['btn_login']) && $_POST['btn_login']) {
-                $email = $_POST['email'];
-                $password = $_POST['password'];
-                if (empty($email) || empty($password)) {
-                    // Hiển thị lỗi
-                    $_SESSION['error']['login'] = "Email hoặc mật khẩu không được để trống";
-                } else {
-                    // kiểm tra tài khoản có tồn tại hay không
-                    $has_account = check_login($email, $password);
-                    // cho phép đăng nhập
-                    if ($has_account) {
-                        $_SESSION['user'] = $has_account;
-                        // echo "Đăng nhập thành công";     
-                        if ($_SESSION['user']['VaiTro'] == 1) {
-                            header('location: ' . $base_url . 'admin/dashboard');
-                        } else {
-                            header('location: ' . $base_url . 'page/home');
-                        }
-                        // Chuyển về trang chủ
-                    } else if ($has_account == 0) {
-                        $_SESSION['error']['login'] = "Tài khoản hoặc mật khẩu sai. Vui lòng thử lại";
-                    }
-                }
-            }
-            $view_name = 'user_login';
-            $title = "Đăng nhập tài khoản";
-            break;
-
-
     default:
         break;
 }
