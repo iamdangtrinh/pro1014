@@ -11136,7 +11136,15 @@ header .separator {
 }
 
 .cart-dropdown .product-title a {
-    color: #222529
+    color: #222529;
+    height: 38px;
+    width: 90%;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
 }
 
 .cart-dropdown .product-details {

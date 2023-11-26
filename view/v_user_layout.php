@@ -36,7 +36,7 @@
     </style>
 </head>
 
-<body class="loaded cart-opened">
+<body>
     <div class="page-wrapper">
         <div class="top-notice font2">
             <div class="container-fluid text-center m-auto text-dark">
@@ -121,18 +121,18 @@
                                         <div class="product">
                                             <div class="product-details">
                                                 <h4 class="product-title">
-                                                    <a href="">Tên sản phẩm</a>
+                                                    <a href=""><?= $TenSP?></a>
                                                 </h4>
 
                                                 <span class="cart-product-info">
-                                                    <span class="cart-product-qty">1</span>
-                                                    Giá sản phẩm
+                                                    <span class="cart-product-qty">Số lượng: <?= $SoLuongSP?> sản phẩm</span>
+                                                    <p>Tổng giá <?= number_format($SoLuongSP * $Gia, 0, ",", ".") ?> VNĐ</p>
                                                 </span>
                                             </div>
 
                                             <figure class="product-image-container">
                                                 <a href="" class="product-image">
-                                                    <img src="<?= $base_url ?>upload/products/product-1.jpg"
+                                                    <img src="<?= $base_url ?>upload/demoes/demo23/products/<?=$AnhSP?>"
                                                         alt="product" width="80" height="80">
                                                 </a>
 

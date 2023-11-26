@@ -108,18 +108,10 @@ label.error {
   vertical-align: middle;
 }
 
+
 .name_cart {
+  width: 90%;
   height: 38px;
-  width: 90%;
-  display: inline-block;
-  word-break: break-all;
-  -webkit-line-clamp: 2;
-  overflow: hidden;
-  white-space: wrap;
-  text-overflow: ellipsis;
-}
-.name_cart {
-  width: 90%;
   margin-left: 10px;
   color: rgba(0,0,0,.87);
   display: inline-block;
