@@ -111,3 +111,16 @@ function pdo_query_value($sql){
         unset($conn);
     }
 }
+// up anh
+function upanh($name,$target_dir){
+    $target_file=$target_dir . basename($_FILES[''.$name.'']['name']);
+    if(!file_exists($target_file)){
+        move_uploaded_file($_FILES[''.$name.'']['tmp_name'], $target_file);
+    }
+    $img=$_FILES[''.$name.'']['name'];
+    return $img;
+}
+function xoaanh($MaSP){
+    $list=pdo_query_one("SELECT * FROM sanpham WHERE MaSP = ?",$MaSP);
+    return $list['Hinh'];
+}
