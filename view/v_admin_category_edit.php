@@ -49,18 +49,18 @@ form {
 </style>
 <h2 class="mt-2">SỬA DANH MỤC</h2><br>
         
-        <form action="<?=$base_url?>admin/sua" method="POST">
+        <form action="" method="POST">
             <div class="mb-3">
                 <label for="MaDM" class="form-label">Mã danh mục</label>
-                <input  type="text" class="form-control" id="MaDM" name="MaDM" value="">
+                <input  type="text" class="form-control" id="MaDM" name="MaDM" value="<?= $itemDM['MaDM']?>">
             </div>
             <div class="mb-3">
                 <label for="TenDM" class="form-label">Tên danh mục</label>
-                <input  type="text" class="form-control" id="TenDM" name="TenDM" value="">  
+                <input  type="text" class="form-control" id="TenDM" name="TenDM" value="<?= $itemDM['TenDM']?>">  
             </div>
             <div class="mb-3">
                 <label for="MaDMC" class="form-label">Mã danh mục con</label>
-                <input  type="text" class="form-control" id="MaDMC" name="MaDMC" value="">  
+                <input  type="text" class="form-control" id="MaDMC" name="MaDMC" value="<?= $itemDM['MaDMC']?>">  
             </div>
             <!-- <div class="mb-3">
                 <label for="Quyen" class="form-label">Quyền</label>

@@ -28,15 +28,16 @@
                     }
                 $view_name='admin_them_danhmuc';
                 break;
-            case 'sua':
+            case 'category-edit':
                 include_once 'model/m_admin.php';
+                $itemDM = admin_getById($_GET['id']);
                 if(isset($_POST['submit'])){
                     $MaDM=$_POST['MaDM'];
                     $TenDM=$_POST['TenDM'];
                     $MaDMC=$_POST['MaDMC'];
                     update_DM($MaDM,$TenDM,$MaDMC);
                 }
-                $view_name='admin_sua_danhmuc';
+                $view_name='admin_category_edit';
                 break;
             case 'user':
                 //lay du lieu

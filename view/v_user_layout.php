@@ -166,29 +166,6 @@
                                 <li  class="<?=(strpos($view_name,'home'))?'active':''?>">
                                     <a href="<?= $base_url ?>page/home">Trang chủ</a>
                                 </li>
-                                <!-- <li>
-                                    <a>Danh mục <i class="fa-solid fa-caret-down"></i></a>
-                                    <div class="megamenu megamenu-fixed-width megamenu-3cols">
-                                        <div class="row">
-                                            <?php foreach ($danhmuc as $item_dm): ?>
-                                                <?php if ($item_dm['Parent_id'] == 0): ?>
-                                                    <div class="col-lg-4">
-                                                        <a href="<?=$base_url?>category/detail/<?=$item_dm['MaDM']?>" class="nolink"><?=$item_dm['TenDM']?></a>
-                                                        <ul class="submenu">
-                                                <?php endif; ?>
-                                                <?php foreach ($danhmuc as $value):?>
-                                                    <?php if($value['Parent_id']!=0 && $value['Parent_id']==$item_dm['Parent_id']):?>
-                                                        <li>
-                                                            <a href="<?=$base_url?>category/detail/<?=$value['MaDM']?>"><?=$value['TenDM']?></a>
-                                                        </li>
-                                                    <?php endif; ?>
-                                                <?php endforeach; ?>
-                                                        </ul>
-                                                    </div>
-                                            <?php endforeach;?>
-                                        </div>
-                                    </div>
-                                </li> -->
                                 <li class="d-none d-xl-block <?=(strpos($view_name,'danhmuc'))?'active':''?>">
                                     <a href="<?= $base_url?>">Danh mục</a>
                                     <ul>

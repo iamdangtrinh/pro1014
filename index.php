@@ -9,6 +9,7 @@ $danhmuc = category_getALLDM();
 $danhmucmuc = category_getALLDMMUC();
 include_once 'model/m_admin.php';
 $showanhuser = admin_ShowanhUser();
+
 pdo_get_connection();
 if (isset($_GET['mod'])) {
     switch ($_GET['mod']) {
@@ -28,6 +29,7 @@ if (isset($_GET['mod'])) {
             $ctrl_name = 'cart';
             break;
         case 'admin':
+
             $ctrl_name = 'admin';
             break;
         default:

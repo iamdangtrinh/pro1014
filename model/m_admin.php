@@ -6,6 +6,9 @@
     function admin_getUser(){
         return pdo_query("SELECT * FROM taikhoan ORDER BY MaTK DESC LIMIT 4");
     }
+    function admin_getById($MaDM){
+        return pdo_query_one("SELECT * FROM  danhmuc WHERE MaDM=$MaDM");
+    }
     function admin_getALLDM(){
         return pdo_query("SELECT *FROM danhmuc ");
     }     
