@@ -159,7 +159,7 @@
 				submitHandler: function (form) {
 					$.ajax({
 						type: "POST",
-						url: "",
+						url: "?mod=user&act=register",
 						data: {
 							fullname: fullname,
 							email: email,
