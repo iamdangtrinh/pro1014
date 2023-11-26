@@ -390,6 +390,8 @@ main .recent-orders a{
     display: flex;
     justify-content: end;
     gap: 2rem;
+    align-items: center;
+
 }
 
 .right-section .nav button{

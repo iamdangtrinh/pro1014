@@ -6,6 +6,9 @@ include_once 'model/m_pdo.php';
 include_once 'model/m_product.php';
 include_once 'model/m_category.php';
 $danhmuc = category_getALLDM();
+$danhmucmuc = category_getALLDMMUC();
+include_once 'model/m_admin.php';
+$showanhuser = admin_ShowanhUser();
 pdo_get_connection();
 if (isset($_GET['mod'])) {
     switch ($_GET['mod']) {

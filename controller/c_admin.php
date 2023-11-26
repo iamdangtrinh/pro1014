@@ -23,13 +23,19 @@
                 if(isset($_POST['submit'])){
                     $MaDM=$_POST['MaDM'];
                     $TenDM=$_POST['TenDM'];
-                    danhmuc_add( $MaDM,$TenDM);
+                    $MaDMC=$_POST['MaDMC'];
+                    danhmuc_add( $MaDM,$TenDM,$MaDMC);
                     }
-                
                 $view_name='admin_them_danhmuc';
                 break;
             case 'sua':
-                
+                include_once 'model/m_admin.php';
+                if(isset($_POST['submit'])){
+                    $MaDM=$_POST['MaDM'];
+                    $TenDM=$_POST['TenDM'];
+                    $MaDMC=$_POST['MaDMC'];
+                    update_DM($MaDM,$TenDM,$MaDMC);
+                }
                 $view_name='admin_sua_danhmuc';
                 break;
             case 'user':
@@ -51,6 +57,52 @@
                 // hien thi du lieu
                 $view_name='admin_book';
                 break;
+            case 'khuyenmai':
+                include_once 'model/m_pdo.php';
+                include_once 'model/m_admin.php';
+                //lay du lieu
+                if (isset($_POST['btn_km'])) {
+                    $maKhuyenMai = $_POST['MaKM'];
+                    $TenKM = $_POST['TenKM'];
+                    $SoLuong = $_POST['SoLuong'];
+                    $codeKhuyenMai = $_POST['khuyenMai'];
+                    $soTienGiam = $_POST['soTienGiam'];
+                    $ngayBatDau = $_POST['ngayBatDau'];
+                    $ngayKetThuc = $_POST['ngayKetThuc'];
+                    $add_khuyenmai = admin_addkhuyenmai($maKhuyenMai, $TenKM, $codeKhuyenMai, $soTienGiam,
+                     $ngayBatDau, $ngayKetThuc, $SoLuong);
+                }                      
+                // hien thi du lieu
+                $show_KM = getallkm();
+                $view_name='admin_khuyenmai';
+                break;
+                case 'suakhuyenmai':
+                    include_once 'model/m_pdo.php';
+                    include_once 'model/m_admin.php';
+                    //lay du lieu
+                    if (isset($_POST['btn_sua'])) {
+                        $maKhuyenMai = $_POST['MaKM'];
+                        $tenKhuyenMai = $_POST['TenKM'];
+                        $giaKhuyenMai = $_POST['GiaKM'];
+
+                        $updateQuery = updatekm($tenKhuyenMai, $giaKhuyenMai, $maKhuyenMai);
+                        
+                        if ($updateQuery) {
+                            echo "Dữ liệu đã được cập nhật thành công!";
+                        } else {
+                            echo "Lỗi khi cập nhật dữ liệu!";
+                        }
+                    }                
+                    // hien thi du lieu
+                    $show_KM = getallkm();
+                    $view_name='admin_suakhuyenmai';
+                    break;
+                case 'xoakhuyenmai':
+                    include_once 'model/m_pdo.php';
+                    include_once 'model/m_admin.php';
+                     xoakm($_GET['MaKM']);
+                    $view_name='admin_khuyenmai';
+                    break;
             case 'history':
                 //lay du lieu
                 include_once 'model/m_history.php';
@@ -115,6 +167,7 @@
                 $view_name='admin_dashboard';
                 break;
         }
+
         include_once 'view/v_admin_layout.php';
     }else{
         header('location: '.$base_url.'page/home');

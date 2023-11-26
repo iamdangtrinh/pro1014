@@ -166,7 +166,7 @@
                                 <li  class="<?=(strpos($view_name,'home'))?'active':''?>">
                                     <a href="<?= $base_url ?>page/home">Trang chủ</a>
                                 </li>
-                                <li>
+                                <!-- <li>
                                     <a>Danh mục <i class="fa-solid fa-caret-down"></i></a>
                                     <div class="megamenu megamenu-fixed-width megamenu-3cols">
                                         <div class="row">
@@ -188,6 +188,35 @@
                                             <?php endforeach;?>
                                         </div>
                                     </div>
+                                </li> -->
+                                <li class="d-none d-xl-block <?=(strpos($view_name,'danhmuc'))?'active':''?>">
+                                    <a href="<?= $base_url?>">Danh mục</a>
+                                    <ul>
+                                        <?php
+                                        $danhmuc = $danhmucmuc;
+                                        foreach ($danhmucmuc as $item_dmmuc) {
+                                            // Điêu kiện để lấy danh mục cha
+                                            if($item_dmmuc['MaDMC'] == 0){
+                                            ?>
+                                                 <li><a href="<?=$base_url?>category/detail/<?=$item_dmmuc['MaDM']?>"><?=$item_dmmuc['TenDM']?></a>
+                                                    <ul>
+                                                        <?php foreach ($danhmuc as $item_dm) {
+                                                            if($item_dm['MaDMC'] != 0 && $item_dm['MaDMC'] == $item_dmmuc['MaDM']){
+                                                        ?>
+                                                                <li><a href="<?=$base_url?>category/detail/<?=$item_dm['MaDM']?>"><?=$item_dm['TenDM']?></a></li>
+                                                        <?php
+                                                            }
+                                                        }
+                                                        ?>
+                                                    </ul>
+                                                </li>
+                                            <?php
+                                            }
+                                        }
+                                        ?>
+
+                                    </ul>
+
                                 </li>
                                 <li class="<?=(strpos($view_name,'shop'))?'active':''?>">
                                     <a href="<?= $base_url?>page/shop">Sản phẩm</a>

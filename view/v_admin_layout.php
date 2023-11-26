@@ -60,11 +60,17 @@
                 </a>
                 <a href="#">
                     <span class="material-icons-sharp">
+                        inventory
+                    </span>
+                    <h3>Bình luận</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">
                         receipt_long
                     </span>
                     <h3>Đơn hàng</h3>
                 </a>
-                <a href="#">
+                <a href="<?=$base_url?>admin/khuyenmai" class="list_group-item <?=(strpos($view_name,'khuyenmai'))?'active':'' ?>">
                     <span class="material-icons-sharp">
                         mail_outline
                     </span>
@@ -106,11 +112,23 @@
 
                 <div class="profile">
                     <div class="info">
-                        <p>Chào, <b>DA1</b></p>
-                        <small class="text-muted">Admin</small>
+                        <style>
+                            .right-section .nav{
+                            display: flex;
+                            justify-content: end;
+                            gap: 2rem;
+                            align-items: center;
+                        }
+                        .tenuser{
+                            padding-top: 10px;
+                            font-size: 14px;
+                            font-weight: 600;
+                        }
+                        </style>
+                        <p class="tenuser"><?= $_SESSION['user']['HoTen'] ?></p>
                     </div>
                     <div class="profile-photo">
-                        <img src="<?= $base_url ?>upload/blog/author.jpg">
+                    <a href="<?= $base_url ?>page/home"><img src="<?= $base_url ?>upload/blog/<?= $_SESSION['user']['HinhAnh'] ?>" alt="anh admin"></a>
                     </div>
                 </div>
 
@@ -119,9 +137,9 @@
 
             <div class="user-profile">
                 <div class="logo">
-                    <img src="<?= $base_url ?>upload/blog/author.jpg" alt="anh admin">
-                    <h2>Nguyễn Phong Phú</h2>
-                    <p>Quản trị cấp cao</p>
+                   <a href="<?= $base_url ?>page/home"><img src="<?= $base_url ?>upload/blog/<?= $_SESSION['user']['HinhAnh'] ?>" alt="anh admin"></a>
+                    <h2><?= $_SESSION['user']['HoTen'] ?></h2>
+                    <p>Quản trị</p>
                 </div>
             </div>
 

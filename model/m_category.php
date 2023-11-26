@@ -3,6 +3,9 @@
     function category_getALLDM(){
         return pdo_query("SELECT * FROM danhmuc ");
     }
+    function category_getALLDMMUC(){
+        return pdo_query("SELECT * FROM danhmuc");
+    }
     function category_getbyDM($MaDM) {
         return pdo_query("SELECT * FROM sanpham sp INNER JOIN danhmuc dm ON sp.MaDM = dm.MaDM WHERE dm.MaDM = ? ",$MaDM);
     }
