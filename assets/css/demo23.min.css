@@ -10973,11 +10973,19 @@ header .separator {
 
 .cart-dropdown .mobile-cart .btn-close {
     position: absolute;
-    left: -4.2rem;
+    z-index: 99;
     top: 0.7rem;
     font-size: 3.3rem;
-    color: #fff;
-    font-weight: 300
+    color: #000;
+    font-weight: 300;
+    right: 20px;
+    padding: 4px;
+    background: beige;
+    display: block;
+    line-height: 40px;
+    height: 48px;
+    width: 48px;
+    text-align: center;
 }
 
 .cart-product-info {
@@ -11105,6 +11113,7 @@ header .separator {
     align-items: center;
     border-bottom: 1px solid #e6ebee;
     box-shadow: none !important;
+    justify-content: space-between;
 }
 
 .product-image-container {

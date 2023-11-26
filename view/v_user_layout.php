@@ -36,7 +36,7 @@
     </style>
 </head>
 
-<body>
+<body class="loaded cart-opened">
     <div class="page-wrapper">
         <div class="top-notice font2">
             <div class="container-fluid text-center m-auto text-dark">
@@ -106,12 +106,17 @@
 
                             <div class="cart-overlay"></div>
 
-                            <div class="dropdown-menu mobile-cart">
+                            <div class="active  dropdown-menu mobile-cart">
                                 <a href="#" title="Close (Esc)" class="btn-close">×</a>
 
                                     <div class="dropdownmenu-wrapper custom-scrollbar">
                                     <div class="dropdown-cart-header">Giỏ hàng</div>
 
+                                    <?php 
+                                    
+                                    if(isset($_SESSION['user']))
+                                        foreach($show_cart_for_user as $value) :extract($value)
+                                    ?>
                                     <div class="dropdown-cart-products">
                                         <div class="product">
                                             <div class="product-details">
@@ -135,6 +140,7 @@
                                             </figure>
                                         </div>
                                     </div>
+                                    <?php endforeach?> 
 
                                     <!-- <div class="dropdown-cart-total">
                                         <span>TỔNG PHỤ:</span>
@@ -143,7 +149,7 @@
                                     </div> -->
 
                                     <div class="dropdown-cart-action">
-                                        <a href="<?= $base_url ?>gio-hang/cart_order"
+                                        <a href="<?= $base_url ?>gio-hang"
                                             class="btn btn-gray btn-block view-cart">Xem giỏ hàng</a>
                                         <a href="<?= $base_url ?>page/checkout" class="btn btn-dark btn-block">Kiểm
                                             tra</a>
