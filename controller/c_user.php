@@ -14,7 +14,8 @@ if (isset($_GET['act'])) {
             $title = 'Quản lí tài khoản';
             break;
         // Đăng nhập tài khoản
-        case 'login':
+        case 'login': 
+            include_once 'model/m_user.php';
             //lay du lieu
             if (isset($_POST['btn_login']) && $_POST['btn_login']) {
                 $email = $_POST['email'];
@@ -26,7 +27,7 @@ if (isset($_GET['act'])) {
                     // kiểm tra tài khoản có tồn tại hay không
                     $has_account = check_login($email, $password);
                     // cho phép đăng nhập
-                    if ($has_account > 0) {
+                    if ($has_account) {
                         $_SESSION['user'] = $has_account;
                         // echo "Đăng nhập thành công";     
                         if ($_SESSION['user']['VaiTro'] == 1) {
@@ -40,7 +41,6 @@ if (isset($_GET['act'])) {
                     }
                 }
             }
-
             $view_name = 'user_login';
             $title = "Đăng nhập tài khoản";
             break;
@@ -58,14 +58,14 @@ if (isset($_GET['act'])) {
                     // header('location: ' . $base_url . 'user/register');
                 } else if (empty($Email)) {
                     $_SESSION['error']['register'] = 'Đăng ký không thành công. Vui lòng thử lại sau';
-                } else if (!preg_match("/@/", $Email)) {
-                    $_SESSION['error']['register'] = 'Đăng ký không thành công. Email không hợp lệ';
+                // } else if (true) {
+                //     $_SESSION['error']['register'] = 'Đăng ký không thành công. Email không hợp lệ';
             // Kiểm tra tài khoản có tồn tại hay không
                 } else if (has_email($Email) > 0) {
                     $_SESSION['error']['register'] = 'Đăng ký không thành công. Tài khoản này đã tồn tại';
                 } else {
                     // Allow registration
-                    user_add($SoDienThoai, $Email, $HoTen, md5($MatKhau), $DiaChi);
+                    user_add($SoDienThoai, $Email, $HoTen, $MatKhau, $DiaChi);
                     $_SESSION['success']['register'] = 'Đăng ký tài khoản thành công.';
                 }
             }

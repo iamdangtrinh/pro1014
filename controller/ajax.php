@@ -59,7 +59,6 @@ switch ($_GET['act']) {
                         }
                     }
 
-
                     if (isset($has_coupon['GiaKM'])) {
                     //    echo  json_decode($_SESSION['coupon']['susscess'] = $has_coupon['GiaKM']);
                     }
