@@ -12,6 +12,10 @@
     function user_add($SoDienThoai, $Email, $HoTen, $MatKhau, $DiaChi){
         pdo_execute("INSERT INTO taikhoan(`SoDienThoai`,`Email`,`HoTen`,`MatKhau`,`DiaChi`) VALUES(?,?,?,?,?)",$SoDienThoai,$Email,$HoTen,md5($MatKhau),$DiaChi);
     }
+    // Thêm user từ Admin
+    function user_admin_add($SoDienThoai, $Email, $HoTen, $MatKhau, $DiaChi,$VaiTro){
+        pdo_execute("INSERT INTO taikhoan(`SoDienThoai`,`Email`,`HoTen`,`MatKhau`,`DiaChi`,`VaiTro`) VALUES(?,?,?,?,?,?)",$SoDienThoai,$Email,$HoTen,md5($MatKhau),$DiaChi,$VaiTro);
+    }
 
     function user_getAll(){
         return pdo_query("SELECT * FROM taikhoan");

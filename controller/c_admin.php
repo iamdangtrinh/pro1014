@@ -160,8 +160,8 @@
                         //khong trung
                         $MatKhau=12345;
                         $HinhAnh='defaut.png';
-                        user_add($SoDienThoai,$Email,$HinhAnh,$HoTen,$MatKhau,$DiaChi,$VaiTro);
-                        $_SESSION['thongbao']='Đã tạo tài khoản với số điện thoại <strong>'.$SoDienThoai.'</strong> thành công';
+                        user_admin_add($SoDienThoai,$Email,$HoTen,$MatKhau,$DiaChi,$VaiTro);
+                        $_SESSION['thongbao']='<h4>Đã tạo tài khoản với Email <strong>'.$Email.'</strong> thành công';
                     }
                 }
                 // hien thi du lieu

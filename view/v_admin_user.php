@@ -43,6 +43,9 @@ th, td {
 td{
     background-color: #ffc0cb33;
 }
+th{
+    color: #333;
+}
 .lenh{
         display: flex;
         text-align: center;
@@ -59,6 +62,7 @@ td{
         border: 1px solid #ffff;
         background-color: #ffc0cba8;
         border-radius: 5px;
+        transition: 0.5s;
     }
     .sua a:hover{
         background: #6c9bcf;
@@ -72,6 +76,7 @@ td{
         border: 1px solid #ffff;
         background-color: #ffc0cba8;
         border-radius: 5px;
+        transition: 0.5s;
      }
     .xoa a:hover{
         background: #ba5a87;
@@ -114,6 +119,12 @@ td{
         background: pink;
         
         }
+        .case-0{
+            color: blue;
+        }
+        .case-1{
+            color: red;
+        }
 </style>
             <h1>Tài khoản</h1>
             <!-- Recent Orders Table -->
@@ -140,13 +151,13 @@ td{
                                     <?php
                                     switch($dsTK['VaiTro']){
                                         case '0' : 
-                                            echo 'Khách hàng';
+                                            echo '<p class="case-0">Khách hàng<p>';
                                             break;
                                         case '1' : 
-                                            echo 'Quản trị';
+                                            echo '<p class="case-1">Quản trị<p>';
                                                 break;
                                         case '2' : 
-                                            echo 'Quản trị cấp cao';
+                                            echo '<p class="case-2">Quản trị cấp cao<p>';
                                             break;
                                     }
                                     
