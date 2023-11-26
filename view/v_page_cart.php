@@ -161,7 +161,7 @@
                     <tfoot>
                         <tr>
                             <td>Tổng cộng</td>
-                            <td class="total_cart">17.000đ</td>
+                            <td class="total_cart"></td>
                         </tr>
                     </tfoot>
                 </table>
@@ -190,9 +190,16 @@
                 product.querySelector('.total_price').innerText = total.toLocaleString('vi-VN') + ' VND';
                 total_cart += total;
             }
-            // tổng giỏ hàng
-            document.querySelector('.total_cart').innerText = total_cart.toLocaleString('vi-VN') + ' VND';
-            // console.log(parseInt(total_cart) - parseInt($('.result_coupon')));
+
+            var coupon_value = $('.coupon_value').val();
+            // if(isNumber(coupon_value)) {
+            //     console.log(total_cart -= coupon_value);
+            //     document.querySelector('.total_cart').innerText = total_cart.toLocaleString('vi-VN') + ' VND';
+            // } else {
+                total_cart -= (coupon_value)? coupon_value : 0;
+                document.querySelector('.total_cart').innerText = total_cart.toLocaleString('vi-VN') + ' VND';
+            // }
+            
         }
         updateTotal()
 
@@ -202,7 +209,6 @@
             var product_box = this.closest('.product-single-qty');
             var quantity_input = product_box.querySelector('.quantity_product');
             var currentQuantity = parseInt(quantity_input.value);
-
             if (currentQuantity > 1) {
                 quantity_input.value = currentQuantity - 1;
                 $(quantity_input).trigger('change');
@@ -213,7 +219,6 @@
             var product_box = this.closest('.product-single-qty');
             var quantity_input = product_box.querySelector('.quantity_product');
             var currentQuantity = parseInt(quantity_input.value);
-
             quantity_input.value = currentQuantity + 1;
             $(quantity_input).trigger('change');
         });
@@ -255,9 +260,7 @@
 
         $('#coupon').on('submit', function () {
             var data = $(this).serialize();
-            // updateTotal()
-            console.log(document.querySelector('.result_coupon'));
-
+        
             $.ajax({
                 type: "POST",
                 url: "<?= $base_url ?>controller/ajax.php?act=ajax_cart_coupon",
@@ -268,11 +271,13 @@
                     } else if (data === "error_coupon_false") {
                         $(".result_coupon").text("Mã giảm giá không đúng")
                     }
-                    else {
-                        $(".result_coupon").text(data)
+                    else {                        
+                        $(".result_coupon").html(data);
+                        updateTotal();
                     }
                 },
             })
+            
         })
     })
 

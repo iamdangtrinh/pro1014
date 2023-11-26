@@ -53,6 +53,7 @@ switch ($_GET['act']) {
                     } else {
                         // Kiểm tra mã đó còn số lượng dùng hay không
                         if($has_coupon['SoLuong'] > 0) {
+                            echo '<input type="hidden" class="coupon_value" value="'.$has_coupon['GiaKM'].'">';
                             echo "Đơn hàng của bạn được giảm " .$has_coupon['GiaKM'] ;
                         } else {
                             echo "Mã giảm giá đã hết";
