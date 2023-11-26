@@ -81,7 +81,7 @@
 					// e.preventDefault();
 					$.ajax({
 						type: "POST",
-						url: "?mod=user&act=login",
+						url: "<?= $base_url ?>controller/ajax.php?act=login",
 						data: {
 							email: email,
 							password: password
