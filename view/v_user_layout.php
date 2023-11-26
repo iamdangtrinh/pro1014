@@ -109,51 +109,71 @@
                             <div class="active  dropdown-menu mobile-cart">
                                 <a href="#" title="Close (Esc)" class="btn-close">×</a>
 
-                                    <div class="dropdownmenu-wrapper custom-scrollbar">
+                                <div class="dropdownmenu-wrapper custom-scrollbar">
                                     <div class="dropdown-cart-header">Giỏ hàng</div>
 
-                                    <?php 
-                                    
-                                    if(isset($_SESSION['user']))
-                                        foreach($show_cart_for_user as $value) :extract($value)
-                                    ?>
-                                    <div class="dropdown-cart-products">
-                                        <div class="product">
-                                            <div class="product-details">
-                                                <h4 class="product-title">
-                                                    <a href=""><?= $TenSP?></a>
-                                                </h4>
+                                    <?php
 
-                                                <span class="cart-product-info">
-                                                    <span class="cart-product-qty">Số lượng: <?= $SoLuongSP?> sản phẩm</span>
-                                                    <p>Tổng giá <?= number_format($SoLuongSP * $Gia, 0, ",", ".") ?> VNĐ</p>
-                                                </span>
+                                    if(isset($_SESSION['user'])):
+                                        foreach($show_cart_for_user as $value):
+                                            extract($value)
+                                                ?>
+                                            <div class="dropdown-cart-products">
+                                                <div class="product">
+                                                    <div class="product-details">
+                                                        <h4 class="product-title">
+                                                            <a href="">
+                                                                <?= $TenSP ?>
+                                                            </a>
+                                                        </h4>
+
+                                                        <span class="cart-product-info">
+                                                            <span class="cart-product-qty">Số lượng:
+                                                                <?= $SoLuongSP ?> sản phẩm
+                                                            </span>
+                                                            <p>Tổng giá
+                                                                <?= number_format($SoLuongSP * $Gia, 0, ",", ".") ?> VNĐ
+                                                            </p>
+                                                        </span>
+                                                    </div>
+
+                                                    <figure class="product-image-container">
+                                                        <a href="" class="product-image">
+                                                            <img src="<?= $base_url ?>upload/demoes/demo23/products/<?= $AnhSP ?>"
+                                                                alt="product" width="80" height="80">
+                                                        </a>
+
+                                                        <a href="<?= $base_url ?>delete_cart/<?= $MaSP ?>" class="btn-remove"
+                                                            title="Remove Product"><span>×</span></a>
+                                                    </figure>
+                                                </div>
                                             </div>
-
-                                            <figure class="product-image-container">
-                                                <a href="" class="product-image">
-                                                    <img src="<?= $base_url ?>upload/demoes/demo23/products/<?=$AnhSP?>"
-                                                        alt="product" width="80" height="80">
-                                                </a>
-
-                                                <a href="#" class="btn-remove" title="Remove Product"><span>×</span></a>
-                                            </figure>
+                                        <?php endforeach ?>
+                                        <div class="dropdown-cart-action">
+                                            <a href="<?= $base_url ?>gio-hang" class="btn btn-gray btn-block view-cart">Xem
+                                                giỏ hàng</a>
+                                            <a href="<?= $base_url ?>page/checkout" class="btn btn-dark btn-block">Kiểm
+                                                tra</a>
                                         </div>
-                                    </div>
-                                    <?php endforeach?> 
+                                    <?php else: ?>
+                                        <?php
+                                        echo
 
+                                            '<div class="alert alert-rounded alert-danger">
+                                        <i class="fa fa-exclamation-circle" style="color: #ef8495;"></i>
+                                        <p class="text-heading">Vui lòng đăng nhập để xem sản phẩm.</p>
+                                    </div>';
+                                    endif;
+                                    ?>
+
+                                    
                                     <!-- <div class="dropdown-cart-total">
                                         <span>TỔNG PHỤ:</span>
 
                                         <span class="cart-total-price float-right">Giá tiền</span>
                                     </div> -->
 
-                                    <div class="dropdown-cart-action">
-                                        <a href="<?= $base_url ?>gio-hang"
-                                            class="btn btn-gray btn-block view-cart">Xem giỏ hàng</a>
-                                        <a href="<?= $base_url ?>page/checkout" class="btn btn-dark btn-block">Kiểm
-                                            tra</a>
-                                    </div>
+
                                 </div>
                             </div>
                         </div>

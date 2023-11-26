@@ -1,6 +1,6 @@
 <?php
-if (isset($_GET['act'])) {
-    switch ($_GET['act']) {
+if(isset($_GET['act'])) {
+    switch($_GET['act']) {
         case 'detail':
             //lay du lieu
             include_once 'model/m_product.php';
@@ -12,8 +12,8 @@ if (isset($_GET['act'])) {
             //laydulieu
             include_once 'model/m_product.php';
             include_once 'model/m_cart.php';
-            if (isset($_SESSION['user'])) {
-                if (isset($_POST['addtocart']) && $_POST['addtocart']) {
+            if(isset($_SESSION['user'])) {
+                if(isset($_POST['addtocart']) && $_POST['addtocart']) {
                     // xử lí sau 
                     $MaTK = $_SESSION['user']['MaTK'];
                     // $MaSP = $_POST[''];
@@ -31,25 +31,29 @@ if (isset($_GET['act'])) {
                     //     add_to_cart($has_cart['MaHD'], $SoLuongSP, $MaSP);
                     // }
 
-                    header('location: ' . $base_url . 'cart/cart_order ');
+                    header('location: '.$base_url.'cart/cart_order ');
                 }
             } else {
-                header('location: ' . $base_url . 'page/home');
+                header('location: '.$base_url.'page/home');
             }
             break;
 
         case 'cart':
             include_once 'model/m_cart.php';
-            if (isset($_SESSION['user'])) {
+            if(isset($_SESSION['user'])) {
                 $MaTK = $_SESSION['user']['MaTK'];
                 $cart = show_cart_for_user($MaTK);
                 // Hiển thị dữ liệu
                 $view_name = 'page_cart';
             } else {
                 $_SESSION['error']['login'] = "Vui lòng đăng nhập để mua hàng";
-                header('location: ' . $base_url . 'user/login');
+                header('location: '.$base_url.'user/login');
             }
             $title = 'Giỏ hàng - Bé yêu';
+            break;
+        case 'delete_cart':
+            include_once 'model/m_cart.php';
+            delete_cart_by_pro($_GET['id']);
             break;
 
         default:
@@ -58,6 +62,6 @@ if (isset($_GET['act'])) {
     }
     include_once 'view/v_user_layout.php';
 } else {
-    header('location: ' . $base_url . 'page/home');
+    header('location: '.$base_url.'page/home');
 }
 ?>

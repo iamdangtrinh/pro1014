@@ -55,9 +55,11 @@ function has_coupon_code($coupon_code) {
 }
 
 function count_cart($MaHD) {
-    return pdo_query_value("SELECT COUNT(*) FROM hoadon hd LEFT JOIN chitiethoadon cthd ON hd.MaHD= cthd.MaHD WHERE MaTK = ?", $MaHD);
+    return pdo_query_value("SELECT COUNT(hd.MaHD) FROM chitiethoadon cthd LEFT JOIN hoadon hd ON hd.MaHD= cthd.MaHD WHERE MaTK = ?", $MaHD);
 }
 
-
+function delete_cart_by_pro($MaSP) {
+    return pdo_execute("DELETE FROM chitiethoadon WHERE MaSP = ?",$MaSP);
+}
 
 ?>
