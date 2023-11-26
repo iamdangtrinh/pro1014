@@ -164,7 +164,7 @@ td{
                     </tbody>
                 </table>
                 <div class="box_button">
-                <div><a href="<?=$base_url?>admin/them" class="them" style="font-weight: 600;">Thêm mới</a></div>
+                <div><a href="<?=$base_url?>admin/user/add" class="them" style="font-weight: 600;">Thêm mới</a></div>
            </div>
             </div>
             <!-- End of Recent Orders -->

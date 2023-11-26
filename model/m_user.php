@@ -16,8 +16,8 @@
     function user_getAll(){
         return pdo_query("SELECT * FROM taikhoan");
     }
-    function user_checkPhone($SoDienThoai){
-        return pdo_query_one("SELECT * FROM taikhoan WHERE SoDienThoai=?",$SoDienThoai);
+    function user_checkEmail($Email){
+        return pdo_query_one("SELECT * FROM taikhoan WHERE Email=?",$Email);
     }
     function user_getById($MaTK){
         return pdo_query_one("SELECT * FROM taikhoan WHERE MaTK=?",$MaTK);
