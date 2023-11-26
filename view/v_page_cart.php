@@ -73,7 +73,7 @@
                                                     placeholder="Mã giảm giá" name="couponcode">
                                                 <div class="input-group-append">
                                                     <input type="hidden" name="btn_coupon" value="btn_coupon">
-                                                    <input class="btn btn-primary" id="coupon_code_btn" type="submit"
+                                                    <input class="btn btn-sm btn-primary" id="coupon_code_btn" type="submit"
                                                         name="" value="Áp dụng phiếu mua hàng">
                                                     <?php
                                                     if (isset($_SESSION['coupon']['susscess'])) {
@@ -82,6 +82,7 @@
                                                     } 
                                                     else if (isset($_SESSION['coupon']['error'])) {
                                                         echo $_SESSION['coupon']['error'];
+                                                        unset($_SESSION['coupon']['error']);
                                                     }
                                                     ?>
                                                 </div>
@@ -260,14 +261,11 @@
 
         });
     })
-</script>
-
-<script>
 
     $(document).ready(function () {
-        // $('#coupon').on('submit', function (e) {
-        //     e.preventDefault();
-        // })
+        $('#coupon').on('submit', function (e) {
+            e.preventDefault();
+        })
 
         $('#coupon').on('submit', function () {
             var data = $(this).serialize();
@@ -277,10 +275,10 @@
                 url: "<?= $base_url ?>controller/ajax.php?act=ajax_cart_coupon",
 
                 data: data,
-                success: function (reponse) {
+                success: function (data) {
                     console.log("Thành công");
                 },
-                error: function (error) {
+                error: function (data) {
                     console.log("Thất bại");
                 }
             })

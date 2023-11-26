@@ -34,19 +34,23 @@ switch ($_GET['act']) {
 
         if (isset($_POST['btn_coupon']) && $_POST['btn_coupon']) {
             $couponcode = $_POST['couponcode'];
-            $has_coupon = has_coupon_code($couponcode);
 
-            if ($has_coupon) {
-                // if($has_coupon['NgayBatDau'])
-                if(isset($has_coupon['GiaKM']) && isset($has_coupon['NgayKetThuc'])  ) {
-                   $_SESSION['coupon']['susscess'] = $has_coupon['GiaKM'];
-                } 
+            if (empty($couponcode)){
+                $_SESSION['coupon']['error'] == "Vui lòng nhập mã giảm giá";
             } else {
-                 $_SESSION['coupon']['error'] = "Mã giảm giá không đúng";
+                $has_coupon = has_coupon_code($couponcode);
+                if ($has_coupon) {
+                    // if($has_coupon['NgayBatDau'])
+                    if (isset($has_coupon['GiaKM'])) {
+                       echo $_SESSION['coupon']['susscess'] = $has_coupon['GiaKM'];
+                    }
+                } else {
+                //    echo $_SESSION['coupon']['error'] = "Mã giảm giá không đúng";
+                   echo die;
+                }
             }
-        } else {
-             $_SESSION['coupon']['error'] == "Vui lòng nhập mã giảm giá";
         }
+
         break;
 
 
