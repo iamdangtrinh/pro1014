@@ -70,35 +70,60 @@
                     $soTienGiam = $_POST['soTienGiam'];
                     $ngayBatDau = $_POST['ngayBatDau'];
                     $ngayKetThuc = $_POST['ngayKetThuc'];
-                    $add_khuyenmai = admin_addkhuyenmai($maKhuyenMai, $TenKM, $codeKhuyenMai, $soTienGiam,
-                     $ngayBatDau, $ngayKetThuc, $SoLuong);
+
+                     if (is_codeKM($codeKhuyenMai)) {
+                        // Nếu tồn tại, báo lỗi và không thêm vào cơ sở dữ liệu
+                        $loi = "Mã khuyến mãi '$codeKhuyenMai' đã tồn tại. Vui lòng chọn một mã khuyến mãi khác.";
+                    } else {
+                    // Nếu không trùng, thực hiện thêm vào cơ sở dữ liệu
+                        
+                    $add_khuyenmai = admin_addkhuyenmai($maKhuyenMai, $TenKM, $codeKhuyenMai, $soTienGiam, $ngayBatDau, $ngayKetThuc, $SoLuong);
+                    
+                        if ($add_khuyenmai) {
+                                   
+                    $thongbao = "Dữ liệu đã được thêm thành công!";
+                        } 
+                    else {
+                            $thongbao = "Dữ liệu đã được thêm not thành công!";
+                        }
+                    }
                 }                      
                 // hien thi du lieu
                 $show_KM = getallkm();
                 $view_name='admin_khuyenmai';
                 break;
-                case 'suakhuyenmai':
+                case 'edit-khuyenmai':
                     include_once 'model/m_pdo.php';
                     include_once 'model/m_admin.php';
+                    $show_KM = admin_getKMById($_GET['id']);
                     //lay du lieu
                     if (isset($_POST['btn_sua'])) {
                         $maKhuyenMai = $_POST['MaKM'];
                         $tenKhuyenMai = $_POST['TenKM'];
                         $giaKhuyenMai = $_POST['GiaKM'];
-
-                        $updateQuery = updatekm($tenKhuyenMai, $giaKhuyenMai, $maKhuyenMai);
-                        
-                        if ($updateQuery) {
-                            echo "Dữ liệu đã được cập nhật thành công!";
+                        $ngayBatDau = $_POST['NgayBatDau'];
+                        $ngayKetThuc = $_POST['NgayKetThuc'];
+                        $SoLuong = $_POST['SoLuong'];
+                        if (is_codeKM($tenKhuyenMai)) {
+                            // Nếu tồn tại, báo lỗi và không thêm vào cơ sở dữ liệu
+                            $loi = "Mã khuyến mãi '$tenKhuyenMai' đã tồn tại. Vui lòng chọn một mã khuyến mãi khác.";
                         } else {
-                            echo "Lỗi khi cập nhật dữ liệu!";
+                        // Nếu không trùng, thực hiện thêm vào cơ sở dữ liệu
+                        $updateQuery = updatekm($tenKhuyenMai, $giaKhuyenMai, $maKhuyenMai, $ngayBatDau, $ngayKetThuc, $SoLuong);
+                        
+                            if ($updateQuery) {
+                                       
+                        $loi = "Dữ liệu đã được thêm thành công!";
+                            } 
+                        else {
+                                $loi = "Dữ liệu đã được thêm not thành công!";
+                            }
                         }
                     }                
                     // hien thi du lieu
-                    $show_KM = getallkm();
-                    $view_name='admin_suakhuyenmai';
+                    $view_name='admin_sua_khuyenmai';
                     break;
-                case 'xoakhuyenmai':
+                case 'dalete-khuyenmai':
                     include_once 'model/m_pdo.php';
                     include_once 'model/m_admin.php';
                      xoakm($_GET['MaKM']);

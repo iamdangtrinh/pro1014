@@ -26,11 +26,17 @@
     function getallkm(){
         return pdo_query("SELECT * FROM khuyenmai");
     }
-    function updatekm($tenKhuyenMai, $giaKhuyenMai, $maKhuyenMai){
-        return pdo_execute("UPDATE khuyenmai SET TenKM = '$tenKhuyenMai', GiaKM = '$giaKhuyenMai' WHERE MaKM = '$maKhuyenMai'");
+    function admin_getKMById($MaKM){
+        return pdo_query_one("SELECT * FROM  khuyenmai WHERE MaKM=$MaKM");
+    }
+    function updatekm($tenKhuyenMai, $giaKhuyenMai, $maKhuyenMai, $ngayBatDau, $ngayKetThuc, $SoLuong){
+        return pdo_execute("UPDATE khuyenmai SET TenKM = '$tenKhuyenMai', GiaKM = '$giaKhuyenMai', NgayBatDau = '$ngayBatDau', NgayKetThuc = '$ngayKetThuc', SoLuong = '$SoLuong' WHERE MaKM = '$maKhuyenMai' ");
+    }
+    function is_codeKM($codeKhuyenMai){
+        return pdo_query_value("SELECT COUNT(*) FROM khuyenmai WHERE CodeKM = '$codeKhuyenMai'");
     }
     function xoakm($MaKM){
-        return pdo_query_one("DELETE FROM khuyenmai WHERE MaKM = $MaKM");
+         pdo_execute("DELETE FROM khuyenmai WHERE MaKM = $MaKM");
     }
    
     // function history_getDM($MaDM) {
