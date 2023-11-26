@@ -128,7 +128,7 @@
                         <p class="tenuser"><?= $_SESSION['user']['HoTen'] ?></p>
                     </div>
                     <div class="profile-photo">
-                    <a href="<?= $base_url ?>page/home"><img src="<?= $base_url ?>upload/blog/<?= $_SESSION['user']['HinhAnh'] ?>" alt="anh admin"></a>
+                    <a href="<?= $base_url ?>page/home"><img src="<?= $base_url ?>upload/avatar/<?= $_SESSION['user']['HinhAnh'] ?>" alt="anh admin"></a>
                     </div>
                 </div>
 
@@ -137,7 +137,7 @@
 
             <div class="user-profile">
                 <div class="logo">
-                   <a href="<?= $base_url ?>page/home"><img src="<?= $base_url ?>upload/blog/<?= $_SESSION['user']['HinhAnh'] ?>" alt="anh admin"></a>
+                   <a href="<?= $base_url ?>page/home"><img src="<?= $base_url ?>upload/avatar/<?= $_SESSION['user']['HinhAnh'] ?>" alt="anh admin"></a>
                     <h2><?= $_SESSION['user']['HoTen'] ?></h2>
                     <p>Quản trị</p>
                 </div>
