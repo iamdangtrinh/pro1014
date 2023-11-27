@@ -47,7 +47,7 @@ form {
 }
 
 </style>
-<h2 class="mt-2">SỬA DANH MỤC</h2><br>
+<h2 class="mt-2">THÊM DANH MỤC</h2><br>
         
         <form action="" method="POST">
             <div class="mb-3">
@@ -58,7 +58,10 @@ form {
                 <label for="TenDM" class="form-label">Tên danh mục</label>
                 <input  type="text" class="form-control" id="TenDM" name="TenDM" value="">  
             </div>
-       
+            <div class="mb-3">
+                <label for="MaDMC" class="form-label">Mã danh mục con</label>
+                <input  type="text" class="form-control" id="MaDMC" name="MaDMC" value="">  
+            </div>
             <!-- <div class="mb-3">
                 <label for="Quyen" class="form-label">Quyền</label>
                 <select class="form-control" id="Quyen" name='Quyen'>

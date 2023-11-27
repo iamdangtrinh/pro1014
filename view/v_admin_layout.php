@@ -46,7 +46,7 @@
                     </span>
                     <h3>Tài khoản</h3>
                 </a>
-                <a href="<?=$base_url?>admin/danhmuc" class="list_group-item <?=(strpos($view_name,'danhmuc'))?'active':'' ?>">
+                <a href="<?=$base_url?>admin/category" class="list_group-item <?=(strpos($view_name,'category'))?'active':'' ?>">
                     <span class="material-icons-sharp">
                         inventory
                     </span>
