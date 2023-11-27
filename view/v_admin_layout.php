@@ -17,6 +17,27 @@
         aside .sidebar{
             margin-top: -30px;
         }
+
+        .chart{
+            margin-top: 30px;
+        }
+        .col-md-6{
+            width: 49%;
+            
+        }
+        .row{
+            display: flex;
+        }
+        .cart-header{
+            font-size: 18px;
+        }
+        .chart-left{
+            padding-right: -15px;
+            border-right: 5px dotted #ffc0cba8;
+        }
+        .chart-right{
+            padding-left: 10px;
+        }
     </style>
 </head>
 
@@ -200,24 +221,7 @@
                         <h3>Thêm lời nhắc</h3>
                     </div>
                 </div> -->
-                <div class="row">
-                <div class="col-md-6">
-                    <div class="card">
-                        <div class="cart-header">
-                            <strong>Thống kê sách theo chủ đề</strong>
-                        </div>
-                        <div id="myChart" style="max-width:400px; height:200px"></div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="card">
-                        <div class="cart-header">
-                            <strong>Thống kê doanh thu</strong>
-                        </div>
-                        <div id="myChart2" style="max-width:400px; height:200px"></div>
-                    </div>
-                </div>
-            </div>
+                
 
             </div>
 

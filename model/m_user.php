@@ -26,13 +26,14 @@
     function user_getById($MaTK){
         return pdo_query_one("SELECT * FROM taikhoan WHERE MaTK=?",$MaTK);
     }
-    function user_edit($MaTK,$SoDienThoai,$HoTen,$ViTien,$Quyen){
-        pdo_execute("UPDATE taikhoan SET SoDienThoai=?,HoTen=?,ViTien=?,Quyen=? WHERE MaTK=?",$SoDienThoai,$HoTen,$ViTien,$Quyen,$MaTK);
+    function user_edit($MaTK,$SoDienThoai, $Email, $HoTen, $MatKhau, $DiaChi,$VaiTro){
+        pdo_execute("UPDATE taikhoan SET SoDienThoai=?,Email=?,HoTen=?,MatKhau=?,DiaChi=?,VaiTro=? WHERE MaTK=?",
+        $SoDienThoai, $Email, $HoTen, $MatKhau, $DiaChi,$VaiTro,$MaTK);
     }
     function user_delete($MaTK){
         pdo_execute("DELETE FROM taikhoan WHERE MaTK=?",$MaTK);
     }
     function user_countAll(){
-        return pdo_query_value("SELECT COUNT(*) FROM user");
+        return pdo_query_value("SELECT COUNT(*) FROM taikhoan");
     }
 ?>

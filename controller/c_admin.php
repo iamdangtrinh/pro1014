@@ -4,6 +4,10 @@
             case 'dashboard':
                 //lay du lieu
                 // hien thi du lieu
+                include_once 'model/m_product.php';
+                $tkProduct = count_product();
+                include_once 'model/m_user.php';
+                $tkUser = user_countAll();
                 include_once 'model/m_pdo.php';
                 include_once 'model/m_admin.php';
                 $usermoi=admin_getUser();
@@ -168,21 +172,23 @@
             case 'user-edit':
                 //lay du lieu
                 include_once 'model/m_user.php';
-                $tk=user_getById($_GET['id']);
+                $dsTK=user_getById($_GET['id']);
                 if(isset($_POST['submit'])){
-                    $SoDienThoai=$_POST['SoDienThoai'];
-                    $HoTen=$_POST['HoTen'];
-                    $ViTien=$_POST['ViTien'];
-                    $Quyen=$_POST['Quyen'];
-                    $kq=user_checkEmail($Email);
                     $MaTK=$_GET['id'];
+                    $HoTen = $_POST['HoTen'];
+                    $Email = $_POST['Email'];
+                    $SoDienThoai = $_POST['SoDienThoai'];
+                    $MatKhau = $_POST['MatKhau'];
+                    $DiaChi = $_POST['DiaChi'];
+                    $VaiTro = $_POST['VaiTro'];
+                    $kq=user_checkEmail($Email);
                     if($kq && $kq['MaTK']!=$MaTK){
                         // bi trung, khong them
-                        $_SESSION['loi']='Không thể tạo tài khoản với số điện thoại <strong>'.$Email.'</strong>';
+                        $_SESSION['loi']='<p>Không thể tạo tài khoản với Email <strong>'.$Email.'</strong> !</p>';
                     }else{
                         //khong trung
-                        user_edit($MaTK,$SoDienThoai,$HoTen,$ViTien,$Quyen);
-                        $_SESSION['thongbao']='Thông tin thay đổi đã được lưu lại!';
+                        user_edit($MaTK,$SoDienThoai, $Email, $HoTen, $MatKhau, $DiaChi,$VaiTro);
+                        $_SESSION['thongbao']='<p>Thông tin thay đổi đã được lưu lại !</p>';
                     }
                 }
                 // hien thi du lieu
@@ -191,7 +197,13 @@
             case 'user-delete':
                 //lay du lieu
                 include_once 'model/m_user.php';
-                user_delete($_GET['id']);
+                // Kiểm tra xem người dùng có tự xóa chính mình hay không => nếu đúng => báo lỗi
+                if ($_GET['id'] == $_SESSION['user']['MaTK']) {
+                    $_SESSION['loi'] = '<p>Không thể tự xóa tài khoản của bạn!</p>';}
+                else{
+                    user_delete($_GET['id']);
+                }
+                
                 header('location: '.$base_url.'admin/user');
                 // hien thi du lieu
                 $view_name='admin_user_delete';

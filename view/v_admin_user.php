@@ -125,8 +125,26 @@ th{
         .case-1{
             color: red;
         }
+        p{
+            font-size: 15px;
+        }
+        .alert-danger {
+        margin-bottom: 15px;
+        background-color: #f8d7da;
+        border: 2px solid #f5c2c7;
+        width: 100%;
+        padding: 20px;
+        border-radius: 5px;
+        color: #842029;
+    }
 </style>
             <h1>Tài khoản</h1>
+            <?php if (isset($_SESSION['loi'])) : ?>
+            <div class="alert alert-danger" role="alert">
+            <?= $_SESSION['loi'] ?>
+            </div>
+            <?php endif;
+unset($_SESSION['loi']); ?>
             <!-- Recent Orders Table -->
             <div class="recent-orders">
                 <table>

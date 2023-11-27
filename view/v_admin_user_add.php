@@ -50,6 +50,28 @@
     .btn:hover {
         background-color: #ffd5dd;
     }
+    p{
+        font-size: 15px;
+    }
+    .alert-success {
+        margin-bottom: 15px;
+        background-color: #cfe2ff;
+        border: 2px solid #b6d4fe;
+        width: 100%;
+        padding: 20px;
+        border-radius: 5px;
+        color: #084298;
+    }
+
+    .alert-danger {
+        margin-bottom: 15px;
+        background-color: #f8d7da;
+        border: 2px solid #f5c2c7;
+        width: 100%;
+        padding: 20px;
+        border-radius: 5px;
+        color: #842029;
+    }
 </style>
 <h2 class="mt-2">THÊM TÀI KHOẢN</h2><br>
 <?php if (isset($_SESSION['thongbao'])) : ?>

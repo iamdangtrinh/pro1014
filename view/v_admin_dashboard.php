@@ -21,7 +21,7 @@
                     <div class="status">
                         <div class="info">
                             <h3>Khách hàng</h3>
-                            <h1>2,981</h1>
+                            <h1><?=$tkUser?></h1>
                         </div>
                         <div class="progresss">
                             <svg>
@@ -55,6 +55,24 @@
             
 
             <!-- New Users Section -->
+            <div class="row chart">
+                <div class="col-md-6">
+                    <div class="card chart-left">
+                        <div class="cart-header">
+                            <strong>Thống kê sản phẩm theo danh mục</strong>
+                        </div>
+                        <div id="myChart" style="max-width:600px; height:300px"></div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card chart-right">
+                        <div class="cart-header">
+                            <strong>Thống kê doanh thu</strong>
+                        </div>
+                        <div id="myChart2" style="max-width:600px; height:300px"></div>
+                    </div>
+                </div>
+            </div>
             <div class="new-users">
                 <h2>Tài khoản mới</h2>
                 <div class="user-list">

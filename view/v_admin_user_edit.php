@@ -50,6 +50,35 @@
     .btn:hover {
         background-color: #ffd5dd;
     }
+
+    .img-edit {
+        border-radius: 50%;
+        margin-top: 15px;
+        width: 150px;
+        height: auto;
+    }
+    p{
+        font-size: 15px;
+    }
+    .alert-success {
+        margin-bottom: 15px;
+        background-color: #cfe2ff;
+        border: 2px solid #b6d4fe;
+        width: 100%;
+        padding: 20px;
+        border-radius: 5px;
+        color: #084298;
+    }
+
+    .alert-danger {
+        margin-bottom: 15px;
+        background-color: #f8d7da;
+        border: 2px solid #f5c2c7;
+        width: 100%;
+        padding: 20px;
+        border-radius: 5px;
+        color: #842029;
+    }
 </style>
 <h2 class="mt-2">Sửa tài khoản</h2><br>
 <?php if (isset($_SESSION['thongbao'])) : ?>
@@ -66,37 +95,38 @@ unset($_SESSION['thongbao']); ?>
 unset($_SESSION['loi']); ?>
 
 <form action="" method="POST">
-<div class="mb-3">
+    <div class="mb-3">
         <label for="HinhAnh" class="form-label">Hình Ảnh</label>
         <input type="file" class="form-control" id="HoTen" name="HoTen" value="">
+        <img class="img-edit" src="<?= $base_url ?>upload/avatar/<?= $dsTK['HinhAnh'] ?>" alt="">
     </div>
     <div class="mb-3">
         <label for="HoTen" class="form-label">Họ và tên</label>
-        <input type="text" class="form-control" id="HoTen" name="HoTen" value="">
+        <input type="text" class="form-control" id="HoTen" name="HoTen" value="<?= $dsTK['HoTen'] ?>">
     </div>
     <div class="mb-3 ">
         <label for="Email" class="form-label">Địa chỉ Email</label>
-        <input type="text" class="form-control" id="Email" name="Email" value="">
+        <input type="text" class="form-control" id="Email" name="Email" value="<?= $dsTK['Email'] ?>">
     </div>
     <div class="mb-3">
         <label for="SoDienThoai" class="form-label">Số điện thoại</label>
-        <input type="text" class="form-control" id="SoDienThoai" name="SoDienThoai" value="">
+        <input type="text" class="form-control" id="SoDienThoai" name="SoDienThoai" value="<?= $dsTK['SoDienThoai'] ?>">
     </div>
     <div class="mb-3">
         <label for="MatKhau" class="form-label">Mật khẩu</label>
-        <input type="text" class="form-control" id="MatKhau" name="MatKhau" value="">
+        <input type="text" class="form-control" id="MatKhau" name="MatKhau" value="<?= $dsTK['MatKhau'] ?>">
     </div>
     <div class="mb-3">
         <label for="DiaChi" class="form-label">Địa chỉ</label>
-        <input type="text" class="form-control" id="DiaChi" name="DiaChi" value="">
+        <input type="text" class="form-control" id="DiaChi" name="DiaChi" value="<?= $dsTK['DiaChi'] ?>">
     </div>
 
     <div class="mb-3">
         <label for="Quyen" class="form-label">Vai trò</label>
         <select class="form-control" id="VaiTro" name='VaiTro'>
-            <option value="0" selected>Khách hàng</option>
-            <option value="1">Quản trị</option>
-            <option value="2">Quản lí cấp cao</option>
+            <option value="0" <?= ($dsTK['VaiTro'] == 0) ? 'selectd' : '' ?>>Khách hàng</option>
+            <option value="1" <?= ($dsTK['VaiTro'] == 1) ? 'selectd' : '' ?>>Quản trị</option>
+            <option value="2" <?= ($dsTK['VaiTro'] == 2) ? 'selectd' : '' ?>>Quản lí cấp cao</option>
         </select>
     </div>
     <button type="submit" name="submit" class="btn btn-primary" value="submit">Xác nhận</button>
