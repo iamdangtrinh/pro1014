@@ -44,7 +44,13 @@
                 include_once 'model/m_admin.php';
                 admin_delete($_GET['id']);
                 $itemDM = admin_getById($_GET['id']);
-                header('location: '.$base_url.'admin/danhmuc');
+                header('location: '.$base_url.'admin/category');
+                break;
+            case 'product':
+                include_once 'model/m_pdo.php';
+                include_once 'model/m_admin.php';
+                
+                $view_name='admin_product';
                 break;
             case 'user': 
                 //lay du lieu
@@ -52,12 +58,6 @@
                 $dsTK=user_getAll();
                 // hien thi du lieu
                 $view_name='admin_user';
-                break;
-            case 'category':
-                //lay du lieu
-                include_once 'model/m_category.php';
-                // hien thi du lieu
-                $view_name='admin_category';
                 break;
             case 'book':
                 //lay du lieu

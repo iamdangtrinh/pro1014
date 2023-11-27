@@ -52,7 +52,7 @@
                     </span>
                     <h3>Danh mục</h3>
                 </a>
-                <a href="#">
+                <a href="<?=$base_url?>admin/product" class="list_group-item <?=(strpos($view_name,'product'))?'active':'' ?>">
                     <span class="material-icons-sharp">
                         inventory
                     </span>
