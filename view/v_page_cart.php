@@ -239,11 +239,7 @@
                         console.log("Số lượng sản phẩm chỉ còn");
                         $('.max_quantity').text(data);
                     } else {
-                        $('input[name="quantity"]').on('change', function (e) {                            
-                            $('.max_quantity').text(data);
-                            var input = 
-                            this.querySelector('.max_quantity');
-                        });
+                        // hiển thị modal dialog tại đây
                     }
                 }
             });
