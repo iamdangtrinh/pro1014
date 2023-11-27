@@ -49,7 +49,7 @@
             case 'product':
                 include_once 'model/m_pdo.php';
                 include_once 'model/m_admin.php';
-                
+                $show_product = admin_ShowProduct();
                 $view_name='admin_product';
                 break;
             case 'user': 

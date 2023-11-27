@@ -1,8 +1,8 @@
 <?php 
    include_once 'm_pdo.php';
-   function admin_ShowanhUser(){
+    function admin_ShowanhUser(){
     return pdo_query("SELECT * FROM taikhoan ");
-}
+    }
     function admin_getUser(){
         return pdo_query("SELECT * FROM taikhoan ORDER BY MaTK DESC LIMIT 4");
     }
@@ -20,6 +20,9 @@
     }
     function admin_delete($MaDM){
         pdo_execute("DELETE FROM danhmuc WHERE MaDM=?", $MaDM);
+    } 
+    function admin_ShowProduct(){
+        return pdo_query("SELECT * FROM sanpham ");
     }
     function admin_addkhuyenmai($maKhuyenMai, $TenKM, $codeKhuyenMai, $soTienGiam, $ngayBatDau, $ngayKetThuc, $SoLuong) {
     return pdo_execute("INSERT INTO khuyenmai (MaKM, TenKM, CodeKM, GiaKM, NgayBatDau, NgayKetThuc, SoLuong) 
