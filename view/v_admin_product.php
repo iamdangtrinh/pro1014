@@ -143,18 +143,13 @@ td{
                         </tr>
                     </thead>
                     <tbody>
-              
-                        <tr>
-                            <!-- <td style="text-align: center;">
-                                <form>
-                                    <input type="checkbox" name="" value="">
-                                </form>
-                            </td> -->
-                            <td>Bộ bé trai ngắn BST bé dần Animo B0222001 (6M-3Y,Vàng) </td>
-                            <td><img src="/upload/avatar/avatar_PHU.png" width="100" height="100" alt=""></td>
-                            <td>12</td>
-                            <td>199.000VND</td>
-                            <td>99.500VND</td>
+                        <?php foreach ($show_product as $item_Product): ?>
+                            <tr>
+                            <td><?=$item_Product['TenSP']?></td>
+                            <td><img src="<?=$base_url?>upload/demoes/demo23/products/<?=$item_Product['AnhSP']?>" width="100" height="100" alt=""></td>
+                            <td style="width: 12%;"><?=$item_Product['SoLuong']?></td>
+                            <td><?=$item_Product['Gia']?>VND</td>
+                            <td><?=$item_Product['GiaGiam']?>VND</td>
                             <td>
                                 <div class="lenh">
                                     <div class="sua" ><a href="<?=$base_url?>admin/" style="font-weight: 600; ">Sửa</a></div>
@@ -162,24 +157,7 @@ td{
                                 </div>
                             </td>
                         </tr>
-                        <tr>
-                            <!-- <td style="text-align: center;">
-                                <form>
-                                    <input type="checkbox" name="" value="">
-                                </form>
-                            </td> -->
-                            <td>Bộ bé trai ngắn BST bé dần Animo B0222001 (6M-3Y,Vàng) </td>
-                            <td><img src="/upload/avatar/avatar_PHU.png" width="100" height="100" alt=""></td>
-                            <td>12</td>
-                            <td>199.000VND</td>
-                            <td>99.500VND</td>
-                            <td>
-                                <div class="lenh">
-                                    <div class="sua" ><a href="<?=$base_url?>admin/" style="font-weight: 600; ">Sửa</a></div>
-                                    <div class="xoa"><a href="<?=$base_url?>admin/"  style="font-weight: 600; ">Xóa</a></div>
-                                </div>
-                            </td>
-                        </tr>
+                        <?php endforeach ;?>
                   
                     </tbody>
                     </tbody>
