@@ -134,3 +134,15 @@ label.error {
   overflow: hidden;
   height: 36px;
 }
+
+.result_coupon {
+  text-align: start;
+    margin-top: 8px;
+    font-size: 1.4rem;
+    color: #000;
+    font-weight: 500;
+}
+
+.not_product {
+  text-align: center;
+}

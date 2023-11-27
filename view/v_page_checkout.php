@@ -59,13 +59,8 @@
                         </tr>
                     </thead>
                     <tbody>
-
                         <?php
-
-                        foreach($show_cart_for_user as $value):
-                            extract($value)
-                                ?>
-
+                        foreach($show_cart_for_user as $value):extract($value)?>
                             <tr>
                                 <td class="product-col">
                                     <h5 class="product-title text-title">
@@ -90,27 +85,16 @@
                             <td>
                                 <h4>Tổng tiền</h4>
                             </td>
-
                             <td class="price-col">
-                                <span>
-                                    <?php
-                                    $total = '0';
-                                    foreach($show_cart_for_user as $value):extract($value)?>
-                                        <?= $total ?>
-                                    <?php endforeach ?>
-                                </span>
+                                <span class="total_checkout"></span>
                             </td>
                         </tr>
                     </tfoot>
                 </table>
-
                 <button type="submit" class="btn btn-dark btn-place-order" form="checkout-form">
                     ĐẶT HÀNG
                 </button>
             </div>
-
         </div>
-
     </div>
-
 </div>
