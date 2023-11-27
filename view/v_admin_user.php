@@ -165,7 +165,7 @@ th{
                                 </td>
                                 <td >
                                 <div class="lenh">
-                                    <div class="sua" ><a href="" style="font-weight: 600; ">Sửa</a></div>
+                                    <div class="sua" ><a href="<?=$base_url?>admin/user/edit/<?=$dsTK['MaTK']?>" style="font-weight: 600; ">Sửa</a></div>
                                     <div class="xoa"><a href="<?=$base_url?>admin/user/delete/<?=$dsTK['MaTK']?>"  style="font-weight: 600; ">Xóa</a></div>
                                 </div>
                                 </td>

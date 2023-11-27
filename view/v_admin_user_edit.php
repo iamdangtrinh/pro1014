@@ -51,7 +51,7 @@
         background-color: #ffd5dd;
     }
 </style>
-<h2 class="mt-2">THÊM TÀI KHOẢN</h2><br>
+<h2 class="mt-2">Sửa tài khoản</h2><br>
 <?php if (isset($_SESSION['thongbao'])) : ?>
     <div class="alert alert-success" role="alert">
         <?= $_SESSION['thongbao'] ?>
@@ -66,24 +66,28 @@ unset($_SESSION['thongbao']); ?>
 unset($_SESSION['loi']); ?>
 
 <form action="" method="POST">
+<div class="mb-3">
+        <label for="HinhAnh" class="form-label">Hình Ảnh</label>
+        <input type="file" class="form-control" id="HoTen" name="HoTen" value="">
+    </div>
     <div class="mb-3">
-        <label for="MaDM" class="form-label">Họ và tên</label>
+        <label for="HoTen" class="form-label">Họ và tên</label>
         <input type="text" class="form-control" id="HoTen" name="HoTen" value="">
     </div>
     <div class="mb-3 ">
-        <label for="TenDM" class="form-label">Địa chỉ Email</label>
+        <label for="Email" class="form-label">Địa chỉ Email</label>
         <input type="text" class="form-control" id="Email" name="Email" value="">
     </div>
     <div class="mb-3">
-        <label for="TenDM" class="form-label">Số điện thoại</label>
+        <label for="SoDienThoai" class="form-label">Số điện thoại</label>
         <input type="text" class="form-control" id="SoDienThoai" name="SoDienThoai" value="">
     </div>
     <div class="mb-3">
-        <label for="TenDM" class="form-label">Mật khẩu</label>
+        <label for="MatKhau" class="form-label">Mật khẩu</label>
         <input type="text" class="form-control" id="MatKhau" name="MatKhau" value="">
     </div>
     <div class="mb-3">
-        <label for="TenDM" class="form-label">Địa chỉ</label>
+        <label for="DiaChi" class="form-label">Địa chỉ</label>
         <input type="text" class="form-control" id="DiaChi" name="DiaChi" value="">
     </div>
 
