@@ -110,10 +110,9 @@ label.error {
 
 
 .name_cart {
-  width: 90%;
   height: 38px;
   margin-left: 10px;
-  color: rgba(0,0,0,.87);
+  color: rgba(0, 0, 0, .87);
   display: inline-block;
   margin-bottom: 5px;
   max-height: 40px;
@@ -122,4 +121,16 @@ label.error {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.text-title {
+  text-overflow: ellipsis;
+  word-break: break-all;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  width: 100%;
+  overflow: hidden;
+  height: 36px;
 }

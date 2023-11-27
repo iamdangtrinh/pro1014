@@ -1,5 +1,5 @@
 <div class="container checkout-container">
-<nav style="--bs-breadcrumb-divider: '';" aria-label="breadcrumb">
+    <nav style="--bs-breadcrumb-divider: '';" aria-label="breadcrumb">
         <ol class="breadcrumb justify-content-center">
             <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
             <li class="breadcrumb-item" aria-current="page">Giỏ hàng</li>
@@ -59,20 +59,31 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td class="product-col">
-                                <h5 class="product-title">
-                                    Áo em bé
-                                    <span class="product-qty">4</span>
-                                </h5>
-                            </td>
 
-                            <td class="price-col">
-                                <span>259.000 VND</span>
-                            </td>
-                        </tr>
+                        <?php
 
+                        foreach($show_cart_for_user as $value):
+                            extract($value)
+                                ?>
 
+                            <tr>
+                                <td class="product-col">
+                                    <h5 class="product-title text-title">
+                                        Tên sản phẩm:
+                                        <?= $TenSP ?>
+                                    </h5>
+                                    <p class="product-qty" style="font-weight: 400">Số lượng:
+                                        <?= $SoLuongSP ?>
+                                    </p>
+                                </td>
+
+                                <td class="price-col">
+                                    <span>
+                                        <?= number_format($total, 0, ',', '.') ?> VNĐ
+                                    </span>
+                                </td>
+                            </tr>
+                        <?php endforeach ?>
                     </tbody>
                     <tfoot>
                         <tr class="cart-subtotal">
@@ -81,29 +92,13 @@
                             </td>
 
                             <td class="price-col">
-                                <span>398.000 VND</span>
-                            </td>
-                        </tr>
-                        <!-- <tr class="order-shipping">
-                            <td class="text-left" colspan="2">
-                                <h4 class="m-b-sm">Đang chuyển hàng</h4>
-
-                                <div class="form-group form-group-custom-control">
-                                    <div class="custom-control custom-radio d-flex">
-                                        <input type="radio" class="custom-control-input" name="radio" checked />
-                                        <label class="custom-control-label">Nhận hàng tại địa phương</label>
-                                    </div>
-                                </div>
-                            </td>
-
-                        </tr> -->
-
-                        <tr class="order-total">
-                            <td>
-                                <h4>Tổng cộng</h4>
-                            </td>
-                            <td>
-                                <b class="total-price"><span>398.000 VND</span></b>
+                                <span>
+                                    <?php
+                                    $total = '0';
+                                    foreach($show_cart_for_user as $value):extract($value)?>
+                                        <?= $total ?>
+                                    <?php endforeach ?>
+                                </span>
                             </td>
                         </tr>
                     </tfoot>
@@ -113,10 +108,9 @@
                     ĐẶT HÀNG
                 </button>
             </div>
-            <!-- End .cart-summary -->
+
         </div>
-        <!-- End .col-lg-4 -->
+
     </div>
-    <!-- End .row -->
+
 </div>
-<!-- End .container -->
