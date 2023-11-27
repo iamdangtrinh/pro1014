@@ -12,12 +12,11 @@ function has_cart($MaTK)
 function his_cart($TongTien, $MaTK, $MaKM)
 {
     pdo_execute(
-        'INSERT INTO hoadon(`NgayLap`,`TongTien`,`TrangThai`, `MaTK`, `MaKM`) VALUES(?,?,?,?,?)',
+        'INSERT INTO hoadon(`NgayLap`,`TongTien`,`TrangThai`, `MaTK`) VALUES(?,?,?,?)',
         date('Y-m-d H:i:s'),
         $TongTien,
         'gio-hang',
-        $MaTK,
-        $MaKM,
+        $MaTK
     );
 }
 // thêm sản phẩm vào giỏ hàng
@@ -54,12 +53,18 @@ function has_coupon_code($coupon_code) {
     return pdo_query_one("SELECT * FROM khuyenmai WHERE CodeKM = ?", $coupon_code);
 }
 
+// đếm số lượng sản phẩm
 function count_cart($MaHD) {
     return pdo_query_value("SELECT COUNT(hd.MaHD) FROM chitiethoadon cthd LEFT JOIN hoadon hd ON hd.MaHD= cthd.MaHD WHERE MaTK = ?", $MaHD);
 }
 
+// xóa sản phẩm 
 function delete_cart_by_pro($MaSP) {
     return pdo_execute("DELETE FROM chitiethoadon WHERE MaSP = ?",$MaSP);
+}
+
+function quantity_cart_max($MaSP) {
+    return pdo_query_one("SELECT MaSP, SoLuong FROM sanpham WHERE MaSP = ?", $MaSP);
 }
 
 ?>

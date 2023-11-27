@@ -23,14 +23,13 @@ if(isset($_GET['act'])) {
                     // $MaSP = $_POST[''];
                     // $SoLuongSP = $_POST[''];
                     // $TongTien = $_POST[''];
-                    // $MaKM = 1;
 
                     // $has_cart = has_cart($MaTK);
                     // if ($has_cart) {
                     //     // nếu sản phẩm tồn tại mà người dùng mua nữa thì cập nhật lại giỏ hàng
                     //     add_to_cart($has_cart['MaHD'], $SoLuongSP, $MaSP);
                     // } else {
-                    //     his_cart($TongTien, $MaTK, $MaKM);
+                    //     his_cart($TongTien, $MaTK);
                     //     $has_cart = has_cart($MaTK);
                     //     add_to_cart($has_cart['MaHD'], $SoLuongSP, $MaSP);
                     // }

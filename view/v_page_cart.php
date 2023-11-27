@@ -54,6 +54,7 @@
                                         <span class="fa fa-plus plusJS"></span>
                                         <!-- <input class="horizontal-quantity form-control" type="text"> -->
                                     </div>
+                                    <span class="max_quantity"></span>
                                 </td>
                                 <td class="text-right m-auto" style="width:115px">
                                     <span class="subtotal-price">
@@ -233,6 +234,14 @@
                     quantity: newQuantity,
                     MaSP: MaSP,
                 },
+                success:function(data) {
+                    if(data === "quantity_max") {
+                        console.log("Số lượng sản phẩm chỉ còn");
+                        $('.max_quantity').text(data);
+                    } else {
+                        console.log($(this).text(data));
+                    }
+                }
             });
 
         });
