@@ -16324,13 +16324,17 @@ main .sticky-header .product-ratings:before {
     height: 14px;
     line-height: 1;
     text-indent: 0;
+    font-family: "Font Awesome 5 Free";
+    color: #dcdbd8;
     overflow: hidden;
     white-space: nowrap
 }
 
 .rating-stars a.active:before,
 .rating-stars a:hover:before {
-    content: "";
+    font-family: FontAwesome;
+    content: "\f005\f005\f005\f005\f005";
+    color: palevioletred;
     font-weight: 900
 }
 
@@ -16371,7 +16375,8 @@ main .sticky-header .product-ratings:before {
 }
 
 .rating-stars .star-5:before {
-    content: ""
+    font-family: FontAwesome;
+    content: "\f005\f005\f005\f005\f005";
 }
 
 .products-section {

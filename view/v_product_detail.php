@@ -7,10 +7,16 @@
                             </a></li>
                     </ol>
                 </nav>
+                <?php if(isset($_SESSION['thongbao'])): ?>
+                <div class="alert alert-rounded alert-success">
+                    <i class="fa fa-check" style="color: #9ad36a;"></i>
+                    <span><strong>Hoàn tất!</strong> <?=$_SESSION['thongbao'];?>.</span>
+				</div>
+                <?php endif; unset($_SESSION['thongbao']);?>?>
                 <div class="product-single-container product-single-default">
                     <div class="cart-message d-none">
                         <strong class="single-cart-notice">Quần áo</strong>
-                        <spanh>Đã thêm vào giỏ hàng </span>
+                        <span>Đã thêm vào giỏ hàng </span>
                     </div>
 
                     <div class="row">
@@ -145,7 +151,7 @@
                                 </div>
                                 <!-- End .product-ratings -->
 
-                                <a href="#" class="rating-link">( 6 đánh giá )</a>
+                                <a href="#" class="rating-link">( <?=$SLBinhLuan?> đánh giá )</a>
                             </div>
                             <!-- End .ratings-container -->
 
@@ -283,7 +289,7 @@
                         <li class="nav-item">
                             <a class="nav-link" id="product-tab-reviews" data-toggle="tab"
                                 href="#product-reviews-content" role="tab" aria-controls="product-reviews-content"
-                                aria-selected="false">Đánh giá (1)</a>
+                                aria-selected="false">Đánh giá (<?=$SLBinhLuan?>)</a>
                         </li>
                     </ul>
 
@@ -400,13 +406,14 @@
                         <div class="tab-pane fade" id="product-reviews-content" role="tabpanel"
                             aria-labelledby="product-tab-reviews">
                             <div class="product-reviews-content">
-                                <h3 class="reviews-title">1 đánh giá cho Quần áo</h3>
+                                <h3 class="reviews-title"><?=$SLBinhLuan?> đánh giá</h3>
 
                                 <div class="comment-list">
-                                    <div class="comments">
+                                    <?php foreach ($comment as $value):?>
+                                    <div class="comments mb-1">
                                         <figure class="img-thumbnail">
-                                            <img src="<?=$base_url?>upload/blog/author.jpg" alt="author" width="80"
-                                                height="80">
+                                            <img src="<?=$base_url?>upload/avatar/<?=$value['HinhAnh']?>" alt="author" width="80"
+                                                height="80" style="border-radius: 60px;">
                                         </figure>
 
                                         <div class="comment-block">
@@ -423,23 +430,26 @@
                                                 </div>
 
                                                 <span class="comment-by">
-                                                    <strong>Ai đó</strong> ngày/tháng/năm
+                                                    <strong><?=$value['HoTen']?></strong> <?=$value['NgayBL']?>
                                                 </span>
                                             </div>
 
                                             <div class="comment-content">
-                                                <p>Xuất sắc.</p>
+                                                <p><?=$value['NoiDung']?></p>
                                             </div>
                                         </div>
                                     </div>
+                                    <?php endforeach; ?>
                                 </div>
 
                                 <div class="divider"></div>
-
+                                
+                                <?php if(isset($_SESSION['user'])) :?>
                                 <div class="add-product-review">
-                                    <h3 class="review-title">Thêm một bài đánh giá</h3>
+                                    <h3 class="review-title">Viết bài đánh giá</h3>
 
-                                    <form action="#" class="comment-form m-0">
+                                    <form action="<?= $base_url ?>product/comment" method="post" class="comment-form m-0">
+                                        <input type="hidden" name="MaSP" value="<?=$_GET['id']?>">
                                         <div class="rating-form">
                                             <label for="rating">Đánh giá của bạn <span class="required">*</span></label>
                                             <span class="rating-stars">
@@ -450,7 +460,7 @@
                                                 <a class="star-5" href="#">5</a>
                                             </span>
 
-                                            <select name="rating" id="rating" required="" style="display: none;">
+                                            <select name="SoSao" id="rating" required="" style="display: none;">
                                                 <option value="6">xuất sắc</option>
                                                 <option value="5">hoàn hảo</option>
                                                 <option value="4">tốt</option>
@@ -462,43 +472,20 @@
 
                                         <div class="form-group">
                                             <label>
-                                                Đánh giá của bạn <span class="required">*</span></label>
-                                            <textarea cols="5" rows="6" class="form-control form-control-sm"></textarea>
+                                                Nội dung đánh giá <span class="required">*</span></label>
+                                            <textarea cols="5" rows="6" name="NoiDung" class="form-control form-control-sm"></textarea>
                                         </div>
                                         <!-- End .form-group -->
 
-
-                                        <div class="row">
-                                            <div class="col-md-6 col-xl-12">
-                                                <div class="form-group">
-                                                    <label>Tên <span class="required">Nguhiax</span></label>
-                                                    <input type="text" class="form-control form-control-sm" required>
-                                                </div>
-                                                <!-- End .form-group -->
-                                            </div>
-
-                                            <div class="col-md-6 col-xl-12">
-                                                <div class="form-group">
-                                                    <label>Email <span class="required">*</span></label>
-                                                    <input type="text" class="form-control form-control-sm" required>
-                                                </div>
-                                                <!-- End .form-group -->
-                                            </div>
-
-                                            <div class="col-md-12">
-                                                <div class=" custom-control custom-checkbox">
-                                                    <input type="checkbox" class="custom-control-input"
-                                                        id="save-name" />
-                                                    <label class="custom-control-label mb-0" for="save-name">Lưu thông
-                                                        tin</label>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <input type="submit" class="btn btn-primary" value="Submit">
+                                        <input type="submit" class="btn btn-primary" value="Gửi">
                                     </form>
                                 </div>
                                 <!-- End .add-product-review -->
+                                <?php else: ?>
+                                <div class="add-product-review">
+                                    <h3 class="review-title">Bạn cần đăng nhập và mua hàng để viết đánh giá!</h3>
+                                </div>
+                                <?php endif; ?>
                             </div>
                             <!-- End .product-reviews-content -->
                         </div>

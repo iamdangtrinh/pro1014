@@ -3,8 +3,6 @@ RewriteBase /pro1041/
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 
-RewriteRule ^category/detail/([0-9]+)/([0-9]+)$ index.php?mod=category&act=detail&id=$1&MaDMC=$2 [L]
-RewriteRule ^category/detail/([0-9]+)/([0-9]+)/page/([0-9]+)$ index.php?mod=category&act=detail&id=$1&MaDMC=$2&page=$3 [L]
 RewriteRule ^admin/(.*)/(.*)/(.*)$ index.php?mod=admin&act=$1-$2&id=$3 [L]
 RewriteRule ^admin/(.*)/(.*)$ index.php?mod=admin&act=$1-$2 [L]
 RewriteRule ^(.*)/shop/(.*)$ index.php?mod=$1&act=shop&shop=$2 [L]

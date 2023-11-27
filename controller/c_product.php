@@ -4,6 +4,9 @@ if(isset($_GET['act'])) {
         case 'detail':
             //lay du lieu
             include_once 'model/m_product.php';
+            $comment=comment_getByProduct($_GET['id']);
+            $SLBinhLuan=count_comment($_GET['id']);
+            // xong comment
             $product_detail = product_detail($_GET['id']);
             // hien thi du lieu
             $view_name = 'product_detail';
@@ -54,6 +57,17 @@ if(isset($_GET['act'])) {
         case 'delete_cart':
             include_once 'model/m_cart.php';
             delete_cart_by_pro($_GET['id']);
+            break;
+        case 'comment':
+            if(isset($_SESSION['user'])&&isset($_POST['MaSP'])&&isset($_POST['NoiDung'])&&isset($_POST['SoSao'])){
+                $MaTK = $_SESSION['user']['MaTK'];
+                $MaSP = $_POST['MaSP'];
+                $NoiDung = $_POST['NoiDung'];
+                $SoSao = $_POST['SoSao'];
+                addComment($MaTK,$MaSP,$NoiDung,$SoSao);
+                $_SESSION['thongbao']='Bạn đã bình luận sản phẩm thành công!';
+                header('location: '.$base_url.'product/detail/'.$MaSP.'');
+            }
             break;
 
         default:

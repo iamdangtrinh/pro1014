@@ -41,4 +41,16 @@
     function product_detail_describe($MoTa){
         return pdo_query_one("SELECT * FROM sanpham WHERE MoTa = $MoTa");
     }
+    function addComment($MaTK,$MaSP,$NoiDung,$SoSao){
+        pdo_execute("INSERT INTO binhluan(`MaTK`,`MaSP`,`NoiDung`,`SoSao`) VALUES (?,?,?,?)",$MaTK,$MaSP,$NoiDung,$SoSao);
+    }
+    function comment_getByProduct($MaSP){
+        return pdo_query("SELECT HoTen, HinhAnh, NgayBL, SoSao, NoiDung FROM taikhoan tk INNER JOIN binhluan bl ON tk.MaTK=bl.MaTK INNER JOIN sanpham sp ON bl.MaSP=sp.MaSP WHERE bl.MaSP=?",$MaSP);
+    }
+    function count_comment($MaSP){
+        return pdo_query_value("SELECT count(*) AS SLBinhLuan FROM sanpham sp INNER JOIN binhluan bl ON sp.MaSP=bl.MaSP WHERE bl.MaSP=?",$MaSP);
+    }
+    function check_comment($MaTK,$MaSP){
+        return pdo_query_value("SELECT SoLuongSP FROM taikhoan tk INNER JOIN hoadon hd ON tk.MaTK=hd.MaTK INNER JOIN chitiethoadon cthd ON hd.MaHD=cthd.MaHD WHERE tk.MaTK=? and cthd.MaSP=?",$MaTK,$MaSP);
+    }
 ?>
