@@ -139,17 +139,29 @@ td {
     padding: 10px;
     margin: 5px;
 }
+.form-label {
+    font-size: 18px;
+    color: #333;
+}
+.form-control {
+    width: 50%;
+    padding: 10px;
+    border: 1px solid pink;
+    border-radius: 5px;
+    margin-top: 5px;
+
+}
 </style>
 <h1>Quản lí Khuyến mãi</h1><br>
 <!-- Recent Orders Table -->
 <h2>Thêm mã khuyến mãi</h2>
 <form class="form" action="<?=$base_url?>admin/khuyenmai" method="post">
-    <input type="text" name="TenKM" placeholder="Tên khuyến mãi">
-    <input type="text" name="khuyenMai" placeholder="CodeKM">
-    <input type="text" name="soTienGiam" placeholder="Số tiền giảm">
-    <input type="text" name="SoLuong" placeholder="Số lượng">
-    <input type="date" name="ngayBatDau" placeholder="Ngày bắt đầu">
-    <input type="date" name="ngayKetThuc" placeholder="Ngày kết thúc">
+    <input type="text" class="form-control" name="TenKM" placeholder="Tên khuyến mãi">
+    <input type="text" class="form-control" name="khuyenMai" placeholder="CodeKM">
+    <input type="text" class="form-control" name="soTienGiam" placeholder="Số tiền giảm">
+    <input type="text" class="form-control" name="SoLuong" placeholder="Số lượng">
+    <input type="date" class="form-control" name="ngayBatDau" placeholder="Ngày bắt đầu">
+    <input type="date" class="form-control" name="ngayKetThuc" placeholder="Ngày kết thúc">
     <button type="submit" name="btn_km" class="them">Thêm</button>
 </form>
 <div class="box">
@@ -200,7 +212,7 @@ td {
 
 </div>
 <br>
-<div class="box_button">
+<!-- <div class="box_button">
     <div><a href="<?=$base_url?>admin/" class="remove" style="font-weight: 600;">Xóa hết</a></div>
-</div>
+</div> -->
 <!-- End of Recent Orders -->
