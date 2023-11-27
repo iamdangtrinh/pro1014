@@ -24,10 +24,10 @@
     function admin_ShowProduct(){
         return pdo_query("SELECT * FROM sanpham ");
     }
-    function admin_addkhuyenmai($maKhuyenMai, $TenKM, $codeKhuyenMai, $soTienGiam, $ngayBatDau, $ngayKetThuc, $SoLuong) {
-    return pdo_execute("INSERT INTO khuyenmai (MaKM, TenKM, CodeKM, GiaKM, NgayBatDau, NgayKetThuc, SoLuong) 
-                        VALUES (?, ?, ?, ?, ?, ?, ?)", 
-                        $maKhuyenMai, $TenKM, $codeKhuyenMai, $soTienGiam, $ngayBatDau, $ngayKetThuc, $SoLuong);
+    function admin_addkhuyenmai( $TenKM, $codeKhuyenMai, $soTienGiam, $ngayBatDau, $ngayKetThuc, $SoLuong) {
+    return pdo_execute("INSERT INTO khuyenmai (, TenKM, CodeKM, GiaKM, NgayBatDau, NgayKetThuc, SoLuong) 
+                        VALUES ( ?, ?, ?, ?, ?, ?)", 
+                         $TenKM, $codeKhuyenMai, $soTienGiam, $ngayBatDau, $ngayKetThuc, $SoLuong);
     }
     function getallkm(){
         return pdo_query("SELECT * FROM khuyenmai");
@@ -35,8 +35,8 @@
     function admin_getKMById($MaKM){
         return pdo_query_one("SELECT * FROM  khuyenmai WHERE MaKM=$MaKM");
     }
-    function updatekm($tenKhuyenMai, $giaKhuyenMai, $maKhuyenMai, $ngayBatDau, $ngayKetThuc, $SoLuong){
-        return pdo_execute("UPDATE khuyenmai SET TenKM = '$tenKhuyenMai', GiaKM = '$giaKhuyenMai', NgayBatDau = '$ngayBatDau', NgayKetThuc = '$ngayKetThuc', SoLuong = '$SoLuong' WHERE MaKM = '$maKhuyenMai' ");
+    function updatekm($tenKhuyenMai, $giaKhuyenMai, $ngayBatDau, $ngayKetThuc, $SoLuong, $maKhuyenMai){
+         pdo_execute("UPDATE khuyenmai SET TenKM = '$tenKhuyenMai', GiaKM = '$giaKhuyenMai', NgayBatDau = '$ngayBatDau', NgayKetThuc = '$ngayKetThuc', SoLuong = '$SoLuong' WHERE MaKM = '$maKhuyenMai'");
     }
     function is_codeKM($codeKhuyenMai){
         return pdo_query_value("SELECT COUNT(*) FROM khuyenmai WHERE CodeKM = '$codeKhuyenMai'");

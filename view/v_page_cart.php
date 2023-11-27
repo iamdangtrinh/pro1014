@@ -27,7 +27,7 @@
                             <tr class="product-row total_product_parent">
                                 <td>
                                     <figure class="product-image-container">
-                                        <a href="<?= $base_url ?>detail" class="product-image">
+                                        <a href="<?=$base_url?>product/detail/<?= $MaSP?>" class="product-image">
                                             <img src="<?= $base_url ?>upload/demoes/demo23/products/<?= $AnhSP ?>"
                                                 alt="<?= $TenSP ?>">
                                         </a>
@@ -37,11 +37,11 @@
                                     </figure>
                                 </td>
                                 <td class="product-col text-left">
-                                    <a href="" class="name_cart">
+                                    <a href="<?=$base_url?>product/detail/<?= $MaSP?>" class="name_cart">
                                         <?= $TenSP ?>
                                     </a>
                                 </td>
-                                <td class="m-auto">
+                                <td class="m-auto" style="width:115px">
                                     <?= number_format($Gia, 0, '.', '.')." VND" ?>
                                 </td>
                                 <td>
@@ -55,7 +55,7 @@
                                         <!-- <input class="horizontal-quantity form-control" type="text"> -->
                                     </div>
                                 </td>
-                                <td class="text-right m-auto">
+                                <td class="text-right m-auto" style="width:115px">
                                     <span class="subtotal-price">
                                         <div class="total_price"></div>
                                     </span>
@@ -121,7 +121,7 @@
                                     </div>
                                 </div> -->
 
-                                <!-- <form action="#">
+                            <!-- <form action="#">
                                     <div class="form-group form-group-sm">
                                         <label>Vận chuyển đến <strong>TP HCM.</strong></label>
                                         <div class="select-custom">
@@ -179,27 +179,18 @@
             for (const product of total_product_parent) {
                 var price = product.querySelector('.price_product').value;
                 var quantity = product.querySelector('.quantity_product').value;
-
                 total = parseInt(price) * quantity
                 product.querySelector('.total_price').innerText = total.toLocaleString('vi-VN') + ' VND';
                 total_cart += total;
             }
 
             var coupon_value = $('.coupon_value').val();
-            // if(isNumber(coupon_value)) {
-            //     console.log(total_cart -= coupon_value);
-            //     document.querySelector('.total_cart').innerText = total_cart.toLocaleString('vi-VN') + ' VND';
-            // } else {
             total_cart -= (coupon_value) ? coupon_value : 0;
             document.querySelector('.total_cart').innerText = total_cart.toLocaleString('vi-VN') + ' VND';
-            // }
-
         }
         updateTotal()
 
-
         $('.minusJS').click(function () {
-
             var product_box = this.closest('.product-single-qty');
             var quantity_input = product_box.querySelector('.quantity_product');
             var currentQuantity = parseInt(quantity_input.value);
@@ -217,10 +208,8 @@
             $(quantity_input).trigger('change');
         });
 
-
         $('input[name="quantity"]').on('change', function (e) {
             e.preventDefault();
-
             var newQuantity = $(this).val(); // Get the new quantity value
             newQuantity = newQuantity.replace(/[^0-9]/g, "");
             if (newQuantity == null && newQuantity == isNaN && newQuantity == undefined) {
@@ -271,7 +260,6 @@
                     }
                 },
             })
-
         })
     })
 

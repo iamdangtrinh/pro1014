@@ -39,7 +39,7 @@ function add_to_cart($MaHD, $SoLuongSP, $MaSP)
 }
 function show_cart_for_user($MaTK)
 {
-    return pdo_query("SELECT *
+    return pdo_query("SELECT *, sp.Gia * ct.SoLuongSP as total
     FROM hoadon hd 
     INNER JOIN chitiethoadon ct ON 
     hd.MaHD = ct.MaHD

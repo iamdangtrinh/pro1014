@@ -32,8 +32,7 @@
                                 <div class="category-list">
                                     <a href="demo23-shop.html" class="product-category"><?=$ghim['TenDM']?></a>
                                 </div>
-                                <a href="wishlist.html" title="Wishlist" class="btn-icon-wish"><i
-                                        class="icon-heart"></i></a>
+                                <a href="wishlist.html" title="Wishlist" class="btn-icon-wish"><i class="fa-solid fa-heart"></i></a>
                             </div>
                             <h3 class="product-title">
                                 <a href="demo23-product.html"><?=$ghim['TenSP']?></a>

@@ -23,7 +23,7 @@
     <!-- Main CSS File -->
     <link rel="stylesheet" href="<?= $base_url ?>assets/css/style23.css">
     <link rel="stylesheet" href="<?= $base_url ?>assets/css/demo23.min.css">
-    <link rel="stylesheet" href="<?= $base_url ?>assets/css/all.min.css">
+    <!-- <link rel="stylesheet" href="<?= $base_url ?>assets/css/all.min.css"> -->
 
     <!-- Js -->
     <script src="<?= $base_url ?>assets/js/jquery.min.js"></script>

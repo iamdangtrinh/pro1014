@@ -107,8 +107,7 @@
                                                     <div class="category-list">
                                                         <a href="demo23-product.html" class="product-category"><?= $product['TenDM'];?></a>
                                                     </div>
-                                                    <a href="wishlist.html" title="Wishlist" class="btn-icon-wish"><i
-                                                            class="icon-heart"></i></a>
+                                                    <a href="wishlist.html" title="Wishlist" class="btn-icon-wish"><i class="fa-solid fa-heart"></i></a>
                                                 </div>
                                                 <h3 class="product-title">
                                                     <a href="demo23-product.html"><?= $product['TenSP'];?></a>
@@ -149,8 +148,7 @@
                                                     <div class="category-list">
                                                         <a href="demo23-product.html" class="product-category"><?= $product['TenDM'];?></a>
                                                     </div>
-                                                    <a href="wishlist.html" title="Wishlist" class="btn-icon-wish"><i
-                                                            class="icon-heart"></i></a>
+                                                    <a href="wishlist.html" title="Wishlist" class="btn-icon-wish"><i class="fa-solid fa-heart"></i></a>
                                                 </div>
                                                 <h3 class="product-title">
                                                     <a href="demo23-product.html"><?= $product['TenSP'];?></a>

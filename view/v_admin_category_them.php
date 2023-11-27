@@ -51,7 +51,7 @@ form {
         
         <form action="" method="POST">
             <div class="mb-3">
-                <label for="MaDM" class="form-label">Mã danh mục</label>
+                <label for="MaDM"   lass="form-label"    >Mã danh mục</label>
                 <input  type="text" class="form-control" id="MaDM" name="MaDM" value="">
             </div>
             <div class="mb-3">

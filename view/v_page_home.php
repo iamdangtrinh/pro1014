@@ -194,8 +194,7 @@
                             <div class="category-list">
                                 <a href="demo23-shop.html" class="product-category">Danh mục</a>
                             </div>
-                            <a href="wishlist.html" title="Add to Wishlist" class="btn-icon-wish"><i
-                                    class="icon-heart"></i></a>
+                            <a href="wishlist.html" title="Add to Wishlist" class="btn-icon-wish"><i class="fa-solid fa-heart"></i></a>
                         </div>
                         <h3 class="product-title">
                             <a href="<?= $base_url ?>product/detail"><?=$product['TenSP']?></a>
@@ -290,7 +289,7 @@
             <div class="col-6 col-md-4 col-xl-3">
                 <div class="product-default inner-quickview inner-icon">
                     <figure>
-                        <a href="<?= $base_url ?>product/detail" title="Chi tiết sản phẩm">
+                        <a href="<?= $base_url ?>product/detail/<?=$product['MaSP']?>" title="Chi tiết sản phẩm">
                             <img src="<?= $base_url ?>upload/demoes/demo23/products/<?=$product['AnhSP']?>" width="217"
                                 height="217" alt="product">
                         </a>
@@ -308,8 +307,7 @@
                             <div class="category-list">
                                 <a href="demo23-shop.html" class="product-category">Danh mục</a>
                             </div>
-                            <a href="wishlist.html" title="Add to Wishlist" class="btn-icon-wish"><i
-                                    class="icon-heart"></i></a>
+                            <a href="wishlist.html" title="Add to Wishlist" class="btn-icon-wish"><i class="fa-solid fa-heart"></i></a>
                         </div>
                         <h3 class="product-title">
                             <a href="<?= $base_url ?>product/detail"><?=$product['TenSP']?></a>
