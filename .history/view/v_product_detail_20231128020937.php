@@ -207,7 +207,7 @@
                                 <label class="sr-only">Chia sẻ:</label>
 
                                 <div class="social-icons mr-2">
-                                    <a href="#" class="social-icon social-facebook icon-facebook" target="_blank"
+                                    <a href="#" class="fa-brands fa-facebook"></i>" target="_blank"
                                         title="Facebook"></a>
                                     <a href="#" class="social-icon social-twitter icon-twitter" target="_blank"
                                         title="Twitter"></a>

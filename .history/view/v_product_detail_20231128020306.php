@@ -194,7 +194,7 @@
 
                                 <!-- End .product-single-qty -->
 
-                                <a href="" class="btn btn-dark add-cart mr-2" title="Thêm vào giỏ hàng">Thêm vào
+                                <a href="" class="btn btn-dark add-cart mr-2" title="Add to Cart">Thêm vào
                                     giỏ hàng </a>
 
                                 <a href="cart.html" class="btn btn-gray view-cart d-none">Xem giỏ hàng</a>
@@ -220,8 +220,8 @@
                                 </div>
                                 <!-- End .social-icons -->
 
-                                <a href="" class="btn-icon-wish add-wishlist"
-                                    title="Thêm vào yêu thích"><i class="icon-wishlist-2"></i><span>Yêu thích</span></a>
+                                <a href="<?=$?>" class="btn-icon-wish add-wishlist"
+                                    title="Add to Wishlist"><i class="icon-wishlist-2"></i><span>Yêu thích</span></a>
                             </div>
                             <!-- End .product single-share -->
                         </div>
