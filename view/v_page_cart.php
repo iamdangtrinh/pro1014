@@ -27,7 +27,7 @@
                             <tr class="product-row total_product_parent">
                                 <td>
                                     <figure class="product-image-container">
-                                        <a href="<?=$base_url?>product/detail/<?= $MaSP?>" class="product-image">
+                                        <a href="<?= $base_url ?>product/detail/<?= $MaSP ?>" class="product-image">
                                             <img src="<?= $base_url ?>upload/demoes/demo23/products/<?= $AnhSP ?>"
                                                 alt="<?= $TenSP ?>">
                                         </a>
@@ -37,7 +37,7 @@
                                     </figure>
                                 </td>
                                 <td class="product-col text-left">
-                                    <a href="<?=$base_url?>product/detail/<?= $MaSP?>" class="name_cart">
+                                    <a href="<?= $base_url ?>product/detail/<?= $MaSP ?>" class="name_cart">
                                         <?= $TenSP ?>
                                     </a>
                                 </td>
@@ -51,10 +51,10 @@
                                         <input type="hidden" class="price_product" value="<?= $Gia ?>">
                                         <input type="text" name="quantity" value="<?= $SoLuongSP ?>"
                                             class="quantity_product">
-                                        <span class="fa fa-plus plusJS"></span>
+                                            <span class="fa fa-plus plusJS"></span>
+                                            <p class="max_quantity"></p>
                                         <!-- <input class="horizontal-quantity form-control" type="text"> -->
                                     </div>
-                                    <span class="max_quantity"></span>
                                 </td>
                                 <td class="text-right m-auto" style="width:115px">
                                     <span class="subtotal-price">
@@ -234,12 +234,16 @@
                     quantity: newQuantity,
                     MaSP: MaSP,
                 },
-                success:function(data) {
-                    if(data === "quantity_max") {
+                success: function (data) {
+                    if (data === "quantity_max") {
                         console.log("Số lượng sản phẩm chỉ còn");
                         $('.max_quantity').text(data);
                     } else {
-                        console.log($(this).text(data));
+                        $('input[name="quantity"]').on('change', function (e) {                            
+                            $('.max_quantity').text(data);
+                            var input = 
+                            this.querySelector('.max_quantity');
+                        });
                     }
                 }
             });
