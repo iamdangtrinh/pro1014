@@ -574,7 +574,7 @@ main .recent-orders a{
     }
 
     main .new-users .user-list .user{
-        flex-basis: 40%;
+        flex-basis: 30%;
     }
 
     main .recent-orders {
@@ -586,7 +586,8 @@ main .recent-orders a{
     }
 
     main .recent-orders table{
-        width: 83vw;
+        width: 88vw;
+        border-radius: 10px;
     }
 
     main table thead tr th:last-child,
