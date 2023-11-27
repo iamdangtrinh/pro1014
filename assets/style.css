@@ -161,6 +161,7 @@ aside .sidebar{
     position: relative;
     top: 1.5rem;
     transition: all 0.3s ease;
+    margin-top: -30px;
 }
 
 aside .sidebar:hover{
@@ -634,7 +635,7 @@ main .recent-orders a{
     aside .logo h2{
         display: inline;
     }
-
+ 
     aside .sidebar h3{
         display: inline;
     }

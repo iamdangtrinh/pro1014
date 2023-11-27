@@ -14,6 +14,9 @@
             background-color: var(--text3-color);
             border-color: var(--bs-list-group-active-border-color);
         }
+        aside .sidebar{
+            margin-top: -30px;
+        }
     </style>
 </head>
 

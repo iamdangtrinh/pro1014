@@ -52,6 +52,10 @@
                 $show_product = admin_ShowProduct();
                 $view_name='admin_product';
                 break;
+            case 'product-add':
+                
+                $view_name='admin_product_add';
+                break;
             case 'user': 
                 //lay du lieu
                 include_once 'model/m_user.php';

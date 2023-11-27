@@ -139,6 +139,7 @@ td{
                             <th>Số lượng</th>
                             <th>Giá</th>
                             <th>Giá giảm</th>
+                            <th>Trạng thái</th>
                             <th style="text-align: center;">Lệnh</th>
                         </tr>
                     </thead>
@@ -167,7 +168,7 @@ td{
             </div>
             <br>
            <div class="box_button">
-                <div><a href="<?=$base_url?>admin/" class="them" style="font-weight: 600;">Thêm mới</a></div>
+                <div><a href="<?=$base_url?>admin/product/add" class="them" style="font-weight: 600;">Thêm mới</a></div>
                 <div><a href="<?=$base_url?>admin/" class="remove" style="font-weight: 600;">Xóa hết</a></div>
            </div>
             <!-- End of Recent Orders -->
