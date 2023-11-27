@@ -58,7 +58,7 @@
                     </span>
                     <h3>Sản phẩm</h3>
                 </a>
-                <a href="#">
+                <a href="<?=$base_url?>admin/binhluan" class="list_group-item <?=(strpos($view_name,'binhluan'))?'active':'' ?>">
                     <span class="material-icons-sharp">
                         inventory
                     </span>

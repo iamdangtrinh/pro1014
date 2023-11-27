@@ -192,6 +192,11 @@
                 // hien thi du lieu
                 $view_name='admin_user_delete';
                 break;
+            case 'binhluan':
+                //lay du lieu
+                include_once 'model/m_user.php';
+                $view_name='admin_binhluan';
+                break;
             default:
                 $view_name='admin_dashboard';
                 break;
