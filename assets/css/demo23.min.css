@@ -17987,7 +17987,7 @@ span.toggle {
     z-index: 10;
     background-color: #fff;
     width: 100%;
-    /* display: none; */
+    display: none;
     min-height: 60px;
 }
 .form-input:focus + .input-search{
