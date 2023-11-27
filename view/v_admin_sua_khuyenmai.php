@@ -135,24 +135,74 @@ td {
     padding: 10px;
     margin: 5px;
 }
+.row{
+        display: none;
+    }
+    body {
+    font-family: Arial, sans-serif;
+}
+
+form {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid pink;
+    border-radius: 10px;
+    background-color: #f8f8f8;
+}
+
+.form-label {
+    font-size: 18px;
+    color: #333;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid pink;
+    border-radius: 5px;
+    margin-top: 5px;
+
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    background-color: pink;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    background-color: #ffd5dd;
+}
 </style>
 <h1>Quản lí Khuyến mãi</h1><br>
 <!-- Recent Orders Table -->
 <h2>Sửa khuyến mãi</h2>
-<form class="form" action="" method="POST">
-    <input type="hidden" name="MaKM" value="<?= $show_KM['MaKM'];?>">
-    <!-- Các trường chỉnh sửa, ví dụ: -->
-    <label for="TenKM">Code khuyến mãi: </label><input type="text" name="TenKM" value="<?= $show_KM['TenKM'];?>"><br>
-    <label for="TenKM">Giá được giảm:<input type="text" name="GiaKM" value="<?= $show_KM['GiaKM'];?>"><br>
-    <label for="TenKM">Ngày bắt đầu:<input type="date" name="NgayBatDau" value="<?= $show_KM['NgayBatDau'];?>"><br>
-    <label for="TenKM">Ngày kết thúc:<input type="date" name="NgayKetThuc" value="<?= $show_KM['NgayKetThuc'];?>"><br>
-    <label for="TenKM">Số Lượng:<input type="text" name="SoLuong" value="<?= $show_KM['SoLuong'];?>"><br>
-    <!-- Các trường khác -->
-    <button type="submit" name="btn_sua" class="them">Lưu chỉnh sửa</button>
-</form>
+<form action="" method="POST">
+<input type="hidden" name="MaKM" value="<?= $show_KM['MaKM'];?>">
+            <div class="mb-3">
+            <label for="TenKM" lass="form-label">Code khuyến mãi: </label><input type="text" class="form-control" name="TenKM" value="<?= $show_KM['TenKM'];?>"><br>
+            </div>
+            <div class="mb-3">
+            <label for="GiaKM" lass="form-label">Giá được giảm:<input type="text" class="form-control" name="GiaKM" value="<?= $show_KM['GiaKM'];?>"><br>
+            </div>
+            <div class="mb-3">
+            <label for="NgayBatDau"lass="form-label">Ngày bắt đầu:<input type="date" class="form-control" name="NgayBatDau" value="<?= $show_KM['NgayBatDau'];?>"><br>
+            </div>
+            <div class="mb-3">
+            <label for="NgayKetThuc" lass="form-label">Ngày kết thúc:<input type="date" class="form-control" name="NgayKetThuc" value="<?= $show_KM['NgayKetThuc'];?>"><br>
+            </div>
+            <div class="mb-3">
+            <label for="SoLuong" lass="form-label">Số Lượng:<input type="text" class="form-control" name="SoLuong" value="<?= $show_KM['SoLuong'];?>"><br>
+            </div>
+            <button type="submit" name="btn_sua" class="them">Lưu chỉnh sửa</button>
+        </form>
 <h4><?php 
-if (isset($loi)) {
-    echo $loi;
-}
 ?></h4>
 <!-- End of Recent Orders -->
