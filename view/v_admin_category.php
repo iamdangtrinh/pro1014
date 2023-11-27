@@ -114,7 +114,7 @@ td{
         
         }
 </style>
-            <h1>Danh mục</h1>
+            <h1>Quản lí danh mục</h1>
             <!-- Recent Orders Table -->
             <div class="box">
                
@@ -154,7 +154,7 @@ td{
             </div>
             <br>
            <div class="box_button">
-                <div><a href="<?=$base_url?>admin/them" class="them" style="font-weight: 600;">Thêm mới</a></div>
+                <div><a href="<?=$base_url?>admin/category/them" class="them" style="font-weight: 600;">Thêm mới</a></div>
                 <div><a href="<?=$base_url?>admin/" class="remove" style="font-weight: 600;">Xóa hết</a></div>
            </div>
             <!-- End of Recent Orders -->

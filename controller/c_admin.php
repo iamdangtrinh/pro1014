@@ -9,15 +9,15 @@
                 $usermoi=admin_getUser();
                 $view_name='admin_dashboard';
                 break;
-            case 'danhmuc':
+            case 'category':
                 //lay du lieu
                 // hien thi du lieu
                 include_once 'model/m_pdo.php';
                 include_once 'model/m_admin.php';
                 $dsADMIN_DM = admin_getALLDM();
-                $view_name='admin_danhmuc';
+                $view_name='admin_category';
                 break;
-            case 'them':
+            case 'category-them':
                 include_once 'model/m_pdo.php';
                 include_once 'model/m_admin.php';
                 if(isset($_POST['submit'])){
@@ -26,7 +26,7 @@
                     $MaDMC=$_POST['MaDMC'];
                     danhmuc_add( $MaDM,$TenDM,$MaDMC);
                     }
-                $view_name='admin_them_danhmuc';
+                $view_name='admin_category_them';
                 break;
             case 'category-edit':
                 include_once 'model/m_admin.php';

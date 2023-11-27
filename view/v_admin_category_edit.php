@@ -58,6 +58,7 @@ form {
                 <label for="MaDMC" class="form-label">Mã danh mục con</label>
                 <input  type="text" class="form-control" id="MaDMC" name="MaDMC" value="<?= $itemDM['MaDMC']?>">  
             </div>
+            
             <!-- <div class="mb-3">
                 <label for="Quyen" class="form-label">Quyền</label>
                 <select class="form-control" id="Quyen" name='Quyen'>
