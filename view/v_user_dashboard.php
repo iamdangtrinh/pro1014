@@ -25,22 +25,18 @@
                                 <a class="nav-link active" id="dashboard-tab" data-toggle="tab" href="#dashboard"
                                     role="tab" aria-controls="dashboard" aria-selected="true"><i class="fa-brands fa-windows"></i> &nbsp; Bảng Điều Khiển</a>
                             </li>
-
                             <li class="nav-item">
                                 <a class="nav-link" id="order-tab" data-toggle="tab" href="#account" role="tab"
                                     aria-controls="order" aria-selected="true"><i class="fa-solid fa-user"></i> &nbsp; Thông tin tài khoản</a>
                             </li>
-
                             <li class="nav-item active">
                                 <a class="nav-link" id="order-tab" data-toggle="tab" href="#pass" role="tab"
                                     aria-controls="order" aria-selected="true"><i class="fa-solid fa-lock"></i> &nbsp; Đổi mật khẩu</a>
                             </li>
-
                             <li class="nav-item">
                                 <a class="nav-link" id="download-tab" data-toggle="tab" href="#download" role="tab"
                                     aria-controls="download" aria-selected="false"><i class="fa-solid fa-clock-rotate-left"></i> &nbsp; Lịch sử đặt hàng</a>
                             </li>
-
                             <li class="nav-item">
                                 <a class="nav-link" href="<?= $base_url ?>page/wishlist"><i class="fa-solid fa-heart"></i> &nbsp; Yêu thích</a>
                             </li>

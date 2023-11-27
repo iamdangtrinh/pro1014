@@ -36,7 +36,10 @@
                 $view_name='page_aboutUs';
                 break;
             case 'checkout':
+                include_once 'model/m_cart.php';
+                
                 //laydulieu
+                $title = "Kiểm tra thanh toán";
                 $view_name='page_checkout';
                 break;
             case 'wishlist':

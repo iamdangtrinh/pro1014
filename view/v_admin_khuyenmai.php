@@ -144,7 +144,6 @@ td {
 <!-- Recent Orders Table -->
 <h2>Thêm mã khuyến mãi</h2>
 <form class="form" action="<?=$base_url?>admin/khuyenmai" method="post">
-    <input type="text" name="MaKM" placeholder="Mã khuyến mãi">
     <input type="text" name="TenKM" placeholder="Tên khuyến mãi">
     <input type="text" name="khuyenMai" placeholder="CodeKM">
     <input type="text" name="soTienGiam" placeholder="Số tiền giảm">
@@ -153,21 +152,20 @@ td {
     <input type="date" name="ngayKetThuc" placeholder="Ngày kết thúc">
     <button type="submit" name="btn_km" class="them">Thêm</button>
 </form>
-
-<h2><?php if (isset($loi)) {
-    echo$loi;
-} unset($loi);?></h2>
-<h2><?php if (isset($thongbao)) {
-    echo$thongbao;
-}unset($thongbao);?></h2>
 <div class="box">
     <table>
         <thead>
             <br>
             <h2>Các mã khuyến mãi</h2><br>
+            <h2><?php if (isset($loi)) {
+                echo $loi;
+            }?></h2>
+            <h2><?php if (isset($thongbao)) {
+                echo $thongbao;
+            }?></h2>
             <tr>
                 <!-- <th class="chon">Chọn</th> -->
-                <th>Mã khuyến mãi</th>
+                <th>Tên khuyến mãi</th>
                 <th>Số tiền giảm </th>
                 <th>Ngày bắt đầu</th>
                 <th>Ngày kết thúc</th>
@@ -178,16 +176,18 @@ td {
         <tbody>
             <?php foreach($show_KM as $show):?>
             <tr>
-                <td><?= $show['MaKM'];?></td>
+                <td><?= $show['TenKM'];?></td>
                 <td><?= $show['GiaKM'];?></td>
                 <td><?= $show['NgayBatDau'];?></td>
                 <td><?= $show['NgayKetThuc'];?></td>
                 <td><?= $show['SoLuong'];?></td>
                 <td>
                     <div class="lenh">
-                        <div class="sua"><a href="<?=$base_url?>admin/edit/khuyenmai/<?= $show['MaKM'];?>" style="font-weight: 600; ">Sửa</a>
+                        <div class="sua"><a href="<?=$base_url?>admin/edit/khuyenmai/<?= $show['MaKM'];?>"
+                                style="font-weight: 600; ">Sửa</a>
                         </div>
-                        <div class="xoa"><a href="<?=$base_url?>admin/delete/khuyenmai" style="font-weight: 600; ">Xóa</a>
+                        <div class="xoa"><a href="<?=$base_url?>admin/delete/khuyenmai/<?= $show['MaKM'];?>"
+                                style="font-weight: 600; ">Xóa</a>
                         </div>
                     </div>
                 </td>

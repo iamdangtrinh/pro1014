@@ -70,7 +70,6 @@
                 include_once 'model/m_admin.php';
                 //lay du lieu
                 if (isset($_POST['btn_km'])) {
-                    $maKhuyenMai = $_POST['MaKM'];
                     $TenKM = $_POST['TenKM'];
                     $SoLuong = $_POST['SoLuong'];
                     $codeKhuyenMai = $_POST['khuyenMai'];
@@ -84,9 +83,9 @@
                     } else {
                     // Nếu không trùng, thực hiện thêm vào cơ sở dữ liệu
                         
-                    $add_khuyenmai = admin_addkhuyenmai($maKhuyenMai, $TenKM, $codeKhuyenMai, $soTienGiam, $ngayBatDau, $ngayKetThuc, $SoLuong);
+                    $add_khuyenmai = admin_addkhuyenmai( $TenKM, $codeKhuyenMai, $soTienGiam, $ngayBatDau, $ngayKetThuc, $SoLuong);
                     
-                        if ($add_khuyenmai) {
+                        if ($add_khuyenmai == true) {
                                    
                     $thongbao = "Dữ liệu đã được thêm thành công!";
                         } 
@@ -116,25 +115,20 @@
                             $loi = "Mã khuyến mãi '$tenKhuyenMai' đã tồn tại. Vui lòng chọn một mã khuyến mãi khác.";
                         } else {
                         // Nếu không trùng, thực hiện thêm vào cơ sở dữ liệu
-                        $updateQuery = updatekm($tenKhuyenMai, $giaKhuyenMai, $maKhuyenMai, $ngayBatDau, $ngayKetThuc, $SoLuong);
-                        
-                            if ($updateQuery) {
-                                       
-                        $loi = "Dữ liệu đã được thêm thành công!";
-                            } 
-                        else {
-                                $loi = "Dữ liệu đã được thêm not thành công!";
-                            }
+                        $updateQuery = updatekm($tenKhuyenMai, $giaKhuyenMai, $ngayBatDau, $ngayKetThuc, $SoLuong, $maKhuyenMai);
+                        header('Location: '.$base_url.'admin/khuyenmai');
                         }
                     }                
                     // hien thi du lieu
+                    $title = "Sửa khuyến mãi";
                     $view_name='admin_sua_khuyenmai';
                     break;
-                case 'dalete-khuyenmai':
+                case 'delete-khuyenmai':
                     include_once 'model/m_pdo.php';
                     include_once 'model/m_admin.php';
-                     xoakm($_GET['MaKM']);
-                    $view_name='admin_khuyenmai';
+                    $show_KM = admin_getKMById($_GET['id']);
+                     xoakm($_GET['id']);
+                     header('Location: '.$base_url.'admin/khuyenmai');
                     break;
             case 'history':
                 //lay du lieu
