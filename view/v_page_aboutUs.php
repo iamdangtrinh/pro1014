@@ -1,10 +1,9 @@
             <div class="page-header page-header-bg text-left" style="background: 50%/cover #D4E1EA url('<?= $base_url ?>upload/page-header-bg.jpg');">
             	<div class="container">
-            		<h1><span>VỀ CHÚNG TÔI</span>
-            			VỀ CỬA HÀNG</h1>
+            		<h2>VỀ CỬA HÀNG</h2>
             		<a href="contact.html" class="btn btn-dark">Liên hệ</a>
-            	</div><!-- End .container -->
-            </div><!-- End .page-header -->
+            	</div>
+            </div>
 
             <nav aria-label="breadcrumb" class="breadcrumb-nav">
             	<div class="container">
@@ -12,7 +11,7 @@
             			<li class="breadcrumb-item"><a href="demo4.html"><i class="icon-home"></i></a></li>
             			<li class="breadcrumb-item active" aria-current="page">Về chúng tôi</li>
             		</ol>
-            	</div><!-- End .container -->
+            	</div>
             </nav>
 
             <div class="about-section">
@@ -26,8 +25,8 @@
             			Ngoài ra, <strong><i>Cửa hàng bé yêu</i></strong> luôn luôn lắng nghe ý kiến của khách hàng và luôn sẵn sàng cải thiện sản phẩm và dịch vụ của mình. Chúng tôi muốn đảm bảo rằng bạn và bé yêu của bạn có một trải nghiệm mua sắm thú vị tại đây.</p>
 
             		<p class="lead">Sứ mệnh của <strong><i>Cửa hàng bé yêu</i></strong> là mang lại niềm vui và sự thoải mái cho bé yêu của bạn thông qua việc cung cấp quần áo và sản phẩm chất lượng hàng đầu. Chúng tôi muốn giúp bạn tạo ra những kỷ niệm đáng nhớ với bé mỗi ngày.</p>
-            	</div><!-- End .container -->
-            </div><!-- End .about-section -->
+            	</div>
+            </div>
 
             <div class="features-section bg-gray">
             	<div class="container">
@@ -40,9 +39,9 @@
             					<div class="feature-box-content p-0">
             						<h3>Miễn phí giao hàng</h3>
             						<p>Miễn phí giao hàng cho các hóa đơn</p>
-            					</div><!-- End .feature-box-content -->
-            				</div><!-- End .feature-box -->
-            			</div><!-- End .col-lg-4 -->
+            					</div>
+            				</div>
+            			</div>
 
             			<div class="col-lg-4">
             				<div class="feature-box bg-white">
@@ -51,9 +50,9 @@
             					<div class="feature-box-content p-0">
             						<h3>100% Hoàn trả lại tiền </h3>
             						<p>Hoàn tiền lại 100% nếu có xuất phát lỗi từ cửa hàng</p>
-            					</div><!-- End .feature-box-content -->
-            				</div><!-- End .-box -->
-            			</div><!-- End .col-lg-4 -->
+            					</div>
+            				</div>
+            			</div>
 
             			<div class="col-lg-4">
             				<div class="feature-box bg-white">
@@ -62,12 +61,12 @@
             					<div class="feature-box-content p-0">
             						<h3>Hỗ trợ trực tuyến 24/7</h3>
             						<p>Luôn sẵn sàng hỗ trợ thắc mắc cho khách hàng</p>
-            					</div><!-- End .feature-box-content -->
-            				</div><!-- End .feature-box -->
-            			</div><!-- End .col-lg-4 -->
-            		</div><!-- End .row -->
-            	</div><!-- End .container -->
-            </div><!-- End .features-section -->
+            					</div>
+            				</div>
+            			</div>
+            		</div>
+            	</div>
+            </div>
 
             <div class="testimonials-section">
             	<div class="container">
@@ -97,12 +96,12 @@
             						<strong class="testimonial-title">ĐĂNG TRÌNH</strong>
             						<span>CEO</span>
             					</div>
-            				</div><!-- End .testimonial-owner -->
+            				</div>
 
             				<blockquote>
             					<p>Tại <strong><i>Cửa hàng bé yêu</i></strong>, chúng tôi không chỉ kinh doanh, chúng tôi tạo ra một cộng đồng, một nơi bạn có thể tìm kiếm những sản phẩm tốt nhất cho em bé của mình.</p>
             				</blockquote>
-            			</div><!-- End .testimonial -->
+            			</div>
 
             			<div class="testimonial">
             				<div class="testimonial-owner">
@@ -114,12 +113,12 @@
             						<strong class="testimonial-title">QUỲNH NHI</strong>
             						<span>CEO</span>
             					</div>
-            				</div><!-- End .testimonial-owner -->
+            				</div>
 
             				<blockquote>
             					<p>Tại <strong><i>Cửa hàng bé yêu</i></strong>, chúng tôi không chỉ bán quần áo, chúng tôi cung cấp một trải nghiệm mua sắm đáng nhớ. Chúng tôi luôn lắng nghe ý kiến của khách hàng và luôn sẵn sàng cải thiện sản phẩm và dịch vụ của mình.</p>
             				</blockquote>
-            			</div><!-- End .testimonial -->
+            			</div>
 
             			<div class="testimonial">
             				<div class="testimonial-owner">
@@ -131,16 +130,16 @@
             						<strong class="testimonial-title">John Smith</strong>
             						<span>SMARTWAVE CEO</span>
             					</div>
-            				</div><!-- End .testimonial-owner -->
+            				</div>
 
             				<blockquote>
             					<p>Lorem ipsum dolor sit amet, consectetur elitad adipiscing Cras non placerat mipsum
             						dolor sit amet, consectetur elitad adipiscing cas non placerat mi.</p>
             				</blockquote>
-            			</div><!-- End .testimonial -->
-            		</div><!-- End .testimonials-slider -->
-            	</div><!-- End .container -->
-            </div><!-- End .testimonials-section -->
+            			</div>
+            		</div>
+            	</div>
+            </div>
 
             <div class="counters-section bg-gray">
             	<div class="container">
@@ -148,37 +147,37 @@
             			<div class="col-6 col-md-4 count-container">
             				<div class="count-wrapper">
             					<span class="count-to" data-from="0" data-to="200" data-speed="2000" data-refresh-interval="50">200</span>+
-            				</div><!-- End .count-wrapper -->
+            				</div>
             				<h4 class="count-title">KHÁCH HÀNG</h4>
-            			</div><!-- End .col-md-4 -->
+            			</div>
 
             			<div class="col-6 col-md-4 count-container">
             				<div class="count-wrapper">
             					<span class="count-to" data-from="0" data-to="1800" data-speed="2000" data-refresh-interval="50">180</span>+
-            				</div><!-- End .count-wrapper -->
+            				</div>
             				<h4 class="count-title">THÀNH VIÊN</h4>
-            			</div><!-- End .col-md-4 -->
+            			</div>
 
             			<div class="col-6 col-md-4 count-container">
             				<div class="count-wrapper line-height-1">
             					<span class="count-to" data-from="0" data-to="24" data-speed="2000" data-refresh-interval="50">24</span><span>HR</span>
-            				</div><!-- End .count-wrapper -->
+            				</div>
             				<h4 class="count-title">LUÔN HỖ TRỢ</h4>
-            			</div><!-- End .col-md-4 -->
+            			</div>
 
             			<div class="col-6 col-md-4 count-container">
             				<div class="count-wrapper">
             					<span class="count-to" data-from="0" data-to="265" data-speed="2000" data-refresh-interval="50">100</span>+
-            				</div><!-- End .count-wrapper -->
+            				</div>
             				<h4 class="count-title">LUÔN HỖ TRỢ</h4>
-            			</div><!-- End .col-md-4 -->
+            			</div>
 
             			<div class="col-6 col-md-4 count-container">
             				<div class="count-wrapper line-height-1">
             					<span class="count-to" data-from="0" data-to="99" data-speed="2000" data-refresh-interval="50">99</span><span>%</span>
-            				</div><!-- End .count-wrapper -->
+            				</div>
             				<h4 class="count-title">LUÔN HỖ TRỢ</h4>
-            			</div><!-- End .col-md-4 -->
-            		</div><!-- End .row -->
-            	</div><!-- End .container -->
-            </div><!-- End .counters-section -->
+            			</div>
+            		</div>
+            	</div>
+            </div>

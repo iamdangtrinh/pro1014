@@ -6,6 +6,8 @@
         </ol>
     </nav>
 
+
+
     <div class="row">
         <div class="col-lg-8">
             <div class="cart-table-container">
@@ -30,8 +32,8 @@
                                                 alt="<?= $TenSP ?>">
                                         </a>
 
-                                        <a href="#" class="btn-remove" title="Remove Product"><i
-                                                class="fa-solid fa-xmark"></i></a>
+                                        <a href="<?= $base_url ?>delete_cart/<?= $MaSP ?>" class="btn-remove"
+                                            title="Remove Product"><i class="fa-solid fa-xmark"></i></a>
                                     </figure>
                                 </td>
                                 <td class="product-col text-left">
@@ -75,7 +77,6 @@
                                                     <input type="hidden" name="btn_coupon" value="btn_coupon">
                                                     <input class="btn btn-sm btn-primary" id="coupon_code_btn"
                                                         type="submit" name="" value="Áp dụng phiếu mua hàng">
-                                                   
                                                 </div>
                                             </div>
                                             <!-- hiển thị kết quả của coupon -->
@@ -109,7 +110,7 @@
                         </tr>
 
                         <tr>
-                            <td colspan="2" class="text-left">
+                            <!-- <td colspan="2" class="text-left">
                                 <h4>Vận chuyển</h4>
 
                                 <div class="form-group form-group-custom-control">
@@ -118,16 +119,9 @@
                                         <label class="custom-control-label">
                                             Nhận hàng tận nơi</label>
                                     </div>
-                                </div>
+                                </div> -->
 
-                                <div class="form-group form-group-custom-control mb-0">
-                                    <div class="custom-control custom-radio mb-0">
-                                        <input type="radio" name="radio" class="custom-control-input">
-                                        <label class="custom-control-label">Tỷ giá cố định</label>
-                                    </div>
-                                </div>
-
-                                <form action="#">
+                                <!-- <form action="#">
                                     <div class="form-group form-group-sm">
                                         <label>Vận chuyển đến <strong>TP HCM.</strong></label>
                                         <div class="select-custom">
@@ -153,7 +147,7 @@
                                     <button type="submit" class="btn btn-shop btn-update-total">
                                         cập nhật tổng thể
                                     </button>
-                                </form>
+                                </form> -->
                             </td>
                         </tr>
                     </tbody>
@@ -167,10 +161,10 @@
                 </table>
 
                 <div class="checkout-methods">
-                    <button href="" class="btn btn-block btn-dark">
+                    <a href="<?= $base_url ?>page/checkout" class="btn btn-block btn-dark">
                         Tiến hành thanh toán
                         <i class="fa fa-arrow-right"></i>
-                    </button>
+                    </a>
                 </div>
             </div>
         </div>
@@ -196,10 +190,10 @@
             //     console.log(total_cart -= coupon_value);
             //     document.querySelector('.total_cart').innerText = total_cart.toLocaleString('vi-VN') + ' VND';
             // } else {
-                total_cart -= (coupon_value)? coupon_value : 0;
-                document.querySelector('.total_cart').innerText = total_cart.toLocaleString('vi-VN') + ' VND';
+            total_cart -= (coupon_value) ? coupon_value : 0;
+            document.querySelector('.total_cart').innerText = total_cart.toLocaleString('vi-VN') + ' VND';
             // }
-            
+
         }
         updateTotal()
 
@@ -260,7 +254,7 @@
 
         $('#coupon').on('submit', function () {
             var data = $(this).serialize();
-        
+
             $.ajax({
                 type: "POST",
                 url: "<?= $base_url ?>controller/ajax.php?act=ajax_cart_coupon",
@@ -271,13 +265,13 @@
                     } else if (data === "error_coupon_false") {
                         $(".result_coupon").text("Mã giảm giá không đúng")
                     }
-                    else {                        
+                    else {
                         $(".result_coupon").html(data);
                         updateTotal();
                     }
                 },
             })
-            
+
         })
     })
 
