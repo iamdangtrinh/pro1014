@@ -126,13 +126,13 @@ label.error {
 
 .text-title {
   text-overflow: ellipsis;
-  word-break: break-all;
+  word-break: break-word;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
   width: 100%;
   overflow: hidden;
-  height: 36px;
+  height: 40px;
 }
 
 .result_coupon {

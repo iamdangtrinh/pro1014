@@ -59,6 +59,13 @@ if(isset($_GET['act'])) {
             delete_cart_by_pro($_GET['id']);
             header('location: '.$base_url.'gio-hang');
             break;
+
+        case 'update_status_cart':
+            include_once 'model/m_cart.php';
+            upate_status_cart($_POST['MaHD']);
+            header('location: '.$base_url.'page/gio-hang');
+        break;
+        
         case 'comment':
             if(isset($_SESSION['user']) && isset($_POST['MaSP']) && isset($_POST['NoiDung'])&&$_POST['NoiDung']!="" && isset($_POST['SoSao'])) {
                 $MaTK = $_SESSION['user']['MaTK'];

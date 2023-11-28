@@ -55,7 +55,7 @@ function has_coupon_code($coupon_code) {
 
 // đếm số lượng sản phẩm
 function count_cart($MaHD) {
-    return pdo_query_value("SELECT COUNT(hd.MaHD) FROM chitiethoadon cthd LEFT JOIN hoadon hd ON hd.MaHD= cthd.MaHD WHERE MaTK = ?", $MaHD);
+    return pdo_query_value("SELECT COUNT(hd.MaHD) FROM chitiethoadon cthd LEFT JOIN hoadon hd ON hd.MaHD= cthd.MaHD WHERE MaTK = ? AND hd.TrangThai = 'gio-hang'", $MaHD);
 }
 
 // xóa sản phẩm 
@@ -65,6 +65,10 @@ function delete_cart_by_pro($MaSP) {
 
 function quantity_cart_max($MaSP) {
     return pdo_query_one("SELECT MaSP, SoLuong FROM sanpham WHERE MaSP = ?", $MaSP);
+}
+
+function upate_status_cart($MaHD) {
+    return pdo_execute("UPDATE hoadon SET TrangThai = 'chuan-bi' WHERE MaHD = ?", $MaHD);
 }
 
 ?>

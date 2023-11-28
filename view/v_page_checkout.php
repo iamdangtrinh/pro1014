@@ -68,6 +68,7 @@
                                     </h5>
                                     <p class="product-qty" style="font-weight: 400">Số lượng:
                                         <?= $SoLuongSP ?>
+                                        
                                     </p>
                                 </td>
 
@@ -77,6 +78,7 @@
                                     </span>
                                 </td>
                             </tr>
+                            <?php $_SESSION['MaHD'] = $MaHD ?>
                         <?php endforeach ?>
                     </tbody>
                     <tfoot>
@@ -90,9 +92,9 @@
                         </tr>
                     </tfoot>
                 </table>
-                <form action="<?= $base_url?>page/update_status_cart" method="post">
-                    
-                    <input type="submit" class="btn btn-primary w-100 btn-place-order" value="ĐẶT HÀNG">
+                <form action="<?=$base_url?>product/update_status_cart" method="post">
+                    <input type="hidden" value="<?=$_SESSION['MaHD']?>" name="MaHD">
+                    <input type="submit" name="btn_update_status_cart" class="btn btn-primary w-100 btn-place-order" value="ĐẶT HÀNG">
                 </form>
             </div>
         </div>
