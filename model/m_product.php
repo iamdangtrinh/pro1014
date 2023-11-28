@@ -51,6 +51,26 @@
     function check_comment($MaTK,$MaSP){
         return pdo_query_value("SELECT SoLuongSP FROM taikhoan tk INNER JOIN hoadon hd ON tk.MaTK=hd.MaTK INNER JOIN chitiethoadon cthd ON hd.MaHD=cthd.MaHD WHERE tk.MaTK=? and cthd.MaSP=?",$MaTK,$MaSP);
     }
+    function show_comment(){
+        return pdo_query ("SELECT
+                            bl.`MaBL` ,
+                            bl.`NoiDung` ,
+                            bl.`NgayBL` ,
+                            sp.`TenSP` ,
+                            tk.`HoTen` 
+                        FROM
+                            `binhluan` bl
+                        JOIN
+                            `sanpham` sp ON bl.`MaSP` = sp.`MaSP`
+                        JOIN
+                            `taikhoan` tk ON bl.`MaTK` = tk.`MaTK`;");
+    }
+    function comment_getById($MaBL){
+        return pdo_query_one("SELECT * FROM  binhluan WHERE MaBL = $MaBL");
+    }
+    function delete_comment($MaBL){
+        pdo_execute("DELETE FROM binhluan WHERE MaBL = $MaBL");
+    }
     // Sản phẩm tương tự
     function product_same($id){
         return pdo_query("SELECT * FROM sanpham WHERE MaDM = ? ORDER BY rand() LIMIT 5", $id );

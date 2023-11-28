@@ -178,6 +178,7 @@ td {
             <tr>
                 <!-- <th class="chon">Chọn</th> -->
                 <th>Tên khuyến mãi</th>
+                <th>Code khuyến mãi</th>
                 <th>Số tiền giảm </th>
                 <th>Ngày bắt đầu</th>
                 <th>Ngày kết thúc</th>
@@ -189,6 +190,7 @@ td {
             <?php foreach($show_KM as $show):?>
             <tr>
                 <td><?= $show['TenKM'];?></td>
+                <td><?= $show['CodeKM'];?></td>
                 <td><?= $show['GiaKM'];?></td>
                 <td><?= $show['NgayBatDau'];?></td>
                 <td><?= $show['NgayKetThuc'];?></td>

@@ -169,20 +169,21 @@ td {
             </tr>
         </thead>
         <tbody>
+            <?php foreach($show_bl as $show):?>
             <tr>
-                <td>huu nghia</td>
-                <td>Áo em bé</td>
-                <td>test binh luan</td>
-                <td>10/07/2023</td>
+                <td><?= $show['HoTen'];?></td>
+                <td><?= $show['TenSP'];?></td>
+                <td><?= $show['NoiDung'];?></td>
+                <td><?= $show['NgayBL'];?></td>
                 <td>
                     <div class="lenh">
-                        <div class="xoa"><a href="<?=$base_url?>admin/delete/khuyenmai/<?= $show['MaKM'];?>"
+                        <div class="xoa"><a href="<?=$base_url?>admin/delete/binhluan/<?= $show['MaBL'];?>"
                                 style="font-weight: 600; ">Xóa</a>
                         </div>
                     </div>
                 </td>
             </tr>
-
+            <?php endforeach;?>
         </tbody>
         </tbody>
     </table>
