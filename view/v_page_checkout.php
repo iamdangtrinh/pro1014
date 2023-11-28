@@ -12,36 +12,35 @@
             <ul class="checkout-steps">
                 <li>
                     <h2 class="step-title">Chi tiết đơn hàng</h2>
-
-                    <form action="#" id="checkout-form">
+                    
+                    <form action="" id="checkout-form">
                         <div class="form-group">
                             <label>Họ và tên
                                 <abbr class="required" title="required">*</abbr></label>
-                            <input type="text" class="form-control" required />
+                            <input type="text" class="form-control" value="<?php echo isset($_SESSION['user']) ? $_SESSION['user']['HoTen'] : "" ?>" required />
                         </div>
 
                         <div class="form-group mb-1 pb-2">
-                            <label>Địa chỉ
+                            <label>Địa chỉ nhận hàng
                                 <abbr class="required" title="required">*</abbr></label>
-                            <input type="text" class="form-control" placeholder="Địa chỉ nhận hàng" required />
+                            <input type="text" class="form-control" placeholder="Địa chỉ nhận hàng" value="<?php echo isset($_SESSION['user']) ? $_SESSION['user']['DiaChi'] : "" ?>" required />
                         </div>
 
                         <div class="form-group">
                             <label>Điện thoại <abbr class="required" title="required">*</abbr></label>
-                            <input type="tel" class="form-control" required />
+                            <input type="tel" class="form-control" required value="<?php echo isset($_SESSION['user']) ? $_SESSION['user']['SoDienThoai'] : "" ?>">
                         </div>
 
                         <div class="form-group">
                             <label>Địa chỉ email
                                 <abbr class="required" title="required">*</abbr></label>
-                            <input type="email" class="form-control" required />
+                            <input type="email" class="form-control" required value="<?php echo isset($_SESSION['user']) ? $_SESSION['user']['Email'] : "" ?>" />
                         </div>
 
                         <div class="form-group">
                             <label class="order-comments">Ghi chú đơn hàng (tùy chọn)</label>
                             <textarea class="form-control"
-                                placeholder="Ghi chú về đơn hàng của bạn, ví dụ như ghi chú đặc biệt khi giao hàng."
-                                required></textarea>
+                                placeholder="Ghi chú về đơn hàng của bạn, ví dụ như ghi chú đặc biệt khi giao hàng."></textarea>
                         </div>
                     </form>
                 </li>
@@ -91,9 +90,10 @@
                         </tr>
                     </tfoot>
                 </table>
-                <button type="submit" class="btn btn-dark btn-place-order" form="checkout-form">
-                    ĐẶT HÀNG
-                </button>
+                <form action="<?= $base_url?>page/update_status_cart" method="post">
+                    
+                    <input type="submit" class="btn btn-primary w-100 btn-place-order" value="ĐẶT HÀNG">
+                </form>
             </div>
         </div>
     </div>
