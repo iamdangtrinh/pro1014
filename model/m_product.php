@@ -73,19 +73,19 @@
     }
     function chitiet_comment($MaSP){
         return pdo_query("SELECT
-                                bl.`MaBL` ,
-                                bl.`NoiDung` ,
-                                bl.`NgayBL` ,
-                                sp.`TenSP` ,
-                                tk.`HoTen` 
-                            FROM
-                                `binhluan` bl
-                            JOIN
-                                `sanpham` sp ON bl.`MaSP` = sp.`MaSP`
-                            JOIN
-                                `taikhoan` tk ON bl.`MaTK` = tk.`MaTK`
-                            WHERE
-                                sp.`MaSP` = ?", $MaSP);
+                            bl.`MaBL`,
+                            bl.`NoiDung`,
+                            bl.`NgayBL`,
+                            sp.`TenSP`,
+                            tk.`HoTen`
+                        FROM
+                            `binhluan` bl
+                        JOIN
+                            `sanpham` sp ON bl.`MaSP` = sp.`MaSP`
+                        JOIN
+                            `taikhoan` tk ON bl.`MaTK` = tk.`MaTK`
+                        WHERE
+                            sp.`MaSP` = ?", $MaSP);
     }
     function comment_getById($MaBL){
         return pdo_query_one("SELECT * FROM  binhluan WHERE MaBL = $MaBL");

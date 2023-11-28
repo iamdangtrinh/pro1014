@@ -225,7 +225,7 @@
                 include_once 'model/m_user.php';
                 delete_comment($_GET['id']);
                 $show_comment = comment_getById($_GET['id']);
-                header('location: '.$base_url.'admin/chitiet/binhluan/'.$_GET['id']);
+                header('location: '.$base_url.'admin/chitiet/binhluan/'.$_GET['MaSP']);
                 break;
             default:
                 $view_name='admin_dashboard';

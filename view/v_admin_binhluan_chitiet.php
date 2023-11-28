@@ -139,10 +139,12 @@ td {
     padding: 10px;
     margin: 5px;
 }
+
 .form-label {
     font-size: 18px;
     color: #333;
 }
+
 .form-control {
     width: 50%;
     padding: 10px;
@@ -158,7 +160,9 @@ td {
     <table>
         <thead>
             <br>
-            <h2>Tất cả bình luận</h2><br>
+            <h2>Tất cả bình luận của: <strong><?php foreach($show_bl as $show){
+                echo $show['TenSP'];
+            };?> </strong></h2><br>
             <tr>
                 <!-- <th class="chon">Chọn</th> -->
                 <th>Nội dung </th>
@@ -175,7 +179,7 @@ td {
                 <td><?= $show['NgayBL'];?></td>
                 <td>
                     <div class="lenh">
-                    <div class="xoa"><a href="<?=$base_url?>admin/delete/binhluan/<?= $show['MaBL'];?>"
+                        <div class="xoa"><a href="<?=$base_url?>admin/delete/binhluan/<?= $show['MaBL'];?>"
                                 style="font-weight: 600; ">Xóa</a>
                         </div>
                     </div>

@@ -161,6 +161,7 @@ td {
             <h2>Tất cả bình luận</h2><br>
             <tr>
                 <!-- <th class="chon">Chọn</th> -->
+                <th>Ảnh SP</th>
                 <th>Sản phẩm</th>
                 <th>Số bình luận</th>
                 <th>Mới Nhất</th>
@@ -170,8 +171,9 @@ td {
         </thead>
         <tbody>
             <?php foreach($show_bl as $show):?>
-            <tr>
-                <td><?= $show['TenSP'];?></td>
+            <tr>                
+                <td><img style="width: 50px; height: 50px;" src="<?=$base_url?>upload/demoes/demo23/products/<?= $show['AnhSP'];?>" alt="Anh_sP"></td></td>
+                <td><?= $show['TenSP'];?> 
                 <td><?= $show['SoLuongBinhLuan'];?></td>
                 <td><?= $show['BLMoi'];?></td>
                 <td><?= $show['BLCu'];?></td>
@@ -194,7 +196,3 @@ td {
     <div><a href="<?=$base_url?>admin/" class="remove" style="font-weight: 600;">Xóa hết</a></div>
 </div> -->
 <!-- End of Recent Orders -->
-
-                        <!-- <div class="xoa"><a href="<?=$base_url?>admin/delete/binhluan/<?= $show['MaBL'];?>"
-                                style="font-weight: 600; ">Xóa</a>
-                        </div> -->

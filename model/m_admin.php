@@ -25,7 +25,7 @@
         return pdo_query("SELECT * FROM sanpham ");
     }
     function admin_addkhuyenmai( $TenKM, $codeKhuyenMai, $soTienGiam, $ngayBatDau, $ngayKetThuc, $SoLuong) {
-    return pdo_execute("INSERT INTO khuyenmai (, TenKM, CodeKM, GiaKM, NgayBatDau, NgayKetThuc, SoLuong) 
+    return pdo_execute("INSERT INTO khuyenmai ( TenKM, CodeKM, GiaKM, NgayBatDau, NgayKetThuc, SoLuong) 
                         VALUES ( ?, ?, ?, ?, ?, ?)", 
                          $TenKM, $codeKhuyenMai, $soTienGiam, $ngayBatDau, $ngayKetThuc, $SoLuong);
     }
