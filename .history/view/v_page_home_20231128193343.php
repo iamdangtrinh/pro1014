@@ -189,7 +189,7 @@
                                     <a href="<?= $base_url ?>product/detail/<?= $product['MaSP'];?>"
                                         class="btn-icon btn-add-cart fa-solid fa-cart-shopping"></a>
                                 </div>
-                                <a href="<?=$base_url?>product/detail/<?=$product['MaSP']?>" class="btn-quickview"
+                                <a href="<??>" class="btn-quickview"
                                     title="Quick View">Xem chi tiết</a>
                             </figure>
                             <div class="product-details">
@@ -231,7 +231,7 @@
                                     <a href="<?= $base_url?>product/detail/<?= $product['MaSP'];?>"
                                         class="btn-icon btn-add-cart fa-solid fa-cart-shopping"></a>
                                 </div>
-                                <a href="<?=$base_url?>product/detail/<?=$product['MaSP']?>" class="btn-quickview"
+                                <a href="<??>" class="btn-quickview"
                                     title="Quick View">Xem chi tiết</a>
                             </figure>
                             <div class="product-details">
@@ -349,7 +349,7 @@
                                     <a href="<?= $base_url ?>product/detail/<?= $product['MaSP'];?>"
                                         class="btn-icon btn-add-cart fa-solid fa-cart-shopping"></a>
                                 </div>
-                                <a href="<?=$base_url?>product/detail/<?=$product['MaSP']?>" class="btn-quickview"
+                                <a href="<??>" class="btn-quickview"
                                     title="Quick View">Xem chi tiết</a>
                             </figure>
                             <div class="product-details">
@@ -391,7 +391,7 @@
                                     <a href="<?= $base_url?>product/detail/<?= $product['MaSP'];?>"
                                         class="btn-icon btn-add-cart fa-solid fa-cart-shopping"></a>
                                 </div>
-                                <a href="<?=$base_url?>product/detail/<?=$product['MaSP']?>" class="btn-quickview"
+                                <a href="<??>" class="btn-quickview"
                                     title="Quick View">Xem chi tiết</a>
                             </figure>
                             <div class="product-details">

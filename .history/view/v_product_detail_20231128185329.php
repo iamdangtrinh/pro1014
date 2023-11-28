@@ -200,10 +200,10 @@
 
                                 <!-- End .product-single-qty -->
 
-                                <a href="<?=$base_url?>addtocart" class="btn btn-dark add-cart mr-2" title="Thêm vào giỏ hàng">Thêm vào
+                                <a href="<?=$base_url?>page/addtocart" class="btn btn-dark add-cart mr-2" title="Thêm vào giỏ hàng">Thêm vào
                                     giỏ hàng </a>
 
-                                <a href="<?=$base_url?>gio-hang" class="btn btn-gray view-cart d-none" title="Xem giỏ hàng">Xem giỏ hàng</a>
+                                <a href="<?=$base_url?>" class="btn btn-gray view-cart d-none" title="Xem giỏ hàng">Xem giỏ hàng</a>
                             </div>
                             <!-- End .product-action -->
 
