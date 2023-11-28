@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
 :root{
+    --color-pink: #f49eaca8;
     --color-primary: #6C9BCF;
     --color-danger: #FF0060;
     --color-success: #1B9C85;
@@ -117,6 +118,7 @@ b{
 }
 
 .container{
+    position: relative;
     display: grid;
     width: 96%;
     margin: 0 auto;
@@ -226,12 +228,13 @@ aside .sidebar .message-count{
 }
 
 main{
+    width: 1200px;
     margin-top: 1.4rem;
 }
 
 main .analyse{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4 , 1fr);
     gap: 1.6rem;
 }
 
@@ -256,7 +259,6 @@ main .analyse > div .status{
 }
 
 main .analyse h3{
-    margin-left: 0.6rem;
     font-size: 1rem;
 }
 
@@ -281,22 +283,26 @@ main .analyse svg circle{
 
 main .analyse .sales svg circle{
     stroke: var(--color-success);
-    stroke-dashoffset: -30;
+    stroke-dashoffset: -10;
     stroke-dasharray: 200;
 }
 
 main .analyse .visits svg circle{
     stroke: var(--color-danger);
-    stroke-dashoffset: -30;
+    stroke-dashoffset: -20;
     stroke-dasharray: 200;
 }
 
 main .analyse .searches svg circle{
     stroke: var(--color-primary);
-    stroke-dashoffset: -30;
+    stroke-dashoffset: -60;
     stroke-dasharray: 200;
 }
-
+main .analyse .product svg circle{
+    stroke: var(--color-pink);
+    stroke-dashoffset: 10;
+    stroke-dasharray: 200;
+}
 main .analyse .progresss .percentage{
     position: absolute;
     top: -3px;
@@ -384,6 +390,8 @@ main .recent-orders a{
 }
 
 .right-section{
+    right: 0;
+    position: absolute;
     margin-top: 1.4rem;
 }
 
@@ -703,7 +711,7 @@ main .recent-orders a{
     .right-section .profile .info{
         display: none;
     }
-
+    .
     .right-section .nav button{
         display: inline-block;
         background-color: transparent;
