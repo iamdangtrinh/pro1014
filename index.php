@@ -5,6 +5,7 @@ include_once 'config.php';
 include_once 'model/m_pdo.php';
 include_once 'model/m_product.php';
 include_once 'model/m_category.php';
+include_once 'model/m_wishlist.php';
 $danhmuc = category_getALLDM();
 $danhmucmuc = category_getALLDMMUC();
 include_once 'model/m_admin.php';
