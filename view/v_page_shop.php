@@ -120,7 +120,7 @@
                                                     </div><!-- End .product-ratings -->
                                                 </div><!-- End .product-container -->
                                                 <div class="price-box">
-                                                    <span class="product-price"><?= $product['Gia'];?>đ</span>
+                                                    <span class="product-price"><?=number_format($product['Gia'],0,",",".")?>đ</span>
                                                 </div><!-- End .price-box -->
                                             </div><!-- End .product-details -->
                                         </div>
@@ -161,8 +161,8 @@
                                                     </div><!-- End .product-ratings -->
                                                 </div><!-- End .product-container -->
                                                 <div class="price-box">
-                                                    <span class="old-price"><?= $product['Gia'];?>đ</span>
-                                                    <span class="product-price"><?= $product['GiaGiam'];?>đ</span>
+                                                    <span class="old-price"><?=number_format($product['Gia'],0,",",".")?>đ</span>
+                                                    <span class="product-price"><?=number_format($product['GiaGiam'],0,",",".")?>đ</span>
                                                 </div><!-- End .price-box -->
                                             </div><!-- End .product-details -->
                                         </div>

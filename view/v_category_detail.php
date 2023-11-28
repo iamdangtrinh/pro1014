@@ -4,9 +4,10 @@
                 <div class="container">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="demo23.html">Trang chủ</a></li>
-                        <?php if(isset($_GET['MaDMC'])): ?>
-                            <li class="breadcrumb-item" aria-current="page">Danh mục <?=$spDM[0]['TenDM']?></li>
-                            <li class="breadcrumb-item active" aria-current="page"><?=$spDM[0]['TenDMC']?></li>
+                        <?php if($spDM[0]['MaDMC']!=0): ?>
+                            <li class="breadcrumb-item" aria-current="page">Danh mục <?php foreach ($AllDM as $value) {
+                                if($value['MaDM']==$spDM['MaDMC']){echo $value['TenDM'];}} ?></li>
+                            <li class="breadcrumb-item active" aria-current="page"><?=$spDM[0]['TenDM']?></li>
                         <?php else: ?>
                             <li class="breadcrumb-item active" aria-current="page">Danh mục <?=$spDM[0]['TenDM']?></li>
                         <?php endif;?>
