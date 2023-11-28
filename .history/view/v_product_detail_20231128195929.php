@@ -133,10 +133,7 @@
 
                             <hr class="short-divider">
                                 
-                            <div class="price-box">
-                                <span class="old-price"><?=$product_detail['Gia']?>đ</span>
-                                <span class="new-price"><?=$product_detail['GiaGiam']?>đ</span>
-                            </div>
+                            <?php if(isset($product_detail['']))?>
                             <!-- End .price-box -->
 
                             <div class="product-desc">

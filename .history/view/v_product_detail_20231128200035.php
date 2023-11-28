@@ -133,10 +133,12 @@
 
                             <hr class="short-divider">
                                 
-                            <div class="price-box">
-                                <span class="old-price"><?=$product_detail['Gia']?>đ</span>
-                                <span class="new-price"><?=$product_detail['GiaGiam']?>đ</span>
+                            <?php if(isset($product_detail['GiaGiam'])){
+                                $kq.= <div class='price-box'>
+                                <span class='old-price'><?=$product_detail['Gia']?>đ</span>
+                                <span class='new-price"><?=$product_detail['GiaGiam']?>đ</span>
                             </div>
+                            }?>
                             <!-- End .price-box -->
 
                             <div class="product-desc">
