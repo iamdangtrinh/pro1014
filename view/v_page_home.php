@@ -174,43 +174,91 @@
 
         <div class="row appear-animate" data-animation-name="fadeInUpShorter" data-animation-delay="400">
             <?php foreach ($dsMoi as $product): ?>
-            <div class="col-6 col-md-4 col-xl-3">
-                <div class="product-default inner-quickview inner-icon">
-                    <figure>
-                        <a href="<?= $base_url ?>product/detail/<?=$product['MaSP']?>" title="Chi tiết sản phẩm">
-                            <img src="<?= $base_url ?>upload/demoes/demo23/products/<?=$product['AnhSP']?>" style="width: 100%; height: 270px;" alt="product">
-                        </a>
-                        <div class="label-group">
-                            <div class="product-label label-hot">HOT</div>
+                <?php if(!$product['GiaGiam']): ?>
+                    <div class="col-6 col-sm-4 col-lg-3">
+                        <div class="product-default inner-quickview inner-icon">
+                            <figure>
+                                <a href="demo23-product.html">
+                                    <img src="<?=$base_url?>upload/demoes/demo23/products/<?= $product['AnhSP'];?>"
+                                        alt="product" style="width: 207px; height: 220px;">
+                                </a>
+                                <div class="label-group">
+                                    <div class="product-label label-hot">HOT</div>
+                                </div>
+                                <div class="btn-icon-group">
+                                    <a href="<?= $base_url ?>product/detail/<?= $product['MaSP'];?>"
+                                        class="btn-icon btn-add-cart fa-solid fa-cart-shopping"></a>
+                                </div>
+                                <a href="ajax/product-quick-view.html" class="btn-quickview"
+                                    title="Quick View">Xem nhanh</a>
+                            </figure>
+                            <div class="product-details">
+                                <div class="category-wrap">
+                                    <div class="category-list">
+                                        <a href="demo23-product.html" class="product-category"><?= $product['TenDM'];?></a>
+                                    </div>
+                                    <a href="wishlist.html" title="Wishlist" class="btn-icon-wish"><i class="fa-solid fa-heart"></i></a>
+                                </div>
+                                <h3 class="product-title">
+                                    <a href="demo23-product.html"><?= $product['TenSP'];?></a>
+                                </h3>
+                                <div class="ratings-container">
+                                    <div class="product-ratings">
+                                        <span class="ratings" style="width:0%"></span>
+                                        <!-- End .ratings -->
+                                        <span class="tooltiptext tooltip-top"></span>
+                                    </div><!-- End .product-ratings -->
+                                </div><!-- End .product-container -->
+                                <div class="price-box">
+                                    <span class="product-price"><?=number_format($product['Gia'],0,",",".")?>đ</span>
+                                </div><!-- End .price-box -->
+                            </div><!-- End .product-details -->
                         </div>
-                        <div class="btn-icon-group">
-                            <a href="<?= $base_url ?>product/detail"
-                                class="btn-icon btn-add-cart fa-solid fa-cart-shopping"></a>
-                        </div>
-                        <a href="<?= $base_url ?>product/detail/" class="btn-quickview" >Xem nhanh</a>
-                    </figure>
-                    <div class="product-details">
-                        <div class="category-wrap">
-                            <div class="category-list">
-                                <a href="demo23-shop.html" class="product-category">Danh mục</a>
-                            </div>
-                            <a href="wishlist.html" title="Add to Wishlist" class="btn-icon-wish"><i class="fa-solid fa-heart"></i></a>
-                        </div>
-                        <h3 class="product-title">
-                            <a href="<?= $base_url ?>product/detail"><?=$product['TenSP']?></a>
-                        </h3>
-                        <div class="ratings-container">
-                            <div class="product-ratings">
-                                <span class="ratings" style="width:80%"></span><!-- End .ratings -->
-                                <span class="tooltiptext tooltip-top"></span>
-                            </div><!-- End .product-ratings -->
-                        </div><!-- End .product-container -->
-                        <div class="price-box">
-                            <span class="product-price"><?=$product['Gia']?></span>
-                        </div><!-- End .price-box -->
                     </div>
-                </div>
-            </div>
+                <?php else: ?>
+                    <div class="col-6 col-sm-4 col-lg-3">
+                        <div class="product-default inner-quickview inner-icon">
+                            <figure>
+                                <a href="demo23-product.html">
+                                    <img src="<?=$base_url?>upload/demoes/demo23/products/<?= $product['AnhSP'];?>"
+                                        alt="product" style="width: 207px; height: 220px;">
+                                </a>
+                                <div class="label-group">
+                                    <div class="product-label label-hot">HOT</div>
+                                    <div class="product-label label-sale">-<?=substr((($product['Gia'] - $product['GiaGiam']) / $product['Gia']) * 100, 0, 2)?>%</div>
+                                </div>
+                                <div class="btn-icon-group">
+                                    <a href="<?= $base_url?>product/detail/<?= $product['MaSP'];?>"
+                                        class="btn-icon btn-add-cart fa-solid fa-cart-shopping"></a>
+                                </div>
+                                <a href="ajax/product-quick-view.html" class="btn-quickview"
+                                    title="Quick View">Xem nhanh</a>
+                            </figure>
+                            <div class="product-details">
+                                <div class="category-wrap">
+                                    <div class="category-list">
+                                        <a href="demo23-product.html" class="product-category"><?= $product['TenDM'];?></a>
+                                    </div>
+                                    <a href="wishlist.html" title="Wishlist" class="btn-icon-wish"><i class="fa-solid fa-heart"></i></a>
+                                </div>
+                                <h3 class="product-title">
+                                    <a href="demo23-product.html"><?= $product['TenSP'];?></a>
+                                </h3>
+                                <div class="ratings-container">
+                                    <div class="product-ratings">
+                                        <span class="ratings" style="width:0%"></span>
+                                        <!-- End .ratings -->
+                                        <span class="tooltiptext tooltip-top"></span>
+                                    </div><!-- End .product-ratings -->
+                                </div><!-- End .product-container -->
+                                <div class="price-box">
+                                    <span class="old-price"><?=number_format($product['Gia'],0,",",".")?>đ</span>
+                                    <span class="product-price"><?=number_format($product['GiaGiam'],0,",",".")?>đ</span>
+                                </div><!-- End .price-box -->
+                            </div><!-- End .product-details -->
+                        </div>
+                    </div>
+                <?php endif; ?>
             <?php endforeach; ?>
         </div>
     </div>
@@ -285,46 +333,93 @@
 <div class="products-container appear-animate" data-animation-name="fadeIn" data-animation-delay="200">
     <div class="container">
         <div class="row">
-            <?php foreach($dsGhim as $product): ?>
-            <div class="col-6 col-md-4 col-xl-3">
-                <div class="product-default inner-quickview inner-icon">
-                    <figure>
-                        <a href="<?= $base_url ?>product/detail/<?=$product['MaSP']?>" title="Chi tiết sản phẩm">
-                            <img src="<?= $base_url ?>upload/demoes/demo23/products/<?=$product['AnhSP']?>" width="217"
-                                height="217" alt="product">
-                        </a>
-                        <div class="label-group">
-                            <div class="product-label label-hot">HOT</div>
+            <?php foreach ($dsGhim as $product): ?>
+                <?php if(!$product['GiaGiam']): ?>
+                    <div class="col-6 col-sm-4 col-lg-3">
+                        <div class="product-default inner-quickview inner-icon">
+                            <figure>
+                                <a href="demo23-product.html">
+                                    <img src="<?=$base_url?>upload/demoes/demo23/products/<?= $product['AnhSP'];?>"
+                                        alt="product" style="width: 207px; height: 220px;">
+                                </a>
+                                <div class="label-group">
+                                    <div class="product-label label-hot">HOT</div>
+                                </div>
+                                <div class="btn-icon-group">
+                                    <a href="<?= $base_url ?>product/detail/<?= $product['MaSP'];?>"
+                                        class="btn-icon btn-add-cart fa-solid fa-cart-shopping"></a>
+                                </div>
+                                <a href="ajax/product-quick-view.html" class="btn-quickview"
+                                    title="Quick View">Xem nhanh</a>
+                            </figure>
+                            <div class="product-details">
+                                <div class="category-wrap">
+                                    <div class="category-list">
+                                        <a href="demo23-product.html" class="product-category"><?= $product['TenDM'];?></a>
+                                    </div>
+                                    <a href="wishlist.html" title="Wishlist" class="btn-icon-wish"><i class="fa-solid fa-heart"></i></a>
+                                </div>
+                                <h3 class="product-title">
+                                    <a href="demo23-product.html"><?= $product['TenSP'];?></a>
+                                </h3>
+                                <div class="ratings-container">
+                                    <div class="product-ratings">
+                                        <span class="ratings" style="width:0%"></span>
+                                        <!-- End .ratings -->
+                                        <span class="tooltiptext tooltip-top"></span>
+                                    </div><!-- End .product-ratings -->
+                                </div><!-- End .product-container -->
+                                <div class="price-box">
+                                    <span class="product-price"><?=number_format($product['Gia'],0,",",".")?>đ</span>
+                                </div><!-- End .price-box -->
+                            </div><!-- End .product-details -->
                         </div>
-                        <div class="btn-icon-group">
-                            <a href="<?= $base_url ?>product/detail"
-                                class="btn-icon btn-add-cart fa-solid fa-cart-shopping"></a>
-                        </div>
-                        <a href="<?= $base_url ?>product/detail" class="btn-quickview" >Xem nhanh</a>
-                    </figure>
-                    <div class="product-details">
-                        <div class="category-wrap">
-                            <div class="category-list">
-                                <a href="demo23-shop.html" class="product-category">Danh mục</a>
-                            </div>
-                            <a href="wishlist.html" title="Add to Wishlist" class="btn-icon-wish"><i class="fa-solid fa-heart"></i></a>
-                        </div>
-                        <h3 class="product-title">
-                            <a href="<?= $base_url ?>product/detail"><?=$product['TenSP']?></a>
-                        </h3>
-                        <div class="ratings-container">
-                            <div class="product-ratings">
-                                <span class="ratings" style="width:80%"></span><!-- End .ratings -->
-                                <span class="tooltiptext tooltip-top"></span>
-                            </div><!-- End .product-ratings -->
-                        </div><!-- End .product-container -->
-                        <div class="price-box">
-                            <span class="product-price"><?=$product['Gia']?> &ndash; Giá Giảm</span>
-                        </div><!-- End .price-box -->
                     </div>
-                </div>
-            </div>
-            <?php endforeach;?>
+                <?php else: ?>
+                    <div class="col-6 col-sm-4 col-lg-3">
+                        <div class="product-default inner-quickview inner-icon">
+                            <figure>
+                                <a href="demo23-product.html">
+                                    <img src="<?=$base_url?>upload/demoes/demo23/products/<?= $product['AnhSP'];?>"
+                                        alt="product" style="width: 207px; height: 220px;">
+                                </a>
+                                <div class="label-group">
+                                    <div class="product-label label-hot">HOT</div>
+                                    <div class="product-label label-sale">-<?=substr((($product['Gia'] - $product['GiaGiam']) / $product['Gia']) * 100, 0, 2)?>%</div>
+                                </div>
+                                <div class="btn-icon-group">
+                                    <a href="<?= $base_url?>product/detail/<?= $product['MaSP'];?>"
+                                        class="btn-icon btn-add-cart fa-solid fa-cart-shopping"></a>
+                                </div>
+                                <a href="ajax/product-quick-view.html" class="btn-quickview"
+                                    title="Quick View">Xem nhanh</a>
+                            </figure>
+                            <div class="product-details">
+                                <div class="category-wrap">
+                                    <div class="category-list">
+                                        <a href="demo23-product.html" class="product-category"><?= $product['TenDM'];?></a>
+                                    </div>
+                                    <a href="wishlist.html" title="Wishlist" class="btn-icon-wish"><i class="fa-solid fa-heart"></i></a>
+                                </div>
+                                <h3 class="product-title">
+                                    <a href="demo23-product.html"><?= $product['TenSP'];?></a>
+                                </h3>
+                                <div class="ratings-container">
+                                    <div class="product-ratings">
+                                        <span class="ratings" style="width:0%"></span>
+                                        <!-- End .ratings -->
+                                        <span class="tooltiptext tooltip-top"></span>
+                                    </div><!-- End .product-ratings -->
+                                </div><!-- End .product-container -->
+                                <div class="price-box">
+                                    <span class="old-price"><?=number_format($product['Gia'],0,",",".")?>đ</span>
+                                    <span class="product-price"><?=number_format($product['GiaGiam'],0,",",".")?>đ</span>
+                                </div><!-- End .price-box -->
+                            </div><!-- End .product-details -->
+                        </div>
+                    </div>
+                <?php endif; ?>
+            <?php endforeach; ?>
         </div>
     </div>
 </div>
