@@ -1,0 +1,33 @@
+RewriteEngine On
+RewriteBase /pro1041/
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^admin/(.*)/(.*)/(.*)$ index.php?mod=admin&act=$1-$2&id=$3 [L]
+RewriteRule ^admin/(.*)/(.*)$ index.php?mod=admin&act=$1-$2 [L]
+RewriteRule ^(.*)/shop/(.*)$ index.php?mod=$1&act=shop&shop=$2 [L]
+RewriteRule ^(.*)/detail/page/([0-9]+)$ index.php?mod=$1&act=detail&page=$2 [L]
+RewriteRule ^(.*)/search/(.*)/page/(.*)$ index.php?mod=$1&act=search&search_key=$2&page=$3 [L]
+RewriteRule ^(.*)/search/(.*)$ index.php?mod=$1&act=search&search_key=$2 [L]
+RewriteRule ^(.*)/detail/([0-9]+)/page/(.*)$ index.php?mod=$1&act=detail&id=$2&page=$3 [L]
+RewriteRule ^(.*)/detail/([0-9]+)$ index.php?mod=$1&act=detail&id=$2 [L]
+RewriteRule ^(.*)/detail/([0-9]+)/([0-9]+)$ index.php?mod=$1&act=detail&id=$2&page=$3 [L]
+RewriteRule ^upload/(.*)$ upload/$1 [L]
+RewriteRule ^vnpay_php/(.*)/(.*)$ vnpay_php/$1/$2 [L]
+RewriteRule ^vnpay_php/(.*)$ vnpay_php/$1 [L]
+
+RewriteRule ^controller/(.*)$ controller/$1 [L]
+
+RewriteRule ^assets/(.*)$ assets/$1 [L]
+RewriteRule ^addtocart$ index.php?mod=product&act=addtocart [L]
+RewriteRule ^cart$ index.php?mod=product&act=cart [L]
+RewriteRule ^addtowishlist$ index.php?mod=wishlist&act=addtowishlist [L]
+RewriteRule ^wishlist$ index.php?mod=wishlist&act=wishlist [L]
+RewriteRule ^delete_cart/([0-9]+)$ index.php?mod=product&act=delete_cart&id=$1 [L]
+
+RewriteRule ^assets/(.*)/(.*)/(.*)$ assets/$1/$2/$3 [L]
+RewriteRule ^assets/(.*)/(.*)$ assets/$1/$2 [L]
+# RewriteRule ^template/(.*)$ template/$1 [L]
+RewriteRule ^(.*)/(.*)$ index.php?mod=$1&act=$2 [L] 
+
+# RewriteRule  [L]
