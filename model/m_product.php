@@ -52,18 +52,40 @@
         return pdo_query_value("SELECT SoLuongSP FROM taikhoan tk INNER JOIN hoadon hd ON tk.MaTK=hd.MaTK INNER JOIN chitiethoadon cthd ON hd.MaHD=cthd.MaHD WHERE tk.MaTK=? and cthd.MaSP=?",$MaTK,$MaSP);
     }
     function show_comment(){
-        return pdo_query ("SELECT
-                            bl.`MaBL` ,
-                            bl.`NoiDung` ,
-                            bl.`NgayBL` ,
-                            sp.`TenSP` ,
-                            tk.`HoTen` 
+        return pdo_query (" SELECT
+                            sp.`MaSP` AS MaSP,
+                            sp.`TenSP` AS TenSP,
+                            sp.`AnhSP` AS AnhSP,
+                            MAX(bl.`NgayBL`) AS BLMoi,
+                            MIN(bl.`NgayBL`) AS BLCu,
+                            COUNT(bl.`MaBL`) AS SoLuongBinhLuan
                         FROM
-                            `binhluan` bl
-                        JOIN
-                            `sanpham` sp ON bl.`MaSP` = sp.`MaSP`
-                        JOIN
-                            `taikhoan` tk ON bl.`MaTK` = tk.`MaTK`;");
+                            `sanpham` sp
+                        LEFT JOIN
+                            `binhluan` bl ON sp.`MaSP` = bl.`MaSP`
+                        GROUP BY
+                            sp.`MaSP`, sp.`TenSP`, sp.`AnhSP`
+                        HAVING
+                            SoLuongBinhLuan > 0
+                        ORDER BY
+                            SoLuongBinhLuan DESC;
+                    ");
+    }
+    function chitiet_comment($MaSP){
+        return pdo_query("SELECT
+                                bl.`MaBL` ,
+                                bl.`NoiDung` ,
+                                bl.`NgayBL` ,
+                                sp.`TenSanPham` ,
+                                tk.`HoTen` 
+                            FROM
+                                `binhluan` bl
+                            JOIN
+                                `sanpham` sp ON bl.`MaSP` = sp.`MaSP`
+                            JOIN
+                                `taikhoan` tk ON bl.`MaTK` = tk.`MaTK`
+                            WHERE
+                                sp.`MaSP` = ?", $MaSP);
     }
     function comment_getById($MaBL){
         return pdo_query_one("SELECT * FROM  binhluan WHERE MaBL = $MaBL");

@@ -161,24 +161,24 @@ td {
             <h2>Tất cả bình luận</h2><br>
             <tr>
                 <!-- <th class="chon">Chọn</th> -->
-                <th>Khách hàng</th>
                 <th>Sản phẩm</th>
-                <th>Nội dung </th>
-                <th>Ngày Bình Luận</th>
+                <th>Số bình luận</th>
+                <th>Mới Nhất</th>
+                <th>Cũ Nhất</th>
                 <th style="text-align: center;">Lệnh</th>
             </tr>
         </thead>
         <tbody>
             <?php foreach($show_bl as $show):?>
             <tr>
-                <td><?= $show['HoTen'];?></td>
                 <td><?= $show['TenSP'];?></td>
-                <td><?= $show['NoiDung'];?></td>
-                <td><?= $show['NgayBL'];?></td>
+                <td><?= $show['SoLuongBinhLuan'];?></td>
+                <td><?= $show['BLMoi'];?></td>
+                <td><?= $show['BLCu'];?></td>
                 <td>
                     <div class="lenh">
-                        <div class="xoa"><a href="<?=$base_url?>admin/delete/binhluan/<?= $show['MaBL'];?>"
-                                style="font-weight: 600; ">Xóa</a>
+                        <div class="xoa"><a href="<?=$base_url?>admin/chitiet/binhluan/<?= $show['MaSP'];?>"
+                                style="font-weight: 600; ">Chi tiết</a>
                         </div>
                     </div>
                 </td>
@@ -194,3 +194,7 @@ td {
     <div><a href="<?=$base_url?>admin/" class="remove" style="font-weight: 600;">Xóa hết</a></div>
 </div> -->
 <!-- End of Recent Orders -->
+
+                        <!-- <div class="xoa"><a href="<?=$base_url?>admin/delete/binhluan/<?= $show['MaBL'];?>"
+                                style="font-weight: 600; ">Xóa</a>
+                        </div> -->
