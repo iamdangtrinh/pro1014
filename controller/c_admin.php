@@ -214,12 +214,18 @@
                 $show_bl = show_comment();
                 $view_name='admin_binhluan';
                 break;
+            case 'chitiet-binhluan':
+                //lay du lieu
+                include_once 'model/m_user.php';
+                $show_bl = chitiet_comment($_GET['id']);
+                $view_name='admin_binhluan_chitiet';
+                break;
             case 'delete-binhluan':
                 //lay du lieu
                 include_once 'model/m_user.php';
                 delete_comment($_GET['id']);
                 $show_comment = comment_getById($_GET['id']);
-                header('location: '.$base_url.'admin/binhluan');
+                header('location: '.$base_url.'admin/chitiet/binhluan');
                 break;
             default:
                 $view_name='admin_dashboard';
