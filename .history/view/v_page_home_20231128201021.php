@@ -180,7 +180,7 @@
                             <figure>
                                 <a href="<?=$base_url?>product/detail/<?=$product['MaSP']?>">
                                     <img src="<?=$base_url?>upload/demoes/demo23/products/<?= $product['AnhSP'];?>"
-                                        alt="product" style="width: auto;">
+                                        alt="product" style="width: auto; height: 200px;">
                                 </a>
                                 <div class="label-group">
                                     <div class="product-label label-hot">HOT</div>

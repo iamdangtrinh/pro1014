@@ -117,6 +117,36 @@
 
                                 }
                                 </style>
+                                <div class="product-prev">
+                                    <a href="#">
+                                        <div class="box_icon"><i class="fa-solid fa-angle-left"></i></div>
+                                        <span class="product-popup">
+                                            <span class="box-content">
+                                                <img alt="product" width="150" height="150"
+                                                    src="<?=$base_url?>upload/products/product-3.jpg"
+                                                    style="padding-top: 0px;">
+
+                                                <span>Dành cho bé trai</span>
+                                            </span>
+                                        </span>
+                                    </a>
+                                </div>
+
+                                <div class="product-next">
+                                    <a href="#">
+                                        <div class="box_icon"><i class="fa-solid fa-angle-right"></i></div>
+
+                                        <span class="product-popup">
+                                            <span class="box-content">
+                                                <img alt="product" width="150" height="150"
+                                                    src="<?=$base_url?>upload/products/product-4.jpg"
+                                                    style="padding-top: 0px;">
+
+                                                <span>Quần áo </span>
+                                            </span>
+                                        </span>
+                                    </a>
+                                </div>
                             </div>
 
                             <div class="ratings-container">
@@ -132,7 +162,7 @@
                             <!-- End .ratings-container -->
 
                             <hr class="short-divider">
-                                
+
                             <div class="price-box">
                                 <span class="old-price"><?=$product_detail['Gia']?>đ</span>
                                 <span class="new-price"><?=$product_detail['GiaGiam']?>đ</span>
