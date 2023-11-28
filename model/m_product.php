@@ -97,5 +97,4 @@
     function product_same($id){
         return pdo_query("SELECT * FROM sanpham WHERE MaDM = ? ORDER BY rand() LIMIT 5", $id );
     }
-    // Hiển thị tên danh mục
 ?>
