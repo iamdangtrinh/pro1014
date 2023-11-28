@@ -60,13 +60,17 @@ if(isset($_GET['act'])) {
             header('location: '.$base_url.'gio-hang');
             break;
         case 'comment':
-            if(isset($_SESSION['user']) && isset($_POST['MaSP']) && isset($_POST['NoiDung']) && isset($_POST['SoSao'])) {
+            if(isset($_SESSION['user']) && isset($_POST['MaSP']) && isset($_POST['NoiDung'])&&$_POST['NoiDung']!="" && isset($_POST['SoSao'])) {
                 $MaTK = $_SESSION['user']['MaTK'];
                 $MaSP = $_POST['MaSP'];
                 $NoiDung = $_POST['NoiDung'];
                 $SoSao = $_POST['SoSao'];
                 addComment($MaTK, $MaSP, $NoiDung, $SoSao);
                 $_SESSION['thongbao'] = 'Bạn đã bình luận sản phẩm thành công!';
+                header('location: '.$base_url.'product/detail/'.$MaSP.'');
+            }else{
+                $_SESSION['loi'] = 'Bạn chưa nhập nội dung đánh giá!';
+                $MaSP = $_POST['MaSP'];
                 header('location: '.$base_url.'product/detail/'.$MaSP.'');
             }
             break;

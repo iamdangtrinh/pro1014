@@ -13,6 +13,12 @@
                     <span><strong>Hoàn tất!</strong> <?=$_SESSION['thongbao'];?>.</span>
                 </div>
                 <?php endif; unset($_SESSION['thongbao']);?>
+                <?php if(isset($_SESSION['loi'])): ?>
+                    <div class="alert alert-rounded alert-danger">
+						<i class="fa fa-exclamation-circle" style="color: #ef8495;"></i>
+						<span><strong>Không thành công!</strong> <?=$_SESSION['loi'];?></span>
+					</div>
+                <?php endif; unset($_SESSION['loi']);?>
                 <div class="product-single-container product-single-default">
                     <div class="cart-message d-none">
                         <strong class="single-cart-notice">Quần áo</strong>
@@ -383,7 +389,18 @@
 
                                                 <div class="ratings-container float-sm-right">
                                                     <div class="product-ratings">
-                                                        <span class="ratings" style="width:60%"></span>
+                                                        <span class="ratings" style="width:
+                                                        <?php if($value['SoSao']==5){
+                                                            echo 100;
+                                                        }else if($value['SoSao']==4){
+                                                            echo 80;
+                                                        }else if($value['SoSao']==3){
+                                                            echo 60;
+                                                        }else if($value['SoSao']==2){
+                                                            echo 40;
+                                                        }else{
+                                                            echo 20;
+                                                        } ?>%"></span>
                                                         <!-- End .ratings -->
                                                         <span class="tooltiptext tooltip-top"></span>
                                                     </div>
