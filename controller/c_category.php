@@ -7,6 +7,7 @@
                 // lay du liệu
                 if (isset($_GET['id'])) {
                     $MaDM = $_GET['id'];
+                    $AllDM=category_getALLDM();
                     $spDM=category_getbyDM($MaDM);
                     $soluongSP = count_productsbydm($MaDM);
                     //////////////////////////////////////////////////////
