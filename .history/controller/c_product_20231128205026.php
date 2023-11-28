@@ -13,7 +13,7 @@ if(isset($_GET['act'])) {
             $view_name = 'product_detail';
             break;
         case 'addtocart':
-            $MaSP = $_GET['id'];
+            $MaSP
             //laydulieu
             include_once 'model/m_product.php';
             include_once 'model/m_cart.php';
