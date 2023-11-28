@@ -107,7 +107,16 @@
                                                     <div class="category-list">
                                                         <a href="<?=$base_url?>product/detail/<?=$product['MaSP']?>" class="product-category"><?= $product['TenDM'];?></a>
                                                     </div>
-                                                    <a href="wishlist.html" title="Wishlist" class="btn-icon-wish"><i class="fa-solid fa-heart"></i></a>
+                                                    <a href="<?=$base_url?>page/wishlist" 
+                                                    <?php if(isset($_SESSION['user'])){
+                                                        $MaTK=$_SESSION['user']['MaTK'];
+                                                        $CheckWish=check_wishByProductAndUser($MaTK,$product['MaSP']);
+                                                        if($CheckWish!=""){
+                                                            echo 'title="Go to Wishlist" class="btn-icon-wish added-wishlist" ';
+                                                        }else{
+                                                            echo 'title="Wishlist" class="btn-icon-wish"';
+                                                        }
+                                                    } ?>><i class="fa-solid fa-heart"></i></a>
                                                 </div>
                                                 <h3 class="product-title">
                                                     <a href="<?=$base_url?>product/detail/<?=$product['MaSP']?>"><?= $product['TenSP'];?></a>
@@ -148,7 +157,16 @@
                                                     <div class="category-list">
                                                         <a href="<?=$base_url?>product/detail/<?=$product['MaSP']?>" class="product-category"><?= $product['TenDM'];?></a>
                                                     </div>
-                                                    <a href="wishlist.html" title="Wishlist" class="btn-icon-wish"><i class="fa-solid fa-heart"></i></a>
+                                                    <a href="<?=$base_url?>page/wishlist" 
+                                                    <?php if(isset($_SESSION['user'])){
+                                                        $MaTK=$_SESSION['user']['MaTK'];
+                                                        $CheckWish=check_wishByProductAndUser($MaTK,$product['MaSP']);
+                                                        if($CheckWish!=""){
+                                                            echo 'title="Go to Wishlist" class="btn-icon-wish added-wishlist" ';
+                                                        }else{
+                                                            echo 'title="Wishlist" class="btn-icon-wish"';
+                                                        }
+                                                    } ?>><i class="fa-solid fa-heart"></i></a>
                                                 </div>
                                                 <h3 class="product-title">
                                                     <a href="<?=$base_url?>product/detail/<?=$product['MaSP']?>"><?= $product['TenSP'];?></a>
