@@ -23,10 +23,10 @@
         return pdo_query_value("SELECT count(*) AS soluong FROM sanpham");
     }
     function product_getNew($limit){
-        return pdo_query("SELECT * FROM sanpham sp INNER JOIN danhmuc dm ON sp.MaDM=dm.MaDM ORDER BY MaSP DESC LIMIT $limit");
+        return pdo_query("SELECT * FROM sanpham ORDER BY MaSP DESC LIMIT $limit");
     }
     function product_getPin($limit){
-        return pdo_query("SELECT * FROM sanpham sp INNER JOIN danhmuc dm ON sp.MaDM=dm.MaDM WHERE ghim = 1 LIMIT $limit");
+        return pdo_query("SELECT * FROM sanpham WHERE ghim = 1 LIMIT $limit");
     }
 
     // tìm kiếm sản phẩm
@@ -97,8 +97,7 @@
     function product_same($id){
         return pdo_query("SELECT * FROM sanpham WHERE MaDM = ? ORDER BY rand() LIMIT 5", $id );
     }
-    // Hiển thị tên danh mục
-    function show_namecate($tendm){
-        return pdo_query_one("SELECT * FROM sanpham s INNER JOIN danhmuc dm ON s.MaDM = dm.MaDM WHERE TenDM = ?, $tendm");
+    function show_namecate(){
+        return pdo_query("SELECT * FROM sanpham s INNER JOIN danhmuc dm ON s.MaDM = dm.MaDM ON ")
     }
 ?>

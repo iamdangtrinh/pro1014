@@ -10,7 +10,7 @@ if(isset($_GET['act'])) {
             $product_detail = product_detail($_GET['id']);
             // hien thi du lieu
             $product_same = product_same($product_detail['MaDM']);
-            $tendm = show_namecate($product_detail['TenDM']);
+            $tendm = 
             $view_name = 'product_detail';
             break;
         case 'addtocart':
