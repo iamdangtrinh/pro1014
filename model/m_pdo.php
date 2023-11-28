@@ -120,7 +120,3 @@ function upanh($name, $target_dir) {
     $img = $_FILES[''.$name.'']['name'];
     return $img;
 }
-function xoaanh($MaSP) {
-    $list = pdo_query_one("SELECT * FROM sanpham WHERE MaSP = ?", $MaSP);
-    return $list['Hinh'];
-}
