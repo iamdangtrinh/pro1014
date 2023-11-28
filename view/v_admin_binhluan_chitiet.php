@@ -192,7 +192,3 @@ td {
     <div><a href="<?=$base_url?>admin/" class="remove" style="font-weight: 600;">Xóa hết</a></div>
 </div> -->
 <!-- End of Recent Orders -->
-
-                        <div class="xoa"><a href="<?=$base_url?>admin/delete/binhluan/<?= $show['MaBL'];?>"
-                                style="font-weight: 600; ">Xóa</a>
-                        </div>
