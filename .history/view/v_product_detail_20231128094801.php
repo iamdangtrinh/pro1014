@@ -220,8 +220,8 @@
                                 </div> -->
                                 <!-- End .social-icons -->
 
-                                <a href="" class="btn-icon-wish add-wishlist" title="Thêm vào yêu thích"><i
-                                        class="icon-wishlist-2"></i><span>Yêu thích</span></a>
+                                <a href="" class="btn-icon-wish add-wishlist"
+                                    <!-- title="Thêm vào yêu thích"><i class="icon-wishlist-2"></i><span>Yêu thích</span></a> -->
                             </div>
                             <!-- End .product single-share -->
                         </div>

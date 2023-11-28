@@ -34,7 +34,7 @@
                                     <div class="product-item">
                                         <img class="product-single-image"
                                             src="<?=$base_url?>upload/demoes/demo23/products/<?=$product_detail['AnhSP']?>"
-                                            data-zoom-image="<?=$base_url?>upload/demoes/demo23/products/<?=$product_detail['AnhSP']?>"
+                                            data-zoom-image="<?=$base_url?>upload/demoes/demo3/products/<?=$product_detail['AnhSP']?>"
                                             width="468" height="468" alt="product" />
                                     </div>
                                     <div class="product-item">
