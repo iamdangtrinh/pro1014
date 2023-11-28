@@ -30,13 +30,13 @@ switch ($_GET['act']) {
         include_once '../model/m_cart.php';
         $SoLuongSP = $_POST['quantity'];
         $MaSP = $_POST['MaSP'];
-        $Quantity = quantity_cart_max($MaSP);
+        // $Quantity = quantity_cart_max($MaSP);
 
-        if($SoLuongSP > $Quantity['SoLuong']) {
-            echo 'Sản phẩm còn lại '.$Quantity['SoLuong'].'';
-        } else {
+        // if($SoLuongSP > $Quantity['SoLuong']) {
+        //     echo 'Sản phẩm còn lại '.$Quantity['SoLuong'].'';
+        // } else { 
             update_quantity_by_cart($SoLuongSP, $MaSP);
-        }
+        // }
 
         break;
 

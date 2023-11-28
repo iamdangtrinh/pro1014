@@ -44,14 +44,14 @@
                                 <td class="m-auto" style="width:115px">
                                     <?= number_format($Gia, 0, '.', '.')." VND" ?>
                                 </td>
-                                <td style="width: 100px">
+                                <td class="" style="width: 100px">
+                                <p data-quantity="<?= $MaSP ?>"></p>
                                     <div class="product-single-qty">
                                         <span class="fa fa-minus minusJS"></span>
                                         <input type="hidden" class="price_product" value="<?= $Gia ?>">
                                         <input type="text" name="quantity" value="<?= $SoLuongSP ?>"
                                             class="quantity_product">
                                         <span class="fa fa-plus plusJS"></span>
-                                        <!-- <p class="max_quantity"></p> -->
                                     </div>
                                 </td>
                                 <td class="text-right m-auto" style="width:115px">
@@ -100,48 +100,6 @@
                         <tr>
                             <td>Tổng phụ</td>
                             <td>17.000đ</td>
-                        </tr>
-
-                        <tr>
-                            <!-- <td colspan="2" class="text-left">
-                                <h4>Vận chuyển</h4>
-
-                                <div class="form-group form-group-custom-control">
-                                    <div class="custom-control custom-radio">
-                                        <input type="radio" class="custom-control-input" name="radio" checked>
-                                        <label class="custom-control-label">
-                                            Nhận hàng tận nơi</label>
-                                    </div>
-                                </div> -->
-
-                            <!-- <form action="#">
-                                    <div class="form-group form-group-sm">
-                                        <label>Vận chuyển đến <strong>TP HCM.</strong></label>
-                                        <div class="select-custom">
-                                            <select class="form-control form-control-sm">
-                                                <option value="HCM">TP HCM </option>
-                                            </select>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group form-group-sm">
-                                        <div class="select-custom">
-                                            <select class="form-control form-control-sm">
-                                                <option value="NY">Quận 1</option>
-                                            </select>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group form-group-sm">
-                                        <input type="text" class="form-control form-control-sm"
-                                            placeholder="Town / City">
-                                    </div>
-
-                                    <button type="submit" class="btn btn-shop btn-update-total">
-                                        cập nhật tổng thể
-                                    </button>
-                                </form> -->
-                            </td>
                         </tr>
                     </tbody>
 
@@ -218,7 +176,7 @@
 
             var closestProductRow = this.closest('.product-row');
             var MaSP = closestProductRow.querySelector('[data-quantity]').dataset.quantity;
-
+            
             $.ajax({
                 type: "POST",
                 url: '<?= $base_url ?>controller/ajax.php?act=ajax_cart_quantity',

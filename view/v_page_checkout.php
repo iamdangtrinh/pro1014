@@ -94,7 +94,7 @@
                 </table>
                 <form action="<?=$base_url?>product/update_status_cart" method="post">
                     <input type="hidden" value="<?=$_SESSION['MaHD']?>" name="MaHD">
-                    <input type="submit" name="btn_update_status_cart" class="btn btn-primary w-100 btn-place-order" value="ĐẶT HÀNG">
+                    <input type="submit" name="btn_update_status_cart" class="btn btn-primary w-100 " value="ĐẶT HÀNG">
                 </form>
             </div>
         </div>

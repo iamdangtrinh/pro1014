@@ -9,12 +9,11 @@ function has_cart($MaTK)
 
 // thêm người dùng vào giỏ hàng
 
-function his_cart($TongTien, $MaTK)
+function his_cart($MaTK)
 {
     pdo_execute(
-        'INSERT INTO hoadon(`NgayLap`,`TongTien`,`TrangThai`, `MaTK`) VALUES(?,?,?,?)',
+        'INSERT INTO hoadon(`NgayLap`,`TrangThai`, `MaTK`) VALUES(?,?,?)',
         date('Y-m-d H:i:s'),
-        $TongTien,
         'gio-hang',
         $MaTK
     );

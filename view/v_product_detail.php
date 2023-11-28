@@ -146,13 +146,20 @@
                                 </li>
                             </ul>
 
+                            <div class="product-action">
                             <form action="<?=$base_url?>product/addtocart" method="post">
                                 <input name="SoLuongSP" type="number" value="1" min="1" class="mb-1">
 
-                            <div class="product-action">
                                     <input name="MaSP" type="hidden" value="<?=$product_detail['MaSP']?>">
-                            </br>
+                                    </br>
+
+                                    <?php
+                                    if($product_detail['SoLuong'] > 0) : ?>
                                     <input type="submit" class="btn btn-danger" value="Thêm vào giỏ hàng" name="btn_addtocart">
+                                    
+                                    <?php else : ?>
+                                    <input type="submit" disabled class="btn btn-seconds text-dark" value="Thêm vào giỏ hàng" name="btn_addtocart">
+                                        <?php endif ?>
                                 </form>
 
                                 <a href="<?=$base_url?>gio-hang" class="btn btn-gray view-cart d-none" title="Xem giỏ hàng">Xem giỏ hàng</a>
