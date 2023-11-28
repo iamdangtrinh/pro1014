@@ -129,49 +129,32 @@
 
                                 <a href="#" class="rating-link">( <?=$SLBinhLuan?> đánh giá )</a>
                             </div>
-                            <!-- End .ratings-container -->
-
                             <hr class="short-divider">
-                                
                             <div class="price-box">
                                     <span class="old-price"><?=$product_detail['Gia']?>đ</span>
                                     <span class="new-price"><?=$product_detail['GiaGiam']?>đ</span>
                             </div>
-                            <!-- End .price-box -->
-
                             <div class="product-desc">
                                 <p>
-                                    Số lượng: <?=$product_detail['SoLuong']?>
+                                    Số lượng: <?=$product_detail['SoLuong']?> tồn kho
                                 </p>
                             </div>
-                            <!-- End .product-desc -->
-
                             <ul class="single-info-list">
-                                <!---->
                                 <li>
                                     Mã hàng:
                                     <strong><?=$product_detail['MaSP']?></strong>
                                 </li>
-
-                                <li>
-                                    Thẻ:
-                                    <strong><a href="#" class="product-category">Quần áo</a></strong>,
-                                    <strong><a href="#" class="product-category">Giày dép</a></strong>
-                                </li>
                             </ul>
 
                             <div class="product-filters-container">
-
-
-                                <!---->
                             </div>
 
                             <div class="product-action">
-
-                                <!-- End .product-single-qty -->
-
-                                <a href="<?=$base_url?>addtocart" class="btn btn-dark add-cart mr-2" title="Thêm vào giỏ hàng">Thêm vào
-                                    giỏ hàng </a>
+                                <form action="<?=$base_url?>product/addtocart" method="post">
+                                    <input name="MaSP" type="hidden" value="<?=$product_detail['MaSP']?>">
+                                    <input name="SoLuongSP" type="number" value="1">
+                                    <input type="submit" value="Thêm vào giỏ hàng" name="btn_addtocart">
+                                </form>
 
                                 <a href="<?=$base_url?>gio-hang" class="btn btn-gray view-cart d-none" title="Xem giỏ hàng">Xem giỏ hàng</a>
                             </div>

@@ -13,29 +13,27 @@ if(isset($_GET['act'])) {
             $view_name = 'product_detail';
             break;
         case 'addtocart':
-            $MaSP = $_GET['id'];
             //laydulieu
             include_once 'model/m_product.php';
             include_once 'model/m_cart.php';
             if(isset($_SESSION['user'])) {
-                if(isset($_POST['addtocart']) && $_POST['addtocart']) {
+                if(isset($_POST['btn_addtocart']) && $_POST['btn_addtocart']) {
                     // xử lí sau 
                     $MaTK = $_SESSION['user']['MaTK'];
-                    // $MaSP = $_POST[''];
-                    // $SoLuongSP = $_POST[''];
-                    // $TongTien = $_POST[''];
+                    $MaSP = $_POST['MaSP'];
+                    $SoLuongSP = $_POST['SoLuongSP'];
 
-                    // $has_cart = has_cart($MaTK);
-                    // if ($has_cart) {
-                    //     // nếu sản phẩm tồn tại mà người dùng mua nữa thì cập nhật lại giỏ hàng
-                    //     add_to_cart($has_cart['MaHD'], $SoLuongSP, $MaSP);
-                    // } else {
-                    //     his_cart($TongTien, $MaTK);
-                    //     $has_cart = has_cart($MaTK);
-                    //     add_to_cart($has_cart['MaHD'], $SoLuongSP, $MaSP);
-                    // }
+                    $has_cart = has_cart($MaTK);
+                    if($has_cart) {
+                        // nếu sản phẩm tồn tại mà người dùng mua nữa thì cập nhật lại giỏ hàng
+                        add_to_cart($has_cart['MaHD'], $SoLuongSP, $MaSP);
+                    } else {
+                        his_cart($TongTien, $MaTK);
+                        $has_cart = has_cart($MaTK);
+                        add_to_cart($has_cart['MaHD'], $SoLuongSP, $MaSP);
+                    }
 
-                    header('location: '.$base_url.'cart/cart_order ');
+                    header('location: '.$base_url.'gio-hang ');
                 }
             } else {
                 header('location: '.$base_url.'page/home');
@@ -65,10 +63,10 @@ if(isset($_GET['act'])) {
             include_once 'model/m_cart.php';
             upate_status_cart($_POST['MaHD']);
             header('location: '.$base_url.'page/gio-hang');
-        break;
-        
+            break;
+
         case 'comment':
-            if(isset($_SESSION['user']) && isset($_POST['MaSP']) && isset($_POST['NoiDung'])&&$_POST['NoiDung']!="" && isset($_POST['SoSao'])) {
+            if(isset($_SESSION['user']) && isset($_POST['MaSP']) && isset($_POST['NoiDung']) && $_POST['NoiDung'] != "" && isset($_POST['SoSao'])) {
                 $MaTK = $_SESSION['user']['MaTK'];
                 $MaSP = $_POST['MaSP'];
                 $NoiDung = $_POST['NoiDung'];
@@ -76,7 +74,7 @@ if(isset($_GET['act'])) {
                 addComment($MaTK, $MaSP, $NoiDung, $SoSao);
                 $_SESSION['thongbao'] = 'Bạn đã bình luận sản phẩm thành công!';
                 header('location: '.$base_url.'product/detail/'.$MaSP.'');
-            }else{
+            } else {
                 $_SESSION['loi'] = 'Bạn chưa nhập nội dung đánh giá!';
                 $MaSP = $_POST['MaSP'];
                 header('location: '.$base_url.'product/detail/'.$MaSP.'');

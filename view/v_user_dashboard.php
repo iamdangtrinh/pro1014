@@ -242,7 +242,7 @@
 
                                             ?>
                                         </td>
-                                        <td class="text-warning">568.000 VND</td>
+                                        <td class="text-warning"><?= $TongTien?></td>
                                         <td><a href="#" class="text-success">Xem chi tiết</a></td>
                                     </tr>
 
