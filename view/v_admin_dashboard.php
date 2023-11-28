@@ -33,6 +33,22 @@
                         </div>
                     </div>
                 </div>
+                <div class="product">
+                    <div class="status">
+                        <div class="info">
+                            <h3>Sản phẩm</h3>
+                            <h1>1,147</h1>
+                        </div>
+                        <div class="progresss">
+                            <svg>
+                                <circle cx="38" cy="38" r="36"></circle>
+                            </svg>
+                            <div class="percentage">
+                                <p>+21%</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="searches">
                     <div class="status">
                         <div class="info">
@@ -49,6 +65,7 @@
                         </div>
                     </div>
                 </div>
+                
             </div>
             <!-- End of Analyses -->
          
