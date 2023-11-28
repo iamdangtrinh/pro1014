@@ -203,7 +203,7 @@
                                 <a href="" class="btn btn-dark add-cart mr-2" title="Thêm vào giỏ hàng">Thêm vào
                                     giỏ hàng </a>
 
-                                <a href="<?=$base_url?>page/cart" class="btn btn-gray view-cart d-none">Xem giỏ hàng</a>
+                                <a href="cart.html" class="btn btn-gray view-cart d-none">Xem giỏ hàng</a>
                             </div>
                             <!-- End .product-action -->
 
@@ -226,7 +226,7 @@
                                 </div> -->
                                 <!-- End .social-icons -->
 
-                                <a href="<?=$base_url?>page/wishlist" class="btn-icon-wish add-wishlist" title="Thêm vào yêu thích"><i
+                                <a href="<?=$base_url?>" class="btn-icon-wish add-wishlist" title="Thêm vào yêu thích"><i
                                         class="icon-wishlist-2"></i><span>Yêu thích</span></a>
                             </div>
                             <!-- End .product single-share -->

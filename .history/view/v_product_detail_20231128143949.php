@@ -226,7 +226,7 @@
                                 </div> -->
                                 <!-- End .social-icons -->
 
-                                <a href="<?=$base_url?>page/wishlist" class="btn-icon-wish add-wishlist" title="Thêm vào yêu thích"><i
+                                <a href="<?=$base_url?>page/wishlist.html" class="btn-icon-wish add-wishlist" title="Thêm vào yêu thích"><i
                                         class="icon-wishlist-2"></i><span>Yêu thích</span></a>
                             </div>
                             <!-- End .product single-share -->
