@@ -91,7 +91,7 @@
                                     <div class="col-6 col-sm-4 col-lg-3">
                                         <div class="product-default inner-quickview inner-icon">
                                             <figure>
-                                                <a href="demo23-product.html">
+                                                <a href="<?=$base_url?>product/detail/<?=$product['MaSP']?>">
                                                     <img src="<?=$base_url?>upload/demoes/demo23/products/<?= $product['AnhSP'];?>"
                                                         alt="product" style="width: 207px; height: 220px;">
                                                 </a>
@@ -105,12 +105,12 @@
                                             <div class="product-details">
                                                 <div class="category-wrap">
                                                     <div class="category-list">
-                                                        <a href="demo23-product.html" class="product-category"><?= $product['TenDM'];?></a>
+                                                        <a href="<?=$base_url?>product/detail/<?=$product['MaSP']?>" class="product-category"><?= $product['TenDM'];?></a>
                                                     </div>
                                                     <a href="wishlist.html" title="Wishlist" class="btn-icon-wish"><i class="fa-solid fa-heart"></i></a>
                                                 </div>
                                                 <h3 class="product-title">
-                                                    <a href="demo23-product.html"><?= $product['TenSP'];?></a>
+                                                    <a href="<?=$base_url?>product/detail/<?=$product['MaSP']?>"><?= $product['TenSP'];?></a>
                                                 </h3>
                                                 <div class="ratings-container">
                                                     <div class="product-ratings">
@@ -129,7 +129,7 @@
                                     <div class="col-6 col-sm-4 col-lg-3">
                                         <div class="product-default inner-quickview inner-icon">
                                             <figure>
-                                                <a href="demo23-product.html">
+                                                <a href="<?=$base_url?>product/detail/<?=$product['MaSP']?>">
                                                     <img src="<?=$base_url?>upload/demoes/demo23/products/<?= $product['AnhSP'];?>"
                                                         alt="product" style="width: 207px; height: 220px;">
                                                 </a>
@@ -146,12 +146,12 @@
                                             <div class="product-details">
                                                 <div class="category-wrap">
                                                     <div class="category-list">
-                                                        <a href="demo23-product.html" class="product-category"><?= $product['TenDM'];?></a>
+                                                        <a href="<?=$base_url?>product/detail/<?=$product['MaSP']?>" class="product-category"><?= $product['TenDM'];?></a>
                                                     </div>
                                                     <a href="wishlist.html" title="Wishlist" class="btn-icon-wish"><i class="fa-solid fa-heart"></i></a>
                                                 </div>
                                                 <h3 class="product-title">
-                                                    <a href="demo23-product.html"><?= $product['TenSP'];?></a>
+                                                    <a href="<?=$base_url?>product/detail/<?=$product['MaSP']?>"><?= $product['TenSP'];?></a>
                                                 </h3>
                                                 <div class="ratings-container">
                                                     <div class="product-ratings">
@@ -342,7 +342,7 @@
                                     <div class="featured-col">
                                         <div class="product-default left-details product-widget">
                                             <figure>
-                                                <a href="demo23-product.html">
+                                                <a href="<?=$base_url?>product/detail/<?=$product['MaSP']?>">
                                                     <img src="<?=$base_url?>upload/demoes/demo23/products/small/product-1.jpg"
                                                         width="75" height="75" alt="product" />
                                                     <img src="<?=$base_url?>upload/demoes/demo23/products/small/product-6.jpg"
@@ -351,7 +351,7 @@
                                             </figure>
                                             <div class="product-details">
                                                 <h3 class="product-title">
-                                                    <a href="demo23-product.html">Giày bé gái mùa đông màu hồng</a>
+                                                    <a href="<?=$base_url?>product/detail/<?=$product['MaSP']?>">Giày bé gái mùa đông màu hồng</a>
                                                 </h3>
                                                 <div class="ratings-container">
                                                     <div class="product-ratings">
@@ -367,14 +367,14 @@
                                         </div>
                                         <div class="product-default left-details product-widget">
                                             <figure>
-                                                <a href="demo23-product.html">
+                                                <a href="<?=$base_url?>product/detail/<?=$product['MaSP']?>">
                                                     <img src="<?=$base_url?>upload/demoes/demo23/products/small/product-2.jpg"
                                                         width="75" height="75" alt="product" />
                                                 </a>
                                             </figure>
                                             <div class="product-details">
                                                 <h3 class="product-title">
-                                                    <a href="demo23-product.html">Máy ảnh mở rộng Porto</a>
+                                                    <a href="<?=$base_url?>product/detail/<?=$product['MaSP']?>">Máy ảnh mở rộng Porto</a>
                                                 </h3>
                                                 <div class="ratings-container">
                                                     <div class="product-ratings">
