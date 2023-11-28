@@ -5,6 +5,8 @@ if (isset($_GET['act'])) {
         case 'dashboard':
             // Nếu tồn tại người dùng thì cho vào dashboard
             if (isset($_SESSION['user'])) {
+                include_once 'model/m_cart.php';
+                
                 $view_name = 'user_dashboard';
             } else {
                 // Neus không tồn tại người dùng thì chuyển về trang đăng ký

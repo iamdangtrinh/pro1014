@@ -175,11 +175,11 @@
                                     <table class="table table-order text-left">
                                         <thead>
                                             <tr>
-                                                <th class="order-id">Đặt hàng</th>
-                                                <th class="order-date">Ngày</th>
+                                                <th class="order-id">Mã đơn hàng</th>
+                                                <th class="order-date">Ngày đặt hàng</th>
                                                 <th class="order-status">Trạng thái</th>
                                                 <th class="order-price">Tổng cộng</th>
-                                                <th class="order-action">Hành động</th>
+                                                <th class="order-action">Mua lại</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -197,27 +197,7 @@
                                                 <td class="text-warning">568.000 VND</td>
                                                 <td><a href="#" class="text-success">Xem chi tiết</a></td>
                                             </tr>
-                                            <tr>
-                                                <td>Đồ bộ cho trẻ sơ sinh</td>
-                                                <td>15-10-2023</td>
-                                                <td class="text-success">Thành công</td>
-                                                <td class="text-warning">568.000 VND</td>
-                                                <td><a href="#" class="text-success">Xem chi tiết</a></td>
-                                            </tr>
-                                            <tr>
-                                                <td>Đồ bộ cho trẻ sơ sinh</td>
-                                                <td>15-10-2023</td>
-                                                <td class="text-success">Thành công</td>
-                                                <td class="text-warning">568.000 VND</td>
-                                                <td><a href="#" class="text-success">Xem chi tiết</a></td>
-                                            </tr>
-                                            <tr>
-                                                <td>Đồ bộ cho trẻ sơ sinh</td>
-                                                <td>15-10-2023</td>
-                                                <td class="text-success">Thành công</td>
-                                                <td class="text-warning">568.000 VND</td>
-                                                <td><a href="#" class="text-success">Xem chi tiết</a></td>
-                                            </tr>
+                                            
                                         </tbody>
                                     </table>
                                     <hr class="mt-0 mb-3 pb-2" />

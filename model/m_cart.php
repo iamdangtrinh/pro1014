@@ -71,4 +71,8 @@ function upate_status_cart($MaHD) {
     return pdo_execute("UPDATE hoadon SET TrangThai = 'chuan-bi' WHERE MaHD = ?", $MaHD);
 }
 
+function history_cart($MaTK) {
+    return pdo_query_value("SELECT  FROM chitiethoadon cthd LEFT JOIN hoadon hd ON hd.MaHD= cthd.MaHD WHERE MaTK = ?", $MaHD);
+}
+
 ?>
