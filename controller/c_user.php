@@ -6,7 +6,7 @@ if (isset($_GET['act'])) {
             // Nếu tồn tại người dùng thì cho vào dashboard
             if (isset($_SESSION['user'])) {
                 include_once 'model/m_cart.php';
-                
+                $history_cart =  history_cart($_SESSION['user']['MaTK']);
                 $view_name = 'user_dashboard';
             } else {
                 // Neus không tồn tại người dùng thì chuyển về trang đăng ký

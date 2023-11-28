@@ -72,7 +72,7 @@ function upate_status_cart($MaHD) {
 }
 
 function history_cart($MaTK) {
-    return pdo_query_value("SELECT  FROM chitiethoadon cthd LEFT JOIN hoadon hd ON hd.MaHD= cthd.MaHD WHERE MaTK = ?", $MaHD);
+    return pdo_query("SELECT * FROM `hoadon` WHERE TrangThai != 'gio-hang' AND MaTK = ? ORDER BY MaHD DESC", $MaTK);
 }
 
 ?>
