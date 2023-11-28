@@ -158,7 +158,6 @@ td {
     <table>
         <thead>
             <br>
-            <h2>Tất cả bình luận</h2><br>
             <tr>
                 <!-- <th class="chon">Chọn</th> -->
                 <th>Ảnh SP</th>

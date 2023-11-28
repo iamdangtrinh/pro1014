@@ -154,7 +154,7 @@ td {
 
 }
 </style>
-<h1> Bình Luận: </h1><br>
+<h1>Quản Lí Bình Luận: </h1><br>
 <!-- Recent Orders Table -->
 <div class="box">
     <table>
