@@ -146,14 +146,13 @@
                                 </li>
                             </ul>
 
-                            <div class="product-filters-container">
-                            </div>
+                            <form action="<?=$base_url?>product/addtocart" method="post">
+                                <input name="SoLuongSP" type="number" value="1" min="1" class="mb-1">
 
                             <div class="product-action">
-                                <form action="<?=$base_url?>product/addtocart" method="post">
                                     <input name="MaSP" type="hidden" value="<?=$product_detail['MaSP']?>">
-                                    <input name="SoLuongSP" type="number" value="1">
-                                    <input type="submit" value="Thêm vào giỏ hàng" name="btn_addtocart">
+                            </br>
+                                    <input type="submit" class="btn btn-danger" value="Thêm vào giỏ hàng" name="btn_addtocart">
                                 </form>
 
                                 <a href="<?=$base_url?>gio-hang" class="btn btn-gray view-cart d-none" title="Xem giỏ hàng">Xem giỏ hàng</a>

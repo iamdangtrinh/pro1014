@@ -17,7 +17,7 @@
                             <!-- <th class="thumbnail-col"></th> -->
                             <th colspan="2" class="product-col">Sản Phẩm</th>
                             <th class="price-col text-center">Đơn Giá</th>
-                            <th class="qty-col text-center">Số Lượng</th>
+                            <th class="text-center">Số Lượng</th>
                             <th class="text-right">Số Tiền</th>
                         </tr>
                     </thead>
@@ -44,16 +44,14 @@
                                 <td class="m-auto" style="width:115px">
                                     <?= number_format($Gia, 0, '.', '.')." VND" ?>
                                 </td>
-                                <td>
-                                    <p data-quantity="<?= $MaSP ?>"></p>
+                                <td style="width: 100px">
                                     <div class="product-single-qty">
                                         <span class="fa fa-minus minusJS"></span>
                                         <input type="hidden" class="price_product" value="<?= $Gia ?>">
                                         <input type="text" name="quantity" value="<?= $SoLuongSP ?>"
                                             class="quantity_product">
-                                            <span class="fa fa-plus plusJS"></span>
-                                            <p class="max_quantity"></p>
-                                        <!-- <input class="horizontal-quantity form-control" type="text"> -->
+                                        <span class="fa fa-plus plusJS"></span>
+                                        <!-- <p class="max_quantity"></p> -->
                                     </div>
                                 </td>
                                 <td class="text-right m-auto" style="width:115px">
@@ -85,12 +83,6 @@
 
                                         </form>
                                     </div>
-                                </div>
-
-                                <div class="float-right">
-                                    <button type="submit" class="btn btn-shop btn-update-cart">
-                                        Cập nhật giỏ hàng
-                                    </button>
                                 </div>
                             </td>
                         </tr>

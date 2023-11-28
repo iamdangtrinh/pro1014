@@ -33,11 +33,9 @@ if(isset($_GET['act'])) {
                         add_to_cart($has_cart['MaHD'], $SoLuongSP, $MaSP);
                     }
 
-                    header('location: '.$base_url.'gio-hang ');
                 }
-            } else {
-                header('location: '.$base_url.'page/home');
             }
+            header('location: '.$base_url.'gio-hang ');
             break;
 
         case 'cart':
@@ -62,7 +60,7 @@ if(isset($_GET['act'])) {
         case 'update_status_cart':
             include_once 'model/m_cart.php';
             upate_status_cart($_POST['MaHD']);
-            header('location: '.$base_url.'page/gio-hang');
+            header('location: '.$base_url.'gio-hang');
             break;
 
         case 'comment':
