@@ -10,7 +10,7 @@ if(isset($_GET['act'])) {
             $product_detail = product_detail($_GET['id']);
             // hien thi du lieu
             $product_same = product_same($product_detail['MaDM']);
-            $sale = substr((($product_detail['Gia'] - $product_detail['GiaGiam']) / $product_detail['Gia']) * 100, 0, 2);
+            $sale = substr((($product_detail['Gia'] - $product_['GiaGiam']) / $product['Gia']) * 100, 0, 2);
             $view_name = 'product_detail';
             break;
         case 'addtocart':

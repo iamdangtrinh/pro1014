@@ -57,6 +57,7 @@
                 break;
             case '':
                 include_once 'model/m_wishlist.php';
+                
                 break;
             case 'discount':
                 //laydulieu

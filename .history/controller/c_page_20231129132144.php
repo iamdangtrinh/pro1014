@@ -56,7 +56,7 @@
                 $title = "Danh sách yêu thích";
                 break;
             case '':
-                include_once 'model/m_wishlist.php';
+                include_once '';
                 break;
             case 'discount':
                 //laydulieu

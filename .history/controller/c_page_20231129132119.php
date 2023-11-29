@@ -55,9 +55,7 @@
                 }
                 $title = "Danh sách yêu thích";
                 break;
-            case '':
-                include_once 'model/m_wishlist.php';
-                break;
+                case
             case 'discount':
                 //laydulieu
                 $view_name='page_discount';

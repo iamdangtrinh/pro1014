@@ -32,7 +32,7 @@
                                     <div class="product-label label-hot">HOT</div>
                                     <!---->
                                     <div class="product-label label-sale">
-                                        <?php echo '-'.$sale.'%'; ?>
+                                        <?php echo  $sale; ?>
                                     </div>
                                 </div>
 
@@ -131,8 +131,8 @@
                             </div>
                             <hr class="short-divider">
                             <div class="price-box">
-                                <span class="old-price"><?=$product_detail['Gia']?>đ</span>
-                                <span class="new-price"><?=$product_detail['GiaGiam']?>đ</span>
+                                    <span class="old-price"><?=$product_detail['Gia']?>đ</span>
+                                    <span class="new-price"><?=$product_detail['GiaGiam']?>đ</span>
                             </div>
                             <div class="product-desc">
                                 <p>
