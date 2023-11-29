@@ -59,6 +59,8 @@ if(isset($_GET['act'])) {
         case 'update_status_cart':
             include_once 'model/m_cart.php';
             upate_status_cart($_POST['MaHD']);
+            // update_quantity_product_by_cart($POST_['SoLuongMua']);
+
             header('location: '.$base_url.'user/dashboard#download');
             break;
 

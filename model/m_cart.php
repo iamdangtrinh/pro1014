@@ -30,6 +30,7 @@ function add_to_cart($MaHD, $SoLuongSP, $MaSP)
     );
 }
 
+
 // Cập nhật số lượng giỏ hàng
  // Cập nhật số lượng sản phẩm trong giỏ hàng
  function update_quantity_by_cart($SoLuongSP, $MaSP) {
