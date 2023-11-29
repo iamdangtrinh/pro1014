@@ -1,4 +1,3 @@
-
 <style>
     .row{
         display: none;
@@ -89,13 +88,27 @@ form {
 .mb-3{
     margin-bottom: 5px;
 }
+select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+}
 </style>
         <div class="box_content">
             <h1>Thêm sản phẩm</h1>
             <div class="box">
-                <form action="" method="POST">
+                <form action="" method="POST" enctype="multipart/form-data_">
                     <div class="roww">
                     <div  class="col-md-8">
+                                <div class="mb-3">
+                                    <label for="MaSP" class="form-label">Mã sản phẩm</label>
+                                    <input style="height:42.8px;" type="text" class="form-control" id="MaSP" name="MaSP" value="">
+                                </div>
                                 <div class="mb-3">
                                     <label for="TenSP" class="form-label">Tên sản phẩm</label>
                                     <input style="height:42.8px;" type="text" class="form-control" id="TenSP" name="TenSP" value="">
@@ -106,41 +119,29 @@ form {
                                 </div>
                                 <div class="mb-3">
                                     <label for="Gia" class="form-label">Giá</label>
-                                    <input style="height:42.8px;" type="text" class="form-control" id="" name="" value="">  
+                                    <input style="height:42.8px;" type="text" class="form-control" id="Gia" name="Gia" value="">  
                                 </div>
                                 <div class="mb-3">
-                                    <label for="" class="form-label">Giá giảm</label>
-                                    <input style="height:42.8px;" type="text" class="form-control" id="" name="" value="">  
-                                </div>
-                                <div class="mb-3">
-                                    <label for="" class="form-label">Mã danh mục con</label>
-                                    <input style="height:42.8px;" type="text" class="form-control" id="" name="" value="">  
+                                    <label for="GiaGiam" class="form-label">Giá giảm</label>
+                                    <input style="height:42.8px;" type="text" class="form-control" id="GiaGiam" name="GiaGiam" value="">  
                                 </div>
                                 <div class="mb-3">
                                     <label for="MoTa" class="form-label">Mô tả</label>
-                                    <textarea cols="110" rows="5" name="MoTa" id="MoTa"></textarea>
+                                    <textarea cols="100" rows="5" name="MoTa" id="MoTa"></textarea>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="mb-3">
                                 <label for="AnhSP" class="form-label">Ảnh chính</label>
-                                <input  type="file" class="form-control" id="AnhSP" name="AnhSP" value="">  
+                                <input  type="file" class="form-control" id="AnhSP" name="AnhSP">
                             </div>
                             <div class="mb-3">
-                                <label for="AnhSP1" class="form-label">Ảnh phụ 1</label>
-                                <input  type="file" class="form-control" id="AnhSP1" name="AnhSP1" value="">  
-                            </div>
-                            <div class="mb-3">
-                                <label for="AnhSP2" class="form-label">Ảnh phụ 2</label>
-                                <input type="file" class="form-control" id="AnhSP2" name="AnhSP2" value="">  
-                            </div>
-                            <div class="mb-3">
-                                <label for="AnhSP3" class="form-label">Ảnh phụ 3</label>
-                                <input  type="file" class="form-control" id="AnhSP3" name="AnhSP3" value="">  
-                            </div>
-                            <div class="mb-3">
-                                    <label for="AnhSP4" class="form-label">Ảnh phụ 4</label>
-                                    <input  type="file" class="form-control" id="AnhSP4" name="AnhSP4" value="">  
+                                <label for="MaDM" class="form-label">Danh mục: </label>
+                                <select id="MaDM" name="MaDM">
+                                    <?php foreach( $danhmuc as $getdanhmuc ) :?>
+                                    <option value="<?=$getdanhmuc['MaDM']?>"><?=$getdanhmuc['TenDM']?></option>
+                                    <?php endforeach ;?>
+                                </select>
                             </div>
                         </div>
                     </div>

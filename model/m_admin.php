@@ -21,9 +21,14 @@
     function admin_delete($MaDM){
         pdo_execute("DELETE FROM danhmuc WHERE MaDM=?", $MaDM);
     } 
+  
     function admin_ShowProduct(){
-        return pdo_query("SELECT * FROM sanpham ");
+        return pdo_query("SELECT sp.*, dm.TenDM, dm.MaDMC FROM sanpham sp INNER JOIN danhmuc dm ON sp.MaDM=dm.MaDM ORDER BY sp.MaSP ASC");
     }
+    function admin_addProduct($MaSP,$TenSP,$AnhSP,$SoLuong,$Gia,$GiaGiam,$MaDM,$MoTa) {
+        return pdo_execute("INSERT INTO sanpham (MaSP,TenSP,AnhSP,SoLuong,Gia,GiaGiam,MaDM,MoTa) VALUES ('$MaSP','$TenSP','$AnhSP','$SoLuong',$Gia,$GiaGiam,'$MaDM','$MoTa')");
+    }
+
     function admin_addkhuyenmai( $TenKM, $codeKhuyenMai, $soTienGiam, $ngayBatDau, $ngayKetThuc, $SoLuong) {
     return pdo_execute("INSERT INTO khuyenmai ( TenKM, CodeKM, GiaKM, NgayBatDau, NgayKetThuc, SoLuong) 
                         VALUES ( ?, ?, ?, ?, ?, ?)", 

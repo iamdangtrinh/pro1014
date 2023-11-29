@@ -134,23 +134,24 @@ td{
                 <thead  >
                         <tr>
                             <!-- <th class="chon">Chọn</th> -->
+                            <th>Mã</th>
                             <th>Tên sản phẩm</th>
                             <th>Ảnh</th>
                             <th>Số lượng</th>
                             <th>Giá</th>
                             <th>Giá giảm</th>
-                            <th>Trạng thái</th>
                             <th style="text-align: center;">Lệnh</th>
                         </tr>
                     </thead>
                     <tbody>
                         <?php foreach ($show_product as $item_Product): ?>
                             <tr>
+                            <td><?=$item_Product['MaSP']?></td>
                             <td><?=$item_Product['TenSP']?></td>
                             <td><img src="<?=$base_url?>upload/demoes/demo23/products/<?=$item_Product['AnhSP']?>" width="100" height="100" alt=""></td>
                             <td style="width: 12%;"><?=$item_Product['SoLuong']?></td>
-                            <td><?=$item_Product['Gia']?>VND</td>
-                            <td><?=$item_Product['GiaGiam']?>VND</td>
+                            <td><?=number_format($item_Product['Gia'],0,",",".")?></td>
+                            <td><?=number_format($item_Product['GiaGiam'],0,",",".")?></td>
                             <td>
                                 <div class="lenh">
                                     <div class="sua" ><a href="<?=$base_url?>admin/" style="font-weight: 600; ">Sửa</a></div>

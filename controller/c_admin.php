@@ -54,13 +54,46 @@ if(isset($_GET['act'])) {
             case 'product':
                 include_once 'model/m_pdo.php';
                 include_once 'model/m_admin.php';
+                
                 $show_product = admin_ShowProduct();
-                $view_name = 'admin_product';
+                $view_name='admin_product';
                 break;
             case 'product-add':
-
-                $view_name = 'admin_product_add';
+                include_once 'model/m_pdo.php';
+                include_once 'model/m_admin.php';
+                
+                if(isset($_POST['submit'])){
+                $MaSP = $_POST['MaSP']; 
+                $TenSP = $_POST['TenSP']; 
+                $AnhSP = $_FILES['AnhSP'];
+                $SoLuong = $_POST['SoLuong'];
+                $Gia = $_POST['Gia'];
+                $GiaGiam = $_POST['GiaGiam'];
+                $MaDM = $_POST['MaDM'];
+                $MoTa = $_POST['MoTa'];
+                
+                if(isset($_FILES['AnhSP']['name']) && $_FILES['AnhSP']['name']!=""){
+                //Tạo biến chứa đường dẫn thư mục lưu hình
+                $target_dir = "";
+                //Tạo biến chứa đường dẫn 
+                $target_file = $target_dir . basename($_FILES['AnhSP']['name']);
+                //Nếu ko tồn tại
+                if(!file_exists($target_file)) {
+                    move_uploaded_file($_FILES['AnhSP']['tmp_name'], $target_file);
+                }
+                    
+                }else{
+                $AnhSP="";
+                }
+                $danhmuc = admin_getALLDM();
+                admin_addProduct($MaSP,$TenSP,$AnhSP,$SoLuong,$Gia,$GiaGiam,$MaDM,$MoTa);
+                
+                
+            }
+                $view_name='admin_product_add';
                 break;
+    
+    
             case 'user':
                 //lay du lieu
                 include_once 'model/m_user.php';
