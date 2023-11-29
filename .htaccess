@@ -21,6 +21,7 @@ RewriteRule ^controller/(.*)$ controller/$1 [L]
 
 RewriteRule ^assets/(.*)$ assets/$1 [L]
 RewriteRule ^addtocart$ index.php?mod=product&act=addtocart [L]
+
 RewriteRule ^gio-hang$ index.php?mod=product&act=cart [L]
 RewriteRule ^delete_cart/([0-9]+)$ index.php?mod=product&act=delete_cart&id=$1 [L]
 
