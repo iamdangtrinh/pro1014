@@ -102,7 +102,7 @@ select {
         <div class="box_content">
             <h1>Thêm sản phẩm</h1>
             <div class="box">
-                <form action="" method="POST" enctype="multipart/form-data_">
+                <form action="<?=$base_url?>admin/product/add" method="POST" enctype="multipart/form-data_">
                     <div class="roww">
                     <div  class="col-md-8">
                                 <div class="mb-3">
@@ -147,5 +147,10 @@ select {
                     </div>
                     <button type="submit" name="submit" class="btn btn-primary" value="submit">Xác nhận</button>
                 </form>
+                <?php 
+                     if(isset($tb)&&($tb!="")){
+                          echo $tb;
+                     }
+                ?>
         </div>
         </div>

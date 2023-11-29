@@ -54,44 +54,69 @@ if(isset($_GET['act'])) {
             case 'product':
                 include_once 'model/m_pdo.php';
                 include_once 'model/m_admin.php';
-                
                 $show_product = admin_ShowProduct();
                 $view_name='admin_product';
                 break;
+            // case 'product-add':
+            //     include_once 'model/m_pdo.php';
+            //     include_once 'model/m_admin.php';
+                
+            //     if(isset($_POST['submit'])){
+            //         $MaSP = $_POST['MaSP']; 
+            //         $TenSP = $_POST['TenSP']; 
+            //         $AnhSP = basename($_FILES['AnhSP']['name']);
+            //         $SoLuong = $_POST['SoLuong'];
+            //         $Gia = $_POST['Gia'];
+            //         $GiaGiam = $_POST['GiaGiam'];
+            //         $MaDM = $_POST['MaDM'];
+            //         $MoTa = $_POST['MoTa'];
+                    
+            //         if(isset($_FILES['AnhSP']['name']) && $_FILES['AnhSP']['name']!=""){
+            //             //Tạo biến chứa đường dẫn thư mục lưu hình
+            //             $target_dir = "upload/uploadanhSP".$AnhSP;
+            //             //Tạo biến chứa đường dẫn 
+            //             $target_file = $target_dir.basename($_FILES['AnhSP']['name']);
+            //             //Nếu ko tồn tại
+            //             if(!file_exists($target_file)) {
+            //                 if(move_uploaded_file($_FILES['AnhSP']['tmp_name'],$target_file)){
+            //                     echo "Tệp đã được tải lên thành công!";
+            //                 } else {
+            //                     echo "Đã xảy ra lỗi khi tải lên!";
+            //                 }
+            //             }
+            //         }else{
+            //             $target_file="";
+            //         }
+            //         $danhmuc = admin_getALLDM();
+            //         admin_addProduct($MaSP, $TenSP, $AnhSP, $SoLuong, $Gia, $GiaGiam, $MaDM, $MoTa);
+            //     }
+            //     $view_name='admin_product_add';
+            //     break;
             case 'product-add':
                 include_once 'model/m_pdo.php';
                 include_once 'model/m_admin.php';
                 
                 if(isset($_POST['submit'])){
-                $MaSP = $_POST['MaSP']; 
-                $TenSP = $_POST['TenSP']; 
-                $AnhSP = $_FILES['AnhSP'];
-                $SoLuong = $_POST['SoLuong'];
-                $Gia = $_POST['Gia'];
-                $GiaGiam = $_POST['GiaGiam'];
-                $MaDM = $_POST['MaDM'];
-                $MoTa = $_POST['MoTa'];
-                
-                if(isset($_FILES['AnhSP']['name']) && $_FILES['AnhSP']['name']!=""){
-                //Tạo biến chứa đường dẫn thư mục lưu hình
-                $target_dir = "";
-                //Tạo biến chứa đường dẫn 
-                $target_file = $target_dir . basename($_FILES['AnhSP']['name']);
-                //Nếu ko tồn tại
-                if(!file_exists($target_file)) {
-                    move_uploaded_file($_FILES['AnhSP']['tmp_name'], $target_file);
-                }
+                    $MaSP = $_POST['MaSP']; 
+                    $TenSP = $_POST['TenSP']; 
+                    $AnhSP=basename($_FILES['AnhSP']['name']);
+                    $SoLuong = $_POST['SoLuong'];
+                    $Gia = $_POST['Gia'];
+                    $GiaGiam = $_POST['GiaGiam'];
+                    $MaDM = $_POST['MaDM'];
+                    $MoTa = $_POST['MoTa'];
+                    // lấy tên file
+    
                     
-                }else{
-                $AnhSP="";
+                    // upload file hình
+                    $target_file=IMG_PRODUCT_ADMIN.$AnhSP;
+                    move_uploaded_file($_FILES['AnhSP']['tmp_name'],$target_file);
+                    $danhmuc = admin_getALLDM();
+                    admin_addProduct($MaSP, $TenSP, $AnhSP, $SoLuong, $Gia, $GiaGiam, $MaDM, $MoTa);
+                    $tb = 'Bạn đã thêm thành công!';
                 }
-                $danhmuc = admin_getALLDM();
-                admin_addProduct($MaSP,$TenSP,$AnhSP,$SoLuong,$Gia,$GiaGiam,$MaDM,$MoTa);
-                
-                
-            }
                 $view_name='admin_product_add';
-                break;
+                break;   
     
     
             case 'user':
