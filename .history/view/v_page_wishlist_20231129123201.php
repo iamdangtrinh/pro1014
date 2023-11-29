@@ -46,7 +46,7 @@
                     <td>
                         <h5 class="product-title">
                             <a
-                                href="<?= $base_url ?>product/detail/<?= $product['MaSP'] ?>"><?= $product['TenSP'] ?></a>
+                                href="<?= $base_url ?>product/detail/<?= $product['MaSP'] ?>"><?= $product['TenDM'] ?></a>
                         </h5>
                     </td>
                     <td class="price-box"><?= $product['Gia'] ?>đ</td>

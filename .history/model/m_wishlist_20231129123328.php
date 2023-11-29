@@ -16,7 +16,7 @@
     }
     // Hiển thị sản phẩm ở trang yêu thích
     function show_wishlist($MaTK){
-        return pdo_query("SELECT * FROM yeuthich yt INNER JOIN sanpham s ON yt.MaSP = s.MaSP WHERE yt.MaTK = $MaTK ");
+        return pdo_query("SELECT * FROM yeuthich yt INNER JOIN sanpham s ON yt.MaSP = s.MaSP WHERE yt.MaTK = 101 ");
     }
     // Xóa sản phẩm trang yêu thích
     function delete_wishlist_by_pro($MaSP) {

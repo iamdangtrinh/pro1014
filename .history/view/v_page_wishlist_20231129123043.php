@@ -33,32 +33,29 @@
             <tbody>
                 <tr class="product-row">
                     <?php foreach ($wishlist as $product) : ?>
-                    <td>
-                        <figure class="product-image-container">
-                            <a href="<?= $base_url ?>product/detail/<?= $product['MaSP'] ?>" class="product-image">
-                                <img src="<?= $base_url ?>upload/demoes/demo23/products/<?= $product['AnhSP'] ?>"
-                                    alt="product">
-                            </a>
+                        <td>
+                            <figure class="product-image-container">
+                                <a href="<?= $base_url ?>product/detail/<?= $product['MaSP'] ?>" class="product-image">
+                                    <img src="<?= $base_url ?>upload/demoes/demo23/products/<?= $product['AnhSP'] ?>" alt="product">
+                                </a>
 
-                            <a href="#" class="btn-remove" title="Remove Product"><i class="fa-solid fa-xmark"></i></a>
-                        </figure>
-                    </td>
-                    <td>
-                        <h5 class="product-title">
-                            <a
-                                href="<?= $base_url ?>product/detail/<?= $product['MaSP'] ?>"><?= $product['TenSP'] ?></a>
-                        </h5>
-                    </td>
-                    <td class="price-box"><?= $product['Gia'] ?>đ</td>
-                    <td>
-                        <span class="stock-status">Trong kho</span>
-                    </td>
-                    <td class="action">
-                        <a href="ajax/product-quick-view.html" class="btn btn-quickview mt-1 mt-md-0"
-                            title="Quick View">Xem lướt qua</a>
-                    </td>
+                                <a href="#" class="btn-remove" title="Remove Product"><i class="fa-solid fa-xmark"></i></a>
+                            </figure>
+                        </td>
+                        <td>
+                            <h5 class="product-title">
+                                <a href="<?= $base_url ?>product/detail/<?= $product['MaSP'] ?>"><?= $product['TenDM'] ?></a>
+                            </h5>
+                        </td>
+                        <td class="price-box"><?= $product['Gia'] ?>đ</td>
+                        <td>
+                            <span class="stock-status">Trong kho</span>
+                        </td>
+                        <td class="action">
+                            <a href="ajax/product-quick-view.html" class="btn btn-quickview mt-1 mt-md-0" title="Quick View">Xem lướt qua</a>
+                        </td>
                 </tr>
-                <?php endforeach; ?>
+            <? endforeach; ?>
             </tbody>
         </table>
     </div><!-- End .cart-table-container -->

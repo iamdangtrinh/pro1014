@@ -7,12 +7,12 @@
                     $MaTK = $_SESSION['user']['MaTK'];
                     $wishlist = show_wishlist($MaTK);
                     $view_name = 'page_wishlist';
-                    
+
+                    $view_name = 'wishlist';
                 }else{
                     $_SESSION['loi']['yeuthich'] = 'Vui lòng đăng nhập để thêm sản phẩm vào yêu thích';
                     header('Location: '.$base_url.'product/detail');
                 }
-                $view_name = 'wishlist';
                 break;
             
             default:

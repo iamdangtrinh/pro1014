@@ -53,7 +53,6 @@
                     $_SESSION['loi']['yeuthich'] = 'Vui lòng đăng nhập để thêm sản phẩm vào yêu thích';
                     header('Location: '.$base_url.'user/login');
                 }
-                $title = "Danh sách yêu thích";
                 break;
             case 'discount':
                 //laydulieu

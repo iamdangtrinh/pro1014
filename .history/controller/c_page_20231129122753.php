@@ -48,12 +48,11 @@
                 if(isset($_SESSION['user'])){
                     $MaTK = $_SESSION['user']['MaTK'];
                     $wishlist = show_wishlist($MaTK);
-                    $view_name = 'page_wishlist';
                 }else{
                     $_SESSION['loi']['yeuthich'] = 'Vui lòng đăng nhập để thêm sản phẩm vào yêu thích';
                     header('Location: '.$base_url.'user/login');
                 }
-                $title = "Danh sách yêu thích";
+                $view_name = 'page_wishlist';
                 break;
             case 'discount':
                 //laydulieu
