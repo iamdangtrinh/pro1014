@@ -77,6 +77,7 @@
                             bl.`NoiDung`,
                             bl.`NgayBL`,
                             sp.`TenSP`,
+                            sp.`MaSP`,
                             tk.`HoTen`
                         FROM
                             `binhluan` bl
