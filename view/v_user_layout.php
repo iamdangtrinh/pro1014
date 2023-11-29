@@ -41,8 +41,8 @@
         <div class="top-notice font2">
             <div class="container-fluid text-center m-auto text-dark">
                 <i class="fa-solid fa-truck"></i> <b class="text-uppercase">Miễn phí vận chuyển</b>&nbsp;hóa đơn từ
-                300.000 VND hoặc nhiều hơn!
-                Code:&nbsp;<b class="text-uppercase">Cáigìđó</b>&nbsp;| Hạn chế áp dụng.&nbsp;<a href=""
+                0Đ VND!
+                Code:&nbsp;<b class="text-uppercase">km10</b>&nbsp;| Hạn chế áp dụng.&nbsp;<a href=""
                     class="text-dark">Xem tất cả ưu đãi</a>
             </div>
             <button title="Close (Esc)" type="button" class="mfp-close">×</button>

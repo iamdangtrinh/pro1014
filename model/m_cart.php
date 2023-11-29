@@ -67,10 +67,12 @@ function quantity_cart_max($MaSP) {
     return pdo_query_one("SELECT MaSP, SoLuong FROM sanpham WHERE MaSP = ?", $MaSP);
 }
 
+// cập nhật trạng thái giỏ hàng
 function upate_status_cart($MaHD) {
     return pdo_execute("UPDATE hoadon SET TrangThai = 'chuan-bi' WHERE MaHD = ?", $MaHD);
 }
 
+// hiển thị lịch sử giỏ hàng
 function history_cart($MaTK) {
     return pdo_query("SELECT * FROM `hoadon` WHERE TrangThai != 'gio-hang' AND MaTK = ? ORDER BY MaHD DESC", $MaTK);
 }

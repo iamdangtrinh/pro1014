@@ -26,6 +26,8 @@ if(isset($_GET['act'])) {
                     $has_cart = has_cart($MaTK);
                     if($has_cart) {
                         // nếu sản phẩm tồn tại mà người dùng mua nữa thì cập nhật lại giỏ hàng
+                        
+
                         add_to_cart($has_cart['MaHD'], $SoLuongSP, $MaSP);
                     } else {
                         his_cart($MaTK);
