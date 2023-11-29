@@ -215,12 +215,12 @@
 
                                     <tr>
                                         <td>
-                                            #<?= $MaHD ?>
+                                            <strong>#<?= $MaHD ?></strong>
                                         </td>
                                         <td>
                                             <?php 
                                             $date = date_create($NgayLap);
-                                            echo date_format($date, "D-M-Y") ?>
+                                            echo date_format($date, "d-m-y") ?>
                                         </td>
                                         <td>
                                             <?php
@@ -239,11 +239,10 @@
                                                     echo '<span class="text-white p-1 bg-danger">Đơn hàng không thành công</span>';
                                                     break;
                                             }
-
                                             ?>
                                         </td>
                                         <td class="text-warning"><?= $TongTien?></td>
-                                        <td><a href="#" class="text-success">Xem chi tiết</a></td>
+                                        <td><a href="#" class="text-success">Mua lại</a></td>
                                     </tr>
 
                                 <?php endforeach ?>

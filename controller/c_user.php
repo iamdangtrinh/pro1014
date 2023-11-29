@@ -4,7 +4,7 @@ if (isset($_GET['act'])) {
     switch ($_GET['act']) {
         case 'dashboard':
             // Nếu tồn tại người dùng thì cho vào dashboard
-            if (isset($_SESSION['user'])) {
+            if (isset($_SESSION['user']['VaiTro'])) {
                 include_once 'model/m_cart.php';
                 $history_cart =  history_cart($_SESSION['user']['MaTK']);
                 $view_name = 'user_dashboard';
@@ -32,10 +32,10 @@ if (isset($_GET['act'])) {
                     if ($has_account) {
                         $_SESSION['user'] = $has_account;
                         // echo "Đăng nhập thành công";     
-                        if ($_SESSION['user']['VaiTro'] == 1) {
-                            header('location: ' . $base_url . 'admin/dashboard');
-                        } else {
+                        if ($_SESSION['user']['VaiTro'] == 0) {
                             header('location: ' . $base_url . 'page/home');
+                        } else {
+                            header('location: ' . $base_url . 'admin/dashboard');
                         }
                         // Chuyển về trang chủ
                     } else if ($has_account == 0) {

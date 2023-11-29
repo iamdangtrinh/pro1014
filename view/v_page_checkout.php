@@ -12,29 +12,35 @@
             <ul class="checkout-steps">
                 <li>
                     <h2 class="step-title">Chi tiết đơn hàng</h2>
-                    
+
                     <form action="" id="checkout-form">
                         <div class="form-group">
                             <label>Họ và tên
                                 <abbr class="required" title="required">*</abbr></label>
-                            <input type="text" class="form-control" value="<?php echo isset($_SESSION['user']) ? $_SESSION['user']['HoTen'] : "" ?>" required />
+                            <input type="text" class="form-control"
+                                value="<?php echo isset($_SESSION['user']) ? $_SESSION['user']['HoTen'] : "" ?>"
+                                required />
                         </div>
 
                         <div class="form-group mb-1 pb-2">
                             <label>Địa chỉ nhận hàng
                                 <abbr class="required" title="required">*</abbr></label>
-                            <input type="text" class="form-control" placeholder="Địa chỉ nhận hàng" value="<?php echo isset($_SESSION['user']) ? $_SESSION['user']['DiaChi'] : "" ?>" required />
+                            <input type="text" class="form-control" placeholder="Địa chỉ nhận hàng"
+                                value="<?php echo isset($_SESSION['user']) ? $_SESSION['user']['DiaChi'] : "" ?>"
+                                required />
                         </div>
 
                         <div class="form-group">
                             <label>Điện thoại <abbr class="required" title="required">*</abbr></label>
-                            <input type="tel" class="form-control" required value="<?php echo isset($_SESSION['user']) ? $_SESSION['user']['SoDienThoai'] : "" ?>">
+                            <input type="tel" class="form-control" required
+                                value="<?php echo isset($_SESSION['user']) ? $_SESSION['user']['SoDienThoai'] : "" ?>">
                         </div>
 
                         <div class="form-group">
                             <label>Địa chỉ email
                                 <abbr class="required" title="required">*</abbr></label>
-                            <input type="email" class="form-control" required value="<?php echo isset($_SESSION['user']) ? $_SESSION['user']['Email'] : "" ?>" />
+                            <input type="email" class="form-control" required
+                                value="<?php echo isset($_SESSION['user']) ? $_SESSION['user']['Email'] : "" ?>" />
                         </div>
 
                         <div class="form-group">
@@ -51,7 +57,7 @@
             <div class="order-summary">
                 <h3>Đơn hàng đã đặt</h3>
 
-                <table class="table table-mini-cart">
+                <table class="table ">
                     <thead>
                         <tr>
                             <th colspan="2">Sản phẩm</th>
@@ -59,7 +65,8 @@
                     </thead>
                     <tbody>
                         <?php
-                        foreach($show_cart_for_user as $value):extract($value)?>
+                        foreach($show_cart_for_user as $value):
+                            extract($value) ?>
                             <tr>
                                 <td class="product-col">
                                     <h5 class="product-title text-title">
@@ -68,7 +75,7 @@
                                     </h5>
                                     <p class="product-qty" style="font-weight: 400">Số lượng:
                                         <?= $SoLuongSP ?>
-                                        
+
                                     </p>
                                 </td>
 
@@ -92,12 +99,50 @@
                         </tr>
                     </tfoot>
                 </table>
-                <form action="<?=$base_url?>product/update_status_cart" method="post">
-                    <input type="hidden" value="<?=$_SESSION['MaHD']?>" name="MaHD">
-                    <input type="submit" name="btn_update_status_cart" class="btn btn-primary w-100 " value="ĐẶT HÀNG">
+                
+                <form action="" method="post">
+                <h5>Hình thức thanh toán:</h5>
+                <input type="radio" name="method_pay" value="" id="nhanhang">
+                <label required for="nhanhang">Thanh toán khi nhận hàng</label>
+                </br>
+                <input type="radio" name="method_pay" value="" id="vnpay">
+                <label required for="vnpay">Thanh toán qua VNPAY</label>
+                </br>
+                    <button type="button" class="btn btn-primary w-100" data-toggle="modal"
+                        data-target="#exampleModalCenter" value="">ĐẶT HÀNG </button>
                 </form>
             </div>
         </div>
     </div>
 </div>
 
+<!-- Button trigger modal -->
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" style="background: rgba(0,0,0,0.6);" tabindex="-1" role="dialog"
+    aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered rounded" role="document">
+        <div class="modal-content rounded">
+            <div class="modal-header">
+                <h3 class="modal-title" id="exampleModalCenterTitle">Xác nhận đơn hàng</h3>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="alert alert-rounded alert-radius alert-success">
+                    <span>Cảm ơn bạn đã đặt hàng tại Bé Yêu Shop. Xin vui lòng nhấn vào đồng ý để xác nhận đơn
+                        hàng</span>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="rounded btn btn-danger" data-dismiss="modal">Hủy</button>
+                <form action="<?= $base_url ?>product/update_status_cart" method="post">
+                    <input type="hidden" value="<?= $_SESSION['MaHD'] ?>" name="MaHD">
+                    <input type="submit" name="btn_update_status_cart" class="rounded btn text-white"
+                        style="background: #007bff" value="Đồng Ý">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
