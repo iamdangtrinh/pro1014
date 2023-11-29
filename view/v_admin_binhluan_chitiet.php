@@ -179,7 +179,7 @@ td {
                 <td><?= $show['NgayBL'];?></td>
                 <td>
                     <div class="lenh">
-                        <div class="xoa"><a href="<?=$base_url?>admin/delete/binhluan/<?= $show['MaBL'];?>"
+                        <div class="xoa"><a href="<?=$base_url?>admin/delete/binhluan/<?= $show['MaSP'];?>/<?= $show['MaBL'];?>"
                                 style="font-weight: 600; ">Xóa</a>
                         </div>
                     </div>

@@ -87,9 +87,6 @@
                         WHERE
                             sp.`MaSP` = ?", $MaSP);
     }
-    function comment_getById($MaBL){
-        return pdo_query_one("SELECT * FROM  binhluan WHERE MaBL = $MaBL");
-    }
     function delete_comment($MaBL){
         pdo_execute("DELETE FROM binhluan WHERE MaBL = $MaBL");
     }
