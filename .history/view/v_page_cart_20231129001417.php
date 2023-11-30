@@ -33,7 +33,7 @@
                                         </a>
 
                                         <a href="<?= $base_url ?>delete_cart/<?= $MaSP ?>" class="btn-remove"
-                                            title="Xóa sản phẩm"><i class="fa-solid fa-xmark"></i></a>
+                                            title="Remove Product"><i class="fa-solid fa-xmark"></i></a>
                                     </figure>
                                 </td>
                                 <td class="product-col text-left">

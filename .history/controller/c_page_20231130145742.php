@@ -56,8 +56,7 @@
                 $title = "Danh sách yêu thích";
                 break;
              case 'addtowishlist':
-                include_once 'model/m_wishlist.php';
-                
+                include_once 'model/';
                 break;
             case '':
                 include_once 'model/m_wishlist.php';

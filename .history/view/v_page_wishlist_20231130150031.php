@@ -40,7 +40,7 @@
                                     alt="product">
                             </a>
 
-                            <a href="#" class="btn-remove" title="Xóa sản phẩm"><i class="fa-solid fa-xmark"></i></a>
+                            <a href="#" class="btn-remove" title="Remove Product"><i class="fa-solid fa-xmark"></i></a>
                         </figure>
                     </td>
                     <td>

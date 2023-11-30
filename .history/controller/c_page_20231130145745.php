@@ -57,7 +57,6 @@
                 break;
              case 'addtowishlist':
                 include_once 'model/m_wishlist.php';
-                
                 break;
             case '':
                 include_once 'model/m_wishlist.php';
