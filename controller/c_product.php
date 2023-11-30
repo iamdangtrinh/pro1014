@@ -7,13 +7,13 @@ if(isset($_GET['act'])) {
             $comment = comment_getByProduct($_GET['id']);
             $SLBinhLuan = count_comment($_GET['id']);
             $MaTK = $_SESSION['user']['MaTK'];
+            $view_name = 'product_detail';
             $checkMuaSP=check_comment($MaTK,$_GET['id']);
             // xong comment
             $product_detail = product_detail($_GET['id']);
             // hien thi du lieu
             $product_same = product_same($_GET['id'],$product_detail['MaDM']);
             $title = 'Chi tiết '.$product_detail['TenSP'];
-            $view_name = 'product_detail';
             break;
         case 'addtocart':
             //laydulieu
