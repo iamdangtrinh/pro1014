@@ -98,4 +98,10 @@
     function product_same($id){
         return pdo_query("SELECT * FROM sanpham WHERE MaDM = ? ORDER BY rand() LIMIT 5", $id );
     }
+    function ratings_trungbinh($MaSP){
+        return pdo_query_one("SELECT SUM(SoSao) as SoSao, COUNT(bl.MaSP) as SoBinhLuan FROM sanpham sp INNER JOIN binhluan bl ON sp.MaSP=bl.MaSP WHERE bl.MaSP=?;",$MaSP);
+    }
+    function check_rating($MaSP){
+        return pdo_query_value("SELECT COUNT(MaSP) FROM binhluan WHERE MaSP=?;",$MaSP);
+    }
 ?>

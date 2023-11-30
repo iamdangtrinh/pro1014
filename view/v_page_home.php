@@ -262,6 +262,7 @@
                                 <h3 class="product-title">
                                     <a href="<?=$base_url?>product/detail/<?=$product['MaSP']?>"><?= $product['TenSP'];?></a>
                                 </h3>
+                                
                                 <div class="ratings-container">
                                     <div class="product-ratings">
                                         <span class="ratings" style="width:0%"></span>
