@@ -107,6 +107,8 @@
                 </br>
                 <input type="radio" name="method_pay" value="" id="vnpay">
                 <label required for="vnpay">Thanh toán qua VNPAY</label>
+                <input type="radio" name="method_pay" value="" id="vnpay">
+                <label required for="vnpay">Thanh toán qua MOMO</label>
                 </br>
                     <button type="button" class="btn btn-primary w-100" data-toggle="modal"
                         data-target="#exampleModalCenter" value="">ĐẶT HÀNG </button>
@@ -115,8 +117,6 @@
         </div>
     </div>
 </div>
-
-<!-- Button trigger modal -->
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModalCenter" style="background: rgba(0,0,0,0.6);" tabindex="-1" role="dialog"
