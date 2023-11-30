@@ -6,11 +6,14 @@ if(isset($_GET['act'])) {
             include_once 'model/m_product.php';
             $comment = comment_getByProduct($_GET['id']);
             $SLBinhLuan = count_comment($_GET['id']);
+            $MaTK = $_SESSION['user']['MaTK'];
+            $checkMuaSP=check_comment($MaTK,$_GET['id']);
             // xong comment
             $product_detail = product_detail($_GET['id']);
             // hien thi du lieu
-            $product_same = product_same($product_detail['MaDM']);
+            $product_same = product_same($_GET['id'],$product_detail['MaDM']);
             $sale = substr((($product_detail['Gia'] - $product_detail['GiaGiam']) / $product_detail['Gia']) * 100, 0, 2);
+            $title = 'Chi tiết '.$product_detail['TenSP'];
             $view_name = 'product_detail';
             break;
         case 'addtocart':

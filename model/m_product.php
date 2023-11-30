@@ -49,7 +49,7 @@
         return pdo_query_value("SELECT count(*) AS SLBinhLuan FROM sanpham sp INNER JOIN binhluan bl ON sp.MaSP=bl.MaSP WHERE bl.MaSP=?",$MaSP);
     }
     function check_comment($MaTK,$MaSP){
-        return pdo_query_value("SELECT SoLuongSP FROM taikhoan tk INNER JOIN hoadon hd ON tk.MaTK=hd.MaTK INNER JOIN chitiethoadon cthd ON hd.MaHD=cthd.MaHD WHERE tk.MaTK=? and cthd.MaSP=?",$MaTK,$MaSP);
+        return pdo_query_value("SELECT COUNT(SoLuongSP) FROM taikhoan tk INNER JOIN hoadon hd ON tk.MaTK=hd.MaTK INNER JOIN chitiethoadon cthd ON hd.MaHD=cthd.MaHD WHERE hd.TrangThai='hoan-tat' and tk.MaTK=? and cthd.MaSP=?",$MaTK,$MaSP);
     }
     function show_comment(){
         return pdo_query ("SELECT
@@ -95,8 +95,8 @@
         pdo_execute("DELETE FROM binhluan WHERE MaBL = $MaBL");
     }
     // Sản phẩm tương tự
-    function product_same($id){
-        return pdo_query("SELECT * FROM sanpham WHERE MaDM = ? ORDER BY rand() LIMIT 5", $id );
+    function product_same($MaSP,$id){
+        return pdo_query("SELECT * FROM sanpham WHERE MaSP!=? AND MaDM =? ORDER BY rand() LIMIT 5",$MaSP,$id );
     }
     function ratings_trungbinh($MaSP){
         return pdo_query_one("SELECT SUM(SoSao) as SoSao, COUNT(bl.MaSP) as SoBinhLuan FROM sanpham sp INNER JOIN binhluan bl ON sp.MaSP=bl.MaSP WHERE bl.MaSP=?;",$MaSP);

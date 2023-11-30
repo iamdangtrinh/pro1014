@@ -1,10 +1,8 @@
             <div class="container">
                 <nav aria-label="breadcrumb" class="breadcrumb-nav">
                     <ol class="breadcrumb">
-                        <li><a href="demo1.html"><i class="fa-solid fa-house"></i></a></li>
-                        <li><i class="fa-solid fa-angle-right"></i><a href="#">
-                                <??>
-                            </a></li>
+                        <li><a href="<?=$base_url?>page/home"><i class="fa-solid fa-house"></i></a></li>
+                        <li><i class="fa-solid fa-angle-right"></i><a href="#"><?=$product_detail['TenSP']?></a></li>
                     </ol>
                 </nav>
                 <?php if(isset($_SESSION['thongbao'])): ?>
@@ -121,7 +119,15 @@
 
                             <div class="ratings-container">
                                 <div class="product-ratings">
-                                    <span class="ratings" style="width:60%"></span>
+                                <?php 
+                                    $rating=ratings_trungbinh($product_detail['MaSP']);
+                                    if($rating['SoSao']!=""&&$rating['SoBinhLuan']>0){
+                                        $trungbinh_rating=ceil(($rating['SoSao']*10)/($rating['SoBinhLuan']/2));
+                                    }else{
+                                        $trungbinh_rating=0;
+                                    }
+                                ?>
+                                    <span class="ratings" style="width:<?=$trungbinh_rating?>%"></span>
                                     <!-- End .ratings -->
                                     <span class="tooltiptext tooltip-top"></span>
                                 </div>
@@ -130,9 +136,14 @@
                                 <a href="#" class="rating-link">( <?=$SLBinhLuan?> đánh giá )</a>
                             </div>
                             <hr class="short-divider">
+                            <?php if($product_detail['GiaGiam']==""): ?>
+                                <div class="price-box">
+                                    <span class="new-price"><?=number_format($product_detail['Gia'],0,",",".")?>đ</span>
+                            <?php else: ?>
                             <div class="price-box">
-                                <span class="old-price"><?=$product_detail['Gia']?>đ</span>
-                                <span class="new-price"><?=$product_detail['GiaGiam']?>đ</span>
+                                <span class="old-price"><?=number_format($product_detail['Gia'],0,",",".")?>đ</span>
+                                <span class="new-price"><?=number_format($product_detail['GiaGiam'],0,",",".")?>đ</span>
+                            <?php endif;?>
                             </div>
                             <div class="product-desc">
                                 <p>
@@ -380,7 +391,7 @@
 
                                 <div class="divider"></div>
 
-                                <?php if(isset($_SESSION['user'])) :?>
+                                <?php if(isset($_SESSION['user'])&&$checkMuaSP!=0) :?>
                                 <div class="add-product-review">
                                     <h3 class="review-title">Viết bài đánh giá</h3>
 
@@ -419,10 +430,14 @@
                                     </form>
                                 </div>
                                 <!-- End .add-product-review -->
+                                <?php elseif($checkMuaSP==0):?>
+                                    <div class="add-product-review">
+                                        <h3 class="review-title">Bạn cần mua hàng để viết đánh giá!</h3>
+                                    </div>
                                 <?php else: ?>
-                                <div class="add-product-review">
-                                    <h3 class="review-title">Bạn cần đăng nhập và mua hàng để viết đánh giá!</h3>
-                                </div>
+                                    <div class="add-product-review">
+                                        <h3 class="review-title">Bạn cần đăng nhập và mua hàng để viết đánh giá!</h3>
+                                    </div>
                                 <?php endif; ?>
                             </div>
                             <!-- End .product-reviews-content -->
@@ -439,66 +454,139 @@
 
                     <div class="products-slider 5col owl-carousel owl-theme dots-top dots-small">
                         <?php foreach($product_same as $product): ?>
-                        <div class="product-default inner-quickview inner-icon">
-                            <figure class="img-effect">
-                                <a href="<?= $base_url ?>product/detail/<?=$product['MaSP']?>">
-                                    <img src="<?=$base_url?>upload/demoes/demo23/products/<?=$product['AnhSP']?>"
-                                        width="205" height="205" alt="product">
-                                    <img src="<?=$base_url?>upload/demoes/demo23/products/<?=$product['AnhSP']?>"
-                                        width="205" height="205" alt="product">
-                                </a>
-                                <div class="label-group">
-                                    <div class="product-label label-hot">HOT</div>
-                                    <div class="product-label label-sale">
-                                        -<?=substr((($product['Gia'] - $product['GiaGiam']) / $product['Gia']) * 100, 0, 2)?>%
-                                    </div>
+                            <?php if(!$product['GiaGiam']): ?>
+                                <div class="product-default inner-quickview inner-icon">
+                                    <figure>
+                                        <a href="<?=$base_url?>product/detail/<?=$product['MaSP']?>">
+                                            <img src="<?=$base_url?>upload/demoes/demo23/products/<?= $product['AnhSP'];?>"
+                                                alt="product" style="width: 207px; height: 220px;">
+                                        </a>
+                                        <div class="label-group">
+                                            <div class="product-label label-hot">HOT</div>
+                                        </div>
+                                        <div class="btn-icon-group">
+                                            <a href="<?= $base_url ?>product/detail/<?= $product['MaSP'];?>"
+                                                class="btn-icon btn-add-cart fa-solid fa-cart-shopping"></a>
+                                        </div>
+                                        <a href="<?=$base_url?>product/detail/<?=$product['MaSP']?>" class="btn-quickview"
+                                            title="Quick View">Xem chi tiết</a>
+                                        <div class="product-countdown-container">
+                                            <span class="product-countdown-title">
+                                                ưu đãi kết thúc sau :</span>
+                                            <div class="product-countdown countdown-compact" data-until="2021, 10, 5"
+                                                data-compact="true">
+                                            </div>
+                                            <!-- End .product-countdown -->
+                                        </div>
+                                        <!-- End .product-countdown-container -->
+                                    </figure>
+                                    <div class="product-details">
+                                        <div class="category-wrap">
+                                            <div class="category-list">
+                                                <a href="<?=$base_url?>product/detail/<?=$product['MaSP']?>" class="product-category"><?=$product_detail['TenDM'];?></a>
+                                            </div>
+                                            <a href="<?=$base_url?>page/wishlist" 
+                                            <?php if(isset($_SESSION['user'])){
+                                                $MaTK=$_SESSION['user']['MaTK'];
+                                                $CheckWish=check_wishByProductAndUser($MaTK,$product['MaSP']);
+                                                if($CheckWish!=""){
+                                                    echo 'title="Đến trang yêu thích" class="btn-icon-wish added-wishlist" ';
+                                                }else{
+                                                    echo 'title="Yêu thích sản phẩm" class="btn-icon-wish"';
+                                                }
+                                            } ?>><i class="fa-solid fa-heart"></i></a>
+                                        </div>
+                                        <h3 class="product-title">
+                                            <a href="<?=$base_url?>product/detail/<?=$product['MaSP']?>"><?=$product_detail['TenSP'];?></a>
+                                        </h3>
+                                        <?php 
+                                            $product['rating']=ratings_trungbinh($product['MaSP']);
+                                            if($product['rating']['SoSao']!=""&&$product['rating']['SoBinhLuan']>0){
+                                                $product['trungbinh_rating']=ceil(($product['rating']['SoSao']*10)/($product['rating']['SoBinhLuan']/2));
+                                            }else{
+                                                $product['trungbinh_rating']=0;
+                                            }
+                                        ?>
+                                        <div class="ratings-container">
+                                            <div class="product-ratings">
+                                                <span class="ratings" style="width:<?=$product['trungbinh_rating']?>%"></span>
+                                                <!-- End .ratings -->
+                                                <span class="tooltiptext tooltip-top"></span>
+                                            </div><!-- End .product-ratings -->
+                                        </div><!-- End .product-container -->
+                                        <div class="price-box">
+                                            <span class="product-price"><?=number_format($product['Gia'],0,",",".")?>đ</span>
+                                        </div><!-- End .price-box -->
+                                    </div><!-- End .product-details -->
                                 </div>
-                                <div class="btn-icon-group">
-                                    <a href="<?= $base_url ?>product/detail/<?= $product['MaSP'];?>"
-                                        class="btn-icon btn-add-cart fa-solid fa-cart-shopping"></a>
+                            <?php else: ?>
+                                <div class="product-default inner-quickview inner-icon">
+                                    <figure>
+                                        <a href="<?=$base_url?>product/detail/<?=$product['MaSP']?>">
+                                            <img src="<?=$base_url?>upload/demoes/demo23/products/<?= $product['AnhSP'];?>"
+                                                alt="product" style="width: 207px; height: 220px;">
+                                        </a>
+                                        <div class="label-group">
+                                            <div class="product-label label-hot">HOT</div>
+                                            <div class="product-label label-sale">-<?=substr((($product['Gia'] - $product['GiaGiam']) / $product['Gia']) * 100, 0, 2)?>%</div>
+                                        </div>
+                                        <div class="btn-icon-group">
+                                            <a href="<?= $base_url?>product/detail/<?= $product['MaSP'];?>"
+                                                class="btn-icon btn-add-cart fa-solid fa-cart-shopping"></a>
+                                        </div>
+                                        <a href="<?=$base_url?>product/detail/<?=$product['MaSP']?>" class="btn-quickview"
+                                            title="Quick View">Xem chi tiết</a>
+                                        <div class="product-countdown-container">
+                                            <span class="product-countdown-title">
+                                                ưu đãi kết thúc sau :</span>
+                                            <div class="product-countdown countdown-compact" data-until="2021, 10, 5"
+                                                data-compact="true">
+                                            </div>
+                                            <!-- End .product-countdown -->
+                                        </div>
+                                        <!-- End .product-countdown-container -->
+                                    </figure>
+                                    <div class="product-details">
+                                        <div class="category-wrap">
+                                            <div class="category-list">
+                                                <a href="<?=$base_url?>product/detail/<?=$product['MaSP']?>" class="product-category"><?=$product_detail['TenDM'];?></a>
+                                            </div>
+                                            <a href="<?=$base_url?>page/wishlist" 
+                                            <?php if(isset($_SESSION['user'])){
+                                                $MaTK=$_SESSION['user']['MaTK'];
+                                                $CheckWish=check_wishByProductAndUser($MaTK,$product['MaSP']);
+                                                if($CheckWish!=""){
+                                                    echo 'title="Đến trang yêu thích" class="btn-icon-wish added-wishlist" ';
+                                                }else{
+                                                    echo 'title="Yêu thích sản phẩm" class="btn-icon-wish"';
+                                                }
+                                            } ?>><i class="fa-solid fa-heart"></i></a>
+                                        </div>
+                                        <h3 class="product-title">
+                                            <a href="<?=$base_url?>product/detail/<?=$product['MaSP']?>"><?= $product['TenSP'];?></a>
+                                        </h3>
+                                        <?php 
+                                            $product['rating']=ratings_trungbinh($product['MaSP']);
+                                            if($product['rating']['SoSao']!=""&&$product['rating']['SoBinhLuan']>0){
+                                                $product['trungbinh_rating']=ceil(($product['rating']['SoSao']*10)/($product['rating']['SoBinhLuan']/2));
+                                            }else{
+                                                $product['trungbinh_rating']=0;
+                                            }
+                                        ?>
+                                        <div class="ratings-container">
+                                            <div class="product-ratings">
+                                                <span class="ratings" style="width:<?=$product['trungbinh_rating']?>%"></span>
+                                                <!-- End .ratings -->
+                                                <span class="tooltiptext tooltip-top"></span>
+                                            </div><!-- End .product-ratings -->
+                                        </div><!-- End .product-container -->
+                                        <div class="price-box">
+                                            <span class="old-price"><?=number_format($product['Gia'],0,",",".")?>đ</span>
+                                            <span class="product-price"><?=number_format($product['GiaGiam'],0,",",".")?>đ</span>
+                                        </div><!-- End .price-box -->
+                                    </div><!-- End .product-details -->
                                 </div>
-                                <a href="ajax/product-quick-view.html" class="btn-quickview" title="Quick View">Xem lướt
-                                    qua</a>
-
-                                <div class="product-countdown-container">
-                                    <span class="product-countdown-title">
-                                        ưu đãi kết thúc sau :</span>
-                                    <div class="product-countdown countdown-compact" data-until="2021, 10, 5"
-                                        data-compact="true">
-                                    </div>
-                                    <!-- End .product-countdown -->
-                                </div>
-                                <!-- End .product-countdown-container -->
-                            </figure>
-                            <div class="product-details">
-                                <div class="category-wrap">
-                                    <div class="category-list">
-                                        <a href="demo1-shop.html" class="product-category"><?=$product_detail['TenDM']?></a>
-                                    </div>
-                                    <a href="wishlist.html" title="Yêu thích sản phẩm" class="btn-icon-wish"><i
-                                            class="icon-heart"></i></a>
-                                </div>
-                                <h3 class="product-title">
-                                    <a href="demo1-product.html">
-                                        <??>
-                                    </a>
-                                </h3>
-                                <div class="ratings-container">
-                                    <div class="product-ratings">
-                                        <span class="ratings" style="width:100%"></span>
-                                        <!-- End .ratings -->
-                                        <span class="tooltiptext tooltip-top"></span>
-                                    </div>
-                                    <!-- End .product-ratings -->
-                                </div>
-                                <!-- End .product-container -->
-                                <div class="price-box">
-                                    <span class="product-price"><?=$product['Gia']?>đ</span>
-                                </div>
-                                <!-- End .price-box -->
-                            </div>
-                            <!-- End .product-details -->
-                        </div>
+                            <?php endif; ?>
                         <?php endforeach ;?>
                     </div>
                     <!-- End .products-slider -->
