@@ -158,7 +158,7 @@
                                     <input type="submit" class="btn btn-danger" value="Thêm vào giỏ hàng" name="btn_addtocart">
                                     
                                     <?php else : ?>
-                                    <input type="submit" disabled class="btn btn-seconds text-dark" value="Thêm vào giỏ hàng" name="btn_addtocart">
+                                    <input type="submit" disabled class="btn btn-seconds text-dark" value="Tạm thời hết sản phẩm" name="btn_addtocart">
                                         <?php endif ?>
                                 </form>
 
@@ -185,8 +185,7 @@
                                 </div> -->
                                 <!-- End .social-icons -->
 
-                                <a href="<?=$base_url?>page/wishlist" class="btn-icon-wish add-wishlist" title="Thêm vào yêu thích"><i
-                                        class="icon-wishlist-2"></i><span>Yêu thích</span></a>
+                                <a href="<?=$base_url?>page/wishlist" class="btn-icon-wish add-wishlist" title="Thêm vào yêu thích"><i class="fa-solid fa-heart"></i><span>Yêu thích</span></a>
                             </div>
                             <!-- End .product single-share -->
                         </div>
@@ -476,7 +475,7 @@
                                     <div class="category-list">
                                         <a href="demo1-shop.html" class="product-category"><?=$product_detail['TenDM']?></a>
                                     </div>
-                                    <a href="wishlist.html" title="Wishlist" class="btn-icon-wish"><i
+                                    <a href="wishlist.html" title="Yêu thích sản phẩm" class="btn-icon-wish"><i
                                             class="icon-heart"></i></a>
                                 </div>
                                 <h3 class="product-title">

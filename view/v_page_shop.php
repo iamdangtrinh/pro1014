@@ -112,9 +112,9 @@
                                                         $MaTK=$_SESSION['user']['MaTK'];
                                                         $CheckWish=check_wishByProductAndUser($MaTK,$product['MaSP']);
                                                         if($CheckWish!=""){
-                                                            echo 'title="Go to Wishlist" class="btn-icon-wish added-wishlist" ';
+                                                            echo 'title="Đến trang yêu thích" class="btn-icon-wish added-wishlist" ';
                                                         }else{
-                                                            echo 'title="Wishlist" class="btn-icon-wish"';
+                                                            echo 'title="Yêu thích sản phẩm" class="btn-icon-wish"';
                                                         }
                                                     } ?>><i class="fa-solid fa-heart"></i></a>
                                                 </div>
@@ -162,9 +162,9 @@
                                                         $MaTK=$_SESSION['user']['MaTK'];
                                                         $CheckWish=check_wishByProductAndUser($MaTK,$product['MaSP']);
                                                         if($CheckWish!=""){
-                                                            echo 'title="Go to Wishlist" class="btn-icon-wish added-wishlist" ';
+                                                            echo 'title="Đến trang yêu thích" class="btn-icon-wish added-wishlist" ';
                                                         }else{
-                                                            echo 'title="Wishlist" class="btn-icon-wish"';
+                                                            echo 'title="Yêu thích sản phẩm" class="btn-icon-wish"';
                                                         }
                                                     } ?>><i class="fa-solid fa-heart"></i></a>
                                                 </div>
