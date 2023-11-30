@@ -26,7 +26,7 @@
                     // ...
                 } else {
                     // Xử lý khi 'id' không tồn tại
-                    echo 'Trang đang bị lỗi và chưa biết sửa ~~';
+                    echo 'rang đang bị lỗi và chưa biết sửa ~~';
                 }
                 break;
                 
