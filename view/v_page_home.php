@@ -456,7 +456,7 @@
                                 <div class="product-countdown-container">
                                     <span class="product-countdown-title">
                                         ưu đãi kết thúc sau :</span>
-                                    <div class="product-countdown countdown-compact is-countdown" data-until="2025, 10, 15"
+                                    <div class="product-countdown countdown-compact" data-until="2021, 10, 5"
                                         data-compact="true">
                                     </div>
                                     <!-- End .product-countdown -->
