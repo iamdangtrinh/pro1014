@@ -121,9 +121,17 @@
                                                 <h3 class="product-title">
                                                     <a href="<?=$base_url?>product/detail/<?=$product['MaSP']?>"><?= $product['TenSP'];?></a>
                                                 </h3>
+                                                <?php 
+                                                    $product['rating']=ratings_trungbinh($product['MaSP']);
+                                                    if($product['rating']['SoSao']!=""&&$product['rating']['SoBinhLuan']>0){
+                                                        $product['trungbinh_rating']=ceil(($product['rating']['SoSao']*10)/($product['rating']['SoBinhLuan']/2));
+                                                    }else{
+                                                        $product['trungbinh_rating']=0;
+                                                    }
+                                                ?>
                                                 <div class="ratings-container">
                                                     <div class="product-ratings">
-                                                        <span class="ratings" style="width:0%"></span>
+                                                        <span class="ratings" style="width:<?=$product['trungbinh_rating']?>%"></span>
                                                         <!-- End .ratings -->
                                                         <span class="tooltiptext tooltip-top"></span>
                                                     </div><!-- End .product-ratings -->
@@ -171,9 +179,17 @@
                                                 <h3 class="product-title">
                                                     <a href="<?=$base_url?>product/detail/<?=$product['MaSP']?>"><?= $product['TenSP'];?></a>
                                                 </h3>
+                                                <?php 
+                                                    $product['rating']=ratings_trungbinh($product['MaSP']);
+                                                    if($product['rating']['SoSao']!=""&&$product['rating']['SoBinhLuan']>0){
+                                                        $product['trungbinh_rating']=ceil(($product['rating']['SoSao']*10)/($product['rating']['SoBinhLuan']/2));
+                                                    }else{
+                                                        $product['trungbinh_rating']=0;
+                                                    }
+                                                ?>
                                                 <div class="ratings-container">
                                                     <div class="product-ratings">
-                                                        <span class="ratings" style="width:0%"></span>
+                                                        <span class="ratings" style="width:<?=$product['trungbinh_rating']?>%"></span>
                                                         <!-- End .ratings -->
                                                         <span class="tooltiptext tooltip-top"></span>
                                                     </div><!-- End .product-ratings -->
