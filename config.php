@@ -3,7 +3,7 @@
     $ctrl_name='';
     $view_name='';
     $title ="Trang chủ";
-    $base_url='http://localhost/pro1041/';
+    $base_url='http://localhost/pro1014/';
 
 
     define("IMG_PRODUCT","upload/uploadSP/");
