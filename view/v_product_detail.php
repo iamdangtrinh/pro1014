@@ -27,11 +27,15 @@
                         <div class="col-lg-5 col-md-6 product-single-gallery">
                             <div class="product-slider-container">
                                 <div class="label-group">
-                                    <div class="product-label label-hot">HOT</div>
                                     <!---->
+                                    <?php if(!$product_detail['GiaGiam']):?>
+                                        <div class="product-label label-hot">HOT</div>
+                                    <?php else:?>
+                                        <div class="product-label label-hot">HOT</div>
                                     <div class="product-label label-sale">
-                                        <?php echo '-'.$sale.'%'; ?>
+                                        -<?=substr((($product_detail['Gia'] - $product_detail['GiaGiam']) / $product_detail['Gia']) * 100, 0, 2);?>%
                                     </div>
+                                    <?php endif;?>
                                 </div>
 
                                 <div class="product-single-carousel owl-carousel owl-theme show-nav-hover">
