@@ -1,6 +1,6 @@
 <?php
 if(isset($_GET['act'])) {
-    if($_SESSION['user']['VaiTro'] !== 0) {
+    if($_SESSION['user']['VaiTro'] !== 0 && isset($_SESSION['user'])) {
         switch($_GET['act']) {
             case 'dashboard':
                 //lay du lieu
