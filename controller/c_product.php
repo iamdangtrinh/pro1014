@@ -13,6 +13,8 @@ if(isset($_GET['act'])) {
             if(isset($_SESSION['user'])) {
                 $checkMuaSP=check_comment($MaTK,$_GET['id']);
                 $MaTK = $_SESSION['user']['MaTK'];
+            } else {
+                $checkMuaSP = '';
             }
             // xong comment
             // hien thi du lieu
