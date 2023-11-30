@@ -1,6 +1,7 @@
 <?php
 session_start();
 ob_start();
+date_default_timezone_set('Asia/Ho_Chi_Minh');
 include_once 'config.php';
 include_once 'model/m_pdo.php';
 include_once 'model/m_product.php';
