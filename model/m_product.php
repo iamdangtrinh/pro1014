@@ -71,6 +71,9 @@
                                 SoLuongBinhLuan DESC;
                     ");
     }
+    function get_tenSP($MaSP){
+        return pdo_query_value("SELECT TenSP FROM sanpham WHERE MaSP = ?",$MaSP);
+    }
     function chitiet_comment($MaSP){
         return pdo_query("SELECT
                             bl.`MaBL`,

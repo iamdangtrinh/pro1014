@@ -160,9 +160,7 @@ td {
     <table>
         <thead>
             <br>
-            <h2>Tất cả bình luận của: <strong><?php foreach($show_bl as $show){
-                echo $show['TenSP'];
-            };?> </strong></h2><br>
+            <h2>Tất cả bình luận của: <strong> <?= $tenSP;?> </strong></h2><br>
             <tr>
                 <!-- <th class="chon">Chọn</th> -->
                 <th>Nội dung </th>

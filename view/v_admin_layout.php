@@ -96,7 +96,7 @@
                     </span>
                     <h3>Bình luận</h3>
                 </a>
-                <a href="#">
+                <a href="<?= $base_url ?>admin/donhang" class="list_group-item <?= (strpos($view_name, 'binhluan')) ? 'active' : '' ?>">
                     <span class="material-icons-sharp">
                         receipt_long
                     </span>

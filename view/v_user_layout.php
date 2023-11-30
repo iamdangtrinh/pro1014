@@ -82,7 +82,7 @@
                                 nhập</a>
                         <?php endif; ?>
 
-                        <a href="wishlist.html" class="header-icon">
+                        <a href="<?= $base_url ?>page/wishlist" class="header-icon">
                             <i class="fa-regular fa-heart"></i>
                         </a>
 
