@@ -1,3 +1,4 @@
+
 <style>
     .row{
         display: none;
@@ -102,8 +103,22 @@ select {
         <div class="box_content">
             <h1>Thêm sản phẩm</h1>
             <div class="box">
-                <form action="<?=$base_url?>admin/product/add" method="POST" enctype="multipart/form-data_">
+                <form action="<?=$base_url?>admin/product/add" method="POST" enctype="multipart/form-data">
                     <div class="roww">
+                    <div class="col-md-4">
+                            <div class="mb-3">
+                                <label for="AnhSP" class="form-label">Ảnh chính</label>
+                                <input type="file" class="form-control" id="AnhSP" name="anh">
+                            </div>
+                            <div class="mb-3">
+                                <label for="MaDM" class="form-label">Danh mục: </label>
+                                <select id="MaDM" name="MaDM">
+                                    <?php foreach( $danhmuc as $getdanhmuc ) :?>
+                                    <option value="<?=$getdanhmuc['MaDM']?>"><?=$getdanhmuc['TenDM']?></option>
+                                    <?php endforeach ;?>
+                                </select>
+                            </div>
+                        </div>
                     <div  class="col-md-8">
                                 <div class="mb-3">
                                     <label for="MaSP" class="form-label">Mã sản phẩm</label>
@@ -130,27 +145,10 @@ select {
                                     <textarea cols="100" rows="5" name="MoTa" id="MoTa"></textarea>
                             </div>
                         </div>
-                        <div class="col-md-4">
-                            <div class="mb-3">
-                                <label for="AnhSP" class="form-label">Ảnh chính</label>
-                                <input  type="file" class="form-control" id="AnhSP" name="AnhSP">
-                            </div>
-                            <div class="mb-3">
-                                <label for="MaDM" class="form-label">Danh mục: </label>
-                                <select id="MaDM" name="MaDM">
-                                    <?php foreach( $danhmuc as $getdanhmuc ) :?>
-                                    <option value="<?=$getdanhmuc['MaDM']?>"><?=$getdanhmuc['TenDM']?></option>
-                                    <?php endforeach ;?>
-                                </select>
-                            </div>
-                        </div>
+                       
                     </div>
                     <button type="submit" name="submit" class="btn btn-primary" value="submit">Xác nhận</button>
                 </form>
-                <?php 
-                     if(isset($tb)&&($tb!="")){
-                          echo $tb;
-                     }
-                ?>
+            
         </div>
         </div>
