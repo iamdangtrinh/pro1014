@@ -114,7 +114,7 @@
                                                         if($CheckWish!=""){
                                                             echo 'title="Đến trang yêu thích" class="btn-icon-wish added-wishlist" ';
                                                         }else{
-                                                            echo 'title="Yêu thích sản phẩm" class="btn-icon-wish"';
+                                                            echo 'onclick="ThemSPYT('.$product['MaSP'].')" title="Yêu thích sản phẩm" class="btn-icon-wish"';
                                                         }
                                                     } ?>><i class="fa-solid fa-heart"></i></a>
                                                 </div>
@@ -172,7 +172,7 @@
                                                         if($CheckWish!=""){
                                                             echo 'title="Đến trang yêu thích" class="btn-icon-wish added-wishlist" ';
                                                         }else{
-                                                            echo 'title="Yêu thích sản phẩm" class="btn-icon-wish"';
+                                                            echo 'onclick="ThemSPYT('.$product['MaSP'].')" title="Yêu thích sản phẩm" class="btn-icon-wish"';
                                                         }
                                                     } ?>><i class="fa-solid fa-heart"></i></a>
                                                 </div>

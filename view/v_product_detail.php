@@ -451,15 +451,16 @@
                                                     <a href="<?= $base_url ?>product/detail/<?= $product['MaSP'] ?>"
                                                         class="product-category"><?= $product_detail['TenDM']; ?></a>
                                                 </div>
-                                                <a href="<?= $base_url ?>page/wishlist" <?php if(isset($_SESSION['user'])) {
-                                                                        $MaTK = $_SESSION['user']['MaTK'];
-                                                                        $CheckWish = check_wishByProductAndUser($MaTK, $product['MaSP']);
-                                                                        if($CheckWish != "") {
-                                                                            echo 'title="Đến trang yêu thích" class="btn-icon-wish added-wishlist" ';
-                                                                        } else {
-                                                                            echo 'title="Yêu thích sản phẩm" class="btn-icon-wish"';
-                                                                        }
-                                                                    } ?>><i class="fa-solid fa-heart"></i></a>
+                                                <a href="<?= $base_url ?>page/wishlist" 
+                                                <?php if(isset($_SESSION['user'])){
+                                                    $MaTK=$_SESSION['user']['MaTK'];
+                                                    $CheckWish=check_wishByProductAndUser($MaTK,$product['MaSP']);
+                                                    if($CheckWish!=""){
+                                                        echo 'title="Đến trang yêu thích" class="btn-icon-wish added-wishlist" ';
+                                                    }else{
+                                                        echo 'onclick="ThemSPYT('.$product['MaSP'].')" title="Yêu thích sản phẩm" class="btn-icon-wish"';
+                                                    }
+                                                } ?>><i class="fa-solid fa-heart"></i></a>
                                             </div>
                                             <h3 class="product-title">
                                                 <a
@@ -513,15 +514,16 @@
                                                     <a href="<?= $base_url ?>product/detail/<?= $product['MaSP'] ?>"
                                                         class="product-category"><?= $product_detail['TenDM']; ?></a>
                                                 </div>
-                                                <a href="<?= $base_url ?>page/wishlist" <?php if(isset($_SESSION['user'])) {
-                                                                        $MaTK = $_SESSION['user']['MaTK'];
-                                                                        $CheckWish = check_wishByProductAndUser($MaTK, $product['MaSP']);
-                                                                        if($CheckWish != "") {
-                                                                            echo 'title="Đến trang yêu thích" class="btn-icon-wish added-wishlist" ';
-                                                                        } else {
-                                                                            echo 'title="Yêu thích sản phẩm" class="btn-icon-wish"';
-                                                                        }
-                                                                    } ?>><i class="fa-solid fa-heart"></i></a>
+                                                <a href="<?= $base_url ?>page/wishlist" 
+                                                <?php if(isset($_SESSION['user'])){
+                                                    $MaTK=$_SESSION['user']['MaTK'];
+                                                    $CheckWish=check_wishByProductAndUser($MaTK,$product['MaSP']);
+                                                    if($CheckWish!=""){
+                                                        echo 'title="Đến trang yêu thích" class="btn-icon-wish added-wishlist" ';
+                                                    }else{
+                                                        echo 'onclick="ThemSPYT('.$product['MaSP'].')" title="Yêu thích sản phẩm" class="btn-icon-wish"';
+                                                    }
+                                                } ?>><i class="fa-solid fa-heart"></i></a>
                                             </div>
                                             <h3 class="product-title">
                                                 <a
@@ -582,7 +584,7 @@
             // Kiểm tra xem phần tử có tồn tại không
             if (pElement) {
                 // Đặt nội dung thông báo
-                pElement.textContent = 'Bạn đã thêm quá số lượng';
+                pElement.textContent = 'Bạn đã thêm quá số lượng sản phẩm hiện có';
                 return false;
             }else{}
             
