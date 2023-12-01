@@ -60,7 +60,21 @@
     // function history_getDM($MaDM) {
     //   return pdo_query("SELECT * FROM danhmuc dm INNER JOIN danhmuccon dmc ON dm.MaDM = dmc.MaDM INNER JOIN da s ON ct.MaSach = s.MaSach WHERE ls.MaTK=? AND ls.TrangThai=?",$MaTK, 'gio-sach');
     // }
-
-
-
+    function admin_donhang(){
+        return pdo_query("SELECT
+                            hd.`MaHD`,
+                            hd.`TrangThai`,
+                            tk.`SoDienThoai`,
+                            tk.`HoTen`
+                        FROM
+                            `hoadon` hd
+                        JOIN
+                            `taikhoan` tk ON hd.`MaTK` = tk.`MaTK`
+                        WHERE 
+                            hd.TrangThai!='gio-hang'
+                            ");
+                        }
+    function suaTT($MaHD, $TrangThai){
+        return pdo_execute("INSERT INTO hoadon(TrangThai) VALUE(?) WHERE MaHD = ?", $MaHD, $TrangThai);
+    }
 ?>

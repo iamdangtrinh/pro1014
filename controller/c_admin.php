@@ -248,7 +248,16 @@ if(isset($_GET['act'])) {
             case 'donhang':
                 //lay du lieu
                 include_once 'model/m_user.php';
-                
+                $show_HD = admin_donhang();
+                $view_name = 'admin_donhang';
+                break;
+            case 'sua-donhang':
+                //lay du lieu
+                include_once 'model/m_user.php';
+                if (isset($_GET['btn-donhang'])) {
+                    $suaTT = suaTT($MaHD, $TrangThai);
+                }
+                $suaHD = admin_donhang();
                 $view_name = 'admin_donhang';
                 break;
             default:
