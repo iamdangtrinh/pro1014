@@ -133,21 +133,34 @@ td {
     background: pink;
 
 }
-
-.xanh {
-    color: green;
+#TrangThai {
+    padding: 8px; 
+    font-size: 14px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    width: 200px; 
+    background-color: #fff;
+    color: #333;
 }
 
-.blue {
+#TrangThai option.blue {
+    font-weight: bold;
     color: blue;
 }
 
-.do {
-    color: red;
+#TrangThai option.xam {
+    font-style: italic;
+    color: gray;
 }
 
-.xam {
-    color: grey;
+#TrangThai option.xanh {
+    font-weight: bold;
+    color: green;
+}
+
+#TrangThai option.do {
+    font-weight: bold;
+    color: red;
 }
 </style>
 <h1>Quản lí đơn hàng</h1>
@@ -166,29 +179,41 @@ td {
             </tr>
         </thead>
         <?php foreach($show_HD as $show):?>
-        <tbody>
-            <td><?=$show['MaHD']?></td>
-            <td><?=$show['HoTen']?></td>
-            <td><?=$show['SoDienThoai']?></td>
-            <form action="<?=$base_url?>admin/donhang/sua/<?=$show['MaHD']?>" method="post">
+        <form action="<?=$base_url?>admin/sua/donhang/<?=$show['MaHD']?>" method="post">
+            <input type="hidden" name="MaHD" value="<?= $show['MaHD'];?>">
+            <tbody>
+                <td><?=$show['MaHD']?></td>
+                <td><?=$show['HoTen']?></td>
+                <td><?=$show['SoDienThoai']?></td>
                 <td>
                     <select id="TrangThai" name="TrangThai">
-                        <option class="blue" value="chuan-bi" <?=($show['TrangThai']=='chuan-bi')?'selected':''?>>Chuẩn bị đơn
-                        </option>
-                        <option class="xam" value="cho-giao" <?=($show['TrangThai']=='cho-giao')?'selected':''?>>Đang giao hàng
-                        </option>
-                        <option class="xanh" value="hoan-tat" <?=($show['TrangThai']=='hoan-tat')?'selected':''?>>Đã giao</option>
-                        <option class="do" value="khong-thanh-cong" <?=($show['TrangThai']=='khong-thanh-cong')?'selected':''?>>Hủy
-                            đơn</option>
+                        <option class="blue" value="chuan-bi" <?=($show['TrangThai']=='chuan-bi')?'selected':''?>>
+                            Chuẩn bị đơn</option>
+                        <option class="xam" value="cho-giao" <?=($show['TrangThai']=='cho-giao')?'selected':''?>>
+                            Đang giao hàng</option>
+                        <option class="xanh" value="hoan-tat" <?=($show['TrangThai']=='hoan-tat')?'selected':''?>>
+                            Đã giao</option>
+                        <option class="do" value="khong-thanh-cong"
+                            <?=($show['TrangThai']=='khong-thanh-cong')?'selected':''?>>Hủy đơn</option>
                     </select>
                 </td>
                 <td>
-                    <div><a type="submit" name="btn-donhang" class="them" style="font-weight: 600;">Cập nhật</a></div>
+                    <div><button type="submit" name="btn-donhang" class="them" style="font-weight: 600;">Cập
+                            nhật</button></div>
                 </td>
-            </form>
-        </tbody>
+            </tbody>
+        </form>
         <?php endforeach;?>
     </table>
 </div>
 <br>
+
+<script>
+    var Thongbao = document.getElementById('Thongbao');
+    if (Thongbao) {
+        setTimeout(function() {
+            Thongbao.style.display = 'none'; 
+        }, 3000); 
+    }
+</script>
 <!-- End of Recent Orders -->

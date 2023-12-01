@@ -74,7 +74,11 @@
                             hd.TrangThai!='gio-hang'
                             ");
                         }
-    function suaTT($MaHD, $TrangThai){
-        return pdo_execute("INSERT INTO hoadon(TrangThai) VALUE(?) WHERE MaHD = ?", $MaHD, $TrangThai);
+    function suaTT($TrangThai, $MaHD){
+        return pdo_execute("UPDATE hoadon SET TrangThai = ? WHERE MaHD = ?", $TrangThai, $MaHD);
     }
+    function get_MaHDbyid($MaHD){
+        return pdo_query_one("SELECT MaHD FROM hoadon WHERE MaHD = ?", $MaHD);
+    }
+
 ?>

@@ -254,10 +254,28 @@ if(isset($_GET['act'])) {
             case 'sua-donhang':
                 //lay du lieu
                 include_once 'model/m_user.php';
-                if (isset($_GET['btn-donhang'])) {
-                    $suaTT = suaTT($MaHD, $TrangThai);
+                ///
+                if (isset($_POST['btn-donhang'])) {
+                    $MaHD = $_POST['MaHD'];
+                    $TrangThai = $_POST['TrangThai'];
+                    
+                    // Check if MaHD exists before updating
+                    $getHDbyid = get_MaHDbyid($MaHD);
+                
+                    if ($getHDbyid) {
+                        $SuaHD = suaTT($TrangThai, $MaHD);
+                
+                        if ($SuaHD !== false) {
+                            echo "<div id='Thongbao' class='success'>Cập nhật trạng thái đơn hàng thành công</div>";
+                            } else {
+                                echo "<div id='Thongbao' class='error'>Cập nhật không thành công.</div>";
+                            }
+                    } else {
+                        echo "Mã Hóa đơn bruh bruh.";
+                    }
                 }
-                $suaHD = admin_donhang();
+                ///
+                $show_HD = admin_donhang();
                 $view_name = 'admin_donhang';
                 break;
             default:
