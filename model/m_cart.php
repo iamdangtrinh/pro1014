@@ -7,8 +7,16 @@ function has_cart($MaTK)
     return pdo_query_one("SELECT * from hoadon where MaTK = ? AND TrangThai='gio-hang'", $MaTK);
 }
 
-// thêm người dùng vào giỏ hàng
+function has_products_by_quantity($MaHD,$MaSP)
+{
+    return pdo_query_one("SELECT * from chitiethoadon where MaHD = ? AND MaSP = ?", $MaHD, $MaSP);
+}
 
+function upate_quantity_by_product($SoLuongSP, $MaHD) {
+    return pdo_execute("UPDATE chitiethoadon SET SoLuongSP = ? + 5 WHERE MaHD = ?", $SoLuongSP, $MaHD);
+}
+
+// thêm người dùng vào giỏ hàng
 function his_cart($MaTK)
 {
     pdo_execute(
@@ -76,5 +84,7 @@ function upate_status_cart($MaHD) {
 function history_cart($MaTK) {
     return pdo_query("SELECT * FROM `hoadon` WHERE TrangThai != 'gio-hang' AND MaTK = ? ORDER BY MaHD DESC", $MaTK);
 }
+
+
 
 ?>

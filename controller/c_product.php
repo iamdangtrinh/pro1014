@@ -11,8 +11,8 @@ if(isset($_GET['act'])) {
             $view_name = 'product_detail';
             
             if(isset($_SESSION['user'])) {
-                $checkMuaSP=check_comment($MaTK,$_GET['id']);
                 $MaTK = $_SESSION['user']['MaTK'];
+                $checkMuaSP=check_comment($MaTK,$_GET['id']);
             } else {
                 $checkMuaSP = '';
             }
@@ -34,7 +34,11 @@ if(isset($_GET['act'])) {
                     $has_cart = has_cart($MaTK);
                     if($has_cart) {
                         // nếu sản phẩm tồn tại mà người dùng mua nữa thì cập nhật lại giỏ hàng
-                        add_to_cart($has_cart['MaHD'], $SoLuongSP, $MaSP);
+                        if(has_products_by_quantity($has_cart['MaHD'],$MaSP)) {
+                            upate_quantity_by_product($SoLuongSP, $has_cart['MaHD']);
+                        } else {
+                            add_to_cart($has_cart['MaHD'], $SoLuongSP, $MaSP);
+                        }
                     } else {
                         his_cart($MaTK);
                         $has_cart = has_cart($MaTK);
