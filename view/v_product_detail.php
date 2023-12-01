@@ -208,9 +208,18 @@
                                 </div> -->
                                     <!-- End .social-icons -->
 
-                                    <a href="<?= $base_url ?>page/wishlist" class="btn-icon-wish add-wishlist"
-                                        title="Thêm vào yêu thích"><i class="fa-solid fa-heart"></i><span>Yêu
-                                            thích</span></a>
+                                    <a href="<?= $base_url ?>page/wishlist" 
+                                    <?php if(isset($_SESSION['user'])){
+                                        $MaTK=$_SESSION['user']['MaTK'];
+                                        $CheckWish=check_wishByProductAndUser($MaTK,$product_detail['MaSP']);
+                                        if($CheckWish!=""){
+                                            echo 'title="Đến trang yêu thích" class="btn-icon-wish add-wishlist added-wishlist"><i class="fa-solid fa-heart"></i><span>Xem yêu
+                                            thích</span></a';
+                                        }else{
+                                            echo 'onclick="ThemSPYT('.$product_detail['MaSP'].')" title="Yêu thích sản phẩm" class="btn-icon-wish add-wishlist"><i class="fa-solid fa-heart"></i><span>Yêu
+                                            thích</span></a';
+                                        }
+                                    } ?>>
                                 </div>
                                 <!-- End .product single-share -->
                             </div>
