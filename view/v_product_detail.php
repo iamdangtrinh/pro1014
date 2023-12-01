@@ -1,7 +1,15 @@
 <style>
+    #quantity-product{
+        margin: 0;
+        padding: 0;
+        position: relative;
+        height: 60px;
+    }
     #buy-amount{
+        position: relative;
         display: flex;
         align-items: center;
+        margin-bottom: 20px;
     }
     #buy-amount .span{
         display: flex;
@@ -35,6 +43,16 @@
         height: 30px;
         outline: none;
         margin: 0px 1px;
+    }
+    #product-warning-warning{
+        position: absolute; 
+    }
+    #product-warning{
+        color: red;
+        font-weight: bold;
+    }
+    .cart-submit{
+        margin-top: 50px;
     }
   
 </style> 
@@ -208,27 +226,32 @@
 
                                 <div class="product-action">
                                     <form action="<?= $base_url ?>product/addtocart" method="post">
-                                    <div id="buy-amount">
-                                        <div class="span">
-                                            <span onclick="hadleMinus()">
-                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" 
-                                                stroke="currentColor" class="w-6 h-6">
-                                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12h-15" />
-                                            </svg>
-</span>
+                                    <div id="quantity-product">
+                                        <div id="buy-amount">
+                                            <div class="span">
+                                                <span onclick="hadleMinus()">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" 
+                                                    stroke="currentColor" class="w-6 h-6">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12h-15" />
+                                                    </svg>
+                                                </span>
+                                            </div>
+                                            <div>
+                                                <input type="text" name="SoLuongSP" id="amount" value="1">
+                                            </div>
+                                            <div class="span">
+                                                    <span onclick="handlePlus()">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={3}
+                                                        stroke="currentColor" className="w-6 h-6">
+                                                        <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                                                    </svg>
+                                                </span>
+                                            </div>
                                         </div>
-                                        <div>
-                                            <input type="text" name="SoLuongSP" id="amount" value="1">
-                                        </div>
-                                        <div class="span">
-                                                <span onclick="handlePlus()">
-                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={3}
-                                                    stroke="currentColor" className="w-6 h-6">
-                                                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
-                                                </svg>
-                                            </span>
-                                    </div>
 
+                                        <div id="quantity-product-warning">
+                                            <p id="product-warning"></p>
+                                        </div>
                                         
                                     </div>
 
@@ -237,7 +260,7 @@
 
                                         <?php
                                     if($product_detail['SoLuong'] > 0): ?>
-                                        <input type="submit" class="btn btn-danger" value="Thêm vào giỏ hàng"
+                                        <input type="submit" class="btn btn-danger cart-submit " value="Thêm vào giỏ hàng"
                                             name="btn_addtocart">
 
                                         <?php else: ?>
@@ -538,7 +561,7 @@
                             <hr class="mt-0 m-b-5" />
 
                             <!-- End .row -->
-                            <script>
+<script>
     let amountElement = document.getElementById('amount');
     let quantityElement = document.getElementById("quantity");
     let quantity = parseInt(quantityElement.textContent.trim(), 10); // Chuyển đổi giá trị quantity thành số
@@ -552,16 +575,28 @@
 
     // Xử lí khi nhấp +
     let handlePlus = function() {
-        if (amount < quantity) {
-            amount++;
+        if (amount == quantity) {
+            // Lấy phần tử p thông qua id
+            var pElement = document.getElementById('product-warning');
+
+            // Kiểm tra xem phần tử có tồn tại không
+            if (pElement) {
+                // Đặt nội dung thông báo
+                pElement.textContent = 'Bạn đã thêm quá số lượng';
+                return false;
+            }else{}
+            
         }
+        amount++;
         console.log(amount);
         render(amount);
     }
 
     let hadleMinus = function() {
         if (amount > 1) {
+            var pElement = document.getElementById('product-warning');
             amount--;
+            pElement.textContent = '';
         }
         console.log(amount);
         render(amount);
