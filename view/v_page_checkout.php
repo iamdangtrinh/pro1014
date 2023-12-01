@@ -75,14 +75,14 @@
                                     </h5>
                                     <p class="product-qty" style="font-weight: 400">Số lượng:
                                         <?= $SoLuongSP ?>
-                                        <input type="text" value="<?= $SoLuongSP ?>" class="product-qtyJS">
+                                        <input type="hidden" value="<?= $SoLuongSP ?>" class="product-qtyJS">
                                     </p>
                                 </td>
 
                                 <td class="price-col">
                                     <span class="">
                                         <?= number_format($total, 0, ',', '.') ?> VND
-                                        <input type="text" value="<?= $total ?>" class="price_JS">
+                                        <input type="hidden" value="<?= $total ?>" class="price_JS">
                                     </span>
                                 </td>
                             </tr>
