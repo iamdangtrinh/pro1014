@@ -7,6 +7,7 @@
     </nav>
 
 
+    <div class="modal_dialog"></div>
 
     <div class="row">
         <div class="col-lg-8">
@@ -45,7 +46,7 @@
                                     <?= number_format($Gia, 0, '.', '.')." VND" ?>
                                 </td>
                                 <td class="" style="width: 100px">
-                                <p data-quantity="<?= $MaSP ?>"></p>
+                                    <p data-quantity="<?= $MaSP ?>"></p>
                                     <div class="product-single-qty">
                                         <span class="fa fa-minus minusJS"></span>
                                         <input type="hidden" class="price_product" value="<?= $Gia ?>">
@@ -119,6 +120,7 @@
                 </div>
             </div>
         </div>
+
     </div>
 </div>
 <div class="mb-6"></div>
@@ -176,7 +178,7 @@
 
             var closestProductRow = this.closest('.product-row');
             var MaSP = closestProductRow.querySelector('[data-quantity]').dataset.quantity;
-            
+
             $.ajax({
                 type: "POST",
                 url: '<?= $base_url ?>controller/ajax.php?act=ajax_cart_quantity',
@@ -185,11 +187,15 @@
                     MaSP: MaSP,
                 },
                 success: function (data) {
-                    if (data === "quantity_max") {
-                        console.log("Số lượng sản phẩm chỉ còn");
-                        $('.max_quantity').text(data);
+                    if (data === "Cập nhật thành công") {
+                        console.log(data);
                     } else {
                         // hiển thị modal dialog tại đây
+                        console.log(data);
+                        console.log(SoLuong);
+                        $('.modal_dialog').html(`
+                                Số lượng sản phẩm ERROR
+                        `)
                     }
                 }
             });

@@ -72,7 +72,7 @@ function delete_cart_by_pro($MaSP) {
 }
 
 function quantity_cart_max($MaSP) {
-    return pdo_query_one("SELECT MaSP, SoLuong FROM sanpham WHERE MaSP = ?", $MaSP);
+    return pdo_query_one("SELECT SoLuong,MaSP FROM sanpham WHERE MaSP = ?", $MaSP);
 }
 
 // cập nhật trạng thái giỏ hàng
