@@ -18,4 +18,10 @@
     function count_productsbydm($MaDM){
         return pdo_query_value("SELECT COUNT(MaSP) FROM sanpham sp INNER JOIN danhmuc dm ON sp.MaDM = dm.MaDM WHERE dm.MaDM = ?", $MaDM);
     }
+    function get_tenDM($MaDM){
+        return pdo_query_one("SELECT TenDM, MaDMC FROM danhmuc WHERE MaDM = ?", $MaDM);
+    }
+    function get_dmAnddmc($MaDM){
+        return pdo_query("SELECT * FROM sanpham sp INNER JOIN danhmuc dm ON sp.MaDM = dm.MaDM WHERE dm.MaDM = ? || dm.MaDMC = ?",$MaDM,$MaDM);
+    }
 ?>

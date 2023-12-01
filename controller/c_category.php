@@ -8,7 +8,12 @@
                 if (isset($_GET['id'])) {
                     $MaDM = $_GET['id'];
                     $AllDM=category_getALLDM();
-                    $spDM=category_getbyDM($MaDM);
+                    $tenDM = get_tenDM($MaDM);
+                    if($tenDM['MaDMC']==0){
+                        $spDM=get_dmAnddmc($MaDM);
+                    }else{
+                        $spDM=category_getbyDM($MaDM);
+                    }
                     $soluongSP = count_productsbydm($MaDM);
                     //////////////////////////////////////////////////////
                     $sotrang = ceil($soluongSP / $limit);
