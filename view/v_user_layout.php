@@ -564,6 +564,21 @@
                 })
 
             })
+            
+            function ThemSPYT(MaSP){
+                // var MaSP = MaSP;
+                // var MaTK = MaTK;
+
+                $.ajax({
+                    type: "POST",
+                    url: "<?= $base_url?>controller/ajax.php?act=addwish",
+                    data: {
+                        MaSP: MaSP
+                    }
+                })
+                
+            }
+        
     </script>
 </body>
 

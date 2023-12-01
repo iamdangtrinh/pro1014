@@ -82,6 +82,13 @@ switch ($_GET['act']) {
         }
         break;
 
+        case 'addwish' : 
+            include_once '../model/m_wishlist.php';
+            $MaTK = $_SESSION['user']['MaTK'];
+            $MaSP = $_POST['MaSP'];
+            add_to_wishlist($MaTK,$MaSP);
+        break;
+
     default:
         break;
 }
