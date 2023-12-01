@@ -67,15 +67,14 @@
                         <?php
                         foreach($show_cart_for_user as $value):
                             extract($value) ?>
-                            <tr>
+                            <tr class="product_parents">
                                 <td class="product-col">
                                     <h5 class="product-title text-title">
                                         Tên sản phẩm:
                                         <?= $TenSP ?>
                                     </h5>
-                                    <p class="product-qty" style="font-weight: 400">Số lượng:
+                                    <p class="product-qty product-qtyJS" style="font-weight: 400">Số lượng:
                                         <?= $SoLuongSP ?>
-
                                     </p>
                                 </td>
 
@@ -99,17 +98,18 @@
                         </tr>
                     </tfoot>
                 </table>
-                
+
                 <form action="" method="post">
-                <h5>Hình thức thanh toán:</h5>
-                <input type="radio" name="method_pay" value="" id="nhanhang">
-                <label required for="nhanhang">Thanh toán khi nhận hàng</label>
-                </br>
-                <input type="radio" name="method_pay" value="" id="vnpay">
-                <label required for="vnpay">Thanh toán qua VNPAY</label>
-                <input type="radio" name="method_pay" value="" id="vnpay">
-                <label required for="vnpay">Thanh toán qua MOMO</label>
-                </br>
+                    <h5>Hình thức thanh toán:</h5>
+                    <input type="radio" name="method_pay" value="" id="nhanhang">
+                    <label required for="nhanhang">Thanh toán khi nhận hàng</label>
+                    </br>
+                    <input type="radio" name="method_pay" value="" id="vnpay">
+                    <label required for="vnpay">Thanh toán qua VNPAY</label>
+                    </br>
+                    <input type="radio" name="method_pay" value="" id="vnpay">
+                    <label required for="vnpay">Thanh toán qua MOMO</label>
+                    </br>
                     <button type="button" class="btn btn-primary w-100" data-toggle="modal"
                         data-target="#exampleModalCenter" value="">ĐẶT HÀNG </button>
                 </form>
@@ -119,7 +119,7 @@
 </div>
 
 <!-- Modal -->
-<div class="modal fade" id="exampleModalCenter" style="background: rgba(0,0,0,0.6);" tabindex="-1" role="dialog"
+<!-- <div class="modal fade" id="exampleModalCenter" style="background: rgba(0,0,0,0.6);" tabindex="-1" role="dialog"
     aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered rounded" role="document">
         <div class="modal-content rounded">
@@ -145,4 +145,14 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
+
+<script>
+    var product_parent = document.querySelectorAll('.product_parents');
+    console.log(product_parent);
+    for (const total_cart of product_parent) {
+        var price = this.closest('.product-qtyJS');
+        console.log(price);
+    }
+
+</script>
