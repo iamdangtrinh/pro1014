@@ -385,15 +385,6 @@
                                 </div>
                                 <a href="<?=$base_url?>product/detail/<?=$product['MaSP']?>" class="btn-quickview"
                                     title="Quick View">Xem chi tiết</a>
-                                <div class="product-countdown-container">
-                                    <span class="product-countdown-title">
-                                        ưu đãi kết thúc sau :</span>
-                                    <div class="product-countdown countdown-compact" data-until="2021, 10, 5"
-                                        data-compact="true">
-                                    </div>
-                                    <!-- End .product-countdown -->
-                                </div>
-                                <!-- End .product-countdown-container -->
                             </figure>
                             <div class="product-details">
                                 <div class="category-wrap">
@@ -453,15 +444,6 @@
                                 </div>
                                 <a href="<?=$base_url?>product/detail/<?=$product['MaSP']?>" class="btn-quickview"
                                     title="Quick View">Xem chi tiết</a>
-                                <div class="product-countdown-container">
-                                    <span class="product-countdown-title">
-                                        ưu đãi kết thúc sau :</span>
-                                    <div class="product-countdown countdown-compact" data-until="2021, 10, 5"
-                                        data-compact="true">
-                                    </div>
-                                    <!-- End .product-countdown -->
-                                </div>
-                                <!-- End .product-countdown-container -->
                             </figure>
                             <div class="product-details">
                                 <div class="category-wrap">
