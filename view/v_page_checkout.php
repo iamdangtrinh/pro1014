@@ -158,11 +158,11 @@
             // console.log(document.querySelector('.price_JS').value);
             for (const total_cart of product_parent) {
                 var price = total_cart.querySelector('.price_JS').value;
-                var quantity = total_cart.querySelector('.product-qtyJS').value;
-                
-                total_checkout += parseInt(price) * parseInt(quantity)
+                total = parseInt(price) * 1;
+                total_checkout += total;
             }
-            $('.total_checkout').text(total_checkout.toLocaleString('vi-VN') + ' VND')
+            document.querySelector('.total_checkout').innerText =total_checkout.toLocaleString('vi-VN') + ' VND'
+            // $('.total_checkout').html(total_checkout.toLocaleString('vi-VN') + ' VND')
         };
         total_cart();
 
