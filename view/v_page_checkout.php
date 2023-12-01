@@ -119,7 +119,7 @@
 </div>
 
 <!-- Modal -->
-<!-- <div class="modal fade" id="exampleModalCenter" style="background: rgba(0,0,0,0.6);" tabindex="-1" role="dialog"
+<div class="modal fade" id="exampleModalCenter" style="background: rgba(0,0,0,0.6);" tabindex="-1" role="dialog"
     aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered rounded" role="document">
         <div class="modal-content rounded">
@@ -145,13 +145,13 @@
             </div>
         </div>
     </div>
-</div> -->
+</div>
 
 <script>
-    var product_parent = document.querySelectorAll('.product_parents');
+    var product_parent = $('.product-qtyJS').closest('.product_parents');
     console.log(product_parent);
     for (const total_cart of product_parent) {
-        var price = this.closest('.product-qtyJS');
+        var price = document.querySelectorAll('.product-qtyJS');
         console.log(price);
     }
 
