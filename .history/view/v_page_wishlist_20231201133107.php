@@ -25,9 +25,9 @@
                 <tr>
                     <th class="thumbnail-col text-center">Ảnh sản phẩm</th>
                     <th class="product-col text-center">Sản Phẩm</th>
-                    <th class="price-col text-center">Giá</th>
-                    <th class="status-col text-center">Tồn kho</th>
-                    <th class="action-col text-center">Hành động</th>
+                    <th class="price-col">Giá</th>
+                    <th class="status-col">Tồn kho</th>
+                    <th class="action-col">Hành động</th>
                 </tr>
             </thead>
             <tbody>
@@ -50,12 +50,9 @@
                         </h5>
                     </td>
                     <?php if(!$product['GiaGiam']): ?>
-                    <td class="price-box"><?= number_format($product['Gia'], 0, ",", ".") ?>VND</td>
+                    <td class="price-box"><?=$product['Gia']?>VND</td>
                         <?php else: ?>
-                            <td class="price-box text-danger">
-                             <del class="text-dark"><p><?= number_format($product['Gia'], 0, ",", ".") ?>VND</p></del>   
-                                <p><?= number_format($product['GiaGiam'], 0, ",", ".") ?>VND</p></td>
-                            
+                            <td class="price-box"><?=$product['GiaGiam']?>VND</td>
                             <?php endif; ?>
                     <td>
                         <?php if($product['SoLuong'] > 0): ?>

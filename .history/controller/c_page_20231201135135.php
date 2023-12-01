@@ -79,8 +79,7 @@
             case 'delete_wishlist':
                 include_once 'model/m_wishlist.php';
                 delete_wishlist_by_pro($_GET['id']);
-                header('location: '.$base_url.'page/wishlist');
-
+                header("Location: '.$base_url.'page/wishlist");
                 break;
             case 'discount':
                 //laydulieu

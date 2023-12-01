@@ -50,16 +50,13 @@
                         </h5>
                     </td>
                     <?php if(!$product['GiaGiam']): ?>
-                    <td class="price-box"><?= number_format($product['Gia'], 0, ",", ".") ?>VND</td>
+                    <td class="price-box text-center"><?=$product['Gia']?>VND</td>
                         <?php else: ?>
-                            <td class="price-box text-danger">
-                             <del class="text-dark"><p><?= number_format($product['Gia'], 0, ",", ".") ?>VND</p></del>   
-                                <p><?= number_format($product['GiaGiam'], 0, ",", ".") ?>VND</p></td>
-                            
+                            <td class="price-box text-center"><?=$product['GiaGiam']?>VND</td>
                             <?php endif; ?>
                     <td>
                         <?php if($product['SoLuong'] > 0): ?>
-                            <span class="stock-status">Trong kho</span>
+                            <span class="stock-status text-center">Trong kho</span>
                             <?php else: ?>
                                 <span class="stock-status">Đã hết</span>
                                 <?php endif;?>
