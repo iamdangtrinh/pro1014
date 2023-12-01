@@ -24,6 +24,7 @@
         }
 
         .col-md-6 {
+            margin: 0 20px;
             width: 49%;
 
         }
@@ -33,18 +34,45 @@
         }
 
         .cart-header {
-            font-size: 18px;
+            font-size: 20px;
+            text-transform: uppercase;
+            margin-bottom: 30px;
         }
 
         .chart-left,.chart-right {
-            margin-right: 5px;
             border-radius: 5px;
-            box-shadow: 0px 1px 9px 1px #928d8d;
+            border: 4px dotted #e3cfcf;
             padding: 5px;
         }
 
         .chart-right {
             padding-left: 10px;
+        }
+        .table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+        font-weight: bold;
+        }
+
+        .table th,
+        .table td {
+            padding: 10px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        .table th {
+            background-color: #f8bfc8;
+        }
+
+        .table tbody td:first-child {
+            color: #d4697a;
+            font-weight: bold;
+        }
+
+        .table tbody td:nth-child(2) {
+            text-align: center;
         }
     </style>
 </head>

@@ -84,7 +84,16 @@ function upate_status_cart($MaHD) {
 function history_cart($MaTK) {
     return pdo_query("SELECT * FROM `hoadon` WHERE TrangThai != 'gio-hang' AND MaTK = ? ORDER BY MaHD DESC", $MaTK);
 }
-
+function doanhthu_countAll(){
+    return pdo_query("SELECT SUM(TongTien) AS TongTatCaHoaDon FROM hoadon");
+}
+function history_stat(){
+    return pdo_query("SELECT YEAR(hd.NgayLap) AS Nam, MONTH(hd.NgayLap) AS Thang, COUNT(hd.MaTK) AS SoKhachHang, COUNT(hd.MaHD) AS SoLuotMua, SUM(hd.TongTien) AS DoanhThu, SUM(ct.SoLuongSP) AS SoLuongSP 
+    FROM hoadon hd INNER JOIN chitiethoadon ct ON hd.MaHD = ct.MaHD GROUP BY YEAR(hd.NgayLap), MONTH(hd.NgayLap)");
+}
+function hoadon_countAll(){
+    return pdo_query_value("SELECT COUNT(*) FROM hoadon");
+}
 
 
 ?>

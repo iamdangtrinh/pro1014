@@ -9,6 +9,12 @@ if(isset($_GET['act'])) {
                 $tkProduct = count_product();
                 include_once 'model/m_user.php';
                 $tkUser = user_countAll();
+                $hoaDonMoi = admin_getHoaDon();
+                $tkSpTheoDanhMuc = danhmuc_TkSanPham();
+                include_once 'model/m_cart.php';
+                $tkDoanhThu = history_stat();
+                $tkTongDoanhThu = doanhthu_countAll();
+                $tkHoaDon = hoadon_countAll();
                 include_once 'model/m_pdo.php';
                 include_once 'model/m_admin.php';
                 $usermoi = admin_getUser();

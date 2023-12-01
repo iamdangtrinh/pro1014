@@ -24,4 +24,11 @@
     function get_dmAnddmc($MaDM){
         return pdo_query("SELECT * FROM sanpham sp INNER JOIN danhmuc dm ON sp.MaDM = dm.MaDM WHERE dm.MaDM = ? || dm.MaDMC = ?",$MaDM,$MaDM);
     }
+    function danhmuc_TkSanPham(){
+        return pdo_query("SELECT dm.MaDM, dm.TenDM, COUNT(sp.MaSP) AS SoLuong, AVG(sp.Gia) AS TrungBinh, MIN(sp.Gia) AS ThapNhat, MAX(sp.Gia) as CaoNhat 
+        FROM danhmuc dm 
+        LEFT JOIN sanpham sp ON dm.MaDM = sp.MaDM 
+        WHERE dm.MaDMC = 0
+        GROUP BY dm.MaDM, dm.TenDM;");
+    }
 ?>
