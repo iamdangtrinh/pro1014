@@ -131,3 +131,53 @@
                 <a href="#">Show All</a>
             </div>
             <!-- End of Recent Orders -->
+            <script src="https://www.gstatic.com/charts/loader.js"></script>
+        <script>
+            google.charts.load('current', {
+                'packages': ['corechart']
+            });
+            google.charts.setOnLoadCallback(drawChart);
+
+            // Your Function
+            function drawChart() {
+
+                // Set Data
+                const data = google.visualization.arrayToDataTable([
+                    ['LoaiSP', 'SoLuong'],
+                    ['TenLoai', 54.8]
+
+
+                ]);
+
+                // Set Options
+                const options = {
+                    title: 'Thống kê sản phẩm theo danh mục',
+                    is3D: true
+                };
+
+                // Draw
+                const chart = new google.visualization.PieChart(document.getElementById('myChart'));
+                chart.draw(data, options);
+
+
+                // Set Data
+                const data2 = google.visualization.arrayToDataTable([
+                    ['Ngay', 'DoanhThu'],
+                    ['9/9/23', 55],
+                    ['23/10/23', 55],
+                    ['5/11/232', 49],
+                    ['9/11/232', 49],
+
+
+                ]);
+
+                // Set Options
+                const options2 = {
+                    title: 'Thống kê theo doanh thu'
+                };
+
+                // Draw
+                const chart2 = new google.visualization.ColumnChart(document.getElementById('myChart2'));
+                chart2.draw(data2, options2);
+            }
+        </script>

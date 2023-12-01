@@ -4,12 +4,14 @@
                 <div class="container">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="demo23.html">Trang chủ</a></li>
-                        <?php if($spDM[0]['MaDMC']!=0): ?>
-                            <li class="breadcrumb-item" aria-current="page">Danh mục <?php foreach ($AllDM as $value) {
-                                if($value['MaDM']==$spDM[0]['MaDMC']){echo $value['TenDM'];}} ?></li>
-                            <li class="breadcrumb-item active" aria-current="page"><?=$spDM[0]['TenDM']?></li>
+                        <?php if($tenDM['MaDMC']!=0): ?>
+                            <li class="breadcrumb-item" aria-current="page">Danh mục 
+                                <?php foreach ($AllDM as $value) {
+                                    if($value['MaDM']==$tenDM['MaDMC']){echo $value['TenDM'];}} 
+                                ?></li>
+                            <li class="breadcrumb-item active" aria-current="page"><?=$tenDM['TenDM']?></li>
                         <?php else: ?>
-                            <li class="breadcrumb-item active" aria-current="page">Danh mục <?=$spDM[0]['TenDM']?></li>
+                            <li class="breadcrumb-item active" aria-current="page">Danh mục <?=$tenDM['TenDM']?></li>
                         <?php endif;?>
                     </ol>
                 </div>
@@ -72,105 +74,109 @@
                         </nav>
                         <!-- chỗ lầy là chỗ foeach sản phẩm -->
                         <div class="row">
-                            <?php foreach ($spDM as $product): ?>
-                                <?php if(!$product['GiaGiam']): ?>
-                                    <div class="col-6 col-sm-4 col-lg-3">
-                                        <div class="product-default inner-quickview inner-icon">
-                                            <figure>
-                                                <a href="demo23-product.html">
-                                                    <img src="<?=$base_url?>upload/demoes/demo23/products/<?= $product['AnhSP'];?>"
-                                                        alt="product" style="width: 207px; height: 220px;">
-                                                </a>
-                                                <div class="btn-icon-group">
-                                                    <a href="<?= $base_url ?>product/detail/<?= $product['MaSP'];?>"
-                                                        class="btn-icon btn-add-cart fa-solid fa-cart-shopping"></a>
-                                                </div>
-                                                <a href="ajax/product-quick-view.html" class="btn-quickview"
-                                                    title="Quick View">Xem nhanh</a>
-                                            </figure>
-                                            <div class="product-details">
-                                                <div class="category-wrap">
-                                                    <div class="category-list">
-                                                        <a href="demo23-product.html" class="product-category"><?= $dsdm['TenDM'];?></a>
+                            <?php if(!$spDM): ?>
+                                Danh mục hiện chưa có sản phẩm
+                            <?php else: ?>
+                                <?php foreach ($spDM as $product): ?>
+                                    <?php if(!$product['GiaGiam']): ?>
+                                        <div class="col-6 col-sm-4 col-lg-3">
+                                            <div class="product-default inner-quickview inner-icon">
+                                                <figure>
+                                                    <a href="demo23-product.html">
+                                                        <img src="<?=$base_url?>upload/demoes/demo23/products/<?= $product['AnhSP'];?>"
+                                                            alt="product" style="width: 207px; height: 220px;">
+                                                    </a>
+                                                    <div class="btn-icon-group">
+                                                        <a href="<?= $base_url ?>product/detail/<?= $product['MaSP'];?>"
+                                                            class="btn-icon btn-add-cart fa-solid fa-cart-shopping"></a>
                                                     </div>
-                                                    <a href="wishlist.html" title="Wishlist" class="btn-icon-wish"><i class="fa-solid fa-heart"></i></a>
-                                                </div>
-                                                <h3 class="product-title">
-                                                    <a href="demo23-product.html"><?= $product['TenSP'];?></a>
-                                                </h3>
-                                                <?php 
-                                                    $product['rating']=ratings_trungbinh($product['MaSP']);
-                                                    if($product['rating']['SoSao']!=""&&$product['rating']['SoBinhLuan']>0){
-                                                        $product['trungbinh_rating']=ceil(($product['rating']['SoSao']*10)/($product['rating']['SoBinhLuan']/2));
-                                                    }else{
-                                                        $product['trungbinh_rating']=0;
-                                                    }
-                                                ?>
-                                                <div class="ratings-container">
-                                                    <div class="product-ratings">
-                                                        <span class="ratings" style="width:<?=$product['trungbinh_rating']?>%"></span>
-                                                        <!-- End .ratings -->
-                                                        <span class="tooltiptext tooltip-top"></span>
-                                                    </div><!-- End .product-ratings -->
-                                                </div><!-- End .product-container -->
-                                                <div class="price-box">
-                                                    <span class="product-price"><?= $product['Gia'];?>đ</span>
-                                                </div><!-- End .price-box -->
-                                            </div><!-- End .product-details -->
-                                        </div>
-                                    </div>
-                                <?php else: ?>
-                                    <div class="col-6 col-sm-4 col-lg-3">
-                                        <div class="product-default inner-quickview inner-icon">
-                                            <figure>
-                                                <a href="demo23-product.html">
-                                                    <img src="<?=$base_url?>upload/demoes/demo23/products/<?= $product['AnhSP'];?>"
-                                                        alt="product" style="width: 207px; height: 220px;">
-                                                </a>
-                                                <div class="label-group">
-                                                    <div class="product-label label-sale">-<?=substr((($product['Gia'] - $product['GiaGiam']) / $product['Gia']) * 100, 0, 2)?>%</div>
-                                                </div>
-                                                <div class="btn-icon-group">
-                                                    <a href="<?= $base_url?>product/detail/<?= $product['MaSP'];?>"
-                                                        class="btn-icon btn-add-cart fa-solid fa-cart-shopping"></a>
-                                                </div>
-                                                <a href="ajax/product-quick-view.html" class="btn-quickview"
-                                                    title="Quick View">Xem nhanh</a>
-                                            </figure>
-                                            <div class="product-details">
-                                                <div class="category-wrap">
-                                                    <div class="category-list">
-                                                        <a href="demo23-product.html" class="product-category"><?= $dsdm['TenDM'];?></a>
+                                                    <a href="ajax/product-quick-view.html" class="btn-quickview"
+                                                        title="Quick View">Xem nhanh</a>
+                                                </figure>
+                                                <div class="product-details">
+                                                    <div class="category-wrap">
+                                                        <div class="category-list">
+                                                            <a href="demo23-product.html" class="product-category"><?= $dsdm['TenDM'];?></a>
+                                                        </div>
+                                                        <a href="wishlist.html" title="Wishlist" class="btn-icon-wish"><i class="fa-solid fa-heart"></i></a>
                                                     </div>
-                                                    <a href="wishlist.html" title="Wishlist" class="btn-icon-wish"><i class="fa-solid fa-heart"></i></a>
-                                                </div>
-                                                <h3 class="product-title">
-                                                    <a href="demo23-product.html"><?= $product['TenSP'];?></a>
-                                                </h3>
-                                                <?php 
-                                                    $product['rating']=ratings_trungbinh($product['MaSP']);
-                                                    if($product['rating']['SoSao']!=""&&$product['rating']['SoBinhLuan']>0){
-                                                        $product['trungbinh_rating']=ceil(($product['rating']['SoSao']*10)/($product['rating']['SoBinhLuan']/2));
-                                                    }else{
-                                                        $product['trungbinh_rating']=0;
-                                                    }
-                                                ?>
-                                                <div class="ratings-container">
-                                                    <div class="product-ratings">
-                                                        <span class="ratings" style="width:<?=$product['trungbinh_rating']?>%"></span>
-                                                        <!-- End .ratings -->
-                                                        <span class="tooltiptext tooltip-top"></span>
-                                                    </div><!-- End .product-ratings -->
-                                                </div><!-- End .product-container -->
-                                                <div class="price-box">
-                                                    <span class="old-price"><?= $product['Gia'];?>đ</span>
-                                                    <span class="product-price"><?= $product['GiaGiam'];?>đ</span>
-                                                </div><!-- End .price-box -->
-                                            </div><!-- End .product-details -->
+                                                    <h3 class="product-title">
+                                                        <a href="demo23-product.html"><?= $product['TenSP'];?></a>
+                                                    </h3>
+                                                    <?php 
+                                                        $product['rating']=ratings_trungbinh($product['MaSP']);
+                                                        if($product['rating']['SoSao']!=""&&$product['rating']['SoBinhLuan']>0){
+                                                            $product['trungbinh_rating']=ceil(($product['rating']['SoSao']*10)/($product['rating']['SoBinhLuan']/2));
+                                                        }else{
+                                                            $product['trungbinh_rating']=0;
+                                                        }
+                                                    ?>
+                                                    <div class="ratings-container">
+                                                        <div class="product-ratings">
+                                                            <span class="ratings" style="width:<?=$product['trungbinh_rating']?>%"></span>
+                                                            <!-- End .ratings -->
+                                                            <span class="tooltiptext tooltip-top"></span>
+                                                        </div><!-- End .product-ratings -->
+                                                    </div><!-- End .product-container -->
+                                                    <div class="price-box">
+                                                        <span class="product-price"><?= $product['Gia'];?>đ</span>
+                                                    </div><!-- End .price-box -->
+                                                </div><!-- End .product-details -->
+                                            </div>
                                         </div>
-                                    </div>
-                                <?php endif; ?>
-                            <?php endforeach; ?>
+                                    <?php else: ?>
+                                        <div class="col-6 col-sm-4 col-lg-3">
+                                            <div class="product-default inner-quickview inner-icon">
+                                                <figure>
+                                                    <a href="demo23-product.html">
+                                                        <img src="<?=$base_url?>upload/demoes/demo23/products/<?= $product['AnhSP'];?>"
+                                                            alt="product" style="width: 207px; height: 220px;">
+                                                    </a>
+                                                    <div class="label-group">
+                                                        <div class="product-label label-sale">-<?=substr((($product['Gia'] - $product['GiaGiam']) / $product['Gia']) * 100, 0, 2)?>%</div>
+                                                    </div>
+                                                    <div class="btn-icon-group">
+                                                        <a href="<?= $base_url?>product/detail/<?= $product['MaSP'];?>"
+                                                            class="btn-icon btn-add-cart fa-solid fa-cart-shopping"></a>
+                                                    </div>
+                                                    <a href="ajax/product-quick-view.html" class="btn-quickview"
+                                                        title="Quick View">Xem nhanh</a>
+                                                </figure>
+                                                <div class="product-details">
+                                                    <div class="category-wrap">
+                                                        <div class="category-list">
+                                                            <a href="demo23-product.html" class="product-category"><?= $dsdm['TenDM'];?></a>
+                                                        </div>
+                                                        <a href="wishlist.html" title="Wishlist" class="btn-icon-wish"><i class="fa-solid fa-heart"></i></a>
+                                                    </div>
+                                                    <h3 class="product-title">
+                                                        <a href="demo23-product.html"><?= $product['TenSP'];?></a>
+                                                    </h3>
+                                                    <?php 
+                                                        $product['rating']=ratings_trungbinh($product['MaSP']);
+                                                        if($product['rating']['SoSao']!=""&&$product['rating']['SoBinhLuan']>0){
+                                                            $product['trungbinh_rating']=ceil(($product['rating']['SoSao']*10)/($product['rating']['SoBinhLuan']/2));
+                                                        }else{
+                                                            $product['trungbinh_rating']=0;
+                                                        }
+                                                    ?>
+                                                    <div class="ratings-container">
+                                                        <div class="product-ratings">
+                                                            <span class="ratings" style="width:<?=$product['trungbinh_rating']?>%"></span>
+                                                            <!-- End .ratings -->
+                                                            <span class="tooltiptext tooltip-top"></span>
+                                                        </div><!-- End .product-ratings -->
+                                                    </div><!-- End .product-container -->
+                                                    <div class="price-box">
+                                                        <span class="old-price"><?= $product['Gia'];?>đ</span>
+                                                        <span class="product-price"><?= $product['GiaGiam'];?>đ</span>
+                                                    </div><!-- End .price-box -->
+                                                </div><!-- End .product-details -->
+                                            </div>
+                                        </div>
+                                    <?php endif; ?>
+                                <?php endforeach; ?>
+                            <?php endif; ?>
                             <!-- chỗ lầy là chỗ foeach sản phẩm -->
                             <!-- End .col-lg-3 -->
                         </div><!-- End .row -->

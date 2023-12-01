@@ -67,7 +67,7 @@
                         <?php
                         foreach($show_cart_for_user as $value):
                             extract($value) ?>
-                            <tr>
+                            <tr class="product_parents">
                                 <td class="product-col">
                                     <h5 class="product-title text-title">
                                         Tên sản phẩm:
@@ -75,19 +75,20 @@
                                     </h5>
                                     <p class="product-qty" style="font-weight: 400">Số lượng:
                                         <?= $SoLuongSP ?>
-
+                                        <input type="hidden" value="<?= $SoLuongSP ?>" class="product-qtyJS">
                                     </p>
                                 </td>
 
                                 <td class="price-col">
-                                    <span>
-                                        <?= number_format($total, 0, ',', '.') ?> VNĐ
+                                    <span class="">
+                                        <?= number_format($total, 0, ',', '.') ?> VND
+                                        <input type="hidden" value="<?= $total ?>" class="price_JS">
                                     </span>
                                 </td>
                             </tr>
-                            <?php $_SESSION['MaHD'] = $MaHD ?>
                         <?php endforeach ?>
                     </tbody>
+                    <?php $_SESSION['MaHD'] = $MaHD ?>
                     <tfoot>
                         <tr class="cart-subtotal">
                             <td>
@@ -99,17 +100,18 @@
                         </tr>
                     </tfoot>
                 </table>
-                
+
                 <form action="" method="post">
-                <h5>Hình thức thanh toán:</h5>
-                <input type="radio" name="method_pay" value="" id="nhanhang">
-                <label required for="nhanhang">Thanh toán khi nhận hàng</label>
-                </br>
-                <input type="radio" name="method_pay" value="" id="vnpay">
-                <label required for="vnpay">Thanh toán qua VNPAY</label>
-                <input type="radio" name="method_pay" value="" id="vnpay">
-                <label required for="vnpay">Thanh toán qua MOMO</label>
-                </br>
+                    <h5>Hình thức thanh toán:</h5>
+                    <input type="radio" name="method_pay" value="" id="nhanhang">
+                    <label required for="nhanhang">Thanh toán khi nhận hàng</label>
+                    </br>
+                    <input type="radio" name="method_pay" value="" id="vnpay">
+                    <label required for="vnpay">Thanh toán qua VNPAY</label>
+                    </br>
+                    <input type="radio" name="method_pay" value="" id="vnpay">
+                    <label required for="vnpay">Thanh toán qua MOMO</label>
+                    </br>
                     <button type="button" class="btn btn-primary w-100" data-toggle="modal"
                         data-target="#exampleModalCenter" value="">ĐẶT HÀNG </button>
                 </form>
@@ -146,3 +148,26 @@
         </div>
     </div>
 </div>
+
+<script>
+
+    $(document).ready(function () {
+        function total_cart() {
+            var total_checkout = 0;
+            var product_parent = $('.product_parents');
+            // console.log(document.querySelector('.price_JS').value);
+            for (const total_cart of product_parent) {
+                var price = total_cart.querySelector('.price_JS').value;
+                var quantity = total_cart.querySelector('.product-qtyJS').value;
+                
+                total_checkout += parseInt(price) * parseInt(quantity)
+            }
+            $('.total_checkout').text(total_checkout.toLocaleString('vi-VN') + ' VND')
+        };
+        total_cart();
+
+    })
+
+
+
+</script>
