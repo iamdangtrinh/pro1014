@@ -35,7 +35,7 @@
                     <?php foreach ($wishlist as $product) : ?>
                     <td>
                         <figure class="product-image-container">
-                            <a href="<?= $base_url ?>product/detail/<?= $product['MaSP'] ?>" class="product-image">
+                            <a href="<?= $base_url ?>product/detail/<?= $product['MaSP'] ?>" class="product-image" sty>
                                 <img src="<?= $base_url ?>upload/demoes/demo23/products/<?= $product['AnhSP'] ?>"
                                     alt="product">
                             </a>
@@ -50,12 +50,9 @@
                         </h5>
                     </td>
                     <?php if(!$product['GiaGiam']): ?>
-                    <td class="price-box"><?= number_format($product['Gia'], 0, ",", ".") ?>VND</td>
+                    <td class="price-box"><?=$product['Gia']?>VND</td>
                         <?php else: ?>
-                            <td class="price-box text-danger">
-                             <del class="text-dark"><p><?= number_format($product['Gia'], 0, ",", ".") ?>VND</p></del>   
-                                <p><?= number_format($product['GiaGiam'], 0, ",", ".") ?>VND</p></td>
-                            
+                            <td class="price-box"><?=$product['GiaGiam']?>VND</td>
                             <?php endif; ?>
                     <td>
                         <?php if($product['SoLuong'] > 0): ?>

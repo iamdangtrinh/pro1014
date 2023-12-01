@@ -53,8 +53,7 @@
                     <td class="price-box"><?= number_format($product['Gia'], 0, ",", ".") ?>VND</td>
                         <?php else: ?>
                             <td class="price-box text-danger">
-                             <del class="text-dark"><p><?= number_format($product['Gia'], 0, ",", ".") ?>VND</p></del>   
-                                <p><?= number_format($product['GiaGiam'], 0, ",", ".") ?>VND</p></td>
+                                <<?= number_format($product['GiaGiam'], 0, ",", ".") ?>VND</td>
                             
                             <?php endif; ?>
                     <td>

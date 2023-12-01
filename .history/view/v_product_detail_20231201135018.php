@@ -1,44 +1,4 @@
-<style>
-    #buy-amount{
-        display: flex;
-        align-items: center;
-    }
-    #buy-amount .span{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 30px;
-        height: 30px;
-        outline: none;
-        background:none;
-        cursor: pointer;
-        
-    }
-    #buy-amount .span:hover{
-        color: white;
-        font-weight: bold;
-        background-color: pink;
-        transition: 0.2s ease-in-out all;
-    }
-
-    #buy-amount .span svg{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 15px;
-        height: 20px;
-    }
-    #buy-amount #amount{
-        width: 40px;
-        text-align: center;
-        border: 1px solid #c4bebe;
-        height: 30px;
-        outline: none;
-        margin: 0px 1px;
-    }
-  
-</style> 
- <div class="container">
+            <div class="container">
                 <nav aria-label="breadcrumb" class="breadcrumb-nav">
                     <ol class="breadcrumb">
                         <li><a href="<?= $base_url ?>page/home"><i class="fa-solid fa-house"></i></a></li>
@@ -195,9 +155,9 @@
                                     <?php endif; ?>
                                 </div>
                                 <div class="product-desc">
-                                <p>
-                                    Số lượng: <strong id="quantity"><?=$product_detail['SoLuong']?></strong> tồn kho
-                                </p>
+                                    <p>
+                                        Số lượng: <?= $product_detail['SoLuong'] ?> tồn kho
+                                    </p>
                                 </div>
                                 <ul class="single-info-list">
                                     <li>
@@ -208,29 +168,7 @@
 
                                 <div class="product-action">
                                     <form action="<?= $base_url ?>product/addtocart" method="post">
-                                    <div id="buy-amount">
-                                        <div class="span">
-                                            <span onclick="hadleMinus()">
-                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" 
-                                                stroke="currentColor" class="w-6 h-6">
-                                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12h-15" />
-                                            </svg>
-</span>
-                                        </div>
-                                        <div>
-                                            <input type="text" name="SoLuongSP" id="amount" value="1">
-                                        </div>
-                                        <div class="span">
-                                                <span onclick="handlePlus()">
-                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={3}
-                                                    stroke="currentColor" className="w-6 h-6">
-                                                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
-                                                </svg>
-                                            </span>
-                                    </div>
-
-                                        
-                                    </div>
+                                        <input name="SoLuongSP" type="number" value="1" min="1" class="mb-1">
 
                                         <input name="MaSP" type="hidden" value="<?= $product_detail['MaSP'] ?>">
                                         </br>
@@ -538,39 +476,3 @@
                             <hr class="mt-0 m-b-5" />
 
                             <!-- End .row -->
-                            <script>
-    let amountElement = document.getElementById('amount');
-    let quantityElement = document.getElementById("quantity");
-    let quantity = parseInt(quantityElement.textContent.trim(), 10); // Chuyển đổi giá trị quantity thành số
-
-    let amount = parseInt(amountElement.value, 10);
-    console.log(amount);
-
-    let render = function(amount) {
-        amountElement.value = amount;
-    }
-
-    // Xử lí khi nhấp +
-    let handlePlus = function() {
-        if (amount < quantity) {
-            amount++;
-        }
-        console.log(amount);
-        render(amount);
-    }
-
-    let hadleMinus = function() {
-        if (amount > 1) {
-            amount--;
-        }
-        console.log(amount);
-        render(amount);
-    }
-
-    amountElement.addEventListener('input', () => {
-        amount = parseInt(amountElement.value, 10);
-        amount = (isNaN(amount) || amount == 0 || amount > quantity) ? 1 : amount;
-        render(amount);
-        console.log(amount);
-    });
-</script>
