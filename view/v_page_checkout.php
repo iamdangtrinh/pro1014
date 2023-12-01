@@ -73,20 +73,22 @@
                                         Tên sản phẩm:
                                         <?= $TenSP ?>
                                     </h5>
-                                    <p class="product-qty product-qtyJS" style="font-weight: 400">Số lượng:
+                                    <p class="product-qty" style="font-weight: 400">Số lượng:
                                         <?= $SoLuongSP ?>
+                                        <input type="hidden" value="<?= $SoLuongSP ?>" class="product-qtyJS">
                                     </p>
                                 </td>
 
                                 <td class="price-col">
-                                    <span>
-                                        <?= number_format($total, 0, ',', '.') ?> VNĐ
+                                    <span class="">
+                                        <?= number_format($total, 0, ',', '.') ?> VND
+                                        <input type="hidden" value="<?= $total ?>" class="price_JS">
                                     </span>
                                 </td>
                             </tr>
-                            <?php $_SESSION['MaHD'] = $MaHD ?>
                         <?php endforeach ?>
                     </tbody>
+                    <?php $_SESSION['MaHD'] = $MaHD ?>
                     <tfoot>
                         <tr class="cart-subtotal">
                             <td>
@@ -148,11 +150,24 @@
 </div>
 
 <script>
-    var product_parent = $('.product-qtyJS').closest('.product_parents');
-    console.log(product_parent);
-    for (const total_cart of product_parent) {
-        var price = document.querySelectorAll('.product-qtyJS');
-        console.log(price);
-    }
+
+    $(document).ready(function () {
+        function total_cart() {
+            var total_checkout = 0;
+            var product_parent = $('.product_parents');
+            // console.log(document.querySelector('.price_JS').value);
+            for (const total_cart of product_parent) {
+                var price = total_cart.querySelector('.price_JS').value;
+                var quantity = total_cart.querySelector('.product-qtyJS').value;
+                
+                total_checkout += parseInt(price) * parseInt(quantity)
+            }
+            $('.total_checkout').text(total_checkout.toLocaleString('vi-VN') + ' VND')
+        };
+        total_cart();
+
+    })
+
+
 
 </script>
