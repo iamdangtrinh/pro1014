@@ -29,8 +29,7 @@
                                 <td>
                                     <figure class="product-image-container">
                                         <a href="<?= $base_url ?>product/detail/<?= $MaSP ?>" class="product-image">
-                                            <img src="<?= $base_url ?>upload/products/<?= $AnhSP ?>"
-                                                alt="<?= $TenSP ?>">
+                                            <img src="<?= $base_url ?>upload/products/<?= $AnhSP ?>" alt="<?= $TenSP ?>">
                                         </a>
 
                                         <a href="<?= $base_url ?>delete_cart/<?= $MaSP ?>" class="btn-remove"
@@ -48,11 +47,19 @@
                                 <td class="" style="width: 100px">
                                     <p data-quantity="<?= $MaSP ?>"></p>
                                     <div class="product-single-qty">
-                                        <span class="fa fa-minus minusJS"></span>
+                                        <!-- Giảm số lương -->
+                                        <!-- <span class="fa fa-minus minusJS"></span> -->
+                                        <button type="button" class="minusJS">
+                                            <i class="fa fa-minus"></i>
+                                        </button>
                                         <input type="hidden" class="price_product" value="<?= $Gia ?>">
                                         <input type="text" name="quantity" value="<?= $SoLuongSP ?>"
                                             class="quantity_product">
-                                        <span class="fa fa-plus plusJS"></span>
+                                            <!-- tăng số lượng -->
+                                        <!-- <span class="fa fa-plus plusJS"></span> -->
+                                        <button type="button" class="plusJS">
+                                            <i class="fa fa-plus"></i>
+                                        </button>
                                     </div>
                                 </td>
                                 <td class="text-right m-auto" style="width:115px">
@@ -62,11 +69,11 @@
                                 </td>
                             </tr>
 
-                            <?php endforeach ?>
-                        </tbody>
-                        
-                        <tfoot>
-                            <tr>
+                        <?php endforeach ?>
+                    </tbody>
+
+                    <tfoot>
+                        <tr>
                             <td colspan="5" class="clearfix">
                                 <div class="float-left">
                                     <div class="cart-discount">
@@ -112,12 +119,13 @@
                         </tr>
                     </tfoot>
                 </table>
-                
+
                 <div class="checkout-methods">
                     <form action="<?= $base_url ?>page/checkout" method="post">
-                            <input type="hidden" class="total_cart_input" value="" name="total_cart">            
-                            <input type="hidden" class="" value="<?= $has_cart['MaHD']?>" name="MaHD">            
-                            <input type="submit" class="btn btn-block btn-dark" name="btn_cart" value="Tiến hành thanh toán">
+                        <input type="hidden" class="total_cart_input" value="" name="total_cart">
+                        <input type="hidden" class="" value="<?= $has_cart['MaHD'] ?>" name="MaHD">
+                        <input type="submit" class="btn btn-block btn-dark" name="btn_cart"
+                            value="Tiến hành thanh toán">
                     </form>
                 </div>
             </div>
@@ -194,12 +202,8 @@
                     MaSP: MaSP,
                 },
                 success: function (data) {
-                    if (data === "Cập nhật thành công") {
-                        console.log(data);
-                    } else {
-                        // hiển thị modal dialog tại đây
-                        $('#toast').html(data)
-                    }
+                    // hiển thị modal dialog tại đây
+                    $('#toast').html(data)
                 }
             });
 
