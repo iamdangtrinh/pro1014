@@ -113,6 +113,11 @@
                 </table>
 
                 <div class="checkout-methods">
+                    <form action="" method="post">
+
+                            <input type="submit" value="Tiến hành thanh toán">
+                    </form>
+
                     <a href="<?= $base_url ?>page/checkout" class="btn btn-block btn-dark">
                         Tiến hành thanh toán
                         <i class="fa fa-arrow-right"></i>
@@ -216,8 +221,12 @@
                 success: function (data) {
                     if (data === "error_coupon_null") {
                         $(".result_coupon").text("Vui lòng nhập mã giảm giá")
+                        updateTotal();
+                        console.log(data);
                     } else if (data === "error_coupon_false") {
                         $(".result_coupon").text("Mã giảm giá không đúng")
+                        updateTotal();
+                        console.log(data);
                     }
                     else {
                         $(".result_coupon").html(data);
