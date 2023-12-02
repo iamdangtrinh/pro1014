@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BEM UI</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="assets/css/style23.css">
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 65.2%;
+        }
+
+        .toast {
+            display: flex;
+            align-items: center;
+            background: #fff;
+            border-radius: 2px;
+            padding: 20px 0;
+            min-width: 400px;
+            max-width: 450px;
+            border-left: 4px solid;
+            box-shadow: 0 5px 8px rgba(0, 0, 0, 0.08);
+            animation:  sideInleft ease 0.3s, fadeOut linear 1s 2s forwards;
+        }
+
+        @keyframes sideInleft {
+            from {
+                opacity: 0;
+                transform: translateX(calc(100% + 32px));
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeOut {
+            to {
+                opacity: 0;                
+            }
+        }
+
+        .toast--success {
+            border-color: #47d864;
+        }
+
+        .toast--success .toast__icon {
+            color: #47d864;
+        }
+
+        .toast--error {
+            color: #ff623d;
+        }
+
+        .toast--error .toast__icon {
+            color: #ff623d;
+        }
+
+        .toast+.toast {
+            margin-top: 24px;
+        }
+
+        .toast__icon {
+            font-size: 2.4rem;
+        }
+
+        .toast__icon,
+        .toast__close {
+            padding: 0px 16px;
+
+        }
+
+        .toast__body {
+            flex-grow: 1;
+        }
+
+        .toast__title {
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .toast__msg {
+            font-size: 1.4rem;
+            margin-top: 4px;
+            color: #888;
+            line-height: 1.5;
+        }
+
+        .toast__close {
+            font-size: 2rem;
+            color: rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+        }
+
+        #toast {
+            position: fixed;
+            top: 32px;
+            right: 32px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="toast">
+        <!-- success -->
+        <div class="toast toast--success">
+            <div class="toast__icon">
+                <i class="fa fa-check-circle"></i>
+            </div>
+            <div class="toast__body">
+                <h3 class="toast__title">Success</h3>
+                <p class="toast__msg">Kết nối thành công</p>
+            </div>
+
+            <div class="toast__close">
+                <i class="fa fa-times"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- error -->
+    <!-- <div class="toast toast--error">
+        <div class="toast__icon">
+            <i class="fa fa-check-circle"></i>
+        </div>
+        <div class="toast__body">
+            <h3 class="toast__title">Success</h3>
+            <p class="toast__msg">Kết nối thành công</p>
+        </div>
+
+        <div class="toast__close">
+            <i class="fa fa-times"></i>
+        </div>
+    </div> -->
+
+    <script>
+
+    </script>
+</body>
+
+</html>

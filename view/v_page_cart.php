@@ -7,7 +7,7 @@
     </nav>
 
 
-    <div class="modal_dialog"></div>
+    <div id="toast"></div>
 
     <div class="row">
         <div class="col-lg-8">
@@ -198,11 +198,7 @@
                         console.log(data);
                     } else {
                         // hiển thị modal dialog tại đây
-                        console.log(data);
-                        console.log(SoLuong);
-                        $('.modal_dialog').html(`
-                                Số lượng sản phẩm ERROR
-                        `)
+                        $('#toast').html(data)
                     }
                 }
             });
