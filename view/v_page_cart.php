@@ -146,15 +146,11 @@
                 product.querySelector('.total_price').innerText = total.toLocaleString('vi-VN') + ' VND';
                 total_cart += total;
             }
-
             var coupon_value = $('.coupon_value').val();
             var input_total_cart = document.querySelector('.total_cart_input');
-
             total_cart -= (coupon_value) ? coupon_value : 0;
             document.querySelector('.total_cart').innerText = total_cart.toLocaleString('vi-VN') + ' VND';
-
             input_total_cart.value = total_cart;
-
         }
         updateTotal()
 
