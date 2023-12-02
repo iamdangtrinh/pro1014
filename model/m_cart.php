@@ -13,7 +13,7 @@ function has_products_by_quantity($MaHD,$MaSP)
 }
 
 function upate_quantity_by_product($SoLuongSP, $MaHD) {
-    return pdo_execute("UPDATE chitiethoadon SET SoLuongSP = ? + 5 WHERE MaHD = ?", $SoLuongSP, $MaHD);
+    return pdo_execute("UPDATE chitiethoadon SET SoLuongSP = SoLuongSP + ? WHERE MaHD = ?", $SoLuongSP, $MaHD);
 }
 
 // thêm người dùng vào giỏ hàng
