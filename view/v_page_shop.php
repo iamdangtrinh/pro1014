@@ -92,7 +92,7 @@
                                         <div class="product-default inner-quickview inner-icon">
                                             <figure>
                                                 <a href="<?=$base_url?>product/detail/<?=$product['MaSP']?>">
-                                                    <img src="<?=$base_url?>upload/demoes/demo23/products/<?= $product['AnhSP'];?>"
+                                                    <img src="<?=$base_url?>upload/products/<?= $product['AnhSP'];?>"
                                                         alt="product" style="width: 207px; height: 220px;">
                                                 </a>
                                                 <div class="btn-icon-group">
@@ -147,7 +147,7 @@
                                         <div class="product-default inner-quickview inner-icon">
                                             <figure>
                                                 <a href="<?=$base_url?>product/detail/<?=$product['MaSP']?>">
-                                                    <img src="<?=$base_url?>upload/demoes/demo23/products/<?= $product['AnhSP'];?>"
+                                                    <img src="<?=$base_url?>upload/products/<?= $product['AnhSP'];?>"
                                                         alt="product" style="width: 207px; height: 220px;">
                                                 </a>
                                                 <div class="label-group">
@@ -377,9 +377,9 @@
                                         <div class="product-default left-details product-widget">
                                             <figure>
                                                 <a href="<?=$base_url?>product/detail/<?=$product['MaSP']?>">
-                                                    <img src="<?=$base_url?>upload/demoes/demo23/products/small/product-1.jpg"
+                                                    <img src="<?=$base_url?>upload/products/small/product-1.jpg"
                                                         width="75" height="75" alt="product" />
-                                                    <img src="<?=$base_url?>upload/demoes/demo23/products/small/product-6.jpg"
+                                                    <img src="<?=$base_url?>upload/products/small/product-6.jpg"
                                                         width="75" height="75" alt="product" />
                                                 </a>
                                             </figure>
@@ -402,7 +402,7 @@
                                         <div class="product-default left-details product-widget">
                                             <figure>
                                                 <a href="<?=$base_url?>product/detail/<?=$product['MaSP']?>">
-                                                    <img src="<?=$base_url?>upload/demoes/demo23/products/small/product-2.jpg"
+                                                    <img src="<?=$base_url?>upload/products/small/product-2.jpg"
                                                         width="75" height="75" alt="product" />
                                                 </a>
                                             </figure>

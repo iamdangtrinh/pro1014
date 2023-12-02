@@ -139,7 +139,7 @@
 
                                                     <figure class="product-image-container">
                                                         <a href="" class="product-image">
-                                                            <img src="<?= $base_url ?>upload/demoes/demo23/products/<?= $AnhSP ?>"
+                                                            <img src="<?= $base_url ?>upload/products/<?= $AnhSP ?>"
                                                                 alt="product" width="80" height="80">
                                                         </a>
 
@@ -261,7 +261,7 @@
                                         name="search_key" placeholder="Nhập sản phẩm cần tìm...">
                                     <div id="search_result" class="row input-search">
                                         <!-- <div class="col-md-4 img-focus">
-                                            <img src="<?= $base_url ?>upload/demoes/demo23/products/product-1.jpg"
+                                            <img src="<?= $base_url ?>upload/products/product-1.jpg"
                                                 width="50" height="50" alt="product">
                                         </div>
                                         <div class="col-md-8 mt-2 content-focus">Giày đan </div> -->

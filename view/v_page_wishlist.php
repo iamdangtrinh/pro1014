@@ -36,7 +36,7 @@
                     <td>
                         <figure class="product-image-container">
                             <a href="<?= $base_url ?>product/detail/<?= $product['MaSP'] ?>" class="product-image">
-                                <img src="<?= $base_url ?>upload/demoes/demo23/products/<?= $product['AnhSP'] ?>"
+                                <img src="<?= $base_url ?>upload/products/<?= $product['AnhSP'] ?>"
                                     alt="product">
                             </a>
 

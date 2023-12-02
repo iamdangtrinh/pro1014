@@ -29,7 +29,7 @@
                                 <td>
                                     <figure class="product-image-container">
                                         <a href="<?= $base_url ?>product/detail/<?= $MaSP ?>" class="product-image">
-                                            <img src="<?= $base_url ?>upload/demoes/demo23/products/<?= $AnhSP ?>"
+                                            <img src="<?= $base_url ?>upload/products/<?= $AnhSP ?>"
                                                 alt="<?= $TenSP ?>">
                                         </a>
 

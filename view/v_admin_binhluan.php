@@ -171,7 +171,7 @@ td {
         <tbody>
             <?php foreach($show_bl as $show):?>
             <tr>                
-                <td><img style="width: 50px; height: 50px;" src="<?=$base_url?>upload/demoes/demo23/products/<?= $show['AnhSP'];?>" alt="Anh_sP"></td></td>
+                <td><img style="width: 50px; height: 50px;" src="<?=$base_url?>upload/products/<?= $show['AnhSP'];?>" alt="Anh_sP"></td></td>
                 <td><?= $show['TenSP'];?> 
                 <td><?= $show['SoLuongBinhLuan'];?></td>
                 <td><?= $show['BLMoi'];?></td>

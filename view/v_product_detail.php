@@ -101,32 +101,32 @@
                                 <div class="product-single-carousel owl-carousel owl-theme show-nav-hover">
                                     <div class="product-item">
                                         <img class="product-single-image"
-                                            src="<?= $base_url ?>upload/demoes/demo23/products/<?= $product_detail['AnhSP'] ?>"
-                                            data-zoom-image="<?= $base_url ?>upload/demoes/demo23/products/<?= $product_detail['AnhSP'] ?>"
+                                            src="<?= $base_url ?>upload/products/<?= $product_detail['AnhSP'] ?>"
+                                            data-zoom-image="<?= $base_url ?>upload/products/<?= $product_detail['AnhSP'] ?>"
                                             width="468" height="468" alt="product" />
                                     </div>
                                     <div class="product-item">
                                         <img class="product-single-image"
-                                            src="<?= $base_url ?>upload/demoes/demo23/products/<?= $product_detail['AnhSP1'] ?>"
-                                            data-zoom-image="<?= $base_url ?>upload/demoes/demo23/products/<?= $product_detail['AnhSP1'] ?>"
+                                            src="<?= $base_url ?>upload/products/<?= $product_detail['AnhSP1'] ?>"
+                                            data-zoom-image="<?= $base_url ?>upload/products/<?= $product_detail['AnhSP1'] ?>"
                                             width="468" height="468" alt="product" />
                                     </div>
                                     <div class="product-item">
                                         <img class="product-single-image"
-                                            src="<?= $base_url ?>upload/demoes/demo23/products/<?= $product_detail['AnhSP2'] ?>"
-                                            data-zoom-image="<?= $base_url ?>upload/demoes/demo23/products/<?= $product_detail['AnhSP2'] ?>"
+                                            src="<?= $base_url ?>upload/products/<?= $product_detail['AnhSP2'] ?>"
+                                            data-zoom-image="<?= $base_url ?>upload/products/<?= $product_detail['AnhSP2'] ?>"
                                             width="468" height="468" alt="product" />
                                     </div>
                                     <div class="product-item">
                                         <img class="product-single-image"
-                                            src="<?= $base_url ?>upload/demoes/demo23/products/<?= $product_detail['AnhSP3'] ?>"
-                                            data-zoom-image="<?= $base_url ?>upload/demoes/demo23/products/<?= $product_detail['AnhSP3'] ?>"
+                                            src="<?= $base_url ?>upload/products/<?= $product_detail['AnhSP3'] ?>"
+                                            data-zoom-image="<?= $base_url ?>upload/products/<?= $product_detail['AnhSP3'] ?>"
                                             width="468" height="468" alt="product" />
                                     </div>
                                     <div class="product-item">
                                         <img class="product-single-image"
-                                            src="<?= $base_url ?>upload/demoes/demo23/products/<?= $product_detail['AnhSP4'] ?>"
-                                            data-zoom-image="<?= $base_url ?>upload/demoes/demo23/products/<?= $product_detail['AnhSP4'] ?>"
+                                            src="<?= $base_url ?>upload/products/<?= $product_detail['AnhSP4'] ?>"
+                                            data-zoom-image="<?= $base_url ?>upload/products/<?= $product_detail['AnhSP4'] ?>"
                                             width="468" height="468" alt="product" />
                                     </div>
                                 </div>
@@ -138,23 +138,23 @@
 
                             <div class="prod-thumbnail owl-dots">
                                 <div class="owl-dot">
-                                    <img src="<?= $base_url ?>upload/demoes/demo23/products/<?= $product_detail['AnhSP'] ?>"
+                                    <img src="<?= $base_url ?>upload/products/<?= $product_detail['AnhSP'] ?>"
                                         width="110" height="110" alt="product-thumbnail" />
                                 </div>
                                 <div class="owl-dot">
-                                    <img src="<?= $base_url ?>upload/demoes/demo23/products/<?= $product_detail['AnhSP1'] ?>"
+                                    <img src="<?= $base_url ?>upload/products/<?= $product_detail['AnhSP1'] ?>"
                                         width="110" height="110" alt="product-thumbnail" />
                                 </div>
                                 <div class="owl-dot">
-                                    <img src="<?= $base_url ?>upload/demoes/demo23/products/<?= $product_detail['AnhSP2'] ?>"
+                                    <img src="<?= $base_url ?>upload/products/<?= $product_detail['AnhSP2'] ?>"
                                         width="110" height="110" alt="product-thumbnail" />
                                 </div>
                                 <div class="owl-dot">
-                                    <img src="<?= $base_url ?>upload/demoes/demo23/products/<?= $product_detail['AnhSP3'] ?>"
+                                    <img src="<?= $base_url ?>upload/products/<?= $product_detail['AnhSP3'] ?>"
                                         width="110" height="110" alt="product-thumbnail" />
                                 </div>
                                 <div class="owl-dot">
-                                    <img src="<?= $base_url ?>upload/demoes/demo23/products/<?= $product_detail['AnhSP4'] ?>"
+                                    <img src="<?= $base_url ?>upload/products/<?= $product_detail['AnhSP4'] ?>"
                                         width="110" height="110" alt="product-thumbnail" />
                                 </div>
                             </div>
@@ -432,7 +432,7 @@
                                     <div class="product-default inner-quickview inner-icon">
                                         <figure>
                                             <a href="<?= $base_url ?>product/detail/<?= $product['MaSP'] ?>">
-                                                <img src="<?= $base_url ?>upload/demoes/demo23/products/<?= $product['AnhSP']; ?>"
+                                                <img src="<?= $base_url ?>upload/products/<?= $product['AnhSP']; ?>"
                                                     alt="product" style="width: 207px; height: 220px;">
                                             </a>
                                             <div class="label-group">
@@ -492,7 +492,7 @@
                                     <div class="product-default inner-quickview inner-icon">
                                         <figure>
                                             <a href="<?= $base_url ?>product/detail/<?= $product['MaSP'] ?>">
-                                                <img src="<?= $base_url ?>upload/demoes/demo23/products/<?= $product['AnhSP']; ?>"
+                                                <img src="<?= $base_url ?>upload/products/<?= $product['AnhSP']; ?>"
                                                     alt="product" style="width: 207px; height: 220px;">
                                             </a>
                                             <div class="label-group">

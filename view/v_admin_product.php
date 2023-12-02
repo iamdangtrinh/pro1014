@@ -148,7 +148,7 @@ td{
                             <tr>
                             <td><?=$item_Product['MaSP']?></td>
                             <td><?=$item_Product['TenSP']?></td>
-                            <td><img src="<?=$base_url?>upload/demoes/demo23/products/<?=$item_Product['AnhSP']?>" width="100" height="100" style="display: block; object-fit: contain;" alt=""></td>
+                            <td><img src="<?=$base_url?>upload/products/<?=$item_Product['AnhSP']?>" width="100" height="100" style="display: block; object-fit: contain;" alt=""></td>
                             <td style="width: 12%;"><?=$item_Product['SoLuong']?></td>
                             <td><?=number_format($item_Product['Gia'],0,",",".")?>VND</td>
                             <td><?=number_format($item_Product['GiaGiam'],0,",",".")?>VND</td>
