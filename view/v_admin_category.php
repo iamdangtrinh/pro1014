@@ -115,7 +115,13 @@ td{
         }
 </style>
             <h1>Quản lí danh mục</h1>
+            <br>
             <!-- Recent Orders Table -->
+            <div class="box_button">
+                <div><a href="<?=$base_url?>admin/category/them" class="them" style="font-weight: 600;">Thêm mới</a></div>
+                <div><a href="<?=$base_url?>admin/" class="remove" style="font-weight: 600;">Xóa hết</a></div>
+           </div>
+           <br>
             <div class="box">
                
                 <table>
@@ -152,10 +158,5 @@ td{
                 </table>
 
             </div>
-            <br>
-           <div class="box_button">
-                <div><a href="<?=$base_url?>admin/category/them" class="them" style="font-weight: 600;">Thêm mới</a></div>
-                <div><a href="<?=$base_url?>admin/" class="remove" style="font-weight: 600;">Xóa hết</a></div>
-           </div>
             <!-- End of Recent Orders -->
           

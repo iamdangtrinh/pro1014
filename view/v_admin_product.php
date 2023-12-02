@@ -1,4 +1,7 @@
 <style>
+    html {
+    scroll-behavior: smooth;
+  }
 :root{
     --box-shadow: 0 2rem 3rem var(--color-light);
 }
@@ -93,6 +96,7 @@ td{
     }
     .box_button{
         display: flex;
+        margin-left: 5px;
     }
     .them{
 
@@ -111,7 +115,6 @@ td{
         
     }
     .remove{
-
         padding: 10px;
         font-size: 16px;
         margin: 5px;
@@ -119,16 +122,49 @@ td{
         border-radius: 5px;
         color: #ffff;
         }
-        .remove:hover{
-        box-shadow: 5px 5px 5px #ffd5dd;
-        color: #fff;
-        background: pink;
-        
-        }
+    .remove:hover{
+    box-shadow: 5px 5px 5px #ffd5dd;
+    color: #fff;
+    background: pink;
+    
+    }
+    .button {
+    position: fixed;
+    bottom: 20px; 
+    right: 20px; 
+    background-color: #fcd2db; 
+    color: white; 
+    border: none; 
+    padding: 10px 15px;
+    text-align: center; 
+    text-decoration: none; 
+    display: inline-block;
+    font-size: 16px; 
+    cursor: pointer; 
+    border-radius: 5px;
+    }
+    .button a{
+        font-size: 16px;
+        color: #ffff;
+        font-weight: 600;
+
+    }
+
+    .button:hover {
+    background-color: #ba5a87; /* Màu nền khi di chuột qua */
+    }
+
+
 </style>
             <!-- Recent Orders Table -->
-            <div class="box_content">
-            <h1>Quản lí sản phẩm</h1>
+            <div class="box_content" >
+            <h1 id="bang_product">Quản lí sản phẩm</h1>
+            <br>
+            <div class="box_button" >
+                <div><a href="<?=$base_url?>admin/product/add" class="them" style="font-weight: 600;">Thêm mới</a></div>
+                <div><a href="<?=$base_url?>admin/" class="remove" style="font-weight: 600;">Xóa hết</a></div>
+           </div>
+           <br>
             <div class="box">
                 <table>
                 <thead  >
@@ -138,6 +174,7 @@ td{
                             <th>Tên sản phẩm</th>
                             <th>Ảnh</th>
                             <th>Số lượng</th>
+                            <th>Danh mục</th>
                             <th>Giá</th>
                             <th>Giá giảm</th>
                             <th style="text-align: center;">Lệnh</th>
@@ -150,12 +187,13 @@ td{
                             <td><?=$item_Product['TenSP']?></td>
                             <td><img src="<?=$base_url?>upload/products/<?=$item_Product['AnhSP']?>" width="100" height="100" style="display: block; object-fit: contain;" alt=""></td>
                             <td style="width: 12%;"><?=$item_Product['SoLuong']?></td>
+                            <td><?=$item_Product['TenDM']?></td>
                             <td><?=number_format($item_Product['Gia'],0,",",".")?>VND</td>
                             <td><?=number_format($item_Product['GiaGiam'],0,",",".")?>VND</td>
                             <td>
                                 <div class="lenh">
                                     <div class="sua" ><a href="<?=$base_url?>admin/" style="font-weight: 600; ">Sửa</a></div>
-                                    <div class="xoa"><a href="<?=$base_url?>admin/"  style="font-weight: 600; ">Xóa</a></div>
+                                    <div class="xoa"><a href="<?=$base_url?>admin/product/delete/<?=$item_Product['MaSP']?>"  style="font-weight: 600; ">Xóa</a></div>
                                 </div>
                             </td>
                         </tr>
@@ -168,9 +206,6 @@ td{
             </div>
             </div>
             <br>
-           <div class="box_button">
-                <div><a href="<?=$base_url?>admin/product/add" class="them" style="font-weight: 600;">Thêm mới</a></div>
-                <div><a href="<?=$base_url?>admin/" class="remove" style="font-weight: 600;">Xóa hết</a></div>
-           </div>
+            <button class="button"><a href="#bang_product"><i class="fa-solid fa-arrow-up"></i></a></button>
             <!-- End of Recent Orders -->
           
