@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="<?= $base_url ?>assets/css/bootstrap.min.css">
 
     <!-- Main CSS File -->
+    <link rel="stylesheet" href="<?= $base_url ?>assets/css/fontawsome.css">
     <link rel="stylesheet" href="<?= $base_url ?>assets/css/style23.css">
     <link rel="stylesheet" href="<?= $base_url ?>assets/css/demo23.min.css">
     <!-- <link rel="stylesheet" href="<?= $base_url ?>assets/css/all.min.css"> -->
@@ -30,7 +31,7 @@
     <script src="<?= $base_url ?>assets/js/validate.js"></script>
 
     <style>
-        body {
+        html {
             font-family: Arial, Helvetica, sans-serif;
         }
     </style>

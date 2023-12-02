@@ -11,7 +11,7 @@
                 </ol>
             </div>
         </nav>
-
+        <br>
         <h1>TÀI KHOẢN</h1>
     </div>
 </div>
@@ -217,26 +217,26 @@
                                         <td>
                                             <strong>#<?= $MaHD ?></strong>
                                         </td>
-                                        <td>
+                                        <td style="color: #000; font-size: 1.6rem; font-weight: 500">
                                             <?php 
                                             $date = date_create($NgayLap);
-                                            echo date_format($date, "d-m-y") ?>
+                                            echo date_format($date, "d-m-Y") ?>
                                         </td>
                                         <td>
                                             <?php
 
                                             switch($TrangThai) {
                                                 case 'chuan-bi':
-                                                    echo "Đang chuẩn bị";
+                                                    echo '<span class="text-white p-1 bg-primary rounded">Người bán đang chuẩn bị</span>';
                                                     break;
                                                 case 'cho-giao':
-                                                    echo "Đang vận chuyển";
+                                                    echo '<span class="rounded text-white p-1" style="background: #007bff">Shipper đang đến</span>';
                                                     break;
                                                 case 'hoan-tat':
-                                                    echo "Giao thành công";
+                                                    echo '<span class="rounded text-white p-1 bg-success">Giao thành công</span>';
                                                 break;
                                                 case 'khong-thanh-cong':
-                                                    echo '<span class="text-white p-1 bg-danger">Đơn hàng không thành công</span>';
+                                                    echo '<span class="rounded text-white p-1 bg-danger">Đơn hàng không thành công</span>';
                                                     break;
                                             }
                                             ?>
