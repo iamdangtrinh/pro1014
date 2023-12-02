@@ -19,6 +19,7 @@ if(isset($_GET['act'])) {
                 include_once 'model/m_admin.php';
                 $usermoi = admin_getUser();
                 $view_name = 'admin_dashboard';
+                $title = 'Trang quản trị';
                 break;
             case 'category':
                 //lay du lieu

@@ -123,7 +123,7 @@ b{
     width: 96%;
     margin: 0 auto;
     gap: 1.8rem;
-    grid-template-columns: 12rem auto 23rem;
+    grid-template-columns: 12rem auto;
 }
 
 aside{
@@ -228,7 +228,7 @@ aside .sidebar .message-count{
 }
 
 main{
-    width: 1200px;
+    max-width: 1600px;
     margin-top: 1.4rem;
 }
 
