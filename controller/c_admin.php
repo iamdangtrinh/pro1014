@@ -28,6 +28,7 @@ if(isset($_GET['act'])) {
                 include_once 'model/m_admin.php';
                 $dsADMIN_DM = admin_getALLDM();
                 $view_name = 'admin_category';
+                $title ="Trang quản lí danh mục";
                 break;
             case 'category-them':
                 include_once 'model/m_pdo.php';
@@ -39,6 +40,7 @@ if(isset($_GET['act'])) {
                     danhmuc_add($MaDM, $TenDM, $MaDMC);
                 }
                 $view_name = 'admin_category_them';
+                $title ="Danh mục thêm";
                 break;
             case 'category-edit':
                 include_once 'model/m_admin.php';
@@ -50,6 +52,7 @@ if(isset($_GET['act'])) {
                 }
                 $itemDM = admin_getById($_GET['id']);
                 $view_name = 'admin_category_edit';
+                $title ="Danh mục sửa";
                 break;
             case 'category-delete':
                 //lay du lieu
@@ -57,35 +60,53 @@ if(isset($_GET['act'])) {
                 admin_delete($_GET['id']);
                 $itemDM = admin_getById($_GET['id']);
                 header('location: '.$base_url.'admin/category');
+            
                 break;
-                case 'product':
-                    include_once 'model/m_pdo.php';
-                    include_once 'model/m_admin.php';
-                    $show_product = admin_ShowProduct();
-                    $view_name='admin_product';
+            case 'product':
+                include_once 'model/m_pdo.php';
+                include_once 'model/m_admin.php';
+                $show_product = admin_ShowProduct();
+                $view_name='admin_product';
+                $title ="Trang quản lí sản phẩm";
+                break;
+            case 'product-add':
+                include_once 'model/m_pdo.php';
+                include_once 'model/m_admin.php';
+                if(isset($_POST['submit'])){
+                    // Nhận dữ liệu từ form
+                    $MaSP = $_POST['MaSP']; 
+                    $TenSP = $_POST['TenSP']; 
+                    $_FILES['anh'];
+                    $_FILES['anh1'];
+                    $_FILES['anh2'];
+                    $_FILES['anh3'];
+                    $_FILES['anh4'];
+                    $SoLuong = $_POST['SoLuong'];
+                    $Gia = $_POST['Gia'];
+                    $GiaGiam = $_POST['GiaGiam'];
+                    $MaDM = $_POST['MaDM'];
+                    $MoTa = $_POST['MoTa'];
+                    $target_dir="upload/products/";
+                    $target_file = $target_dir . basename($_FILES["anh"]["name"]);
+                    move_uploaded_file($_FILES["anh"]["tmp_name"],$target_file);
+                    $anh=$target_file;
+                    admin_AddProduct($MaSP, $TenSP, $_FILES["anh"]["name"], $_FILES["anh1"]["name"], $_FILES["anh2"]["name"], $_FILES["anh3"]["name"], $_FILES["anh4"]["name"], $SoLuong, $Gia, $GiaGiam, $MaDM, $MoTa);
+                }
+                    $danhmuc = admin_getALLDM();
+                    $view_name='admin_product_add';
+                    $title ="Sản phẩm thêm";
                     break;
-                case 'product-add':
-                    include_once 'model/m_pdo.php';
-                    include_once 'model/m_admin.php';
-                    if(isset($_POST['submit'])){
-                        // Nhận dữ liệu từ form
-                        $MaSP = $_POST['MaSP']; 
-                        $TenSP = $_POST['TenSP']; 
-                        $_FILES['anh'];
-                        $SoLuong = $_POST['SoLuong'];
-                        $Gia = $_POST['Gia'];
-                        $GiaGiam = $_POST['GiaGiam'];
-                        $MaDM = $_POST['MaDM'];
-                        $MoTa = $_POST['MoTa'];
-                        $target_dir="upload/uploadanhSP/";
-                        $target_file = $target_dir . basename($_FILES["anh"]["name"]);
-                        move_uploaded_file($_FILES["anh"]["tmp_name"],$target_file);
-                        $anh=$target_file;
-                        admin_AddProduct($MaSP, $TenSP, $_FILES["anh"]["name"], $SoLuong, $Gia, $GiaGiam, $MaDM, $MoTa);
-                    }
-                        $danhmuc = admin_getALLDM();
-                        $view_name='admin_product_add';
-                        break;
+            case 'product-delete':
+                include_once 'model/m_pdo.php';
+                include_once 'model/m_admin.php';
+                $MaSP=$_GET['id'];
+                $anh = admin_Product_timxoahinh($MaSP);
+                admin_Product_Delete($MaSP);
+                if(file_exists($anh)){
+                    unlink($anh);
+                 }
+                header('location: '.$base_url.'admin/product');
+                break;
             case 'user':
                 //lay du lieu
                 include_once 'model/m_user.php';

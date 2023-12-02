@@ -7,6 +7,10 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
     <link rel="stylesheet" href="<?= $base_url ?>assets/style.css">
     <title><?= $title?></title>
+    <!-- linh cdn fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         .active {
             z-index: 2;
@@ -124,7 +128,7 @@
                     </span>
                     <h3>Bình luận</h3>
                 </a>
-                <a href="<?= $base_url ?>admin/donhang" class="list_group-item <?= (strpos($view_name, 'binhluan')) ? 'active' : '' ?>">
+                <a href="<?= $base_url ?>admin/donhang" class="list_group-item <?= (strpos($view_name, 'donhang')) ? 'active' : '' ?>">
                     <span class="material-icons-sharp">
                         receipt_long
                     </span>
