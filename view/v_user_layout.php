@@ -153,13 +153,10 @@
                                         <div class="dropdown-cart-action">
                                             <a href="<?= $base_url ?>gio-hang" class="btn btn-gray btn-block view-cart">Xem
                                                 giỏ hàng</a>
-                                            <a href="<?= $base_url ?>page/checkout" class="btn btn-dark btn-block">Kiểm
-                                                tra</a>
                                         </div>
                                     <?php else: ?>
                                         <?php
                                         echo
-
                                             '<div class="alert alert-rounded alert-danger">
                                         <i class="fa fa-exclamation-circle" style="color: #ef8495;"></i>
                                         <p class="text-heading">Vui lòng đăng nhập để xem sản phẩm.</p>

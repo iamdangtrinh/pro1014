@@ -95,7 +95,7 @@
                                 <h4>Tổng tiền</h4>
                             </td>
                             <td class="price-col">
-                                <span class="total_checkout"><?= number_format($total_cart['TongTien'], 0, '.', '.');?> VNĐ</span>
+                                <span class="total_checkout"><?= (isset($_POST['btn_cart'])) ? number_format($total_cart['TongTien'], 0, '.', '.') : ''?></span>
                             </td>
                         </tr>
                     </tfoot>
@@ -151,20 +151,19 @@
 
 <script>
 
-    // $(document).ready(function () {
-    //     function total_cart() {
-    //         var total_checkout = 0;
-    //         var product_parent = $('.product_parents');
-    //         // console.log(document.querySelector('.price_JS').value);
-    //         for (const total_cart of product_parent) {
-    //             var price = total_cart.querySelector('.price_JS').value;
-    //             total = parseInt(price) * 1;
-    //             total_checkout += total;
-    //         }
-    //         document.querySelector('.total_checkout').innerText =total_checkout.toLocaleString('vi-VN') + ' VND'
-    //     };
-
-    // })
+    $(document).ready(function () {
+        function total_cart() {
+            var total_checkout = 0;
+            var product_parent = $('.product_parents');
+            // console.log(document.querySelector('.price_JS').value);
+            for (const total_cart of product_parent) {
+                var price = total_cart.querySelector('.price_JS').value;
+                total = parseInt(price) * 1;
+                total_checkout += total;
+            }
+            document.querySelector('.total_checkout').innerText =total_checkout.toLocaleString('vi-VN') + ' VND'
+        };
+    })
 
 
 

@@ -229,7 +229,7 @@
                         updateTotal();
                     }
                     else {
-                        $(".result_coupon").text(data);
+                        $(".result_coupon").html(data);
                         updateTotal();
                     }
                 },

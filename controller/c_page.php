@@ -38,10 +38,12 @@ if(isset($_GET['act'])) {
         case 'checkout':
             include_once 'model/m_cart.php';
             if(isset($_POST['btn_cart']) && $_POST['btn_cart']) {
-                $total = $_POST['total_cart'];
                 $MaHD = $_POST['MaHD'];
+                $total = $_POST['total_cart'];
                 update_total_cart($total, $MaHD);
                 $total_cart = get_total($MaHD);
+            } else {
+                header('location: '.$base_url.'gio-hang');
             }
 
             //laydulieu
