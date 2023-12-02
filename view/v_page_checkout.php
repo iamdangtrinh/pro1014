@@ -95,7 +95,7 @@
                                 <h4>Tổng tiền</h4>
                             </td>
                             <td class="price-col">
-                                <span class="total_checkout"></span>
+                                <span class="total_checkout"><?= number_format($total_cart['TongTien'], 0, '.', '.');?> VNĐ</span>
                             </td>
                         </tr>
                     </tfoot>

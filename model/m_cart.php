@@ -101,4 +101,8 @@ function update_total_cart($total, $MaHD) {
     return pdo_execute("UPDATE hoadon SET TongTien = ? WHERE MaHD = ?", $total, $MaHD);
 }
 
+function get_total($MaHD) {
+    return pdo_query_one("SELECT TongTien, MaHD FROM `hoadon` WHERE MaHD = $MaHD");
+}
+
 ?>

@@ -41,6 +41,7 @@ if(isset($_GET['act'])) {
                 $total = $_POST['total_cart'];
                 $MaHD = $_POST['MaHD'];
                 update_total_cart($total, $MaHD);
+                $total_cart = get_total($MaHD);
             }
 
             //laydulieu
