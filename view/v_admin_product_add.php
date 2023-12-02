@@ -108,7 +108,7 @@ select {
                     <div class="col-md-4">
                             <div class="mb-3">
                                 <label for="AnhSP" class="form-label">Ảnh chính</label>
-                                <input type="file" class="form-control" id="AnhSP" name="anh">
+                                <input type="file"  name="anh" class="form-control" id="AnhSP" > 
                             </div>
                             <div class="mb-3">
                                 <label for="MaDM" class="form-label">Danh mục: </label>
