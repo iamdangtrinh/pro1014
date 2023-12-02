@@ -118,12 +118,11 @@ if(isset($_GET['act'])) {
 
                         $add_khuyenmai = admin_addkhuyenmai($TenKM, $codeKhuyenMai, $soTienGiam, $ngayBatDau, $ngayKetThuc, $SoLuong);
 
-                        if($add_khuyenmai == true) {
-
-                            $thongbao = "Dữ liệu đã được thêm thành công!";
-                        } else {
-                            $thongbao = "Dữ liệu đã được thêm not thành công!";
-                        }
+                        if ($add_khuyenmai !== false) {
+                            echo "<div id='Thongbao' class='success'>Thêm mã khuyến mãi thành công</div>";
+                            } else {
+                                echo "<div id='Thongbao' class='error'>Thêm mã khuyến mãi không thành công.</div>";
+                            }
                     }
                 }
                 // hien thi du lieu
@@ -149,6 +148,11 @@ if(isset($_GET['act'])) {
                         // Nếu không trùng, thực hiện thêm vào cơ sở dữ liệu
                         $updateQuery = updatekm($tenKhuyenMai, $giaKhuyenMai, $ngayBatDau, $ngayKetThuc, $SoLuong, $maKhuyenMai);
                         header('Location: '.$base_url.'admin/khuyenmai');
+                        if ($updateQuery !== false) {
+                            echo "<div id='Thongbao' class='success'>Cập nhật thành công</div>";
+                            } else {
+                                echo "<div id='Thongbao' class='error'>Cập nhật không thành công.</div>";
+                            }
                     }
                 }
                 // hien thi du lieu

@@ -149,7 +149,7 @@ td {
 }
 
 #TrangThai option.xam {
-    font-style: italic;
+    font-style: bold;
     color: gray;
 }
 

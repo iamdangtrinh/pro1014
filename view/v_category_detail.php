@@ -187,15 +187,9 @@
                                     <a class="page-link page-link-btn" href="#"><i class="icon-angle-left"></i></a>
                                 </li>
                                 <?php for($i=1; $i<=$sotrang; $i++): ?>
-                                    <?php if(isset($_GET['MaDMC'])): ?>
-                                        <li class="page-item">
-                                            <a class="page-link" href="<?= $base_url ?>category/detail/<?=$MaDM?>/<?=$MaDMC?>/page/<?=$i?>"><?=$i?></a>
-                                        </li>
-                                    <?php else: ?>
-                                        <li class="page-item">
-                                            <a class="page-link" href="<?= $base_url ?>category/detail/<?=$MaDM?>/page/<?=$i?>"><?=$i?></a>
-                                        </li>
-                                    <?php endif; ?>
+                                <li class="page-item">
+                                    <a class="page-link" href="<?= $base_url ?>category/detail/<?=$i?>"><?=$i?></a>
+                                </li>
                                 <?php endfor;?>
                                 <li class="page-item"><span class="page-link">...</span></li>
                                 <li class="page-item">
