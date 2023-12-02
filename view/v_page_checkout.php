@@ -151,22 +151,20 @@
 
 <script>
 
-    $(document).ready(function () {
-        function total_cart() {
-            var total_checkout = 0;
-            var product_parent = $('.product_parents');
-            // console.log(document.querySelector('.price_JS').value);
-            for (const total_cart of product_parent) {
-                var price = total_cart.querySelector('.price_JS').value;
-                total = parseInt(price) * 1;
-                total_checkout += total;
-            }
-            document.querySelector('.total_checkout').innerText =total_checkout.toLocaleString('vi-VN') + ' VND'
-            // $('.total_checkout').html(total_checkout.toLocaleString('vi-VN') + ' VND')
-        };
-        total_cart();
+    // $(document).ready(function () {
+    //     function total_cart() {
+    //         var total_checkout = 0;
+    //         var product_parent = $('.product_parents');
+    //         // console.log(document.querySelector('.price_JS').value);
+    //         for (const total_cart of product_parent) {
+    //             var price = total_cart.querySelector('.price_JS').value;
+    //             total = parseInt(price) * 1;
+    //             total_checkout += total;
+    //         }
+    //         document.querySelector('.total_checkout').innerText =total_checkout.toLocaleString('vi-VN') + ' VND'
+    //     };
 
-    })
+    // })
 
 
 

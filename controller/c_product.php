@@ -54,6 +54,7 @@ if(isset($_GET['act'])) {
             if(isset($_SESSION['user'])) {
                 $MaTK = $_SESSION['user']['MaTK'];
                 $cart = show_cart_for_user($MaTK);
+               $has_cart = has_cart($MaTK);
                 // Hiển thị dữ liệu
                 $view_name = 'page_cart';
             } else {

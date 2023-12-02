@@ -71,6 +71,7 @@ function delete_cart_by_pro($MaSP) {
     return pdo_execute("DELETE FROM chitiethoadon WHERE MaSP = ?",$MaSP);
 }
 
+// Số lượng sản phẩm tối đa
 function quantity_cart_max($MaSP) {
     return pdo_query_one("SELECT SoLuong,MaSP FROM sanpham WHERE MaSP = ?", $MaSP);
 }
@@ -95,5 +96,9 @@ function hoadon_countAll(){
     return pdo_query_value("SELECT COUNT(*) FROM hoadon");
 }
 
+// Cập nhật tổng tiền cho người dùng khi click vào tiến hành thanh toán
+function update_total_cart($total, $MaHD) {
+    return pdo_execute("UPDATE hoadon SET TongTien = ? WHERE MaHD = ?", $total, $MaHD);
+}
 
 ?>

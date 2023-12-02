@@ -61,11 +61,12 @@
                                     </span>
                                 </td>
                             </tr>
-                        <?php endforeach ?>
-                    </tbody>
 
-                    <tfoot>
-                        <tr>
+                            <?php endforeach ?>
+                        </tbody>
+                        
+                        <tfoot>
+                            <tr>
                             <td colspan="5" class="clearfix">
                                 <div class="float-left">
                                     <div class="cart-discount">
@@ -111,17 +112,13 @@
                         </tr>
                     </tfoot>
                 </table>
-
+                
                 <div class="checkout-methods">
-                    <form action="" method="post">
-
-                            <input type="submit" value="Tiến hành thanh toán">
+                    <form action="<?= $base_url ?>page/checkout" method="post">
+                            <input type="hidden" class="total_cart_input" value="" name="total_cart">            
+                            <input type="hidden" class="" value="<?= $has_cart['MaHD']?>" name="MaHD">            
+                            <input type="submit" class="btn btn-block btn-dark" name="btn_cart" value="Tiến hành thanh toán">
                     </form>
-
-                    <a href="<?= $base_url ?>page/checkout" class="btn btn-block btn-dark">
-                        Tiến hành thanh toán
-                        <i class="fa fa-arrow-right"></i>
-                    </a>
                 </div>
             </div>
         </div>
@@ -143,8 +140,13 @@
             }
 
             var coupon_value = $('.coupon_value').val();
+            var input_total_cart = document.querySelector('.total_cart_input');
+
             total_cart -= (coupon_value) ? coupon_value : 0;
             document.querySelector('.total_cart').innerText = total_cart.toLocaleString('vi-VN') + ' VND';
+
+            input_total_cart.value = total_cart;
+
         }
         updateTotal()
 
@@ -227,7 +229,7 @@
                         updateTotal();
                     }
                     else {
-                        $(".result_coupon").html(data);
+                        $(".result_coupon").text(data);
                         updateTotal();
                     }
                 },
