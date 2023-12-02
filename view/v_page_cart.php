@@ -222,11 +222,9 @@
                     if (data === "error_coupon_null") {
                         $(".result_coupon").text("Vui lòng nhập mã giảm giá")
                         updateTotal();
-                        console.log(data);
                     } else if (data === "error_coupon_false") {
                         $(".result_coupon").text("Mã giảm giá không đúng")
                         updateTotal();
-                        console.log(data);
                     }
                     else {
                         $(".result_coupon").html(data);
