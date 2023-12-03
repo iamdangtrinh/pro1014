@@ -584,7 +584,7 @@
             // Kiểm tra xem phần tử có tồn tại không
             if (pElement) {
                 // Đặt nội dung thông báo
-                pElement.textContent = 'Bạn đã thêm quá số lượng sản phẩm hiện có';
+                pElement.textContent = 'Bạn không thể thêm quá số lượng sản phẩm hiện có';
                 return false;
             }else{}
             

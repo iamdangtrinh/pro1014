@@ -1,3 +1,6 @@
+.page-wrapper{
+  background: white;
+}
 .checkout-progress-bar li a.active,
 .checkout-progress-bar li a:hover {
   color: #c59b9c;

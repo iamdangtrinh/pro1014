@@ -17,7 +17,7 @@
         return pdo_query_value("SELECT COUNT(*) FROM sanpham WHERE TenSP LIKE '%$keyword%'");
     }
     function product_shop($start, $limit) {
-        return pdo_query("SELECT * FROM sanpham sp INNER JOIN danhmuc dm ON sp.MaDM = dm.MaDM ORDER BY sp.MaSP DESC LIMIT $start, $limit");
+        return pdo_query("SELECT * FROM sanpham sp INNER JOIN danhmuc dm ON sp.MaDM = dm.MaDM ORDER BY sp.SoLuong DESC LIMIT $start, $limit");
     }
     function count_product(){
         return pdo_query_value("SELECT count(*) AS soluong FROM sanpham");

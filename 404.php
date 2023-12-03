@@ -41,6 +41,10 @@
     h3{
       text-align: center;
     }
+    a{
+      text-decoration: none;
+      color: #c59b9c;
+    }
     .row-404{
       width: 100%;
       height: 600px;
@@ -67,7 +71,7 @@
           <img class="img" src="upload/dribbble_1.gif" alt="">
         </div> -->
         <div class="row">
-          <h2>Trang không tìm thấy</h2>
+          <h2>Trang không tồn tại</h2>
           <h3><a href="<?= $base_url ?>page/home">Quay về trang chủ</a></h3>
         </div>
       </div>

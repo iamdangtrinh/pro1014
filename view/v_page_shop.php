@@ -99,8 +99,11 @@
                                                     <a href="<?= $base_url ?>product/detail/<?= $product['MaSP'];?>"
                                                         class="btn-icon btn-add-cart fa-solid fa-cart-shopping"></a>
                                                 </div>
-                                                <a href="ajax/product-quick-view.html" class="btn-quickview"
-                                                    title="Quick View">Xem nhanh</a>
+                                                <?php if($product['SoLuong']==0):?>
+                                                    <a href="<?= $base_url?>product/detail/<?= $product['MaSP'];?>" class="btn-quickview">Đã bán hết</a>
+                                                <?php else:?>
+                                                    <a href="<?= $base_url?>product/detail/<?= $product['MaSP'];?>" class="btn-quickview">Xem chi tiết</a>
+                                                <?php endif;?>
                                             </figure>
                                             <div class="product-details">
                                                 <div class="category-wrap">
@@ -157,8 +160,11 @@
                                                     <a href="<?= $base_url?>product/detail/<?= $product['MaSP'];?>"
                                                         class="btn-icon btn-add-cart fa-solid fa-cart-shopping"></a>
                                                 </div>
-                                                <a href="ajax/product-quick-view.html" class="btn-quickview"
-                                                    title="Quick View">Xem nhanh</a>
+                                                <?php if($product['SoLuong']==0):?>
+                                                    <a href="<?= $base_url?>product/detail/<?= $product['MaSP'];?>" class="btn-quickview">Đã bán hết</a>
+                                                <?php else:?>
+                                                    <a href="<?= $base_url?>product/detail/<?= $product['MaSP'];?>" class="btn-quickview">Xem chi tiết</a>
+                                                <?php endif;?>
                                             </figure>
                                             <div class="product-details">
                                                 <div class="category-wrap">
