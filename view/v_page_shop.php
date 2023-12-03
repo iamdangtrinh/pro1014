@@ -100,7 +100,10 @@
                                                         class="btn-icon btn-add-cart fa-solid fa-cart-shopping"></a>
                                                 </div>
                                                 <?php if($product['SoLuong']==0):?>
-                                                    <a href="<?= $base_url?>product/detail/<?= $product['MaSP'];?>" class="btn-quickview">Đã bán hết</a>
+                                                    <a href="<?= $base_url?>product/detail/<?= $product['MaSP'];?>" class="btn-quickview">Xem chi tiết</a>
+                                                    <div class="product-countdown-container">
+                                                        <span class="product-countdown-title">Đã bán hết</span>
+                                                    </div>
                                                 <?php else:?>
                                                     <a href="<?= $base_url?>product/detail/<?= $product['MaSP'];?>" class="btn-quickview">Xem chi tiết</a>
                                                 <?php endif;?>
@@ -161,7 +164,10 @@
                                                         class="btn-icon btn-add-cart fa-solid fa-cart-shopping"></a>
                                                 </div>
                                                 <?php if($product['SoLuong']==0):?>
-                                                    <a href="<?= $base_url?>product/detail/<?= $product['MaSP'];?>" class="btn-quickview">Đã bán hết</a>
+                                                    <a href="<?= $base_url?>product/detail/<?= $product['MaSP'];?>" class="btn-quickview">Xem chi tiết</a>
+                                                    <div class="product-countdown-container">
+                                                        <span class="product-countdown-title">Đã bán hết</span>
+                                                    </div>
                                                 <?php else:?>
                                                     <a href="<?= $base_url?>product/detail/<?= $product['MaSP'];?>" class="btn-quickview">Xem chi tiết</a>
                                                 <?php endif;?>
