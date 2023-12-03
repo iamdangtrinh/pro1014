@@ -32,19 +32,27 @@
         return pdo_query("SELECT sp.*, dm.TenDM, dm.MaDMC FROM sanpham sp INNER JOIN danhmuc dm ON sp.MaDM=dm.MaDM WHERE GiaGiam > 0 ORDER BY sp.MaSP ASC");
     }
    
-    function admin_AddProduct($MaSP, $TenSP, $anh, $SoLuong, $Gia, $GiaGiam, $MaDM, $MoTa){
+    function admin_AddProduct($MaSP, $TenSP, $anh, $anh1, $anh2, $anh3, $anh4, $SoLuong, $Gia, $GiaGiam, $MaDM, $MoTa){
     $conn = pdo_get_connection(); //gọi hàm kết nối database
-    $sql = "INSERT INTO sanpham(MaSP, TenSP, AnhSP, SoLuong, Gia, GiaGiam, MaDM, MoTa)
-            VALUES ('$MaSP', '$TenSP', '$anh', '$SoLuong', '$Gia', '$GiaGiam', '$MaDM', '$MoTa')";
+    $sql = "INSERT INTO sanpham(MaSP, TenSP, AnhSP, AnhSP1, AnhSP2, AnhSP3, AnhSP4, SoLuong, Gia, GiaGiam, MaDM, MoTa)
+            VALUES ('$MaSP', '$TenSP', '$anh', '$anh1', '$anh2', '$anh3', '$anh4',  '$SoLuong', '$Gia', '$GiaGiam', '$MaDM', '$MoTa')";
     $conn->exec($sql); // exec the query
     $conn = null; // đóng kết nối database
     }
     function admin_Product_Delete($MaSP){
         return pdo_query_one("DELETE FROM  sanpham WHERE MaSP=$MaSP");
     }
+    
     function admin_Product_timxoahinh($MaSP){
-        $list =  pdo_query_one("SELECT * FROM  sanpham WHERE MaSP=$MaSP");
-        return $list[0]['AnhSP'];
+        $list =  pdo_query_one("SELECT * FROM sanpham WHERE MaSP=?", $MaSP);
+        return array(
+            $list['AnhSP'],
+            $list['AnhSP1'],
+            $list['AnhSP2'],
+            $list['AnhSP3'],
+            $list['AnhSP4']
+        );
+        //Hàm này sẽ trả về một mảng chứa các hình ảnh của sản phẩm. Dùng hàm này để lấy các hình ảnh và xóa khỏi file tải lên.
     }
     function admin_addkhuyenmai( $TenKM, $codeKhuyenMai, $soTienGiam, $ngayBatDau, $ngayKetThuc, $SoLuong) {
     return pdo_execute("INSERT INTO khuyenmai ( TenKM, CodeKM, GiaKM, NgayBatDau, NgayKetThuc, SoLuong) 

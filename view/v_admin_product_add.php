@@ -111,6 +111,22 @@ select {
                                 <input type="file"  name="anh" class="form-control" id="AnhSP" > 
                             </div>
                             <div class="mb-3">
+                                <label for="AnhSP1" class="form-label">Ảnh Phụ 1</label>
+                                <input type="file"  name="anh1" class="form-control" id="AnhSP" > 
+                            </div>
+                            <div class="mb-3">
+                                <label for="AnhSP2" class="form-label">Ảnh phụ 2</label>
+                                <input type="file"  name="anh2" class="form-control" id="AnhSP" > 
+                            </div>
+                            <div class="mb-3">
+                                <label for="AnhSP3" class="form-label">Ảnh phụ 3</label>
+                                <input type="file"  name="anh3" class="form-control" id="AnhSP" > 
+                            </div>
+                            <div class="mb-3">
+                                <label for="AnhSP4" class="form-label">Ảnh phụ 4</label>
+                                <input type="file"  name="anh4" class="form-control" id="AnhSP" > 
+                            </div>
+                            <div class="mb-3">
                                 <label for="MaDM" class="form-label">Danh mục: </label>
                                 <select id="MaDM" name="MaDM">
                                     <?php foreach( $danhmuc as $getdanhmuc ) :?>
