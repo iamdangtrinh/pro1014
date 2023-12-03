@@ -45,10 +45,58 @@ form {
 .btn:hover {
     background-color: #ffd5dd;
 }
+/* css thông báo */
+.success {
+    border-radius: 4px;
+    padding: 20px;
+    color: white; 
+    opacity: 1;
+    transition: opacity 0.6s; 
+    margin-bottom: 15px; 
+    background-color: #4CAF50;
+    font-size: 15px;
+    font-weight: 600;
+}
+.danger {
+    border-radius: 4px;
+    padding: 20px;
+    color: white; 
+    opacity: 1;
+    transition: opacity 0.6s; 
+    margin-bottom: 15px; 
+    background-color: #f44336;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.closebtn:hover {
+    color: black;
+}
 
 </style>
 <h2 class="mt-2">THÊM DANH MỤC</h2><br>
-        
+        <?php if(isset($_SESSION['thongbao'])): ?>
+            <div class="success" >
+                <?=$_SESSION['thongbao']?>
+            </div> 
+        <?php endif; unset($_SESSION['thongbao']); ?>
+
+        <?php if(isset($_SESSION['loi'])): ?>
+            <div class="danger">
+                <?=$_SESSION['loi']?>
+            </div> 
+        <?php endif; unset($_SESSION['loi']); ?>
         <form action="" method="POST">
             <div class="mb-3">
                 <label for="MaDM"   class="form-label"    >Mã danh mục</label>

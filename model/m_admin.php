@@ -15,9 +15,9 @@
     function admin_getALLDM(){
         return pdo_query("SELECT *FROM danhmuc ");
     }     
-    // function admin_checkGiaGiam() {
-    //     return pdo_query_one("SELECT * FROM sanpham WHERE GiaGiam > 0");
-    // }
+    function admin_checkMaDM($MaDM) {
+        return pdo_query_one("SELECT * FROM danhmuc WHERE MaDM=?", $MaDM);
+    }
     function danhmuc_add($MaDM,$TenDM,$MaDMC){
       pdo_execute("INSERT INTO danhmuc(`MaDM`,`TenDM`,`MaDMC`) VALUES(?,?,?)", $MaDM,$TenDM,$MaDMC);
     }
@@ -31,7 +31,9 @@
     function admin_ShowProduct(){
         return pdo_query("SELECT sp.*, dm.TenDM, dm.MaDMC FROM sanpham sp INNER JOIN danhmuc dm ON sp.MaDM=dm.MaDM WHERE GiaGiam > 0 ORDER BY sp.MaSP ASC");
     }
-   
+    function admin_checkMaSP($MaSP) {
+        return pdo_query_one("SELECT * FROM sanpham WHERE MaSP=?",$MaSP);
+    }
     function admin_AddProduct($MaSP, $TenSP, $anh, $anh1, $anh2, $anh3, $anh4, $SoLuong, $Gia, $GiaGiam, $MaDM, $MoTa){
     $conn = pdo_get_connection(); //gọi hàm kết nối database
     $sql = "INSERT INTO sanpham(MaSP, TenSP, AnhSP, AnhSP1, AnhSP2, AnhSP3, AnhSP4, SoLuong, Gia, GiaGiam, MaDM, MoTa)

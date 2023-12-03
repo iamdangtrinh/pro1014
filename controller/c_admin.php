@@ -30,18 +30,25 @@ if(isset($_GET['act'])) {
                 $view_name = 'admin_category';
                 $title ="Trang quản lí danh mục";
                 break;
-            case 'category-them':
-                include_once 'model/m_pdo.php';
-                include_once 'model/m_admin.php';
-                if(isset($_POST['submit'])) {
-                    $MaDM = $_POST['MaDM'];
-                    $TenDM = $_POST['TenDM'];
-                    $MaDMC = $_POST['MaDMC'];
-                    danhmuc_add($MaDM, $TenDM, $MaDMC);
-                }
-                $view_name = 'admin_category_them';
-                $title ="Danh mục thêm";
-                break;
+                case 'category-them':
+                    include_once 'model/m_pdo.php';
+                    include_once 'model/m_admin.php';
+                    if(isset($_POST['submit'])) {
+                        $MaDM = $_POST['MaDM'];
+                        $TenDM = $_POST['TenDM'];
+                        $MaDMC = $_POST['MaDMC'];
+                        $check_DM = admin_checkMaDM($MaDM);
+                        if($check_DM){ //  bị trùng không thêm báo lỗi
+                            $_SESSION['loi'] = 'Không thể thêm vì mã <strong>'.$MaDM.'</strong> đã tồn tại! ';
+                        }else{// Sai , ko trùng , thêm tài khoản
+                            danhmuc_add($MaDM, $TenDM, $MaDMC);
+                            $_SESSION['thongbao'] = 'Đã thêm danh mục thành công!';
+                        }
+                    }
+                    $view_name = 'admin_category_them';
+                    $title ="Danh mục thêm";
+                    break;
+                
             case 'category-edit':
                 include_once 'model/m_admin.php';
                 $MaDM = $_GET['id'];
@@ -86,23 +93,30 @@ if(isset($_GET['act'])) {
                     $GiaGiam = $_POST['GiaGiam'];
                     $MaDM = $_POST['MaDM'];
                     $MoTa = $_POST['MoTa'];
-                    $target_dir="upload/products/";
-                    $target_file = $target_dir . basename($_FILES["anh"]["name"]);
-                    $target_file1 = $target_dir . basename($_FILES["anh1"]["name"]);
-                    $target_file2 = $target_dir . basename($_FILES["anh2"]["name"]);
-                    $target_file3 = $target_dir . basename($_FILES["anh3"]["name"]);
-                    $target_file4 = $target_dir . basename($_FILES["anh4"]["name"]);
-                    move_uploaded_file($_FILES["anh"]["tmp_name"],$target_file);
-                    move_uploaded_file($_FILES["anh1"]["tmp_name"],$target_file1);
-                    move_uploaded_file($_FILES["anh2"]["tmp_name"],$target_file2);
-                    move_uploaded_file($_FILES["anh3"]["tmp_name"],$target_file3);
-                    move_uploaded_file($_FILES["anh4"]["tmp_name"],$target_file4);
-                    $anh=$target_file;
-                    $anh1=$target_file1;
-                    $anh2=$target_file2;
-                    $anh3=$target_file3;
-                    $anh4=$target_file4;
-                    admin_AddProduct($MaSP, $TenSP, $_FILES["anh"]["name"], $_FILES["anh1"]["name"], $_FILES["anh2"]["name"], $_FILES["anh3"]["name"], $_FILES["anh4"]["name"], $SoLuong, $Gia, $GiaGiam, $MaDM, $MoTa);
+                        $target_dir="upload/products/";
+                        $target_file = $target_dir . basename($_FILES["anh"]["name"]);
+                        $target_file1 = $target_dir . basename($_FILES["anh1"]["name"]);
+                        $target_file2 = $target_dir . basename($_FILES["anh2"]["name"]);
+                        $target_file3 = $target_dir . basename($_FILES["anh3"]["name"]);
+                        $target_file4 = $target_dir . basename($_FILES["anh4"]["name"]);
+                        move_uploaded_file($_FILES["anh"]["tmp_name"],$target_file);
+                        move_uploaded_file($_FILES["anh1"]["tmp_name"],$target_file1);
+                        move_uploaded_file($_FILES["anh2"]["tmp_name"],$target_file2);
+                        move_uploaded_file($_FILES["anh3"]["tmp_name"],$target_file3);
+                        move_uploaded_file($_FILES["anh4"]["tmp_name"],$target_file4);
+                        $anh=$target_file;
+                        $anh1=$target_file1;
+                        $anh2=$target_file2;
+                        $anh3=$target_file3;
+                        $anh4=$target_file4;
+                        $check_MaSP = admin_checkMaSP($MaSP);
+                        if($check_MaSP){ //  bị trùng không thêm báo lỗi
+                            $_SESSION['loi'] = 'Không thể thêm vì mã <strong>'.$MaSP.'</strong> đã tồn tại! ';
+                        }else{// Sai , ko trùng , thêm tài khoản
+                            admin_AddProduct($MaSP, $TenSP, $_FILES["anh"]["name"], $_FILES["anh1"]["name"], $_FILES["anh2"]["name"], $_FILES["anh3"]["name"], $_FILES["anh4"]["name"], $SoLuong, $Gia, $GiaGiam, $MaDM, $MoTa);
+                            $_SESSION['thongbao'] = 'Đã thêm sản phẩm thành công!';
+                        }
+                    
                 }
                     $danhmuc = admin_getALLDM();
                     $view_name='admin_product_add';

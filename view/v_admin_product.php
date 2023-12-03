@@ -162,7 +162,7 @@ td{
             <br>
             <div class="box_button" >
                 <div><a href="<?=$base_url?>admin/product/add" class="them" style="font-weight: 600;">Thêm mới</a></div>
-                <div><a href="<?=$base_url?>admin/" class="remove" style="font-weight: 600;">Xóa hết</a></div>
+               
            </div>
            <br>
             <div class="box">
