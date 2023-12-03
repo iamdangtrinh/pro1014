@@ -38,7 +38,6 @@ function add_to_cart($MaHD, $SoLuongSP, $MaSP)
     );
 }
 
-
 // Cập nhật số lượng giỏ hàng
  // Cập nhật số lượng sản phẩm trong giỏ hàng
  function update_quantity_by_cart($SoLuongSP, $MaSP) {
@@ -103,6 +102,18 @@ function update_total_cart($total, $MaHD) {
 
 function get_total($MaHD) {
     return pdo_query_one("SELECT TongTien, MaHD FROM `hoadon` WHERE MaHD = $MaHD");
+}
+
+// function update_quantity_by_checkout($MaHD,$SoLuongSP,$MaSP) {
+//     return pdo_execute("UPDATE sanpham sp
+//     INNER JOIN chitiethoadon cthd ON sp.MaSP = cthd.MaSP
+//     SET sp.SoLuong = sp.SoLuong - $SoLuongSP
+//     WHERE cthd.MaHD = $MaHD AND cthd.MaSP = $MaSP");
+// }
+function update_quantity_by_checkout($MaHD,$SoLuongSP,$MaSP) {
+    return pdo_execute("UPDATE sanpham 
+    SET SoLuong = SoLuong - $SoLuongSP
+    WHERE MaSP = $MaSP");
 }
 
 ?>

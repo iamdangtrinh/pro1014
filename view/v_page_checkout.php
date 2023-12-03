@@ -140,8 +140,11 @@
                 <form action="<?= $base_url ?>product/update_status_cart" method="post">
 
                     <?php 
-                    foreach($show_cart_for_user as $value) : extract($value) 
+                    foreach($show_cart_for_user  as $key => $value) : extract($value) 
                     ?>
+                    <input type="text" name="MaSP<?=$key?>" value="<?= $MaSP?>" id="">
+                    <input type="text" name="SoLuongSP<?=$key?>" value="<?=$SoLuongSP?>" id="">
+                    <?php endforeach ?>
 
                     <input type="hidden" value="<?= $_SESSION['MaHD'] ?>" name="MaHD">
                     <input type="submit" name="btn_update_status_cart" class="rounded btn text-white"

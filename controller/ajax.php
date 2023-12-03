@@ -35,7 +35,6 @@ switch($_GET['act']) {
         if($SoLuongSP > $Quantity['SoLuong']) {
             echo '
             <div id="toast">
-            <!-- success -->
             <div class="toast toast--error">
                 <div class="toast__icon">
                     <i class="fa fa-check-circle"></i>
@@ -54,7 +53,6 @@ switch($_GET['act']) {
         } else {
             echo '
             <div id="toast">
-            <!-- success -->
             <div class="toast toast--success">
                 <div class="toast__icon">
                     <i class="fa fa-check-circle"></i>
