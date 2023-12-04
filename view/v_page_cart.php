@@ -204,7 +204,7 @@
 
         });
 
-        // Mã giảm giá
+        // ---------------- Mã giảm giá -------------------------------
         $('#coupon').on('submit', function (e) {
             e.preventDefault();
             
