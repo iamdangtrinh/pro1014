@@ -183,7 +183,6 @@
             if (newQuantity == null && newQuantity == isNaN && newQuantity == undefined) {
                 newQuantity = "1";
             } else {
-
                 if (newQuantity < 1) {
                     newQuantity = "1";
                 }
