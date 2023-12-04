@@ -131,3 +131,58 @@ unset($_SESSION['loi']); ?>
     </div>
     <button type="submit" name="submit" class="btn btn-primary" value="submit">Xác nhận</button>
 </form>
+<script>
+        $().ready(function(){
+            $("#form_addUser").validate({
+                
+                rules:{
+                    HoTen: {
+                        required: true,
+                    },
+                    Email: {
+                        required: true,
+                        email: true,
+                    },
+                    SoDienThoai: {
+                        required: true,
+                        minlength: 10,
+                        maxlength: 10,
+                    },
+                    MatKhau: {
+                        required: true,
+                        minlength: 8
+                    },
+                    DiaChi: {
+                        required: true,
+                        minlength: 10,
+                    }
+                },
+                messages: {
+                    HoTen: {
+                        required: "*Vui lòng nhập họ tên",
+                    },
+                    Email: {
+                        required: "*Vui lòng nhập địa chỉ Email",
+                        email: "*Email không đúng định dạng",
+                    },
+                    SoDienThoai: {
+                        required: "*Vui lòng nhập số điện thoại",
+                        minlength: "*Số điện thoại tối thiểu 10 số",
+                        maxlength: "*Số điện thoại tối đa 10 số",
+                    },
+                    MatKhau: {
+                        required: "*Vui lòng nhập mật khẩu",
+                        minlength: "*Mật khẩu ít nhất 8 kí tự"
+                    },
+                    DiaChi: {
+                        required: "*Vui lòng nhập địa chỉ",
+                        minlength: "*Địa chỉ ít nhất 10 kí tự",
+                    }
+                }
+            })
+
+        })
+            
+        
+
+    </script>

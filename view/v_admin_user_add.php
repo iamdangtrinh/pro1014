@@ -72,6 +72,11 @@
         border-radius: 5px;
         color: #842029;
     }
+    .error{
+        color: red;
+        font-weight: bold;
+        font-size: 14px;
+    }
 </style>
 <h2 class="mt-2">THÊM TÀI KHOẢN</h2><br>
 <?php if (isset($_SESSION['thongbao'])) : ?>
@@ -87,7 +92,7 @@ unset($_SESSION['thongbao']); ?>
 <?php endif;
 unset($_SESSION['loi']); ?>
 
-<form action="" method="POST">
+<form action="" method="POST" id="form_addUser">
     <div class="mb-3">
         <label for="MaDM" class="form-label">Họ và tên</label>
         <input type="text" class="form-control" id="HoTen" name="HoTen" value="">
@@ -119,3 +124,58 @@ unset($_SESSION['loi']); ?>
     </div>
     <button type="submit" name="submit" class="btn btn-primary" value="submit">Xác nhận</button>
 </form>
+    <script>
+        $().ready(function(){
+            $("#form_addUser").validate({
+                
+                rules:{
+                    HoTen: {
+                        required: true,
+                    },
+                    Email: {
+                        required: true,
+                        email: true,
+                    },
+                    SoDienThoai: {
+                        required: true,
+                        minlength: 10,
+                        maxlength: 10,
+                    },
+                    MatKhau: {
+                        required: true,
+                        minlength: 8
+                    },
+                    DiaChi: {
+                        required: true,
+                        minlength: 10,
+                    }
+                },
+                messages: {
+                    HoTen: {
+                        required: "*Vui lòng nhập họ tên",
+                    },
+                    Email: {
+                        required: "*Vui lòng nhập địa chỉ Email",
+                        email: "*Email không đúng định dạng",
+                    },
+                    SoDienThoai: {
+                        required: "*Vui lòng nhập số điện thoại",
+                        minlength: "*Số điện thoại tối thiểu 10 số",
+                        maxlength: "*Số điện thoại tối đa 10 số",
+                    },
+                    MatKhau: {
+                        required: "*Vui lòng nhập mật khẩu",
+                        minlength: "*Mật khẩu ít nhất 8 kí tự"
+                    },
+                    DiaChi: {
+                        required: "*Vui lòng nhập địa chỉ",
+                        minlength: "*Địa chỉ ít nhất 10 kí tự",
+                    }
+                }
+            })
+
+        })
+            
+        
+
+    </script>
