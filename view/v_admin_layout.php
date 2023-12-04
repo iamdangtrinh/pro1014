@@ -100,21 +100,25 @@
             <div class="sidebar">
                 <a href="<?= $base_url ?>admin/dashboard" class="list_group-item <?= (strpos($view_name, 'dashboard')) ? 'active' : '' ?>">
                     <span class="material-icons-sharp">
-                        dashboard
+                    <i class="fa-brands fa-microsoft"></i>
                     </span>
                     <h3>Tổng quan</h3>
                 </a>
                 <a href="<?= $base_url ?>admin/user" class="list_group-item <?= (strpos($view_name, 'user')) ? 'active' : '' ?>">
                     <span class="material-icons-sharp">
-                        person_outline
+                    <i class="fa-regular fa-user"></i>
                     </span>
                     <h3>Tài khoản</h3>
                 </a>
                 <a href="<?= $base_url ?>admin/category" class="list_group-item <?= (strpos($view_name, 'category')) ? 'active' : '' ?>">
                     <span class="material-icons-sharp">
-                        inventory
+                    <i class="fa-solid fa-list"></i>
                     </span>
                     <h3>Danh mục</h3>
+                </a>
+                <a href="<?= $base_url ?>admin/banner" class="list_group-item <?= (strpos($view_name, 'banner')) ? 'active' : '' ?>">
+                    <span class="material-icons-sharp"><i class="fa-solid fa-image"></i></span>
+                    <h3>Banner</h3>
                 </a>
                 <a href="<?= $base_url ?>admin/product" class="list_group-item <?= (strpos($view_name, 'product')) ? 'active' : '' ?>">
                     <span class="material-icons-sharp">
@@ -124,23 +128,24 @@
                 </a>
                 <a href="<?= $base_url ?>admin/binhluan" class="list_group-item <?= (strpos($view_name, 'binhluan')) ? 'active' : '' ?>">
                     <span class="material-icons-sharp">
-                        inventory
+                    <i class="fa-regular fa-comment-dots"></i>
                     </span>
                     <h3>Bình luận</h3>
                 </a>
                 <a href="<?= $base_url ?>admin/donhang" class="list_group-item <?= (strpos($view_name, 'donhang')) ? 'active' : '' ?>">
                     <span class="material-icons-sharp">
-                        receipt_long
+                    <i class="fa-solid fa-cart-shopping"></i>
                     </span>
                     <h3>Đơn hàng</h3>
                 </a>
                 <a href="<?= $base_url ?>admin/khuyenmai" class="list_group-item <?= (strpos($view_name, 'khuyenmai')) ? 'active' : '' ?>">
                     <span class="material-icons-sharp">
-                        mail_outline
+                    <i class="fa-solid fa-ticket"></i>
                     </span>
                     <h3>Khuyến mãi</h3>
                     <span class="message-count">27</span>
                 </a>
+
                 <a href="#">
                     <span class="material-icons-sharp">
                         logout

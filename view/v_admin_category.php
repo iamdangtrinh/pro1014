@@ -158,5 +158,6 @@ td{
                 </table>
 
             </div>
+            <br>
             <!-- End of Recent Orders -->
           
