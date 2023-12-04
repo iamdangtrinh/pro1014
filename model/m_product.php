@@ -101,4 +101,7 @@
     function ratings_trungbinh($MaSP){
         return pdo_query_one("SELECT SUM(SoSao) as SoSao, COUNT(bl.MaSP) as SoBinhLuan FROM sanpham sp INNER JOIN binhluan bl ON sp.MaSP=bl.MaSP WHERE bl.MaSP=?;",$MaSP);
     }
+    function product_tangView($MaSP){
+        pdo_execute("UPDATE sanpham SET LuotXem=LuotXem+1 WHERE MaSP=? ",$MaSP);
+    }
 ?>

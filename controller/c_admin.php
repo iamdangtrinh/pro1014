@@ -135,6 +135,15 @@ if(isset($_GET['act'])) {
                 }
                 header('location: '.$base_url.'admin/product');
                 break;
+            case 'banner':
+                include_once 'model/m_pdo.php';
+                include_once 'model/m_admin.php';
+ 
+                
+                $view_name = 'admin_banner';
+                $title ="Trang quản lí banner";
+                break;
+            
                     
             case 'user':
                 //lay du lieu
@@ -142,6 +151,7 @@ if(isset($_GET['act'])) {
                 $dsTK = user_getAll();
                 // hien thi du lieu
                 $view_name = 'admin_user';
+                $title ="Trang quản lí tài khoản";
                 break;
             case 'book':
                 //lay du lieu
@@ -179,6 +189,7 @@ if(isset($_GET['act'])) {
                 // hien thi du lieu
                 $show_KM = getallkm();
                 $view_name = 'admin_khuyenmai';
+                $title ="Trang quản lí khuyến mãi";
                 break;
             case 'edit-khuyenmai':
                 include_once 'model/m_pdo.php';
@@ -292,6 +303,7 @@ if(isset($_GET['act'])) {
                 include_once 'model/m_user.php';
                 $show_bl = show_comment();
                 $view_name = 'admin_binhluan';
+                $title ="Trang quản lí bình luận";
                 break;
             case 'chitiet-binhluan':
                 //lay du lieu
@@ -311,6 +323,7 @@ if(isset($_GET['act'])) {
                 include_once 'model/m_user.php';
                 $show_HD = admin_donhang();
                 $view_name = 'admin_donhang';
+                $title ="Trang quản lí đơn hàng";
                 break;
             case 'sua-donhang':
                 //lay du lieu
@@ -327,9 +340,9 @@ if(isset($_GET['act'])) {
                         $SuaHD = suaTT($TrangThai, $MaHD);
                 
                         if ($SuaHD !== false) {
-                            echo "<div id='Thongbao' class='success'>Cập nhật trạng thái đơn hàng thành công</div>";
+                           $_SESSION['Thongbao']['Thanhcong'] = "<div id='Thongbao' class='success'>Cập nhật trạng thái đơn hàng thành công</div>";
                             } else {
-                                echo "<div id='Thongbao' class='error'>Cập nhật không thành công.</div>";
+                                $_SESSION['Thongbao']['Thatbai'] ="<div id='Thongbao' class='error'>Cập nhật không thành công.</div>";
                             }
                     } else {
                         echo "Mã Hóa đơn bruh bruh.";
