@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
     <link rel="stylesheet" href="<?= $base_url ?>assets/style.css">
+    <script src="<?=$base_url?>assets/js/jquery.min.js"></script>
     <title><?= $title?></title>
     <!-- linh cdn fontawesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
@@ -263,6 +264,7 @@
                 document.querySelector('table tbody').appendChild(tr);
             });
         </script>
+        <script src="<?=$base_url?>assets/js/validate.js"></script>
 </body>
 
 </html>

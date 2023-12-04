@@ -34,6 +34,7 @@ switch($_GET['act']) {
 
         if($SoLuongSP > $Quantity['SoLuong']) {
             // lưu session vào là disiable true
+            echo '<input type="text" value="'.$Quantity['SoLuong'].'">';
             echo '
             <div class="toast toast--error">
                 <div class="toast__icon">
@@ -41,7 +42,7 @@ switch($_GET['act']) {
                 </div>
                 <div class="toast__body">
                     <h3 class="toast__title">Thất bại</h3>
-                    <p class="toast__msg">Cập nhật số lượng thất bại</p>
+                    <p class="toast__msg">Rất tiếc, bạn chỉ có thể mua tối đa '.$Quantity['SoLuong'].' sản phẩm.</p>
                 </div>
     
                 <div class="toast__close">

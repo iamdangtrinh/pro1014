@@ -218,3 +218,7 @@ td {
     <div><a href="<?=$base_url?>admin/" class="remove" style="font-weight: 600;">Xóa hết</a></div>
 </div> -->
 <!-- End of Recent Orders -->
+
+<script>
+    
+</script>
