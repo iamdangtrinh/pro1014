@@ -135,6 +135,15 @@ if(isset($_GET['act'])) {
                 }
                 header('location: '.$base_url.'admin/product');
                 break;
+            case 'banner':
+                include_once 'model/m_pdo.php';
+                include_once 'model/m_admin.php';
+ 
+                
+                $view_name = 'admin_banner';
+                $title ="Trang quản lí banner";
+                break;
+            
                     
             case 'user':
                 //lay du lieu
