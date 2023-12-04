@@ -327,9 +327,9 @@ if(isset($_GET['act'])) {
                         $SuaHD = suaTT($TrangThai, $MaHD);
                 
                         if ($SuaHD !== false) {
-                            echo "<div id='Thongbao' class='success'>Cập nhật trạng thái đơn hàng thành công</div>";
+                           $_SESSION['Thongbao']['Thanhcong'] = "<div id='Thongbao' class='success'>Cập nhật trạng thái đơn hàng thành công</div>";
                             } else {
-                                echo "<div id='Thongbao' class='error'>Cập nhật không thành công.</div>";
+                                $_SESSION['Thongbao']['Thatbai'] ="<div id='Thongbao' class='error'>Cập nhật không thành công.</div>";
                             }
                     } else {
                         echo "Mã Hóa đơn bruh bruh.";
