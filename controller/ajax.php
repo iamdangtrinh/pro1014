@@ -34,7 +34,6 @@ switch($_GET['act']) {
 
         if($SoLuongSP > $Quantity['SoLuong']) {
             // lưu session vào là disiable true
-            echo '<input type="text" value="'.$Quantity['SoLuong'].'">';
             echo '
             <div class="toast toast--error">
                 <div class="toast__icon">

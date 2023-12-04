@@ -46,6 +46,8 @@
                                 </td>
                                 <td class="" style="width: 100px">
                                     <p data-quantity="<?= $MaSP ?>"></p>
+                                    <p data-quantity_product_warehouse="<?= $SoLuong ?>"></p>
+                                    <p data-quantity_product="<?= $SoLuongSP ?>"></p>
                                     <div class="product-single-qty">
                                         <!-- Giảm số lương -->
                                         <!-- <span class="fa fa-minus minusJS"></span> -->
@@ -55,8 +57,7 @@
                                         <input type="hidden" class="price_product" value="<?= $Gia ?>">
                                         <input type="text" name="quantity" value="<?= $SoLuongSP ?>"
                                             class="quantity_product">
-                                        <input type="text" value="<?= $SoLuong ?>" name="SoLuongKho"
-                                            class="quantity_product_warehouse">
+
                                         <!-- tăng số lượng -->
                                         <!-- <span class="fa fa-plus plusJS"></span> -->
                                         <button type="button" class="plusJS">
@@ -156,6 +157,7 @@
         }
         updateTotal()
 
+
         $('.minusJS').click(function () {
             var product_box = this.closest('.product-single-qty');
             var quantity_input = product_box.querySelector('.quantity_product');
@@ -170,27 +172,32 @@
             var product_box = this.closest('.product-single-qty');
             var quantity_input = product_box.querySelector('.quantity_product');
             var currentQuantity = parseInt(quantity_input.value);
-
             quantity_input.value = currentQuantity + 1;
             $(quantity_input).trigger('change');
         });
 
-        $('input[name="quantity"]').on('change', function (e) {
-            e.preventDefault();
+        $('input[name="quantity"]').on('change', function update_quantity() {
+            // e.preventDefault();
             var newQuantity = $(this).val();
             newQuantity = newQuantity.replace(/[^0-9]/g, "");
             if (newQuantity == null && newQuantity == isNaN && newQuantity == undefined) {
                 newQuantity = "1";
             } else {
+
                 if (newQuantity < 1) {
                     newQuantity = "1";
                 }
-                $(this).val(newQuantity);
+                var closestProductRow = this.closest('.product-row');
+                var quantity_product_warehouse = closestProductRow.querySelector('[data-quantity_product_warehouse]').dataset.quantity_product_warehouse;
+                if (newQuantity >= quantity_product_warehouse) {
+                    var btn_plus = closestProductRow.querySelector('.plusJS');
+                    $(this).val(quantity_product_warehouse);
+                } else {
+                    $(this).val(newQuantity);
+                }
             }
 
             updateTotal()
-
-            var closestProductRow = this.closest('.product-row');
             var MaSP = closestProductRow.querySelector('[data-quantity]').dataset.quantity;
 
             $.ajax({
