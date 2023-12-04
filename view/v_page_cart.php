@@ -53,11 +53,10 @@
                                             <i class="fa fa-minus"></i>
                                         </button>
                                         <input type="hidden" class="price_product" value="<?= $Gia ?>">
-                                        <input type="text" name="quantity" value="<?= $SoLuongSP ?>"
-                                            class="quantity_product">
+                                        <input type="text" name="quantity" value="<?= $SoLuongSP ?>" class="quantity_product">
                                             <!-- tăng số lượng -->
                                         <!-- <span class="fa fa-plus plusJS"></span> -->
-                                        <button type="button" class="plusJS">
+                                        <button type="button" <?= ($SoLuongSP >= $SoLuong ) ? 'disabled' : '' ?> class="plusJS">
                                             <i class="fa fa-plus"></i>
                                         </button>
                                     </div>
@@ -158,19 +157,19 @@
             var product_box = this.closest('.product-single-qty');
             var quantity_input = product_box.querySelector('.quantity_product');
             var currentQuantity = parseInt(quantity_input.value);
+            // $('.minusJS').attr("disabled", false);
             if (currentQuantity > 1) {
                 quantity_input.value = currentQuantity - 1;
                 $(quantity_input).trigger('change');
-                $('.minusJS').attr("disabled", true);
             }
         });
-
+        
         $('.plusJS').click(function () {
             var product_box = this.closest('.product-single-qty');
             var quantity_input = product_box.querySelector('.quantity_product');
             var currentQuantity = parseInt(quantity_input.value);
             quantity_input.value = currentQuantity + 1;
-            $('.plusJS').attr("disabled", true);
+            // $('.plusJS').attr("disabled", false);
             $(quantity_input).trigger('change');
         });
 
@@ -190,7 +189,6 @@
 
             var closestProductRow = this.closest('.product-row');
             var MaSP = closestProductRow.querySelector('[data-quantity]').dataset.quantity;
-
             
             $.ajax({
                 type: "POST",
@@ -201,10 +199,7 @@
                 },
                 success: function (data) {
                     $('#toast').html(data)
-                    $('.plusJS').attr("disabled", false);
-                    $('.minusJS').attr("disabled", false);
                 }
-                
             });
 
         });
@@ -217,9 +212,6 @@
 
         $('#coupon').on('submit', function () {
             var data = $(this).serialize();
-            
-            
-
             $.ajax({
                 type: "POST",
                 url: "<?= $base_url ?>controller/ajax.php?act=ajax_cart_coupon",

@@ -33,6 +33,7 @@ switch($_GET['act']) {
         $Quantity = quantity_cart_max($MaSP);
 
         if($SoLuongSP > $Quantity['SoLuong']) {
+            // lưu session vào là disiable true
             echo '
             <div class="toast toast--error">
                 <div class="toast__icon">
@@ -49,6 +50,7 @@ switch($_GET['act']) {
             </div>
             ';
         } else {
+            // lưu session vào là disiable flase
             echo '
             <div class="toast toast--success">
                 <div class="toast__icon">
