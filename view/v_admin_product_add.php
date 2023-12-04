@@ -187,10 +187,6 @@ select {
                         </div>
                     <div  class="col-md-8">
                                 <div class="mb-3">
-                                    <label for="MaSP" class="form-label">Mã sản phẩm</label>
-                                    <input style="height:42.8px;" type="text" class="form-control" id="MaSP" name="MaSP" value="">
-                                </div>
-                                <div class="mb-3">
                                     <label for="TenSP" class="form-label">Tên sản phẩm</label>
                                     <input style="height:42.8px;" type="text" class="form-control" id="TenSP" name="TenSP" value="">
                                 </div>

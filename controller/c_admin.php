@@ -81,7 +81,7 @@ if(isset($_GET['act'])) {
                 include_once 'model/m_admin.php';
                 if(isset($_POST['submit'])){
                     // Nhận dữ liệu từ form
-                    $MaSP = $_POST['MaSP']; 
+                    $MaSP =''; 
                     $TenSP = $_POST['TenSP']; 
                     $_FILES['anh'];
                     $_FILES['anh1'];
@@ -113,7 +113,7 @@ if(isset($_GET['act'])) {
                         if($check_MaSP){ //  bị trùng không thêm báo lỗi
                             $_SESSION['loi'] = 'Không thể thêm vì mã <strong>'.$MaSP.'</strong> đã tồn tại! ';
                         }else{// Sai , ko trùng , thêm tài khoản
-                            admin_AddProduct($MaSP, $TenSP, $_FILES["anh"]["name"], $_FILES["anh1"]["name"], $_FILES["anh2"]["name"], $_FILES["anh3"]["name"], $_FILES["anh4"]["name"], $SoLuong, $Gia, $GiaGiam, $MaDM, $MoTa);
+                            admin_AddProduct($TenSP, $_FILES["anh"]["name"], $_FILES["anh1"]["name"], $_FILES["anh2"]["name"], $_FILES["anh3"]["name"], $_FILES["anh4"]["name"], $SoLuong, $Gia, $GiaGiam, $MaDM, $MoTa);
                             $_SESSION['thongbao'] = 'Đã thêm sản phẩm thành công!';
                         }
                     
@@ -127,19 +127,16 @@ if(isset($_GET['act'])) {
                 include_once 'model/m_admin.php';
                 $MaSP=$_GET['id'];
                 admin_Product_Delete($MaSP);
-                $anh = admin_Product_timxoahinh($MaSP);
-                foreach($anh as $hinh) {
-                    if(file_exists($hinh)){
-                        unlink($hinh);
+                $anh = admin_Product_timxoaAnhSP($MaSP);
+                    if (file_exists($anh)) {
+                        unlink($anh);
                     }
-                }
                 header('location: '.$base_url.'admin/product');
                 break;
             case 'banner':
                 include_once 'model/m_pdo.php';
                 include_once 'model/m_admin.php';
- 
-                
+                $showbanner = admin_ShowBanner();
                 $view_name = 'admin_banner';
                 $title ="Trang quản lí banner";
                 break;

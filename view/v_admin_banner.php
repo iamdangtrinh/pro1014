@@ -176,20 +176,10 @@ td{
                         </tr>
                     </thead>
                     <tbody>
-                      
-                            <tr>
-                            <td>1</td>
-                            <td><img src="<?=$base_url?>upload/banners/banner-fashion-1.jpg" width="100" height="300" style="display: block; object-fit: contain;" alt=""></td>
-                            <td>
-                                <div class="lenh">
-                                    <div class="sua" ><a href="<?=$base_url?>admin/" style="font-weight: 600; ">Sửa</a></div>
-                                    <div class="xoa"><a href="<?=$base_url?>admin/banner/delete/"  style="font-weight: 600; ">Xóa</a></div>
-                                </div>
-                            </td>
-                        </tr>
+                      <?php foreach ($showbanner as $item_banner) :?>
                         <tr>
-                            <td>1</td>
-                            <td><img src="<?=$base_url?>upload/banners/banner-fashion-1.jpg" width="100" height="300" style="display: block; object-fit: contain;" alt=""></td>
+                            <td><?=$item_banner['MaBanner']?></td>
+                            <td><img src="<?=$base_url?>upload/<?=$item_banner['AnhBanner']?>" width="100" height="300" style="display: block; object-fit: contain;" alt=""></td>
                             <td>
                                 <div class="lenh">
                                     <div class="sua" ><a href="<?=$base_url?>admin/" style="font-weight: 600; ">Sửa</a></div>
@@ -197,16 +187,7 @@ td{
                                 </div>
                             </td>
                         </tr>
-                        <tr>
-                            <td>1</td>
-                            <td><img src="<?=$base_url?>upload/banners/banner-fashion-1.jpg" width="100" height="300" style="display: block; object-fit: contain;" alt=""></td>
-                            <td>
-                                <div class="lenh">
-                                    <div class="sua" ><a href="<?=$base_url?>admin/" style="font-weight: 600; ">Sửa</a></div>
-                                    <div class="xoa"><a href="<?=$base_url?>admin/banner/delete/"  style="font-weight: 600; ">Xóa</a></div>
-                                </div>
-                            </td>
-                        </tr>
+                        <?php endforeach ;?>
               
                     </tbody>
                     </tbody>
