@@ -161,12 +161,12 @@ label.error {
   max-width: 450px;
   border-left: 4px solid;
   box-shadow: 0 5px 8px rgba(0, 0, 0, 0.08);
-  animation: sideInleft ease 0.3s, fadeOut linear 1s 2s forwards;
+  animation: sideInleft ease 0.3s, fadeOut linear 1s 2s;
 }
 
 @keyframes sideInleft {
   from {
-    opacity: 0;
+    /* opacity: 0; */
     transform: translateX(calc(100% + 32px));
   }
 
@@ -178,7 +178,7 @@ label.error {
 
 @keyframes fadeOut {
   to {
-    opacity: 0;
+    transform: translateX(-100%);
   }
 }
 
