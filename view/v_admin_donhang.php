@@ -162,11 +162,30 @@ td {
     font-weight: bold;
     color: red;
 }
+#Thongbao {
+    border-radius: 4px;
+    padding: 20px;
+    color: white; 
+    opacity: 1;
+    transition: opacity 0.6s; 
+    margin-bottom: 15px; 
+    background-color: #4CAF50;
+    font-size: 15px;
+    font-weight: 600;
+}
 </style>
 <h1>Quản lí đơn hàng</h1>
 <!-- Recent Orders Table -->
 <div class="box">
-
+    <?php if (isset($_SESSION['Thongbao']['Thanhcong'])) {
+        echo $_SESSION['Thongbao']['Thanhcong'];
+        unset($_SESSION['ThongBao']['Thanhcong']);
+    }
+    if (isset($_SESSION['Thongbao']['Thatbai'])) {
+        echo $_SESSION['Thongbao']['Thatbai'];
+        unset($_SESSION['ThongBao']['Thatbai']);
+    }
+    ?>
     <table>
         <thead>
             <tr>

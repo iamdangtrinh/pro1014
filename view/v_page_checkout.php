@@ -142,8 +142,8 @@
                     <?php 
                     foreach($show_cart_for_user  as $key => $value) : extract($value) 
                     ?>
-                    <input type="text" name="MaSP<?=$key?>" value="<?= $MaSP?>" id="">
-                    <input type="text" name="SoLuongSP<?=$key?>" value="<?=$SoLuongSP?>" id="">
+                    <input type="hidden" name="MaSP<?=$key?>" value="<?= $MaSP?>" id="">
+                    <input type="hidden" name="SoLuongSP<?=$key?>" value="<?=$SoLuongSP?>" id="">
                     <?php endforeach ?>
 
                     <input type="hidden" value="<?= $_SESSION['MaHD'] ?>" name="MaHD">

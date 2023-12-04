@@ -33,8 +33,8 @@ switch($_GET['act']) {
         $Quantity = quantity_cart_max($MaSP);
 
         if($SoLuongSP > $Quantity['SoLuong']) {
+            // lưu session vào là disiable true
             echo '
-            <div id="toast">
             <div class="toast toast--error">
                 <div class="toast__icon">
                     <i class="fa fa-check-circle"></i>
@@ -48,11 +48,10 @@ switch($_GET['act']) {
                     <i class="fa fa-times"></i>
                 </div>
             </div>
-        </div>
             ';
         } else {
+            // lưu session vào là disiable flase
             echo '
-            <div id="toast">
             <div class="toast toast--success">
                 <div class="toast__icon">
                     <i class="fa fa-check-circle"></i>
@@ -66,7 +65,6 @@ switch($_GET['act']) {
                     <i class="fa fa-times"></i>
                 </div>
             </div>
-        </div>
             ';
             update_quantity_by_cart($SoLuongSP, $MaSP);
         }
@@ -88,7 +86,6 @@ switch($_GET['act']) {
                 // Nếu mã đó có tồn tại thì
                 if($has_coupon) {
                     // Kiểm tra mã đó còn hạn dùng hay không
-                    date_default_timezone_set('Asia/Ho_Chi_Minh');
                     $counpon_date = $has_coupon['NgayKetThuc'];
                     // biến ngày giờ thành số giây
                     $counpon_date_timestamp = strtotime($counpon_date);
@@ -99,6 +96,21 @@ switch($_GET['act']) {
                         if($has_coupon['SoLuong'] > 0) {
                             echo '<input type="hidden" class="coupon_value" value="'.$has_coupon['GiaKM'].'">';
                             echo "Đơn hàng của bạn được giảm ".$has_coupon['GiaKM'];
+            //                 echo '
+            // <div class="toast toast--success">
+            //     <div class="toast__icon">
+            //         <i class="fa fa-check-circle"></i>
+            //     </div>
+            //     <div class="toast__body">
+            //         <h3 class="toast__title">Thành công</h3>
+            //         <p class="toast__msg">Cập nhật số lượng thành công</p>
+            //     </div>
+    
+            //     <div class="toast__close">
+            //         <i class="fa fa-times"></i>
+            //     </div>
+            // </div>
+            //                 ';
                         } else {
                             echo "Mã giảm giá đã hết";
                         }

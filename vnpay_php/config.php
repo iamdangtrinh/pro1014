@@ -5,8 +5,8 @@ date_default_timezone_set('Asia/Ho_Chi_Minh');
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-$vnp_TmnCode = "ENE9GRHJ"; //Mã định danh merchant kết nối (Terminal Id)
-$vnp_HashSecret = "HVVQIDBZLLKEAELHWBIOESTIGAQRCUVI"; //Secret key
+$vnp_TmnCode = "DNMZPSJT"; //Mã định danh merchant kết nối (Terminal Id)
+$vnp_HashSecret = "ENJPNVOQVJRRXEEZIHPMHJTXHDTMLEIZ"; //Secret key
 $vnp_Url = "https://sandbox.vnpayment.vn/paymentv2/vpcpay.html";
 $vnp_Returnurl = "http://localhost/pro1041/vnpay_php/vnpay_return.php";
 $vnp_apiUrl = "http://sandbox.vnpayment.vn/merchant_webapi/merchant.html";

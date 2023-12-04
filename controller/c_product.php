@@ -4,6 +4,7 @@ if(isset($_GET['act'])) {
         case 'detail':
             //lay du lieu
             include_once 'model/m_product.php';
+            product_tangView($_GET['id']);
             $product_detail = product_detail($_GET['id']);
             if(!$product_detail){
                 header('location: '.$base_url.'404.php');

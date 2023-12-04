@@ -6447,16 +6447,17 @@ figure .porto-loading-icon {
     border: 1px solid #ccc;
 }
 
-.product-single-qty span {
+.product-single-qty button {
     padding: 4px;
     font-size: 16px;
     cursor: pointer;
+    border: none;
 }
 
-.product-single-qty span:first-child {
+.product-single-qty button:first-child {
     border-right: 1px solid #ccc;
 }
-.product-single-qty span:last-child {
+.product-single-qty button:last-child {
     border-left: 1px solid #ccc;
 }
 
