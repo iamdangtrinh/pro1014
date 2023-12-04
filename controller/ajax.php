@@ -133,6 +133,12 @@ switch($_GET['act']) {
         $MaSP = $_POST['MaSP'];
         add_to_wishlist($MaTK, $MaSP);
         break;
+    
+        case 'admin_khuyenmai': 
+            echo "đến admin khuyến mãi";
+            // xử lí bằng các hàm function
+            
+        break;
 
     default:
         break;

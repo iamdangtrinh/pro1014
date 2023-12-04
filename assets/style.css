@@ -48,6 +48,10 @@ html{
     font-size: 14px;
 }
 
+.error {
+    color: #FF0060;
+}
+
 body{
     width: 100vw;
     height: 100vh;

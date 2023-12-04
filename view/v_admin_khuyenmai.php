@@ -155,7 +155,7 @@ td {
 <h1>Quản lí Khuyến mãi</h1><br>
 <!-- Recent Orders Table -->
 <h2>Thêm mã khuyến mãi</h2>
-<form class="form" action="<?=$base_url?>admin/khuyenmai" method="post">
+<form class="form" id="form_coupon" action="<?=$base_url?>admin/khuyenmai" method="post">
     <input type="text" class="form-control" name="TenKM" placeholder="Tên khuyến mãi">
     <input type="text" class="form-control" name="khuyenMai" placeholder="CodeKM">
     <input type="text" class="form-control" name="soTienGiam" placeholder="Số tiền giảm">
@@ -220,5 +220,29 @@ td {
 <!-- End of Recent Orders -->
 
 <script>
-    
+    $(document).ready(function() {
+        $('#form_coupon').validate({
+            rules: {
+                TenKM: {
+                    required: true,
+                    remote: "<?= $base_url ?>controller/ajax.php?act=admin_khuyenmai"
+                },
+                khuyenMai: {
+                    required: true
+                }
+            },
+            messages: {
+                TenKM: {
+                    required: "Vui lòng nhập tên khuyễn mãi",
+
+                },
+                khuyenMai: {
+                    required: "Vui lòng nhập mã khuyến mãi"
+                }
+            },
+            submitHandler:function(form) {
+                console.log(form);
+            }
+        })
+    })
 </script>
