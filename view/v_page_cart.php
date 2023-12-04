@@ -200,7 +200,6 @@
                     MaSP: MaSP,
                 },
                 success: function (data) {
-                    // hiển thị modal dialog tại đây
                     $('#toast').html(data)
                     $('.plusJS').attr("disabled", false);
                     $('.minusJS').attr("disabled", false);
