@@ -17,7 +17,7 @@ switch($_GET['act']) {
             foreach($show_search as $value):
                 extract($value);
                 echo '<a href="login" class="col-md-4 img-focus">
-                    <img src="http://localhost/pro1041/upload/demoes/demo23/products/'.$AnhSP.'"
+                    <img src="http://localhost/pro1041/upload/products/'.$AnhSP.'"
                         width="50" height="50" alt="'.$TenSP.'">
                 </a>
                 <div class="col-md-8 mt-2 content-focus">'.$TenSP.' </div>';
