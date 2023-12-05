@@ -45,11 +45,15 @@ form {
 .btn:hover {
     background-color: #ffd5dd;
 }
-
+.error{
+    color: red;
+    font-weight: bold;
+    font-size: 14px;
+    }
 </style>
 <h2 class="mt-2">SỬA DANH MỤC</h2><br>
         
-        <form action="" method="POST">
+        <form action="" method="POST" id="form_editCategory">
             <div class="mb-3">
                 <label for="TenDM" class="form-label">Tên danh mục</label>
                 <input  type="text" class="form-control" id="TenDM" name="TenDM" value="<?= $itemDM['TenDM']?>">  
@@ -73,3 +77,32 @@ form {
             </div> -->
             <button type="submit" name="submit" class="btn btn-primary" value="submit">Xác nhận</button>
         </form>
+        <script>
+                $("#MaDMC").on("keyup", function () {
+                    var value = $(this).val();
+                    value = value.replace(/[^0-9]/g, ""); // Loại bỏ các ký tự không phải số
+                    $(this).val(value);
+                    
+                });
+            
+                $(document).ready(function(){
+                    $("#form_editCategory").validate({
+                        rules:{
+                            TenDM:{
+                                required: true, 
+                            },
+                            MaDMC:{
+                                required: true, 
+                            },
+                        },
+                        messages:{
+                            TenDM:{
+                                required: "*Vui lòng nhập tên danh mục", 
+                            },
+                            MaDMC:{
+                                required: "*Vui lòng nhập mã danh mục con", 
+                            },
+                        }
+                    })
+                }) 
+            </script>

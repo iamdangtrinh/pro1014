@@ -83,7 +83,11 @@ form {
 .closebtn:hover {
     color: black;
 }
-
+    .error{
+        color: red;
+        font-weight: bold;
+        font-size: 14px;
+    }
 </style>
 <h2 class="mt-2">THÊM DANH MỤC</h2><br>
         <?php if(isset($_SESSION['thongbao'])): ?>
@@ -97,9 +101,9 @@ form {
                 <?=$_SESSION['loi']?>
             </div> 
         <?php endif; unset($_SESSION['loi']); ?>
-        <form action="" method="POST">
+        <form action="" method="POST" id="form_addCategory">
             <div class="mb-3">
-                <label for="MaDM"   class="form-label"    >Mã danh mục</label>
+                <label for="MaDM"   class="form-label">Mã danh mục</label>
                 <input  type="text" class="form-control" id="MaDM" name="MaDM" value="">
             </div>
             <div class="mb-3">
@@ -124,3 +128,43 @@ form {
             </div> -->
             <button type="submit" name="submit" class="btn btn-primary" value="submit">Xác nhận</button>
         </form>
+            <script>
+                function numericInputHandler(inputId) {
+                $(inputId).on("keyup", function () {
+                    var value = $(this).val();
+                    value = value.replace(/[^0-9]/g, ""); // Loại bỏ các ký tự không phải số
+                    $(this).val(value);
+                });
+            }
+
+            numericInputHandler("#MaDM");
+            numericInputHandler("#MaDMC");
+
+            
+                $(document).ready(function(){
+                    $("#form_addCategory").validate({
+                        rules:{
+                            MaDM:{
+                                required: true,                
+                            },
+                            TenDM:{
+                                required: true, 
+                            },
+                            MaDMC:{
+                                required: true, 
+                            },
+                        },
+                        messages:{
+                            MaDM:{
+                                required: "*Vui lòng nhập mã danh mục",                
+                            },
+                            TenDM:{
+                                required: "*Vui lòng nhập tên danh mục", 
+                            },
+                            MaDMC:{
+                                required: "*Vui lòng nhập mã danh mục con", 
+                            },
+                        }
+                    })
+                }) 
+            </script>

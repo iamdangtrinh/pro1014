@@ -137,6 +137,11 @@ select {
 .closebtn:hover {
     color: black;
 }
+.error{
+        color: red;
+        font-weight: bold;
+        font-size: 14px;
+    }
 </style>
             <?php if(isset($_SESSION['thongbao'])): ?>
                 <div class="success" >
@@ -153,7 +158,7 @@ select {
         <div class="box_content">
             <h1>Thêm sản phẩm</h1>
             <div class="box">
-                <form action="<?=$base_url?>admin/product/add" method="POST" enctype="multipart/form-data">
+                <form action="<?=$base_url?>admin/product/add" id="form_addProduct" method="POST" enctype="multipart/form-data">
                     <div class="roww">
                     <div class="col-md-4">
                             <div class="mb-3">
@@ -192,7 +197,7 @@ select {
                                 </div>
                                 <div class="mb-3">
                                     <label for="SoLuong" class="form-label">Số lượng</label>
-                                    <input style="height:42.8px;" type="text" class="form-control" id="SoLuong" name="SoLuong" value="">  
+                                    <input style="height:42.8px;" type="text" class="form-control" id="SoLuong" name="SoLuong" value="" >  
                                 </div>
                                 <div class="mb-3">
                                     <label for="Gia" class="form-label">Giá</label>
@@ -213,4 +218,68 @@ select {
                 </form>
             
         </div>
-        </div>
+</div>
+
+<script>
+    function numericInputHandler(inputId) {
+    $(inputId).on("keyup", function () {
+        var value = $(this).val();
+        value = value.replace(/[^0-9]/g, ""); // Loại bỏ các ký tự không phải số
+        $(this).val(value);
+    });
+}
+
+numericInputHandler("#SoLuong");
+numericInputHandler("#Gia");
+numericInputHandler("#GGiaGiam");
+
+    $(document).ready(function(){
+        $("#form_addProduct").validate({
+            rules: {
+                anh: {
+                    required: true,
+                },
+                TenSP: {
+                    required: true,
+                    minlength: 8,
+                },
+                SoLuong: {
+                    required: true,
+                },
+                Gia: {
+                    required: true,
+
+                },
+                GiaGiam: {
+                    required: true,
+                },
+                MoTa:{
+                    required: true,
+                    minlength: 50,
+                }
+            },
+            messages:{
+                anh: {
+                    required :"*Vui lòng chọn ảnh chính của sản phẩm"
+                },
+                TenSP: {
+                    required: "*Vui lòng nhập tên sản phẩm",
+                    minlength: "*Tên sản phẩm ít nhất 6 kí tự",
+                },
+                SoLuong: {
+                    required :"*Vui lòng nhập số lượng sản phẩm"
+                },
+                Gia: {
+                    required :"*Vui nhập giá của sản phẩm"
+                },
+                GiaGiam: {
+                    required :"*Vui lòng nhập giá giảm của sản phẩm(Số 0 nếu không có giá được giảm)"
+                },
+                MoTa:{
+                    required: "Vui lòng nhập mô tả sản phẩm",
+                    minlength: "Mô tả ít nhất 20 kí tự",
+                }
+            }
+        }) 
+    })
+</script>
