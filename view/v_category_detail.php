@@ -181,19 +181,22 @@
                             <!-- End .col-lg-3 -->
                         </div><!-- End .row -->
 
-                        <nav class="toolbox toolbox-pagination">
-                            <ul class="pagination toolbox-item">
-                                <li class="page-item disabled">
-                                    <a class="page-link page-link-btn" href="#"><i class="icon-angle-left"></i></a>
+                        <nav aria-label="...">
+                            <ul class="pagination justify-content-center">
+                                <li class="page-item <?=($page<=1)?'disabled': '' ?>">
+                                <a class="page-link" href="<?=$base_url?>category/detail/<?=$dsdm['MaDM'];?>/<?=$page-1?>" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                </a>
                                 </li>
-                                <?php for($i=1; $i<=$sotrang; $i++): ?>
-                                <li class="page-item">
-                                    <a class="page-link" href="<?= $base_url ?>category/detail/<?=$i?>"><?=$i?></a>
+                                <?php for($i=1;$i<=$sotrang;$i++): ?>
+                                <li class="page-item <?=($page==$i)?'active': '' ?>" >
+                                    <a class="page-link" href="<?=$base_url?>category/detail/<?=$dsdm['MaDM'];?>/<?=$i?>"><?=$i?></a>
                                 </li>
-                                <?php endfor;?>
-                                <li class="page-item"><span class="page-link">...</span></li>
-                                <li class="page-item">
-                                    <a class="page-link page-link-btn" href="#"><i class="icon-angle-right"></i></a>
+                                <?php endfor ?>
+                                <li class="page-item <?=($page>=$sotrang)?'disabled': '' ?>">
+                                <a class="page-link" href="<?=$base_url?>category/detail/<?=$dsdm['MaDM'];?>/<?=$page+1?>" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                </a>
                                 </li>
                             </ul>
                         </nav>
