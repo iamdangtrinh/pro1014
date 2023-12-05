@@ -11,6 +11,7 @@ if(isset($_GET['act'])) {
                 $tkUser = user_countAll();
                 $hoaDonMoi = admin_getHoaDon();
                 $tkSpTheoDanhMuc = danhmuc_TkSanPham();
+                $allCate=category_getALLDM();
                 include_once 'model/m_cart.php';
                 $tkDoanhThu = history_stat();
                 $tkTongDoanhThu = doanhthu_countAll();
