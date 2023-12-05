@@ -7,7 +7,7 @@
         return pdo_query("SELECT * FROM taikhoan ORDER BY MaTK DESC LIMIT 4");
     }
     function admin_getHoaDon(){
-        return pdo_query("SELECT * FROM hoadon ORDER BY MaTK DESC LIMIT 4");
+        return pdo_query("SELECT * FROM hoadon WHERE TrangThai!='gio-hang' ORDER BY MaHD ASC LIMIT 4");
     }
     function admin_getById($MaDM){
         return pdo_query_one("SELECT * FROM  danhmuc WHERE MaDM=$MaDM");

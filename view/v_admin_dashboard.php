@@ -87,6 +87,7 @@
             <table class="table">
                 <thead>
                     <tr>
+                        <th>Danh mục</th>
                         <th>Loại sản phẩm</th>
                         <th>Số lượng sản phẩm</th>
                         <th>Giá trung bình</th>
@@ -97,11 +98,19 @@
                 <tbody>
                     <?php foreach ($tkSpTheoDanhMuc as $dm) : ?>
                         <tr>
+                            <td>
+                            <?php 
+                                foreach ($allCate as $value) {
+                                    if($value['MaDM']==$dm['MaDMC']){
+                                        echo $value['TenDM'];
+                                    }
+                                }
+                            ?></td>
                             <td><?= $dm['TenDM'] ?></td>
                             <td><?= $dm['SoLuong'] ?></td>
-                            <td><?= number_format($dm['TrungBinh'], 0, ",", ".") ?>đ</td>
-                            <td><?= number_format($dm['ThapNhat'], 0, ",", ".") ?>đ</td>
-                            <td><?= number_format($dm['CaoNhat'], 0, ",", ".") ?>đ</td>
+                            <td><?=(!$dm['TrungBinh'])?"0" :number_format($dm['TrungBinh'], 0, ",", ".") ?>đ</td>
+                            <td><?=(!$dm['ThapNhat'])?"0" :number_format($dm['ThapNhat'], 0, ",", ".") ?>đ</td>
+                            <td><?=(!$dm['CaoNhat'])?"0" :number_format($dm['CaoNhat'], 0, ",", ".") ?>đ</td>
                         </tr>
                     <?php endforeach; ?>
                 </tbody>

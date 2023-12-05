@@ -20,7 +20,7 @@
         <h2 class="p-2">Danh sách yêu thích trên cửa hàng</h2>
     </div>
     <div class="wishlist-table-container">
-        <table class="table table-wishlist mb-0">
+        <table class="table table-wishlist mb-0" style="vertical-align: middle;">
             <thead>
                 <tr>
                     <th class="thumbnail-col text-center">Ảnh sản phẩm</th>
@@ -34,7 +34,7 @@
                 <tr class="product-row">
                     <?php foreach ($wishlist as $product) : ?>
                     <td>
-                        <figure class="product-image-container">
+                        <figure class="product-image-container m-auto">
                             <a href="<?= $base_url ?>product/detail/<?= $product['MaSP'] ?>" class="product-image">
                                 <img src="<?= $base_url ?>upload/products/<?= $product['AnhSP'] ?>"
                                     alt="product">
@@ -50,21 +50,21 @@
                         </h5>
                     </td>
                     <?php if(!$product['GiaGiam']): ?>
-                    <td class="price-box"><?= number_format($product['Gia'], 0, ",", ".") ?>VND</td>
+                    <td class="price-box text-center"><?= number_format($product['Gia'], 0, ",", ".") ?>VND</td>
                         <?php else: ?>
-                            <td class="price-box text-danger">
+                            <td class="price-box text-danger text-center">
                              <del class="text-dark"><p><?= number_format($product['Gia'], 0, ",", ".") ?>VND</p></del>   
                                 <p><?= number_format($product['GiaGiam'], 0, ",", ".") ?>VND</p></td>
                             
                             <?php endif; ?>
-                    <td>
+                    <td class="text-center">
                         <?php if($product['SoLuong'] > 0): ?>
                             <span class="stock-status">Trong kho</span>
                             <?php else: ?>
                                 <span class="stock-status">Đã hết</span>
                                 <?php endif;?>
                     </td>
-                    <td class="action">
+                    <td class="action text-center">
                         <a href="<?=$base_url?>product/detail/<?=$product['MaSP']?>"
                             title="Xem sản phẩm">Xem chi tiết sản phẩm</a>
                     </td>

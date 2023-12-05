@@ -2,8 +2,6 @@
     if(isset($_GET['act'])){
         switch($_GET['act']){
             case 'detail':
-                $limit = 12;
-                $start = 0;
                 // lay du liệu
                 if (isset($_GET['id'])) {
                     $MaDM = $_GET['id'];
@@ -13,22 +11,23 @@
                         header('location: '.$base_url.'404.php');
                     }else{
                         if($tenDM['MaDMC']==0){
-                            $spDM=get_dmAnddmc($MaDM);
+                            $soluongSP =count_productsbydmanddmc($MaDM);
+                            $page = 1;
+                            if(isset($_GET['page'])) {
+                                $page = $_GET['page'];
+                            }
+                            $spDM = product_danhmucanddmc($MaDM, $page,12);
                         }else{
-                            $spDM=category_getbyDM($MaDM);
-                        }
-                        $soluongSP = count_productsbydm($MaDM);
-                        //////////////////////////////////////////////////////
-                        $sotrang = ceil($soluongSP / $limit);
-                        if (isset($_GET['page'])) {
-                            // Xác định trang hiện tại
-                            $trang_hien_tai = isset($_GET['page']) ? intval($_GET['page']) : 1;
-                            // Tính toán vị trí bắt đầu của sản phẩm trên trang hiện tại
-                            $start = ($trang_hien_tai - 1) * $limit;
-                            // Lấy dữ liệu sản phẩm từ cơ sở dữ liệu
+                            $soluongSP = count_productsbydm($MaDM);
+                            $page = 1;
+                            if(isset($_GET['page'])) {
+                                $page = $_GET['page'];
+                            }
+                            $spDM = product_danhmuc($MaDM, $page,12);
                         }
                         $dsdm = get_id($_GET['id']);
                         //hien thi du lieu
+                        $sotrang = ceil($soluongSP / 12);
                         $view_name='category_detail';
                         // Tiếp tục xử lý
                         // ...
