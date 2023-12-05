@@ -1,14 +1,14 @@
             <div class="page-header page-header-bg text-left" style="background: 50%/cover #D4E1EA url('<?= $base_url ?>upload/page-header-bg.jpg');">
             	<div class="container">
             		<h2>VỀ CỬA HÀNG</h2>
-            		<a href="contact.html" class="btn btn-dark">Liên hệ</a>
+            		<a href="<?= $base_url ?>page/contact" class="btn btn-dark">Liên hệ</a>
             	</div>
             </div>
 
             <nav aria-label="breadcrumb" class="breadcrumb-nav">
             	<div class="container">
             		<ol class="breadcrumb">
-            			<li class="breadcrumb-item"><a href="demo4.html"><i class="icon-home"></i></a></li>
+            			<li class="breadcrumb-item"><a href="<?= $base_url ?>page/home"><i class="fa-solid fa-house"></i></a></li>
             			<li class="breadcrumb-item active" aria-current="page">Về chúng tôi</li>
             		</ol>
             	</div>
@@ -89,7 +89,7 @@
             			<div class="testimonial">
             				<div class="testimonial-owner">
             					<figure>
-            						<img src="<?= $base_url ?>upload/clients/client1.png" alt="client">
+            						<img src="<?= $base_url ?>upload/avatar/avatar_TRINH.png" alt="client">
             					</figure>
 
             					<div>
@@ -106,7 +106,7 @@
             			<div class="testimonial">
             				<div class="testimonial-owner">
             					<figure>
-            						<img src="<?= $base_url ?>upload/clients/client2.png" alt="client">
+            						<img src="<?= $base_url ?>upload/avatar/avatar_NHI.jpg" alt="client">
             					</figure>
 
             					<div>
@@ -123,18 +123,17 @@
             			<div class="testimonial">
             				<div class="testimonial-owner">
             					<figure>
-            						<img src="<?= $base_url ?>upload/clients/client1.png" alt="client">
+            						<img src="<?= $base_url ?>upload/avatar/avatar_NAM.png" alt="client">
             					</figure>
 
             					<div>
-            						<strong class="testimonial-title">John Smith</strong>
-            						<span>SMARTWAVE CEO</span>
+            						<strong class="testimonial-title">Nguyễn Lê Phương</strong>
+            						<span>GVHD</span>
             					</div>
             				</div>
 
             				<blockquote>
-            					<p>Lorem ipsum dolor sit amet, consectetur elitad adipiscing Cras non placerat mipsum
-            						dolor sit amet, consectetur elitad adipiscing cas non placerat mi.</p>
+            					<p>Tại <strong><i>Cửa hàng bé yêu</i></strong>, chúng tôi không chỉ bán quần áo, chúng tôi cung cấp một trải nghiệm mua sắm đáng nhớ. Chúng tôi luôn lắng nghe ý kiến của khách hàng và luôn sẵn sàng cải thiện sản phẩm và dịch vụ của mình.</p>
             				</blockquote>
             			</div>
             		</div>

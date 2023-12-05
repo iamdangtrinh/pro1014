@@ -57,7 +57,7 @@
                             <i class="fas fa-bars"></i>
                         </button>
                         <a href="<?= $base_url ?>page/home" class="logo">
-                            <img src="<?= $base_url ?>upload/demoes/demo23/logo.png" alt="Porto Logo" width="113"
+                            <img src="<?= $base_url ?>upload/logo.png" alt="Porto Logo" width="113"
                                 height="48">
                         </a>
                     </div>
@@ -286,7 +286,7 @@
                     <div class="row">
                         <div class="col-lg-6 col-xl-4">
                             <a href="#">
-                                <img class="logo mb-3" src="<?= $base_url ?>upload/demoes/demo23/logo.png"
+                                <img class="logo mb-3" src="<?= $base_url ?>upload/logo.png"
                                     alt="SHop bé yêu" width="113" height="48"></a>
 
                             <div class="row">
@@ -394,7 +394,7 @@
                     </div>
 
                     <div class="footer-right ml-auto mt-1 mt-sm-0">
-                        <img src="<?= $base_url ?>upload/demoes/demo23/payment-icon.png" alt="payment">
+                        <img src="<?= $base_url ?>upload/payment-icon.png" alt="payment">
                     </div>
                 </div>
             </div>

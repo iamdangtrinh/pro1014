@@ -506,11 +506,11 @@
                         }
                     }
                 }">
-            <img src="<?= $base_url ?>upload/demoes/demo23/brands/brand1.png" width="200" height="50" alt="brand">
-            <img src="<?= $base_url ?>upload/demoes/demo23/brands/brand2.png" width="200" height="50" alt="brand">
-            <img src="<?= $base_url ?>upload/demoes/demo23/brands/brand3.png" width="200" height="50" alt="brand">
-            <img src="<?= $base_url ?>upload/demoes/demo23/brands/brand4.png" width="200" height="50" alt="brand">
-            <img src="<?= $base_url ?>upload/demoes/demo23/brands/brand5.png" width="200" height="50" alt="brand">
+            <img src="<?= $base_url ?>upload/brands/brand1.png" width="200" height="50" alt="brand">
+            <img src="<?= $base_url ?>upload/brands/brand2.png" width="200" height="50" alt="brand">
+            <img src="<?= $base_url ?>upload/brands/brand3.png" width="200" height="50" alt="brand">
+            <img src="<?= $base_url ?>upload/brands/brand4.png" width="200" height="50" alt="brand">
+            <img src="<?= $base_url ?>upload/brands/brand5.png" width="200" height="50" alt="brand">
         </div><!-- End .brands-slider -->
     </div>
 </div>

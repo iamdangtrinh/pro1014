@@ -8,7 +8,7 @@
                                 <h3 class="ls-n-25 line-height-1 text-uppercase mb-0 ml-0">Lên đến 70%</h3>
                             </div>
                             <div class="col-md-4 text-center">
-                                <img src="<?=$base_url?>upload/demoes/demo23/banners/category-banner.png" alt="banner"
+                                <img src="<?=$base_url?>upload/banners/category-banner.png" alt="banner"
                                     width="267" height="241">
                             </div>
                             <div class="col-md-4 text-center text-md-left">

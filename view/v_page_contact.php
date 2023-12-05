@@ -2,10 +2,10 @@
                 <div class="container">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item">
-                            <a href="demo4.html"><i class="icon-home"></i></a>
+                            <a href="<?= $base_url ?>page/home"><i class="fa-solid fa-house"></i></a>
                         </li>
                         <li class="breadcrumb-item active" aria-current="page">
-                            Contact Us
+                            Liên Hệ
                         </li>
                     </ol>
                 </div>
