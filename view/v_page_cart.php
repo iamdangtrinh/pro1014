@@ -188,7 +188,7 @@
                 }
                 var closestProductRow = this.closest('.product-row');
                 var quantity_product_warehouse = closestProductRow.querySelector('[data-quantity_product_warehouse]').dataset.quantity_product_warehouse;
-                if (newQuantity >= quantity_product_warehouse) {
+                if (parseInt(newQuantity) >= quantity_product_warehouse) {
                    // var btn_plus = closestProductRow.querySelector('.plusJS');
                     $(this).val(quantity_product_warehouse);
                 } else {
