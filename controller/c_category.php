@@ -2,7 +2,6 @@
     if(isset($_GET['act'])){
         switch($_GET['act']){
             case 'detail':
-                $limit = 12;
                 // lay du liệu
                 if (isset($_GET['id'])) {
                     $MaDM = $_GET['id'];
@@ -17,14 +16,14 @@
                             if(isset($_GET['page'])) {
                                 $page = $_GET['page'];
                             }
-                            $spDM = product_danhmucanddmc($MaDM, $page=1,$limit);
+                            $spDM = product_danhmucanddmc($MaDM, $page,12);
                         }else{
                             $soluongSP = count_productsbydm($MaDM);
                             $page = 1;
                             if(isset($_GET['page'])) {
                                 $page = $_GET['page'];
                             }
-                            $spDM = product_danhmuc($MaDM, $page=1,$limit);
+                            $spDM = product_danhmuc($MaDM, $page,12);
                         }
                         $dsdm = get_id($_GET['id']);
                         //hien thi du lieu

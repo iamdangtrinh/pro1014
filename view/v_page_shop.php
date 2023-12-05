@@ -243,7 +243,7 @@
                             <div class="widget">
                                 <h3 class="widget-title">
                                     <a data-toggle="collapse" href="#widget-body-1" role="button" aria-expanded="true"
-                                        aria-controls="widget-body-1">Thể loại</a>
+                                        aria-controls="widget-body-1">Danh mục</a>
                                 </h3>
 
                                 <div class="collapse show" id="widget-body-1">
@@ -301,85 +301,7 @@
                                 </div><!-- End .collapse -->
                             </div><!-- End .widget -->
 
-                            <div class="widget">
-                                <h3 class="widget-title">
-                                    <a data-toggle="collapse" href="#widget-body-2" role="button" aria-expanded="true"
-                                        aria-controls="widget-body-2">Giá</a>
-                                </h3>
-
-                                <div class="collapse show" id="widget-body-2">
-                                    <div class="widget-body pt-4 pb-0">
-                                        <form action="#">
-                                            <div class="price-slider-wrapper">
-                                                <div id="price-slider"></div><!-- End #price-slider -->
-                                            </div><!-- End .price-slider-wrapper -->
-
-                                            <div
-                                                class="filter-price-action d-flex align-items-center justify-content-between flex-wrap">
-                                                <div class="filter-price-text">
-                                                    Giá:
-                                                    <span id="filter-price-range"></span>
-                                                </div><!-- End .filter-price-text -->
-
-                                                <button type="submit" class="btn btn-primary">Bộ lọc</button>
-                                            </div><!-- End .filter-price-action -->
-                                        </form>
-                                    </div><!-- End .widget-body -->
-                                </div><!-- End .collapse -->
-                            </div><!-- End .widget -->
-
-                            <div class="widget widget-color">
-                                <h3 class="widget-title">
-                                    <a data-toggle="collapse" href="#widget-body-3" role="button" aria-expanded="true"
-                                        aria-controls="widget-body-3">Màu sắc</a>
-                                </h3>
-
-                                <div class="collapse show" id="widget-body-3">
-                                    <div class="widget-body pb-0">
-                                        <ul class="config-swatch-list">
-                                            <li class="active">
-                                                <a href="#" style="background-color: #000;">Màu Đen</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" style="background-color: #0188cc;">Màu xanh dương</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" style="background-color: #81d742;">Màu xanh lá</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" style="background-color: #eded65;">Màu vàng</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" style="background-color: #6085a5;">Màu xanh đậm</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" style="background-color: #83c2bd;">Màu xanh nhạt</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" style="background-color: #ab6e6e;">Màu đỏ</a>
-                                            </li>
-                                        </ul>
-                                    </div><!-- End .widget-body -->
-                                </div><!-- End .collapse -->
-                            </div><!-- End .widget -->
-
-                            <div class="widget">
-                                <h3 class="widget-title">
-                                    <a data-toggle="collapse" href="#widget-body-4" role="button" aria-expanded="true"
-                                        aria-controls="widget-body-4">Kích cỡ</a>
-                                </h3>
-
-                                <div class="collapse show" id="widget-body-4">
-                                    <div class="widget-body">
-                                        <ul class="cat-list">
-                                            <li><a href="#">XL</a></li>
-                                            <li><a href="#">L</a></li>
-                                            <li><a href="#">M</a></li>
-                                            <li><a href="#">S</a></li>
-                                        </ul>
-                                    </div><!-- End .widget-body -->
-                                </div><!-- End .collapse -->
-                            </div><!-- End .widget -->
+                            
 
                             <div class="widget widget-featured pb-0">
                                 <h3 class="widget-title">Sản phẩm nổi bật</h3>
@@ -408,29 +330,6 @@
                                                 </div><!-- End .product-container -->
                                                 <div class="price-box">
                                                     <span class="product-price">101.000đ &ndash; 111.000đ</span>
-                                                </div><!-- End .price-box -->
-                                            </div><!-- End .product-details -->
-                                        </div>
-                                        <div class="product-default left-details product-widget">
-                                            <figure>
-                                                <a href="<?=$base_url?>product/detail/<?=$product['MaSP']?>">
-                                                    <img src="<?=$base_url?>upload/products/small/product-2.jpg"
-                                                        width="75" height="75" alt="product" />
-                                                </a>
-                                            </figure>
-                                            <div class="product-details">
-                                                <h3 class="product-title">
-                                                    <a href="<?=$base_url?>product/detail/<?=$product['MaSP']?>">Máy ảnh mở rộng Porto</a>
-                                                </h3>
-                                                <div class="ratings-container">
-                                                    <div class="product-ratings">
-                                                        <span class="ratings" style="width:0%"></span>
-                                                        <!-- End .ratings -->
-                                                        <span class="tooltiptext tooltip-top"></span>
-                                                    </div><!-- End .product-ratings -->
-                                                </div><!-- End .product-container -->
-                                                <div class="price-box">
-                                                    <span class="product-price">599.000đ</span>
                                                 </div><!-- End .price-box -->
                                             </div><!-- End .product-details -->
                                         </div>

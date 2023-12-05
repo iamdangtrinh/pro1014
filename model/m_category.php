@@ -34,7 +34,7 @@
         WHERE dm.MaDMC = 0
         GROUP BY dm.MaDM, dm.TenDM;");
     }
-    function product_danhmucanddmc($MaDM, $page=1,$limit){
+    function product_danhmucanddmc($MaDM, $page,$limit){
         $batdau= ($page-1)*$limit;
         // 1 trang lay 8
 
@@ -48,7 +48,7 @@
         
         return pdo_query("SELECT * FROM sanpham sp INNER JOIN danhmuc dm ON sp.MaDM = dm.MaDM WHERE dm.MaDM = ? || dm.MaDMC = ? LIMIT $batdau,$limit",$MaDM,$MaDM);
     }
-    function product_danhmuc($MaDM, $page=1,$limit){
+    function product_danhmuc($MaDM, $page,$limit){
         $batdau= ($page-1)*$limit;
         // 1 trang lay 8
 
