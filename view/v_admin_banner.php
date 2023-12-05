@@ -55,15 +55,9 @@ th, td {
 
 }
 
-table tr:nth-child(odd) td{
-            background-color:#ffeff296;
-        }
-        table tr:nth-child(even) td{
-            background-color:#ffeff296;
-        }
-        table tr:nth-child(1) td{
-            background-color:#ffff;
-        }
+tr td{
+    background-color:#ffeff296;
+}
 .lenh{
         display: flex;
         text-align: center;
@@ -189,7 +183,7 @@ table tr:nth-child(odd) td{
                             <td><img src="<?=$base_url?>upload/banners/<?=$item_banner['AnhBanner']?>" width="100" height="300" style="display: block; object-fit: contain;" alt=""></td>
                             <td>
                                 <div class="lenh">
-                                    <div class="sua" ><a href="<?=$base_url?>admin/" style="font-weight: 600; ">Sửa</a></div>
+                                    <div class="sua" ><a href="<?=$base_url?>admin/banner/edit/<?=$item_banner['MaBanner']?>" style="font-weight: 600; ">Sửa</a></div>
                                     <div class="xoa"><a href="<?=$base_url?>admin/banner/delete/"  style="font-weight: 600; ">Xóa</a></div>
                                 </div>
                             </td>
