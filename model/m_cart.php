@@ -60,6 +60,10 @@ function has_coupon_code($coupon_code) {
     return pdo_query_one("SELECT * FROM khuyenmai WHERE CodeKM = ?", $coupon_code);
 }
 
+function update_quantity_coupon($couponcode) {
+    return pdo_execute("UPDATE khuyenmai SET SoLuong = SoLuong - '1' WHERE CodeKM = ?", $couponcode);
+}
+
 // đếm số lượng sản phẩm
 function count_cart($MaHD) {
     return pdo_query_value("SELECT COUNT(hd.MaHD) FROM chitiethoadon cthd LEFT JOIN hoadon hd ON hd.MaHD= cthd.MaHD WHERE MaTK = ? AND hd.TrangThai = 'gio-hang'", $MaHD);
@@ -104,12 +108,6 @@ function get_total($MaHD) {
     return pdo_query_one("SELECT TongTien, MaHD FROM `hoadon` WHERE MaHD = $MaHD");
 }
 
-// function update_quantity_by_checkout($MaHD,$SoLuongSP,$MaSP) {
-//     return pdo_execute("UPDATE sanpham sp
-//     INNER JOIN chitiethoadon cthd ON sp.MaSP = cthd.MaSP
-//     SET sp.SoLuong = sp.SoLuong - $SoLuongSP
-//     WHERE cthd.MaHD = $MaHD AND cthd.MaSP = $MaSP");
-// }
 function update_quantity_by_checkout($MaHD,$SoLuongSP,$MaSP) {
     return pdo_execute("UPDATE sanpham 
     SET SoLuong = SoLuong - $SoLuongSP

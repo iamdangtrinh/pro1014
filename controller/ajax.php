@@ -94,30 +94,12 @@ switch($_GET['act']) {
                     } else {
                         // Kiểm tra mã đó còn số lượng dùng hay không
                         if($has_coupon['SoLuong'] > 0) {
+                            update_quantity_coupon($has_coupon['CodeKM']);
                             echo '<input type="hidden" class="coupon_value" value="'.$has_coupon['GiaKM'].'">';
                             echo "Đơn hàng của bạn được giảm ".$has_coupon['GiaKM'];
-            //                 echo '
-            // <div class="toast toast--success">
-            //     <div class="toast__icon">
-            //         <i class="fa fa-check-circle"></i>
-            //     </div>
-            //     <div class="toast__body">
-            //         <h3 class="toast__title">Thành công</h3>
-            //         <p class="toast__msg">Cập nhật số lượng thành công</p>
-            //     </div>
-    
-            //     <div class="toast__close">
-            //         <i class="fa fa-times"></i>
-            //     </div>
-            // </div>
-            //                 ';
                         } else {
                             echo "Mã giảm giá đã hết";
                         }
-                    }
-
-                    if(isset($has_coupon['GiaKM'])) {
-                        //    echo  json_decode($_SESSION['coupon']['susscess'] = $has_coupon['GiaKM']);
                     }
                 } else {
                     echo "error_coupon_false";
