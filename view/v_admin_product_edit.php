@@ -137,7 +137,19 @@ select {
 .closebtn:hover {
     color: black;
 }
+/* Show ảnh */
+.showanh{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.showanh div img{
+    padding: 10px;
+}
 </style>
+        <div class="box_content">
+            <h1>Thêm sản phẩm</h1>
+            <br>
             <?php if(isset($_SESSION['thongbao'])): ?>
                 <div class="success" >
                     <?=$_SESSION['thongbao']?>
@@ -149,62 +161,66 @@ select {
                     <?=$_SESSION['loi']?>
                 </div> 
             <?php endif; unset($_SESSION['loi']); ?>
-            <br>
-        <div class="box_content">
-            <h1>Thêm sản phẩm</h1>
             <div class="box">
-                <form action="<?=$base_url?>admin/product/add" method="POST" enctype="multipart/form-data">
+                <form action="" method="POST" enctype="multipart/form-data">
                     <div class="roww">
                     <div class="col-md-4">
                             <div class="mb-3">
                                 <label for="AnhSP" class="form-label">Ảnh chính</label>
-                                <input type="file"  name="anh" class="form-control" id="AnhSP" > 
+                               <div class="showanh">
+                                    <div><input type="file"  name="anh" class="form-control" id="AnhSP" ></div>
+                                    <div><img src="<?=$base_url?>upload/products/<?=$show_AnhSP['AnhSP']?>" width = "100" height = "100" alt=""></div>
+                               </div>
                             </div>
                             <div class="mb-3">
                                 <label for="AnhSP1" class="form-label">Ảnh Phụ 1</label>
-                                <input type="file"  name="anh1" class="form-control" id="AnhSP" > 
+                               <div class="showanh">
+                               <div><input type="file"  name="anh1" class="form-control" id="AnhSP1" ></div>
+                                    <div><img src="<?=$base_url?>upload/products/<?=$show_AnhSP['AnhSP1']?>" width = "100" height = "100" alt=""></div>
+                               </div>
                             </div>
                             <div class="mb-3">
-                                <label for="AnhSP2" class="form-label">Ảnh phụ 2</label>
-                                <input type="file"  name="anh2" class="form-control" id="AnhSP" > 
+                                <label for="AnhSP2" class="form-label">Ảnh Phụ 2</label>
+                               <div class="showanh">
+                                    <div><input type="file"  name="anh2" class="form-control" id="AnhSP2" ></div>
+                                    <div><img src="<?=$base_url?>upload/products/<?=$show_AnhSP['AnhSP2']?>" width = "100" height = "100" alt=""></div>
+                               </div>
                             </div>
                             <div class="mb-3">
-                                <label for="AnhSP3" class="form-label">Ảnh phụ 3</label>
-                                <input type="file"  name="anh3" class="form-control" id="AnhSP" > 
+                                <label for="AnhSP3" class="form-label">Ảnh Phụ 3</label>
+                               <div class="showanh">
+                                    <div><input type="file"  name="anh3" class="form-control" id="AnhSP3" ></div>
+                                    <div><img src="<?=$base_url?>upload/products/<?=$show_AnhSP['AnhSP3']?>" width = "100" height = "100" alt=""></div>
+                               </div>
                             </div>
                             <div class="mb-3">
-                                <label for="AnhSP4" class="form-label">Ảnh phụ 4</label>
-                                <input type="file"  name="anh4" class="form-control" id="AnhSP" > 
-                            </div>
-                            <div class="mb-3">
-                                <label for="MaDM" class="form-label">Danh mục: </label>
-                                <select id="MaDM" name="MaDM">
-                                    <?php foreach( $danhmuc as $getdanhmuc ) :?>
-                                    <option value="<?=$getdanhmuc['MaDM']?>"><?=$getdanhmuc['TenDM']?></option>
-                                    <?php endforeach ;?>
-                                </select>
+                                <label for="AnhSP4" class="form-label">Ảnh Phụ 4</label>
+                               <div class="showanh">
+                               <div><input type="file"  name="anh4" class="form-control" id="AnhSP4" ></div>
+                                    <div><img src="<?=$base_url?>upload/products/<?=$show_AnhSP['AnhSP4']?>" width = "100" height = "100" alt=""></div>
+                               </div>
                             </div>
                         </div>
                     <div  class="col-md-8">
-                                <div class="mb-3">
+                                <div class="mb-3" style="padding-bottom: 15px;">
                                     <label for="TenSP" class="form-label">Tên sản phẩm</label>
-                                    <input style="height:42.8px;" type="text" class="form-control" id="TenSP" name="TenSP" value="">
+                                    <input style="height:42.8px;" type="text" class="form-control" id="TenSP" name="TenSP" value="<?=$show_AnhSP['TenSP']?>">
                                 </div>
-                                <div class="mb-3">
+                                <div class="mb-3" style="padding-bottom: 15px;">
                                     <label for="SoLuong" class="form-label">Số lượng</label>
-                                    <input style="height:42.8px;" type="text" class="form-control" id="SoLuong" name="SoLuong" value="">  
+                                    <input style="height:42.8px;" type="text" class="form-control" id="SoLuong" name="SoLuong" value="<?=$show_AnhSP['SoLuong']?>">  
                                 </div>
-                                <div class="mb-3">
+                                <div class="mb-3" style="padding-bottom: 15px;">
                                     <label for="Gia" class="form-label">Giá</label>
-                                    <input style="height:42.8px;" type="text" class="form-control" id="Gia" name="Gia" value="">  
+                                    <input style="height:42.8px;" type="text" class="form-control" id="Gia" name="Gia" value="<?=$show_AnhSP['Gia']?>">  
                                 </div>
-                                <div class="mb-3">
+                                <div class="mb-3" style="padding-bottom: 15px;">
                                     <label for="GiaGiam" class="form-label">Giá giảm</label>
-                                    <input style="height:42.8px;" type="text" class="form-control" id="GiaGiam" name="GiaGiam" value="">  
+                                    <input style="height:42.8px;" type="text" class="form-control" id="GiaGiam" name="GiaGiam" value="<?=$show_AnhSP['GiaGiam']?>">  
                                 </div>
                                 <div class="mb-3">
                                     <label for="MoTa" class="form-label">Mô tả</label>
-                                    <textarea cols="100" rows="5" name="MoTa" id="MoTa"></textarea>
+                                    <textarea cols="100" rows="15" name="MoTa" id="MoTa" style="border: 1px solid pink; border-radius :5px"><?=$show_AnhSP['MoTa']?></textarea>
                             </div>
                         </div>
                        

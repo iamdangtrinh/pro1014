@@ -84,54 +84,74 @@ if(isset($_GET['act'])) {
                     // Nhận dữ liệu từ form
                     $MaSP =''; 
                     $TenSP = $_POST['TenSP']; 
-                    $_FILES['anh'];
-                    $_FILES['anh1'];
-                    $_FILES['anh2'];
-                    $_FILES['anh3'];
-                    $_FILES['anh4'];
                     $SoLuong = $_POST['SoLuong'];
                     $Gia = $_POST['Gia'];
                     $GiaGiam = $_POST['GiaGiam'];
                     $MaDM = $_POST['MaDM'];
                     $MoTa = $_POST['MoTa'];
-                        $target_dir="upload/products/";
-                        $target_file = $target_dir . basename($_FILES["anh"]["name"]);
-                        $target_file1 = $target_dir . basename($_FILES["anh1"]["name"]);
-                        $target_file2 = $target_dir . basename($_FILES["anh2"]["name"]);
-                        $target_file3 = $target_dir . basename($_FILES["anh3"]["name"]);
-                        $target_file4 = $target_dir . basename($_FILES["anh4"]["name"]);
-                        move_uploaded_file($_FILES["anh"]["tmp_name"],$target_file);
-                        move_uploaded_file($_FILES["anh1"]["tmp_name"],$target_file1);
-                        move_uploaded_file($_FILES["anh2"]["tmp_name"],$target_file2);
-                        move_uploaded_file($_FILES["anh3"]["tmp_name"],$target_file3);
-                        move_uploaded_file($_FILES["anh4"]["tmp_name"],$target_file4);
-                        $anh=$target_file;
-                        $anh1=$target_file1;
-                        $anh2=$target_file2;
-                        $anh3=$target_file3;
-                        $anh4=$target_file4;
-                        $check_MaSP = admin_checkMaSP($MaSP);
-                        if($check_MaSP){ //  bị trùng không thêm báo lỗi
-                            $_SESSION['loi'] = 'Không thể thêm vì mã <strong>'.$MaSP.'</strong> đã tồn tại! ';
-                        }else{// Sai , ko trùng , thêm tài khoản
-                            admin_AddProduct($TenSP, $_FILES["anh"]["name"], $_FILES["anh1"]["name"], $_FILES["anh2"]["name"], $_FILES["anh3"]["name"], $_FILES["anh4"]["name"], $SoLuong, $Gia, $GiaGiam, $MaDM, $MoTa);
-                            $_SESSION['thongbao'] = 'Đã thêm sản phẩm thành công!';
-                        }
-                    
+                    $target_dir="upload/products/";
+                    $fileAnh = array("anh", "anh1", "anh2", "anh3", "anh4");
+                    $upload = array();
+                    foreach ($fileAnh as $fileName) {
+                        $target_file = $target_dir . basename($_FILES[$fileName]["name"]);
+                        move_uploaded_file($_FILES[$fileName]["tmp_name"],$target_file);
+                        $upload[] = $_FILES[$fileName]["name"];
+                    }
+                    $check_MaSP = admin_checkMaSP($MaSP);
+                    if($check_MaSP){ //  bị trùng không thêm báo lỗi
+                        $_SESSION['loi'] = 'Không thể thêm vì mã <strong>'.$MaSP.'</strong> đã tồn tại! ';
+                    }else{// Sai , ko trùng , thêm tài khoản
+                        admin_AddProduct($TenSP,$_FILES["anh"]["name"], $_FILES["anh1"]["name"], $_FILES["anh2"]["name"], $_FILES["anh3"]["name"], $_FILES["anh4"]["name"], $SoLuong, $Gia, $GiaGiam, $MaDM, $MoTa);
+                        $_SESSION['thongbao'] = 'Đã thêm sản phẩm thành công!';
+                    }
                 }
-                    $danhmuc = admin_getALLDM();
-                    $view_name='admin_product_add';
+                $danhmuc = admin_getALLDM();
+                $view_name='admin_product_add';
+                $title ="Sản phẩm thêm";
+                break;
+            
+            case 'product-edit':
+                include_once 'model/m_pdo.php';
+                include_once 'model/m_admin.php';
+                    $MaSP = $_GET['id'];
+                    if(isset($_POST['submit'])){
+                        // Nhận dữ liệu từ form
+                        $TenSP = $_POST['TenSP']; 
+                        $_FILES['anh'];
+                        $_FILES['anh1'];
+                        $_FILES['anh2'];
+                        $_FILES['anh3'];
+                        $_FILES['anh4'];
+                        $SoLuong = $_POST['SoLuong'];
+                        $Gia = $_POST['Gia'];
+                        $GiaGiam = $_POST['GiaGiam'];
+                        $MoTa = $_POST['MoTa'];
+                        $target_dir="upload/products/";
+                        $fileAnh = array("anh", "anh1", "anh2", "anh3", "anh4");
+                        $upload = array();
+                        foreach ($fileAnh as $fileName) {
+                            $target_file = $target_dir . basename($_FILES[$fileName]["name"]);
+                            move_uploaded_file($_FILES[$fileName]["tmp_name"],$target_file);
+                            $upload[] = $_FILES[$fileName]["name"];
+                        }
+                           
+                            admin_UpdateProduct($MaSP, $TenSP, $_FILES["anh"]["name"], $_FILES["anh1"]["name"], $_FILES["anh2"]["name"], $_FILES["anh3"]["name"], $_FILES["anh4"]["name"], $SoLuong, $Gia, $GiaGiam, $MoTa);
+                    }
+                    $show_AnhSP = admin_getPById_Product($MaSP);
+
+
+                    $view_name='admin_product_edit';
                     $title ="Sản phẩm thêm";
                     break;
             case 'product-delete':
                 include_once 'model/m_pdo.php';
                 include_once 'model/m_admin.php';
                 $MaSP=$_GET['id'];
+                $anhsp = admin_Product_timxoaAnhSP($MaSP);
                 admin_Product_Delete($MaSP);
-                $anh = admin_Product_timxoaAnhSP($MaSP);
-                    if (file_exists($anh)) {
-                        unlink($anh);
-                    }
+                if(file_exists($anhsp)){
+                   unlink($anhsp);
+                }
                 header('location: '.$base_url.'admin/product');
                 break;
             case 'banner':
@@ -142,7 +162,28 @@ if(isset($_GET['act'])) {
                 $title ="Trang quản lí banner";
                 break;
             
-                    
+            case 'banner-add':
+                include_once 'model/m_pdo.php';
+                include_once 'model/m_admin.php';
+                if(isset($_POST['submit'])){
+                    $MaBanner =$_POST['MaBanner'];
+                    $_FILES['AnhBanner'];
+                    $target_dir="upload/banners/";
+                    $target_file = $target_dir . basename($_FILES["banner_anh"]["name"]);
+                    move_uploaded_file($_FILES['banner_anh']["tmp_name"],$target_file);
+                    $banner_anh=$target_file; 
+                    $check_MaBanner =  admin_checkMaBanner($MaBanner);
+                        if($check_MaBanner){ //  bị trùng không thêm báo lỗi
+                            $_SESSION['loi'] = 'Không thể thêm vì mã <strong>'.$MaSP.'</strong> đã tồn tại! ';
+                        }else{// Sai , ko trùng , thêm tài khoản
+                            admin_AddBanner($MaBanner,$_FILES['banner_anh']['name']);
+                            $_SESSION['thongbao'] = 'Đã thêm banner thành công!';
+                        }
+                }
+                $view_name = 'admin_banner_add';
+                $title ="Thêm banner";
+                break;
+                     
             case 'user':
                 //lay du lieu
                 include_once 'model/m_user.php';

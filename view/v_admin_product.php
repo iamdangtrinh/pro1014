@@ -192,7 +192,7 @@ td{
                             <td><?=number_format($item_Product['GiaGiam'],0,",",".")?>VND</td>
                             <td>
                                 <div class="lenh">
-                                    <div class="sua" ><a href="<?=$base_url?>admin/" style="font-weight: 600; ">Sửa</a></div>
+                                    <div class="sua" ><a href="<?=$base_url?>admin/product/edit/<?=$item_Product['MaSP']?>" style="font-weight: 600; ">Sửa</a></div>
                                     <div class="xoa"><a href="<?=$base_url?>admin/product/delete/<?=$item_Product['MaSP']?>"  style="font-weight: 600; ">Xóa</a></div>
                                 </div>
                             </td>

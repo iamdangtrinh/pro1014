@@ -35,7 +35,7 @@ table {
 }
 
 thead {
-    background-color: #ffff;
+    background-color: #ffeff296;
     color: black;
     font-size: 16px;
     border-radius: 10px;
@@ -54,9 +54,16 @@ th, td {
     border-bottom: 1px solid pink;
 
 }
-td{
-    background-color: #ffff;
-}
+
+table tr:nth-child(odd) td{
+            background-color:#ffeff296;
+        }
+        table tr:nth-child(even) td{
+            background-color:#ffeff296;
+        }
+        table tr:nth-child(1) td{
+            background-color:#ffff;
+        }
 .lenh{
         display: flex;
         text-align: center;
@@ -158,7 +165,7 @@ td{
 </style>
             <!-- Recent Orders Table -->
             <div class="box_content" >
-            <h1 id="bang_product">Quản lí sản phẩm</h1>
+            <h1 id="bang_product">Quản lí banner</h1>
             <br>
             <div class="box_button" >
                 <div><a href="<?=$base_url?>admin/banner/add" class="them" style="font-weight: 600;">Thêm mới</a></div>
@@ -167,7 +174,7 @@ td{
            <br>
             <div class="box">
                 <table>
-                <thead  >
+                <thead >
                         <tr>
                             <!-- <th class="chon">Chọn</th> -->
                             <th>Mã</th>
@@ -179,7 +186,7 @@ td{
                       <?php foreach ($showbanner as $item_banner) :?>
                         <tr>
                             <td><?=$item_banner['MaBanner']?></td>
-                            <td><img src="<?=$base_url?>upload/<?=$item_banner['AnhBanner']?>" width="100" height="300" style="display: block; object-fit: contain;" alt=""></td>
+                            <td><img src="<?=$base_url?>upload/banners/<?=$item_banner['AnhBanner']?>" width="100" height="300" style="display: block; object-fit: contain;" alt=""></td>
                             <td>
                                 <div class="lenh">
                                     <div class="sua" ><a href="<?=$base_url?>admin/" style="font-weight: 600; ">Sửa</a></div>
@@ -187,7 +194,9 @@ td{
                                 </div>
                             </td>
                         </tr>
+                        
                         <?php endforeach ;?>
+                        
               
                     </tbody>
                     </tbody>
