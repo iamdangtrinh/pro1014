@@ -161,11 +161,25 @@
         border-radius: 5px;
         color: #842029;
     }
+    .alert-success {
+        margin-bottom: 15px;
+        background-color: #cfe2ff;
+        border: 2px solid #b6d4fe;
+        width: 100%;
+        padding: 20px;
+        border-radius: 5px;
+        color: #084298;
+    }
     
 </style>
     <h1>Tài khoản</h1>
     <div class="add"><a href="<?= $base_url ?>admin/user/add" class="them" style="font-weight: 600;">Thêm mới</a></div>
-
+<?php if (isset($_SESSION['thongbao'])) : ?>
+    <div class="alert alert-success" role="alert">
+        <?= $_SESSION['thongbao'] ?>
+    </div>
+<?php endif;
+unset($_SESSION['thongbao']); ?>
 <?php if (isset($_SESSION['loi'])) : ?>
     <div class="alert alert-danger" role="alert">
         <?= $_SESSION['loi'] ?>

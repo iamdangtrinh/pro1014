@@ -324,19 +324,26 @@ if(isset($_GET['act'])) {
                 $view_name = 'admin_user_edit';
                 break;
             case 'user-delete':
-                //lay du lieu
-                include_once 'model/m_user.php';
-                // Kiểm tra xem người dùng có tự xóa chính mình hay không => nếu đúng => báo lỗi
-                if($_GET['id'] == $_SESSION['user']['MaTK']) {
-                    $_SESSION['loi'] = '<p>Không thể tự xóa tài khoản của bạn!</p>';
-                } else {
-                    user_delete($_GET['id']);
-                }
-
-                header('location: '.$base_url.'admin/user');
-                // hien thi du lieu
-                $view_name = 'admin_user_delete';
-                break;
+                    // Lấy dữ liệu
+                    include_once 'model/m_user.php';
+                    $vaiTroUser = user_getById($_GET['id']);
+                    // Kiểm tra xem người dùng có tự xóa chính mình hay không => nếu đúng => báo lỗi
+                    if ($_GET['id'] == $_SESSION['user']['MaTK']) {
+                        $_SESSION['loi'] = '<p>Không thể tự xóa tài khoản của bạn!</p>';
+                    }else if ($_SESSION['user']['VaiTro'] == $vaiTroUser['VaiTro']  )  {
+                        user_delete($_GET['id']);
+                    }else if ($_SESSION['user']['VaiTro'] < $vaiTroUser['VaiTro']  ){
+                        // Kiểm tra xem người dùng có quyền cao hơn hay không => nếu đúng => báo lỗi
+                        $_SESSION['loi'] = '<p>Bạn không thể xóa người có quyền cao hơn!</p>';
+                        
+                    }else{
+                        user_delete($_GET['id']);
+                        $_SESSION['thongbao'] = '<p>Xóa người dùng thành công! </p>';
+                    }
+                    // Hiển thị dữ liệu
+            header('location: '.$base_url.'admin/user');
+                    $view_name = 'admin_user_delete';
+                    break;
             case 'binhluan':
                 //lay du lieu
                 include_once 'model/m_user.php';
