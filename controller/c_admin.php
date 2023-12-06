@@ -136,6 +136,7 @@ if(isset($_GET['act'])) {
                         }
                            
                             admin_UpdateProduct($MaSP, $TenSP, $_FILES["anh"]["name"], $_FILES["anh1"]["name"], $_FILES["anh2"]["name"], $_FILES["anh3"]["name"], $_FILES["anh4"]["name"], $SoLuong, $Gia, $GiaGiam, $MoTa);
+                           
                     }
                     $show_AnhSP = admin_getPById_Product($MaSP);
 
@@ -166,8 +167,8 @@ if(isset($_GET['act'])) {
                     include_once 'model/m_pdo.php';
                     include_once 'model/m_admin.php';
                     if(isset($_POST['submit'])){
-                        $MaBanner =$_POST['MaBanner'];
-                        $_FILES['AnhBanner'];
+                        $MaBanner ="";
+                        $_FILES['banner_anh'];
                         $target_dir="upload/banners/";
                         $target_file = $target_dir . basename($_FILES["banner_anh"]["name"]);
                         move_uploaded_file($_FILES['banner_anh']["tmp_name"],$target_file);
@@ -176,36 +177,35 @@ if(isset($_GET['act'])) {
                             if($check_MaBanner){ //  bị trùng không thêm báo lỗi
                                 $_SESSION['loi'] = 'Không thể thêm vì mã <strong>'.$MaBanner.'</strong> đã tồn tại! ';
                             }else{// Sai , ko trùng , thêm tài khoản
-                                admin_AddBanner($MaBanner,$_FILES['banner_anh']['name']);
+                                admin_AddBanner($_FILES['banner_anh']['name']);
                                 $_SESSION['thongbao'] = 'Đã thêm banner thành công!';
                             }
                     }
                     $view_name = 'admin_banner_add';
                     $title ="Thêm banner";
                     break;
-                case 'banner-edit':
-                    include_once 'model/m_pdo.php';
-                    include_once 'model/m_admin.php';
-                    $MaBanner = $_GET['id'];
-                    if(isset($_POST['submit'])){
-                     
-                        $_FILES['banner_anh'];
-                        $target_dir="upload/banners/";
-                        $target_file = $target_dir . basename($_FILES["banner_anh"]["name"]);
-                        move_uploaded_file($_FILES['banner_anh']["tmp_name"],$target_file);
-                        $banner_anh=$target_file;
-                        $check_banner = admin_edit_banner($MaBanner,$_FILES['banner_anh']['name']);
-                        if($check_banner != false){ //  bị trùng không thêm báo lỗi
-                            $_SESSION['loi'] = 'Sửa không thành công! ';
-                        }else{// Sai , ko trùng , thêm tài khoản
-                            $_SESSION['thongbao'] = 'Đã sửa banner thành công!';
+                    case 'banner-edit':
+                        include_once 'model/m_pdo.php';
+                        include_once 'model/m_admin.php';
+                        $MaBanner = $_GET['id'];
+                        if(isset($_POST['submit'])){
+                            $_FILES['banner_anh'];
+                            $target_dir="upload/banners/";
+                            $target_file = $target_dir . basename($_FILES["banner_anh"]["name"]);
+                            move_uploaded_file($_FILES['banner_anh']["tmp_name"],$target_file);
+                            $banner_anh=$target_file; 
+                            admin_edit_banner($MaBanner,$_FILES["banner_anh"]["name"]);
+                            if($check_banner != false){ //  bị trùng không thêm báo lỗi
+                                $_SESSION['loi'] = 'Sửa không thành công! ';
+                            }else{// Sai , ko trùng , thêm tài khoản
+                                $_SESSION['thongbao'] = 'Đã sửa banner thành công!';
+                            }
                         }
-                    }
-                    $showbanner = admin_getPById_Banner($MaBanner);
-                    $view_name = 'admin_banner_edit';
-                    $title ="Thêm banner";
-                    break;
-        
+                        $showbanner = admin_getPById_Banner($MaBanner);
+                        $view_name = 'admin_banner_edit';
+                        $title ="Thêm banner";
+                        break;
+                    
             case 'user':
                 //lay du lieu
                 include_once 'model/m_user.php';

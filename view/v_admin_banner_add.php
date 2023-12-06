@@ -7,7 +7,7 @@
     padding: 10px;
 }
 .box_content{
-    margin-top: 55px;
+    margin-top: 105px;
     border: 2px solid pink;
     border-radius: 5px;
 }
@@ -137,7 +137,13 @@ select {
 .closebtn:hover {
     color: black;
 }
+.boxtb{
+    margin-top: 50px;
+    margin-bottom: -100px;
+}
 </style>
+           
+<div class="boxtb">
             <?php if(isset($_SESSION['thongbao'])): ?>
                 <div class="success" >
                     <?=$_SESSION['thongbao']?>
@@ -149,7 +155,7 @@ select {
                     <?=$_SESSION['loi']?>
                 </div> 
             <?php endif; unset($_SESSION['loi']); ?>
-            <br>
+            </div>
         <div class="box_content">
             <h1>Thêm sản phẩm</h1>
             <div class="box">

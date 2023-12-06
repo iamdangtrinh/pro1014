@@ -67,21 +67,29 @@
     function admin_checkMaBanner($MaBanner) {
         return pdo_query_one("SELECT * FROM banner WHERE MaBanner=?",$MaBanner);
     }
-    function admin_AddBanner($MaBanner,$AnhBanner){
-        pdo_execute("INSERT INTO banner(`MaBanner`,`AnhBanner`) VALUES(?,?)",$MaBanner,$AnhBanner);
-      }
- 
-    function admin_getPById_Banner($MaBanner){
-        return pdo_query_one("SELECT * FROM  banner WHERE MaBanner=$MaBanner");
-      }
-  
-    function admin_edit_banner($MaBanner,$banner_anh){
+    
+    function admin_AddBanner($banner_anh){
         $conn = pdo_get_connection(); //gọi hàm kết nối database
-        $sql = "UPDATE banner SET AnhBanner = ? WHERE MaSP = ?";
+        $sql = "INSERT INTO banner (AnhBanner) VALUES (?)";
         $stmt = $conn->prepare($sql);
-        $stmt->execute([$MaBanner,$banner_anh]);
+        $stmt->execute([$banner_anh]);
         $conn = null; // đóng kết nối database
     }
+    
+      function admin_getPById_Banner($MaBanner){
+        return pdo_query_one("SELECT * FROM banner WHERE MaBanner=?",$MaBanner);
+    }
+    
+  
+    function admin_edit_banner($MaBanner, $banner_anh){
+        $conn = pdo_get_connection(); //gọi hàm kết nối database
+        $sql = "UPDATE banner SET AnhBanner=? WHERE MaBanner=?";
+        $stmt = $conn->prepare($sql);
+        $stmt->execute([$banner_anh,$MaBanner]);
+        $conn = null; // đóng kết nối database
+    }
+    
+    
     function admin_addkhuyenmai( $TenKM, $codeKhuyenMai, $soTienGiam, $ngayBatDau, $ngayKetThuc, $SoLuong) {
     return pdo_execute("INSERT INTO khuyenmai ( TenKM, CodeKM, GiaKM, NgayBatDau, NgayKetThuc, SoLuong) 
                         VALUES ( ?, ?, ?, ?, ?, ?)", 
