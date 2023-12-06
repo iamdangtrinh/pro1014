@@ -82,7 +82,7 @@
                                     <div class="cart-discount">
                                         <form id="coupon" action="#" method="post">
                                             <div class="input-group">
-                                                <input type="text" class="form-control form-control-sm" id="coupon_code"
+                                                <input required type="text" class="form-control form-control-sm" id="coupon_code"
                                                     placeholder="Mã giảm giá" name="couponcode">
                                                 <div class="input-group-append">
                                                     <input type="hidden" name="btn_coupon" value="btn_coupon">
@@ -189,7 +189,7 @@
                 var closestProductRow = this.closest('.product-row');
                 var quantity_product_warehouse = closestProductRow.querySelector('[data-quantity_product_warehouse]').dataset.quantity_product_warehouse;
                 if (parseInt(newQuantity) >= quantity_product_warehouse) {
-                   // var btn_plus = closestProductRow.querySelector('.plusJS');
+                    // var btn_plus = closestProductRow.querySelector('.plusJS');
                     $(this).val(quantity_product_warehouse);
                 } else {
                     $(this).val(newQuantity);
@@ -217,23 +217,26 @@
         });
 
         // ---------------- Mã giảm giá -------------------------------
+        $(document).ready(function () {
+            var code_old = $('#coupon_code').val();
+
+            $('#coupon').submit(function (e) {
+                e.preventDefault();
+                var coupon_code = $('#coupon_code').val();
+
+                if (coupon_code === code_old) {
+                    $(".result_coupon").html("Vui lòng nhập mã khác");
+                } else {
+                    $(".result_coupon").html("");
+                }
+            })
+        });
+
         $('#coupon').on('submit', function (e) {
             e.preventDefault();
         })
-        
+
         $('#coupon').on('submit', function () {
-            $('#coupon').validate({
-                rules: {
-                    couponcode: {
-                        required: true
-                    }
-                },
-                messages: {
-                    couponcode: {
-                        required: "Vui lòng nhập mã giảm giá 2"
-                    }
-                },
-            })
             var data = $(this).serialize();
             $.ajax({
                 type: "POST",
@@ -253,7 +256,6 @@
                     }
                 },
             })
-
         })
     })
 

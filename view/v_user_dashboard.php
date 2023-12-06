@@ -246,8 +246,8 @@
                                             }
                                             ?>
                                         </td>
-                                        <td class="text-warning"><?= $TongTien?></td>
-                                        <td><a href="#" class="text-success">Mua lại</a></td>
+                                        <td class="text-dark"><?= number_format($TongTien, 0,',','.')?> VNĐ</td>
+                                        <!-- <td><a href="#" class="btn rounded p-1 btn-success">Đánh giá sản phẩm</a></td> -->
                                     </tr>
 
                                 <?php endforeach ?>

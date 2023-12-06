@@ -51,16 +51,7 @@
         $stmt->execute([$TenSP, $anh, $anh1, $anh2, $anh3, $anh4, $SoLuong, $Gia, $GiaGiam, $MoTa, $MaSP]);
         $conn = null; // đóng kết nối database
     }
-    function admin_Product_Delete($MaSP){
-        return pdo_query_one("DELETE FROM  sanpham WHERE MaSP=$MaSP");
-    }
-     
-    function admin_Product_timxoaAnhSP($MaSP){
-        $list =  pdo_query_one("SELECT * FROM sanpham WHERE MaSP=?",$MaSP);
-        $anh = $list['AnhSP'];
-        $anhPath = "upload/products".$anh;
-        return $anhPath;
-    }
+ 
     function admin_ShowBanner(){
         return pdo_query("SELECT * FROM banner");
     }
@@ -80,7 +71,6 @@
         return pdo_query_one("SELECT * FROM banner WHERE MaBanner=?",$MaBanner);
     }
     
-  
     function admin_edit_banner($MaBanner, $banner_anh){
         $conn = pdo_get_connection(); //gọi hàm kết nối database
         $sql = "UPDATE banner SET AnhBanner=? WHERE MaBanner=?";
@@ -112,9 +102,7 @@
          pdo_execute("DELETE FROM khuyenmai WHERE MaKM = $MaKM");
     }
    
-    // function history_getDM($MaDM) {
-    //   return pdo_query("SELECT * FROM danhmuc dm INNER JOIN danhmuccon dmc ON dm.MaDM = dmc.MaDM INNER JOIN da s ON ct.MaSach = s.MaSach WHERE ls.MaTK=? AND ls.TrangThai=?",$MaTK, 'gio-sach');
-    // }
+ 
     function admin_donhang(){
         return pdo_query("SELECT
                             hd.`MaHD`,
@@ -135,5 +123,7 @@
     function get_MaHDbyid($MaHD){
         return pdo_query_one("SELECT MaHD FROM hoadon WHERE MaHD = ?", $MaHD);
     }
-
+    function count_km(){
+        return pdo_query_value("SELECT COUNT(MaKM) FROM khuyenmai");
+    }
 ?>
