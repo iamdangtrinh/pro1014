@@ -142,8 +142,15 @@ select {
         font-weight: bold;
         font-size: 14px;
     }
+    .boxtb{
+         padding: 10px;
+    }
 </style>
-            <?php if(isset($_SESSION['thongbao'])): ?>
+          
+        <div class="box_content">
+            <h1>Thêm sản phẩm</h1>
+            <div class="boxtb">
+        <?php if(isset($_SESSION['thongbao'])): ?>
                 <div class="success" >
                     <?=$_SESSION['thongbao']?>
                 </div> 
@@ -154,9 +161,7 @@ select {
                     <?=$_SESSION['loi']?>
                 </div> 
             <?php endif; unset($_SESSION['loi']); ?>
-            <br>
-        <div class="box_content">
-            <h1>Thêm sản phẩm</h1>
+            </div>
             <div class="box">
                 <form action="<?=$base_url?>admin/product/add" id="form_addProduct" method="POST" enctype="multipart/form-data">
                     <div class="roww">
