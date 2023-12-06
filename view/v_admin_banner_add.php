@@ -7,7 +7,7 @@
     padding: 10px;
 }
 .box_content{
-    margin-top: 105px;
+    margin-top: 60px;
     border: 2px solid pink;
     border-radius: 5px;
 }
@@ -138,13 +138,16 @@ select {
     color: black;
 }
 .boxtb{
-    margin-top: 50px;
-    margin-bottom: -100px;
+    margin: 5px;
+    padding-bottom: -20px;
 }
 </style>
            
-<div class="boxtb">
-            <?php if(isset($_SESSION['thongbao'])): ?>
+            
+        <div class="box_content">
+            <h1>Thêm sản phẩm</h1>
+            <div class="boxtb">
+        <?php if(isset($_SESSION['thongbao'])): ?>
                 <div class="success" >
                     <?=$_SESSION['thongbao']?>
                 </div> 
@@ -156,8 +159,6 @@ select {
                 </div> 
             <?php endif; unset($_SESSION['loi']); ?>
             </div>
-        <div class="box_content">
-            <h1>Thêm sản phẩm</h1>
             <div class="box">
                 <form action="<?=$base_url?>admin/banner/add" method="POST" enctype="multipart/form-data"> 
                             <div class="mb-3">
