@@ -219,10 +219,21 @@
         // ---------------- Mã giảm giá -------------------------------
         $('#coupon').on('submit', function (e) {
             e.preventDefault();
-
         })
-
+        
         $('#coupon').on('submit', function () {
+            $('#coupon').validate({
+                rules: {
+                    couponcode: {
+                        required: true
+                    }
+                },
+                messages: {
+                    couponcode: {
+                        required: "Vui lòng nhập mã giảm giá 2"
+                    }
+                },
+            })
             var data = $(this).serialize();
             $.ajax({
                 type: "POST",
@@ -242,6 +253,7 @@
                     }
                 },
             })
+
         })
     })
 
