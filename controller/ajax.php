@@ -95,7 +95,7 @@ switch($_GET['act']) {
                             if($has_coupon['SoLuong'] > 0) {
                                 update_quantity_coupon($has_coupon['CodeKM']);
                                 echo '<input type="hidden" class="coupon_value" value="'.$has_coupon['GiaKM'].'">';
-                                echo "Đơn hàng của bạn được giảm ".$has_coupon['GiaKM'];
+                                echo "Đơn hàng của bạn được giảm ". number_format($has_coupon['GiaKM'], 0,',', '.'). ' VNĐ';
                             } else {
                                 echo "Mã giảm giá đã hết";
                             }
