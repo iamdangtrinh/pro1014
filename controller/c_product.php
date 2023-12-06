@@ -85,7 +85,7 @@ if(isset($_GET['act'])) {
             }
             
             upate_status_cart($_POST['MaHD']);
-            header('location: '.$base_url.'user/dashboard#download');
+            header('location: '.$base_url.'vnpay_php/');
             break;
 
         case 'comment':

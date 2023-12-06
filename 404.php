@@ -62,6 +62,10 @@
 
   </style>
   <body>
+    <?php
+    include_once 'config.php'
+    ?>
+    
     <div class="container">
       <div class="not-found">
         <div class="row-404">

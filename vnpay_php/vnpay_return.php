@@ -9,10 +9,10 @@
         <meta name="author" content="">
         <title>VNPAY RESPONSE</title>
         <!-- Bootstrap core CSS -->
-        <link href="http://localhost/pro1041/vnpay_php/assets/bootstrap.min.css" rel="stylesheet"/>
+        <link href="http://localhost/pro1014/vnpay_php/assets/bootstrap.min.css" rel="stylesheet"/>
         <!-- Custom styles for this template -->
-        <link href="http://localhost/pro1041/vnpay_php/assets/jumbotron-narrow.css" rel="stylesheet">         
-        <script src="http://localhost/pro1041/vnpay_php/assets/jquery-1.11.3.min.js"></script>
+        <link href="http://localhost/pro1014/vnpay_php/assets/jumbotron-narrow.css" rel="stylesheet">         
+        <script src="http://localhost/pro1014/vnpay_php/assets/jquery-1.11.3.min.js"></script>
     </head>
     <body>
         <?php
