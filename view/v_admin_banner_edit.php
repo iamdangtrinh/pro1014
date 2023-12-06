@@ -7,7 +7,7 @@
     padding: 10px;
 }
 .box_content{
-    margin-top: 105px;
+    margin-top: 60px;
     border: 2px solid pink;
     border-radius: 5px;
 }
@@ -138,10 +138,14 @@ select {
     color: black;
 }
 .boxtb{
-    margin-top: 50px;
-    margin-bottom: -40px;
+    margin: 5px;
+    padding-bottom: -20px;
 }
 </style>
+           
+            
+        <div class="box_content">
+            <h1>Thêm sản phẩm</h1>
             <div class="boxtb">
             <?php if(isset($_SESSION['thongbao'])): ?>
                 <div class="success" >
@@ -155,17 +159,14 @@ select {
                 </div> 
             <?php endif; unset($_SESSION['loi']); ?>
             </div>
-            
-        <div class="box_content">
-            <h1>Thêm sản phẩm</h1>
             <div class="box">
-                <form action="<?=$base_url?>admin/banner/edit" method="POST" enctype="multipart/form-data"> 
+                <form action="<?=$base_url?>admin/banner/edit/<?=$MaBanner?>" method="POST" enctype="multipart/form-data"> 
                             <div class="mb-3">
                                 <label for="AnhBanner" class="form-label">Ảnh chính</label>
                                 <input type="file"  name="banner_anh" class="form-control" id="AnhBanner" > 
                             </div>
                             <div class="mb-3">
-                                <img width="350" height="350" src="<?=$base_url?>upload/banners/<?=$showbanner['AnhBanner']?>" alt="">
+                                <img width="350" height="350" style="object-fit: contain" src="<?=$base_url?>upload/banners/<?=$showbanner['AnhBanner']?>" alt="">
                             </div>
                     <button type="submit" name="submit" class="btn btn-primary" value="submit">Xác nhận</button>
                 </form>

@@ -194,7 +194,7 @@ if(isset($_GET['act'])) {
                             $target_file = $target_dir . basename($_FILES["banner_anh"]["name"]);
                             move_uploaded_file($_FILES['banner_anh']["tmp_name"],$target_file);
                             $banner_anh=$target_file; 
-                            admin_edit_banner($MaBanner,$_FILES["banner_anh"]["name"]);
+                            $check_banner = admin_edit_banner($MaBanner,$_FILES["banner_anh"]["name"]);
                             if($check_banner != false){ //  bị trùng không thêm báo lỗi
                                 $_SESSION['loi'] = 'Sửa không thành công! ';
                             }else{// Sai , ko trùng , thêm tài khoản
