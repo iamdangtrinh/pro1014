@@ -17,7 +17,7 @@ switch($_GET['act']) {
             foreach($show_search as $value):
                 extract($value);
                 echo '<a href="login" class="col-md-4 img-focus">
-                    <img src="http://localhost/pro1041/upload/products/'.$AnhSP.'"
+                    <img src="'.$base_url.'upload/products/'.$AnhSP.'"
                         width="50" height="50" alt="'.$TenSP.'">
                 </a>
                 <div class="col-md-8 mt-2 content-focus">'.$TenSP.' </div>';
@@ -68,43 +68,45 @@ switch($_GET['act']) {
             ';
             update_quantity_by_cart($SoLuongSP, $MaSP);
         }
-
         break;
-
     case 'ajax_cart_coupon':
         include_once '../model/m_cart.php';
         // Kiểm tra btn_coupon có tồn tại và có được click vào hay không
-        if(isset($_POST['btn_coupon']) && $_POST['btn_coupon']) {
-            // lấy giá trị input của couponcode
-            $couponcode = $_POST['couponcode'];
-            // Nếu counponcode trống => Bắt người dùng nhập mã
-            if(empty($couponcode)) {
-                echo "error_coupon_null";
-            } else {
-                // Nếu có nhập mã code thì select xem mã đó có đúng không
-                $has_coupon = has_coupon_code($couponcode);
-                // Nếu mã đó có tồn tại thì
-                if($has_coupon) {
-                    // Kiểm tra mã đó còn hạn dùng hay không
-                    $counpon_date = $has_coupon['NgayKetThuc'];
-                    // biến ngày giờ thành số giây
-                    $counpon_date_timestamp = strtotime($counpon_date);
-                    if(time() > $counpon_date_timestamp) {
-                        echo "Mã giảm giá không còn hạn sử dụng";
-                    } else {
-                        // Kiểm tra mã đó còn số lượng dùng hay không
-                        if($has_coupon['SoLuong'] > 0) {
-                            update_quantity_coupon($has_coupon['CodeKM']);
-                            echo '<input type="hidden" class="coupon_value" value="'.$has_coupon['GiaKM'].'">';
-                            echo "Đơn hàng của bạn được giảm ".$has_coupon['GiaKM'];
-                        } else {
-                            echo "Mã giảm giá đã hết";
-                        }
-                    }
+        if(count_cart($_SESSION['user']['MaTK']) >= 1) {
+            if(isset($_POST['btn_coupon']) && $_POST['btn_coupon']) {
+                // lấy giá trị input của couponcode
+                $couponcode = $_POST['couponcode'];
+                // Nếu counponcode trống => Bắt người dùng nhập mã
+                if(empty($couponcode)) {
+                    echo "error_coupon_null";
                 } else {
-                    echo "error_coupon_false";
+                    // Nếu có nhập mã code thì select xem mã đó có đúng không
+                    $has_coupon = has_coupon_code($couponcode);
+                    // Nếu mã đó có tồn tại thì
+                    if($has_coupon) {
+                        // Kiểm tra mã đó còn hạn dùng hay không
+                        $counpon_date = $has_coupon['NgayKetThuc'];
+                        // biến ngày giờ thành số giây
+                        $counpon_date_timestamp = strtotime($counpon_date);
+                        if(time() > $counpon_date_timestamp) {
+                            echo "Mã giảm giá không còn hạn sử dụng";
+                        } else {
+                            // Kiểm tra mã đó còn số lượng dùng hay không
+                            if($has_coupon['SoLuong'] > 0) {
+                                update_quantity_coupon($has_coupon['CodeKM']);
+                                echo '<input type="hidden" class="coupon_value" value="'.$has_coupon['GiaKM'].'">';
+                                echo "Đơn hàng của bạn được giảm ".$has_coupon['GiaKM'];
+                            } else {
+                                echo "Mã giảm giá đã hết";
+                            }
+                        }
+                    } else {
+                        echo "error_coupon_false";
+                    }
                 }
             }
+        } else {
+            echo "Vui lòng mua hàng để dùng chức năng này";
         }
         break;
 
@@ -114,11 +116,11 @@ switch($_GET['act']) {
         $MaSP = $_POST['MaSP'];
         add_to_wishlist($MaTK, $MaSP);
         break;
-    
-        case 'admin_khuyenmai': 
-            echo "đến admin khuyến mãi";
-            // xử lí bằng các hàm function
-            
+
+    case 'admin_khuyenmai':
+        echo "đến admin khuyến mãi";
+        // xử lí bằng các hàm function
+
         break;
 
     default:
