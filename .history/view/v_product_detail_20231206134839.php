@@ -422,7 +422,6 @@
                     <!-- End .row -->
                 </div>
                 <!-- End .product-single-container -->
-                
                 <div class="product-single-tabs">
                                 <ul class="nav nav-tabs" role="tablist">
                                     <li class="nav-item">
@@ -473,122 +472,6 @@
                                                         <div class="comment-arrow"></div>
 
                                                         <div class="ratings-container float-sm-right">
-                                                        <div class="product-ratings">
-                                                                <span class="ratings" style="width:
-                                                        <?php if($value['SoSao'] == 5) {
-                                                            echo 100;
-                                                        } else if($value['SoSao'] == 4) {
-                                                            echo 80;
-                                                        } else if($value['SoSao'] == 3) {
-                                                            echo 60;
-                                                        } else if($value['SoSao'] == 2) {
-                                                            echo 40;
-                                                        } else {
-                                                            echo 20;
-                                                        } ?>%"></span>
-                                                                <!-- End .ratings -->
-                                                                <span class="tooltiptext tooltip-top"></span>
-                                                            </div>
-                                                            <!-- End .product-ratings -->
-                                                        </div>
-
-                                                        <span class="comment-by">
-                                                            <strong><?= $value['HoTen'] ?></strong>
-                                                            <?= $value['NgayBL'] ?>
-                                                        </span>
-                                                    </div>
-
-                                                    <div class="comment-content">
-                                                        <p><?= $value['NoiDung'] ?></p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <?php endforeach; ?>
-                                        </div>
-
-                                        <div class="divider"></div>
-
-                                        <?php if(isset($_SESSION['user']) && $checkMuaSP != 0): ?>
-                                        <div class="add-product-review">
-                                            <h3 class="review-title">Viết bài đánh giá</h3>
-
-                                            <form id="comment" action="<?= $base_url ?>product/comment" method="post"
-                                                class="comment-form m-0">
-                                                <input type="hidden" name="MaSP" value="<?= $_GET['id'] ?>">
-                                                <div class="rating-form">
-                                                <label for="rating">Đánh giá của bạn <span
-                                                            class="required">*</span></label>
-                                                    <span class="rating-stars">
-                                                        <a class="star-1" href="#">1</a>
-                                                        <a class="star-2" href="#">2</a>
-                                                        <a class="star-3" href="#">3</a>
-                                                        <a class="star-4" href="#">4</a>
-                                                        <a class="star-5" href="#">5</a>
-                                                    </span>
-
-                                                    <select name="SoSao" id="rating" required="" style="display: none;">
-                                                        <option value="6">xuất sắc</option>
-                                                        <option value="5">hoàn hảo</option>
-                                                        <option value="4">tốt</option>
-                                                        <option value="3">Trung bình</option>
-                                                        <option value="2">chưa ổn</option>
-                                                        <option value="1">si đa</option>
-                                                    </select>
-                                                </div>
-
-                                                <div class="form-group">
-                                                    <label>
-                                                        Nội dung đánh giá <span class="required">*</span></label>
-                                                    <textarea cols="5" rows="6" name="NoiDung"
-                                                        class="form-control form-control-sm"></textarea>
-                                                </div>
-                                                <!-- End .form-group -->
-
-                                                <input type="submit" class="btn btn-primary" value="Gửi">
-                                            </form>
-                                        </div>
-
-                                        <script>
-                                        $('#comment').validate({
-                                            rules: {
-                                                NoiDung: {
-                                                    required: true,
-
-                                                },
-                                            },
-                                            messages: {
-                                                NoiDung: {
-                                                    required: "Vui lòng nhập nội dung"
-                                                }
-                                            },
-                                            // submitHandler:function(form) {
-                                            //     $.ajax({
-                                            //         type: "POST",
-                                            //         url: "",
-                                            //         data: {
-                                            //             NoiDung:NoiDung,
-                                            //             SoSao: SoSao
-                                            //         },
-                                            //     })
-                                            // }   
-                                        })
-                                        </script>
-
-                                        <!-- End .add-product-review -->
-                                        <?php elseif($checkMuaSP == 0): ?>
-                                        <div class="add-product-review">
-                                            <h3 class="review-title">Bạn cần mua hàng để viết đánh giá!</h3>
-                                        </div>
-                                        <?php else: ?>
-                                        <div class="add-product-review">
-                                            <h3 class="review-title">Bạn cần đăng nhập và mua hàng để viết đánh giá!
-                                            </h3>
-                                        </div>
-                                        <?php endif; ?>
-                                    </div>
-                                    <!-- End .tab-content -->
-                                </div>
-                                <!-- End .product-single-tabs -->
 
                 <!-- End .product-single-tabs -->
 

@@ -561,34 +561,6 @@
                                                     required: "Vui lòng nhập nội dung"
                                                 }
                                             },
-                                            // submitHandler:function(form) {
-                                            //     $.ajax({
-                                            //         type: "POST",
-                                            //         url: "",
-                                            //         data: {
-                                            //             NoiDung:NoiDung,
-                                            //             SoSao: SoSao
-                                            //         },
-                                            //     })
-                                            // }   
-                                        })
-                                        </script>
-
-                                        <!-- End .add-product-review -->
-                                        <?php elseif($checkMuaSP == 0): ?>
-                                        <div class="add-product-review">
-                                            <h3 class="review-title">Bạn cần mua hàng để viết đánh giá!</h3>
-                                        </div>
-                                        <?php else: ?>
-                                        <div class="add-product-review">
-                                            <h3 class="review-title">Bạn cần đăng nhập và mua hàng để viết đánh giá!
-                                            </h3>
-                                        </div>
-                                        <?php endif; ?>
-                                    </div>
-                                    <!-- End .tab-content -->
-                                </div>
-                                <!-- End .product-single-tabs -->
 
                 <!-- End .product-single-tabs -->
 
