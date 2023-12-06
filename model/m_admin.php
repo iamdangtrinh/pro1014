@@ -79,6 +79,15 @@
         $conn = null; // đóng kết nối database
     }
     
+    function admin_banner_Delete($MaBanner){
+        return pdo_query_one("DELETE FROM  banner WHERE MaBanner=$MaBanner");
+    }
+
+    // Xóa file ảnh 
+    function admin_banner_timxoaAnhBanner($MaBanner){
+        $list =  pdo_query_one("SELECT * FROM banner WHERE MaBanner=?", $MaBanner);
+        return $list[0]['AnhBanner'];
+    }
     
     function admin_addkhuyenmai( $TenKM, $codeKhuyenMai, $soTienGiam, $ngayBatDau, $ngayKetThuc, $SoLuong) {
     return pdo_execute("INSERT INTO khuyenmai ( TenKM, CodeKM, GiaKM, NgayBatDau, NgayKetThuc, SoLuong) 

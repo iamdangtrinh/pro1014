@@ -144,17 +144,17 @@ if(isset($_GET['act'])) {
                     $view_name='admin_product_edit';
                     $title ="Sản phẩm thêm";
                     break;
-            case 'product-delete':
-                include_once 'model/m_pdo.php';
-                include_once 'model/m_admin.php';
-                $MaSP=$_GET['id'];
-                $anhsp = admin_Product_timxoaAnhSP($MaSP);
-                admin_Product_Delete($MaSP);
-                if(file_exists($anhsp)){
-                   unlink($anhsp);
-                }
-                header('location: '.$base_url.'admin/product');
-                break;
+            // case 'product-delete':
+            //     include_once 'model/m_pdo.php';
+            //     include_once 'model/m_admin.php';
+            //     $MaSP=$_GET['id'];
+            //     $anhsp = admin_Product_timxoaAnhSP($MaSP);
+            //     admin_Product_Delete($MaSP);
+            //     if(file_exists($anhsp)){
+            //        unlink($anhsp);
+            //     }
+            //     header('location: '.$base_url.'admin/product');
+            //     break;
             case 'banner':
                 include_once 'model/m_pdo.php';
                 include_once 'model/m_admin.php';
@@ -205,6 +205,18 @@ if(isset($_GET['act'])) {
                         $view_name = 'admin_banner_edit';
                         $title ="Thêm banner";
                         break;
+                        case 'banner-delete':
+                            include_once 'model/m_pdo.php';
+                            include_once 'model/m_admin.php';
+                            $MaBanner=$_GET['id'];
+                            $anhbanner = admin_banner_timxoaAnhBanner($MaBanner);
+                            admin_banner_Delete($MaBanner);
+                            if(file_exists($anhbanner)){
+                                 unlink($anhbanner);
+                            }
+                            $view_name = 'admin_banner';
+                            header('location: '.$base_url.'admin/banner');
+                            break;
                     
             case 'user':
                 //lay du lieu

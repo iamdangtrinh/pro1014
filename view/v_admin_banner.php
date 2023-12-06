@@ -184,7 +184,7 @@ tr td{
                             <td>
                                 <div class="lenh">
                                     <div class="sua" ><a href="<?=$base_url?>admin/banner/edit/<?=$item_banner['MaBanner']?>" style="font-weight: 600; ">Sửa</a></div>
-                                    <div class="xoa"><a href="<?=$base_url?>admin/banner/delete/"  style="font-weight: 600; ">Xóa</a></div>
+                                    <div class="xoa"><a href="<?=$base_url?>admin/banner/delete/<?=$item_banner['MaBanner']?>"  style="font-weight: 600; ">Xóa</a></div>
                                 </div>
                             </td>
                         </tr>
