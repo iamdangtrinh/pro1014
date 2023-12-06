@@ -9,10 +9,10 @@
         <meta name="author" content="">
         <title>Tạo mới đơn hàng</title>
         <!-- Bootstrap core CSS -->
-        <link href="http://localhost/pro1041/vnpay_php/assets/bootstrap.min.css" rel="stylesheet"/>
+        <link href="http://localhost/pro1014/vnpay_php/assets/bootstrap.min.css" rel="stylesheet"/>
         <!-- Custom styles for this template -->
-        <link href="http://localhost/pro1041/vnpay_php/assets/jumbotron-narrow.css" rel="stylesheet">  
-        <script src="http://localhost/pro1041/vnpay_php/assets/jquery-1.11.3.min.js"></script>
+        <link href="http://localhost/pro1014/vnpay_php/assets/jumbotron-narrow.css" rel="stylesheet">  
+        <script src="http://localhost/pro1014/vnpay_php/assets/jquery-1.11.3.min.js"></script>
     </head>
 
     <body>
@@ -20,7 +20,7 @@
         <div class="container">
         <h3>Tạo mới đơn hàng</h3>
             <div class="table-responsive">
-                <form action="http://localhost/pro1041/vnpay_php/vnpay_create_payment.php" id="frmCreateOrder" method="post">        
+                <form action="http://localhost/pro1014/vnpay_php/vnpay_create_payment.php" id="frmCreateOrder" method="post">        
                     <div class="form-group">
                         <label for="amount">Số tiền</label>
                         <input class="form-control" data-val="true" data-val-number="The field Amount must be a number." data-val-required="The Amount field is required." id="amount" max="100000000" min="1" name="amount" type="number" value="10000" />
