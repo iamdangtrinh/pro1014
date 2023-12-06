@@ -225,7 +225,6 @@ td {
             rules: {
                 TenKM: {
                     required: true,
-                    remote: "<?= $base_url ?>controller/ajax.php?act=admin_khuyenmai"
                 },
                 khuyenMai: {
                     required: true
@@ -240,9 +239,16 @@ td {
                     required: "Vui lòng nhập mã khuyến mãi"
                 }
             },
-            submitHandler:function(form) {
-                console.log(form);
-            }
+            
         })
     })
+    
+</script>
+<script>
+    var Thongbao = document.getElementById('Thongbao');
+    if (Thongbao) {
+        setTimeout(function() {
+            Thongbao.style.display = 'none'; 
+        }, 3000); 
+    }
 </script>

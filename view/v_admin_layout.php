@@ -145,7 +145,9 @@
                     <i class="fa-solid fa-ticket"></i>
                     </span>
                     <h3>Khuyến mãi</h3>
-                    <span class="message-count">27</span>
+                    <span class="message-count">
+                        <?=$count_km;?>
+                    </span>
                 </a>
 
                 <a href="#">

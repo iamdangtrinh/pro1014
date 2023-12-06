@@ -135,5 +135,7 @@
     function get_MaHDbyid($MaHD){
         return pdo_query_one("SELECT MaHD FROM hoadon WHERE MaHD = ?", $MaHD);
     }
-
+    function count_km(){
+        return pdo_query_value("SELECT COUNT(MaKM) FROM khuyenmai");
+    }
 ?>

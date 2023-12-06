@@ -41,6 +41,7 @@ if (isset($_GET['mod'])) {
             $ctrl_name = 'cart';
             break;
         case 'admin':
+            $count_km = count_km();
             $ctrl_name = 'admin';
             break;
         default:
