@@ -51,15 +51,31 @@
         $stmt->execute([$TenSP, $anh, $anh1, $anh2, $anh3, $anh4, $SoLuong, $Gia, $GiaGiam, $MoTa, $MaSP]);
         $conn = null; // đóng kết nối database
     }
+
     function admin_Product_Delete($MaSP){
-       return pdo_execute("DELETE FROM  sanpham WHERE MaSP=?",$MaSP);
+        pdo_execute("DELETE FROM sanpham WHERE MaSP=?", $MaSP);
+       }
+       function admin_Product_timxoaAnhSP($MaSP){
+        $conn= pdo_get_connection(); 
+        $stmt = $conn->prepare("SELECT * FROM sanpham WHERE MaSP=$MaSP");
+        $stmt->execute();
+        $mt = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $conn = null; 
+        $Anh = array(
+            $mt[0]['AnhSP'],
+            $mt[0]['AnhSP1'],
+            $mt[0]['AnhSP2'],
+            $mt[0]['AnhSP3'],
+            $mt[0]['AnhSP4']
+        );
+        return $Anh; 
     }
+    
+
+
 
     // Xóa file ảnh 
-    function admin_Product_timxoaAnhSP($MaSP){
-        $list =  pdo_query_one("SELECT * FROM sanpham WHERE MaSP=?", $MaSP);
-        return $list[0]['AnhSP'];
-    }
+
     function admin_ShowBanner(){
         return pdo_query("SELECT * FROM banner");
     }

@@ -144,17 +144,23 @@ if(isset($_GET['act'])) {
                     $view_name='admin_product_edit';
                     $title ="Sản phẩm thêm";
                     break;
-            // case 'product-delete':
-            //     include_once 'model/m_pdo.php';
-            //     include_once 'model/m_admin.php';
-            //     $MaSP=$_GET['id'];
-            //     $anhsp = admin_Product_timxoaAnhSP($MaSP);
-            //     admin_Product_Delete($MaSP);
-            //     if(file_exists($anhsp)){
-            //        unlink($anhsp);
-            //     }
-            //     header('location: '.$base_url.'admin/product');
-            //     break;
+            case 'product-delete':
+                include_once 'model/m_pdo.php';
+                include_once 'model/m_admin.php';
+                if(isset($_GET['id'])&&($_GET['id'])>0){
+                    $MaSP = $_GET['id'];    
+                    $target_dir="upload/products/";
+                    $product_Anh=admin_Product_timxoaAnhSP($MaSP);
+                    foreach($product_Anh as $anh) {
+                        $AnhSP_path=$target_dir.$anh;
+                        if(is_file($AnhSP_path)){
+                            unlink($AnhSP_path);
+                        }
+                        admin_Product_Delete($MaSP);
+                    }
+                }
+                header('location: '.$base_url.'admin/product');
+                break;
             case 'banner':
                 include_once 'model/m_pdo.php';
                 include_once 'model/m_admin.php';
