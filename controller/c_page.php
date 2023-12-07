@@ -12,6 +12,7 @@ if(isset($_GET['act'])) {
             break;
 
         case 'shop':
+            $dsGhim = product_getPin(3);
             $limit = 12;
             $start = 0;
             $soluongSP = count_product();
