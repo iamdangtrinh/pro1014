@@ -3,6 +3,7 @@ session_start();
 ob_start();
 
 include_once '../model/m_pdo.php';
+include_once '../config.php';
 
 // xử lí data 
 switch($_GET['act']) {
