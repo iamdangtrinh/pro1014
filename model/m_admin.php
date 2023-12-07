@@ -51,11 +51,19 @@
         $stmt->execute([$TenSP, $anh, $anh1, $anh2, $anh3, $anh4, $SoLuong, $Gia, $GiaGiam, $MoTa, $MaSP]);
         $conn = null; // đóng kết nối database
     }
- 
+    function admin_Product_Delete($MaSP){
+       return pdo_execute("DELETE FROM  sanpham WHERE MaSP=?",$MaSP);
+    }
+
+    // Xóa file ảnh 
+    function admin_Product_timxoaAnhSP($MaSP){
+        $list =  pdo_query_one("SELECT * FROM sanpham WHERE MaSP=?", $MaSP);
+        return $list[0]['AnhSP'];
+    }
     function admin_ShowBanner(){
         return pdo_query("SELECT * FROM banner");
     }
-    function admin_checkMaBanner($MaBanner) {
+    function admin_chitietkBanner($MaBanner) {
         return pdo_query_one("SELECT * FROM banner WHERE MaBanner=?",$MaBanner);
     }
     
@@ -80,14 +88,20 @@
     }
     
     function admin_banner_Delete($MaBanner){
-        return pdo_query_one("DELETE FROM  banner WHERE MaBanner=$MaBanner");
-    }
+        $conn= pdo_get_connection(); //gọi hàm kết nối database
+        $sql = "DELETE FROM banner WHERE MaBanner=$MaBanner ";
+        $conn->exec($sql); // exec the query
+        $conn = null; // đóng kết nối database
+       }
+       function admin_banner_timxoaAnhBanner($MaBanner){
+        $conn= pdo_get_connection(); //gọi hàm kết nối database
+        $stmt = $conn->prepare("SELECT * FROM banner WHERE MaBanner=$MaBanner");
+        $stmt->execute();
+        $mt = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $conn = null; // đóng kết nối database
+        return $mt[0]['AnhBanner']; // biến này chứa mãng dòng dữ liệu trả về.
+       }
 
-    // Xóa file ảnh 
-    function admin_banner_timxoaAnhBanner($MaBanner){
-        $list =  pdo_query_one("SELECT * FROM banner WHERE MaBanner=?", $MaBanner);
-        return $list[0]['AnhBanner'];
-    }
     
     function admin_addkhuyenmai( $TenKM, $codeKhuyenMai, $soTienGiam, $ngayBatDau, $ngayKetThuc, $SoLuong) {
     return pdo_execute("INSERT INTO khuyenmai ( TenKM, CodeKM, GiaKM, NgayBatDau, NgayKetThuc, SoLuong) 
@@ -135,4 +149,24 @@
     function count_km(){
         return pdo_query_value("SELECT COUNT(MaKM) FROM khuyenmai");
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ?>
