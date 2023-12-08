@@ -1,3 +1,4 @@
+<?php include_once '../config.php'?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -9,10 +10,10 @@
         <meta name="author" content="">
         <title>Tạo mới đơn hàng</title>
         <!-- Bootstrap core CSS -->
-        <link href="http://localhost/pro1014/vnpay_php/assets/bootstrap.min.css" rel="stylesheet"/>
+        <link href="<?= $base_url?>vnpay_php/assets/bootstrap.min.css" rel="stylesheet"/>
         <!-- Custom styles for this template -->
-        <link href="http://localhost/pro1014/vnpay_php/assets/jumbotron-narrow.css" rel="stylesheet">  
-        <script src="http://localhost/pro1014/vnpay_php/assets/jquery-1.11.3.min.js"></script>
+        <link href="<?= $base_url?>vnpay_php/assets/jumbotron-narrow.css" rel="stylesheet">  
+        <script src="<?= $base_url?>vnpay_php/assets/jquery-1.11.3.min.js"></script>
     </head>
 
     <body>
@@ -39,13 +40,13 @@
         </div> 
         <script>
              function pay() {
-              window.location.href = "http://localhost/pro1014/vnpay_php/vnpay_pay.php";
+              window.location.href = "<?= $base_url?>vnpay_php/vnpay_pay.php";
             }
             function querydr() {
-              window.location.href = "http://localhost/pro1014/vnpay_php/vnpay_querydr.php";
+              window.location.href = "<?= $base_url?>vnpay_php/vnpay_querydr.php";
             }
              function refund() {
-              window.location.href = "http://localhost/pro1014/vnpay_php/vnpay_refund.php";
+              window.location.href = "<?= $base_url?>vnpay_php/vnpay_refund.php";
             }
         </script>
     </body>

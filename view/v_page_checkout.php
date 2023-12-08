@@ -65,7 +65,7 @@
                     </thead>
                     <tbody>
                         <?php
-                        foreach($show_cart_for_user as $value):
+                        foreach ($show_cart_for_user as $value):
                             extract($value) ?>
                             <tr class="product_parents">
                                 <td class="product-col">
@@ -93,7 +93,9 @@
                                 <h4>Tổng tiền</h4>
                             </td>
                             <td class="price-col">
-                                <span class="total_checkout"><?= (isset($_POST['btn_cart'])) ? number_format($total_cart['TongTien'], 0, '.', '.') : ''?></span>
+                                <span class="total_checkout">
+                                    <?= (isset($_POST['btn_cart'])) ? number_format($total_cart['TongTien'], 0, '.', '.') : '' ?>
+                                </span>
                             </td>
                         </tr>
                     </tfoot>
@@ -137,38 +139,19 @@
             <div class="modal-footer">
                 <button type="button" class="rounded btn btn-danger" data-dismiss="modal">Hủy</button>
 
-                    <?php 
-                    foreach($show_cart_for_user  as $key => $value) : extract($value) 
-                    ?>
-                    <input type="hidden" name="MaSP<?=$key?>" value="<?= $MaSP?>" id="">
-                    <input type="hidden" name="SoLuongSP<?=$key?>" value="<?=$SoLuongSP?>" id="">
-                    <?php endforeach ?>
-                    <input type="hidden" value="<?=$total_cart['TongTien']?>" name="TongTien">
-                    <input type="hidden" value="<?= $_SESSION['MaHD'] ?>" name="MaHD">
-                    <input type="submit" name="btn_update_status_cart" class="rounded btn text-white"
-                        style="background: #007bff" value="Đồng Ý">
+                <?php
+                foreach ($show_cart_for_user as $key => $value):
+                    extract($value)
+                        ?>
+                    <input type="hidden" name="MaSP<?= $key ?>" value="<?= $MaSP ?>" id="">
+                    <input type="hidden" name="SoLuongSP<?= $key ?>" value="<?= $SoLuongSP ?>" id="">
+                <?php endforeach ?>
+                <input type="hidden" value="<?= $total_cart['TongTien'] ?>" name="TongTien">
+                <input type="hidden" value="<?= $_SESSION['MaHD'] ?>" name="MaHD">
+                <input type="submit" name="btn_update_status_cart" class="rounded btn text-white"
+                    style="background: #007bff" value="Đồng Ý">
                 </form>
             </div>
         </div>
     </div>
 </div>
-
-<script>
-
-    // $(document).ready(function () {
-    //     function total_cart() {
-    //         var total_checkout = 0;
-    //         var product_parent = $('.product_parents');
-    //         // console.log(document.querySelector('.price_JS').value);
-    //         for (const total_cart of product_parent) {
-    //             var price = total_cart.querySelector('.price_JS').value;
-    //             total = parseInt(price) * 1;
-    //             total_checkout += total;
-    //         }
-    //         document.querySelector('.total_checkout').innerText =total_checkout.toLocaleString('vi-VN') + ' VND'
-    //     };
-    // })
-
-
-
-</script>

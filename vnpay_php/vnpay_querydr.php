@@ -1,3 +1,5 @@
+<?php include_once '../config.php'?>
+
 <html lang="en">
 
 <head>
@@ -9,10 +11,10 @@
     <meta name="author" content="">
     <title>Tra cứu giao dịch</title>
     <!-- Bootstrap core CSS -->
-    <link href="http://localhost/pro1014/vnpay_php/assets/bootstrap.min.css" rel="stylesheet" />
+    <link href="<?= $base_url?>vnpay_php/assets/bootstrap.min.css" rel="stylesheet" />
     <!-- Custom styles for this template -->
-    <link href="http://localhost/pro1014/vnpay_php/assets/jumbotron-narrow.css" rel="stylesheet">
-    <script src="http://localhost/pro1014/vnpay_php/assets/jquery-1.11.3.min.js"></script>
+    <link href="<?= $base_url?>vnpay_php/assets/jumbotron-narrow.css" rel="stylesheet">
+    <script src="<?= $base_url?>vnpay_php/assets/jquery-1.11.3.min.js"></script>
 </head>
 
 <body>
@@ -24,7 +26,7 @@
             <h3>Querydr</h3>
         </div>
         <div style="width: 100% ;border-bottom: 2px solid black;padding-bottom: 20px">
-            <form action="http://localhost/pro1014/vnpay_php/vnpay_querydr.php" id="frmCreateOrder" method="post">
+            <form action="<?= $base_url?>vnpay_php/vnpay_querydr.php" id="frmCreateOrder" method="post">
                 <div class="form-group">
                     <label>Mã GD thanh toán cần quy vấn (vnp_TxnRef):</label>
                     <input class="form-control" data-val="true" name="txnRef" type="text" value="" />
