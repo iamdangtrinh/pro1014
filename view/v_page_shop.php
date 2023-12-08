@@ -61,18 +61,18 @@
                                     <div class="select-custom">
                                         <select name="search_key" id="select_data" class="form-control">
                                             <option value="menu_order" selected="selected">Mặc định</option>
-                                            <option value="popularity">Phổ biến</option>
-                                            <option value="rating">Đánh giá tốt</option>
-                                            <option value="date">Mới nhất </option>
-                                            <option value="price">Giá từ thấp -> cao</option>
-                                            <option value="price-desc">Giá từ cao -> thấp</option>
+                                            <option value="1">Phổ biến</option>
+                                            <option value="2">Đánh giá tốt</option>
+                                            <option value="3">Mới nhất </option>
+                                            <option value="4">Giá từ thấp -> cao</option>
+                                            <option value="5">Giá từ cao -> thấp</option>
                                         </select>
                                     </div>
 
                                     <script>
                                         $(document).ready(function() {
                                             function data_option() {
-                                                var data = $('#select_data').serialize();
+                                                var data = $('#select_data').val();
                                                 $.ajax({
                                                     url: "<?= $base_url ?>controller/ajax.php?act=select_option",
                                                     type: "POST",

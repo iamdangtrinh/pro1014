@@ -118,17 +118,12 @@ switch ($_GET['act']) {
         add_to_wishlist($MaTK, $MaSP);
         break;
 
-    case 'admin_khuyenmai':
-        echo "đến admin khuyến mãi";
-        // xử lí bằng các hàm function
-
-        break;
-
     case 'select_option':
         include_once '../model/m_product.php';
-        
-        echo json_encode(product_search($_POST['search_key'], $page=1));
-        
+
+        // echo $_POST['search_key'];
+        print_r(product_search_option($_POST['search_key'], $page=1));
+
         break;
 
     default:
