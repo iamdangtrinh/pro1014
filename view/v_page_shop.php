@@ -69,26 +69,7 @@
                                         </select>
                                     </div>
 
-                                    <script>
-                                        $(document).ready(function() {
-                                            function data_option() {
-                                                var data = $('#select_data').val();
-                                                $.ajax({
-                                                    url: "<?= $base_url ?>controller/ajax.php?act=select_option",
-                                                    type: "POST",
-                                                    data: {
-                                                        search_key:data
-                                                    },
-                                                    success:function(data) {
-                                                        $('.product-default_option').html(data);
-                                                    }
-                                                });
-                                            }
-                                            $('#select_data').on('change',function() {
-                                             data_option();
-                                            })
-                                        })
-                                    </script>
+                                    
 
                                 </div>
                             </div>

@@ -17,7 +17,7 @@ switch ($_GET['act']) {
         if ($show_search) {
             foreach ($show_search as $value):
                 extract($value);
-                echo '<a href="login" class="col-md-4 img-focus">
+                echo '<a href="'.$base_url.'product/detail/'.$MaSP.'" class="col-md-4 img-focus">
                     <img src="' . $base_url . 'upload/products/' . $AnhSP . '"
                         width="50" height="50" alt="' . $TenSP . '">
                 </a>
@@ -120,25 +120,31 @@ switch ($_GET['act']) {
 
     case 'select_option':
         include_once '../model/m_product.php';
-        if ($_POST['search_key'] === 'popularity') {
-            // hiển thị phổ biến
-            $product_shop = product_search_option_by_poplarity($page = 1);
-            show_product($product_shop, $base_url);
-        } else if ($_POST['search_key'] === 'rating') {
-            $product_shop = product_search_option_by_rating($page = 1);
-            show_product($product_shop, $base_url);
-        } else if ($_POST['search_key'] == 'date') {
-            $product_shop = product_search_option_by_new_date($page = 1);
-            show_product($product_shop, $base_url);
-        } else if ($_POST['search_key'] == 'price') {
-            $product_shop = product_search_option_by_price($page = 1);
-            show_product($product_shop, $base_url);
-        } else if ($_POST['search_key'] == 'price-desc') {
-            $product_shop = product_search_option_by_pricedesc($page = 1);
-            show_product($product_shop, $base_url);
-        }
-        break;
+        $search_key = $_POST['search_key'];
+        switch ($search_key) {
+            case 'popularity':
+                $product_shop = product_search_option_by_poplarity($page = 1);
+                show_product($product_shop, $base_url);
+      
 
+                break;
+            case 'rating':
+                $product_shop = product_search_option_by_rating($page = 1);
+                show_product($product_shop, $base_url);
+                break;
+            case 'date':
+                $product_shop = product_search_option_by_new_date($page = 1);
+                show_product($product_shop, $base_url);
+                break;
+            case 'price':
+                $product_shop = product_search_option_by_price($page = 1);
+                show_product($product_shop, $base_url);
+                break;
+            case 'price-desc':
+                $product_shop = product_search_option_by_pricedesc($page = 1);
+                show_product($product_shop, $base_url);
+                break;
+        }
     default:
         break;
 }
