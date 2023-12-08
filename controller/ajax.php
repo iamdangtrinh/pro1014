@@ -120,7 +120,6 @@ switch ($_GET['act']) {
 
     case 'select_option':
         include_once '../model/m_product.php';
-
         if ($_POST['search_key'] === 'popularity') {
             // hiển thị phổ biến
             $product_shop = product_search_option_by_poplarity($page = 1);
@@ -128,7 +127,6 @@ switch ($_GET['act']) {
         } else if ($_POST['search_key'] === 'rating') {
             $product_shop = product_search_option_by_rating($page = 1);
             show_product($product_shop, $base_url);
-            // để sau
         } else if ($_POST['search_key'] == 'date') {
             $product_shop = product_search_option_by_new_date($page = 1);
             show_product($product_shop, $base_url);
