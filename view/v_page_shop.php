@@ -59,7 +59,7 @@
                                     <label>Phân loại:</label>
 
                                     <div class="select-custom">
-                                        <select name="orderby" class="form-control">
+                                        <select name="search_key" id="select_data" class="form-control">
                                             <option value="menu_order" selected="selected">Mặc định</option>
                                             <option value="popularity">Phổ biến</option>
                                             <option value="rating">Đánh giá tốt</option>
@@ -67,11 +67,31 @@
                                             <option value="price">Giá từ thấp -> cao</option>
                                             <option value="price-desc">Giá từ cao -> thấp</option>
                                         </select>
-                                    </div><!-- End .select-custom -->
+                                    </div>
 
+                                    <script>
+                                        $(document).ready(function() {
+                                            function data_option() {
+                                                var data = $('#select_data').serialize();
+                                                $.ajax({
+                                                    url: "<?= $base_url ?>controller/ajax.php?act=select_option",
+                                                    type: "POST",
+                                                    data: {
+                                                        search_key:data
+                                                    },
+                                                    success:function(data) {
+                                                        $('.product-default').html(data);
+                                                    }
+                                                });
+                                            }
+                                            $('#select_data').on('change',function() {
+                                             data_option();
+                                            })
+                                        })
+                                    </script>
 
-                                </div><!-- End .toolbox-item -->
-                            </div><!-- End .toolbox-left -->
+                                </div>
+                            </div>
 
                             <div class="toolbox-right">
                                 <div class="toolbox-item layout-modes">
@@ -81,8 +101,8 @@
                                     <a href="category-list.html" class="layout-btn btn-list" title="List">
                                         <i class="icon-mode-list"></i>
                                     </a>
-                                </div><!-- End .layout-modes -->
-                            </div><!-- End .toolbox-right -->
+                                </div>
+                            </div>
                         </nav>
                         <!-- chỗ lầy là chỗ foeach sản phẩm -->
                         <div class="row">
@@ -138,14 +158,14 @@
                                                 <div class="ratings-container">
                                                     <div class="product-ratings">
                                                         <span class="ratings" style="width:<?=$product['trungbinh_rating']?>%"></span>
-                                                        <!-- End .ratings -->
+                                                        
                                                         <span class="tooltiptext tooltip-top"></span>
-                                                    </div><!-- End .product-ratings -->
-                                                </div><!-- End .product-container -->
+                                                    </div>
+                                                </div>
                                                 <div class="price-box">
                                                     <span class="product-price"><?=number_format($product['Gia'],0,",",".")?>đ</span>
-                                                </div><!-- End .price-box -->
-                                            </div><!-- End .product-details -->
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 <?php else: ?>
@@ -202,22 +222,22 @@
                                                 <div class="ratings-container">
                                                     <div class="product-ratings">
                                                         <span class="ratings" style="width:<?=$product['trungbinh_rating']?>%"></span>
-                                                        <!-- End .ratings -->
+                                                        
                                                         <span class="tooltiptext tooltip-top"></span>
-                                                    </div><!-- End .product-ratings -->
-                                                </div><!-- End .product-container -->
+                                                    </div>
+                                                </div>
                                                 <div class="price-box">
                                                     <span class="old-price"><?=number_format($product['Gia'],0,",",".")?>đ</span>
                                                     <span class="product-price"><?=number_format($product['GiaGiam'],0,",",".")?>đ</span>
-                                                </div><!-- End .price-box -->
-                                            </div><!-- End .product-details -->
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 <?php endif; ?>
                             <?php endforeach; ?>
                             <!-- chỗ lầy là chỗ foeach sản phẩm -->
-                            <!-- End .col-lg-3 -->
-                        </div><!-- End .row -->
+                            
+                        </div>
 
                         <nav class="toolbox toolbox-pagination">
                             <ul class="pagination toolbox-item">
@@ -234,7 +254,7 @@
                                 </li>
                             </ul>
                         </nav>
-                    </div><!-- End .col-lg-9 -->
+                    </div>
 
                     <div class="sidebar-overlay"></div>
                     <aside class="sidebar-shop col-lg-3 order-lg-first mobile-sidebar">
@@ -281,9 +301,9 @@
                                         }
                                         ?>
                             </ul>
-                                    </div><!-- End .widget-body -->
-                                </div><!-- End .collapse -->
-                            </div><!-- End .widget -->
+                                    </div>
+                                </div>
+                            </div>
 
                             
 
@@ -307,20 +327,20 @@
                                                 <div class="ratings-container">
                                                     <div class="product-ratings">
                                                         <span class="ratings" style="width:80%"></span>
-                                                        <!-- End .ratings -->
+                                                        
                                                         <span class="tooltiptext tooltip-top"></span>
-                                                    </div><!-- End .product-ratings -->
-                                                </div><!-- End .product-container -->
+                                                    </div>
+                                                </div>
                                                 <div class="price-box">
                                                     <span class="product-price"><?=$sp['GiaGiam']?> &ndash; <?=$sp['Gia']?></span>
-                                                </div><!-- End .price-box -->
-                                            </div><!-- End .product-details -->
+                                                </div>
+                                            </div>
                                         </div>
                                     <?php endforeach;?>
-                                    </div><!-- End .featured-col -->
-                                </div><!-- End .widget-body -->
-                            </div><!-- End .widget -->
-                        </div><!-- End .sidebar-wrapper -->
-                    </aside><!-- End .col-lg-3 -->
-                </div><!-- End .row -->
-            </div><!-- End .container -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
