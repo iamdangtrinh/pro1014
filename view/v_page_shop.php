@@ -80,7 +80,7 @@
                                                         search_key:data
                                                     },
                                                     success:function(data) {
-                                                        $('.product-default').html(data);
+                                                        $('.product-default_option').html(data);
                                                     }
                                                 });
                                             }
@@ -170,7 +170,7 @@
                                     </div>
                                 <?php else: ?>
                                     <div class="col-6 col-sm-4 col-lg-3">
-                                        <div class="product-default inner-quickview inner-icon">
+                                        <div class="product-default product-default_option inner-quickview inner-icon">
                                             <figure>
                                                 <a href="<?=$base_url?>product/detail/<?=$product['MaSP']?>">
                                                     <img src="<?=$base_url?>upload/products/<?= $product['AnhSP'];?>"

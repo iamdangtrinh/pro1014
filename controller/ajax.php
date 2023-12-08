@@ -124,6 +124,8 @@ switch ($_GET['act']) {
         // echo $_POST['search_key'];
         print_r(product_search_option($_POST['search_key'], $page=1));
 
+        echo '';
+
         break;
 
     default:
