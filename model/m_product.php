@@ -114,4 +114,8 @@
     function product_tangView($MaSP){
         pdo_execute("UPDATE sanpham SET LuotXem=LuotXem+1 WHERE MaSP=? ",$MaSP);
     }
+
+    function product() {
+        return `3`;
+    }
 ?>
