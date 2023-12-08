@@ -76,7 +76,6 @@ if(isset($_GET['act'])) {
 
         case 'update_status_cart':
             include_once 'model/m_cart.php';
-            
             foreach ($show_cart_for_user as $key => $value) {
                 $MaHD = $_POST['MaHD'];
                 $SoLuongSP = $_POST['SoLuongSP'.$key.''];
@@ -85,7 +84,8 @@ if(isset($_GET['act'])) {
             }
             
             upate_status_cart($_POST['MaHD']);
-            header('location: '.$base_url.'vnpay_php/');
+                header('location: '.$base_url.'vnpay_php/'.$_POST['MaHD'].'/'.$_POST['TongTien']);
+            
             break;
 
         case 'comment':

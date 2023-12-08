@@ -10,10 +10,10 @@ date_default_timezone_set('Asia/Ho_Chi_Minh');
  */
 require_once("config.php");
 
-$vnp_TxnRef = 1120; //Mã hóa đơn
-$vnp_Amount = $_POST['amount']; // Số tiền thanh toán
-$vnp_Locale = $_POST['language']; //Ngôn ngữ chuyển hướng thanh toán
-$vnp_BankCode = $_POST['bankCode']; //Mã phương thức thanh toán
+$vnp_TxnRef = $_GET['MaHD']; //Mã hóa đơn
+$vnp_Amount = $_GET['amount']; // Số tiền thanh toán
+$vnp_Locale = 'vn'; //Ngôn ngữ chuyển hướng thanh toán
+$vnp_BankCode = ''; //Mã phương thức thanh toán
 $vnp_IpAddr = $_SERVER['REMOTE_ADDR']; //IP Khách hàng thanh toán
 
 $inputData = array(
