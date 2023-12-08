@@ -6,7 +6,7 @@ include_once '../model/m_pdo.php';
 include_once '../config.php';
 
 // xử lí data 
-switch($_GET['act']) {
+switch ($_GET['act']) {
     case 'ajax_search':
         include_once '../model/m_product.php';
         //lay du lieu
@@ -14,14 +14,14 @@ switch($_GET['act']) {
         $keyword = $_POST['keyword'];
         $show_search = search_live_product($keyword);
         // echo json_encode($show_search);
-        if($show_search) {
-            foreach($show_search as $value):
+        if ($show_search) {
+            foreach ($show_search as $value):
                 extract($value);
                 echo '<a href="login" class="col-md-4 img-focus">
-                    <img src="'.$base_url.'upload/products/'.$AnhSP.'"
-                        width="50" height="50" alt="'.$TenSP.'">
+                    <img src="' . $base_url . 'upload/products/' . $AnhSP . '"
+                        width="50" height="50" alt="' . $TenSP . '">
                 </a>
-                <div class="col-md-8 mt-2 content-focus">'.$TenSP.' </div>';
+                <div class="col-md-8 mt-2 content-focus">' . $TenSP . ' </div>';
             endforeach;
         } else {
             echo '<span class="not_product">Sản phẩm không tồn tại</span>';
@@ -33,7 +33,7 @@ switch($_GET['act']) {
         $MaSP = $_POST['MaSP'];
         $Quantity = quantity_cart_max($MaSP);
 
-        if($SoLuongSP > $Quantity['SoLuong']) {
+        if ($SoLuongSP > $Quantity['SoLuong']) {
             // lưu session vào là disiable true
             echo '
             <div class="toast toast--error">
@@ -42,7 +42,7 @@ switch($_GET['act']) {
                 </div>
                 <div class="toast__body">
                     <h3 class="toast__title">Thất bại</h3>
-                    <p class="toast__msg">Rất tiếc, bạn chỉ có thể mua tối đa '.$Quantity['SoLuong'].' sản phẩm.</p>
+                    <p class="toast__msg">Rất tiếc, bạn chỉ có thể mua tối đa ' . $Quantity['SoLuong'] . ' sản phẩm.</p>
                 </div>
     
                 <div class="toast__close">
@@ -73,30 +73,30 @@ switch($_GET['act']) {
     case 'ajax_cart_coupon':
         include_once '../model/m_cart.php';
         // Kiểm tra btn_coupon có tồn tại và có được click vào hay không
-        if(count_cart($_SESSION['user']['MaTK']) >= 1) {
-            if(isset($_POST['btn_coupon']) && $_POST['btn_coupon']) {
+        if (count_cart($_SESSION['user']['MaTK']) >= 1) {
+            if (isset($_POST['btn_coupon']) && $_POST['btn_coupon']) {
                 // lấy giá trị input của couponcode
                 $couponcode = $_POST['couponcode'];
                 // Nếu counponcode trống => Bắt người dùng nhập mã
-                if(empty($couponcode)) {
+                if (empty($couponcode)) {
                     echo "error_coupon_null";
                 } else {
                     // Nếu có nhập mã code thì select xem mã đó có đúng không
                     $has_coupon = has_coupon_code($couponcode);
                     // Nếu mã đó có tồn tại thì
-                    if($has_coupon) {
+                    if ($has_coupon) {
                         // Kiểm tra mã đó còn hạn dùng hay không
                         $counpon_date = $has_coupon['NgayKetThuc'];
                         // biến ngày giờ thành số giây
                         $counpon_date_timestamp = strtotime($counpon_date);
-                        if(time() > $counpon_date_timestamp) {
+                        if (time() > $counpon_date_timestamp) {
                             echo "Mã giảm giá không còn hạn sử dụng";
                         } else {
                             // Kiểm tra mã đó còn số lượng dùng hay không
-                            if($has_coupon['SoLuong'] > 0) {
+                            if ($has_coupon['SoLuong'] > 0) {
                                 update_quantity_coupon($has_coupon['CodeKM']);
-                                echo '<input type="hidden" class="coupon_value" value="'.$has_coupon['GiaKM'].'">';
-                                echo "Đơn hàng của bạn được giảm ". number_format($has_coupon['GiaKM'], 0,',', '.'). ' VNĐ';
+                                echo '<input type="hidden" class="coupon_value" value="' . $has_coupon['GiaKM'] . '">';
+                                echo "Đơn hàng của bạn được giảm " . number_format($has_coupon['GiaKM'], 0, ',', '.') . ' VNĐ';
                             } else {
                                 echo "Mã giảm giá đã hết";
                             }
@@ -118,9 +118,13 @@ switch($_GET['act']) {
         add_to_wishlist($MaTK, $MaSP);
         break;
 
-    case 'admin_khuyenmai':
-        echo "đến admin khuyến mãi";
-        // xử lí bằng các hàm function
+    case 'select_option':
+        include_once '../model/m_product.php';
+
+        // echo $_POST['search_key'];
+        print_r(product_search_option($_POST['search_key'], $page=1));
+
+        echo '';
 
         break;
 
