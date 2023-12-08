@@ -257,11 +257,6 @@
                                     <input autocomplete="off" class="form-input" id="search_ajax" type="text"
                                         name="search_key" placeholder="Nhập sản phẩm cần tìm...">
                                     <div id="search_result" class="row input-search">
-                                        <!-- <div class="col-md-4 img-focus">
-                                            <img src="<?= $base_url ?>upload/products/product-1.jpg"
-                                                width="50" height="50" alt="product">
-                                        </div>
-                                        <div class="col-md-8 mt-2 content-focus">Giày đan </div> -->
                                     </div>
                                     <input type="submit" name="search" value="Tìm ngay" class="btn-primary"
                                         style="border-radius: 0 5px 5px 0;">
@@ -269,6 +264,22 @@
                                 </div>
                             </form>
                         </div>
+
+                        <script>
+                            $(document).ready(function() {
+                                $('#search_ajax').focus(function () {
+                                    $('#search_result').addClass('d-flex');
+                                });
+
+                                $(document).click(function(e) {
+                                    var t = $(e.target);
+                                    
+                                    if(!t.is('#search_ajax') && !t.is('#search_result')) {
+                                    $('#search_result').hide();
+                                    }
+                                });
+                            })
+                        </script>
 
                     </div>
                 </div>
@@ -560,12 +571,7 @@
 
                 })
 
-                $('#search_ajax').click(function() {
-                    $('.search_result').hide();
-                })
-                $('#search_ajax').click(function() {
-                    $('#search_result').show();
-                })
+
 
                 function ThemSPYT(MaSP) {
                     // var MaSP = MaSP;
