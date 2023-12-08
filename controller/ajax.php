@@ -121,11 +121,20 @@ switch ($_GET['act']) {
     case 'select_option':
         include_once '../model/m_product.php';
 
+        if($_POST['search_key'] === 'popularity') {
+            echo "phổ biển";
+        } else if($_POST['search_key'] === 'rating') {
+            echo "Đánh giá tốt";
+        } else if($_POST['search_key'] == 'date') {
+            echo "Mới nhất";
+        } else if($_POST['search_key'] == 'price') {
+            echo "Giá thấp đến cao";
+        } else if($_POST['search_key'] == 'price-desc') {
+            echo 'Giá cao đến thấp';
+        }
+
         // echo $_POST['search_key'];
-        print_r(product_search_option($_POST['search_key'], $page=1));
-
-        echo '';
-
+        // print_r(product_search_option($_POST['search_key'], $page=1));
         break;
 
     default:

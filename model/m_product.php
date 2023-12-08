@@ -16,18 +16,12 @@
 
     function product_search_option($keyword, $page=1){
         $batdau= ($page-1)*12;
-        // 1 trang lay 8
-
-        // trang 1 bat dau tu 0 1 2 3 4 5 6 7 
-
-        // trang 2 bat dau tu 8
-
-        // trang 3 bat dau tu 16
-
-        // trang n bat dau tu (n-1)*8
-        
-        return pdo_query("SELECT * FROM sanpham sp INNER JOIN danhmuc dm ON sp.MaDM = dm.MaDM WHERE MaSP LIKE '%$keyword%' LIMIT $batdau,12");
+        return pdo_query("SELECT * FROM sanpham sp INNER JOIN danhmuc dm ON sp.MaDM = dm.MaDM WHERE MaSP = $keyword LIMIT $batdau,12");
     }
+    // function product_search_option($keyword, $page=1){
+    //     $batdau= ($page-1)*12;
+    //     return pdo_query("SELECT * FROM sanpham sp INNER JOIN danhmuc dm ON sp.MaDM = dm.MaDM WHERE MaSP = $keyword LIMIT $batdau,12");
+    // }
 
     function product_searchTotal($keyword){
         return pdo_query_value("SELECT COUNT(*) FROM sanpham WHERE TenSP LIKE '%$keyword%'");
