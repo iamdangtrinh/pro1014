@@ -235,8 +235,7 @@
                                     </div>
                                 <?php endif; ?>
                             <?php endforeach; ?>
-                            <!-- chỗ lầy là chỗ foeach sản phẩm -->
-                            
+                            <!-- chỗ lầy là chỗ foeach sản phẩm -->   
                         </div>
 
                         <nav class="toolbox toolbox-pagination">

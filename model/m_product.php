@@ -18,10 +18,10 @@
         $batdau= ($page-1)*12;
         return pdo_query("SELECT * FROM sanpham sp INNER JOIN danhmuc dm ON sp.MaDM = dm.MaDM WHERE MaSP = $keyword LIMIT $batdau,12");
     }
-    // function product_search_option($keyword, $page=1){
-    //     $batdau= ($page-1)*12;
-    //     return pdo_query("SELECT * FROM sanpham sp INNER JOIN danhmuc dm ON sp.MaDM = dm.MaDM WHERE MaSP = $keyword LIMIT $batdau,12");
-    // }
+    function product_search_option_by_poplarity($page=1){
+        $batdau= ($page-1)*12;
+        return pdo_query("SELECT * FROM sanpham sp INNER JOIN danhmuc dm ON sp.MaDM = dm.MaDM WHERE ghim = 1 LIMIT $batdau,12");
+    }
 
     function product_searchTotal($keyword){
         return pdo_query_value("SELECT COUNT(*) FROM sanpham WHERE TenSP LIKE '%$keyword%'");

@@ -122,7 +122,10 @@ switch ($_GET['act']) {
         include_once '../model/m_product.php';
 
         if($_POST['search_key'] === 'popularity') {
-            echo "phổ biển";
+            // hiển thị phổ biến
+            $product_shop = product_search_option_by_poplarity($page=1);
+            echo '';
+
         } else if($_POST['search_key'] === 'rating') {
             echo "Đánh giá tốt";
         } else if($_POST['search_key'] == 'date') {
