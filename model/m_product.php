@@ -22,6 +22,26 @@
         $batdau= ($page-1)*12;
         return pdo_query("SELECT * FROM sanpham sp INNER JOIN danhmuc dm ON sp.MaDM = dm.MaDM WHERE ghim = 1 LIMIT $batdau,12");
     }
+    function product_search_option_by_new_date($page=1){
+        $batdau= ($page-1)*12;
+        return pdo_query("SELECT * FROM sanpham sp INNER JOIN danhmuc dm ON sp.MaDM = dm.MaDM ORDER BY MaSP DESC LIMIT $batdau,12");
+    }
+    function product_search_option_by_price($page=1){
+        $batdau= ($page-1)*12;
+        return pdo_query("SELECT * FROM sanpham sp INNER JOIN danhmuc dm ON sp.MaDM = dm.MaDM ORDER BY Gia ASC LIMIT $batdau,12");
+    }
+    function product_search_option_by_pricedesc($page=1){
+        $batdau= ($page-1)*12;
+        return pdo_query("SELECT * FROM sanpham sp INNER JOIN danhmuc dm ON sp.MaDM = dm.MaDM ORDER BY Gia DESC LIMIT $batdau,12");
+    }
+    function product_search_option_by_rating($page=1){
+        $batdau= ($page-1)*12;
+        return pdo_query("SELECT * 
+        FROM sanpham sp 
+        INNER JOIN danhmuc dm ON sp.MaDM = dm.MaDM 
+        INNER JOIN binhluan bl ON sp.MaSP = bl.MaSP
+        ORDER BY bl.SoSao DESC LIMIT $batdau,12");
+    }
 
     function product_searchTotal($keyword){
         return pdo_query_value("SELECT COUNT(*) FROM sanpham WHERE TenSP LIKE '%$keyword%'");

@@ -121,23 +121,24 @@ switch ($_GET['act']) {
     case 'select_option':
         include_once '../model/m_product.php';
 
-        if($_POST['search_key'] === 'popularity') {
+        if ($_POST['search_key'] === 'popularity') {
             // hiển thị phổ biến
-            $product_shop = product_search_option_by_poplarity($page=1);
-            show_product($product_shop,  $base_url);
-
-        } else if($_POST['search_key'] === 'rating') {
-            echo "Đánh giá tốt";
-        } else if($_POST['search_key'] == 'date') {
-            echo "Mới nhất";
-        } else if($_POST['search_key'] == 'price') {
-            echo "Giá thấp đến cao";
-        } else if($_POST['search_key'] == 'price-desc') {
-            echo 'Giá cao đến thấp';
+            $product_shop = product_search_option_by_poplarity($page = 1);
+            show_product($product_shop, $base_url);
+        } else if ($_POST['search_key'] === 'rating') {
+            $product_shop = product_search_option_by_rating($page = 1);
+            show_product($product_shop, $base_url);
+            // để sau
+        } else if ($_POST['search_key'] == 'date') {
+            $product_shop = product_search_option_by_new_date($page = 1);
+            show_product($product_shop, $base_url);
+        } else if ($_POST['search_key'] == 'price') {
+            $product_shop = product_search_option_by_price($page = 1);
+            show_product($product_shop, $base_url);
+        } else if ($_POST['search_key'] == 'price-desc') {
+            $product_shop = product_search_option_by_pricedesc($page = 1);
+            show_product($product_shop, $base_url);
         }
-
-        // echo $_POST['search_key'];
-        // print_r(product_search_option($_POST['search_key'], $page=1));
         break;
 
     default:
