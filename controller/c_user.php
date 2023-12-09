@@ -81,11 +81,11 @@ if (isset($_GET['act'])) {
                 $HoTen = $_POST['HoTen'];
                 $SoDienThoai = $_POST['SoDienThoai'];
                 $DiaChi = $_POST['DiaChi'];
-                
+                $MaTK=$_SESSION['user']['MaTK'];
                 if(empty($HoTen)){
                     $_SESSION['loi'] = 'Vui lòng nhập họ tên cho tài khoản!';
                 }else{
-                    user_edit_info($MaTK, $SoDienThoai, $HoTen, $DiaChi);
+                    user_edit_info($MaTK,$SoDienThoai, $HoTen, $DiaChi);
                     $_SESSION['thanhcong'] = 'Bạn đã cập nhật tài khoản thành công!';
                 }
             }

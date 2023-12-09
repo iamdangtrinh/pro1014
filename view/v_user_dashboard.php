@@ -16,18 +16,6 @@
         <h1>TÀI KHOẢN</h1>
     </div>
 </div>
-<?php if(isset($_SESSION['thanhcong'])): ?>
-    <div class="alert alert-rounded alert-success">
-        <i class="fa fa-check" style="color: #9ad36a;"></i>
-        <span><strong>Hoàn tất!</strong> <?= $_SESSION['thanhcong']; ?></span>
-    </div>
-    <?php endif; unset($_SESSION['thanhcong']); ?>
-    <?php if(isset($_SESSION['loi'])): ?>
-    <div class="alert alert-rounded alert-danger">
-        <i class="fa fa-exclamation-circle" style="color: #ef8495;"></i>
-        <span><strong>Không thành công!</strong> <?= $_SESSION['loi']; ?></span>
-    </div>
-    <?php endif; unset($_SESSION['loi']); ?>
 
 <div class="container account-container custom-account-container p-3">
     <div class="row">
@@ -64,6 +52,18 @@
             </ul>
         </div>
         <div class="col-lg-9 order-lg-last order-1 tab-content">
+            <?php if(isset($_SESSION['thanhcong'])): ?>
+            <div class="alert alert-rounded alert-success">
+                <i class="fa fa-check" style="color: #9ad36a;"></i>
+                <span><strong>Hoàn tất!</strong> <?= $_SESSION['thanhcong']; ?></span>
+            </div>
+            <?php endif; unset($_SESSION['thanhcong']); ?>
+            <?php if(isset($_SESSION['loi'])): ?>
+            <div class="alert alert-rounded alert-danger">
+                <i class="fa fa-exclamation-circle" style="color: #ef8495;"></i>
+                <span><strong>Không thành công!</strong> <?= $_SESSION['loi']; ?></span>
+            </div>
+            <?php endif; unset($_SESSION['loi']); ?>
             <div class="tab-pane fade active show" id="dashboard" role="tabpanel">
                 <div class="dashboard-content">
 
