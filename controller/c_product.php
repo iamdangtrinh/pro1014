@@ -95,7 +95,7 @@ if(isset($_GET['act'])) {
             if(isset($_POST['method_pay'])&&$_POST['method_pay']=='vnpay'){
                 header('location: '.$base_url.'vnpay_php/'.$_POST['MaHD'].'/'.$_POST['TongTien']);
             }else{
-                header('location: '.$base_url.'page/home');
+                header('location: '.$base_url.'page/chi-tiet-don-hang/'.$_POST['MaHD']);
             }
             break;
 

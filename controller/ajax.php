@@ -117,7 +117,6 @@ switch ($_GET['act']) {
         $MaSP = $_POST['MaSP'];
         add_to_wishlist($MaTK, $MaSP);
         break;
-
     case 'select_option':
         include_once '../model/m_product.php';
         $search_key = $_POST['search_key'];
