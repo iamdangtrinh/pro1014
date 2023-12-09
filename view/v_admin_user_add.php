@@ -6,7 +6,9 @@
     body {
         font-family: Arial, sans-serif;
     }
-
+    .main{
+        margin-top: 50px;
+    }
     form {
         width: 100%;
         margin: 0 auto;
@@ -78,6 +80,7 @@
         font-size: 14px;
     }
 </style>
+<div class="main">
 <h2 class="mt-2">THÊM TÀI KHOẢN</h2><br>
 <?php if (isset($_SESSION['thongbao'])) : ?>
     <div class="alert alert-success" role="alert">
@@ -124,6 +127,7 @@ unset($_SESSION['loi']); ?>
     </div>
     <button type="submit" name="submit" class="btn btn-primary" value="submit">Xác nhận</button>
 </form>
+</div>
     <script>
         $().ready(function(){
             $("#form_addUser").validate({

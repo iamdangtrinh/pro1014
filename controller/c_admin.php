@@ -374,15 +374,12 @@ if(isset($_GET['act'])) {
                     // Kiểm tra xem người dùng có tự xóa chính mình hay không => nếu đúng => báo lỗi
                     if ($_GET['id'] == $_SESSION['user']['MaTK']) {
                         $_SESSION['loi'] = '<p>Không thể tự xóa tài khoản của bạn!</p>';
-                    }else if ($_SESSION['user']['VaiTro'] == $vaiTroUser['VaiTro']  )  {
+                    }else if ($_SESSION['user']['VaiTro'] >= $vaiTroUser['VaiTro']  )  {
                         user_delete($_GET['id']);
+                        $_SESSION['thongbao'] = '<p>Xóa người dùng thành công! </p>';
                     }else if ($_SESSION['user']['VaiTro'] < $vaiTroUser['VaiTro']  ){
                         // Kiểm tra xem người dùng có quyền cao hơn hay không => nếu đúng => báo lỗi
                         $_SESSION['loi'] = '<p>Bạn không thể xóa người có quyền cao hơn!</p>';
-                        
-                    }else{
-                        user_delete($_GET['id']);
-                        $_SESSION['thongbao'] = '<p>Xóa người dùng thành công! </p>';
                     }
                     // Hiển thị dữ liệu
             header('location: '.$base_url.'admin/user');

@@ -6,7 +6,9 @@
     body {
         font-family: Arial, sans-serif;
     }
-
+    .main{
+        margin-top: 50px;
+    }
     form {
         width: 100%;
         margin: 0 auto;
@@ -80,6 +82,7 @@
         color: #842029;
     }
 </style>
+<div class="main">
 <h2 class="mt-2">Sửa tài khoản</h2><br>
 <?php if (isset($_SESSION['thongbao'])) : ?>
     <div class="alert alert-success" role="alert">
@@ -95,11 +98,11 @@ unset($_SESSION['thongbao']); ?>
 unset($_SESSION['loi']); ?>
 
 <form action="" method="POST">
-    <div class="mb-3">
+    <!-- <div class="mb-3">
         <label for="HinhAnh" class="form-label">Hình Ảnh</label>
         <input type="file" class="form-control" id="HoTen" name="HoTen" value="">
         <img class="img-edit" src="<?= $base_url ?>upload/avatar/<?= $dsTK['HinhAnh'] ?>" alt="">
-    </div>
+    </div> -->
     <div class="mb-3">
         <label for="HoTen" class="form-label">Họ và tên</label>
         <input type="text" class="form-control" id="HoTen" name="HoTen" value="<?= $dsTK['HoTen'] ?>">
@@ -131,6 +134,7 @@ unset($_SESSION['loi']); ?>
     </div>
     <button type="submit" name="submit" class="btn btn-primary" value="submit">Xác nhận</button>
 </form>
+</div>
 <script>
         $().ready(function(){
             $("#form_addUser").validate({
