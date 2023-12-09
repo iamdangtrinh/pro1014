@@ -266,16 +266,16 @@
                         </div>
 
                         <script>
-                            $(document).ready(function() {
+                            $(document).ready(function () {
                                 $('#search_ajax').focus(function () {
                                     $('#search_result').addClass('d-flex');
                                 });
 
-                                $(document).click(function(e) {
+                                $(document).click(function (e) {
                                     var t = $(e.target);
-                                    
-                                    if(!t.is('#search_ajax') && !t.is('#search_result')) {
-                                    $('#search_result').hide();
+
+                                    if (!t.is('#search_ajax') && !t.is('#search_result')) {
+                                        $('#search_result').hide();
                                     }
                                 });
                             })
@@ -545,6 +545,21 @@
     <script src="<?= $base_url ?>assets/js/main.min.js"></script>
     <script src="<?= $base_url ?>assets/js/map.js"></script>
 
+
+    <script>
+        $(document).ready(function () {
+            function ThemSPYT(MaSP) {
+                $.ajax({
+                    type: "POST",
+                    url: "<?= $base_url ?>controller/ajax.php?act=addwish",
+                    data: {
+                        MaSP: MaSP
+                    }
+                })
+            }
+        })
+    </script>
+
     <script>
         $(document).ready(
             function () {
@@ -568,41 +583,24 @@
 
                         })
                     }
-
-                })
-
-
-
-                function ThemSPYT(MaSP) {
-                    $.ajax({
-                        type: "POST",
-                        url: "<?= $base_url ?>controller/ajax.php?act=addwish",
-                        data: {
-                            MaSP: MaSP
-                        }
-                    })
-
-                }
-
-                function data_option() {
-                    var data = $('#select_data').val();
-                    $.ajax({
-                        url: "<?= $base_url ?>controller/ajax.php?act=select_option",
-                        type: "POST",
-                        data: {
-                            search_key: data
-                        },
-                        success: function (data) {
-                            $('.product-default_option').html(data);
-                        }
-                    });
-                }
-                $('#select_data').on('change', function () {
-                    data_option();
                 })
             })
-
-
+        function data_option() {
+            var data = $('#select_data').val();
+            $.ajax({
+                url: "<?= $base_url ?>controller/ajax.php?act=select_option",
+                type: "POST",
+                data: {
+                    search_key: data
+                },
+                success: function (data) {
+                    $('.product-default_option').html(data);
+                }
+            });
+        }
+        $('#select_data').on('change', function () {
+            data_option();
+        })
 
     </script>
 </body>
