@@ -78,15 +78,15 @@ if (isset($_GET['act'])) {
             break;
         case 'update_info':
             if(isset($_POST['btn_update_info']) && $_POST['btn_update_info']){
-                $HoTen = $_POST['HoTen'];
-                $SoDienThoai = $_POST['SoDienThoai'];
-                $DiaChi = $_POST['DiaChi'];
+                $HoTen = $_POST['name'];
+                $SoDienThoai = $_POST['number'];
+                $DiaChi = $_POST['address'];
                 
                 if(empty($HoTen)){
-                    $_SESSION['loi'] = 'Vui lòng nhập họ tên cho tài khoản!';
+                    $_SESSION['thongbao']['loi'] = 'Vui lòng nhập họ tên cho tài khoản!';
                 }else{
                     user_edit_info($MaTK, $SoDienThoai, $HoTen, $DiaChi);
-                    $_SESSION['thanhcong'] = 'Bạn đã cập nhật tài khoản thành công!';
+                    $_SESSION['thongbao']['thanhcong'] = 'Bạn đã cập nhật tài khoản thành công!';
                 }
             }
             header('location: '.$base_url.'user/dashboard');

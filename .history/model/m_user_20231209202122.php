@@ -40,7 +40,7 @@
         return pdo_execute("UPDATE taikhoan SET HoTen=?, SoDienThoai =?, DiaChi=? WHERE MaTK=?", $HoTen,$SoDienThoai, $DiaChi, $MaTK);
     }
     function user_edit_info($MaTK,$SoDienThoai, $HoTen, $DiaChi){
-        pdo_execute("UPDATE taikhoan SET SoDienThoai=?,HoTen=?,DiaChi=? WHERE MaTK=?",
-        $SoDienThoai, $HoTen, $DiaChi, $MaTK);
+        pdo_execute("UPDATE taikhoan SET SoDienThoai=?,Email=?,HoTen=?,MatKhau=?,DiaChi=?,VaiTro=? WHERE MaTK=?",
+        $SoDienThoai, $Email, $HoTen, $MatKhau, $DiaChi,$VaiTro,$MaTK);
     }
 ?>

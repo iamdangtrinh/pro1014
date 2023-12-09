@@ -51,8 +51,7 @@ if(isset($_GET['act'])) {
                     }
                 }
             }
-            $_SESSION['thongbao'] = 'Bạn đã thêm sản phẩm vào giỏ hàng thành công!';
-            header('location: '.$base_url.'product/detail/' .$MaSP);
+            header('location: '.$base_url.'product/detail/'..' ');
             break;
 
         case 'cart':

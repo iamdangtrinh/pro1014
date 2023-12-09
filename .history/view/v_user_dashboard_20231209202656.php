@@ -154,7 +154,7 @@
                             </div>
                             <div class="mb-2">
                                 <label for="address">Địa chỉ giao hàng<span class="required">*</span></label>
-                                <input type="text" name="DiaChi" class="form-input form-wide" id=""
+                                <input type="text" name="address" class="form-input form-wide" id=""
                                     value="<?=$info_user['DiaChi']?>">
                             </div>
 

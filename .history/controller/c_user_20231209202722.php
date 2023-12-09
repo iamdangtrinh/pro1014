@@ -80,7 +80,7 @@ if (isset($_GET['act'])) {
             if(isset($_POST['btn_update_info']) && $_POST['btn_update_info']){
                 $HoTen = $_POST['HoTen'];
                 $SoDienThoai = $_POST['SoDienThoai'];
-                $DiaChi = $_POST['DiaChi'];
+                $DiaChi = $_POST['address'];
                 
                 if(empty($HoTen)){
                     $_SESSION['loi'] = 'Vui lòng nhập họ tên cho tài khoản!';

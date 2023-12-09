@@ -41,6 +41,6 @@
     }
     function user_edit_info($MaTK,$SoDienThoai, $HoTen, $DiaChi){
         pdo_execute("UPDATE taikhoan SET SoDienThoai=?,HoTen=?,DiaChi=? WHERE MaTK=?",
-        $SoDienThoai, $HoTen, $DiaChi, $MaTK);
+        ,$MaTK,$SoDienThoai, $HoTen, $DiaChi);
     }
 ?>

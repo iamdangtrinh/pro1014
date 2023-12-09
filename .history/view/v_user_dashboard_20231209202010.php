@@ -1,4 +1,3 @@
-
 <div class="page-header">
     <div class="container d-flex flex-column align-items-center">
         <nav aria-label="breadcrumb" class="breadcrumb-nav">
@@ -16,18 +15,6 @@
         <h1>TÀI KHOẢN</h1>
     </div>
 </div>
-<?php if(isset($_SESSION['thanhcong'])): ?>
-    <div class="alert alert-rounded alert-success">
-        <i class="fa fa-check" style="color: #9ad36a;"></i>
-        <span><strong>Hoàn tất!</strong> <?= $_SESSION['thanhcong']; ?></span>
-    </div>
-    <?php endif; unset($_SESSION['thanhcong']); ?>
-    <?php if(isset($_SESSION['loi'])): ?>
-    <div class="alert alert-rounded alert-danger">
-        <i class="fa fa-exclamation-circle" style="color: #ef8495;"></i>
-        <span><strong>Không thành công!</strong> <?= $_SESSION['loi']; ?></span>
-    </div>
-    <?php endif; unset($_SESSION['loi']); ?>
 
 <div class="container account-container custom-account-container p-3">
     <div class="row">
@@ -137,24 +124,24 @@
                         <form action="<?=$base_url?>user/update_info" method="post">
                             <div class="mb-2">
                                 <label for="login-name">Tên tài khoản<span class="required">*</span></label>
-                                <input type="text" name="HoTen" class="form-input form-wide" id=""
+                                <input type="text" name="name" class="form-input form-wide" id=""
                                     value="<?=$info_user['HoTen']?>">
-                            </div> 
+                            </div>
 
                             <div class="mb-2">
                                 <label for="login-email">Địa chỉ email (Bạn không thể thay đổi Email)<span class="required">*</span></label>
-                                <input disabled type="Email" class="form-input form-wide" id=""
+                                <input disabled type="email" name="email" class="form-input form-wide" id=""
                                     value="<?=$info_user['Email']?>">
                             </div>
 
                             <div class="mb-2">
                                 <label for="login-password">Số điện thoại<span class="required">*</span></label>
-                                <input type="text" name="SoDienThoai" class="form-input form-wide" id=""
+                                <input type="text" name="number" class="form-input form-wide" id=""
                                     value="<?=$info_user['SoDienThoai']?>">
                             </div>
                             <div class="mb-2">
                                 <label for="address">Địa chỉ giao hàng<span class="required">*</span></label>
-                                <input type="text" name="DiaChi" class="form-input form-wide" id=""
+                                <input type="text" name="address" class="form-input form-wide" id=""
                                     value="<?=$info_user['DiaChi']?>">
                             </div>
 
