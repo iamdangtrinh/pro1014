@@ -80,11 +80,16 @@ if(isset($_GET['act'])) {
                 $MaHD = $_POST['MaHD'];
                 $SoLuongSP = $_POST['SoLuongSP'.$key.''];
                 $MaSP = $_POST['MaSP'.$key.''];
+
                 update_quantity_by_checkout($MaHD, $SoLuongSP, $MaSP);
             }
             
+            if(isset($_SESSION['coupon']['has'])) {
+                print_r($_SESSION['coupon']['has']);
+                update_quantity_coupon($_SESSION['coupon']['has']['CodeKM']);
+            }
             upate_status_cart($_POST['MaHD']);
-                header('location: '.$base_url.'vnpay_php/'.$_POST['MaHD'].'/'.$_POST['TongTien']);
+                // header('location: '.$base_url.'vnpay_php/'.$_POST['MaHD'].'/'.$_POST['TongTien']);
             
             break;
 

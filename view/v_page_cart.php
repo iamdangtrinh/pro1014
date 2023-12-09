@@ -58,8 +58,6 @@
                                         <input type="text" name="quantity" value="<?= $SoLuongSP ?>"
                                             class="quantity_product">
 
-                                        <!-- tăng số lượng -->
-                                        <!-- <span class="fa fa-plus plusJS"></span> -->
                                         <button type="button" class="plusJS">
                                             <i class="fa fa-plus"></i>
                                         </button>
@@ -71,7 +69,6 @@
                                     </span>
                                 </td>
                             </tr>
-
                         <?php endforeach ?>
                     </tbody>
 
@@ -92,8 +89,7 @@
                                             </div>
                                             <!-- hiển thị kết quả của coupon -->
                                             <div class="result_coupon"></div>
-                                            <div class="result_coupon_is"></div>
-
+                                            
                                         </form>
                                     </div>
                                 </div>
