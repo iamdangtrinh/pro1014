@@ -546,60 +546,65 @@
     <script src="<?= $base_url ?>assets/js/map.js"></script>
 
 
-    <script>
-        $(document).ready(function () {
-            function ThemSPYT(MaSP) {
-                $.ajax({
-                    type: "POST",
-                    url: "<?= $base_url ?>controller/ajax.php?act=addwish",
-                    data: {
-                        MaSP: MaSP
-                    }
-                })
-            }
-        })
+
+
+
+    <script script>
+        function ThemSPYT(MaSP) {
+            $.ajax({
+                type: "POST",
+                url: "<?= $base_url ?>controller/ajax.php?act=addwish",
+                data: {
+                    MaSP: MaSP
+                },
+                success: function (response) {
+                    console.log('Success:', response);
+                },
+                error: function (xhr, status, error) {
+                    console.error('Error:', error);
+                }
+            })
+        }
     </script>
 
     <script>
-        $(document).ready(
-            function () {
-                $("#search_ajax").keyup(function () {
-                    var search_item = $(this).val();
-                    if (search_item != "") {
-                        $.ajax({
-                            url: '<?= $base_url ?>controller/ajax.php?act=ajax_search',
-                            method: 'POST',
-                            data: {
-                                keyword: search_item
-                            },
-                            success: function (data) {
-                                console.log(data);
-                                // // console.log(result);
-                                $("#search_result").html(data)
-                            },
-                            error: function (error) {
-                                console.log(error);
-                            }
+        $(document).ready(function () {
+            $("#search_ajax").keyup(function () {
+                var search_item = $(this).val();
+                if (search_item != "") {
+                    $.ajax({
+                        url: '<?= $base_url ?>controller/ ajax.php ? act = ajax_search',
+                        method: 'POST',
+                        data: {
+                            keyword: search_item
+                        },
+                        success: function (data) {
+                            // // console.log(result);
+                            $("#search_result").html(data)
+                        },
+                        error: function (error) {
+                            console.log(error);
+                        }
+                    })
+                }
 
-                        })
-                    }
+                function data_option() {
+                    var data = $('#select_data').val();
+                    $.ajax({
+                        url: "<?= $base_url ?>controller/ ajax.php ? act = select_option",
+                        type: "POST",
+                        data: {
+                            search_key: data
+                        },
+                        success: function (data) {
+                            $('.product-default_option').html(data);
+                        }
+                    });
+                }
+                $('#select_data').on('change', function () {
+                    data_option();
                 })
             })
-        function data_option() {
-            var data = $('#select_data').val();
-            $.ajax({
-                url: "<?= $base_url ?>controller/ajax.php?act=select_option",
-                type: "POST",
-                data: {
-                    search_key: data
-                },
-                success: function (data) {
-                    $('.product-default_option').html(data);
-                }
-            });
-        }
-        $('#select_data').on('change', function () {
-            data_option();
         })
 
     </script>
