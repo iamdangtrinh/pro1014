@@ -55,8 +55,8 @@
             <img class="" src="<?= $base_url ?>assets/images/cart.png" alt="">
         </div>
         <cart class="title">
-            <p class="cart-text">Giỏ hàng trống</p>
-            <p class="cart-suggestion">Bạn tham khảo thêm các sản phẩm được cửa hàng Bé Yêu gợi ý nhé!</p>
+            <h1 class="cart-text">Giỏ hàng trống</h1>
+            <h3 class="cart-suggestion">Bạn tham khảo thêm các sản phẩm được <a href="<?=$base_url?>page/shop">cửa hàng Bé Yêu gợi ý nhé</a>!</h3>
         </cart>
     </div>
 </body>
