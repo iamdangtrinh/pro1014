@@ -1,4 +1,5 @@
 ﻿<?php
+include_once '../config.php';
 /* Payment Notify
  * IPN URL: Ghi nhận kết quả thanh toán từ VNPAY
  * Các bước thực hiện:

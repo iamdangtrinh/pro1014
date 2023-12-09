@@ -57,13 +57,12 @@
                             <i class="fas fa-bars"></i>
                         </button>
                         <a href="<?= $base_url ?>page/home" class="logo">
-                            <img src="<?= $base_url ?>upload/logo.png" alt="Porto Logo" width="113"
-                                height="48">
+                            <img src="<?= $base_url ?>upload/logo.png" alt="Porto Logo" width="113" height="48">
                         </a>
                     </div>
 
                     <div class="header-right">
-                        <?php if(isset($_SESSION['user'])): ?>
+                        <?php if (isset($_SESSION['user'])): ?>
                             <a href="<?= $base_url ?>user/dashboard" class="header-icon d-lg-block d-none">
                                 <div class="header-user">
                                     <img src="<?= $base_url ?>upload/avatar/<?= $_SESSION['user']['HinhAnh'] ?>"
@@ -95,7 +94,7 @@
                                 <span class="cart-count badge-circle">
                                     <?php
 
-                                    if(isset($_SESSION['user'])) {
+                                    if (isset($_SESSION['user'])) {
                                         echo $count_cart;
                                     } else {
                                         echo "0";
@@ -115,8 +114,8 @@
 
                                     <?php
 
-                                    if(isset($_SESSION['user'])):
-                                        foreach($show_cart_for_user as $value):
+                                    if (isset($_SESSION['user'])):
+                                        foreach ($show_cart_for_user as $value):
                                             extract($value)
                                                 ?>
                                             <div class="dropdown-cart-products">
@@ -164,7 +163,7 @@
                                     endif;
                                     ?>
 
-                                    
+
                                     <!-- <div class="dropdown-cart-total">
                                         <span>TỔNG PHỤ:</span>
 
@@ -209,16 +208,16 @@
                                     <ul>
                                         <?php
                                         $danhmuc = $danhmucmuc;
-                                        foreach($danhmucmuc as $item_dmmuc) {
+                                        foreach ($danhmucmuc as $item_dmmuc) {
                                             // Điêu kiện để lấy danh mục cha
-                                            if($item_dmmuc['MaDMC'] == 0) {
+                                            if ($item_dmmuc['MaDMC'] == 0) {
                                                 ?>
                                                 <li><a href="<?= $base_url ?>category/detail/<?= $item_dmmuc['MaDM'] ?>">
                                                         <?= $item_dmmuc['TenDM'] ?>
                                                     </a>
                                                     <ul>
-                                                        <?php foreach($danhmuc as $item_dm) {
-                                                            if($item_dm['MaDMC'] != 0 && $item_dm['MaDMC'] == $item_dmmuc['MaDM']) {
+                                                        <?php foreach ($danhmuc as $item_dm) {
+                                                            if ($item_dm['MaDMC'] != 0 && $item_dm['MaDMC'] == $item_dmmuc['MaDM']) {
                                                                 ?>
                                                                 <li><a href="<?= $base_url ?>category/detail/<?= $item_dm['MaDM'] ?>">
                                                                         <?= $item_dm['TenDM'] ?>
@@ -258,11 +257,6 @@
                                     <input autocomplete="off" class="form-input" id="search_ajax" type="text"
                                         name="search_key" placeholder="Nhập sản phẩm cần tìm...">
                                     <div id="search_result" class="row input-search">
-                                        <!-- <div class="col-md-4 img-focus">
-                                            <img src="<?= $base_url ?>upload/products/product-1.jpg"
-                                                width="50" height="50" alt="product">
-                                        </div>
-                                        <div class="col-md-8 mt-2 content-focus">Giày đan </div> -->
                                     </div>
                                     <input type="submit" name="search" value="Tìm ngay" class="btn-primary"
                                         style="border-radius: 0 5px 5px 0;">
@@ -271,13 +265,29 @@
                             </form>
                         </div>
 
+                        <script>
+                            $(document).ready(function() {
+                                $('#search_ajax').focus(function () {
+                                    $('#search_result').addClass('d-flex');
+                                });
+
+                                $(document).click(function(e) {
+                                    var t = $(e.target);
+                                    
+                                    if(!t.is('#search_ajax') && !t.is('#search_result')) {
+                                    $('#search_result').hide();
+                                    }
+                                });
+                            })
+                        </script>
+
                     </div>
                 </div>
         </header>
 
         <main class="main">
             <!-- ruot cua WEBSITE -->
-            <?php include_once 'view/v_'.$view_name.'.php'; ?>
+            <?php include_once 'view/v_' . $view_name . '.php'; ?>
         </main>
 
         <footer class="footer">
@@ -286,8 +296,8 @@
                     <div class="row">
                         <div class="col-lg-6 col-xl-4">
                             <a href="#">
-                                <img class="logo mb-3" src="<?= $base_url ?>upload/logo.png"
-                                    alt="SHop bé yêu" width="113" height="48"></a>
+                                <img class="logo mb-3" src="<?= $base_url ?>upload/logo.png" alt="SHop bé yêu"
+                                    width="113" height="48"></a>
 
                             <div class="row">
                                 <div class="col-sm-6 pr-sm-0">
@@ -423,9 +433,9 @@
                         <ul>
                             <?php
                             $kiemtra_dm = null; // Biến để theo dõi TenDM hiện tại
-                            foreach($danhmuc as $item_dm):
-                                if($item_dm['TenDM'] != $kiemtra_dm): // Kiểm tra nếu TenDM thay đổi
-                                    if($kiemtra_dm != null): // Kiểm tra nếu không phải là lần đầu tiên
+                            foreach ($danhmuc as $item_dm):
+                                if ($item_dm['TenDM'] != $kiemtra_dm): // Kiểm tra nếu TenDM thay đổi
+                                    if ($kiemtra_dm != null): // Kiểm tra nếu không phải là lần đầu tiên
                                         echo '</ul></li>'; // Đóng các thẻ ul và li trước đó
                                     endif;
                                     $kiemtra_dm = $item_dm['TenDM']; // Cập nhật TenDM hiện tại
@@ -561,22 +571,42 @@
 
                 })
 
-            })
-            
-            function ThemSPYT(MaSP){
-                // var MaSP = MaSP;
-                // var MaTK = MaTK;
 
-                $.ajax({
-                    type: "POST",
-                    url: "<?= $base_url?>controller/ajax.php?act=addwish",
-                    data: {
-                        MaSP: MaSP
-                    }
+
+                function ThemSPYT(MaSP) {
+                    // var MaSP = MaSP;
+                    // var MaTK = MaTK;
+
+                    $.ajax({
+                        type: "POST",
+                        url: "<?= $base_url ?>controller/ajax.php?act=addwish",
+                        data: {
+                            MaSP: MaSP
+                        }
+                    })
+
+                }
+
+                function data_option() {
+                    var data = $('#select_data').val();
+                    $.ajax({
+                        url: "<?= $base_url ?>controller/ajax.php?act=select_option",
+                        type: "POST",
+                        data: {
+                            search_key: data
+                        },
+                        success: function (data) {
+                            $('.product-default_option').html(data);
+                        }
+                    });
+                }
+                $('#select_data').on('change', function () {
+                    data_option();
                 })
-                
-            }
-        
+            })
+
+
+
     </script>
 </body>
 

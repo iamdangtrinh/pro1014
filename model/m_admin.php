@@ -51,11 +51,35 @@
         $stmt->execute([$TenSP, $anh, $anh1, $anh2, $anh3, $anh4, $SoLuong, $Gia, $GiaGiam, $MoTa, $MaSP]);
         $conn = null; // đóng kết nối database
     }
- 
+
+    function admin_Product_Delete($MaSP){
+        pdo_execute("DELETE FROM sanpham WHERE MaSP=?", $MaSP);
+       }
+       function admin_Product_timxoaAnhSP($MaSP){
+        $conn= pdo_get_connection(); 
+        $stmt = $conn->prepare("SELECT * FROM sanpham WHERE MaSP=$MaSP");
+        $stmt->execute();
+        $mt = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $conn = null; 
+        $Anh = array(
+            $mt[0]['AnhSP'],
+            $mt[0]['AnhSP1'],
+            $mt[0]['AnhSP2'],
+            $mt[0]['AnhSP3'],
+            $mt[0]['AnhSP4']
+        );
+        return $Anh; 
+    }
+    
+
+
+
+    // Xóa file ảnh 
+
     function admin_ShowBanner(){
         return pdo_query("SELECT * FROM banner");
     }
-    function admin_checkMaBanner($MaBanner) {
+    function admin_chitietkBanner($MaBanner) {
         return pdo_query_one("SELECT * FROM banner WHERE MaBanner=?",$MaBanner);
     }
     
@@ -79,6 +103,21 @@
         $conn = null; // đóng kết nối database
     }
     
+    function admin_banner_Delete($MaBanner){
+        $conn= pdo_get_connection(); //gọi hàm kết nối database
+        $sql = "DELETE FROM banner WHERE MaBanner=$MaBanner ";
+        $conn->exec($sql); // exec the query
+        $conn = null; // đóng kết nối database
+       }
+       function admin_banner_timxoaAnhBanner($MaBanner){
+        $conn= pdo_get_connection(); //gọi hàm kết nối database
+        $stmt = $conn->prepare("SELECT * FROM banner WHERE MaBanner=$MaBanner");
+        $stmt->execute();
+        $mt = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $conn = null; // đóng kết nối database
+        return $mt[0]['AnhBanner']; // biến này chứa mãng dòng dữ liệu trả về.
+       }
+
     
     function admin_addkhuyenmai( $TenKM, $codeKhuyenMai, $soTienGiam, $ngayBatDau, $ngayKetThuc, $SoLuong) {
     return pdo_execute("INSERT INTO khuyenmai ( TenKM, CodeKM, GiaKM, NgayBatDau, NgayKetThuc, SoLuong) 
@@ -126,4 +165,24 @@
     function count_km(){
         return pdo_query_value("SELECT COUNT(MaKM) FROM khuyenmai");
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ?>

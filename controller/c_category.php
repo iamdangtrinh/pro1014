@@ -2,6 +2,7 @@
     if(isset($_GET['act'])){
         switch($_GET['act']){
             case 'detail':
+                $dsGhim = product_getPin(3);
                 // lay du liệu
                 if (isset($_GET['id'])) {
                     $MaDM = $_GET['id'];

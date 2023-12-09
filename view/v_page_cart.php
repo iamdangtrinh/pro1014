@@ -58,8 +58,6 @@
                                         <input type="text" name="quantity" value="<?= $SoLuongSP ?>"
                                             class="quantity_product">
 
-                                        <!-- tăng số lượng -->
-                                        <!-- <span class="fa fa-plus plusJS"></span> -->
                                         <button type="button" class="plusJS">
                                             <i class="fa fa-plus"></i>
                                         </button>
@@ -71,7 +69,6 @@
                                     </span>
                                 </td>
                             </tr>
-
                         <?php endforeach ?>
                     </tbody>
 
@@ -82,7 +79,7 @@
                                     <div class="cart-discount">
                                         <form id="coupon" action="#" method="post">
                                             <div class="input-group">
-                                                <input required type="text" class="form-control form-control-sm" id="coupon_code"
+                                                <input type="text" class="form-control form-control-sm" id="coupon_code"
                                                     placeholder="Mã giảm giá" name="couponcode">
                                                 <div class="input-group-append">
                                                     <input type="hidden" name="btn_coupon" value="btn_coupon">
@@ -92,7 +89,7 @@
                                             </div>
                                             <!-- hiển thị kết quả của coupon -->
                                             <div class="result_coupon"></div>
-
+                                            
                                         </form>
                                     </div>
                                 </div>
@@ -157,7 +154,6 @@
         }
         updateTotal()
 
-
         $('.minusJS').click(function () {
             var product_box = this.closest('.product-single-qty');
             var quantity_input = product_box.querySelector('.quantity_product');
@@ -189,7 +185,6 @@
                 var closestProductRow = this.closest('.product-row');
                 var quantity_product_warehouse = closestProductRow.querySelector('[data-quantity_product_warehouse]').dataset.quantity_product_warehouse;
                 if (parseInt(newQuantity) >= quantity_product_warehouse) {
-                    // var btn_plus = closestProductRow.querySelector('.plusJS');
                     $(this).val(quantity_product_warehouse);
                 } else {
                     $(this).val(newQuantity);
@@ -217,45 +212,35 @@
         });
 
         // ---------------- Mã giảm giá -------------------------------
-        $(document).ready(function () {
-            var code_old = $('#coupon_code').val();
-
-            $('#coupon').submit(function (e) {
-                e.preventDefault();
-                var coupon_code = $('#coupon_code').val();
-
-                if (coupon_code === code_old) {
-                    $(".result_coupon").html("Vui lòng nhập mã khác");
-                } else {
-                    $(".result_coupon").html("");
-                }
-            })
-        });
-
+        var coupon_old = '';
         $('#coupon').on('submit', function (e) {
             e.preventDefault();
-        })
+            var coupon_new = $('#coupon_code').val();
 
-        $('#coupon').on('submit', function () {
-            var data = $(this).serialize();
-            $.ajax({
-                type: "POST",
-                url: "<?= $base_url ?>controller/ajax.php?act=ajax_cart_coupon",
-                data: data,
-                success: function (data) {
-                    if (data === "error_coupon_null") {
-                        $(".result_coupon").text("Vui lòng nhập mã giảm giá")
+            if (coupon_new === coupon_old) {
+                $(".result_coupon").text("Bạn đã nhập mã giảm này")
+            }
+            else {
+                var data = $(this).serialize();
+                $.ajax({
+                    type: "POST",
+                    url: "<?= $base_url ?>controller/ajax.php?act=ajax_cart_coupon",
+                    data: data,
+                    success: function (data) {
+                        if (data === "error_coupon_null") {
+                            $(".result_coupon").text("Vui lòng nhập mã giảm giá")
+                        } else if (data === "error_coupon_false") {
+                            $(".result_coupon").text("Mã giảm giá không đúng")
+                        }
+                        else {
+                            $(".result_coupon").html(data);
+                            coupon_old = coupon_new;
+                        }
                         updateTotal();
-                    } else if (data === "error_coupon_false") {
-                        $(".result_coupon").text("Mã giảm giá không đúng")
-                        updateTotal();
-                    }
-                    else {
-                        $(".result_coupon").html(data);
-                        updateTotal();
-                    }
-                },
-            })
+                    },
+                })
+            }
+
         })
     })
 

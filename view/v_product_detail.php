@@ -74,15 +74,13 @@
         <i class="fa fa-check" style="color: #9ad36a;"></i>
         <span><strong>Hoàn tất!</strong> <?= $_SESSION['thongbao']; ?></span>
     </div>
-    <?php endif;
-                unset($_SESSION['thongbao']); ?>
+    <?php endif; unset($_SESSION['thongbao']); ?>
     <?php if(isset($_SESSION['loi'])): ?>
     <div class="alert alert-rounded alert-danger">
         <i class="fa fa-exclamation-circle" style="color: #ef8495;"></i>
         <span><strong>Không thành công!</strong> <?= $_SESSION['loi']; ?></span>
     </div>
-    <?php endif;
-                unset($_SESSION['loi']); ?>
+    <?php endif; unset($_SESSION['loi']); ?>
     <div class="product-single-container product-single-default">
         <div class="cart-message d-none">
             <strong class="single-cart-notice">Quần áo</strong>

@@ -59,7 +59,7 @@
                                     <label>Phân loại:</label>
 
                                     <div class="select-custom">
-                                        <select name="orderby" class="form-control">
+                                    <select name="search_key" id="select_data" class="form-control">
                                             <option value="menu_order" selected="selected">Mặc định</option>
                                             <option value="popularity">Phổ biến</option>
                                             <option value="rating">Đánh giá tốt</option>
@@ -67,11 +67,12 @@
                                             <option value="price">Giá từ thấp -> cao</option>
                                             <option value="price-desc">Giá từ cao -> thấp</option>
                                         </select>
-                                    </div><!-- End .select-custom -->
+                                    </div>
 
+                                    
 
-                                </div><!-- End .toolbox-item -->
-                            </div><!-- End .toolbox-left -->
+                                </div>
+                            </div>
 
                             <div class="toolbox-right">
                                 <div class="toolbox-item layout-modes">
@@ -81,11 +82,11 @@
                                     <a href="category-list.html" class="layout-btn btn-list" title="List">
                                         <i class="icon-mode-list"></i>
                                     </a>
-                                </div><!-- End .layout-modes -->
-                            </div><!-- End .toolbox-right -->
+                                </div>
+                            </div>
                         </nav>
                         <!-- chỗ lầy là chỗ foeach sản phẩm -->
-                        <div class="row">
+                        <div class="row product-default_option ">
                             <?php foreach ($product_shop as $product): ?>
                                 <?php if(!$product['GiaGiam']): ?>
                                     <div class="col-6 col-sm-4 col-lg-3">
@@ -138,14 +139,14 @@
                                                 <div class="ratings-container">
                                                     <div class="product-ratings">
                                                         <span class="ratings" style="width:<?=$product['trungbinh_rating']?>%"></span>
-                                                        <!-- End .ratings -->
+                                                        
                                                         <span class="tooltiptext tooltip-top"></span>
-                                                    </div><!-- End .product-ratings -->
-                                                </div><!-- End .product-container -->
+                                                    </div>
+                                                </div>
                                                 <div class="price-box">
                                                     <span class="product-price"><?=number_format($product['Gia'],0,",",".")?>đ</span>
-                                                </div><!-- End .price-box -->
-                                            </div><!-- End .product-details -->
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 <?php else: ?>
@@ -202,22 +203,21 @@
                                                 <div class="ratings-container">
                                                     <div class="product-ratings">
                                                         <span class="ratings" style="width:<?=$product['trungbinh_rating']?>%"></span>
-                                                        <!-- End .ratings -->
+                                                        
                                                         <span class="tooltiptext tooltip-top"></span>
-                                                    </div><!-- End .product-ratings -->
-                                                </div><!-- End .product-container -->
+                                                    </div>
+                                                </div>
                                                 <div class="price-box">
                                                     <span class="old-price"><?=number_format($product['Gia'],0,",",".")?>đ</span>
                                                     <span class="product-price"><?=number_format($product['GiaGiam'],0,",",".")?>đ</span>
-                                                </div><!-- End .price-box -->
-                                            </div><!-- End .product-details -->
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 <?php endif; ?>
                             <?php endforeach; ?>
-                            <!-- chỗ lầy là chỗ foeach sản phẩm -->
-                            <!-- End .col-lg-3 -->
-                        </div><!-- End .row -->
+                            <!-- chỗ lầy là chỗ foeach sản phẩm    -->
+                        </div>
 
                         <nav class="toolbox toolbox-pagination">
                             <ul class="pagination toolbox-item">
@@ -229,13 +229,12 @@
                                     <a class="page-link" href="<?= $base_url ?>page/shop/<?=$i?>"><?=$i?></a>
                                 </li>
                                 <?php endfor;?>
-                                <li class="page-item"><span class="page-link">...</span></li>
                                 <li class="page-item">
                                     <a class="page-link page-link-btn" href="#"><i class="icon-angle-right"></i></a>
                                 </li>
                             </ul>
                         </nav>
-                    </div><!-- End .col-lg-9 -->
+                    </div>
 
                     <div class="sidebar-overlay"></div>
                     <aside class="sidebar-shop col-lg-3 order-lg-first mobile-sidebar">
@@ -248,58 +247,43 @@
 
                                 <div class="collapse show" id="widget-body-1">
                                     <div class="widget-body">
-                                        <ul class="cat-list">
-                                            <li>
-                                                <a href="#widget-category-1" data-toggle="collapse" role="button"
-                                                    aria-expanded="true" aria-controls="widget-category-1">
-                                                    Em Bé<span class="products-count">(4)</span>
-                                                    <span class="toggle"></span>
-                                                </a>
-                                                <div class="collapse show" id="widget-category-1">
-                                                    <ul class="cat-sublist">
-                                                        <li><a href="#">Đồ chơi<span
-                                                                    class="products-count">(1)</span></a>
-                                                        </li>
-                                                        <li><a href="#">Quần dài<span
-                                                                    class="products-count">(2)</span></a></li>
-                                                    </ul>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <a href="#widget-category-2" class="collapsed" data-toggle="collapse"
-                                                    role="button" aria-expanded="false"
-                                                    aria-controls="widget-category-2">
-                                                    Bé Trai<span class="products-count">(8)</span>
-                                                    <span class="toggle"></span>
-                                                </a>
-                                                <div class="collapse" id="widget-category-2">
-                                                    <ul class="cat-sublist">
-                                                        <li>Quần áo<span class="products-count">(3)</span></li>
-                                                        <li>Giày<span class="products-count">(2)</span></li>
-                                                        <li>Đò chơi<span class="products-count">(1)</span></li>
-                                                    </ul>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <a href="#">Quà tặng<span class="products-count">(4)</span></a>
-                                            </li>
-                                            <li>
-                                                <a href="#widget-category-4" class="collapsed" data-toggle="collapse"
-                                                    role="button" aria-expanded="false"
-                                                    aria-controls="widget-category-4">
-                                                    Bé Gái<span class="products-count">(5)</span>
-                                                    <span class="toggle"></span>
-                                                </a>
-                                                <div class="collapse" id="widget-category-4">
-                                                    <ul class="cat-sublist">
-                                                        <li>Quà tặng<span class="products-count">(4)</span></li>
-                                                    </ul>
-                                                </div>
+                                    <ul class="cat-list">
+                            <?php
+                                        $danhmuc = $danhmucmuc;
+                                        foreach($danhmucmuc as $item_dmmuc) {
+                                            // Điêu kiện để lấy danh mục cha
+                                            if($item_dmmuc['MaDMC'] == 0) {
+                                                ?>
+                                <li>
+                                    - <a href="<?= $base_url ?>category/detail/<?= $item_dmmuc['MaDM'] ?>"
+                                        data-toggle="collapse" role="button" aria-expanded="true"
+                                        aria-controls="widget-category-1">
+                                        <?= $item_dmmuc['TenDM'] ?><span class="products-count"></span>
+                                        <span class="toggle"></span>
+                                    </a>
+
+                                    <?php foreach($danhmuc as $item_dm) {
+                                                            if($item_dm['MaDMC'] != 0 && $item_dm['MaDMC'] == $item_dmmuc['MaDM']) {
+                                                                ?>
+
+                                    <div class="collapse show" id="widget-category-1">
+                                        <ul class="cat-sublist">
+                                            <li><a href="<?= $base_url ?>category/detail/<?= $item_dm['MaDM'] ?>"><?= $item_dm['TenDM'] ?><span
+                                                        class="products-count"></span></a>
                                             </li>
                                         </ul>
-                                    </div><!-- End .widget-body -->
-                                </div><!-- End .collapse -->
-                            </div><!-- End .widget -->
+                                    </div>
+                                </li>
+                                <?php
+                                                            }
+                                                        }
+                                            }
+                                        }
+                                        ?>
+                            </ul>
+                                    </div>
+                                </div>
+                            </div>
 
                             
 
@@ -308,35 +292,35 @@
 
                                 <div class="widget-body">
                                     <div class="featured-col">
+                                    <?php foreach($dsGhim as $sp):?>
                                         <div class="product-default left-details product-widget">
                                             <figure>
-                                                <a href="<?=$base_url?>product/detail/<?=$product['MaSP']?>">
-                                                    <img src="<?=$base_url?>upload/products/small/product-1.jpg"
-                                                        width="75" height="75" alt="product" />
-                                                    <img src="<?=$base_url?>upload/products/small/product-6.jpg"
+                                                <a href="<?=$base_url?>product/detail/<?=$sp['MaSP']?>">
+                                                    <img src="<?=$base_url?>upload/products/<?= $sp['AnhSP'];?>"
                                                         width="75" height="75" alt="product" />
                                                 </a>
                                             </figure>
                                             <div class="product-details">
                                                 <h3 class="product-title">
-                                                    <a href="<?=$base_url?>product/detail/<?=$product['MaSP']?>">Giày bé gái mùa đông màu hồng</a>
+                                                    <a href="<?=$base_url?>product/detail/<?=$sp['MaSP']?>"><?=$sp['TenSP']?></a>
                                                 </h3>
                                                 <div class="ratings-container">
                                                     <div class="product-ratings">
                                                         <span class="ratings" style="width:80%"></span>
-                                                        <!-- End .ratings -->
+                                                        
                                                         <span class="tooltiptext tooltip-top"></span>
-                                                    </div><!-- End .product-ratings -->
-                                                </div><!-- End .product-container -->
+                                                    </div>
+                                                </div>
                                                 <div class="price-box">
-                                                    <span class="product-price">101.000đ &ndash; 111.000đ</span>
-                                                </div><!-- End .price-box -->
-                                            </div><!-- End .product-details -->
+                                                    <span class="product-price"><?=$sp['GiaGiam']?> &ndash; <?=$sp['Gia']?></span>
+                                                </div>
+                                            </div>
                                         </div>
-                                    </div><!-- End .featured-col -->
-                                </div><!-- End .widget-body -->
-                            </div><!-- End .widget -->
-                        </div><!-- End .sidebar-wrapper -->
-                    </aside><!-- End .col-lg-3 -->
-                </div><!-- End .row -->
-            </div><!-- End .container -->
+                                    <?php endforeach;?>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>

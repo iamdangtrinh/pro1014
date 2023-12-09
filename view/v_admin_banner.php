@@ -157,6 +157,7 @@ tr td{
 
 
 </style>
+
             <!-- Recent Orders Table -->
             <div class="box_content" >
             <h1 id="bang_product">Quản lí banner</h1>
@@ -184,7 +185,7 @@ tr td{
                             <td>
                                 <div class="lenh">
                                     <div class="sua" ><a href="<?=$base_url?>admin/banner/edit/<?=$item_banner['MaBanner']?>" style="font-weight: 600; ">Sửa</a></div>
-                                    <div class="xoa"><a href="<?=$base_url?>admin/banner/delete/"  style="font-weight: 600; ">Xóa</a></div>
+                                    <div class="xoa"><a href="<?=$base_url?>admin/banner/delete/<?=$item_banner['MaBanner']?>" onclick="return confirm('Bạn có chắc chắn xóa sản phẩm này?')" style="font-weight: 600; ">Xóa</a></div>
                                 </div>
                             </td>
                         </tr>

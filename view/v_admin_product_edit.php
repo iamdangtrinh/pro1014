@@ -151,10 +151,14 @@ select {
         font-weight: bold;
         font-size: 14px;
     }
+    .boxtb{
+        padding: 10px;
+    }
 </style>
         <div class="box_content">
             <h1>Sửa sản phẩm</h1>
             <br>
+            <div class="boxtb">
             <?php if(isset($_SESSION['thongbao'])): ?>
                 <div class="success" >
                     <?=$_SESSION['thongbao']?>
@@ -166,6 +170,7 @@ select {
                     <?=$_SESSION['loi']?>
                 </div> 
             <?php endif; unset($_SESSION['loi']); ?>
+            </div>
             <div class="box">
                 <form action="" id="form_editProduct" method="POST" enctype="multipart/form-data">
                     <div class="roww">

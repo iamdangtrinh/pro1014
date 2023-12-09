@@ -60,8 +60,12 @@ if(isset($_GET['act'])) {
                 $MaTK = $_SESSION['user']['MaTK'];
                 $cart = show_cart_for_user($MaTK);
                $has_cart = has_cart($MaTK);
-                // Hiển thị dữ liệu
-                $view_name = 'page_cart';
+               if($has_cart == 0) {
+                    $view_name = 'page_not_cart';
+               } else {
+                   // Hiển thị dữ liệu
+                   $view_name = 'page_cart';
+               }
             } else {
                 $_SESSION['error']['login'] = "Vui lòng đăng nhập để mua hàng";
                 header('location: '.$base_url.'user/login');
@@ -76,16 +80,23 @@ if(isset($_GET['act'])) {
 
         case 'update_status_cart':
             include_once 'model/m_cart.php';
-            
             foreach ($show_cart_for_user as $key => $value) {
                 $MaHD = $_POST['MaHD'];
                 $SoLuongSP = $_POST['SoLuongSP'.$key.''];
                 $MaSP = $_POST['MaSP'.$key.''];
+
                 update_quantity_by_checkout($MaHD, $SoLuongSP, $MaSP);
             }
             
+            if(isset($_SESSION['coupon']['has'])) {
+                update_quantity_coupon($_SESSION['coupon']['has']['CodeKM']);
+            }
             upate_status_cart($_POST['MaHD']);
-            header('location: '.$base_url.'vnpay_php/');
+            if(isset($_POST['method_pay'])&&$_POST['method_pay']=='vnpay'){
+                header('location: '.$base_url.'vnpay_php/'.$_POST['MaHD'].'/'.$_POST['TongTien']);
+            }else{
+                header('location: '.$base_url.'page/home');
+            }
             break;
 
         case 'comment':

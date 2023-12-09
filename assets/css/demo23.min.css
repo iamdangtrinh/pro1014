@@ -17990,7 +17990,3 @@ span.toggle {
     display: none;
     min-height: 60px;
 }
-.form-input:focus + .input-search{
-    display:flex;
-    z-index: 999;
-}
