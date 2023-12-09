@@ -42,7 +42,17 @@
                                     </a>
                                 </td>
                                 <td class="m-auto" style="width:115px">
-                                    <?= number_format($Gia, 0, '.', '.')." VND" ?>
+                                    <!-- Nếu mã giảm giá khác 0 thì cho hiển thị giá giảm
+                                    ngược lại nếu == 0 thì hiển thị giá -->
+
+                                    <?php 
+                                        if($GiaGiam !== 0) {
+                                            echo number_format($Gia, 0, '.', '.')." VND";
+                                        } else {
+                                            echo number_format($GiaGiam, 0, '.', '.')." VND";
+                                        }
+                                    ?>
+
                                 </td>
                                 <td class="" style="width: 100px">
                                     <p data-quantity="<?= $MaSP ?>"></p>
