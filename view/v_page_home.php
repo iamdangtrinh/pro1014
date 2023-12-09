@@ -7,8 +7,9 @@
                             }
                         }
                     }">
+                    <?php foreach ($showbanner as $item_banner) :?>          
         <div class="home-slide-1 banner">
-            <img class="slide-bg" src="<?= $base_url ?>upload/1.png" alt="slider image" width="1200" height="575">
+            <img class="slide-bg" src="<?= $base_url ?>upload/banners/<?=$item_banner['AnhBanner']?>" alt="slider image" width="1200" height="400">
 
             <div class="banner-layer banner-layer-middle banner-layer-left">
                 <div class="container-fluid">
@@ -20,8 +21,9 @@
                 </div>
             </div>
         </div>
-        <div class="home-slide-2 banner">
-            <img class="slide-bg" src="<?= $base_url ?>upload/2.png" alt="slider image" width="1200" height="575">
+        <?php endforeach ;?>
+        <!-- <div class="home-slide-2 banner">
+            <img class="slide-bg" src="upload/2.png" alt="slider image" width="1200" height="575">
 
             <div class="banner-layer banner-layer-middle banner-layer-right w-100">
                 <div class="container-fluid">
@@ -33,7 +35,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
     </div>
 </section>
 

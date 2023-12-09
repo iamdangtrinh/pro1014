@@ -11,6 +11,7 @@ $danhmuc = category_getALLDM();
 $danhmucmuc = category_getALLDMMUC();
 include_once 'model/m_admin.php';
 $showanhuser = admin_ShowanhUser();
+$showbanner = admin_ShowBanner();
 include_once 'model/m_cart.php';
 
 if(isset($_SESSION['user'])) {
