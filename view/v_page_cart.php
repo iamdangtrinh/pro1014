@@ -158,7 +158,6 @@
         }
         updateTotal()
 
-
         $('.minusJS').click(function () {
             var product_box = this.closest('.product-single-qty');
             var quantity_input = product_box.querySelector('.quantity_product');

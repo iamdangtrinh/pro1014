@@ -125,8 +125,6 @@ switch ($_GET['act']) {
             case 'popularity':
                 $product_shop = product_search_option_by_poplarity($page = 1);
                 show_product($product_shop, $base_url);
-      
-
                 break;
             case 'rating':
                 $product_shop = product_search_option_by_rating($page = 1);
