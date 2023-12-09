@@ -109,9 +109,6 @@
                     <input type="radio" name="vnpay" value="" id="vnpay">
                     <label required for="vnpay">Thanh toán qua VNPAY</label>
                     </br>
-                    <input type="radio" name="momo" value="" id="momo">
-                    <label required for="momo">Thanh toán qua MOMO</label>
-                    </br>
                     <button type="button" class="btn btn-primary w-100" data-toggle="modal"
                         data-target="#exampleModalCenter" value="">ĐẶT HÀNG </button>
             </div>
