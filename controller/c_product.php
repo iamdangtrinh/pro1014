@@ -84,7 +84,14 @@ if(isset($_GET['act'])) {
             }
             
             upate_status_cart($_POST['MaHD']);
+            if(isset($_POST['vnpay'])){
                 header('location: '.$base_url.'vnpay_php/'.$_POST['MaHD'].'/'.$_POST['TongTien']);
+            }elseif (isset($_POST['momo'])) {
+                
+            }else{
+                header('location: '.$base_url.'vnpay_php/'.$_POST['MaHD'].'/'.$_POST['TongTien']);
+            }
+                
             
             break;
 
