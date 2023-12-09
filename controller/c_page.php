@@ -100,6 +100,7 @@ if(isset($_GET['act'])) {
             $MaTK=$_SESSION['user']['MaTK'];
             $MaHD=$_GET['MaHD'];
             $chitiethd=getproductByHD($MaTK,$MaHD);
+            $title = "Chi tiết đơn hàng";
             $view_name = 'page_nhanhang';
             break;
         case 'history':

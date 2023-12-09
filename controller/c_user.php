@@ -117,6 +117,14 @@ if (isset($_GET['act'])) {
         case 'logout':
             unset($_SESSION['user']);
             header('location: ' . $base_url . 'page/home');
+            break;
+        case 'history':
+            $MaTK=$_SESSION['user']['MaTK'];
+            $MaHD=$_GET['MaHD'];
+            $chitiethd=getproductByHD($MaTK,$MaHD);
+            $view_name = 'user_history';
+            $title = "Chi tiết đơn hàng";
+            break;
         default:
             $view_name = 'page_home';
             break;

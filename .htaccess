@@ -4,6 +4,7 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 
 RewriteRule ^(.*)/chi-tiet-don-hang/(.*)$ index.php?mod=$1&act=nhanhang&MaHD=$2 [L]
+RewriteRule ^chi-tiet-don-hang/(.*)$ index.php?mod=user&act=history&MaHD=$1 [L]
 RewriteRule ^admin/(.*)/(.*)/(.*)/(.*)$ index.php?mod=admin&act=$1-$2&MaSP=$3&id=$4 [L]
 RewriteRule ^admin/(.*)/(.*)/(.*)$ index.php?mod=admin&act=$1-$2&id=$3 [L]
 RewriteRule ^admin/(.*)/(.*)$ index.php?mod=admin&act=$1-$2 [L]
