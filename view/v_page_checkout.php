@@ -1,12 +1,21 @@
+<div class="page-header">
+    <div class="container d-flex flex-column align-items-center">
+        <nav aria-label="breadcrumb" class="breadcrumb-nav">
+            <div class="container">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="<?=$base_url?>page/home">Trang Chủ</a></li>
+                    <li class="breadcrumb-item" aria-current="page"><a href="<?=$base_url?>gio-hang">Giỏ hàng</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">
+                        Xác nhận thanh toán
+                    </li>
+                </ol>
+            </div>
+        </nav>
+        <br>
+        <h1>XÁC NHẬN THANH TOÁN</h1>
+    </div>
+</div>
 <div class="container checkout-container">
-    <nav style="--bs-breadcrumb-divider: '';" aria-label="breadcrumb">
-        <ol class="breadcrumb justify-content-center">
-            <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
-            <li class="breadcrumb-item" aria-current="page">Giỏ hàng</li>
-            <li class="breadcrumb-item active" aria-current="page">Xác nhận thanh toán</li>
-        </ol>
-    </nav>
-
     <div class="row">
         <div class="col-lg-7">
             <ul class="checkout-steps">
@@ -103,7 +112,7 @@
 
                 <form action="<?= $base_url ?>product/update_status_cart" method="post">
                     <h5>Hình thức thanh toán:</h5>
-                    <input type="radio" name="method_pay" value="nhanhang" id="nhanhang">
+                    <input type="radio" checked="checked" name="method_pay" value="nhanhang" id="nhanhang">
                     <label required for="nhanhang">Thanh toán khi nhận hàng</label>
                     </br>
                     <input type="radio" name="method_pay" value="vnpay" id="vnpay">

@@ -422,7 +422,7 @@
                 <!-- End .product-single-container -->
 
                 <div class="product-single-tabs">
-                    <!-- <ul class="nav nav-tabs" role="tablist">
+                    <ul class="nav nav-tabs" role="tablist">
                         <li class="nav-item">
                             <a class="nav-link active" id="product-tab-desc" data-toggle="tab"
                                 href="#product-desc-content" role="tab" aria-controls="product-desc-content"
@@ -446,10 +446,9 @@
                             <a class="nav-link" id="product-tab-reviews" data-toggle="tab"
                                 href="#product-reviews-content" role="tab" aria-controls="product-reviews-content"
                                 aria-selected="false">Đánh giá
-                                ()</a>
+                                (<?=$SLBinhLuan?>)</a>
                         </li>
-                    </ul> -->
-                </div>
+                    </ul>
 
                     <div class="tab-pane fade" id="product-reviews-content" role="tabpanel"
                         aria-labelledby="product-tab-reviews">
@@ -583,7 +582,6 @@
                         </div>
                         <!-- End .tab-content -->
                     </div>
-                </div>
                     <!-- End .product-single-tabs -->
 
                     <!-- End .product-single-tabs -->

@@ -5,13 +5,13 @@
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="<?=$base_url?>page/home">Trang Chủ</a></li>
                     <li class="breadcrumb-item active" aria-current="page">
-                        CHI TIẾT ĐƠN HÀNG
+                        Đặt hàng thành công
                     </li>
                 </ol>
             </div>
         </nav>
         <br>
-        <h1>CHI TIẾT ĐƠN HÀNG</h1>
+        <h1>ĐẶT HÀNG THÀNH CÔNG</h1>
     </div>
 </div>
 <div class="m-auto p-3" style="width: 80%;">

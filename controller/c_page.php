@@ -95,6 +95,14 @@ if(isset($_GET['act'])) {
             //laydulieu
             $view_name = 'page_discount';
             break;
+        case 'nhanhang':
+            //laydulieu
+            $MaTK=$_SESSION['user']['MaTK'];
+            $MaHD=$_GET['MaHD'];
+            $chitiethd=getproductByHD($MaTK,$MaHD);
+            $title = "Chi tiết đơn hàng";
+            $view_name = 'page_nhanhang';
+            break;
         case 'history':
             //laydulieu
             $MaTK = $_SESSION['user']['MaTK'];
