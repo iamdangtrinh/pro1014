@@ -446,10 +446,9 @@
                             <a class="nav-link" id="product-tab-reviews" data-toggle="tab"
                                 href="#product-reviews-content" role="tab" aria-controls="product-reviews-content"
                                 aria-selected="false">Đánh giá
-                                ()</a>
+                                (<?=$SLBinhLuan?>)</a>
                         </li>
                     </ul> -->
-                </div>
 
                     <div class="tab-pane fade" id="product-reviews-content" role="tabpanel"
                         aria-labelledby="product-tab-reviews">
