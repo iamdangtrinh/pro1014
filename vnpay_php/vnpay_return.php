@@ -170,7 +170,7 @@
         </footer>
     </div>
     <div class="page">
-        <h2><a href="<?=$base_url?>page/home">Quay trở lại cửa hàng Bé Yêu</a></h2>
+        <h2><a href="<?=$base_url?>page/chi-tiet-don-hang/<?=$_GET['vnp_TxnRef']?>">Xem chi tiết đơn hàng</a></h2>
     </div>
 </body>
 
