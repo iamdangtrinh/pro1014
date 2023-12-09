@@ -46,7 +46,7 @@
                                     ngược lại nếu == 0 thì hiển thị giá -->
 
                                     <?php 
-                                        if($GiaGiam !== 0) {
+                                        if(!$GiaGiam) {
                                             echo number_format($Gia, 0, '.', '.')." VND";
                                         } else {
                                             echo number_format($GiaGiam, 0, '.', '.')." VND";
@@ -64,7 +64,11 @@
                                         <button type="button" class="minusJS">
                                             <i class="fa fa-minus"></i>
                                         </button>
-                                        <input type="hidden" class="price_product" value="<?= $Gia ?>">
+                                    
+                                    <?php
+                                    echo (!$GiaGiam)? '<input type="hidden" class="price_product" value="'.$Gia.'">' : '<input type="hidden" class="price_product" value="'.$GiaGiam.'">';
+                                      ?>
+
                                         <input type="text" name="quantity" value="<?= $SoLuongSP ?>"
                                             class="quantity_product">
 
