@@ -24,11 +24,11 @@
     }
     function product_search_option_by_price($page=1){
         $batdau= ($page-1)*12;
-        return pdo_query("SELECT sp.TenSP,sp.Gia,sp.GiaGiam,sp.AnhSP,sp.MaSP,sp.SoLuong ,dm.MaDM, dm.TenDM  FROM sanpham sp INNER JOIN danhmuc dm ON sp.MaDM = dm.MaDM ORDER BY Gia ASC LIMIT $batdau,12");
+        return pdo_query("SELECT sp.TenSP,sp.Gia,sp.GiaGiam,sp.AnhSP,sp.MaSP,sp.SoLuong ,dm.MaDM, dm.TenDM  FROM sanpham sp INNER JOIN danhmuc dm ON sp.MaDM = dm.MaDM ORDER BY COALESCE(GiaGiam, Gia) ASC LIMIT $batdau,12");
     }
     function product_search_option_by_pricedesc($page=1){
         $batdau= ($page-1)*12;
-        return pdo_query("SELECT sp.TenSP,sp.Gia,sp.GiaGiam,sp.AnhSP,sp.MaSP,sp.SoLuong ,dm.MaDM, dm.TenDM  FROM sanpham sp INNER JOIN danhmuc dm ON sp.MaDM = dm.MaDM ORDER BY Gia DESC LIMIT $batdau,12");
+        return pdo_query("SELECT sp.TenSP,sp.Gia,sp.GiaGiam,sp.AnhSP,sp.MaSP,sp.SoLuong ,dm.MaDM, dm.TenDM  FROM sanpham sp INNER JOIN danhmuc dm ON sp.MaDM = dm.MaDM ORDER BY COALESCE(GiaGiam, Gia) DESC LIMIT $batdau,12");
     }
     function product_search_option_by_rating($page=1){
         $batdau= ($page-1)*12;

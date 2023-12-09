@@ -6790,7 +6790,7 @@ figure .porto-loading-icon {
     position: relative
 }
 
-.inner-quickview figure .btn-quickview {
+.inner-quickview figure .btn-view {
     position: absolute;
     padding: 0.8rem 1.4rem;
     bottom: 0;
