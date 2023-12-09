@@ -172,6 +172,7 @@
                             <a href="<?=$base_url?>page/wishlist" 
                             <?php if(isset($_SESSION['user'])){
                                 $MaTK=$_SESSION['user']['MaTK'];
+                                include_once 'm_wishlist.php';
                                 $CheckWish=check_wishByProductAndUser($MaTK,$product['MaSP']);
                                 if($CheckWish!=""){
                                     echo 'title="Đến trang yêu thích" class="btn-icon-wish added-wishlist" ';
