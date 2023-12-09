@@ -22,6 +22,7 @@
         <div class="container">
         <h3>Tạo mới đơn hàng</h3>
             <div class="table-responsive">
+                <?=$_GET['amount']?>
                 <form action="<?= $base_url?>vnpay_php/vnpay_create_payment.php" id="frmCreateOrder" method="post">        
                     <div class="form-group">
                         <label for="amount">Số tiền</label>
@@ -44,7 +45,7 @@
                        <label for="bankCode">Thanh toán qua thẻ quốc tế</label><br>
                        
                     </div>
-                    <input type="hidden" name="MaHD" value="<?=$_GET['MaHD']?>">
+                    <input type="text" name="MaHD" value="<?= $_GET['MaHD']?>">
                     <div class="form-group">
                         <h5>Chọn ngôn ngữ giao diện thanh toán:</h5>
                          <input type="radio" id="language" Checked="True" name="language" value="vn">
