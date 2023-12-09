@@ -133,7 +133,6 @@
 
     function show_product($product_shop,  $base_url) {
         foreach ($product_shop as $product): ?>
-                
             <div class="col-6 col-sm-4 col-lg-3">
                 <div class="product-default inner-quickview inner-icon">
                     <figure>
@@ -141,6 +140,14 @@
                             <img src="<?=$base_url?>upload/products/<?= $product['AnhSP'];?>"
                                 alt="product" style="width: 207px; height: 220px;">
                         </a>
+                        <?php if(!$product['GiaGiam']): ?>
+                            <div class="label-group">
+                            </div>
+                        <?php else: ?>
+                            <div class="label-group">
+                                <div class="product-label label-sale">-<?=substr((($product['Gia'] - $product['GiaGiam']) / $product['Gia']) * 100, 0, 2)?>%</div>
+                            </div>
+                        <?php endif; ?>
                         <div class="btn-icon-group">
                             <a href="<?= $base_url ?>product/detail/<?= $product['MaSP'];?>"
                                 class="btn-icon btn-add-cart fa-solid fa-cart-shopping"></a>
@@ -189,12 +196,16 @@
                             </div>
                         </div>
                         <div class="price-box">
-                            <span class="product-price"><?=number_format($product['Gia'],0,",",".")?>đ</span>
+                            <?php if(!$product['GiaGiam']): ?>
+                                <span class="product-price"><?=number_format($product['Gia'],0,",",".")?>đ</span>
+                            <?php else: ?>
+                                <span class="old-price"><?=number_format($product['Gia'],0,",",".")?>đ</span>
+                                <span class="product-price"><?=number_format($product['GiaGiam'],0,",",".")?>đ</span>
+                            <?php endif; ?>
                         </div>
                     </div>
                 </div>
             </div>
-           
     <?php endforeach;
     }
 

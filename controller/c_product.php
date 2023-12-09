@@ -92,11 +92,11 @@ if(isset($_GET['act'])) {
                 update_quantity_coupon($_SESSION['coupon']['has']['CodeKM']);
             }
             upate_status_cart($_POST['MaHD']);
-            // if(isset($_POST['vnpay'])){
-            //     header('location: '.$base_url.'vnpay_php/'.$_POST['MaHD'].'/'.$_POST['TongTien']);
-            // }else{
-            // }
-            header('location: '.$base_url.'vnpay_php/'.$MaHD.'/'.$_POST['TongTien']);
+            if(isset($_POST['vnpay'])){
+                header('location: '.$base_url.'vnpay_php/'.$_POST['MaHD'].'/'.$_POST['TongTien']);
+            }else{
+                header('location: '.$base_url.'vnpay_php/'.$MaHD.'/'.$_POST['TongTien']);
+            }
             break;
 
         case 'comment':

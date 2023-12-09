@@ -103,10 +103,10 @@
 
                 <form action="<?= $base_url ?>product/update_status_cart" method="post">
                     <h5>Hình thức thanh toán:</h5>
-                    <input type="radio" name="nhanhang" value="" id="nhanhang">
+                    <input type="radio" name="method_pay" value="nhanhang" id="nhanhang">
                     <label required for="nhanhang">Thanh toán khi nhận hàng</label>
                     </br>
-                    <input type="radio" name="vnpay" value="" id="vnpay">
+                    <input type="radio" name="method_pay" value="vnpay" id="vnpay">
                     <label required for="vnpay">Thanh toán qua VNPAY</label>
                     </br>
                     <button type="button" class="btn btn-primary w-100" data-toggle="modal"
