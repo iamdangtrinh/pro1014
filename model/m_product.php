@@ -45,6 +45,9 @@
     function product_shop($start, $limit) {
         return pdo_query("SELECT * FROM sanpham sp INNER JOIN danhmuc dm ON sp.MaDM = dm.MaDM ORDER BY sp.SoLuong DESC LIMIT $start, $limit");
     }
+    function getproductByHD($MaTK,$MaHD) {
+        return pdo_query("SELECT AnhSP,TenSP,cthd.MaSP as MaSP,Gia,GiaGiam,SoLuongSP,TrangThai,TongTien FROM taikhoan tk INNER JOIN hoadon hd ON tk.MaTK=hd.MaTK INNER JOIN chitiethoadon cthd ON hd.MaHD=cthd.MaHD INNER JOIN sanpham sp ON cthd.MaSP=sp.MaSP WHERE hd.MaTK=? AND hd.MaHD=?;",$MaTK,$MaHD);
+    }
     function count_product(){
         return pdo_query_value("SELECT count(*) AS soluong FROM sanpham");
     }
