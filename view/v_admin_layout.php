@@ -80,6 +80,9 @@
         .table tbody td:nth-child(2) {
             text-align: center;
         }
+        .table tbody tr:last-child td{
+            border: 1px solid #ddd;
+        }
     </style>
 </head>
 
