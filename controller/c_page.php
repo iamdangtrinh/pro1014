@@ -16,7 +16,7 @@ if(isset($_GET['act'])) {
             $limit = 12;
             $start = 0;
             $soluongSP = count_product();
-            $sotrang = ceil($soluongSP / $limit);
+            $sotrang = ceil(intval($soluongSP) / $limit);
             if(isset($_GET["shop"])) {
                 // Xác định trang hiện tại
                 $trang_hien_tai = isset($_GET['shop']) ? intval($_GET['shop']) : 1;
@@ -121,7 +121,7 @@ if(isset($_GET['act'])) {
                 $page = $_GET['page'];
             }
             $ketqua = product_search($_GET['search_key'], $page);
-            $sotrang = ceil((product_searchTotal($_GET['search_key'])) / 12);
+            $sotrang = ceil(intval((product_searchTotal($_GET['search_key']))) / 12);
             // hien thi du lieu
             $view_name = 'page_search';
             break;
