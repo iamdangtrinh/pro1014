@@ -253,25 +253,6 @@ function show_product($product_shop, $base_url)
             </div>
         </div>
     <?php endforeach;
-
-    echo '<nav class="toolbox toolbox-pagination">
-<ul class="pagination toolbox-item">
-    <li class="page-item disabled">
-        <a class="page-link page-link-btn" href="#"><i class="icon-angle-left"></i></a>
-    </li>';
-    for ($i = 1; $i <= $sotrang; $i++) {
-        echo '<li class="page-item">
-        <a class="page-link" href="' . $base_url . 'page/shop/' . $i . '">' . $i . '</a>
-      </li>';
-    }
-    echo '<li class="page-item">
-    <a class="page-link page-link-btn" href="#"><i class="icon-angle-right"></i></a>
-</li>
-</ul>
-</nav>';
-
-
-
 }
 
 
