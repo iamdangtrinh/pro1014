@@ -88,14 +88,13 @@ if(isset($_GET['act'])) {
 
                 update_quantity_by_checkout($MaHD, $SoLuongSP, $MaSP);
             }
-            
             if(isset($_SESSION['coupon']['has'])) {
                 update_quantity_coupon($_SESSION['coupon']['has']['CodeKM']);
             }
-            upate_status_cart($_POST['MaHD']);
             if(isset($_POST['method_pay'])&&$_POST['method_pay']=='vnpay'){
                 header('location: '.$base_url.'vnpay_php/'.$_POST['MaHD'].'/'.$_POST['TongTien']);
             }else{
+                upate_status_cart($_POST['MaHD']);
                 header('location: '.$base_url.'page/chi-tiet-don-hang/'.$_POST['MaHD']);
             }
             break;
