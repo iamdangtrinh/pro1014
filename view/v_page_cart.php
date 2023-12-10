@@ -117,15 +117,7 @@
         <div class="col-lg-4">
             <div class="cart-summary">
                 <h3>TỔNG GIỎ HÀNG</h3>
-
                 <table class="table table-totals">
-                    <tbody>
-                        <tr>
-                            <td>Tổng phụ</td>
-                            <td>17.000đ</td>
-                        </tr>
-                    </tbody>
-
                     <tfoot>
                         <tr>
                             <td>Tổng cộng</td>
@@ -204,10 +196,7 @@
                     $(this).val(newQuantity);
                 }
             }
-
-            updateTotal()
             var MaSP = closestProductRow.querySelector('[data-quantity]').dataset.quantity;
-
             $.ajax({
                 type: "POST",
                 url: '<?= $base_url ?>controller/ajax.php?act=ajax_cart_quantity',
@@ -222,6 +211,7 @@
                     console.log(data);
                 }
             });
+            updateTotal()
 
         });
 

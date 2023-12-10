@@ -122,6 +122,7 @@ switch ($_GET['act']) {
         $search_key = $_POST['search_key'];
         switch ($search_key) {
             case 'menu_order':
+               
                 $product_shop = product_search_option_by_default($page = 1);
                 show_product($product_shop, $base_url);
                 break;
