@@ -1,6 +1,6 @@
 RewriteEngine On
-# RewriteBase /pro1014/
-RewriteBase /
+RewriteBase /pro1014/
+# RewriteBase /
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 
