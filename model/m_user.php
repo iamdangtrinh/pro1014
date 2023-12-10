@@ -46,4 +46,17 @@
     function user_update_pass($MaTK, $MatKhau){
         pdo_execute("UPDATE taikhoan SET MatKhau = ? WHERE MaTK = ?", $MatKhau, $MaTK);
     }
+    //up anh
+    function user_upanh($name){
+        $target_dir='upload/avatar/';
+        $target_file=$target_dir . basename($_FILES[''.$name.'']['name']);
+        if(!file_exists($target_file)){
+            move_uploaded_file($_FILES[''.$name.'']['tmp_name'], $target_file);
+        }
+        $img=basename($_FILES[''.$name.'']['name']);
+        return $img;
+    }
+    function user_timhinhxoaanh($MaTK){
+        return pdo_query_one("SELECT * FROM taikhoan WHERE MaTK = ?",$MaTK);
+    }
 ?>
