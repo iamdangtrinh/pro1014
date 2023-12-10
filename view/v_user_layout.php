@@ -30,6 +30,16 @@
     <script src="<?= $base_url ?>assets/js/jquery.min.js"></script>
     <script src="<?= $base_url ?>assets/js/validate.js"></script>
 
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2P2HKGGNHM"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-2P2HKGGNHM');
+</script>
+
     <style>
         html {
             font-family: Arial, Helvetica, sans-serif;
