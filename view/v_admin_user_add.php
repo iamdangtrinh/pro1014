@@ -129,6 +129,15 @@ unset($_SESSION['loi']); ?>
 </form>
 </div>
     <script>
+            function numericInputHandler(inputId) {
+    $(inputId).on("keyup", function () {
+        var value = $(this).val();
+        value = value.replace(/[^0-9]/g, ""); // Loại bỏ các ký tự không phải số
+        $(this).val(value);
+    });
+}
+
+numericInputHandler("#SoDienThoai");
         $().ready(function(){
             $("#form_addUser").validate({
                 

@@ -151,17 +151,22 @@ td {
     margin-top: 5px;
 
 }
+.error{
+        color: red;
+        font-weight: bold;
+        font-size: 14px;
+    }
 </style>
 <h1>Quản lí Khuyến mãi</h1><br>
 <!-- Recent Orders Table -->
 <h2>Thêm mã khuyến mãi</h2>
 <form class="form" id="form_coupon" action="<?=$base_url?>admin/khuyenmai" method="post">
-    <input type="text" class="form-control" name="TenKM" placeholder="Tên khuyến mãi">
-    <input type="text" class="form-control" name="khuyenMai" placeholder="CodeKM">
-    <input type="text" class="form-control" name="soTienGiam" placeholder="Số tiền giảm">
-    <input type="text" class="form-control" name="SoLuong" placeholder="Số lượng">
-    <input type="date" class="form-control" name="ngayBatDau" placeholder="Ngày bắt đầu">
-    <input type="date" class="form-control" name="ngayKetThuc" placeholder="Ngày kết thúc">
+    <input type="text" class="form-control" id="TenKM" name="TenKM" placeholder="Tên khuyến mãi"> <br>
+    <input type="text" class="form-control" id="khuyenMai" name="khuyenMai" placeholder="CodeKM"><br>
+    <input type="text" class="form-control" id="soTienGiam" name="soTienGiam" placeholder="Số tiền giảm"><br>
+    <input type="text" class="form-control" id="SoLuong" name="SoLuong" placeholder="Số lượng"><br>
+    <input type="date" class="form-control" id="ngayBatDau" name="ngayBatDau" placeholder="Ngày bắt đầu"><br>
+    <input type="date" class="form-control" id="ngayKetThuc" name="ngayKetThuc" placeholder="Ngày kết thúc"><br>
     <button type="submit" name="btn_km" class="them">Thêm</button>
 </form>
 <div class="box">
@@ -220,6 +225,15 @@ td {
 <!-- End of Recent Orders -->
 
 <script>
+       function numericInputHandler(inputId) {
+    $(inputId).on("keyup", function () {
+        var value = $(this).val();
+        value = value.replace(/[^0-9]/g, ""); // Loại bỏ các ký tự không phải số
+        $(this).val(value);
+    });
+}
+
+numericInputHandler("#soTienGiam");
     $(document).ready(function() {
         $('#form_coupon').validate({
             rules: {
@@ -228,7 +242,19 @@ td {
                 },
                 khuyenMai: {
                     required: true
-                }
+                },
+                soTienGiam: {
+                    required: true
+                },
+                SoLuong: {
+                    required: true
+                },
+                ngayBatDau: {
+                    required: true
+                },
+                ngayKetThuc: {
+                    required: true
+                },
             },
             messages: {
                 TenKM: {
@@ -237,7 +263,19 @@ td {
                 },
                 khuyenMai: {
                     required: "Vui lòng nhập mã khuyến mãi"
-                }
+                },
+                soTienGiam: {
+                    required: "Vui lòng nhập số tiền giảm"
+                },
+                SoLuong: {
+                    required: "Vui lòng nhập số lượng"
+                },
+                ngayBatDau: {
+                    required: "Vui lòng chọn ngày bắt đầu"
+                },
+                ngayKetThuc: {
+                    required: "Vui lòng chọn ngày kết thúc"
+                },
             },
             
         })

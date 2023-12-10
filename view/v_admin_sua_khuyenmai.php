@@ -180,11 +180,16 @@ form {
 .btn:hover {
     background-color: #ffd5dd;
 }
+.error{
+        color: red;
+        font-weight: bold;
+        font-size: 14px;
+    }
 </style>
 <h1>Quản lí Khuyến mãi</h1><br>
 <!-- Recent Orders Table -->
 <h2>Sửa khuyến mãi</h2>
-<form action="" method="POST">
+<form action="" id="form_editCoupon" method="POST">
 <input type="hidden" name="MaKM" value="<?= $show_KM['MaKM'];?>">
             <div class="mb-3">
             <label for="TenKM" lass="form-label">Code khuyến mãi: </label><input type="text" class="form-control" name="TenKM" value="<?= $show_KM['TenKM'];?>"><br>
@@ -206,3 +211,61 @@ form {
 <h4><?php 
 ?></h4>
 <!-- End of Recent Orders -->
+<script>
+       function numericInputHandler(inputId) {
+    $(inputId).on("keyup", function () {
+        var value = $(this).val();
+        value = value.replace(/[^0-9]/g, ""); // Loại bỏ các ký tự không phải số
+        $(this).val(value);
+    });
+}
+
+numericInputHandler("#soTienGiam");
+    $(document).ready(function() {
+        $('#form_editCoupon').validate({
+            rules: {
+                TenKM: {
+                    required: true,
+                },
+                khuyenMai: {
+                    required: true
+                },
+                soTienGiam: {
+                    required: true
+                },
+                SoLuong: {
+                    required: true
+                },
+                ngayBatDau: {
+                    required: true
+                },
+                ngayKetThuc: {
+                    required: true
+                },
+            },
+            messages: {
+                TenKM: {
+                    required: "Vui lòng nhập tên khuyễn mãi",
+
+                },
+                khuyenMai: {
+                    required: "Vui lòng nhập mã khuyến mãi"
+                },
+                soTienGiam: {
+                    required: "Vui lòng nhập số tiền giảm"
+                },
+                SoLuong: {
+                    required: "Vui lòng nhập số lượng"
+                },
+                ngayBatDau: {
+                    required: "Vui lòng chọn ngày bắt đầu"
+                },
+                ngayKetThuc: {
+                    required: "Vui lòng chọn ngày kết thúc"
+                },
+            },
+            
+        })
+    })
+    
+</script>
