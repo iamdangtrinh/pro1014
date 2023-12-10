@@ -448,6 +448,6 @@ if(isset($_GET['act'])) {
     }
     include_once 'view/v_admin_layout.php';
 } else {
-    header('location: '.$base_url.'page/home');
+    header('location: '.$base_url.'404.php');
 }
 ?>

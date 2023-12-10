@@ -3,6 +3,7 @@ RewriteBase /pro1014/
 # RewriteBase /
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
+ErrorDocument 404 /pro1014/404.php
 
 RewriteRule ^(.*)/chi-tiet-don-hang/(.*)$ index.php?mod=$1&act=nhanhang&MaHD=$2 [L]
 RewriteRule ^chi-tiet-don-hang/(.*)$ index.php?mod=user&act=history&MaHD=$1 [L]
