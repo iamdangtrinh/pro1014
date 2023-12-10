@@ -568,12 +568,13 @@
     </script>
 
     <script>
+        
         $(document).ready(function () {
             $("#search_ajax").keyup(function () {
                 var search_item = $(this).val();
                 if (search_item != "") {
                     $.ajax({
-                        url: '<?= $base_url ?>controller/ ajax.php ? act = ajax_search',
+                        url: '<?= $base_url ?>controller/ajax.php?act=ajax_search',
                         method: 'POST',
                         data: {
                             keyword: search_item
@@ -588,9 +589,6 @@
                     })
                 }
             })
-        })
-
-        $(document).ready(function () {
             function data_option() {
                 var data = $('#select_data').val();
                 $.ajax({
