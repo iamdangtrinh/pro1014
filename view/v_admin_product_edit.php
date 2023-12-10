@@ -251,7 +251,7 @@ select {
 
 numericInputHandler("#SoLuong");
 numericInputHandler("#Gia");
-numericInputHandler("#GGiaGiam");
+numericInputHandler("#GiaGiam");
 
     $(document).ready(function(){
         $("#form_editProduct").validate({

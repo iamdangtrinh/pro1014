@@ -1,3 +1,10 @@
+<style>
+    .error{
+        color: red;
+        font-weight: bold;
+        font-size: 14px;
+    }
+</style>
 <div class="page-header">
     <div class="container d-flex flex-column align-items-center">
         <nav aria-label="breadcrumb" class="breadcrumb-nav">
@@ -21,12 +28,12 @@
             <ul class="checkout-steps">
                 <li>
                     <h2 class="step-title">Chi tiết đơn hàng</h2>
-
-                    <form action="" id="checkout-form">
+                    
+                    <form  action="<?= $base_url ?>product/update_status_cart" method="post" id="checkout-form">
                         <div class="form-group">
                             <label>Họ và tên
                                 <abbr class="required" title="required">*</abbr></label>
-                            <input type="text" class="form-control"
+                            <input type="text" class="form-control" id="HoTen" name="HoTen"
                                 value="<?php echo isset($_SESSION['user']) ? $_SESSION['user']['HoTen'] : "" ?>"
                                 required />
                         </div>
@@ -34,21 +41,21 @@
                         <div class="form-group mb-1 pb-2">
                             <label>Địa chỉ nhận hàng
                                 <abbr class="required" title="required">*</abbr></label>
-                            <input type="text" class="form-control" placeholder="Địa chỉ nhận hàng"
+                            <input type="text" class="form-control" placeholder="Địa chỉ nhận hàng" id="DiaChi" name="DiaChi"
                                 value="<?php echo isset($_SESSION['user']) ? $_SESSION['user']['DiaChi'] : "" ?>"
                                 required />
                         </div>
 
                         <div class="form-group">
                             <label>Điện thoại <abbr class="required" title="required">*</abbr></label>
-                            <input type="tel" class="form-control" required
+                            <input type="tel" class="form-control" required id="SoDienThoai" name="SoDienThoai"
                                 value="<?php echo isset($_SESSION['user']) ? $_SESSION['user']['SoDienThoai'] : "" ?>">
                         </div>
 
                         <div class="form-group">
                             <label>Địa chỉ email
                                 <abbr class="required" title="required">*</abbr></label>
-                            <input type="email" class="form-control" required
+                            <input type="email" class="form-control" required id="Email" name="Email"
                                 value="<?php echo isset($_SESSION['user']) ? $_SESSION['user']['Email'] : "" ?>" />
                         </div>
 
@@ -57,7 +64,8 @@
                             <textarea class="form-control"
                                 placeholder="Ghi chú về đơn hàng của bạn, ví dụ như ghi chú đặc biệt khi giao hàng."></textarea>
                         </div>
-                    </form>
+                        
+                    
                 </li>
             </ul>
         </div>
@@ -110,7 +118,7 @@
                     </tfoot>
                 </table>
 
-                <form action="<?= $base_url ?>product/update_status_cart" method="post">
+                
                     <h5>Hình thức thanh toán:</h5>
                     <input type="radio" checked="checked" name="method_pay" value="nhanhang" id="nhanhang">
                     <label required for="nhanhang">Thanh toán khi nhận hàng</label>
@@ -161,3 +169,57 @@
         </div>
     </div>
 </div>
+<script>
+        function numericInputHandler(inputId) {
+    $(inputId).on("keyup", function () {
+        var value = $(this).val();
+        value = value.replace(/[^0-9]/g, ""); // Loại bỏ các ký tự không phải số
+        $(this).val(value);
+    });
+}
+
+numericInputHandler("#SoDienThoai");
+$(document).ready(function(){
+    $('#checkout-form').validate({
+        rules: {
+                HoTen: {
+                    required: true,
+                },
+                DiaChi: {
+                    required: true,
+                    minlength: 10,
+                },
+                SoDienThoai: {
+                    required: true,
+                    minlength: 10,
+                    maxlength: 10,
+                    
+                },
+                Email: {
+                    required: true,
+                    email: true,
+                },
+             
+            },
+            messages: {
+                HoTen: {
+                    required: "Vui lòng nhập họ tên",
+                },
+                DiaChi: {
+                    required: "Vui lòng nhập địa chỉ",
+                    minlength: "*Địa chỉ ít nhất 10 kí tự",
+                },
+                SoDienThoai: {
+                    required: "*Vui lòng nhập số điện thoại",
+                    minlength: "*Số điện thoại tối thiểu 10 số",
+                    maxlength: "*Số điện thoại tối đa 10 số",
+                },
+                Email: {
+                    required: "Vui lòng nhập địa chỉ Email",
+                    email: "Vui lòng nhập đúng định dạng địa chỉ Email",
+                },
+                
+            }
+    })
+})
+</script>
