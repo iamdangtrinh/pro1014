@@ -43,7 +43,5 @@
         pdo_execute("UPDATE taikhoan SET SoDienThoai=?,HoTen=?,DiaChi=? WHERE MaTK=?",
         $SoDienThoai, $HoTen, $DiaChi, $MaTK);
     }
-    function user_update_pass($MaTK, $MatKhau){
-        pdo_execute("UPDATE taikhoan SET MatKhau = ? WHERE MaTK = ?", $MatKhau, $MaTK);
-    }
+    function 
 ?>

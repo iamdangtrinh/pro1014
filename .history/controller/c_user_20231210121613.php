@@ -92,7 +92,13 @@ if (isset($_GET['act'])) {
                 }elseif(empty($DiaChi)){
                     $_SESSION['loi'] = 'Vui lòng nhập <strong>địa chỉ</strong> cho tài khoản!';
                 }elseif($HoTen == $info_user['HoTen'] && $SoDienThoai == $info_user['SoDienThoai'] && $DiaChi == $info_user['DiaChi']){
-                    $_SESSION['loi'] = 'Vui lòng nhập <strong>các thông tin mới</strong> cho tài khoản!';
+                    $_SESSION['loi'] = 'Vui lòng nhập các thông tin mới cho tài khoản!';
+                }elseif($SoDienThoai == $info_user['SoDienThoai']){
+                    $_SESSION['loi'] = 'Vui lòng nhập số điện thoại mới cho tài khoản!';
+                }elseif($DiaChi == $info_user['DiaChi']){
+                    $_SESSION['loi'] = 'Vui lòng nhập địa chỉ mới cho tài khoản!';
+                }elseif($HoTen == $info_user['Hoten']){
+                    $_SESSION['loi'] = 'Vui lòng nhập tên mới cho tài khoản!';
                 }else{
                     user_edit_info($MaTK,$SoDienThoai, $HoTen, $DiaChi);
                     $_SESSION['thanhcong'] = 'Bạn đã cập nhật tài khoản thành công!';

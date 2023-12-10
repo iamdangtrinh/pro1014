@@ -123,7 +123,7 @@ if (isset($_GET['act'])) {
                     $_SESSION['loi'] = 'Vui lòng nhập mật khẩu cũ cho tài khoản!';
                 }
                 else{
-                    user_update_pass($MaTK, $MatKhauMoi);
+                    user_update_pass($MaTK, md5$MatKhauMoi);
                     $_SESSION['thanhcong'] = 'Bạn đã cập nhật mật khẩu thành công!';
                 }
             }

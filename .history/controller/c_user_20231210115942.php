@@ -83,17 +83,14 @@ if (isset($_GET['act'])) {
                 $SoDienThoai = $_POST['SoDienThoai'];
                 $DiaChi = $_POST['DiaChi'];
                 $MaTK=$_SESSION['user']['MaTK'];
-                if(empty($HoTen) && empty($SoDienThoai) && empty($DiaChi)){
-                    $_SESSION['loi'] = 'Vui lòng nhập <strong>các thông tin</strong> cho tài khoản!';
-                }elseif(empty($HoTen)){
-                    $_SESSION['loi'] = 'Vui lòng nhập <strong>họ tên</strong> cho tài khoản!';
+                if(empty($HoTen)){
+                    $_SESSION['loi'] = 'Vui lòng nhập họ tên cho tài khoản!';
                 }elseif(empty($SoDienThoai)){
-                    $_SESSION['loi'] = 'Vui lòng nhập <strong>số điện thoại</strong> cho tài khoản!';
+                    $_SESSION['loi'] = 'Vui lòng nhập số điện thoại cho tài khoản!';
                 }elseif(empty($DiaChi)){
-                    $_SESSION['loi'] = 'Vui lòng nhập <strong>địa chỉ</strong> cho tài khoản!';
-                }elseif($HoTen == $info_user['HoTen'] && $SoDienThoai == $info_user['SoDienThoai'] && $DiaChi == $info_user['DiaChi']){
-                    $_SESSION['loi'] = 'Vui lòng nhập <strong>các thông tin mới</strong> cho tài khoản!';
-                }else{
+                    $_SESSION['loi'] = 'Vui lòng nhập địa chỉ cho tài khoản!';
+                }elseif($HoTen){}
+                else{
                     user_edit_info($MaTK,$SoDienThoai, $HoTen, $DiaChi);
                     $_SESSION['thanhcong'] = 'Bạn đã cập nhật tài khoản thành công!';
                 }
@@ -107,8 +104,8 @@ if (isset($_GET['act'])) {
                 $MatKhauMoi = $_POST['new_password'];
                 $MatKhauNhapLai = $_POST['re_password'];
                 $MaTK = $_SESSION['user']['MaTK'];
-                if(empty($MatKhau) && empty($MatKhauMoi) && empty($MatKhauNhapLai)){
-                    $_SESSION['loi'] = 'Vui lòng nhập các thông tin cho tài khoản!';
+                if(empty($MatKhau)){
+                    $_SESSION['loi'] = 'Vui lòng nhập mật khẩu cũ cho tài khoản!';
                 }elseif($MatKhau != $info_user['MatKhau']){
                     $_SESSION['loi'] = 'Vui lòng nhập đúng mật khẩu cũ của tài khoản!';
                 }elseif($MatKhau == $MatKhauMoi){
@@ -119,10 +116,7 @@ if (isset($_GET['act'])) {
                     $_SESSION['loi'] = 'Vui lòng nhập mật khẩu mới cho tài khoản!';
                 }elseif(empty($MatKhauNhapLai)){
                     $_SESSION['loi'] = 'Vui lòng nhập lại mật khẩu mới cho tài khoản!';
-                }elseif(empty($MatKhau)){
-                    $_SESSION['loi'] = 'Vui lòng nhập mật khẩu cũ cho tài khoản!';
-                }
-                else{
+                }else{
                     user_update_pass($MaTK, $MatKhauMoi);
                     $_SESSION['thanhcong'] = 'Bạn đã cập nhật mật khẩu thành công!';
                 }
