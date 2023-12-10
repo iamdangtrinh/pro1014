@@ -12,21 +12,6 @@
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="<?= $base_url ?>upload/icons/favicon.png">
 
-  <!-- linh cdn fontawesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-  <!-- Plugins CSS File -->
-  <link rel="stylesheet" href="<?= $base_url ?>assets/css/bootstrap.min.css">
-
-  <!-- Main CSS File -->
-  <link rel="stylesheet" href="<?= $base_url ?>assets/css/style23.css">
-  <link rel="stylesheet" href="<?= $base_url ?>assets/css/demo23.min.css">
-  <!-- <link rel="stylesheet" href="<?= $base_url ?>assets/css/all.min.css"> -->
-
-  <!-- Js -->
-  <script src="<?= $base_url ?>assets/js/jquery.min.js"></script>
-  <script src="<?= $base_url ?>assets/js/validate.js"></script>
-
 </head>
   <style>
     *{
