@@ -333,7 +333,6 @@ if(isset($_GET['act'])) {
                         $_SESSION['loi'] = 'Không thể tạo tài khoản với số điện thoại <strong>'.$Email.'</strong>';
                     } else {
                         //khong trung
-                        $MatKhau = 12345;
                         $HinhAnh = 'defaut.png';
                         user_admin_add($SoDienThoai, $Email, $HoTen, $MatKhau, $DiaChi, $VaiTro);
                         $_SESSION['thongbao'] = '<h4>Đã tạo tài khoản với Email <strong>'.$Email.'</strong> thành công';
