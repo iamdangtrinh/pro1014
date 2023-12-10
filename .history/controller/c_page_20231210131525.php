@@ -5,11 +5,12 @@ if(isset($_GET['act'])) {
         case 'home':
             // lay du lieu
             include_once 'model/m_product.php';
-            include_once 'model/m_user.php';
+            include_once 'model/m';
             $dsMoi = product_getNew(4);
             $dsGhim = product_getPin(4);
             //hien thi du lieu
             $view_name = 'page_home';
+            $info_user = 
             break;
 
         case 'shop':

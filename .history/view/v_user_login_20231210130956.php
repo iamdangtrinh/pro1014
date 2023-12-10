@@ -3,7 +3,7 @@
 		<nav aria-label="breadcrumb" class="breadcrumb-nav">
 			<div class="container">
 				<ol class="breadcrumb">
-					<li class="breadcrumb-item"><a href="<?=$base_url?>page/home">Trang chủ</a></li>
+					<li class="breadcrumb-item"><a href="<??>">Trang chủ</a></li>
 					<li class="breadcrumb-item"><a href="category.html">Tài khoản</a></li>
 					<li class="breadcrumb-item active" aria-current="page">
 						Đăng nhập

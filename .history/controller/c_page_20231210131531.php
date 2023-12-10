@@ -10,6 +10,7 @@ if(isset($_GET['act'])) {
             $dsGhim = product_getPin(4);
             //hien thi du lieu
             $view_name = 'page_home';
+            $info_user = 
             break;
 
         case 'shop':

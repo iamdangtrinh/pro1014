@@ -5,7 +5,6 @@ if(isset($_GET['act'])) {
         case 'home':
             // lay du lieu
             include_once 'model/m_product.php';
-            include_once 'model/m_user.php';
             $dsMoi = product_getNew(4);
             $dsGhim = product_getPin(4);
             //hien thi du lieu
