@@ -150,6 +150,8 @@
                     <?php
                     if ($secureHash == $vnp_SecureHash) {
                         if ($_GET['vnp_ResponseCode'] == '00') {
+                            include_once '../model/m_cart.php';
+                            upate_status_cart($_GET['vnp_TxnRef']);
                             echo "<span style='color:blue'>GIAO DỊCH THÀNH CÔNG</span>";
                         } else {
                             echo "<span style='color:red'>GIAO DỊCH KhÔNG THÀNH CÔNG</span>";
