@@ -34,6 +34,36 @@
         html {
             font-family: Arial, Helvetica, sans-serif;
         }
+       
+     .product-default .details{
+                                    position: absolute;
+                                    bottom: -40px;
+                                    width: 100%;
+                                    height: 40px;
+                                    background-color: pink;
+                                    color: white;
+                                    font-weight: bold;
+                                    display: none;
+                                    justify-content: center;
+                                    align-items: center;
+                                    cursor: pointer;
+                                
+                                    transition: all 0.25s ease;
+                                }
+                                .product-default .details a{
+                                   font-size: 16px;
+                                   transition: all 0.25s ease;
+                                }
+                                .details a:hover{
+                                    color: white;
+                                }
+                                .product-default :hover .details{
+                                    bottom: 0;
+                                    display: flex;
+                                  
+                                    
+                                }
+  
     </style>
 </head>
 

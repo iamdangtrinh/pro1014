@@ -86,8 +86,9 @@
                                 <a href="<?= $base_url ?>product/detail/<?= $product['MaSP'];?>"
                                     class="btn-icon btn-add-cart fa-solid fa-cart-shopping"></a>
                             </div>
-                            <a href="ajax/product-quick-view.html" class="btn-quickview" title="Quick View">Xem
-                                nhanh</a>
+                            <div  class="details">
+                                <a href="<?= $base_url ?>product/detail/<?= $product['MaSP'] ?>"title="Quick View">Xem chi tiết</a>
+                                </div>
                         </figure>
                         <div class="product-details">
                             <div class="category-wrap">
@@ -138,8 +139,9 @@
                                 <a href="<?= $base_url?>product/detail/<?= $product['MaSP'];?>"
                                     class="btn-icon btn-add-cart fa-solid fa-cart-shopping"></a>
                             </div>
-                            <a href="ajax/product-quick-view.html" class="btn-quickview" title="Quick View">Xem
-                                nhanh</a>
+                            <div  class="details">
+                                <a href="<?= $base_url ?>product/detail/<?= $product['MaSP'] ?>"title="Quick View">Xem chi tiết</a>
+                                </div>
                         </figure>
                         <div class="product-details">
                             <div class="category-wrap">
