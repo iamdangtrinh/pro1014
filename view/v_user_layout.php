@@ -237,30 +237,27 @@
                                     <a href="<?= $base_url ?>">Danh mục</a>
                                     <ul>
                                         <?php
-                                        $danhmuc = $danhmucmuc;
-                                        foreach ($danhmucmuc as $item_dmmuc) {
-                                            // Điêu kiện để lấy danh mục cha
-                                            if ($item_dmmuc['MaDMC'] == 0) {
-                                                ?>
-                                                <li><a href="<?= $base_url ?>category/detail/<?= $item_dmmuc['MaDM'] ?>">
-                                                        <?= $item_dmmuc['TenDM'] ?>
-                                                    </a>
+                                            $danhmuc = $danhmucmuc;
+                                            foreach ($danhmucmuc as $item_dmmuc) {
+                                                // Điêu kiện để lấy danh mục cha
+                                                if ($item_dmmuc['MaDM'] == 0) {
+                                        ?>
+
+                                                <li><a href="<?= $base_url ?>category/detail/<?= $item_dmmuc['MaDM'] ?>"><?=$item_dmmuc['TenDM']?></a>
                                                     <ul>
                                                         <?php foreach ($danhmuc as $item_dm) {
                                                             if ($item_dm['MaDMC'] != 0 && $item_dm['MaDMC'] == $item_dmmuc['MaDM']) {
-                                                                ?>
-                                                                <li><a href="<?= $base_url ?>category/detail/<?= $item_dm['MaDM'] ?>">
-                                                                        <?= $item_dm['TenDM'] ?>
-                                                                    </a></li>
-                                                                <?php
+                                                        ?>
+                                                                <li><a href="<?= $base_url ?>category/detail/<?= $item_dm['MaDM'] ?>"><?=$item_dm['TenDM']?></a></li>
+                                                        <?php
                                                             }
                                                         }
                                                         ?>
                                                     </ul>
                                                 </li>
-                                                <?php
-                                            }
-                                        }
+
+                                        <?php
+                                            }                                        }
                                         ?>
 
                                     </ul>
