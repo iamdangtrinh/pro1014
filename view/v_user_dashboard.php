@@ -258,9 +258,9 @@
                                             }
                                             ?>
                                         </td>
-                                        <td class="text-dark"><?= number_format($history_cart[0]['TongTien'], 0,',','.')?> VNĐ</td>
+                                        <td class="text-dark"><?= number_format($TongTien, 0,',','.')?> VNĐ</td>
                                         <td>
-                                            <a href="<?=$base_url?>chi-tiet-don-hang/<?=$history_cart[0]['MaHD']?>"><button class="btn btn-outline-success p-2">Chi tiết</button></a>
+                                            <a href="<?=$base_url?>chi-tiet-don-hang/<?=$MaHD?>"><button class="btn btn-outline-success p-2">Chi tiết</button></a>
                                         </td>
                                         <!-- <td><a href="#" class="btn rounded p-1 btn-success">Đánh giá sản phẩm</a></td> -->
                                     </tr>
