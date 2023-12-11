@@ -11,7 +11,6 @@
     <meta name="description" content="Website bán hàng">
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="<?= $base_url ?>upload/icons/favicon.png">
-
     <!-- linh cdn fontawesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
@@ -250,7 +249,7 @@
                                             $danhmuc = $danhmucmuc;
                                             foreach ($danhmucmuc as $item_dmmuc) {
                                                 // Điêu kiện để lấy danh mục cha
-                                                if ($item_dmmuc['MaDM'] == 0) {
+                                                if ($item_dmmuc['MaDMC'] == 0) {
                                         ?>
 
                                                 <li><a href="<?= $base_url ?>category/detail/<?= $item_dmmuc['MaDM'] ?>"><?=$item_dmmuc['TenDM']?></a>
@@ -267,7 +266,8 @@
                                                 </li>
 
                                         <?php
-                                            }                                        }
+                                            } 
+                                        }
                                         ?>
 
                                     </ul>
