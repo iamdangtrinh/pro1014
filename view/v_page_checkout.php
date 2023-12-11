@@ -97,7 +97,13 @@
 
                                 <td class="price-col">
                                     <span class="">
-                                        <?= number_format($total, 0, ',', '.') ?> VND
+                                    <?php 
+                                        if(!$GiaGiam) {
+                                            echo number_format($Gia, 0, '.', '.')." VND";
+                                        } else {
+                                            echo number_format($GiaGiam, 0, '.', '.')." VND";
+                                        }
+                                    ?>
                                     </span>
                                 </td>
                             </tr>
@@ -105,13 +111,24 @@
                     </tbody>
                     <?php $_SESSION['MaHD'] = $MaHD ?>
                     <tfoot>
+                        <tr>
+                            <td>Mã giảm giá</td>
+                            <td>
+                                <?php if(isset($_SESSION['coupon']['has'])) {
+                                    echo number_format($_SESSION['coupon']['has']['GiaKM'], 0, ',', '.') ."VND";
+                                } else {
+                                    echo "0 VNĐ";
+                                }
+                                ?>
+                            </td>
+                        </tr>
                         <tr class="cart-subtotal">
                             <td>
                                 <h4>Tổng tiền</h4>
                             </td>
                             <td class="price-col">
                                 <span class="total_checkout">
-                                    <?= (isset($_POST['btn_cart'])) ? number_format($total_cart['TongTien'], 0, '.', '.') : '' ?>
+                                    <?= (isset($_POST['btn_cart'])) ? number_format($total_cart['TongTien'], 0, '.', '.'). "VNĐ" : '' ?>
                                 </span>
                             </td>
                         </tr>
