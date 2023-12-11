@@ -166,18 +166,17 @@ function product_tangView($MaSP)
 
 function show_product($product_shop, $base_url)
 {
-    foreach ($product_shop as $product): ?>
+    foreach ($product_shop as $product) : ?>
         <div class="col-6 col-sm-4 col-lg-3">
             <div class="product-default inner-quickview inner-icon">
                 <figure>
                     <a href="<?= $base_url ?>product/detail/<?= $product['MaSP'] ?>">
-                        <img src="<?= $base_url ?>upload/products/<?= $product['AnhSP']; ?>" alt="product"
-                            style="width: 207px; height: 220px;">
+                        <img src="<?= $base_url ?>upload/products/<?= $product['AnhSP']; ?>" alt="product" style="width: 207px; height: 220px;">
                     </a>
-                    <?php if (!$product['GiaGiam']): ?>
+                    <?php if (!$product['GiaGiam']) : ?>
                         <div class="label-group">
                         </div>
-                    <?php else: ?>
+                    <?php else : ?>
                         <div class="label-group">
                             <div class="product-label label-sale">-
                                 <?= substr((($product['Gia'] - $product['GiaGiam']) / $product['Gia']) * 100, 0, 2) ?>%
@@ -185,16 +184,19 @@ function show_product($product_shop, $base_url)
                         </div>
                     <?php endif; ?>
                     <div class="btn-icon-group">
-                        <a href="<?= $base_url ?>product/detail/<?= $product['MaSP']; ?>"
-                            class="btn-icon btn-add-cart fa-solid fa-cart-shopping"></a>
+                        <a href="<?= $base_url ?>product/detail/<?= $product['MaSP']; ?>" class="btn-icon btn-add-cart fa-solid fa-cart-shopping"></a>
                     </div>
-                    <?php if ($product['SoLuong'] == 0): ?>
-                        <a href="<?= $base_url ?>product/detail/<?= $product['MaSP']; ?>" class="btn-quickview">Xem chi tiết</a>
+                    <?php if ($product['SoLuong'] == 0) : ?>
+                        <div class="details">
+                            <a href="<?= $base_url ?>product/detail/<?= $product['MaSP'] ?>" title="Quick View">Xem chi tiết</a>
+                        </div>
                         <div class="product-countdown-container">
                             <span class="product-countdown-title">Đã bán hết</span>
                         </div>
-                    <?php else: ?>
-                        <a href="<?= $base_url ?>product/detail/<?= $product['MaSP']; ?>" class="btn-quickview">Xem chi tiết</a>
+                    <?php else : ?>
+                        <div class="details">
+                            <a href="<?= $base_url ?>product/detail/<?= $product['MaSP'] ?>" title="Quick View">Xem chi tiết</a>
+                        </div>
                     <?php endif; ?>
                 </figure>
                 <div class="product-details">
@@ -205,15 +207,15 @@ function show_product($product_shop, $base_url)
                             </a>
                         </div>
                         <a href="<?= $base_url ?>page/wishlist" <?php if (isset($_SESSION['user'])) {
-                              $MaTK = $_SESSION['user']['MaTK'];
-                              include_once 'm_wishlist.php';
-                              $CheckWish = check_wishByProductAndUser($MaTK, $product['MaSP']);
-                              if ($CheckWish != "") {
-                                  echo 'title="Đến trang yêu thích" class="btn-icon-wish added-wishlist" ';
-                              } else {
-                                  echo 'onclick="ThemSPYT(' . $product['MaSP'] . ')" title="Yêu thích sản phẩm" class="btn-icon-wish"';
-                              }
-                          } ?>><i class="fa-solid fa-heart"></i></a>
+                                                                    $MaTK = $_SESSION['user']['MaTK'];
+                                                                    include_once 'm_wishlist.php';
+                                                                    $CheckWish = check_wishByProductAndUser($MaTK, $product['MaSP']);
+                                                                    if ($CheckWish != "") {
+                                                                        echo 'title="Đến trang yêu thích" class="btn-icon-wish added-wishlist" ';
+                                                                    } else {
+                                                                        echo 'onclick="ThemSPYT(' . $product['MaSP'] . ')" title="Yêu thích sản phẩm" class="btn-icon-wish"';
+                                                                    }
+                                                                } ?>><i class="fa-solid fa-heart"></i></a>
                     </div>
                     <h3 class="product-title">
                         <a href="<?= $base_url ?>product/detail/<?= $product['MaSP'] ?>">
@@ -236,11 +238,11 @@ function show_product($product_shop, $base_url)
                         </div>
                     </div>
                     <div class="price-box">
-                        <?php if (!$product['GiaGiam']): ?>
+                        <?php if (!$product['GiaGiam']) : ?>
                             <span class="product-price">
                                 <?= number_format($product['Gia'], 0, ",", ".") ?>đ
                             </span>
-                        <?php else: ?>
+                        <?php else : ?>
                             <span class="old-price">
                                 <?= number_format($product['Gia'], 0, ",", ".") ?>đ
                             </span>
@@ -252,7 +254,7 @@ function show_product($product_shop, $base_url)
                 </div>
             </div>
         </div>
-    <?php endforeach;
+<?php endforeach;
 }
 
 
