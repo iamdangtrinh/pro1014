@@ -250,7 +250,7 @@
                                             $danhmuc = $danhmucmuc;
                                             foreach ($danhmucmuc as $item_dmmuc) {
                                                 // Điêu kiện để lấy danh mục cha
-                                                if ($item_dmmuc['MaDM'] == 0) {
+                                                if ($item_dmmuc['MaDMC'] == 0) {
                                         ?>
 
                                                 <li><a href="<?= $base_url ?>category/detail/<?= $item_dmmuc['MaDM'] ?>"><?=$item_dmmuc['TenDM']?></a>
@@ -267,7 +267,8 @@
                                                 </li>
 
                                         <?php
-                                            }                                        }
+                                            } 
+                                        }
                                         ?>
 
                                     </ul>
