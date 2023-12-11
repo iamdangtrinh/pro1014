@@ -92,11 +92,8 @@ function doanhthu_countAll(){
     return pdo_query("SELECT SUM(TongTien) AS TongTatCaHoaDon FROM hoadon WHERE TrangThai = 'hoan-tat'");
 }
 function history_stat(){
-    return pdo_query("SELECT YEAR(hd.NgayLap) AS Nam, MONTH(hd.NgayLap) AS Thang, COUNT(hd.MaTK) AS SoKhachHang, COUNT(hd.MaHD) AS SoLuotMua, SUM(hd.TongTien) AS DoanhThu, SUM(ct.SoLuongSP) AS SoLuongSP
-    FROM hoadon hd
-    INNER JOIN chitiethoadon ct ON hd.MaHD = ct.MaHD
-    WHERE hd.TrangThai = 'hoan-tat'
-    GROUP BY YEAR(hd.NgayLap), MONTH(hd.NgayLap)");
+
+    return pdo_query("SELECT YEAR(hd.NgayLap) as Nam,MONTH(hd.NgayLap) as Thang, COUNT(DISTINCT MaTK) as SoKhachHang, COUNT(hd.MaHD) AS SoLuotMua,SUM(ct.SoLuongSP) as SoLuongSP,SUM(TongTien) AS DoanhThu FROM hoadon hd INNER join chitiethoadon ct ON hd.MaHD = ct.MaHD GROUP BY YEAR(hd.NgayLap),MONTH(hd.NgayLap)");
 }
 function hoadon_countAll(){
     return pdo_query_value("SELECT COUNT(*) FROM hoadon");
