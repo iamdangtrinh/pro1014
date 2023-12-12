@@ -81,6 +81,10 @@ function search_live_product($keyword)
     return pdo_query("SELECT * FROM sanpham WHERE TenSP like '%$keyword%' LIMIT 3");
 }
 
+function has_cart_by_product($MaSP) {
+    return pdo_query("SELECT * FROM chitiethoadon WHERE MaSP = $MaSP");
+}
+
 function product_detail($id)
 {
     return pdo_query_one("SELECT * FROM sanpham s INNER JOIN danhmuc dm ON s.MaDM = dm.MaDM WHERE s.MaSP = $id");

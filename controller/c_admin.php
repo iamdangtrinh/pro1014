@@ -147,16 +147,23 @@ if(isset($_GET['act'])) {
             case 'product-delete':
                 include_once 'model/m_pdo.php';
                 include_once 'model/m_admin.php';
+                include_once 'model/m_product.php';
                 if(isset($_GET['id'])&&($_GET['id'])>0){
                     $MaSP = $_GET['id'];    
-                    $target_dir="upload/products/";
-                    $product_Anh=admin_Product_timxoaAnhSP($MaSP);
-                    foreach($product_Anh as $anh) {
-                        $AnhSP_path=$target_dir.$anh;
-                        if(is_file($AnhSP_path)){
-                            unlink($AnhSP_path);
-                        }
-                        admin_Product_Delete($MaSP);
+                    // nếu sản phẩm tồn tại giỏ hàng => không cho phép xóa và hiển thị ra thông báo cho người dùng
+                    if(has_cart_by_product($MaSP)) {
+                        $_SESSION['detete']['product'] = "Sản phẩm đã mua, Không được phép xóa";
+                    } else {
+                        $target_dir="upload/products/";
+                        $product_Anh=admin_Product_timxoaAnhSP($MaSP);
+                        foreach($product_Anh as $anh) {
+                            $AnhSP_path=$target_dir.$anh;
+                            if(is_file($AnhSP_path)){
+                                unlink($AnhSP_path);
+                            }
+                            admin_Product_Delete($MaSP);
+                        };
+                        $_SESSION['detete']['product'] = "Xóa sản phẩm thành công";
                     }
                 }
                 header('location: '.$base_url.'admin/product');
