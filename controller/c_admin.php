@@ -163,7 +163,7 @@ if(isset($_GET['act'])) {
                             }
                             admin_Product_Delete($MaSP);
                         };
-                        $_SESSION['detete']['product'] = "Xóa sản phẩm thành công";
+                        $_SESSION['detete']['success'] = "Xóa sản phẩm thành công";
                     }
                 }
                 header('location: '.$base_url.'admin/product');

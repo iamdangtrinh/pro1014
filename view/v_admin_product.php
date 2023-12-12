@@ -177,25 +177,53 @@
         background-color: #ba5a87;
         /* Màu nền khi di chuột qua */
     }
+
+    .alert-danger {
+        margin-bottom: 15px;
+        background-color: #f8d7da;
+        border: 2px solid #f5c2c7;
+        width: 100%;
+        padding: 20px;
+        border-radius: 5px;
+        color: #842029;
+    }
+
+    .alert-success {
+        margin-bottom: 15px;
+        background-color: #cfe2ff;
+        border: 2px solid #b6d4fe;
+        width: 100%;
+        padding: 20px;
+        border-radius: 5px;
+        color: #084298;
+    }
 </style>
 <!-- Recent Orders Table -->
 <div class="box_content">
     <h1 id="bang_product">Quản lí sản phẩm</h1>
     <br>
+
+    <?php
+    if (isset($_SESSION['detete']['product'])): ?>
+        <div class="alert alert-success" role="alert">
+            <?= $_SESSION['detete']['product'];
+            unset($_SESSION['detete']['product']); ?>
+        </div>
+        <?php
+    endif ?>
+
+    <?php
+    if (isset($_SESSION['detete']['success'])): ?>
+        <div class="alert alert-success" role="alert">
+            <?= $_SESSION['detete']['success'];
+            unset($_SESSION['detete']['success']); ?>
+        </div>
+        <?php
+    endif ?>
+    <br>
     <div class="box_button">
         <div><a href="<?= $base_url ?>admin/product/add" class="them" style="font-weight: 600;">Thêm mới</a></div>
-
-        <?php
-        if (isset($_SESSION['detete']['product'])):
-            ?>
-
-            <?php echo $_SESSION['detete']['product'];
-            unset($_SESSION['detete']['product']);
-            ?>
-        <?php endif ?>
-
     </div>
-    <br>
     <div class="box">
         <table>
             <thead>
@@ -220,8 +248,8 @@
                         <td>
                             <?= $item_Product['TenSP'] ?>
                         </td>
-                        <td><img src="<?= $base_url ?>upload/products/<?= $item_Product['AnhSP'] ?>" width="100" height="100"
-                                style="display: block; object-fit: contain;" alt=""></td>
+                        <td><img src="<?= $base_url ?>upload/products/<?= $item_Product['AnhSP'] ?>" width="100"
+                                height="100" style="display: block; object-fit: contain;" alt=""></td>
                         <td style="width: 12%;">
                             <?= $item_Product['SoLuong'] ?>
                         </td>
@@ -238,7 +266,8 @@
                             <div class="lenh">
                                 <div class="sua"><a href="<?= $base_url ?>admin/product/edit/<?= $item_Product['MaSP'] ?>"
                                         style="font-weight: 600; ">Sửa</a></div>
-                                <div class="xoa"><a href="<?= $base_url ?>admin/product/delete/<?= $item_Product['MaSP'] ?> "
+                                <div class="xoa"><a
+                                        href="<?= $base_url ?>admin/product/delete/<?= $item_Product['MaSP'] ?> "
                                         onclick="return confirm('Bạn có chắc chắn xóa sản phẩm này?')"
                                         style="font-weight: 600; ">Xóa</a></div>
                             </div>
@@ -254,4 +283,3 @@
 </div>
 <br>
 <button class="button"><a href="#bang_product"><i class="fa-solid fa-arrow-up"></i></a></button>
-<!-- End of Recent Orders -->
