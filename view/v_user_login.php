@@ -19,15 +19,14 @@
 <div class="container  login-container">
 	<div class=" mt-2 mx-auto">
 
-		<?php if (isset($_SESSION['error']['login'])): ?>
-			<h5 class="alert alert-danger">
-				<?= $_SESSION['error']['login'] ?>
+		<?php if (isset($_SESSION['addtocart']['login'])): ?>
+			<h5 class="alert alert-danger round">
+				<?= $_SESSION['addtocart']['login'] ?>
 			</h5>
 		<?php endif;
-		unset($_SESSION['error']['login']) ?>
+		unset($_SESSION['addtocart']['login']) ?>
 
 		<form action="#" id="form_login" method="post">
-
 			<div class="mb-2">
 				<label for="login-email">Địa chỉ email<span class="required">*</span></label>
 				<input type="email" name="email" class="form-input form-wide" id="login-email">

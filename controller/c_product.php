@@ -54,9 +54,12 @@ if(isset($_GET['act'])) {
                         add_to_cart($has_cart['MaHD'], $SoLuongSP, $MaSP);
                     }
                 }
+                $_SESSION['thongbao'] = 'Bạn đã thêm sản phẩm vào giỏ hàng thành công!';
+                header('location: '.$base_url.'product/detail/' .$MaSP);
+            } else {
+                $_SESSION['addtocart']['login'] = 'Vui lòng đăng nhập để mua hàng!';
+                header('location: '.$base_url.'user/login');
             }
-            $_SESSION['thongbao'] = 'Bạn đã thêm sản phẩm vào giỏ hàng thành công!';
-            header('location: '.$base_url.'product/detail/' .$MaSP);
             break;
 
         case 'cart':

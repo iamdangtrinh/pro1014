@@ -19,9 +19,9 @@ if(isset($_SESSION['user'])) {
     $count_cart = count_cart($_SESSION['user']['MaTK']);
     $show_cart_for_user = show_cart_for_user($_SESSION['user']['MaTK']);
 } 
-// if(isset($_SESSION['user']['MaTK'])){
-//     $info_user = user_getById($_SESSION['user']['MaTK']);
-// }
+if(isset($_SESSION['user']['MaTK'])){
+    $info_user = user_getById($_SESSION['user']['MaTK']);
+}
 
 pdo_get_connection();
 if (isset($_GET['mod'])) {

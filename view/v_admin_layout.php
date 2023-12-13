@@ -153,7 +153,7 @@
                     </span>
                 </a>
 
-                <a href="#">
+                <a href="<?=$base_url?>user/logout">
                     <span class="material-icons-sharp">
                         logout
                     </span>
