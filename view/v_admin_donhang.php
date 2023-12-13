@@ -194,7 +194,7 @@ td {
                 <th>Khách hàng</th>
                 <th>Số điện thoại</th>
                 <th>Trạng thái</th>
-                <th style="text-align: center;">Lệnh</th>
+                <th style="text-align: center;">Hành động</th>
             </tr>
         </thead>
         <?php foreach($show_HD as $show):?>
@@ -217,8 +217,10 @@ td {
                     </select>
                 </td>
                 <td>
-                    <div><button type="submit" name="btn-donhang" class="them" style="font-weight: 600;">Cập
-                            nhật</button></div>
+                    <div>
+                        <a href="<?=$base_url?>chi-tiet-don-hang/<?=$show['MaHD']?>" class="btn " >Xem chi tiết</a>
+                        <button type="submit" name="btn-donhang" class="them" style="font-weight: 600;">Cập nhật</button>
+                    </div>
                 </td>
             </tbody>
         </form>
@@ -227,12 +229,12 @@ td {
 </div>
 <br>
 
-<script>
+<!-- <script>
     var Thongbao = document.getElementById('Thongbao');
     if (Thongbao) {
         setTimeout(function() {
             Thongbao.style.display = 'none'; 
         }, 3000); 
     }
-</script>
+</script> -->
 <!-- End of Recent Orders -->

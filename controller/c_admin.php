@@ -324,9 +324,10 @@ if (isset($_GET['act'])) {
                 break;
             case 'history':
                 //lay du lieu
-                include_once 'model/m_history.php';
+                include_once 'model/m_cart.php';
                 // hien thi du lieu
                 $view_name = 'admin_history';
+                $title = "Lịch sử đơn hàng";
                 break;
             case 'user-add':
                 //lay du lieu
