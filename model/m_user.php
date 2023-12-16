@@ -39,13 +39,9 @@
     function user_update_info($HoTen, $SoDienThoai, $DiaChi, $MaTK){
         return pdo_execute("UPDATE taikhoan SET HoTen=?, SoDienThoai =?, DiaChi=? WHERE MaTK=?", $HoTen,$SoDienThoai, $DiaChi, $MaTK);
     }
-    function user_edit_info($MaTK,$SoDienThoai, $HoTen, $DiaChi){
-        pdo_execute("UPDATE taikhoan SET SoDienThoai=?,HoTen=?,DiaChi=? WHERE MaTK=?",
-        $SoDienThoai, $HoTen, $DiaChi, $MaTK);
-    }
-    function user_edit_avatar($MaTK,$HinhAnh){
-        pdo_execute("UPDATE taikhoan SET HinhAnh = ? WHERE MaTK=?",
-        $HinhAnh, $MaTK);
+    function user_edit_info($MaTK,$SoDienThoai, $HoTen, $DiaChi,$Hinh){
+        pdo_execute("UPDATE taikhoan SET SoDienThoai=?,HoTen=?,DiaChi=?,HinhAnh = ? WHERE MaTK=?",
+        $SoDienThoai, $HoTen, $DiaChi,$Hinh, $MaTK);
     }
     function user_update_pass($MaTK, $MatKhau){
         pdo_execute("UPDATE taikhoan SET MatKhau = ? WHERE MaTK = ?", $MatKhau, $MaTK);
@@ -59,8 +55,5 @@
         }
         $img=basename($_FILES['Hinh']['name']);
         return $img;
-    }
-    function user_timhinhxoaanh($MaTK){
-        return pdo_query_one("SELECT * FROM taikhoan WHERE MaTK = ?",$MaTK);
     }
 ?>

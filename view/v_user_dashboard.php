@@ -157,7 +157,7 @@
                                 <input type="text" name="DiaChi" class="form-input form-wide" id=""
                                     value="<?=$info_user['DiaChi']?>">
                             </div>
-
+                            <input type="hidden" name="HinhAnh" value="<?=$info_user['HinhAnh']?>">
                             <div class="input-group mb-3">
                                 <input type="file" class="form-control" name="Hinh" id="Hinh">
                                 <label class="input-group-text" for="Hinh">Upload</label>

@@ -82,28 +82,19 @@ if (isset($_GET['act'])) {
                 $HoTen = $_POST['HoTen'];
                 $SoDienThoai = $_POST['SoDienThoai'];
                 $DiaChi = $_POST['DiaChi'];
-                $HinhAnh = $_POST['Hinh'];
                 $MaTK=$_SESSION['user']['MaTK'];
-                if(empty($HoTen) && empty($SoDienThoai) && empty($DiaChi)){
-                    $_SESSION['loi'] = 'Vui lòng nhập <strong>các thông tin</strong> cho tài khoản!';
-                }elseif(empty($HoTen)){
-                    $_SESSION['loi'] = 'Vui lòng nhập <strong>họ tên</strong> cho tài khoản!';
-                }elseif(empty($SoDienThoai)){
-                    $_SESSION['loi'] = 'Vui lòng nhập <strong>số điện thoại</strong> cho tài khoản!';
-                }elseif(empty($DiaChi)){
-                    $_SESSION['loi'] = 'Vui lòng nhập <strong>địa chỉ</strong> cho tài khoản!';
+                if(!$HoTen || !$SoDienThoai || !$DiaChi){
+                    $_SESSION['loi'] = 'Vui lòng nhập đủ <strong>các thông tin</strong> cho tài khoản!';
                 }else{
                     if(isset($_FILES['Hinh']['name']) && $_FILES['Hinh']['name']!= ""){
-                        $TenHinh = 'Hinh';
                         $Hinh = user_upanh();
-                        if(file_exists($_POST['Hinh'])){
-                            unlink($_POST['Hinh']);
+                        if(file_exists($_POST['HinhAnh'])){
+                            unlink($_POST['HinhAnh']); 
                         }
                     }else{
-                        $Hinh = $_POST['Hinh'];
+                        $Hinh = $_POST['HinhAnh'];
                     }
-                    user_edit_avatar($MaTK, $Hinh);
-                    user_edit_info($MaTK,$SoDienThoai, $HoTen, $DiaChi);
+                    user_edit_info($MaTK,$SoDienThoai, $HoTen, $DiaChi,$Hinh);
                     $_SESSION['thanhcong'] = 'Bạn đã cập nhật tài khoản thành công!';
                 }
             }
